@@ -1,0 +1,402 @@
+{
+  "_README": "BLANK TEMPLATE — the contract every AI fills for one country. Do NOT change field NAMES or STRUCTURE; fill VALUES only. Keep every key (use null if you can't fill it). TWO data types, reconciled differently: (1) FACTS — objective checkable values. (2) RECOMMENDATIONS — judgments with no single right answer. STATUS MODEL (set 'status' honestly per fact): 'verified' = you confirmed it against an OFFICIAL source (put the URL in source_url); 'agreed_stable' = a stable fact you're confident on but didn't open a source for (capital, currency code, emergency numbers); 'verify_recommended' = change-prone or high-stakes (visa rules/fees, advisories, entry rules) — flag it; 'serve_live' = volatile, must NOT be stored as a fact (exchange rate, flight prices). For RECOMMENDATIONS use rank 'core' (your strong picks) — no status needed. Return ONLY valid JSON in EXACTLY this structure. Fill EVERY section — do not skip any.",
+  "_meta": {
+    "country": "Japan",
+    "country_iso": "JP",
+    "ai_source": "gemini",
+    "produced_at": "2026-05-30",
+    "template_version": "2.0"
+  },
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status (verified|agreed_stable|verify_recommended|serve_live), notes }. For 'verified' the source_url MUST be the official page you checked. Never invent a source.",
+  "identity": {
+    "name_local": {
+      "value": "日本 (Nippon / Nihon)",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": null
+    },
+    "capital": {
+      "value": "Tokyo",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": null
+    },
+    "currency_code": {
+      "value": "JPY",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": null
+    },
+    "languages": {
+      "value": [
+        "Japanese"
+      ],
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": null
+    },
+    "emergency_numbers": {
+      "value": "Police: 110, Ambulance/Fire: 119",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": null
+    }
+  },
+  "visa_entry": {
+    "visa_required_us": {
+      "value": false,
+      "source_url": "[https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html](https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html)",
+      "status": "verified",
+      "notes": "US passport holders do not require a visa for tourist visits lasting up to 90 days."
+    },
+    "max_stay_us": {
+      "value": "90 days",
+      "source_url": "[https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html](https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html)",
+      "status": "verified",
+      "notes": "Temporary visitor status is stamped upon arrival."
+    },
+    "passport_validity": {
+      "value": "Valid for the duration of stay",
+      "source_url": "[https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Japan.html](https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Japan.html)",
+      "status": "verified",
+      "notes": "Must be valid for the entire duration of your planned stay. Some airlines may enforce a stricter 3-month or 6-month rule, so verify with your carrier."
+    },
+    "entry_requirements_notes": {
+      "value": "Completing customs and immigration declarations online via Visit Japan Web prior to departure generates QR codes that significantly speed up arrival processing. No COVID-19 testing or vaccination required.",
+      "source_url": "[https://www.vjw.digital.go.jp/](https://www.vjw.digital.go.jp/)",
+      "status": "verified",
+      "notes": null
+    }
+  },
+  "money_finance": {
+    "cash_vs_card": {
+      "value": "Cash remains popular for traditional establishments, street vendors, temples, and transit card recharges, but credit card acceptance and digital payments (such as contactless IC cards like Suica or Pasmo on Apple Wallet) are now widespread across major cities.",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": null
+    },
+    "atms_fees": {
+      "value": "International debit and credit cards work reliably at ATMs in 7-Eleven (7-Bank), FamilyMart (E-Net), and Japan Post locations. US banks may charge foreign transaction fees; local machine fees run between 110 and 220 JPY depending on the withdrawal time.",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": null
+    },
+    "exchange_rate_live": {
+      "value": null,
+      "source_url": null,
+      "status": "serve_live",
+      "notes": "Exchange rates are highly dynamic; check live USD to JPY rates directly before booking."
+    }
+  },
+  "safety_health": {
+    "travel_advisory_level": {
+      "value": "Level 1: Exercise Normal Precautions",
+      "source_url": "[https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Japan.html](https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Japan.html)",
+      "status": "verified",
+      "notes": "Japan is consistently rated as one of the safest tourist destinations in the world."
+    },
+    "scams_to_avoid": {
+      "value": [
+        "Extortionate cover fees, hidden charges, and occasional drink-spiking by aggressive street touts in prominent nightlife districts like Roppongi and Kabukicho in Tokyo.",
+        "Aggressive demands for cash donations by fraudulent individuals dressed as Buddhist monks handing out brass charms or tokens near historical sites."
+      ],
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": null
+    },
+    "tap_water_safe": {
+      "value": true,
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "Tap water is completely safe, highly monitored, and potable nationwide."
+    },
+    "vaccinations_required": {
+      "value": [],
+      "source_url": "[https://wwwnc.cdc.gov/travel/destinations/traveler/none/japan](https://wwwnc.cdc.gov/travel/destinations/traveler/none/japan)",
+      "status": "verified",
+      "notes": "No mandatory vaccines are required for US citizens entering Japan, though standard routine vaccinations are recommended by the CDC."
+    }
+  },
+  "connectivity": {
+    "sim_esim_availability": {
+      "value": "eSIMs are widely available online and can be set up immediately before departure. Physical data-only SIM cards can be purchased or picked up at all major international airports.",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "Voice-enabled tourist SIMs are heavily restricted due to local regulations; voice roaming or VoIP apps (like FaceTime or WhatsApp) are recommended for calling."
+    },
+    "best_carriers": {
+      "value": [
+        "NTT Docomo",
+        "SoftBank",
+        "au (KDDI)"
+      ],
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "Docomo provides the most extensive network coverage in mountainous and rural destinations."
+    },
+    "wifi_ubiquity": {
+      "value": "Public Wi-Fi is common in train stations, major convenience stores, and cafes, but often requires an email or social media registration step that can be cumbersome.",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "Renting a pocket Wi-Fi device or utilizing an eSIM is highly recommended for seamless map navigation."
+    }
+  },
+  "costs": {
+    "average_daily_cost": {
+      "value": null,
+      "source_url": null,
+      "status": "serve_live",
+      "notes": "Budget around $150 to $300 USD per day per person for mid-range accommodations, inter-city trains, and meals."
+    },
+    "cost_indicators": {
+      "value": {
+        "mid_range_hotel_usd": "120-220 per night",
+        "bowl_of_ramen_jpy": "800-1300",
+        "tokyo_to_kyoto_shinkansen_jpy": "14000-14500"
+      },
+      "source_url": null,
+      "status": "serve_live",
+      "notes": "Prices scale higher during peak holiday periods like Cherry Blossom season and Golden Week."
+    }
+  },
+  "culture": {
+    "tipping_culture": {
+      "value": "Strictly no tipping. Tipping is not a part of Japanese hospitality culture and can be perceived as awkward or offensive. If you leave extra cash on a table, restaurant staff will often chase you down to return it.",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "High-end hotels and fine-dining restaurants typically add a standard 10-15% service charge directly to the bill."
+    },
+    "dos_and_donts": {
+      "value": [
+        "DO stand on the left side of escalators in Tokyo and the right side when visiting Kyoto.",
+        "DO bring a small bag to carry your trash with you throughout the day, as public trash receptacles are rare.",
+        "DO remove your outdoor shoes immediately when entering private homes, traditional ryokans, and specific temple halls.",
+        "DON'T walk down public streets while actively eating or drinking; consume food or beverages right next to the vending machine or stall where they were purchased.",
+        "DON'T speak in a loud voice or take phone calls while riding public trains and buses.",
+        "DON'T enter public hot springs (onsen) with visible tattoos unless you utilize waterproof cover-up patches or book a private bath."
+      ],
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": null
+    }
+  },
+  "cities": [
+    {
+      "name": "Tokyo",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Direct flights depart daily from major US international hubs including LAX, SFO, JFK, ORD, and ATL.",
+          "source_url": null,
+          "status": "agreed_stable",
+          "notes": null
+        },
+        "local_transport": {
+          "value": "An incredibly fast, interconnected grid of subway systems (Tokyo Metro, Toei) and suburban rail networks (JR East). Easiest to navigate by adding a digital Suica or Pasmo card to your smartphone's wallet app.",
+          "source_url": null,
+          "status": "agreed_stable",
+          "notes": null
+        },
+        "airport": {
+          "value": "Haneda Airport (HND) sits much closer to the city center (roughly 25-35 minutes). Narita Airport (NRT) handles many international arrivals but is further out (approx. 60 minutes via the Narita Express train).",
+          "source_url": null,
+          "status": "agreed_stable",
+          "notes": null
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Senso-ji Temple",
+              "why": "Tokyo's oldest and most iconic Buddhist temple structure, located in the traditional Asakusa neighborhood."
+            },
+            {
+              "name": "Shibuya Crossing & Meiji Shrine",
+              "why": "The ultimate structural contrast of Tokyo: the world's busiest pedestrian intersection situated directly adjacent to a serene, forested Shinto shrine enclave."
+            },
+            {
+              "name": "teamLab Planets",
+              "why": "A highly immersive digital art installation where visitors walk barefoot through reactive water galleries and brilliant crystal light rooms."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Shinjuku / Shibuya",
+              "who_for": "First-time travelers seeking neon nightlife, endless dining options, and access to major transportation hubs."
+            },
+            {
+              "area": "Asakusa / Ueno",
+              "who_for": "Value-oriented travelers looking for historical charm and direct airport express train lines."
+            },
+            {
+              "area": "Ginza / Tokyo Station",
+              "who_for": "Luxury shoppers and foodies who prioritize upscale hotels and easy access to bullet trains."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Tsukiji Outer Market Stalls",
+              "why": "An excellent open-air spot to sample fresh street food favorites like wagyu skewers, tamagoyaki, and fresh sea urchin."
+            },
+            {
+              "name_or_type": "Ichiran Ramen (Shinjuku/Shibuya locations)",
+              "why": "Provides a classic, rich tonkotsu ramen experience ordered via vending machine and eaten inside private solo booths."
+            },
+            {
+              "name_or_type": "Depachika (Isetan Shinjuku Basement)",
+              "why": "High-end department store food halls offering an incredible variety of upscale bento boxes, flawless pastries, and traditional sweets."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Hakone",
+              "why": "A historic hot-spring resort destination featuring volcanic cable cars, scenic lake cruises, and iconic views of Mt. Fuji on clear days.",
+              "rough_time": "1.5 hours each way from Shinjuku Station via the Odakyu Romancecar train."
+            },
+            {
+              "place": "Kamakura",
+              "why": "A relaxed coastal town filled with historical temples, bamboo groves, and a magnificent outdoor Bronze Buddha monument.",
+              "rough_time": "1 hour each way from Tokyo Station via the JR Yokosuka Line."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    },
+    {
+      "name": "Kyoto",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Most easily reached from Tokyo via the Tokaido Shinkansen bullet train line, a journey of just under 2.5 hours.",
+          "source_url": null,
+          "status": "agreed_stable",
+          "notes": null
+        },
+        "local_transport": {
+          "value": "Relies heavily on a dense network of city buses alongside two municipal subway lines, regional commuter trains (Hankyu, Keihan), and abundant taxis.",
+          "source_url": null,
+          "status": "agreed_stable",
+          "notes": null
+        },
+        "airport": {
+          "value": "Kyoto does not have its own airport. Visitors typically fly into Osaka's Kansai International Airport (KIX), which links directly to Kyoto Station via the JR Haruka Express train in about 75 minutes.",
+          "source_url": null,
+          "status": "agreed_stable",
+          "notes": null
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Fushimi Inari Taisha",
+              "why": "A stunning, world-famous pathway composed of thousands of vibrant vermilion torii gates stretching up a sacred forest mountain."
+            },
+            {
+              "name": "Kinkaku-ji (The Golden Pavilion)",
+              "why": "A spectacular Zen temple structure whose top two stories are completely layered in pure gold leaf, reflecting over a mirror-like pond."
+            },
+            {
+              "name": "Arashiyama Bamboo Grove",
+              "why": "A highly atmospheric, globally renowned natural pathway bordered by soaring, towering stalks of green bamboo."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Downtown Kawaramachi / Gion",
+              "who_for": "Travelers who want to be steps away from shopping districts, culinary nightlife, and historic geisha quarters."
+            },
+            {
+              "area": "Kyoto Station Area",
+              "who_for": "Practical transit-oriented travelers prioritizing uncomplicated baggage drop-off and easy regional day trips."
+            },
+            {
+              "area": "Higashiyama",
+              "who_for": "Visitors searching for an immersive, highly traditional environment near ancient wooden lanes and preserved temples."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Nishiki Market Vendors",
+              "why": "A narrow historical five-block arcade called 'Kyoto's Kitchen', filled with unique skewers, seafood snacks, and local pickles."
+            },
+            {
+              "name_or_type": "Pontocho Alley Izakayas",
+              "why": "A highly atmospheric, lantern-lit riverside pedestrian alley offering everything from casual yakitori to premium multi-course dining."
+            },
+            {
+              "name_or_type": "Yudofu (Tofu Kaiseki) near Nanzen-ji",
+              "why": "A classic, serene Buddhist vegetarian meal showcasing delicate local tofu simmered gently in kelp broths."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Nara",
+              "why": "Japan's ancient 8th-century capital, home to the massive Todai-ji temple housing a giant Bronze Buddha, alongside hundreds of freely roaming bowing deer.",
+              "rough_time": "45 minutes each way from Kyoto Station via the JR Nara Line or Kintetsu Line."
+            },
+            {
+              "place": "Osaka",
+              "why": "A high-energy neon metropolis celebrated for its street food scene (like takoyaki and okonomiyaki) and the flashy Dotonbori district.",
+              "rough_time": "30 minutes each way via the JR Kyoto Line rapid train."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "Japan in 7 Days: The Classic Golden Route for First-Timers",
+      "days": "7",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          "Day 1: Arrive in Tokyo (HND or NRT). Check into your hotel in Shinjuku or Shibuya, step out into the neon-lit streets, and grab a comforting bowl of local ramen.",
+          "Day 2: Western Tokyo Culture & Trends. Take a peaceful morning walk through Meiji Shrine, stroll down Takeshita Street in Harajuku, and cross the iconic Shibuya Crossing.",
+          "Day 3: Historic Asakusa & Digital Landscapes. Visit Tokyo's oldest temple complex, Senso-ji, sample market street foods, and head to Toyosu for the teamLab Planets immersive art exhibition.",
+          "Day 4: Shinkansen to Kyoto. Board a morning bullet train along the Tokaido line to Kyoto. Check in, wander through the historic stone streets of Higashiyama, and look for geishas in Gion at dusk.",
+          "Day 5: Iconic Kyoto Enclaves. Hike the thousands of vermilion torii gates at Fushimi Inari Taisha early to beat the daytime crowds, then cross town to see the glistening Golden Pavilion (Kinkaku-ji).",
+          "Day 6: Bamboo Forests & Nara Deer. Walk the Arashiyama Bamboo Grove in the quiet morning, then take an afternoon train ride to Nara to see the Great Buddha and feed the roaming deer park.",
+          "Day 7: Nishiki Market & Departure. Pick up green tea souvenirs and local snacks at Nishiki Market before taking a train back to Tokyo for evening flights home (or departing directly via Osaka's Kansai International Airport)."
+        ],
+        "notes": "Optimized using rapid rail links and the Tokaido Shinkansen bullet train to maximize sightseeing windows for limited vacation periods."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "best_time_to_visit": {
+      "value": "Spring (late March to mid-April) to witness the spectacular cherry blossom trees, or Autumn (October to November) for crisp, pleasant weather and vibrant red maple leaves.",
+      "rank": "core",
+      "notes": "When to go and why"
+    }
+  },
+  "_open_questions": []
+}

@@ -1,0 +1,648 @@
+{
+  "_README": "BLANK TEMPLATE — the contract every AI fills for one country. Do NOT change field NAMES or STRUCTURE; fill VALUES only. Keep every key (use null if you can't fill it). TWO data types, reconciled differently: (1) FACTS — objective checkable values. (2) RECOMMENDATIONS — judgments with no single right answer. STATUS MODEL (set 'status' honestly per fact): 'verified' = you confirmed it against an OFFICIAL source (put the URL in source_url); 'agreed_stable' = a stable fact you're confident on but didn't open a source for (capital, currency code, emergency numbers); 'verify_recommended' = change-prone or high-stakes (visa rules/fees, advisories, entry rules) — flag it; 'serve_live' = volatile, must NOT be stored as a fact (exchange rate, flight prices). For RECOMMENDATIONS use rank 'core' (your strong picks) — no status needed. Return ONLY valid JSON in EXACTLY this structure. Fill EVERY section — do not skip any.",
+  "_meta": {
+    "country": "Japan",
+    "country_iso": "JP",
+    "ai_source": "chatgpt",
+    "produced_at": "2026-05-30",
+    "template_version": "2.0"
+  },
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status (verified|agreed_stable|verify_recommended|serve_live), notes }. For 'verified' the source_url MUST be the official page you checked. Never invent a source.",
+  "identity": {
+    "name_local": {
+      "value": "日本 (Nihon / Nippon)",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "capital": {
+      "value": "Tokyo",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "official_languages": {
+      "value": [
+        "Japanese"
+      ],
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_code": {
+      "value": "JPY",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_name": {
+      "value": "Japanese Yen",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "timezones": {
+      "value": [
+        "JST (UTC+9)"
+      ],
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "calling_code": {
+      "value": "+81",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "power_plug_voltage": {
+      "value": "100V, Type A and Type B plugs",
+      "source_url": null,
+      "status": "agreed_stable"
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL + change-prone. Try to set 'verified' against the official consular/eVisa site; otherwise 'verify_recommended'.",
+      "by_nationality": [
+        {
+          "passport": "United States",
+          "type": {
+            "value": "visa_free",
+            "source_url": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+            "status": "verified",
+            "notes": "Visa-free temporary visitor entry for tourism/business stays up to 90 days."
+          },
+          "max_stay_days": {
+            "value": 90,
+            "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html",
+            "status": "verified"
+          },
+          "fee": {
+            "value": "No visa fee for standard visa-free tourist entry",
+            "source_url": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+            "status": "verified"
+          },
+          "processing_time": {
+            "value": "None for visa-free entry; eVisa processing applies only when a visa is required",
+            "source_url": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+            "status": "verified"
+          },
+          "online_authorization_required": {
+            "value": "No mandatory ETA as of 2026; Visit Japan Web is optional and recommended for arrival procedures",
+            "source_url": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+            "status": "verified",
+            "notes": "Visit Japan Web streamlines immigration/customs but is not a visa."
+          },
+          "official_application_url": {
+            "value": "https://www.mofa.go.jp/j_info/visit/visa/index.html",
+            "source_url": "https://www.mofa.go.jp/j_info/visit/visa/index.html"
+          }
+        }
+      ],
+      "scam_sites_to_avoid": {
+        "value": [
+          "Unofficial ETA/eVisa agencies claiming mandatory authorization for US tourists",
+          "Third-party sites charging fees to complete optional Visit Japan Web registration"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "Passport valid for the entire stay in Japan",
+        "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html",
+        "status": "verified"
+      },
+      "onward_ticket_required": {
+        "value": "Proof of onward or return travel may be requested by airlines or immigration",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "notes": {
+        "value": "Carry proof of accommodation and sufficient funds. One blank passport page is recommended for entry stamps."
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "JPY",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "approx_rate_note": {
+        "value": "USD/JPY fluctuates significantly; serve live at booking or exchange time.",
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "VOLATILE — never freeze; serve live"
+      },
+      "cash_vs_card": {
+        "value": "Cards are widely accepted in cities, but cash remains useful for small restaurants, temples, rural areas, and older businesses.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "atm_availability": {
+        "value": "Excellent. 7-Eleven, Japan Post, and major bank ATMs generally accept foreign cards.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "currency_import_export_limit": {
+        "value": "Amounts equivalent to JPY 1,000,000 or more must be declared on entry or exit.",
+        "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html",
+        "status": "verified"
+      },
+      "tipping_norm": {
+        "value": "Tipping is generally not expected and may cause confusion.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": [
+          "Tokyo Narita (NRT)",
+          "Tokyo Haneda (HND)",
+          "Osaka Kansai (KIX)",
+          "Nagoya Chubu Centrair (NGO)",
+          "Fukuoka (FUK)"
+        ],
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "name + IATA"
+      },
+      "national_carrier": {
+        "value": "Japan Airlines (JAL) and All Nippon Airways (ANA)",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "flight_from_audience_origins": {
+        "value": [
+          "Los Angeles–Tokyo: about 11–13 hours nonstop",
+          "San Francisco–Tokyo: about 10–12 hours nonstop",
+          "Seattle–Tokyo: about 9–11 hours nonstop",
+          "New York–Tokyo: about 13–15 hours nonstop",
+          "Chicago–Tokyo: about 12–14 hours nonstop"
+        ],
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "durations stable-ish; PRICES are serve_live"
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "Excellent Shinkansen network connecting major cities quickly and reliably.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "buses": {
+        "value": "Long-distance buses are slower but often cheaper than trains.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "domestic_flights": {
+        "value": "Useful for Hokkaido, Okinawa, and longer distances; ANA and JAL offer tourist fares.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "ride_sharing": {
+        "value": "Uber operates mainly as a taxi-hailing service; traditional taxis remain dominant.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "car_rental_and_driving": {
+        "value": "Drive on the left. US travelers generally need an International Driving Permit (1949 Geneva Convention) with their US license. Strict drunk-driving laws apply.",
+        "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html",
+        "status": "verify_recommended",
+        "notes": "driving side, license/IDP, BAC limit"
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Spring is mild with cherry blossoms; summer is hot and humid; autumn is cool with colorful foliage; winter is cold with excellent skiing in northern regions.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "best_months": {
+        "value": [
+          "March",
+          "April",
+          "May",
+          "October",
+          "November"
+        ],
+        "rank": "core",
+        "notes": "RECOMMENDATION"
+      },
+      "avoid_periods": {
+        "value": [
+          "Mid-August Obon holiday crowds",
+          "Late April–early May Golden Week crowds",
+          "Peak summer heat and humidity in July–August",
+          "Typhoon season risk from August to October"
+        ],
+        "rank": "core",
+        "notes": "RECOMMENDATION + dated festivals (verify dates yearly)"
+      }
+    },
+    "safety_health": {
+      "_note": "YMYL. Advisory level is change-prone → verify_recommended. Stable items (emergency numbers) → agreed_stable.",
+      "advisory_level": {
+        "value": "US State Department Level 1: Exercise Normal Precautions (issued May 15, 2025; verify before travel)",
+        "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html",
+        "status": "verified",
+        "notes": "e.g. US State Dept level + date"
+      },
+      "main_risk": {
+        "value": "Natural disasters (earthquakes, tsunamis, typhoons) rather than violent crime.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "vaccines": {
+        "value": "No vaccines required for entry; stay up to date with CDC routine recommendations.",
+        "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html",
+        "status": "verified"
+      },
+      "tap_water_safe": {
+        "value": true,
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "emergency_numbers": {
+        "value": {
+          "police": "110",
+          "ambulance": "119",
+          "fire": "119"
+        },
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "common_scams": {
+        "value": [
+          "Nightlife touts leading tourists into overpriced bars",
+          "Inflated bills in some entertainment districts",
+          "Fake ticket resale websites for major events"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": "eSIMs and tourist SIMs are easy to obtain before arrival or at airports; pocket Wi-Fi remains popular.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "coverage": {
+        "value": "Excellent 4G/5G coverage in cities and on major rail corridors.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "costs": {
+      "_note": "RECOMMENDATION-ish ranges; approximate + dated.",
+      "daily_budget_low": {
+        "value": "USD 60–100 per person/day",
+        "status": "serve_live"
+      },
+      "daily_budget_mid": {
+        "value": "USD 150–250 per person/day",
+        "status": "serve_live"
+      },
+      "daily_budget_high": {
+        "value": "USD 350+ per person/day",
+        "status": "serve_live"
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "Neat, modest, and respectful clothing is appreciated; casual is acceptable in most tourist areas.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "dos_and_donts": {
+        "value": [
+          "Remove shoes when required",
+          "Speak quietly on public transport",
+          "Queue patiently",
+          "Do not tip",
+          "Do not eat while walking in crowded areas if locals are not doing so",
+          "Follow onsen bathing rules carefully",
+          "Do not talk loudly on trains"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    }
+  },
+  "cities": [
+    {
+      "name": "Tokyo",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Most international visitors arrive via Haneda (HND) or Narita (NRT).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Extensive subway and rail network; Suica and PASMO cards are highly convenient.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Haneda (HND) and Narita (NRT)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Shibuya Crossing",
+              "why": "Iconic image of modern Tokyo."
+            },
+            {
+              "name": "Senso-ji",
+              "why": "Historic temple and traditional atmosphere."
+            },
+            {
+              "name": "Meiji Shrine",
+              "why": "Peaceful forested shrine in the city."
+            },
+            {
+              "name": "Tokyo Skytree",
+              "why": "Panoramic views over the metropolis."
+            },
+            {
+              "name": "TeamLab Borderless",
+              "why": "World-famous immersive digital art."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Shinjuku",
+              "who_for": "First-time visitors and nightlife"
+            },
+            {
+              "area": "Tokyo Station/Marunouchi",
+              "who_for": "Convenient rail access"
+            },
+            {
+              "area": "Asakusa",
+              "who_for": "Traditional atmosphere and value"
+            },
+            {
+              "area": "Shibuya",
+              "who_for": "Young travelers and shopping"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Sushi counter",
+              "why": "Classic Tokyo dining experience"
+            },
+            {
+              "name_or_type": "Ramen shops",
+              "why": "Affordable and high quality"
+            },
+            {
+              "name_or_type": "Izakaya alleys",
+              "why": "Local food and social atmosphere"
+            },
+            {
+              "name_or_type": "Depachika food halls",
+              "why": "Huge variety under one roof"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Kamakura",
+              "why": "Temples and coastal scenery",
+              "rough_time": "1 hour"
+            },
+            {
+              "place": "Hakone",
+              "why": "Hot springs and Mount Fuji views",
+              "rough_time": "1.5–2 hours"
+            },
+            {
+              "place": "Nikko",
+              "why": "UNESCO shrines and nature",
+              "rough_time": "2 hours"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    },
+    {
+      "name": "Kyoto",
+      "facts": {
+        "how_to_get_there": {
+          "value": "About 2 hours 15 minutes from Tokyo via Shinkansen.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Buses, subway lines, taxis, and cycling are common.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Nearest major airport: Osaka Kansai International Airport (KIX)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Fushimi Inari Taisha",
+              "why": "Famous red torii gates."
+            },
+            {
+              "name": "Kinkaku-ji",
+              "why": "Iconic Golden Pavilion."
+            },
+            {
+              "name": "Arashiyama",
+              "why": "Bamboo grove and scenic district."
+            },
+            {
+              "name": "Kiyomizu-dera",
+              "why": "Historic temple with city views."
+            },
+            {
+              "name": "Gion",
+              "why": "Traditional Kyoto atmosphere."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Gion",
+              "who_for": "Traditional Kyoto experience"
+            },
+            {
+              "area": "Kyoto Station",
+              "who_for": "Convenience and transport"
+            },
+            {
+              "area": "Downtown Kawaramachi",
+              "who_for": "Restaurants and nightlife"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Kaiseki restaurants",
+              "why": "Refined Kyoto cuisine"
+            },
+            {
+              "name_or_type": "Nishiki Market",
+              "why": "Food sampling and local specialties"
+            },
+            {
+              "name_or_type": "Matcha dessert cafes",
+              "why": "Kyoto's tea culture"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Nara",
+              "why": "Historic temples and friendly deer",
+              "rough_time": "45 minutes"
+            },
+            {
+              "place": "Uji",
+              "why": "Green tea culture and Byodo-in",
+              "rough_time": "30 minutes"
+            },
+            {
+              "place": "Osaka",
+              "why": "Food and nightlife",
+              "rough_time": "15–30 minutes"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "Japan in 7 Days: Tokyo + Kyoto First-Timer Route",
+      "days": "7",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive in Tokyo and settle in",
+            "afternoon": "Asakusa and Senso-ji",
+            "evening": "Tokyo Skytree and local dinner"
+          },
+          {
+            "day": 2,
+            "morning": "Meiji Shrine",
+            "afternoon": "Harajuku and Shibuya",
+            "evening": "Shibuya Crossing and nightlife"
+          },
+          {
+            "day": 3,
+            "morning": "TeamLab Borderless",
+            "afternoon": "Ginza or Ueno",
+            "evening": "Tokyo Station area"
+          },
+          {
+            "day": 4,
+            "morning": "Shinkansen to Kyoto",
+            "afternoon": "Gion and Yasaka area",
+            "evening": "Traditional Kyoto dinner"
+          },
+          {
+            "day": 5,
+            "morning": "Fushimi Inari",
+            "afternoon": "Kiyomizu-dera",
+            "evening": "Gion stroll"
+          },
+          {
+            "day": 6,
+            "morning": "Arashiyama Bamboo Grove",
+            "afternoon": "Kinkaku-ji",
+            "evening": "Downtown Kyoto"
+          },
+          {
+            "day": 7,
+            "morning": "Nara half-day trip",
+            "afternoon": "Return and depart via Kyoto/Osaka area or Tokyo",
+            "evening": "Departure"
+          }
+        ],
+        "notes": "[{day, morning, afternoon, evening}] — RECOMMENDATION"
+      },
+      "assumptions": {
+        "value": "First-time US visitor focused on major highlights, arriving in Tokyo and departing from Kansai or returning to Tokyo by rail."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "value": [
+        {
+          "name": "Shibuya Crossing",
+          "where": "Tokyo",
+          "why": "Modern Japan at its most iconic"
+        },
+        {
+          "name": "Fushimi Inari Taisha",
+          "where": "Kyoto",
+          "why": "Unique and unforgettable shrine experience"
+        },
+        {
+          "name": "Mount Fuji views",
+          "where": "Hakone/Fuji Five Lakes",
+          "why": "Japan's most famous natural landmark"
+        },
+        {
+          "name": "Kinkaku-ji",
+          "where": "Kyoto",
+          "why": "One of the country's most recognizable temples"
+        },
+        {
+          "name": "Nara Park",
+          "where": "Nara",
+          "why": "Historic capital with famous deer"
+        }
+      ],
+      "rank": "core",
+      "notes": "[{name, where, why}]"
+    }
+  },
+  "_open_questions": {
+    "_note": "Anything genuinely unsure / conflicting / that needs a real source. Be honest — this is more useful than false confidence.",
+    "value": [
+      "Verify whether Japan introduces a mandatory ETA-style online authorization for visa-exempt travelers after May 2026.",
+      "Confirm current International Driving Permit acceptance details and any state-specific US license considerations before travel.",
+      "Recheck US State Department advisory level and CDC health notices immediately before departure."
+    ]
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "_README": "Claude's v2 filled version — japanforamericans (Japan, US audience). Status model: 'verified' = Claude checked an official/current source (URL + date given); 'agreed_stable' = stable, low-risk, no source opened; 'verify_recommended' = change-prone, not fully source-confirmed; 'serve_live' = volatile, never freeze. Change-prone YMYL facts (visa, advisory, entry rules) were source-checked by Claude on 2026-05-29. Recommendations are picks to be merged, not verified.",
+
+  "_meta": {
+    "country": "Japan",
+    "country_iso": "JP",
+    "site": "japanforamericans",
+    "audience": "American travelers (US passport)",
+    "ai_source": "claude",
+    "produced_at": "2026-05-29",
+    "template_version": "2.0"
+  },
+
+  "identity": {
+    "name_local": { "value": "日本 (Nihon / Nippon)", "source_url": null, "status": "agreed_stable" },
+    "capital": { "value": "Tokyo", "source_url": null, "status": "agreed_stable" },
+    "official_languages": { "value": ["Japanese"], "source_url": null, "status": "agreed_stable" },
+    "currency_code": { "value": "JPY", "source_url": null, "status": "agreed_stable" },
+    "currency_name": { "value": "Japanese yen (¥)", "source_url": null, "status": "agreed_stable" },
+    "timezones": { "value": ["JST (UTC+9)"], "source_url": null, "status": "agreed_stable" },
+    "calling_code": { "value": "+81", "source_url": null, "status": "agreed_stable" },
+    "power_plug_voltage": { "value": "100V, 50/60Hz, Type A/B", "source_url": null, "status": "agreed_stable" }
+  },
+
+  "country_facts": {
+    "visa": {
+      "by_nationality": [
+        {
+          "passport": "US",
+          "type": { "value": "visa_free (Temporary Visitor)", "source_url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html", "status": "verified", "notes": "Confirmed against MOFA + travel.state.gov, 2026-05-29." },
+          "max_stay_days": { "value": 90, "source_url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html", "status": "verified" },
+          "fee": { "value": "none (visa-free)", "source_url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html", "status": "verified" },
+          "processing_time": { "value": "n/a — stamp on arrival", "source_url": null, "status": "agreed_stable" },
+          "online_authorization_required": { "value": "No ETA required for US visa-free entry as of 2026. (An electronic travel authorization for visa-exempt travelers is reportedly planned for 2028 — not active yet.) Visit Japan Web pre-registration is OPTIONAL, not an authorization.", "source_url": "https://vjw.digital.go.jp", "status": "verified", "notes": "Checked 2026-05-29." },
+          "official_application_url": { "value": "n/a (visa-free)", "source_url": null }
+        }
+      ],
+      "scam_sites_to_avoid": { "value": ["fake 'Japan ETA / eVisa' sites charging US visitors — none is required for visa-free entry", "third-party sites charging for the free Visit Japan Web QR"], "source_url": "https://www.mofa.go.jp/", "status": "agreed_stable" }
+    },
+
+    "documents": {
+      "passport_validity_required": { "value": "Valid for duration of stay (Japan does not impose a 6-month rule on US visa-free visitors) — confirm", "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Japan.html", "status": "verify_recommended" },
+      "onward_ticket_required": { "value": "Return/onward ticket may be requested at entry", "source_url": null, "status": "agreed_stable" },
+      "notes": { "value": "Fingerprints + photo taken at immigration. Visit Japan Web (vjw.digital.go.jp) lets you pre-register immigration + customs into one 2D code; 2026 Joint Kiosks at HND/NRT/KIX scan it in one step. Optional but speeds arrival." }
+    },
+
+    "money": {
+      "currency_code": { "value": "JPY (¥)", "source_url": null, "status": "agreed_stable" },
+      "approx_rate_note": { "value": "~150-160 JPY per 1 USD (approx, May 2026)", "source_url": "https://www.xe.com/currencyconverter/", "status": "serve_live", "notes": "VOLATILE — serve live, never freeze" },
+      "cash_vs_card": { "value": "Cards widely accepted in cities; cash still needed for small shops, temples, rural areas", "source_url": null, "status": "agreed_stable" },
+      "atm_availability": { "value": "7-Eleven and Japan Post ATMs reliably take foreign cards", "source_url": null, "status": "agreed_stable" },
+      "currency_import_export_limit": { "value": "Declare amounts over ¥1,000,000 (or equivalent)", "source_url": "https://www.customs.go.jp/english/", "status": "verify_recommended" },
+      "tipping_norm": { "value": "No tipping — not customary, can cause confusion", "source_url": null, "status": "agreed_stable" }
+    },
+
+    "getting_there": {
+      "main_international_airports": { "value": ["Tokyo Haneda (HND)", "Tokyo Narita (NRT)", "Osaka Kansai (KIX)"], "source_url": null, "status": "agreed_stable" },
+      "national_carrier": { "value": "Japan Airlines (JAL) and ANA", "source_url": null, "status": "agreed_stable" },
+      "flight_from_audience_origins": { "value": "Nonstop from LAX/SFO/SEA/ORD/JFK-EWR/DFW/IAD. West Coast ~11-12h, East Coast ~13-14h. Prices serve-live.", "source_url": null, "status": "serve_live" }
+    },
+
+    "getting_around": {
+      "intercity_rail": { "value": "JR Shinkansen (bullet trains); Japan Rail Pass cost-effective for tourists; Tokyo↔Kyoto ~2h15", "source_url": null, "status": "agreed_stable" },
+      "buses": { "value": "Affordable, reliable, slower than trains (Willer Express, JR Bus)", "source_url": null, "status": "agreed_stable" },
+      "domestic_flights": { "value": "JAL, ANA + LCCs (Peach, Jetstar Japan)", "source_url": null, "status": "agreed_stable" },
+      "ride_sharing": { "value": "Uber in big cities but mostly hails taxis; limited vs US", "source_url": null, "status": "agreed_stable" },
+      "car_rental_and_driving": { "value": "Rarely needed (rail-centric). Drives on LEFT; International Driving Permit required; strict 0.03% BAC limit", "source_url": "https://www.npa.go.jp/english/", "status": "verify_recommended" }
+    },
+
+    "when_to_go": {
+      "climate_by_season": { "value": "Spring (Mar-May) mild + sakura; summer (Jun-Aug) hot/humid/typhoon; autumn (Sep-Nov) mild + foliage; winter (Dec-Feb) cold, snow north", "source_url": null, "status": "agreed_stable" },
+      "best_months": { "value": ["late March-April (cherry blossom)", "October-November (autumn foliage)"], "rank": "core" },
+      "avoid_periods": { "value": ["June-July rainy season", "August typhoon + heat", "Golden Week (late Apr-early May)", "Obon (mid-Aug)", "New Year"], "rank": "core" }
+    },
+
+    "safety_health": {
+      "advisory_level": { "value": "US State Dept Level 1 — Exercise Normal Precautions (as of early 2026)", "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html", "status": "verified", "notes": "Checked 2026-05-29; main risk is environmental, not crime." },
+      "main_risk": { "value": "Environmental (earthquakes, typhoons), NOT crime. Very low-crime country.", "source_url": null, "status": "agreed_stable" },
+      "vaccines": { "value": "No mandatory vaccines for entry; routine vaccinations recommended", "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/japan", "status": "verify_recommended" },
+      "tap_water_safe": { "value": true, "source_url": null, "status": "agreed_stable" },
+      "emergency_numbers": { "value": { "police": "110", "ambulance": "119", "fire": "119", "us_embassy_tokyo": "+81-3-3224-5000" }, "source_url": null, "status": "agreed_stable" },
+      "common_scams": { "value": ["rare overall; bar/taxi overcharging in nightlife districts (Kabukicho/Roppongi)"], "source_url": null, "status": "agreed_stable" }
+    },
+
+    "connectivity": {
+      "sim_esim": { "value": "Tourist SIM (Docomo/SoftBank), pocket WiFi at airports, eSIM widely supported (Airalo/Ubigi)", "source_url": null, "status": "agreed_stable" },
+      "coverage": { "value": "Excellent nationwide incl. rural + rail", "source_url": null, "status": "agreed_stable" }
+    },
+
+    "costs": {
+      "daily_budget_low": { "value": "~¥8,000-12,000", "status": "serve_live" },
+      "daily_budget_mid": { "value": "~¥15,000-25,000", "status": "serve_live" },
+      "daily_budget_high": { "value": "¥40,000+", "status": "serve_live" }
+    },
+
+    "culture_etiquette": {
+      "dress_norms": { "value": "No strict code; remove shoes in homes, ryokan, some temples/restaurants", "source_url": null, "status": "agreed_stable" },
+      "dos_and_donts": { "value": ["don't eat while walking", "don't tip", "be quiet on trains", "queue properly", "carry your trash"], "source_url": null, "status": "agreed_stable" }
+    }
+  },
+
+  "cities": [
+    {
+      "name": "Tokyo",
+      "facts": {
+        "how_to_get_there": { "value": "Narita (NRT) ~60-90min via N'EX/Skyliner; Haneda (HND) ~30min via monorail/Keikyu", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "JR Yamanote loop + Tokyo Metro; IC card (Suica/Pasmo)", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Haneda (HND), Narita (NRT)", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [
+          { "name": "Senso-ji (Asakusa)", "why": "Tokyo's oldest temple, classic first stop" },
+          { "name": "Shibuya Crossing", "why": "iconic scramble + nightlife" },
+          { "name": "Meiji Jingu + Harajuku", "why": "forest shrine beside youth-fashion district" },
+          { "name": "teamLab digital art", "why": "immersive, highly photogenic" },
+          { "name": "Shinjuku (Omoide Yokocho, Gyoen)", "why": "nightlife + a calm garden" }
+        ], "rank": "core" },
+        "where_to_stay": { "value": [
+          { "area": "Shinjuku", "who_for": "first-timers, transit hub, nightlife" },
+          { "area": "Shibuya", "who_for": "young, shopping, energy" },
+          { "area": "Asakusa", "who_for": "traditional feel, budget-friendlier" }
+        ], "rank": "core" },
+        "where_to_eat": { "value": [
+          { "name_or_type": "Tsukiji Outer Market (sushi/seafood)", "why": "fresh, lively breakfast" },
+          { "name_or_type": "ramen + izakaya in Shinjuku", "why": "everyday Tokyo" }
+        ], "rank": "core" },
+        "day_trips": { "value": [
+          { "place": "Hakone", "why": "onsen + Mt Fuji views", "rough_time": "~1.5h each way" },
+          { "place": "Nikko", "why": "shrines + nature", "rough_time": "~2h each way" },
+          { "place": "Kamakura", "why": "Great Buddha, coast", "rough_time": "~1h each way" }
+        ], "rank": "core" }
+      }
+    },
+    {
+      "name": "Kyoto",
+      "facts": {
+        "how_to_get_there": { "value": "Shinkansen from Tokyo ~2h15; from Osaka/KIX ~75-90min", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "buses + subway + walking; IC card works", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "nearest is Osaka Kansai (KIX); no own major airport", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [
+          { "name": "Fushimi Inari Taisha", "why": "thousands of red torii gates" },
+          { "name": "Kinkaku-ji (Golden Pavilion)", "why": "iconic gold temple" },
+          { "name": "Arashiyama Bamboo Grove", "why": "photogenic, plus monkey park + temples" },
+          { "name": "Gion district", "why": "geisha quarter, traditional streets" },
+          { "name": "Kiyomizu-dera", "why": "hillside temple + old-town approach" }
+        ], "rank": "core" },
+        "where_to_stay": { "value": [
+          { "area": "near Kyoto Station", "who_for": "convenience, day trips" },
+          { "area": "Gion/Higashiyama", "who_for": "traditional atmosphere, walkable sights" }
+        ], "rank": "core" },
+        "where_to_eat": { "value": [
+          { "name_or_type": "Nishiki Market", "why": "street food + local specialties" },
+          { "name_or_type": "kaiseki / tofu cuisine", "why": "Kyoto's refined traditional food" }
+        ], "rank": "core" },
+        "day_trips": { "value": [
+          { "place": "Nara", "why": "deer park + Todai-ji Great Buddha", "rough_time": "~45min each way" },
+          { "place": "Osaka", "why": "food + nightlife", "rough_time": "~30-60min each way" }
+        ], "rank": "core" }
+      }
+    }
+  ],
+
+  "itineraries": [
+    {
+      "title": "Japan in 7 days (first-timer, Tokyo + Kyoto)",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": { "value": [
+        { "day": 1, "morning": "Arrive Tokyo, settle Shinjuku", "afternoon": "Shibuya + Meiji Jingu", "evening": "Omoide Yokocho dinner" },
+        { "day": 2, "morning": "Asakusa Senso-ji + Nakamise", "afternoon": "Akihabara / Ueno", "evening": "teamLab or Tokyo skyline view" },
+        { "day": 3, "morning": "Day trip: Hakone (onsen, Fuji)", "afternoon": "Hakone ropeway/lake", "evening": "back to Tokyo" },
+        { "day": 4, "morning": "Shinkansen to Kyoto", "afternoon": "Fushimi Inari", "evening": "Gion stroll" },
+        { "day": 5, "morning": "Kinkaku-ji", "afternoon": "Arashiyama bamboo + monkey park", "evening": "Nishiki / Pontocho dinner" },
+        { "day": 6, "morning": "Day trip: Nara (deer + Todai-ji)", "afternoon": "Nara park", "evening": "Kyoto or Osaka dinner" },
+        { "day": 7, "morning": "Kiyomizu-dera + Higashiyama", "afternoon": "transfer to KIX / return", "evening": "depart" }
+      ] },
+      "assumptions": { "value": "moderate pace, spring/autumn, first-time US visitor, rail-based (JR Pass worth it for the Tokyo↔Kyoto leg)" }
+    }
+  ],
+
+  "national_recommendations": {
+    "must_see_overall": { "value": [
+      { "name": "Tokyo", "where": "Kanto", "why": "the megacity — modern + traditional" },
+      { "name": "Kyoto", "where": "Kansai", "why": "temples, geisha culture, traditional heart" },
+      { "name": "Mt Fuji / Hakone", "where": "central", "why": "iconic mountain + onsen" },
+      { "name": "Nara", "where": "Kansai", "why": "deer park + Great Buddha" },
+      { "name": "Osaka", "where": "Kansai", "why": "food capital, nightlife" },
+      { "name": "Hiroshima + Miyajima", "where": "Chugoku", "why": "Peace Memorial + floating torii" }
+    ], "rank": "core" }
+  },
+
+  "_open_questions": {
+    "value": [
+      "Visit Japan Web is OPTIONAL (not a visa/authorization) — confirmed; just confirm wording when writing.",
+      "Electronic travel authorization for visa-exempt travelers reportedly planned for 2028 — watch item, not active in 2026.",
+      "Tax-free shopping shifts to refund-at-departure from Nov 2026 — confirm if trip content covers shopping.",
+      "Currency declaration threshold (¥1,000,000) — confirm with Japan Customs.",
+      "US passport-validity specifics — confirm against travel.state.gov."
+    ]
+  }
+}

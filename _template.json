@@ -1,0 +1,131 @@
+{
+  "_README": "BLANK TEMPLATE — the contract every AI fills for one country. Do NOT change field NAMES or STRUCTURE; fill VALUES only. Keep every key (use null if you can't fill it). TWO data types, reconciled differently: (1) FACTS — objective checkable values. (2) RECOMMENDATIONS — judgments with no single right answer. STATUS MODEL (set 'status' honestly per fact): 'verified' = you confirmed it against an OFFICIAL source (put the URL in source_url); 'agreed_stable' = a stable fact you're confident on but didn't open a source for (capital, currency code, emergency numbers); 'verify_recommended' = change-prone or high-stakes (visa rules/fees, advisories, entry rules) — flag it; 'serve_live' = volatile, must NOT be stored as a fact (exchange rate, flight prices). For RECOMMENDATIONS use rank 'core' (your strong picks) — no status needed. Return ONLY valid JSON in EXACTLY this structure. Fill EVERY section — do not skip any.",
+
+  "_meta": {
+    "country": "",
+    "country_iso": "",
+    "ai_source": "FILL: claude | chatgpt | gemini | grok | deepseek",
+    "produced_at": "YYYY-MM-DD",
+    "template_version": "2.0"
+  },
+
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status (verified|agreed_stable|verify_recommended|serve_live), notes }. For 'verified' the source_url MUST be the official page you checked. Never invent a source.",
+
+  "identity": {
+    "name_local": { "value": null, "source_url": null, "status": "agreed_stable" },
+    "capital": { "value": null, "source_url": null, "status": "agreed_stable" },
+    "official_languages": { "value": [], "source_url": null, "status": "agreed_stable" },
+    "currency_code": { "value": null, "source_url": null, "status": "agreed_stable" },
+    "currency_name": { "value": null, "source_url": null, "status": "agreed_stable" },
+    "timezones": { "value": [], "source_url": null, "status": "agreed_stable" },
+    "calling_code": { "value": null, "source_url": null, "status": "agreed_stable" },
+    "power_plug_voltage": { "value": null, "source_url": null, "status": "agreed_stable" }
+  },
+
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL + change-prone. Try to set 'verified' against the official consular/eVisa site; otherwise 'verify_recommended'.",
+      "by_nationality": [
+        {
+          "passport": "FILL",
+          "type": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "visa_free | e_visa | visa_on_arrival | embassy_visa" },
+          "max_stay_days": { "value": null, "source_url": null, "status": "verify_recommended" },
+          "fee": { "value": null, "source_url": null, "status": "verify_recommended" },
+          "processing_time": { "value": null, "source_url": null, "status": "verify_recommended" },
+          "online_authorization_required": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "e.g. ETA / Visit Japan Web / AEVM even when visa-free" },
+          "official_application_url": { "value": null, "source_url": null }
+        }
+      ],
+      "scam_sites_to_avoid": { "value": [], "source_url": null, "status": "agreed_stable" }
+    },
+    "documents": {
+      "passport_validity_required": { "value": null, "source_url": null, "status": "verify_recommended" },
+      "onward_ticket_required": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "notes": { "value": null }
+    },
+    "money": {
+      "currency_code": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "approx_rate_note": { "value": null, "source_url": null, "status": "serve_live", "notes": "VOLATILE — never freeze; serve live" },
+      "cash_vs_card": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "atm_availability": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "currency_import_export_limit": { "value": null, "source_url": null, "status": "verify_recommended" },
+      "tipping_norm": { "value": null, "source_url": null, "status": "agreed_stable" }
+    },
+    "getting_there": {
+      "main_international_airports": { "value": [], "source_url": null, "status": "agreed_stable", "notes": "name + IATA" },
+      "national_carrier": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "flight_from_audience_origins": { "value": [], "source_url": null, "status": "serve_live", "notes": "durations stable-ish; PRICES are serve_live" }
+    },
+    "getting_around": {
+      "intercity_rail": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "buses": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "domestic_flights": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "ride_sharing": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "car_rental_and_driving": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "driving side, license/IDP, BAC limit" }
+    },
+    "when_to_go": {
+      "climate_by_season": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "best_months": { "value": [], "rank": "core", "notes": "RECOMMENDATION" },
+      "avoid_periods": { "value": [], "rank": "core", "notes": "RECOMMENDATION + dated festivals (verify dates yearly)" }
+    },
+    "safety_health": {
+      "_note": "YMYL. Advisory level is change-prone → verify_recommended. Stable items (emergency numbers) → agreed_stable.",
+      "advisory_level": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "e.g. US State Dept level + date" },
+      "main_risk": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "vaccines": { "value": null, "source_url": null, "status": "verify_recommended" },
+      "tap_water_safe": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "emergency_numbers": { "value": { "police": null, "ambulance": null, "fire": null }, "source_url": null, "status": "agreed_stable" },
+      "common_scams": { "value": [], "source_url": null, "status": "agreed_stable" }
+    },
+    "connectivity": {
+      "sim_esim": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "coverage": { "value": null, "source_url": null, "status": "agreed_stable" }
+    },
+    "costs": {
+      "_note": "RECOMMENDATION-ish ranges; approximate + dated.",
+      "daily_budget_low": { "value": null, "status": "serve_live" },
+      "daily_budget_mid": { "value": null, "status": "serve_live" },
+      "daily_budget_high": { "value": null, "status": "serve_live" }
+    },
+    "culture_etiquette": {
+      "dress_norms": { "value": null, "source_url": null, "status": "agreed_stable" },
+      "dos_and_donts": { "value": [], "source_url": null, "status": "agreed_stable" }
+    }
+  },
+
+  "cities": [
+    {
+      "name": "FILL",
+      "facts": {
+        "how_to_get_there": { "value": null, "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": null, "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": null, "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [], "rank": "core", "notes": "[{name, why}] — your picks" },
+        "where_to_stay": { "value": [], "rank": "core", "notes": "[{area, who_for}]" },
+        "where_to_eat": { "value": [], "rank": "core", "notes": "[{name_or_type, why}]" },
+        "day_trips": { "value": [], "rank": "core", "notes": "[{place, why, rough_time}]" }
+      }
+    }
+  ],
+
+  "itineraries": [
+    {
+      "title": "FILL",
+      "days": "FILL",
+      "scope": "single-city | multi-city | whole-country",
+      "plan": { "value": [], "notes": "[{day, morning, afternoon, evening}] — RECOMMENDATION" },
+      "assumptions": { "value": null }
+    }
+  ],
+
+  "national_recommendations": {
+    "must_see_overall": { "value": [], "rank": "core", "notes": "[{name, where, why}]" }
+  },
+
+  "_open_questions": {
+    "_note": "Anything genuinely unsure / conflicting / that needs a real source. Be honest — this is more useful than false confidence.",
+    "value": []
+  }
+}

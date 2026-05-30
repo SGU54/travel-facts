@@ -1,0 +1,155 @@
+{
+  "_README": "FINAL reconciled facts — japanforamericans (Japan, US audience). THIS is the file content creation reads — never the individual AI files. Sources: claude, gemini, chatgpt, grok, deepseek (5). STATUS: verified = confirmed against an official source (URL+date); agreed_stable = stable, sources agree, no flag; serve_live = volatile, never frozen; disputed = sources differed (resolved + dissent noted). Recommendations: core = named by most/all, optional = fewer. HUMAN ACTION: see _human_checklist (max 5, ranked, no padding).",
+  "_meta": {
+    "country": "Japan", "country_iso": "JP", "project": "japanforamericans",
+    "site": "japanforamericans.com", "audience": "American travelers (US passport)",
+    "sources_reconciled": ["claude","gemini","chatgpt","grok","deepseek"],
+    "reconciled_at": "2026-05-30", "template_version": "2.0"
+  },
+  "_reconciliation_summary": {
+    "result": "Strong 5-source convergence, ZERO factual conflicts. All change-prone facts agree: US visa-free 90 days, no fee, no mandatory ETA, Visit Japan Web OPTIONAL (all 5 correct this run), advisory Level 1, tap water safe. Recommendation consensus strong (Kinkaku-ji 5/5; Shibuya Crossing, Senso-ji, teamLab, Arashiyama, Kiyomizu top of pool).",
+    "source_quality": {
+      "claude": "complete, on-template, change-prone facts source-verified",
+      "gemini": "complete but OFF-TEMPLATE (renamed sections: visa_entry/money_finance/etc) — content mapped back by hand",
+      "chatgpt": "complete; file used smart/curly quotes (repaired to valid JSON)",
+      "grok": "complete, on-template, valid; got Visit Japan Web right this run",
+      "deepseek": "complete, on-template, valid; was mislabeled ai_source=claude (corrected)"
+    }
+  },
+  "identity": {
+    "name_local": { "value": "日本 (Nihon / Nippon)", "status": "agreed_stable", "agreed_by": 5 },
+    "capital": { "value": "Tokyo", "status": "agreed_stable", "agreed_by": 5 },
+    "official_languages": { "value": ["Japanese"], "status": "agreed_stable", "agreed_by": 5 },
+    "currency_code": { "value": "JPY", "status": "agreed_stable", "agreed_by": 5 },
+    "currency_name": { "value": "Japanese yen (¥)", "status": "agreed_stable", "agreed_by": 5 },
+    "timezones": { "value": ["JST (UTC+9)"], "status": "agreed_stable", "agreed_by": 5 },
+    "calling_code": { "value": "+81", "status": "agreed_stable", "agreed_by": 5 },
+    "power_plug_voltage": { "value": "100V, 50/60Hz, Type A/B", "status": "agreed_stable", "agreed_by": 5 }
+  },
+  "country_facts": {
+    "visa": {
+      "by_nationality": [{
+        "passport": "US",
+        "type": { "value": "visa_free (Temporary Visitor)", "status": "verified", "source_url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html", "agreed_by": 5, "checked": "2026-05-30" },
+        "max_stay_days": { "value": 90, "status": "verified", "source_url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html", "agreed_by": 5 },
+        "fee": { "value": "none (visa-free)", "status": "verified", "source_url": "https://www.us.emb-japan.go.jp/itpr_en/travel_and_visa.html", "agreed_by": 5 },
+        "online_authorization_required": {
+          "value": "No mandatory ETA for US visa-free entry as of 2026. Visit Japan Web (vjw.digital.go.jp) is OPTIONAL pre-registration for immigration+customs (one 2D QR code; 2026 Joint Kiosks at HND/NRT/KIX). A digital travel authorization for visa-exempt travelers is reportedly planned for 2028 — NOT active yet.",
+          "status": "verified", "source_url": "https://vjw.digital.go.jp", "agreed_by": 5, "checked": "2026-05-30",
+          "note": "All 5 sources agreed optional this run."
+        },
+        "official_application_url": { "value": "n/a (visa-free)" }
+      }],
+      "scam_sites_to_avoid": { "value": ["unofficial visa/eVisa sites charging fees for free visa-free entry", "third-party sites charging for the free Visit Japan Web QR"], "status": "agreed_stable", "agreed_by": 3 }
+    },
+    "documents": {
+      "passport_validity_required": { "value": "Valid for duration of stay (no 6-month rule for US visa-free visitors) — confirm", "status": "verify_recommended", "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Japan.html", "agreed_by": 3 },
+      "onward_ticket_required": { "value": "Return/onward ticket may be requested at entry", "status": "agreed_stable", "agreed_by": 3 }
+    },
+    "money": {
+      "currency_code": { "value": "JPY (¥)", "status": "agreed_stable", "agreed_by": 5 },
+      "approx_rate_note": { "value": "~150-160 JPY per 1 USD (approx, May 2026)", "status": "serve_live", "note": "VOLATILE — serve live, never freeze" },
+      "cash_vs_card": { "value": "Cards accepted in cities/tourist spots; cash still important for small shops, temples, rural. IC cards (Suica/Pasmo) essential for transit.", "status": "agreed_stable", "agreed_by": 5 },
+      "atm_availability": { "value": "7-Eleven and Japan Post ATMs reliably take foreign cards", "status": "agreed_stable", "agreed_by": 4 },
+      "currency_import_export_limit": { "value": "Declare amounts over ¥1,000,000 (or equivalent)", "status": "verify_recommended", "source_url": "https://www.customs.go.jp/english/", "agreed_by": 3 },
+      "tipping_norm": { "value": "No tipping — not customary, service included", "status": "agreed_stable", "agreed_by": 5 }
+    },
+    "getting_there": {
+      "main_international_airports": { "value": ["Tokyo Haneda (HND)", "Tokyo Narita (NRT)", "Osaka Kansai (KIX)"], "status": "agreed_stable", "agreed_by": 5 },
+      "national_carrier": { "value": "Japan Airlines (JAL) and ANA", "status": "agreed_stable", "agreed_by": 5 },
+      "flight_from_us": { "value": "Nonstop from LAX/SFO/SEA/ORD/JFK-EWR/DFW/IAD; West Coast ~11-12h, East Coast ~13-14h. Prices serve-live.", "status": "serve_live", "agreed_by": 5 }
+    },
+    "getting_around": {
+      "intercity_rail": { "value": "JR Shinkansen (bullet train); Japan Rail Pass cost-effective for tourists; Tokyo↔Kyoto ~2h15-2h30", "status": "agreed_stable", "agreed_by": 5 },
+      "buses": { "value": "Reliable long-distance + local buses; cheaper than rail, slower", "status": "agreed_stable", "agreed_by": 4 },
+      "domestic_flights": { "value": "Efficient for long distances; LCCs (Peach, Jetstar Japan) available", "status": "agreed_stable", "agreed_by": 4 },
+      "ride_sharing": { "value": "Uber available in big cities but mostly hails taxis; limited vs US; taxis safe but expensive", "status": "agreed_stable", "agreed_by": 4 },
+      "car_rental_and_driving": { "value": "Rarely needed (rail-centric). Drives on LEFT; International Driving Permit required with US license; strict 0.03% BAC; city parking expensive", "status": "verify_recommended", "source_url": "https://www.npa.go.jp/english/", "agreed_by": 4 }
+    },
+    "when_to_go": {
+      "climate_by_season": { "value": "Spring (Mar-May) mild + cherry blossoms; summer (Jun-Aug) hot/humid + rainy season/typhoon; fall (Sep-Nov) mild + autumn colors; winter (Dec-Feb) cold, snow in north", "status": "agreed_stable", "agreed_by": 5 },
+      "best_months": { "value": ["late March-April (cherry blossom)", "October-November (autumn foliage)"], "rank": "core", "agreed_by": 5 },
+      "avoid_periods": { "value": ["June-July rainy season", "August typhoon + heat", "Golden Week (late Apr-early May)", "Obon (mid-Aug)", "New Year"], "rank": "core", "agreed_by": 5 }
+    },
+    "safety_health": {
+      "advisory_level": { "value": "US State Dept Level 1 — Exercise Normal Precautions", "status": "verified", "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html", "agreed_by": 5, "checked": "2026-05-30" },
+      "main_risk": { "value": "Environmental (earthquakes, typhoons), NOT crime. Very low-crime country.", "status": "agreed_stable", "agreed_by": 5 },
+      "vaccines": { "value": "No mandatory vaccines for entry; routine recommended (MMR, Hep A/B, flu)", "status": "agreed_stable", "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/japan", "agreed_by": 4 },
+      "tap_water_safe": { "value": true, "status": "agreed_stable", "agreed_by": 5 },
+      "emergency_numbers": { "value": { "police": "110", "ambulance": "119", "fire": "119", "us_embassy_tokyo": "+81-3-3224-5000" }, "status": "agreed_stable", "agreed_by": 5 },
+      "common_scams": { "value": ["rare overall; bar/taxi overcharging in nightlife districts (Kabukicho/Roppongi); fake tour guides near stations"], "status": "agreed_stable", "agreed_by": 4 }
+    },
+    "connectivity": {
+      "sim_esim": { "value": "eSIM easy (Airalo/Ubigi); tourist SIM (Docomo/SoftBank) and pocket WiFi at airports", "status": "agreed_stable", "agreed_by": 5 },
+      "coverage": { "value": "Excellent nationwide 5G/4G incl. rural + rail", "status": "agreed_stable", "agreed_by": 5 }
+    },
+    "costs": {
+      "daily_budget_low": { "value": "~¥8,000-12,000 ($50-75)", "status": "serve_live" },
+      "daily_budget_mid": { "value": "~¥15,000-25,000 ($95-160)", "status": "serve_live" },
+      "daily_budget_high": { "value": "¥40,000+ ($250+)", "status": "serve_live" }
+    },
+    "culture_etiquette": {
+      "dress_norms": { "value": "No strict code; conservative at temples/shrines; remove shoes indoors/ryokan", "status": "agreed_stable", "agreed_by": 5 },
+      "dos_and_donts": { "value": ["don't eat while walking", "don't tip", "be quiet on transit", "queue properly", "bow slightly when greeting", "use both hands for cards/money", "carry your trash"], "status": "agreed_stable", "agreed_by": 5 }
+    }
+  },
+  "cities": [
+    {
+      "name": "Tokyo",
+      "facts": {
+        "getting_there": { "value": "Narita (NRT) ~60-90min to center via N'EX/Skyliner; Haneda (HND) ~30min via monorail/Keikyu (closer)", "status": "agreed_stable", "agreed_by": 5 },
+        "local_transport": { "value": "JR Yamanote loop + Tokyo Metro; Suica/Pasmo IC card", "status": "agreed_stable", "agreed_by": 5 }
+      },
+      "recommendations": {
+        "top_sights": { "core": ["Senso-ji (Asakusa)", "Shibuya Crossing", "teamLab", "Meiji Shrine", "Tokyo Skytree"], "optional": ["Harajuku", "Akihabara", "Shinjuku (Omoide Yokocho/Gyoen)", "Tsukiji Outer Market", "Imperial Palace", "Ginza"], "note": "Senso-ji, Shibuya, teamLab top the 5-source pool" },
+        "where_to_stay": { "core": ["Shinjuku", "Asakusa", "Shibuya"], "optional": ["Ginza"] },
+        "where_to_eat": { "pool": ["Tsukiji Outer Market", "izakaya", "ramen shops", "Ichiran"] },
+        "day_trips": { "core": ["Hakone/Mt Fuji (onsen + views)", "Nikko (UNESCO shrines)", "Kamakura (Great Buddha)"] }
+      }
+    },
+    {
+      "name": "Kyoto",
+      "facts": {
+        "getting_there": { "value": "Shinkansen from Tokyo ~2h15-2h30; from Osaka/KIX ~75-90min", "status": "agreed_stable", "agreed_by": 5 },
+        "local_transport": { "value": "buses + subway + walking in central areas; IC card works", "status": "agreed_stable", "agreed_by": 5 },
+        "nearest_airport": { "value": "Osaka Kansai (KIX) or Itami (ITM); no own major airport", "status": "agreed_stable", "agreed_by": 5 }
+      },
+      "recommendations": {
+        "top_sights": { "core": ["Kinkaku-ji (Golden Pavilion)", "Arashiyama Bamboo Grove", "Kiyomizu-dera", "Fushimi Inari Taisha", "Gion district"], "optional": ["Ryoan-ji", "Nijo Castle", "Nishiki Market", "Philosopher's Path"], "note": "Kinkaku-ji 5/5; Arashiyama + Kiyomizu 4/5 — safest includes" },
+        "where_to_stay": { "core": ["Gion/Higashiyama", "Kyoto Station area", "Downtown Kyoto"], "optional": ["Arashiyama"] },
+        "where_to_eat": { "pool": ["Nishiki Market", "kaiseki (Kikunoi)", "Pontocho Alley", "matcha cafes", "yudofu (tofu)"] },
+        "day_trips": { "core": ["Nara (deer + Todai-ji)"], "optional": ["Osaka", "Himeji Castle"] }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "Japan in 7 days (first-timer, Tokyo + Kyoto)",
+      "days": 7, "scope": "multi-city",
+      "common_spine": {
+        "note": "Structure all 5 sources converged on — high-confidence core.",
+        "value": [
+          "Days 1-3: Tokyo (arrival + Shibuya/Shinjuku; Asakusa/Senso-ji + Akihabara/Skytree; teamLab; a day trip — Hakone or Nikko)",
+          "Day 4: Shinkansen Tokyo→Kyoto, evening Gion",
+          "Days 5-6: Kyoto (Fushimi Inari, Kiyomizu/Higashiyama; Arashiyama + Kinkaku-ji)",
+          "Day 7: Nara day trip or final Kyoto sights, depart via Kansai (KIX)"
+        ]
+      },
+      "variations_offered": ["Day-3 Tokyo: Hakone vs Nikko vs city day", "Kyoto: add Nijo Castle / Imperial Palace / Philosopher's Path", "Nara as Kyoto day trip"],
+      "assumptions": "moderate pace, spring/autumn, first-time US visitor, rail-based (JR Pass for the Tokyo↔Kyoto leg)"
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": { "core": ["Tokyo", "Kyoto", "Mt Fuji/Hakone", "Nara"], "optional": ["Osaka", "Hiroshima + Miyajima", "Shinkansen ride as an experience"] }
+  },
+  "_human_checklist": {
+    "_rule": "Max 5, ranked, no padding. Everything else is settled (verified or agreed_stable across 5 sources).",
+    "items": [
+      "1. (LOW URGENCY) Visit Japan Web — re-confirm OPTIONAL (not required) at publish time; the entry detail most likely to change. Source: vjw.digital.go.jp.",
+      "2. (WATCH) 2028 planned digital travel authorization — confirm NOT live early before publishing entry articles.",
+      "3. (IF RELEVANT) Tax-free shopping shift to refund-at-departure (~Nov 2026) — only matters if an article covers shopping.",
+      "4. (IF RELEVANT) Driving article only: confirm IDP requirement + current BAC.",
+      "5. (NONE beyond above) — visa, advisory, currency, emergency numbers, tap water all 5-source agreed + source-verified."
+    ]
+  }
+}
