@@ -1,0 +1,36 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "greeceforamericans",
+  "stage": "writing",
+  "batch": 16,
+  "batches_total": 16,
+  "batch_status": "written",
+  "published_slugs": [
+    "10-day-greece-itinerary-first-timers",
+    "best-food-experiences-athens",
+    "best-things-to-do-in-crete",
+    "crete-best-beaches",
+    "crete-first-timers-guide",
+    "greece-for-couples-honeymoon",
+    "greek-coffee-cafe-culture",
+    "greek-food-what-to-order",
+    "greek-island-hopping-guide",
+    "greek-wine-guide",
+    "how-greek-ferries-work",
+    "how-to-eat-at-a-greek-taverna",
+    "knossos-guide",
+    "western-vs-eastern-crete",
+    "where-to-stay-in-santorini"
+  ],
+  "updated_at": "2026-06-18",
+  "notes": "Batch 16 WRITTEN — FINAL BATCH: flights-from-us-to-greece, arriving-in-athens-guide, greece-shoulder-season, best-greek-islands-for-first-timers, best-beaches-in-greece. 1050-1161w. cloud=dsrkwieur, 9-field, 15 imgs. flights uses skyscanner affiliate. correction#1 in flights+arrival (Athens gateway, route home via Athens, no direct island-US flights). SCOPE: both ranking articles (islands-for-first-timers, beaches) constrained strictly to in-scope 6 destinations — verified 0 OOS islands incl after top-ups; beaches article explicitly frames as \"islands first-timers visit\" and sets Santorini=volcanic-not-sandy expectation. EES-in-effect + jet-lag(7h)+9-11h flight facts. AWAITING second gate. ALL 80 ARTICLES NOW WRITTEN (80 total) across 16 batches. Content generation COMPLETE.",
+  "parked_ideas": [
+    {
+      "idea": "Short video (Instagram Reels) for richer 'what it's like there' proof",
+      "decision": "DEFERRED until all sites built + live. Do NOT embed live IG Reels in article bodies (kills Core Web Vitals / SEO, GDPR cookies, content rot). Preferred path when revisited: self-host short clips on Cloudinary (owned, fast, no cookies) — check Cloudinary video quota/pricing first; OR click-to-load facade for one curated Reel per pillar; OR own-brand Reels linked from footer/author bio only.",
+      "revisit_when": "post-launch, using real traffic data to target which pages get video"
+    }
+  ],
+  "articles_written_total": 80
+}
