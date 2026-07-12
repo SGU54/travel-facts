@@ -1,0 +1,55 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "greeceforamericans",
+  "stage": "live",
+  "batch": 16,
+  "batches_total": 16,
+  "batch_status": "published",
+  "articles_written_total": 80,
+  "articles_published_total": 80,
+  "updated_at": "2026-07-12",
+  "notes": "STATE TRUTH-UP 2026-07-12: previous state (stage=writing, batch 16 written, 15 published_slugs, dated 2026-06-18) was stale — export of 2026-07-12 shows all 80 articles published and DESIGN-NOTES.md locked (Come Up For Air). Corrected to stage=live. published_slugs list dropped from state (80 slugs; the DB + sitemap are the source of truth — see replatform block for the export snapshot reference).",
+  "replatform": {
+    "goal": "Re-platform greeceforamericans onto the v2 engine (Thailand-standard structure), KEEPING the Come Up For Air identity. Site is LIVE + indexed + already onboarded in common.sites — no fleet-onboarding step. All slugs/URLs preserved (route parity verified: /, /article/[slug], /category/[slug], /about, /disclosures, /search all exist on v2; new routes additive).",
+    "reference_standard": "thailandforamericans.com (do not touch Thailand)",
+    "content_snapshot": "export-articles-published-2026-07-12.json (80 articles)",
+    "part1_fact_retrofit": {
+      "status": "done_pending_user_apply",
+      "spans_added": 27,
+      "spans_preexisting": 3,
+      "articles_touched": ["do-americans-need-visa-for-greece", "greece-entry-requirements"],
+      "keys_new_seeded": ["eu.etias_launch", "eu.etias_validity", "eu.cash_declaration", "eu.passport_validity_min", "eu.passport_issue_age", "eu.ees_status"],
+      "keys_reused_existing": ["eu.etias_fee", "eu.schengen_stay"],
+      "defect_fixed": "duplicated 'paying a fee of' in do-americans-need-visa-for-greece (approved)",
+      "apply_steps": [
+        "1. Run greece-facts.sql in Supabase SQL editor (service role) — BEFORE the article update, so spans never render on fallback",
+        "2. node scripts/articles-batch.mjs update retrofit-update.json  (from greece repo root; status preserved, no --set-status)",
+        "3. Verify /article/greece-entry-requirements renders data-fact-resolved spans (view-source or the debug route until it's removed)",
+        "4. OPTIONAL human-gated: check-config-proposal.sql for eu.cash_declaration, then a checker dry run",
+        "5. Push greece-facts.sql to travel-facts/greeceforamericans/ and this state.json"
+      ],
+      "note_fallbacks": "The 4 eu.ees_status span fallbacks read 'being rolled out'-era wording (as written); DB value 'now fully in effect' supersedes at render. Normalizing fallback text was NOT done (content-as-written rule) — approve separately if wanted."
+    },
+    "part2_engine_upgrade": {
+      "status": "next",
+      "plan": "template-v2 base + port Greece identity layer (site.ts tokens+factRegions, theme, cufa globals.css, HeroBubbles/IslandIndex/GuideCards/SegmentBand/GreeceMap, DESIGN-NOTES) + run migration 0004 on schema greece + drop /api/debug-facts. Design imperfections list to be provided by user at this boundary; fixes verified against live rendered pages desktop+mobile per design-step.md."
+    },
+    "part3_feature_set": {
+      "status": "pending",
+      "plan": "Everything Thailand-standard Greece lacks: reading time, TOC (+mobile), breadcrumbs, JSON-LD suite (Org/WebSite/Article/BreadcrumbList/FAQPage), RSS, 404, skip-link, TrustStrip, BestTimeStrip, CostCheatsheet + ItineraryPicker at /build-my-trip (reconcile with Greece's existing picker; every routed slug verified against the 80), /go/ affiliate route, /api/rates. All wired or not shipped (hard rule 12)."
+    }
+  },
+  "parked_ideas": [
+    {
+      "idea": "Short video (Instagram Reels) for richer 'what it's like there' proof",
+      "decision": "DEFERRED until all sites built + live. Do NOT embed live IG Reels in article bodies (kills Core Web Vitals / SEO, GDPR cookies, content rot). Preferred path when revisited: self-host short clips on Cloudinary (owned, fast, no cookies) — check Cloudinary video quota/pricing first; OR click-to-load facade for one curated Reel per pillar; OR own-brand Reels linked from footer/author bio only.",
+      "revisit_when": "post-launch, using real traffic data to target which pages get video"
+    },
+    {
+      "idea": "Normalize the 4 eu.ees_status span fallback texts to 'now fully in effect'",
+      "decision": "Not done in Part 1 (content-as-written rule). One-line approval applies it.",
+      "revisit_when": "any time; low priority since DB value supersedes at render"
+    }
+  ]
+}
