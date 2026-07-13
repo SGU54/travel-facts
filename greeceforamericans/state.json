@@ -1,0 +1,128 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll \u2014 trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "greeceforamericans",
+  "stage": "live",
+  "batch": 16,
+  "batches_total": 16,
+  "batch_status": "published",
+  "articles_written_total": 80,
+  "articles_published_total": 80,
+  "updated_at": "2026-07-12",
+  "notes": "STATE TRUTH-UP 2026-07-12: previous state (stage=writing, batch 16 written, 15 published_slugs, dated 2026-06-18) was stale \u2014 export of 2026-07-12 shows all 80 articles published and DESIGN-NOTES.md locked (Come Up For Air). Corrected to stage=live. published_slugs list dropped from state (80 slugs; the DB + sitemap are the source of truth \u2014 see replatform block for the export snapshot reference).",
+  "replatform": {
+    "goal": "Re-platform greeceforamericans onto the v2 engine (Thailand-standard structure), KEEPING the Come Up For Air identity. Site is LIVE + indexed + already onboarded in common.sites \u2014 no fleet-onboarding step. All slugs/URLs preserved (route parity verified: /, /article/[slug], /category/[slug], /about, /disclosures, /search all exist on v2; new routes additive).",
+    "reference_standard": "thailandforamericans.com (do not touch Thailand)",
+    "content_snapshot": "export-articles-published-2026-07-12.json (80 articles)",
+    "part1_fact_retrofit": {
+      "status": "applied",
+      "spans_added": 27,
+      "spans_preexisting": 3,
+      "articles_touched": [
+        "do-americans-need-visa-for-greece",
+        "greece-entry-requirements"
+      ],
+      "keys_new_seeded": [
+        "eu.etias_launch",
+        "eu.etias_validity",
+        "eu.cash_declaration",
+        "eu.passport_validity_min",
+        "eu.passport_issue_age",
+        "eu.ees_status"
+      ],
+      "keys_reused_existing": [
+        "eu.etias_fee",
+        "eu.schengen_stay"
+      ],
+      "defect_fixed": "duplicated 'paying a fee of' in do-americans-need-visa-for-greece (approved)",
+      "apply_steps": [
+        "1. Run greece-facts.sql in Supabase SQL editor (service role) \u2014 BEFORE the article update, so spans never render on fallback",
+        "2. node scripts/articles-batch.mjs update retrofit-update.json  (from greece repo root; status preserved, no --set-status)",
+        "3. Verify /article/greece-entry-requirements renders data-fact-resolved spans (view-source or the debug route until it's removed)",
+        "4. OPTIONAL human-gated: check-config-proposal.sql for eu.cash_declaration, then a checker dry run",
+        "5. Push greece-facts.sql to travel-facts/greeceforamericans/ and this state.json"
+      ],
+      "note_fallbacks": "The 4 eu.ees_status span fallbacks read 'being rolled out'-era wording (as written); DB value 'now fully in effect' supersedes at render. Normalizing fallback text was NOT done (content-as-written rule) \u2014 approve separately if wanted."
+    },
+    "part2_engine_upgrade": {
+      "status": "built_pending_deploy",
+      "done": [
+        "v2 engine base + full Come Up For Air identity port (tokens, cufa globals, HeroBubbles/IslandIndex/GuideCards/SegmentBand/GreeceMap, geo/planner stack)",
+        "FIX nav overflow (root cause of the white-gutter band-shear): 13 mains -> 9 top-level via SITE.navGroups Destinations dropdown; lg breakpoint; overflow-x clip guard",
+        "FIX article hero: Roman-arch replaced by v2 full-bleed hero under CUFA deep-water scrim",
+        "cosmati -> site-signature migration (v2 contract), signatureBand true",
+        "font-jp scrubbed from 18 v2 components -> cufa-mono (template leak, flagged upstream)",
+        "cloudinary cloud fallback bug fixed: greeceforamericans -> dsrkwieur (hard rule 10)",
+        "mapData TravelMode widened with ferry; ItineraryPicker gains onPlanChange seam",
+        "/api/debug-facts dropped"
+      ],
+      "verified": "tsc clean (site+admin), skeleton-check pass, next build pass, rendered-HTML structural checks pass. Screenshot loop NOT runnable in build env (no browser) -> visual checklist in REPLATFORM-NOTES step 6 is the substitute, run on the Vercel preview."
+    },
+    "part3_feature_set": {
+      "status": "built_pending_deploy",
+      "shipped": "reading time, TOC + MobileToc, breadcrumbs, JSON-LD suite (Org/WebSite/Article/BreadcrumbList/FAQPage), RSS feed.xml, styled 404 (Lost at sea), skip-link + main#main, TrustStrip, StartHere (5 verified slugs), BestTimeStrip (facts.json when_to_go), CostCheatsheet + TripBudget + ItineraryPicker at /build-my-trip, /go/ affiliate route, /api/rates, share bar, save-to-trip, article pagination, reading progress, back-to-top. newsletter/leadMagnet/products ship DISABLED (rule 12).",
+      "next": "REPLATFORM-NOTES.md runbook: SQL 0004 + rerun v2 0003_rls, Vercel preview, visual checklist, promote, bump engine_version in common.sites."
+    },
+    "preview_round_1_fixes": {
+      "date": "2026-07-12",
+      "reported": "search bar overlapping nav; trust strip flat-teal slab off-brand; picker still on homepage; CTA routed to /category/plan-your-trip; /build-my-trip unreadable; Keep-reading misaligned",
+      "fixed": [
+        "1. Header: 9 flat items could never fit max-w-6xl (my error) \u2014 now 8 category items at xl breakpoint in a max-w-7xl row, search collapsed to an icon toggling the panel, Build-my-trip rendered as the aqua CTA pill; hamburger below xl",
+        "2. TrustStrip: bg-green slab -> .cufa-trust gradient continuing the waterline (mid->deep), Cormorant bone values, muted-aqua captions, one md:grid-cols-4 row",
+        "3. Homepage picker section removed; planner lives only at /build-my-trip",
+        "4. Hero \"Plan your route\" + closing CTA both -> /build-my-trip",
+        "5. Root cause unreadable page: v2 bg-ink-2 token absent from Greece palette -> class purged -> dark-styled picker on light bg. Token defined (#0A3247); also fixes the article keepPlanning card + TripBudget + MyTrip panels",
+        "6. Article column lg:justify-self-start -> center, so body, pagination and Keep-reading share one centered 44rem axis"
+      ],
+      "verified": "tsc clean, skeleton-check pass, build pass, rendered-HTML checks: all 6 confirmed against served pages"
+    },
+    "preview_round_2_fixes": {
+      "date": "2026-07-12",
+      "reported": "homepage headlines invisible; Keep-reading still indented; light v2 slabs break the Come-Up-For-Air theme \u2014 user wants one continuous dark descent hero-to-CTA",
+      "root_cause": "cufa-home wrapper sets pale foam text for the whole dark flow; inserted v2 sections (StartHere bg-surface, BestTimeStrip bg-surface card) brought light backgrounds INTO it -> broke the descent AND made inherited foam headings invisible on pale. Map heading used SectionHead (green-deep title) -> invisible on the dark band. Keep-reading: 1fr track center != page center, so centering the column was insufficient.",
+      "fixed": [
+        "StartHere: bg-surface removed (inherits deep); h2 text-bone Cormorant-medium; cards -> aqua-hairline bg-white/[0.04] panels; captions #A9CBCF; note #7FBAC4; CTA line brass-soft",
+        "BestTimeStrip: bg-surface card -> aqua-hairline bg-white/[0.03] panel; h2 text-bone; lead/legend #A9CBCF; months #7FBAC4; cold bar bg-line -> bg-white/15",
+        "DestinationsMap: SectionHead replaced with cufa-shead (bone heading, saffron em); lead #A9CBCF; SectionHead import dropped",
+        "Article: RelatedArticles moved INSIDE the 44rem reading column after ArticlePagination; its wrapper mx-auto/max-w/px stripped to pb-16 \u2014 body, pagination and Keep-reading now share one exact axis"
+      ],
+      "verified": "tsc clean, skeleton-check pass, build pass; rendered checks green (StartHere absent in sandbox render only because placeholder DB yields <3 slugs -> component null-renders by design)"
+    },
+    "preview_round_3_fixes": {
+      "date": "2026-07-12",
+      "reported": "lighter rectangle behind Start-here block; want hero bubbles rising from lower on the page; saved-trips (pin) had no nav entry \u2014 saving was a dead end",
+      "fixed": [
+        "Compositing seam: .cufa-home was a flat var(--green-deep) layer; cards with hover:-translate-y + transition promoted that band to its own GPU layer that resolved the flat color slightly differently -> crisp lighter rectangle. Replaced the flat fill with a continuous 180deg gradient (green-deep -> #05283C -> mid), background-attachment: fixed, and isolated each showcase child (.cufa-home > * { isolation: isolate }). A gradient composites identically across layer boundaries, so no seam; also deepens the descent (CUFA intent).",
+        "Hero bubbles: kept bottom:-30px origin but retuned \u2014 smaller specks (2-11px), buoyant timing (bigger = slower), delay spread widened to 18s, rise shortened to -88vh so they emerge from the depths and keep the upper hero airy instead of a uniform curtain.",
+        "Saved dead-end: added /saved route (dark cufa-home surface) rendering MyTrip; added navExtras {/saved}; built SavedNavLink pin (live localStorage count via getTrip/onTripChange) wired into desktop cluster (search -> saved pin -> CTA) and mobile menu; excluded /saved from the flat row and deduped the mobile list; retinted MyTrip empty-state for dark. /saved is noindex (per-device shortlist)."
+      ],
+      "verified": "tsc clean, skeleton-check pass, build pass; served checks green: /saved 200, header pin present, seam gradient + bubble curve compiled into CSS"
+    },
+    "preview_round_4_fixes": {
+      "date": "2026-07-12",
+      "reported": "Start-here dashed connector overlapped the card frame (line ran over the top border into the gap)",
+      "fixed": "The wake was pinned left:58px / right:-34px, so it crossed each card's own top border on both ends. Rewrote it to sit ONLY in the 24px column gap (left: calc(100%+3px), width 18px) level with the buoy centre (+1px), never touching a frame. Also hid it on the last card of each row (lg: nth-child(3n); sm: nth-child(2n)) so item 3 no longer shoots a dash off into empty space; single-column keeps a short vertical wake in the row gap, likewise clear of the frame.",
+      "verified": "skeleton-check pass, build pass; compiled CSS confirms gap-only wake, row-end hidden, old right:-34px gone"
+    },
+    "preview_round_5_fixes": {
+      "date": "2026-07-12",
+      "reported": "r4 connector fix did not visibly change \u2014 dashes still cross the card top border",
+      "root_cause": "r4 moved the wake into an 18px stub in the column gap on the card RIGHT, but the visible problem was the line sitting AT the buoy centre which coincided with the card top edge (top:1px). The buoys straddled the card top (top:-14px, centre +1px), so any centre-aligned line grazes the frame. Wrong axis of fix.",
+      "fixed": "Re-modeled: buoys LIFTED fully into the clear band above the cards (top:-34px -> buoy bottom is 4px above the card top edge, no straddle). The dashed bridge now runs at top:-19px (the lifted buoy centre), entirely in the clear band above y=0, bridging buoy-to-buoy across the gap; it never touches a card top or rounded corner. Row-end dashes hidden (lg nth-child(3n), sm nth-child(2n)). Thread given mt-14 + gap-y-14 clearance so lifted buoys are never clipped.",
+      "verification_note": "Could not screenshot in-sandbox (chromium is a snap stub, Playwright CDN not allowlisted). Shipped a standalone connector-preview.html (before/after, exact px + CSS vars) for a 5-second local visual confirm before deploy.",
+      "verified": "skeleton-check pass, build pass; globals.css geometry asserted (buoy -34px, bridge -19px, row-end hidden)"
+    }
+  },
+  "parked_ideas": [
+    {
+      "idea": "Short video (Instagram Reels) for richer 'what it's like there' proof",
+      "decision": "DEFERRED until all sites built + live. Do NOT embed live IG Reels in article bodies (kills Core Web Vitals / SEO, GDPR cookies, content rot). Preferred path when revisited: self-host short clips on Cloudinary (owned, fast, no cookies) \u2014 check Cloudinary video quota/pricing first; OR click-to-load facade for one curated Reel per pillar; OR own-brand Reels linked from footer/author bio only.",
+      "revisit_when": "post-launch, using real traffic data to target which pages get video"
+    },
+    {
+      "idea": "Normalize the 4 eu.ees_status span fallback texts to 'now fully in effect'",
+      "decision": "Not done in Part 1 (content-as-written rule). One-line approval applies it.",
+      "revisit_when": "any time; low priority since DB value supersedes at render"
+    }
+  ]
+}
