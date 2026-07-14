@@ -1,0 +1,133 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "romeforamericans",
+  "stage": "live",
+  "batch": 20,
+  "batches_total": 20,
+  "batch_status": "published",
+  "articles_written_total": 96,
+  "articles_published_total": 96,
+  "updated_at": "2026-07-13",
+  "notes": "STATE INITIALIZED 2026-07-13: no state.json had ever been pushed for this project (facts.json + article-list.json existed; progress was untracked). Site confirmed LIVE + registered in GSC by the user; canonical is https://www.romeforamericans.com (www). 96 articles published on the v1 engine. NOT yet in common.sites. Old engine has no fact-spans, no feature blocks, no standard feature set, no DESIGN-NOTES.md. Old identity 'Travertine & Imperial' (Cormorant Garamond + cream + oxblood, Cosmati inlay) — NOTE: v2 skeleton-check tripwires cosmati/travertine tokens; identity vocabulary must be rebuilt even though the soul is kept.",
+  "replatform": {
+    "goal": "Re-platform romeforamericans onto the v2 engine (Thailand-standard structure) with a design LEVEL-UP: keep the site's own identity/soul, raise execution ABOVE Thailand's bar. Content stays as written except the fact-DB retrofit + FAQ blocks (user-approved addition). Site is LIVE — all slugs/URLs preserved (route parity verified: /, /article/[slug], /category/[slug], /about, /disclosures, /search identical on v2; new routes additive → zero redirects). Category slugs kept (user decision). Then onboard into common.sites (NOT yet registered).",
+    "reference_standard": "thailandforamericans.com (do not touch Thailand)",
+    "content_snapshot": "export-articles-2026-07-13.json (96 articles, all published)",
+    "part1_fact_retrofit": {
+      "status": "applied_pending_push_and_sql",
+      "spans_added": 34,
+      "spans_preexisting": 0,
+      "articles_touched": [
+        "what-to-pack-for-rome",
+        "rome-taxis-guide",
+        "common-scams-in-rome",
+        "rome-airport-to-city-center",
+        "fiumicino-vs-ciampino",
+        "leonardo-express-fiumicino-trains",
+        "ostia-antica-day-trip",
+        "rome-metro-guide",
+        "rome-buses-trams-guide",
+        "rome-transport-tickets-roma-pass",
+        "rome-in-1-day",
+        "rome-in-2-days",
+        "colosseum-forum-palatine-combined-ticket"
+      ],
+      "keys_new_seeded": [
+        "rome.taxi_fixed_fco",
+        "rome.taxi_fixed_cia",
+        "rome.leonardo_express_fare",
+        "rome.fl1_fare",
+        "rome.bit_fare",
+        "rome.bit_validity",
+        "rome.transit_fine",
+        "rome.advisory_level",
+        "rome.colosseum_ticket_validity"
+      ],
+      "keys_reused_existing": [
+        "eu.schengen_stay",
+        "eu.etias_launch"
+      ],
+      "keys_proposed_pending_approval": [
+        "eu.etias_required (new SHARED eu fact — gated block in rome-facts.sql)"
+      ],
+      "verification": "DOM-only (cheerio); 34/34 counts exact; strip-spans wording diff = byte-identical text on all 96 articles; no nested/empty spans. BIT fare re-verified €1.50 on ATAC 2026-07-13 (increase to €2.00 approved-pending — high-priority check config); Colosseum 24h validity re-verified on colosseo.it 2026-07-13.",
+      "known_flags": [
+        "rome-in-3-days advisory instance left as prose: comma sits INSIDE the quotes ('caution,\"') — spanning would break punctuation on substitution. Optional 1-char punctuation move needs approval.",
+        "what-to-pack 'six months beyond your trip' left as prose: it is advice framing; facts.json passport_validity_required = 3 months (6 recommended) — spanning would contradict wording."
+      ],
+      "apply_steps": [
+        "1. Run rome-facts.sql in Supabase SQL editor (service role) — BEFORE the article update, so spans never render on fallback. Decide the gated eu.etias_required block while there.",
+        "2. node scripts/articles-batch.mjs update retrofit-update.json  (from rome repo root; 13 articles; status preserved, no --set-status)",
+        "3. Spot-check a live article (view-source /article/rome-airport-to-city-center) — v1 engine will NOT resolve spans (no lib/facts.ts) — they render as their fallback text, invisible to readers; resolution begins when v2 ships. This is fail-closed and safe to apply now.",
+        "4. OPTIONAL: enable the two ready check configs (advisory_level, bit_fare) after confirming the select regex against page source.",
+        "5. Push to travel-facts/romeforamericans/: rome-facts.sql, updated facts.json (6 additive keys), and this state.json."
+      ]
+    },
+    "part2_engine_upgrade": {
+      "status": "built_pending_deploy",
+      "engine": "template v2 (D-series engine; full feature set ships in the base)",
+      "done": [
+        "New repo romeforamericans-v2 cloned from template v2; npm install clean; skeleton-check PASSES (site mode); both apps typecheck clean.",
+        "SITE_CONFIG filled (structural only — palette/fonts left at neutral template defaults for Part 3 design): domain, dbSchema='rome', factRegions=['eu'], ui strings kept from live voice, localTime Europe/Rome, quickLinks (4 real Plan-your-trip slugs), destinationsRibbon, affiliates (+rail/esim), bylineNote (D23 honest).",
+        "Feature-set config strips filled from facts.json: trustFacts (guides count dynamic), startHere (6 slugs VERIFIED), bestTime months (Apr/May/Oct=best), costTiers (honest ranges + rate-move nudge, hard rule 13), overviewMap copy.",
+        "geo.ts filled — MODEL B single-city planner (Rome anchor at N-day depths + 7 day-trip bases). 16 slugs all verified against live article list; agreed_stable coordinates. Planner + DestinationsMap now render.",
+        "CLOUDINARY RULE-10 FIX: old repo wrongly set cloud=folder='romeforamericans'. v2 config: cloud from env (real ACCOUNT name, NOT 'romeforamericans'), folder='romeforamericans'. Existing public_ids embed 'romeforamericans/...' so cloudinaryUrl() resolves them unchanged; folder only affects new admin uploads."
+      ],
+      "db_migrations": {
+        "artifact": "SETUP_rome_v2_migrations.sql",
+        "note": "Live rome schema has only 0001_init (column-identical to v2 0001). Bundle runs ONLY the 3 additive v2 migrations it lacks: 0002_site_settings (editable hero), 0003_rls_anon_read (fixes Security Advisor CRITICAL — anon key could read drafts), 0004_function_search_path. Idempotent. Sets search_path to rome first. Do NOT re-run 0001 or the seed.",
+        "sequence_grant": "Not needed for these (no new sequence beyond site_settings' identity? — site_settings uses boolean PK, no sequence). The user already ran the common-schema grant separately."
+      },
+      "reimport": {
+        "note": "NO bulk re-import needed — the 96 articles already live in the rome schema and v2 reads them unchanged (same schema/columns). Only the 13 fact-retrofitted articles get updated, via the SAME Part-1 path: node scripts/articles-batch.mjs update retrofit-update.json (preserve_status default true → no republish).",
+        "route_parity": "/, /article/[slug], /category/[slug], /about, /disclosures, /search all identical on v2. New routes additive (/build-my-trip, /feed.xml, /go/*, /api/rates). ZERO redirects."
+      },
+      "deferred_to_part3_design": [
+        "brand.palette + brand.fonts (neutral defaults held)",
+        "theme.ts font @import URL",
+        "Header.tsx logo mark",
+        "globals.css signature layer",
+        "about/disclosures copy polish",
+        "brand.header ribbon/signatureBand/quickLinksStyle toggles"
+      ]
+    },
+    "part3_design_levelup": {
+      "status": "applied_live_on_v2",
+      "note": "3 directions built photo-less (a required brand state) with REAL loaded fonts (@fontsource local — Google Fonts CDN unreachable in the build container) and screenshot self-critiqued 2 rounds at 1440+390 before reveal. Old identity vocabulary (c*smati/trav*rtine tokens) confirmed tripwired in skeleton-check SITE mode — new class vocabulary required regardless of chosen direction.",
+      "directions": {
+        "A_la_stratigrafia": "THESIS: Rome is built in layers — you don't tour it, you descend through it standing still; the site is a section-cut. Basalt chrome, labeled strata bands (era + material, slow parallax drift), stone-material palette to a bone reading surface, porphyry CTA, gilt hairlines, Archivo 900 display + Instrument Sans + IBM Plex Mono 'excavation label' utility voice. RECOMMENDED — most ownable, pairs with the unhurried soul, and the mono utility voice matches the fact-span/date register.",
+        "B_l_incisione": "THESIS: Rome invented monumental writing — the design language is the inscription: carved, not printed. Carbon chrome + porphyry rule, marble hero, incised Marcellus capitals w/ raking-light text-shadow, chisel rules, SPQR wax seal, Roman-numeral counts. Strong alternative; brought off the 'safe museum' baseline in round 2 by the carbon chrome + seal.",
+        "C_l_ora_lunga": "THESIS: the unhurried guide at passeggiata hour — long light, long shadows. Violet-umber dusk + amber glow, long typographic shadow, sundial sweep. HONEST ASSESSMENT: weakest of the three after 2 rounds; sundial stays abstract. Presented for completeness.",
+        "D_la_tavola": "THESIS: Rome is the original destination — 300 years of Grand Tour travelers before you; the site is the engraved plate (Piranesi) they carried home. Laid-paper ground, iron-gall ink, double plate-frame hero, animated hatching, IM Fell English display + Sorts Mill Goudy, 'TAV. XLVII' plate-number utility voice, one wax-red accent.",
+        "E_l_acquedotto": "THESIS: Rome is the city that moved water for 2,300 years — engineered generosity; the site is the aqueduct: an arcade rhythm carrying a luminous channel, ending at a running nasone. Basin green + verdigris bronze + travertine reading surface, Space Grotesk display. Distinct from Greece: civic engineered water, not sea.",
+        "F_cinecitta": "THESIS: la dolce vita of planning — Rome shot in technicolor; the site is the movie poster: projector beam, marquee dot chase, ticket-stub cards ('N° 00847'), credits row. Poster red + marquee gold + screening-room black, Abril Fatface didone display (poster-didone, deliberately unlike Thailand's condensed Anton)."
+      },
+      "fix_landed": "TrustStrip engine bug fixed in repo: underline split rendered '90 days' as 'days90' whenever the underlined text wasn't a suffix; now splits at position. TEMPLATE RETURN-PATH PATCH candidate (bug is in template v2's TrustStrip too).",
+      "affiliates_corrected": "rail: omio, insurance: safetywing (matching the live site's real programs; earlier fill guessed trainline/airalo).",
+      "batch2_caveat": "D/E/F: in-container image viewer failed this batch — verified by construction + pixel probes (frame lines, channel, arcade, beam, marquee dots all confirmed present); one visual-critique round short of A/B/C's standard. User's review of the PNGs is the visual gate.",
+      "chosen": "D — La Tavola (the engraved Piranesi plate)",
+      "applied": {
+        "tokens": "tailwind.config.ts + globals.css :root — La Tavola values mapped onto the KEPT token names (green/green-deep=wax red, brass/brass-soft=iron-gall/sepia, saffron=plate gilt dark-only, bone/surface/sand=laid paper, ink/read/ink-soft=iron-gall, line=plate hairline). jp token name KEPT → IBM Plex Mono (font-jp used by BestTimeStrip/ItineraryPicker/MapEmbed).",
+        "fonts": "IM Fell English (display, weight 400 only — no font-bold anywhere), Sorts Mill Goudy (body), IBM Plex Mono (utility/.jp). Loaded via globals.css @import (Google Fonts).",
+        "signature": ".hero-bg = engraved plate (double iron frame + drifting cross-hatch etch, 34s, reduced-motion-guarded); .motif-bg = laid paper ground (photo-less brand survives); .site-signature = plate-caption rule; .tavola-caption/.tavola-hatch reusable. All scoped, stable names.",
+        "chrome": "Ribbon → iron-ink + IM Fell italic (was wax-red). Logo → IM Fell 400 wordmark + italic tagline, variant-aware. SectionHead marker → engraved wax square w/ ink keyline (scrubbed the inherited gilt diamond). .arch → hard 4px corners. Selection → wax on bone. brand slots wired: signature:'rule', signatureBand/showTagline true, ribbon set, quickLinksStyle:'panel'.",
+        "verification": "skeleton-check PASS (site mode), both apps typecheck clean. Rendered the REAL v2 homepage via a throwaway fixtures build (rome-render) + headless chromium at 1440+390; structural pixel-probe confirms iron ribbon, plate hero, wax trust strip, paper content — the theme is live on real components, not just the standalone preview. (In-container image VIEWER glitched much of the session; renders captured as PNG/JPEG for the user to view.)",
+        "design_notes": "DESIGN-NOTES.md written at repo root (thesis, palette-with-meaning, type voices, signature CSS, scrub log, TrustStrip return-path-patch note)."
+      }
+    },
+    "part4_feature_set": {
+      "status": "not_started",
+      "note": "User approved adding FAQ blocks (assistant decides count/coverage) — the ONE sanctioned content addition beyond fact-spans."
+    },
+    "part5_fleet_onboarding": {
+      "status": "ready_to_apply",
+      "sql": "docs/ONBOARD_rome_into_fleet.sql — idempotent common.sites upsert (site_key='rome', domain, destination_scope='Rome', engine_version='v2'), + sequence grant + pgrst reload. Two deployment values are placeholders the user fills: <ADMIN_VERCEL_URL>, <VERCEL_PROJECT_ID>.",
+      "click_logging": "Tier-4 /go/ click logging WIRED: added logGoClick() to packages/db/common.ts (reuses commonClient, fire-and-forget, fail-open, attribution BY site_key), called from apps/site/app/go/[role]/[item]/route.ts before redirect with the referer pathname. Writes common.link_clicks (migration 0007). Follows the canonical site-snippets/go-click-logging.ts.",
+      "manual_steps": "After the SQL: (4) expose the `rome` schema in Supabase API → Exposed schemas; (5) verify a /go/ click lands a common.link_clicks row.",
+      "note": "Console/checker/agents cover Rome automatically once the sites row exists — marginal fleet-ops cost ~0."
+    },
+    "logo": "Monogram roundel (wax-seal R + wordmark), layout A: one-line wordmark + italic IM Fell serif tagline (replaced the cluttered mono-caps tagline that wrapped to 3 lines).",
+    "faq": "Reverted to fleet standard: any article <h2> ending in '?' → FAQPage JSON-LD via extractFaqPairs+faqLd (ships in v2 base). No custom accordion/authoring — matches previous sites."
+  }
+}
