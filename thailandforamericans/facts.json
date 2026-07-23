@@ -1,0 +1,1481 @@
+{
+  "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+  "_meta": {
+    "schema_version": 3,
+    "project": "thailandforamericans",
+    "country": "Thailand",
+    "country_iso": "TH",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": [
+        "JFK",
+        "LAX",
+        "SFO",
+        "ORD",
+        "SEA"
+      ],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "USD with THB equivalents"
+    },
+    "reconciled_from": [
+      "claude",
+      "gemini",
+      "deepseek"
+    ],
+    "produced_at": "2026-06-28"
+  },
+  "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+  "identity": {
+    "name_local": {
+      "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "capital": {
+      "value": "Bangkok (Krung Thep Maha Nakhon)",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "official_languages": {
+      "value": [
+        "Thai"
+      ],
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_code": {
+      "value": "THB",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_name": {
+      "value": "Thai baht (฿)",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "timezones": {
+      "value": [
+        "ICT (UTC+7)"
+      ],
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+    },
+    "calling_code": {
+      "value": "+66",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "power_plug_voltage": {
+      "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+      "by_nationality": [
+        {
+          "passport": "United States",
+          "type": {
+            "value": "visa_free (visa exemption for tourism)",
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+            "status": "verify_recommended",
+            "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+          },
+          "max_stay_days": {
+            "value": null,
+            "source_url": "https://www.thaievisa.go.th/",
+            "status": "serve_live",
+            "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+          },
+          "fee": {
+            "value": "No fee for visa-exempt entry",
+            "source_url": null,
+            "status": "agreed_stable"
+          },
+          "online_authorization_required": {
+            "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+            "source_url": "https://tdac.immigration.go.th/",
+            "status": "verify_recommended",
+            "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+          },
+          "official_application_url": {
+            "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+            "source_url": null,
+            "status": "agreed_stable"
+          }
+        }
+      ],
+      "extension": {
+        "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Fee change-prone — verify, don't freeze."
+      },
+      "scam_sites_to_avoid": {
+        "value": [
+          "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+          "Unofficial 'visa-run' brokers who take your passport",
+          "Fake Thailand e-Visa / arrival-card lookalike domains"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+        "status": "verify_recommended"
+      },
+      "onward_ticket_required": {
+        "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "proof_of_funds": {
+        "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+        "source_url": "https://www.thaievisa.go.th/",
+        "status": "verify_recommended",
+        "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+      },
+      "notes": {
+        "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "THB",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "approx_rate_note": {
+        "value": null,
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+      },
+      "cash_vs_card": {
+        "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "atm_availability": {
+        "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "~220 THB ATM fee change-prone — verify."
+      },
+      "currency_import_export_limit": {
+        "value": null,
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+      },
+      "tipping_norm": {
+        "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": [
+          "Suvarnabhumi (BKK) — Bangkok main hub",
+          "Don Mueang (DMK) — Bangkok low-cost",
+          "Phuket (HKT)",
+          "Chiang Mai (CNX)",
+          "Koh Samui (USM)",
+          "Krabi (KBV)"
+        ],
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "name + IATA"
+      },
+      "national_carrier": {
+        "value": "Thai Airways International (TG)",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "flight_from_audience_origins": {
+        "value": null,
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "State Railway of Thailand (SRT). Atmospheric, slower than flights/buses. Highlight: the Bangkok–Chiang Mai overnight sleeper; southern line to Surat Thani for the Gulf islands.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "buses": {
+        "value": "Extensive intercity network from basic local buses to VIP/first-class and overnight coaches; minivans connect smaller towns. Use government BKS or reputable operators.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "domestic_flights": {
+        "value": "Cheap, fast, frequent. Carriers: Thai AirAsia, Thai Lion Air, Nok Air, Bangkok Airways (owns Samui), Thai Vietjet, Thai Airways. Most north/south hops are 1–1.5h vs 10+h overland.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "ride_sharing": {
+        "value": "Grab is the dominant ride-hail app (cars, taxis, motorbike taxis, food); Bolt and inDrive also operate. Cheaper and clearer than negotiating tuk-tuks. Bangkok also has BTS Skytrain + MRT metro.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "ferries_islands": {
+        "value": "Islands reached by ferry/speedboat from mainland piers (Krabi/Phuket piers for the Andaman islands; Surat Thani/Donsak for Koh Samui/Phangan/Tao). Combined bus+boat and flight+boat tickets common. Andaman (west) and Gulf (east) coasts have OPPOSITE peak seasons.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "car_rental_and_driving": {
+        "value": "Thais drive on the LEFT. An International Driving Permit + home license is required. City traffic is heavy; many tourists use Grab/drivers instead. Island scooter rental is common but a major injury/scam risk and often not covered by insurance without a proper motorcycle license.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "driving side, IDP, insurance caveat"
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Tropical with three broad seasons for most of the country: cool & dry (~Nov–Feb, peak/best), hot (~Mar–May), rainy/monsoon (~Jun–Oct). The GULF islands (Samui/Phangan/Tao) run on a different cycle — wettest ~Oct–Dec — so they can be good when the rest is rainy. The North is cooler in the cool season.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "best_months": {
+        "value": [
+          "November",
+          "December",
+          "January",
+          "February"
+        ],
+        "rank": "core",
+        "notes": "Cool, dry, peak season nationally (also peak prices/crowds)."
+      },
+      "avoid_periods": {
+        "value": [
+          "Songkran (~April 13–15) if you dislike crowds/water fights — though it's also a highlight",
+          "Peak Andaman monsoon (~Sep–Oct)",
+          "Northern burning season (~Feb–Apr) when Chiang Mai air quality drops sharply"
+        ],
+        "rank": "core",
+        "notes": "Verify dated festivals yearly."
+      }
+    },
+    "safety_health": {
+      "_note": "YMYL. Advisory level change-prone; emergency numbers stable.",
+      "advisory_level": {
+        "value": null,
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+        "status": "verify_recommended",
+        "notes": "Sources agree: US State Dept Level 1 (Exercise Normal Precautions) across most of Thailand, with HIGHER warnings for the deep-south provinces (Yala, Pattani, Narathiwat, Songkhla). Verify current level + date before publishing — do not freeze."
+      },
+      "main_risk": {
+        "value": "Road-traffic accidents — especially motorbikes — are the leading cause of tourist injury/death. Also: bar-tab/gem/tour scams, petty theft/pickpocketing, methanol-tainted bootleg alcohol, riptides on some beaches, dengue (mosquito-borne).",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "vaccines": {
+        "value": "No vaccines legally required for entry from the US (unless arriving from a yellow-fever country). CDC commonly recommends being up to date on routine vaccines plus Hepatitis A and Typhoid for most travelers; Hep B, Japanese encephalitis, and rabies for some. See a travel clinic 4–6 weeks ahead.",
+        "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/thailand",
+        "status": "verify_recommended"
+      },
+      "tap_water_safe": {
+        "value": "No — don't drink the tap water. Bottled water is cheap and universal; ice in established venues is generally factory-made and fine.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "emergency_numbers": {
+        "value": {
+          "police": "191",
+          "tourist_police": "1155",
+          "ambulance": "1669",
+          "fire": "199"
+        },
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "Tourist Police (1155) are English-speaking. All sources agree ambulance 1669, fire 199."
+      },
+      "common_scams": {
+        "value": [
+          "'The Grand Palace/temple is closed today' → tuk-tuk gem/tailor detour",
+          "Tuk-tuk/taxi refusing the meter or quoting inflated flat fares",
+          "Jet-ski / motorbike rental damage claims",
+          "Exorbitant bar tabs + surprise cover charges with intimidation",
+          "Overpriced 'gem' shops",
+          "Fake TDAC/visa fee sites"
+        ],
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+        "status": "agreed_stable"
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": "Cheap, easy local data. Networks: AIS, TrueMove H, dtac. Buy a tourist SIM at the airport or set up an eSIM (Airalo, Holafly, etc.) before you land. Tourist data packages (8–30 days) are inexpensive.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "coverage": {
+        "value": "Excellent 4G/5G in cities and most tourist areas; weaker on remote islands and in the far-north mountains.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "costs": {
+      "_note": "RECOMMENDATION-ish, approximate, dated; serve_live so never frozen as fact. Thailand is inexpensive by US standards.",
+      "daily_budget_low": {
+        "value": null,
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "Backpacker/budget: very roughly USD 30–50/day. Indicative only — verify live."
+      },
+      "daily_budget_mid": {
+        "value": null,
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "Mid-range: very roughly USD 75–150/day. Indicative only."
+      },
+      "daily_budget_high": {
+        "value": null,
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "Luxury: USD 250+/day. Indicative only."
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "Cover shoulders and knees to enter temples (wats); remove shoes before entering temple buildings and homes. Keep beachwear at the beach. Generally relaxed, but modest dress is respected.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "dos_and_donts": {
+        "value": [
+          "NEVER disrespect the King/monarchy — lèse-majesté is a serious crime",
+          "Don't touch anyone's head; don't point your feet at people or Buddha images",
+          "Return a 'wai' (palms-together greeting) respectfully",
+          "Remove shoes where indicated",
+          "Stand for the royal anthem where it's played",
+          "Keep your cool — public anger / causing someone to 'lose face' is deeply frowned upon",
+          "Don't buy Buddha images as décor (legally/culturally sensitive)"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    }
+  },
+  "cities": [
+    {
+      "name": "Bangkok",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Main international gateway. Suvarnabhumi (BKK) for full-service carriers; Don Mueang (DMK) for low-cost. Airport Rail Link + taxi/Grab into the city.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "BTS Skytrain + MRT metro (clean, cheap, beat traffic), Chao Phraya river boats, Grab, metered taxis, tuk-tuks (negotiate/avoid for value), motorbike taxis.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "BKK (Suvarnabhumi), DMK (Don Mueang)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Grand Palace & Wat Phra Kaew (Emerald Buddha)",
+              "why": "The most iconic temple complex in Thailand; stunning architecture and national treasure.",
+              "rank": "core"
+            },
+            {
+              "name": "Wat Pho (Reclining Buddha)",
+              "why": "Huge reclining Buddha and traditional Thai massage school; just south of Grand Palace.",
+              "rank": "core"
+            },
+            {
+              "name": "Wat Arun (Temple of Dawn)",
+              "why": "Famous riverside temple featuring towers decorated with intricately patterned porcelain shards.",
+              "rank": "core"
+            },
+            {
+              "name": "Chatuchak Weekend Market",
+              "why": "One of the world's largest open-air weekend markets, hosting over 15,000 diverse shopping stalls.",
+              "rank": "core"
+            },
+            {
+              "name": "Chinatown (Yaowarat)",
+              "why": "Legendary evening street-food crawl.",
+              "rank": "optional"
+            },
+            {
+              "name": "Jim Thompson House",
+              "why": "Traditional teak house + silk story.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Sukhumvit (Asok/Thonglor)",
+              "who_for": "First-timers & nightlife; on the BTS, endless dining.",
+              "rank": "core"
+            },
+            {
+              "area": "Riverside / Old Town (Rattanakosin)",
+              "who_for": "Sightseeing near the temples; atmospheric.",
+              "rank": "core"
+            },
+            {
+              "area": "Silom/Sathorn",
+              "who_for": "Business, rooftop bars, easy transit.",
+              "rank": "core"
+            },
+            {
+              "area": "Khao San / Banglamphu",
+              "who_for": "Budget & backpackers.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Jay Fai (Michelin-starred street food)",
+              "why": "Famous for crab omelet and drunken noodles; long waits but worth it.",
+              "rank": "core"
+            },
+            {
+              "name_or_type": "Yaowarat (Chinatown) street food",
+              "why": "The classic evening food crawl.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Boat noodles & pad thai stalls",
+              "why": "Cheap, iconic.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Rooftop restaurants (Silom/Sukhumvit)",
+              "why": "Skyline dining splurge.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Mango sticky rice",
+              "why": "Must-try Thai dessert.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Ayutthaya",
+              "why": "Ancient capital with impressive temple ruins; 1–1.5 hrs by train or minivan.",
+              "rough_time": "Full day",
+              "rank": "core"
+            },
+            {
+              "place": "Damnoen Saduak / Amphawa floating markets",
+              "why": "Classic floating-market experience.",
+              "rough_time": "Half/full day",
+              "rank": "optional"
+            },
+            {
+              "place": "Kanchanaburi (River Kwai)",
+              "why": "WWII history + nature.",
+              "rough_time": "Full day or overnight",
+              "rank": "optional"
+            },
+            {
+              "place": "Khao Yai National Park",
+              "why": "UNESCO site with waterfalls and wildlife; 2.5 hrs drive.",
+              "rough_time": "Full day or weekend",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Chiang Mai",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly CNX from Bangkok (~1h15) or overnight sleeper train / bus (~10–12h). ",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Songthaews (red shared trucks), Grab, tuk-tuks, rented bicycles/scooters; the old city is walkable.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "CNX (Chiang Mai)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Wat Phra That Doi Suthep",
+              "why": "Mountain-top temple with panoramic views; iconic northern Thai architecture.",
+              "rank": "core"
+            },
+            {
+              "name": "Old City Temples (Wat Chedi Luang, Wat Phra Singh)",
+              "why": "Stunning Lanna-style temples in the historic moated center.",
+              "rank": "core"
+            },
+            {
+              "name": "Sunday Walking Street",
+              "why": "Massive night market closing down the center of Old Town for local handicrafts, art, and incredible northern street food.",
+              "rank": "core"
+            },
+            {
+              "name": "Elephant Nature Park",
+              "why": "A globally recognized, pioneering ethical sanctuary dedicated to rescuing abused logging and tourism elephants.",
+              "rank": "core"
+            },
+            {
+              "name": "Doi Inthanon National Park",
+              "why": "Thailand's highest peak, waterfalls, twin pagodas.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "The Old City",
+              "who_for": "Perfect for first-timers wanting walkability to historic temples, dense markets, and cute cafes inside the ancient square moat.",
+              "rank": "optional"
+            },
+            {
+              "area": "Nimmanhaemin (Nimman)",
+              "who_for": "Trendy cafes, shopping, nightlife; modern hotels and condos.",
+              "rank": "core"
+            },
+            {
+              "area": "Riverside (Ping River)",
+              "who_for": "Peaceful, upscale resorts, river views.",
+              "rank": "core"
+            },
+            {
+              "area": "Near Night Bazaar",
+              "who_for": "Shopping and nightlife; convenient but busy.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Khao Soi (local specialty) — try Khao Soi Khun Yai",
+              "why": "Creamy coconut curry noodle soup; a northern Thai icon.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Sai ua (northern sausage) & nam prik",
+              "why": "Lanna specialties.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Cooking class",
+              "why": "Chiang Mai is a top place to take one.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Chiang Mai Gate Night Market",
+              "why": "Great street food with grilled meats, sai ua (sausage), and sticky rice.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Chiang Rai (White Temple, Blue Temple, Black House)",
+              "why": "Unique contemporary temples; 3–4 hrs drive or tour.",
+              "rough_time": "Full day (long)",
+              "rank": "core"
+            },
+            {
+              "place": "Pai",
+              "why": "Bohemian mountain town with hot springs and waterfalls; 3–4 hrs winding road.",
+              "rough_time": "2–3 days recommended",
+              "rank": "core"
+            },
+            {
+              "place": "Doi Inthanon National Park",
+              "why": "Stand at the highest peak in Thailand, experience mist-clad cloud forests, hike scenic nature trails, and view roaring waterfalls.",
+              "rough_time": "2 hours southwest by tour van",
+              "rank": "core"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Phuket",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly HKT (direct from Bangkok ~1h25 and some intl routes) or bus+ferry. Largest Andaman-coast island, road-connected to the mainland.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Grab (limited in places due to local taxi politics), metered/negotiated taxis, songthaews, rented scooters; the island is large — distances are real.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "HKT (Phuket)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Old Phuket Town",
+              "why": "Sino-Portuguese streets, cafés, murals — more character than the beach strips.",
+              "rank": "core"
+            },
+            {
+              "name": "Phang Nga Bay (James Bond Island)",
+              "why": "Spectacular boat excursions navigating dramatic vertical limestone karsts rising straight out of emerald-green water.",
+              "rank": "core"
+            },
+            {
+              "name": "Big Buddha (Wat Chalong)",
+              "why": "Massive seated Buddha with panoramic views.",
+              "rank": "core"
+            },
+            {
+              "name": "Beaches (Kata, Karon, Freedom, Nai Harn)",
+              "why": "Range from lively to quiet.",
+              "rank": "optional"
+            },
+            {
+              "name": "Patong Beach",
+              "why": "Most famous beach with nightlife, water sports, and dining.",
+              "rank": "optional"
+            },
+            {
+              "name": "Phi Phi Islands (day trip)",
+              "why": "Stunning limestone cliffs, Maya Bay, snorkeling; crowded but iconic.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Patong",
+              "who_for": "Exclusively for those prioritizing intense nightlife, clubs, neon lights, and lively crowds along Bangla Road.",
+              "rank": "core"
+            },
+            {
+              "area": "Old Town",
+              "who_for": "Culture, food, boutique hotels; no beach.",
+              "rank": "core"
+            },
+            {
+              "area": "Kata / Karon",
+              "who_for": "Families & beach with less chaos.",
+              "rank": "optional"
+            },
+            {
+              "area": "Bang Tao / Surin",
+              "who_for": "Upscale resorts.",
+              "rank": "optional"
+            },
+            {
+              "area": "Karon/Kata",
+              "who_for": "Family-friendly, quieter beaches, mid-range resorts.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Old Town local restaurants",
+              "why": "Best food on the island.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Fresh seafood (Rawai/Kata)",
+              "why": "Pick-and-grill.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Seafood at Rawai Beach",
+              "why": "Fresh catch grilled on the beach; pick your fish.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Street food at Chillva Market",
+              "why": "Trendy night market with food trucks and local dishes.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Fine dining at Kata Rocks or Sri Panwa",
+              "why": "High-end views and cuisine; special occasions.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Phi Phi Islands",
+              "why": "Board a fast speedboat or catamaran to snorkel pristine turquoise waters and view Maya Bay, made famous by the movies.",
+              "rough_time": "1 hour southeast by speedboat",
+              "rank": "core"
+            },
+            {
+              "place": "Phang Nga Bay (James Bond Island)",
+              "why": "Limestone karsts, sea canoeing; 1.5 hrs drive+boat.",
+              "rough_time": "Full day",
+              "rank": "core"
+            },
+            {
+              "place": "Similan Islands",
+              "why": "Top diving/snorkeling (seasonal, closed in monsoon).",
+              "rough_time": "Full day",
+              "rank": "optional"
+            },
+            {
+              "place": "Koh Racha/Yao Noi",
+              "why": "Quieter islands for snorkeling and relaxation; 30–60 min boat.",
+              "rough_time": "Full day",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Krabi",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly KBV or bus/ferry; gateway to Railay, Ao Nang, and the Andaman islands.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Songthaews, longtail boats (Railay is boat-access only), Grab limited, rented scooters.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "KBV (Krabi)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Railay Beach",
+              "why": "Climbing paradise with stunning cliffs and turquoise water; accessible only by boat.",
+              "rank": "core"
+            },
+            {
+              "name": "Tiger Cave Temple (Wat Tham Sua)",
+              "why": "Climb 1,237 steps for panoramic views; monkey sightings.",
+              "rank": "core"
+            },
+            {
+              "name": "Ao Nang",
+              "why": "Main beach town + boat hub.",
+              "rank": "optional"
+            },
+            {
+              "name": "Four Islands / Hong Islands tours",
+              "why": "Classic longtail island-hopping.",
+              "rank": "optional"
+            },
+            {
+              "name": "Phi Phi Islands (from Krabi)",
+              "why": "Same iconic islands; closer than Phuket for some tours.",
+              "rank": "optional"
+            },
+            {
+              "name": "Emerald Pool & Hot Springs",
+              "why": "Natural warm pools in the jungle; great for a swim.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Ao Nang",
+              "who_for": "Main tourist hub, beachfront, dining, and nightlife; range of hotels.",
+              "rank": "core"
+            },
+            {
+              "area": "Railay",
+              "who_for": "Scenery & climbing, secluded.",
+              "rank": "optional"
+            },
+            {
+              "area": "Koh Lanta",
+              "who_for": "Quieter island base, families.",
+              "rank": "optional"
+            },
+            {
+              "area": "Railay East/West",
+              "who_for": "Secluded, climbing, luxury resorts; only accessible by boat.",
+              "rank": "optional"
+            },
+            {
+              "area": "Klong Muang/Tubkaek",
+              "who_for": "Quiet, upscale resorts, sunset views.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Ao Nang night market",
+              "why": "Seafood, grilled meats, and Thai snacks.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Southern Thai curries",
+              "why": "Spicier regional style.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "The Hilltop (Ao Nang)",
+              "why": "Panoramic views and Thai fusion; book ahead.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Raan Mai (Railay)",
+              "why": "Beachfront Thai food with a relaxed vibe.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Phi Phi Islands",
+              "why": "Classic day trip from Krabi; speedboat 1–1.5 hrs.",
+              "rough_time": "Full day",
+              "rank": "core"
+            },
+            {
+              "place": "Hong Islands",
+              "why": "Snorkeling and kayaking among limestone islands; 45 min boat.",
+              "rough_time": "Full day",
+              "rank": "core"
+            },
+            {
+              "place": "Koh Lanta",
+              "why": "Chill island with beaches and national park; 2 hrs by ferry+minivan.",
+              "rough_time": "Overnight recommended",
+              "rank": "core"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Koh Samui",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly USM (Bangkok Airways hub; pricier) or fly to Surat Thani + ferry, or bus+ferry. GULF coast — different season from Andaman.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Songthaews, taxis (negotiate), rented scooters; ring road circles the island.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "USM (Koh Samui)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Big Buddha (Wat Phra Yai)",
+              "why": "12-meter golden Buddha on a small island; accessible by causeway.",
+              "rank": "core"
+            },
+            {
+              "name": "Fisherman's Village (Bophut)",
+              "why": "Charming area with boutique shops, restaurants, and Friday night market.",
+              "rank": "core"
+            },
+            {
+              "name": "Chaweng & Lamai beaches",
+              "why": "Main beaches, lively.",
+              "rank": "optional"
+            },
+            {
+              "name": "Ang Thong Marine Park",
+              "why": "Boat trip to emerald lagoon + karsts.",
+              "rank": "optional"
+            },
+            {
+              "name": "Chaweng Beach",
+              "why": "Main beach with nightlife, dining, and water sports.",
+              "rank": "optional"
+            },
+            {
+              "name": "Lamai Beach",
+              "why": "Quieter than Chaweng; Grandfather/Grandmother rocks nearby.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Chaweng",
+              "who_for": "Nightlife, shopping, beachfront; all budgets.",
+              "rank": "core"
+            },
+            {
+              "area": "Lamai",
+              "who_for": "More relaxed, family-friendly, mid-range.",
+              "rank": "core"
+            },
+            {
+              "area": "Choeng Mon",
+              "who_for": "Quiet, luxury resorts, great for couples.",
+              "rank": "core"
+            },
+            {
+              "area": "Bophut / Fisherman's Village",
+              "who_for": "Boutique, romantic, food.",
+              "rank": "optional"
+            },
+            {
+              "area": "Bophut (Fisherman's Village)",
+              "who_for": "Boutique hotels, dining, charming atmosphere.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Fisherman's Village night market (Friday)",
+              "why": "Fresh seafood, street food, and live music.",
+              "rank": "core"
+            },
+            {
+              "name_or_type": "Beach seafood grills",
+              "why": "Sunset dinners.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Secret Garden (Lamai)",
+              "why": "Hidden spot with great Thai food and relaxed vibe.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Dining on the Rocks (Six Senses)",
+              "why": "Ultra-luxury cliffside dining; special occasion.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Koh Phangan",
+              "why": "Famous for Full Moon Party but also has quiet beaches; 30 min ferry.",
+              "rough_time": "Day trip or overnight",
+              "rank": "core"
+            },
+            {
+              "place": "Koh Tao",
+              "why": "Diving and snorkeling mecca; 1.5–2 hrs ferry.",
+              "rough_time": "Overnight recommended",
+              "rank": "core"
+            },
+            {
+              "place": "Ang Thong National Marine Park",
+              "why": "40+ islands with emerald lagoons and hiking; 1–2 hrs by speedboat.",
+              "rough_time": "Full day",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Ayutthaya",
+      "facts": {
+        "how_to_get_there": {
+          "value": "From Bangkok by train (~1.5h), minivan, or tour; easy day trip.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Bicycle, tuk-tuk hire by the hour, Grab.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "None — via Bangkok (BKK/DMK)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Wat Mahathat",
+              "why": "Famous Buddha head entwined in tree roots; iconic photo spot.",
+              "rank": "core"
+            },
+            {
+              "name": "Wat Phra Si Sanphet",
+              "why": "Three restored chedis of the old royal palace.",
+              "rank": "core"
+            },
+            {
+              "name": "Wat Chaiwatthanaram",
+              "why": "Khmer-style riverside temple, sunset.",
+              "rank": "optional"
+            },
+            {
+              "name": "Wat Ratchaburana",
+              "why": "Impressive prang with crypt; climb for views.",
+              "rank": "optional"
+            },
+            {
+              "name": "Ayutthaya Historical Park",
+              "why": "UNESCO site with extensive ruins; rent a bike to explore.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Near Historical Park",
+              "who_for": "Convenience for sightseeing; guesthouses and boutique hotels.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Boat noodles + roti sai mai (cotton-candy sweet)",
+              "why": "Local specialties.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Rotee Sai Mai (sweet roti)",
+              "why": "Local specialty — thin pancakes with cotton candy-like filling.",
+              "rank": "optional"
+            },
+            {
+              "name_or_type": "Riverfront restaurants",
+              "why": "Great views and fresh river fish.",
+              "rank": "optional"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [],
+          "rank": "core"
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "7 Days: Bangkok & the Beaches",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Bangkok",
+            "afternoon": "Settle Sukhumvit/Riverside",
+            "evening": "Chinatown street food"
+          },
+          {
+            "day": 2,
+            "morning": "Grand Palace + Wat Pho",
+            "afternoon": "Wat Arun + river",
+            "evening": "Rooftop bar"
+          },
+          {
+            "day": 3,
+            "morning": "Chatuchak (if weekend) or Jim Thompson House",
+            "afternoon": "Fly south to Phuket/Krabi",
+            "evening": "Beach dinner"
+          },
+          {
+            "day": 4,
+            "morning": "Phi Phi / Phang Nga boat trip",
+            "afternoon": "Snorkel/beaches",
+            "evening": "Ao Nang/Patong"
+          },
+          {
+            "day": 5,
+            "morning": "Beach / Railay",
+            "afternoon": "Island hopping or spa",
+            "evening": "Seafood"
+          },
+          {
+            "day": 6,
+            "morning": "Free beach day",
+            "afternoon": "Fly back to Bangkok",
+            "evening": "Last-night dining"
+          },
+          {
+            "day": 7,
+            "morning": "Markets/shopping",
+            "afternoon": "Depart",
+            "evening": "—"
+          }
+        ],
+        "notes": "RECOMMENDATION — the most common first-timer shape."
+      },
+      "assumptions": {
+        "value": "Domestic flights used to save time; Andaman coast (dry Nov–Apr)."
+      }
+    },
+    {
+      "title": "7 Days: Northern Thailand",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Bangkok",
+            "afternoon": "Quick city sights",
+            "evening": "Overnight train north or fly next AM"
+          },
+          {
+            "day": 2,
+            "morning": "Arrive Chiang Mai",
+            "afternoon": "Old City temples",
+            "evening": "Night bazaar"
+          },
+          {
+            "day": 3,
+            "morning": "Doi Suthep",
+            "afternoon": "Cooking class",
+            "evening": "Nimman cafés"
+          },
+          {
+            "day": 4,
+            "morning": "Ethical elephant sanctuary (full day)",
+            "afternoon": "—",
+            "evening": "Rest"
+          },
+          {
+            "day": 5,
+            "morning": "Day trip Chiang Rai (White/Blue Temple)",
+            "afternoon": "Return",
+            "evening": "Riverside dinner"
+          },
+          {
+            "day": 6,
+            "morning": "Doi Inthanon or Pai overnight",
+            "afternoon": "Nature",
+            "evening": "—"
+          },
+          {
+            "day": 7,
+            "morning": "Fly back to Bangkok",
+            "afternoon": "Depart",
+            "evening": "—"
+          }
+        ],
+        "notes": "RECOMMENDATION — temples, mountains, elephants."
+      },
+      "assumptions": {
+        "value": "Best Nov–Feb; avoid burning season (Feb–Apr)."
+      }
+    },
+    {
+      "title": "10-Day Thailand (first-timer classic)",
+      "days": 10,
+      "scope": "whole-country",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Bangkok",
+            "afternoon": "Rest",
+            "evening": "Chinatown"
+          },
+          {
+            "day": 2,
+            "morning": "Grand Palace/Wat Pho",
+            "afternoon": "Wat Arun",
+            "evening": "Rooftop"
+          },
+          {
+            "day": 3,
+            "morning": "Ayutthaya day trip",
+            "afternoon": "Ruins",
+            "evening": "Return Bangkok"
+          },
+          {
+            "day": 4,
+            "morning": "Fly Chiang Mai",
+            "afternoon": "Old City",
+            "evening": "Night market"
+          },
+          {
+            "day": 5,
+            "morning": "Doi Suthep + cooking class",
+            "afternoon": "—",
+            "evening": "Nimman"
+          },
+          {
+            "day": 6,
+            "morning": "Ethical elephant sanctuary",
+            "afternoon": "—",
+            "evening": "Rest"
+          },
+          {
+            "day": 7,
+            "morning": "Fly south to islands",
+            "afternoon": "Beach",
+            "evening": "Seafood"
+          },
+          {
+            "day": 8,
+            "morning": "Island hopping (Phi Phi/Hong)",
+            "afternoon": "Snorkel",
+            "evening": "Beach town"
+          },
+          {
+            "day": 9,
+            "morning": "Free beach/Railay",
+            "afternoon": "Spa",
+            "evening": "Sunset"
+          },
+          {
+            "day": 10,
+            "morning": "Fly Bangkok",
+            "afternoon": "Depart",
+            "evening": "—"
+          }
+        ],
+        "notes": "RECOMMENDATION — Bangkok + North + Islands, the balanced sampler."
+      },
+      "assumptions": {
+        "value": "Two domestic flights; Andaman dry season."
+      }
+    },
+    {
+      "title": "2 Weeks Thailand (in-depth)",
+      "days": 14,
+      "scope": "whole-country",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Bangkok arrival",
+            "afternoon": "—",
+            "evening": "Chinatown"
+          },
+          {
+            "day": 2,
+            "morning": "Temples",
+            "afternoon": "River",
+            "evening": "Rooftop"
+          },
+          {
+            "day": 3,
+            "morning": "Ayutthaya",
+            "afternoon": "Ruins",
+            "evening": "Return"
+          },
+          {
+            "day": 4,
+            "morning": "Fly Chiang Mai",
+            "afternoon": "Old City",
+            "evening": "Market"
+          },
+          {
+            "day": 5,
+            "morning": "Doi Suthep",
+            "afternoon": "Cooking class",
+            "evening": "Nimman"
+          },
+          {
+            "day": 6,
+            "morning": "Elephant sanctuary",
+            "afternoon": "—",
+            "evening": "Rest"
+          },
+          {
+            "day": 7,
+            "morning": "Chiang Rai or Pai overnight",
+            "afternoon": "Nature",
+            "evening": "—"
+          },
+          {
+            "day": 8,
+            "morning": "Return + fly south",
+            "afternoon": "Beach",
+            "evening": "Seafood"
+          },
+          {
+            "day": 9,
+            "morning": "Andaman island hopping",
+            "afternoon": "Snorkel",
+            "evening": "Beach"
+          },
+          {
+            "day": 10,
+            "morning": "Railay/diving",
+            "afternoon": "—",
+            "evening": "Sunset"
+          },
+          {
+            "day": 11,
+            "morning": "Ferry to a second island (Lanta/Phi Phi)",
+            "afternoon": "Relax",
+            "evening": "—"
+          },
+          {
+            "day": 12,
+            "morning": "Beach/dive day",
+            "afternoon": "—",
+            "evening": "—"
+          },
+          {
+            "day": 13,
+            "morning": "Slow morning",
+            "afternoon": "Fly Bangkok",
+            "evening": "Last dinner"
+          },
+          {
+            "day": 14,
+            "morning": "Shopping",
+            "afternoon": "Depart",
+            "evening": "—"
+          }
+        ],
+        "notes": "RECOMMENDATION — adds a second island + slower pace."
+      },
+      "assumptions": {
+        "value": "Andaman coast assumed; swap to Gulf islands (Samui) if traveling ~Apr–Sep."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "value": [
+        {
+          "name": "Bangkok's Grand Palace & temple core",
+          "where": "Bangkok",
+          "why": "The cultural headline.",
+          "rank": "optional"
+        },
+        {
+          "name": "Chiang Mai & the northern temples",
+          "where": "North",
+          "why": "Lanna culture, mountains, elephants.",
+          "rank": "optional"
+        },
+        {
+          "name": "Andaman islands (Phi Phi / Railay / Phang Nga)",
+          "where": "South (Andaman)",
+          "why": "Iconic karst seascapes.",
+          "rank": "optional"
+        },
+        {
+          "name": "Gulf islands (Samui / Phangan / Tao)",
+          "where": "South (Gulf)",
+          "why": "Beaches + diving, opposite season.",
+          "rank": "optional"
+        },
+        {
+          "name": "Ayutthaya",
+          "where": "Central",
+          "why": "Ancient capital, easy from Bangkok.",
+          "rank": "optional"
+        },
+        {
+          "name": "Ethical elephant sanctuary",
+          "where": "North (Chiang Mai area)",
+          "why": "Responsible wildlife highlight.",
+          "rank": "optional"
+        }
+      ],
+      "rank": "core"
+    }
+  },
+  "_open_questions": {
+    "_note": "Genuine uncertainties / volatile / needs-official-source. Honesty over confidence.",
+    "value": [
+      "VISA DAY-COUNT (priority): US visa-exemption stay is mid-change — 60 days now, Cabinet-approved 30 days not yet in force (Royal Gazette pending, late June 2026). Served live in prose / verify on travel date; never frozen. Official: travel.state.gov + thaievisa.go.th.",
+      "PROOF OF FUNDS: resolved to 20,000 THB/person, 40,000 THB/family for visa-exempt/tourist (NOT the 10k/20k VoA tier). Sporadically enforced + change-prone — verify before stating in prose.",
+      "CURRENCY DECLARATION LIMIT: sources disagreed (USD 15k vs 20k vs 450k THB). Left null/verify_recommended — confirm official threshold before any article states a number.",
+      "ADVISORY LEVEL: sources agree Level 1 + deep-south exception, but YMYL — confirm current US State Dept level + date when writing health-and-safety articles.",
+      "Change-prone fees to verify (not freeze): visa extension ~1,900 THB; ATM foreign-card fee ~220 THB; any 'tourist fee' proposals."
+    ]
+  }
+}
