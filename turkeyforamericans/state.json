@@ -1,0 +1,13 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "stage": "publishing",
+  "batch": 15,
+  "batches_total": 15,
+  "batch_status": "cleaned",
+  "published_slugs": [],
+  "updated_at": "2026-07-26",
+  "notes": "ENGINE: migrated to template v4 on 2026-07-26 (Rome/Thailand parity). Guide 5c layer, affiliate admin, /go/ routes + click logging, common.ts, lib/facts.ts, lead magnet, /build-my-trip all added; /my-trip -> 301. Everything ships DARK (SITE.guide empty, leadMagnet disabled, products []). skeleton-check + both app builds green. Design (Red Thread, Stage 5) was already done and was PRESERVED - the neutral template would have regressed it. See MIGRATION-v4.md in the repo. FLEET: not yet registered in common.sites - run ONBOARD_turkey.sql + the 6-step runbook (ONBOARD-turkey.md). Affiliate /go/ links stay inert until affiliate_site_credentials carries Turkey's real aff_ids. FACTS: turkeyforamericans-facts.sql emitted - 9 verify_recommended facts as provisional rows under scope 'turkey', checked_at NULL (never officially verified; see the file header). Articles carry no fact spans yet, so nothing resolves until spans are emitted. CONTENT unchanged: all 15 batches / 72 articles written+validated. OPEN: published_slugs is still [] - if that is accurate, StartHere, the dynamic guide count and the map deep-links all render empty on the live site. Confirm against the DB.",
+  "engine_version": "v4"
+}
