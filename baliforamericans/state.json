@@ -8,5 +8,5 @@
  "batch_status": "none",
  "published_slugs": [],
  "updated_at": "2026-10-13",
- "notes": "Stage 1 DONE. Categories, the 73-article list and the 10 swamps APPROVED by user 2026-10-13. predictions.json filed (36 PRODUCE rows) before any writing - never rewrite those rows. Stage 2 (facts) starting: no facts.json yet. Open items: GSC sitemap row said 'could not fetch' minutes after submit (recheck); apps/site/lib/geo.ts FILL markers (fill from facts); no Bali volume measurement exists for any row."
+ "notes": "Stage 1 DONE (categories, 73-article list, 10 swamps approved 2026-10-13; predictions.json filed - never rewrite). STAGE 2 IN PROGRESS: three panel files in raw/ (claude, chatgpt, deepseek) reconciled 2026-10-13 -> facts.candidates.json, disputes.md (all LOCAL, unpushed by rule). facts.json DRAFTED by Claude (37 primary-read records, validator ok) and is LOCAL + UNCOMMITTED pending the user's review - do not treat it as promoted until _meta.review_status changes. Reconciler/validator must be run from their real path on /Volumes/Untitled (they no-op silently via the ~/.claude/skills symlink). Still unsourced: scooter licence category, Nyepi airport hours (2027 date is secondary: 8 March), fast boats, bill percentages, flight facts. GSC sitemap row: recheck. geo.ts FILL markers remain."
 }
