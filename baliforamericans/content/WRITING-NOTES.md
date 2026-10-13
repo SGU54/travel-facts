@@ -23,3 +23,11 @@ articles exist. Working rule until the re-run at 40: every area / transport / it
 {base choice, drive time, boat-day placement, season-by-coast} in depth and only names the others in a sentence.
 Do not write an article that works out base + drive times + boat day + departure day together: that is the guide.
 No `vein` block written to article-list.json yet (a signal at 20, not a verdict). Re-run at 40.
+
+## Vein audit re-run at 41 published articles (2026-10-13, 4 themes each)
+health chain 4.8 (medication / vaccines-dengue / hospital-deposit / insurance; only 1 article joins all four) -> the one thesis above 4.
+base x drive time x boat x last night 3.3 · season x coast x base x calendar 3.3 (both thin-but-real, and the 32 remaining
+articles are the ones that feed them) · liability chain 2.3 · money leak 2.3 · entry stack 1.9 (dead: already joined in 3 articles).
+Rule for the remaining area / itinerary / stay articles is unchanged and now measured: ONE geography piece per article.
+The itinerary articles are the danger: they must give a day order, and must NOT also work out base choice + boat-day placement +
+last-night location in one place. No `vein` block is written to article-list.json: choosing the thesis is the dossier build's call.
