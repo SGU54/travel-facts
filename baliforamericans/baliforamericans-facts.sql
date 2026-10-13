@@ -339,3 +339,13 @@ values ('bali', 'when_to_go.climate_normals', '"about 1 inch of rain in July and
 on conflict (scope, key) do update set
   value = excluded.value, status = excluded.status,
   checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- Batch-09 — 2026-10-13
+
+-- getting_around.road_distances — getting-around-bali
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'getting_around.road_distances', '"about 22 miles from the airport to Ubud"'::jsonb, 'provisional', now(),
+        'https://router.project-osrm.org/')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;

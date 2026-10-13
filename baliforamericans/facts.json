@@ -1237,5 +1237,85 @@
    "hold_reason": "The joint appeal's own text was not opened; only a news report of it.",
    "writing_rule": "Describe in attributed prose, no fact span."
   }
+ },
+ "places": {
+  "unesco_subak": {
+   "fact_key": "places.unesco_subak",
+   "value": "Bali's rice-terrace landscape is a UNESCO World Heritage site, inscribed in 2012 as the 'Cultural Landscape of Bali Province: the Subak System as a Manifestation of the Tri Hita Karana Philosophy'. It consists of five rice-terrace areas and their water temples covering 19,500 hectares. Subak is a cooperative water-management system of canals and weirs that dates back to the 9th century. The listing includes the 18th-century royal water temple Pura Taman Ayun, the water temple Pura Ulun Danu Batur on Lake Batur, and the subak landscape of the Pakerisan watershed.",
+   "status": "verified",
+   "source_url": "https://whc.unesco.org/en/list/1194/",
+   "source_kind": "primary",
+   "scope": "Bali",
+   "support": "UNESCO World Heritage Centre page, read directly in Chrome: 'The cultural landscape of Bali consists of five rice terraces and their water temples that cover 19,500 ha. The temples are the focus of a cooperative water management system of canals and weirs, known as subak, that dates back to the 9th century. Included in the landscape is the 18th-century Royal Water Temple of Pura Taman Ayun'; 'Tri Hita Karana, which brings together the realms of the spirit, the human world and nature'; 'Date of Inscription: 2012'; sites include 'the Supreme Water Temple of Pura Ulun Danu Batur on the edge of Lake Batur' and 'the Subak Landscape of the Pakerisan Watershed the oldest known irrigation system in Bali'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "The text read did not show the name Jatiluwih on screen (it is in the Catur Angga Batukaru component per UNESCO's fuller description, not re-read). Say 'the Jatiluwih terraces are widely described as part of the UNESCO-listed subak landscape' or omit the UNESCO link for Jatiluwih. Tegallalang is NOT established as part of the listing."
+  },
+  "regions": {
+   "fact_key": "places.regions",
+   "value": "Bali is about 144 km (89 miles) from east to west and 80 km (50 miles) north to south. Travel guides divide it into South Bali (Kuta, Legian, Seminyak, Canggu, Jimbaran, the Bukit peninsula, Nusa Dua, Sanur, Denpasar), Central Bali (Ubud, Bedugul, Tabanan), East Bali (Amed, Candidasa, Padang Bai, Sidemen, Kintamani, Mount Agung), North Bali (Lovina, Singaraja), West Bali (West Bali National Park, the ferry to Java) and the southeastern islands (Nusa Lembongan, Nusa Ceningan, Nusa Penida).",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Bali",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Wikivoyage Bali (via fetch): 'about 144 km (89 mi) long from east to west and 80 km (50 mi) north to south'; South Bali 'The most visited part of Bali by far'; Central Bali 'The island's cultural heart and includes the central mountain range'; North Bali 'Quiet black sand beaches and the ancient capital city'; East Bali 'Laid-back coastal villages, an active volcano and the mighty Mount Agung'; Southeastern Islands 'Quiet offshore islands in the southeast, popular for diving activities'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Wikivoyage is a volunteer travel wiki: use for stable geography and character, in general terms ('is known for'); no prices, no superlatives stated as fact, no claims about crowds or safety beyond what is quoted."
+  },
+  "south_bali_areas": {
+   "fact_key": "places.south_bali_areas",
+   "value": "South Bali's areas in travel-guide terms: Kuta is the most heavily developed area, near the airport, known for shopping and nightlife; Legian sits between Kuta and Seminyak and is known for learning to surf; Seminyak is quieter and more upscale, with resorts, villas, dining and bars; Canggu, north of Seminyak, has black sand beaches, surfing and rice paddies and is developing fast; Jimbaran, south of Kuta, has a sheltered beach and seafood restaurants; the Bukit peninsula is the rugged southern tip, with Uluwatu Temple on a cliff about 75 meters above the sea and white sand beaches such as Padang Padang; Nusa Dua is an enclave of high-end resorts with little traffic; Sanur, on the east-facing coast, is a mature resort town popular with older visitors and families; Denpasar is the administrative capital and not a major visitor destination.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/South_Bali",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Wikivoyage South Bali (via fetch): Kuta 'Party central, by far the most heavily developed area in Bali. Lots of shopping and nightlife'; Legian between Kuta and Seminyak, good for learning to surf; Seminyak 'quieter, more upscale beachside resorts and villas'; Canggu 'black sand beaches, surfing and rolling rice paddies', rapid development north of Seminyak; Jimbaran 'seaside resorts, a nice sheltered beach and seafood restaurants south of Kuta'; Bukit 'rugged southernmost part', Uluwatu Temple '75 meters above' the waves, Padang-Padang; Nusa Dua 'An enclave of high-end resorts', minimal traffic; Sanur 'a mature tourist town which appeals mostly to older families'; Denpasar 'not a major tourist destination'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Wikivoyage is a volunteer travel wiki: use for stable geography and character, in general terms ('is known for'); no prices, no superlatives stated as fact, no claims about crowds or safety beyond what is quoted."
+  },
+  "ubud": {
+   "fact_key": "places.ubud",
+   "value": "Ubud is a town in central Bali, at about 200 meters above sea level, cooler than the coast, and regarded as the island's cultural and arts center. It is made up of fourteen villages, each with its own village committee (banjar). The center has three main streets, Jalan Raya Ubud, Jalan Monkey Forest and Jalan Hanoman, meeting near the market and the palace. Surrounding villages include Campuhan, Sanggingan and Penestanan to the north and west, Nyuh Kuning and Pengosekan to the south, and Peliatan to the east. Sights include the Ubud market and palace, the Sacred Monkey Forest, the Campuhan ridge walk, Goa Gajah to the east, Tirta Empul to the north, and the Tegallalang rice terraces about 9 km to the northeast. Central Ubud is walkable and congested with traffic.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Ubud",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Wikivoyage Ubud (via fetch): elevation about 200 m, 'cooler temperatures than the coast'; 'fourteen villages, each run by its own banjar'; three main streets Jl Raya Ubud, Jl Monkey Forest, Jl Hanoman; villages listed by direction; Goa Gajah about one hour's walk east; Tirta Empul 15-18 km north; Tegallalang 9 km; 'Central Ubud is overrun with tourists and touts, and traffic is terrible.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Wikivoyage is a volunteer travel wiki: use for stable geography and character, in general terms ('is known for'); no prices, no superlatives stated as fact, no claims about crowds or safety beyond what is quoted."
+  },
+  "nusa_islands": {
+   "fact_key": "places.nusa_islands",
+   "value": "Three islands lie off Bali's southeast coast. Nusa Penida is the largest, about 247 square km, with rough, hilly roads away from the north coast; its sights include Kelingking Beach, Angel's Billabong, Broken Beach, Crystal Bay, Atuh Beach and Diamond Beach, and Manta Point for diving. Nusa Lembongan is small, about 8 square km, with Jungutbatu village, Mushroom Bay, Dream Beach, Devil's Tear and a mangrove forest, and surfing, snorkeling and diving; a yellow suspension bridge for walkers and motorbikes links it to tiny Nusa Ceningan. Boats leave mainly from Sanur, with others from Padang Bai; guides give the Sanur crossing as roughly 30 to 45 minutes, and most Lembongan boats involve a wet landing, wading from the beach. Most visitors see Nusa Penida on a day trip, and accommodation exists along its north coast. Travel guides warn of strong rip currents at Dream Beach and of fatal falls at Devil's Tear.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Nusa_Penida",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Wikivoyage Nusa Penida and Nusa Lembongan (via fetch): Penida 'the largest of three islands', 247 km2; speedboat from Sanur about 30 minutes, slower ferry from Padang Bai; harbours Toyapakeh, Buyuk, Sampalan, Banjar Nyuh; 'Roads in Nusa Penida are rough, hilly away from the north coast'; Peguyangan 700 stairs; most visitors on day cruises, accommodation between Toyapakeh and Sampalan. Lembongan about 8 km2; Sanur primary port, also Serangan, Padang Bai; 35-45 minutes; 'wet landings, with passengers wading knee-deep or higher'; yellow suspension bridge to Ceningan; Penida about 10 minutes by local boat; 'Be very careful though about entering the water' at Dream Beach (rip currents); Devil's Tear 'many tourists have fallen to their deaths here'; no personal cars.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "caveat": "Boat crossing times are a travel wiki's figures, not an operator's or regulator's; give them as 'roughly' and tell readers to check with the operator. No boat safety or cancellation rules are sourced (Transport Ministry site unreachable). Never name a boat company."
+  },
+  "east_and_north": {
+   "fact_key": "places.east_and_north",
+   "value": "East Bali in travel-guide terms: Amed is a strip of quiet fishing villages with black sand beaches, coral reefs and diving; Tulamben is known for diving the USAT Liberty shipwreck; Candidasa is a quiet coastal town; Padang Bai is a small port town where ferries to Lombok leave, with white sand coves; Sidemen is a valley of rice terraces and forested hills with easy walks; Tirta Gangga is a water palace; Pura Besakih, on the slopes of Mount Agung, is regarded by Balinese Hindus as their mother temple; Mount Agung is the island's highest mountain; Kintamani has the active volcano Mount Batur, described as about a two-hour climb. North Bali: Lovina is a string of quiet villages with black sand beaches, known for dawn boat trips to see dolphins; Singaraja is the largest town on the north coast and the former colonial capital; Sekumpul is a group of waterfalls in a jungle valley. Bedugul, in the central mountains, has lakes, a botanical garden and the Ulun Danu Bratan temple.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/East_Bali",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Wikivoyage East Bali, North Bali and Bali pages (via fetch): Amed 'peaceful, traditional fishing villages featuring black sand beaches, coral reefs and excellent diving'; Tulamben USAT Liberty wreck; Candidasa 'a quiet coastal town'; Padang Bai 'small port town from where ferries to Lombok depart'; Sidemen 'one of the most scenic drives on the whole island', 'undemanding hikes'; Tirta Gangga water palace; 'Pura Besakih is considered by the Hindu Balinese to be their mother temple'; Agung 'the highest mountain on the island'; Batur 'an easy two-hour climb'; Lovina 'Quiet coastal villages with black sand beaches', dawn dolphin trips; Singaraja 'largest town on the north coast and the former administrative capital'; Sekumpul 'several waterfalls cascading side by side'; Bedugul 'pretty lakes in the mountains, a golf course, the botanical gardens and the famous Ulun Danu Bratan Temple'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Wikivoyage gives Mount Agung as 3,142 m, an older figure; do not print a height. Munduk and Lempuyang are NOT described in the pages read: say only where they are (distances record) unless sourced separately. No claims about how hard a climb is beyond the quoted 'about two hours' for Batur."
+  }
  }
 }
