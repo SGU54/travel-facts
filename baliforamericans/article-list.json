@@ -1,0 +1,1314 @@
+{
+ "schema_version": 4,
+ "project": "baliforamericans",
+ "status": "DRAFT — awaiting user approval (categories + list + swamps)",
+ "drafted_on": "2026-10-13",
+ "_README": "Stage 1 article plan. swamps = hypothesis-grade terrain map (the dossier cold-mine may re-rank). Per article: swamp + handoff (turn|seed|none) and the Stage 1c opportunity verdict. REJECT rows are kept as a record and are NOT written. Titles are working titles: any named product, form or rule in a title is confirmed in Stage 2 before it is written.",
+ "swamps": [
+  {
+   "id": "base-split",
+   "name": "Where to base, and how to split the nights",
+   "one_liner": "Bali drives far bigger than it looks on a map; the base you pick decides what is realistically reachable each day."
+  },
+  {
+   "id": "traffic-time",
+   "name": "Planning days around south Bali traffic",
+   "one_liner": "Distances are short and drive times are not; an over-packed day or a late airport run is the classic first-timer failure."
+  },
+  {
+   "id": "wet-dry-season",
+   "name": "Which season for which Bali",
+   "one_liner": "Rain, surf coasts, crowds and prices all move with the calendar, and they do not all point at the same month."
+  },
+  {
+   "id": "scooter-liability",
+   "name": "Scooter, driver, or both",
+   "one_liner": "The cheap way around carries a licence and insurance chain that most renters only discover after a crash."
+  },
+  {
+   "id": "boat-day-buffer",
+   "name": "Nusa and Gili boats, and what sits next to them",
+   "one_liner": "Fast boats depend on sea conditions; where the island leg falls relative to the flight home is the decision."
+  },
+  {
+   "id": "holiday-collision",
+   "name": "Trip dates against the Balinese calendar",
+   "one_liner": "Some days close the island outright and others close roads and fill hotels; they move every year."
+  },
+  {
+   "id": "entry-stack",
+   "name": "The pre-flight paperwork stack",
+   "one_liner": "Visa, levy, arrival form and passport rules are separate systems with separate sites, and each is easy to miss."
+  },
+  {
+   "id": "long-haul-arrival",
+   "name": "Getting there from the US, and the first 48 hours",
+   "one_liner": "There is a long connection either way; the routing, ticket type and first-night base decide how much of the trip is lost."
+  },
+  {
+   "id": "health-chain",
+   "name": "Stomach, medication, clinics, insurance",
+   "one_liner": "Each piece is manageable alone; what a traveler needs is how they connect when something goes wrong."
+  },
+  {
+   "id": "money-leak",
+   "name": "Cash, cards and where the money leaks",
+   "one_liner": "ATMs, changers, surcharges and tax-plus-service each take a little; together they set the real budget."
+  }
+ ],
+ "articles": [
+  {
+   "title": "Do Americans Need a Visa for Bali?",
+   "slug": "do-americans-need-a-visa-for-bali",
+   "category_slug": "visas-and-documents",
+   "swamp": "entry-stack",
+   "handoff": "turn",
+   "role": "entry",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Spine role: entry. R1 fires on 'visa' (government-owned SERP; fleet analog morocco-visa-for-americans 176 imp @ 67.5). Written because the site makes no sense without it.",
+    "rules_fired": [
+     "R1:visa"
+    ]
+   },
+   "structural": true
+  },
+  {
+   "title": "Visa on Arrival vs. e-VOA for Bali: Which to Get",
+   "slug": "bali-visa-on-arrival-vs-e-voa",
+   "category_slug": "visas-and-documents",
+   "swamp": "entry-stack",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Options comparison (the R2 shape that wins), but the immigration portal is the canonical owner. One SERP look: does the portal answer 'which one', or only sell it?",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "The Bali Tourist Levy, Explained",
+   "slug": "bali-tourist-levy-explained",
+   "category_slug": "visas-and-documents",
+   "swamp": "entry-stack",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2. Direct fleet analog ranks: barcelona-tourist-tax-explained 67 imp @ 6.7.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Indonesia's Arrival Declaration Form: What to Fill In Before You Land",
+   "slug": "indonesia-arrival-declaration-form",
+   "category_slug": "visas-and-documents",
+   "swamp": "entry-stack",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Government form = canonical owner, and the closest fleet analog LOST (thailand-digital-arrival-card-tdac 168 imp @ 56.9). Leaning STRUCTURAL unless the SERP look shows the official page does not explain the form.",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "Extending a Bali Visa on Arrival: How It Works",
+   "slug": "extending-a-bali-visa-on-arrival",
+   "category_slug": "visas-and-documents",
+   "swamp": "entry-stack",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Procedure, not place; volume unknown and immigration is the canonical owner.",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "Passport Validity and Blank-Page Rules for Indonesia",
+   "slug": "passport-validity-rules-for-indonesia",
+   "category_slug": "visas-and-documents",
+   "swamp": "entry-stack",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown. Airlines enforce this at US check-in, so the stake is real.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bringing Medication into Bali and Indonesia",
+   "slug": "bringing-medication-into-bali",
+   "category_slug": "visas-and-documents",
+   "swamp": "health-chain",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Strongest repeatable shape in the fleet: bringing-medication-into-turkey 420 imp @ 8.1, bringing-medication-into-spain 169 imp @ 8.1.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "What You Can Bring into Bali: Customs, Alcohol and Vapes",
+   "slug": "bali-customs-alcohol-and-vape-rules",
+   "category_slug": "visas-and-documents",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2. Fleet analog: bringing-spanish-purchases-into-the-us 71 imp @ 7.8.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Flights from the US to Bali: Routes, Layovers and Realistic Travel Time",
+   "slug": "flights-from-the-us-to-bali",
+   "category_slug": "flights-and-arrival",
+   "swamp": "long-haul-arrival",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2. Analogs rank in two of three cases: flights-to-barcelona-from-us 77 imp @ 8.7, flights-usa-to-turkey 83 @ 17.5 (flights-from-us-to-greece lost at 35.9).",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Choosing a Layover City for Bali from the US",
+   "slug": "choosing-a-layover-city-for-bali",
+   "category_slug": "flights-and-arrival",
+   "swamp": "long-haul-arrival",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Compares options for one journey (wins) but names cities (R2 risk). Volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Through Ticket vs. Separate Tickets to Bali",
+   "slug": "through-ticket-vs-separate-tickets-to-bali",
+   "category_slug": "flights-and-arrival",
+   "swamp": "long-haul-arrival",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Shape ranks everywhere it was tried but on small queries: turkey 36 imp @ 7.6, spain 30 @ 7.2 — below the 50 floor.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Arriving at Bali Airport: Immigration to Curb, Step by Step",
+   "slug": "arriving-at-bali-airport",
+   "category_slug": "flights-and-arrival",
+   "swamp": "long-haul-arrival",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2. Fleet analog: arriving-in-athens-guide 63 imp @ 8.0.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali Airport Transfers: Ride App, Taxi Counter or Pre-Booked Driver",
+   "slug": "bali-airport-transfers",
+   "category_slug": "flights-and-arrival",
+   "swamp": "traffic-time",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Options comparison, but adjacent to R1 'airport to city' (leonardo-express-fiumicino-trains 168 imp @ 52.6 lost).",
+    "rules_fired": [
+     "R1-adjacent:airport to city"
+    ]
+   }
+  },
+  {
+   "title": "Jet Lag on a US-to-Bali Trip: A First-48-Hours Plan",
+   "slug": "jet-lag-on-a-us-to-bali-trip",
+   "category_slug": "flights-and-arrival",
+   "swamp": "long-haul-arrival",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; no fleet analog, volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Departure Day in Bali: How Early to Leave for the Airport",
+   "slug": "bali-departure-day-how-early-to-leave",
+   "category_slug": "flights-and-arrival",
+   "swamp": "traffic-time",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "'How early' shape ranked once on a small query (how-early-arrive-vatican 39 imp @ 9.1).",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Money in Bali: Cash, Cards and ATMs",
+   "slug": "money-in-bali-cash-cards-atms",
+   "category_slug": "money-and-costs",
+   "swamp": "money-leak",
+   "handoff": "turn",
+   "role": "money",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Spine role: money. Broad query, written for the site, not for rank.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "ATM Fees in Bali: What a Withdrawal Really Costs",
+   "slug": "bali-atm-fees-real-cost",
+   "category_slug": "money-and-costs",
+   "swamp": "money-leak",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "The gate's own split case: turkey-atm-withdrawal-real-cost ranks 8 on a small query, atm-fees-thailand-real-cost sits at 52 on a bigger one.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Money Changers in Bali: How the Short-Change Works",
+   "slug": "bali-money-changer-short-change",
+   "category_slug": "money-and-costs",
+   "swamp": "money-leak",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Is Bali Expensive? What Americans Actually Spend",
+   "slug": "is-bali-expensive",
+   "category_slug": "money-and-costs",
+   "swamp": "money-leak",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2. Fleet analog: is-turkey-expensive 102 imp @ 16.2; greece-trip-cost-from-us 30 @ 6.7.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Tipping in Bali: Service Charge, Tax and When to Add More",
+   "slug": "tipping-in-bali",
+   "category_slug": "money-and-costs",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2. Fleet analog: money-cards-tipping-barcelona 53 imp @ 8.7.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Paying by QR Code in Bali: Can Foreign Cards and Apps Use It?",
+   "slug": "paying-by-qr-code-in-bali",
+   "category_slug": "money-and-costs",
+   "swamp": "money-leak",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Shape ranks (morocco-mobile-payments 40 imp @ 9.5) but under the 50 floor.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Best Time to Visit Bali",
+   "slug": "best-time-to-visit-bali",
+   "category_slug": "when-to-go",
+   "swamp": "wet-dry-season",
+   "handoff": "turn",
+   "role": "season",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Spine role: season. R1 fires on 'best' (best-time-to-visit-thailand 165 imp @ 83.2).",
+    "rules_fired": [
+     "R1:best"
+    ]
+   },
+   "structural": true
+  },
+  {
+   "title": "Bali's Shoulder Season: When It Is and What You Trade",
+   "slug": "bali-shoulder-season",
+   "category_slug": "when-to-go",
+   "swamp": "wet-dry-season",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2. Fleet analog: greece-shoulder-season 180 imp @ 9.2.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali in Rainy Season: What It Is Actually Like",
+   "slug": "bali-rainy-season-what-its-like",
+   "category_slug": "when-to-go",
+   "swamp": "wet-dry-season",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali in July and August: Crowds, Prices and How Far Ahead to Book",
+   "slug": "bali-in-july-and-august",
+   "category_slug": "when-to-go",
+   "swamp": "wet-dry-season",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Nyepi in Bali: What the Day of Silence Shuts Down",
+   "slug": "nyepi-bali-day-of-silence",
+   "category_slug": "when-to-go",
+   "swamp": "holiday-collision",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "The fleet's single biggest winner is this shape: bayram-holidays-turkey-explained 479 imp @ 13.5. Note 479 is above the 300 ceiling the fleet has otherwise never cracked.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Galungan and Kuningan Explained for Visitors",
+   "slug": "galungan-and-kuningan-explained",
+   "category_slug": "when-to-go",
+   "swamp": "holiday-collision",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Same local-holiday shape as the Bayram winner (479 imp @ 13.5).",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Public Holidays in Bali: What Closes and What Gets Crowded",
+   "slug": "bali-public-holidays-what-closes",
+   "category_slug": "when-to-go",
+   "swamp": "holiday-collision",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Shape ranks (turkish-public-holidays-what-closes 42 imp @ 10.2) but under the 50 floor.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Is Bali Safe for American Travelers?",
+   "slug": "is-bali-safe",
+   "category_slug": "health-and-safety",
+   "swamp": "health-chain",
+   "handoff": "turn",
+   "role": "safety",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Spine role: safety. R1 fires on 'is X safe' (is-turkey-safe 220 imp @ 59.4, is-thailand-safe 159 @ 56.2).",
+    "rules_fired": [
+     "R1:is X safe"
+    ]
+   },
+   "structural": true
+  },
+  {
+   "title": "Bali Belly: Prevention, Treatment and When to See a Doctor",
+   "slug": "bali-belly",
+   "category_slug": "health-and-safety",
+   "swamp": "health-chain",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Almost certainly above the 300 ceiling and contested by health publishers. Needs a SERP look; may end up STRUCTURAL.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Hospitals and Clinics in Bali: What to Expect and How Billing Works",
+   "slug": "bali-hospitals-and-clinics-billing",
+   "category_slug": "health-and-safety",
+   "swamp": "health-chain",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Shape ranks in both tries but small: turkey-hospital-billing 41 imp @ 8.0, spain-hospital-billing 39 @ 5.2.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Travel Insurance for Bali: The Scooter and Evacuation Fine Print",
+   "slug": "travel-insurance-for-bali-fine-print",
+   "category_slug": "health-and-safety",
+   "swamp": "scooter-liability",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Insurance SERPs are affiliate-heavy; the scooter-exclusion angle is specific. Volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Vaccines for Bali, and What to Do After a Dog or Monkey Bite",
+   "slug": "vaccines-and-animal-bites-in-bali",
+   "category_slug": "health-and-safety",
+   "swamp": "health-chain",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "CDC is the canonical owner for vaccines; the bite-response half is not theirs.",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "Arak and Methanol in Bali: How to Drink Safely",
+   "slug": "arak-and-methanol-in-bali",
+   "category_slug": "health-and-safety",
+   "swamp": "health-chain",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown, news-driven.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Indonesia's Drug Laws: What Americans Must Know Before Bali",
+   "slug": "indonesia-drug-laws-for-travelers",
+   "category_slug": "health-and-safety",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Common Scams in Bali and How Each One Works",
+   "slug": "common-scams-in-bali",
+   "category_slug": "health-and-safety",
+   "swamp": "money-leak",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown, many publishers.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Dengue and Mosquitoes in Bali",
+   "slug": "dengue-and-mosquitoes-in-bali",
+   "category_slug": "health-and-safety",
+   "swamp": "health-chain",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Can You Drink the Tap Water in Bali?",
+   "slug": "can-you-drink-the-water-in-bali",
+   "category_slug": "health-and-safety",
+   "swamp": "health-chain",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "eSIM vs. Local SIM in Bali",
+   "slug": "esim-vs-local-sim-in-bali",
+   "category_slug": "phones-and-internet",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Shape ranks (esim-phone-data-spain 31 imp @ 6.4) but small, and eSIM SERPs are affiliate-heavy.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Indonesia's Phone Registration Rule: Do Tourists Need It?",
+   "slug": "indonesia-phone-registration-for-tourists",
+   "category_slug": "phones-and-internet",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Customs is the canonical owner; question is whether it answers the short-stay case.",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "What to Wear in Bali: Temple Dress Code and Etiquette",
+   "slug": "bali-temple-dress-code-and-etiquette",
+   "category_slug": "culture-and-etiquette",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Shape ranks (what-to-wear-rome-dress-code 47 imp @ 9.6), just under the 50 floor.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali's Rules for Tourists: What Gets People Fined or Deported",
+   "slug": "bali-rules-for-tourists",
+   "category_slug": "culture-and-etiquette",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Offerings, Ceremonies and Road Closures: Reading Daily Life in Bali",
+   "slug": "offerings-ceremonies-and-road-closures-in-bali",
+   "category_slug": "culture-and-etiquette",
+   "swamp": "holiday-collision",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "How to Get Around Bali",
+   "slug": "getting-around-bali",
+   "category_slug": "getting-around",
+   "swamp": "traffic-time",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Needed for the site to make sense; broad query owned by large publishers.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Grab and Gojek in Bali: Where They Work and Where They Don't",
+   "slug": "grab-and-gojek-in-bali",
+   "category_slug": "drivers-and-ride-apps",
+   "swamp": "traffic-time",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2 (R3 would have wrongly killed the analog). grab-in-thailand-guide 265 imp @ 8.9; grab-and-taxi-coverage-thailand 35 @ 9.1.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Hiring a Private Driver in Bali: How It Works and What a Day Covers",
+   "slug": "hiring-a-private-driver-in-bali",
+   "category_slug": "drivers-and-ride-apps",
+   "swamp": "traffic-time",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; no fleet analog, volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali Traffic: Real Drive Times Between the Main Areas",
+   "slug": "bali-traffic-real-drive-times",
+   "category_slug": "drivers-and-ride-apps",
+   "swamp": "traffic-time",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown. Drive times must come from the fact pipeline as ranges, never frozen single figures.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Taxis in Bali: Metered Cabs, Local Transport Zones and Ride-App Limits",
+   "slug": "taxis-in-bali",
+   "category_slug": "drivers-and-ride-apps",
+   "swamp": "traffic-time",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Shape ranks small (rome-taxis-guide 24 imp @ 9.2).",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Renting a Car in Bali: Self-Drive vs. Car with Driver",
+   "slug": "renting-a-car-in-bali",
+   "category_slug": "drivers-and-ride-apps",
+   "swamp": "scooter-liability",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Options comparison; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Renting a Scooter in Bali: Licence, Insurance and Police Stops",
+   "slug": "renting-a-scooter-in-bali",
+   "category_slug": "scooters",
+   "swamp": "scooter-liability",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2. Fleet analogs: e-scooters-in-barcelona-rules 78 imp @ 8.9; scooters-and-atvs-in-turkey 34 @ 5.7.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Do Americans Need an International Driving Permit in Bali?",
+   "slug": "international-driving-permit-for-bali",
+   "category_slug": "scooters",
+   "swamp": "scooter-liability",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Scooter vs. Driver in Bali",
+   "slug": "scooter-vs-driver-in-bali",
+   "category_slug": "scooters",
+   "swamp": "scooter-liability",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Options-not-places comparison, the R2 shape that wins: taxis-uber-car-barcelona 194 imp @ 8.5.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Fast Boats to Nusa Penida and Lembongan: Ports, Operators and Sea Conditions",
+   "slug": "fast-boats-to-nusa-penida-and-lembongan",
+   "category_slug": "boats-and-ferries",
+   "swamp": "boat-day-buffer",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Operators and booking platforms own much of this; does any of them explain the crossing rather than sell it?",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "When Bali's Fast Boats Cancel: Your Options and the Buffer You Need",
+   "slug": "when-bali-fast-boats-cancel",
+   "category_slug": "boats-and-ferries",
+   "swamp": "boat-day-buffer",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Survives R1/R2. Fleet analog: when-ferries-cancel-thailand 70 imp @ 6.6.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali to the Gili Islands: Fast Boat vs. Flying via Lombok",
+   "slug": "bali-to-gili-fast-boat-vs-flight",
+   "category_slug": "boats-and-ferries",
+   "swamp": "boat-day-buffer",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Two ways of doing one journey: fast-vs-slow-ferries-greece 63 imp @ 7.1.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Indonesian Domestic Flights: Baggage Rules and Changes",
+   "slug": "indonesia-domestic-flights-baggage-and-changes",
+   "category_slug": "boats-and-ferries",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Shape ranks small (thailand-domestic-flight-baggage-and-changes 23 imp @ 6.3). Category is the nearest fit — flag if you want a 'Domestic Flights' subcategory.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali's Areas Explained: Which Part of the Island Is Which",
+   "slug": "bali-areas-explained",
+   "category_slug": "where-to-go",
+   "swamp": "base-split",
+   "handoff": "turn",
+   "role": "anchor",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Spine role: anchor. Bali has no gateway city, so the area map is the page every trip starts from.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Ubud: What It Is Actually Like and Who It Suits",
+   "slug": "ubud-guide",
+   "category_slug": "ubud",
+   "swamp": "base-split",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Area spine. Per-place guides are where the fleet's losers come from; written for navigation and internal links.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Canggu, Seminyak, Legian and Kuta: One Coast, Four Different Stays",
+   "slug": "canggu-seminyak-legian-kuta-explained",
+   "category_slug": "seminyak-canggu-kuta",
+   "swamp": "base-split",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Area spine; replaces the rejected place-vs-place page.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Uluwatu and the Bukit Peninsula: Cliffs, Surf and the Drive In",
+   "slug": "uluwatu-and-the-bukit-guide",
+   "category_slug": "uluwatu",
+   "swamp": "base-split",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Area spine.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Sanur and Nusa Dua: The Calm Coast",
+   "slug": "sanur-and-nusa-dua-guide",
+   "category_slug": "sanur-nusa-dua",
+   "swamp": "base-split",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Area spine.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Nusa Lembongan and Ceningan",
+   "slug": "nusa-lembongan-and-ceningan-guide",
+   "category_slug": "nusa-islands",
+   "swamp": "boat-day-buffer",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Area spine.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Nusa Penida: Day Trip or Overnight?",
+   "slug": "nusa-penida-day-trip-or-overnight",
+   "category_slug": "nusa-islands",
+   "swamp": "boat-day-buffer",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Two ways of doing one thing (the winning R2 shape), no measured analog.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Munduk and North Bali",
+   "slug": "munduk-and-north-bali-guide",
+   "category_slug": "north-and-east-bali",
+   "swamp": "base-split",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Area spine.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Sidemen and Amed: East Bali",
+   "slug": "sidemen-and-amed-east-bali-guide",
+   "category_slug": "north-and-east-bali",
+   "swamp": "base-split",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Area spine.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Adding the Gili Islands or Lombok to a Bali Trip: How Many Days It Takes",
+   "slug": "adding-gili-or-lombok-to-a-bali-trip",
+   "category_slug": "beyond-bali",
+   "swamp": "boat-day-buffer",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Nearest analog ranks small (which-greek-islands-to-combine 33 imp @ 9.2); close to an R2 place comparison, so framed as a time decision.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Komodo from Bali: Getting There and How Many Days You Need",
+   "slug": "komodo-from-bali",
+   "category_slug": "beyond-bali",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown, tour operators heavy.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Uluwatu, Tanah Lot, Besakih, Lempuyang: What Each Temple Visit Involves",
+   "slug": "uluwatu-tanah-lot-besakih-lempuyang-visits",
+   "category_slug": "temples-and-culture",
+   "swamp": "traffic-time",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Avoids the R1 'best temples' title; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Lempuyang's Gates of Heaven: The Queue, the Photo and the Drive",
+   "slug": "lempuyang-gates-of-heaven-queue",
+   "category_slug": "temples-and-culture",
+   "swamp": "traffic-time",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Single-sight logistics; fleet has both a win (camp-nou-tour-guide 413 imp @ 7.8) and losses (colosseum-underground 66.6) on this shape.",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "Uluwatu Kecak Dance: Tickets, Timing and the Sunset Traffic",
+   "slug": "uluwatu-kecak-dance-tickets-and-timing",
+   "category_slug": "temples-and-culture",
+   "swamp": "traffic-time",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Ticket-logistics shape ranks small (park-guell-tickets-guide 36 imp @ 9.1).",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "Ubud's Monkey Forest: Rules, Bites and What to Leave Behind",
+   "slug": "ubud-monkey-forest-rules-and-bites",
+   "category_slug": "temples-and-culture",
+   "swamp": "health-chain",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "The forest's own site is the canonical owner for tickets; the bite question is open.",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "Mount Batur Sunrise Trek: What the Night Actually Looks Like",
+   "slug": "mount-batur-sunrise-trek",
+   "category_slug": "volcanoes-and-hikes",
+   "swamp": "traffic-time",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Tour sellers dominate; does anyone describe the night honestly?",
+    "rules_fired": [
+     "R3"
+    ]
+   }
+  },
+  {
+   "title": "Jatiluwih Rice Terraces: Getting There and Walking the Trails",
+   "slug": "jatiluwih-rice-terraces",
+   "category_slug": "waterfalls-and-rice-terraces",
+   "swamp": "traffic-time",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Replaces the rejected sight-vs-sight page; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali's Waterfalls: Stairs, Entry Fees and Which Side of the Island They Are On",
+   "slug": "bali-waterfalls-stairs-fees-and-drive",
+   "category_slug": "waterfalls-and-rice-terraces",
+   "swamp": "traffic-time",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Avoids the R1 'best waterfalls' title; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Surfing in Bali: Which Coast Works in Which Season",
+   "slug": "surfing-in-bali-by-season-and-coast",
+   "category_slug": "beaches-and-surf",
+   "swamp": "wet-dry-season",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; surf publishers strong, volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Manta Rays at Nusa Penida: Season, Currents and Who Should Skip It",
+   "slug": "manta-rays-at-nusa-penida",
+   "category_slug": "diving-and-snorkeling",
+   "swamp": "boat-day-buffer",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Choosing a Yoga Retreat in Ubud: What the Listings Don't Say",
+   "slug": "choosing-a-yoga-retreat-in-ubud",
+   "category_slug": "wellness-and-yoga",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown, aggregator-heavy.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "One Week in Bali: A Realistic First-Timer Route",
+   "slug": "one-week-in-bali",
+   "category_slug": "by-trip-length",
+   "swamp": "base-split",
+   "handoff": "turn",
+   "role": "route",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Spine role: route. R1 fires on itinerary / N days (median fleet position for this shape is near 70).",
+    "rules_fired": [
+     "R1:itinerary"
+    ]
+   },
+   "structural": true
+  },
+  {
+   "title": "Ten Days in Bali: Adding the Nusa Islands",
+   "slug": "ten-days-in-bali",
+   "category_slug": "by-trip-length",
+   "swamp": "boat-day-buffer",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "R1 itinerary shape; needed by the planner and the Start Here path.",
+    "rules_fired": [
+     "R1:itinerary"
+    ]
+   },
+   "structural": true
+  },
+  {
+   "title": "Two Weeks in Bali: North, East and an Island Leg",
+   "slug": "two-weeks-in-bali",
+   "category_slug": "by-trip-length",
+   "swamp": "base-split",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "R1 itinerary shape.",
+    "rules_fired": [
+     "R1:itinerary"
+    ]
+   },
+   "structural": true
+  },
+  {
+   "title": "How Many Days Do You Need in Bali, Coming from the US?",
+   "slug": "how-many-days-in-bali",
+   "category_slug": "by-trip-length",
+   "swamp": "long-haul-arrival",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Close to R1's 'N days' but a question, not an itinerary. Volume unknown.",
+    "rules_fired": [
+     "R1-adjacent:N days"
+    ]
+   }
+  },
+  {
+   "title": "Bali Honeymoon: How to Split the Nights",
+   "slug": "bali-honeymoon-how-to-split-the-nights",
+   "category_slug": "by-trip-type",
+   "swamp": "base-split",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2 as titled; honeymoon SERPs are publisher-heavy.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali with Kids: Bases, Car Seats and Pools",
+   "slug": "bali-with-kids",
+   "category_slug": "by-trip-type",
+   "swamp": "base-split",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Where to Stay in Bali: Choosing a Base",
+   "slug": "where-to-stay-in-bali",
+   "category_slug": "choosing-your-base",
+   "swamp": "base-split",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "R1 fires on 'where to stay'. The site's central decision page; written for the funnel.",
+    "rules_fired": [
+     "R1:where to stay"
+    ]
+   },
+   "structural": true
+  },
+  {
+   "title": "One Base or Two? How to Split a Bali Stay",
+   "slug": "one-base-or-two-in-bali",
+   "category_slug": "choosing-your-base",
+   "swamp": "base-split",
+   "handoff": "turn",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Two ways of arranging one trip: colosseum-vs-vatican-where-to-stay 91 imp @ 11.5.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Staying in Central Ubud vs. the Rice-Field Outskirts",
+   "slug": "central-ubud-vs-the-outskirts",
+   "category_slug": "choosing-your-base",
+   "swamp": "base-split",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "PRODUCE",
+    "reason": "Within-one-place stay decision: staying-near-termini 83 imp @ 9.2.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Short-Term Rentals in Bali: Licences, Deposits and Fake Listings",
+   "slug": "short-term-rentals-in-bali-what-to-check",
+   "category_slug": "villas-and-resorts",
+   "swamp": "base-split",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Shape ranks small (airbnb-barcelona-rental-crackdown 44 imp @ 9.1). Title deliberately avoids the R1 noun 'villa'.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Balinese Food: What to Order and What Is in It",
+   "slug": "balinese-food-what-to-order",
+   "category_slug": "balinese-food",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "STRUCTURAL",
+    "reason": "Needed for the section to exist; broad query.",
+    "rules_fired": []
+   },
+   "structural": true
+  },
+  {
+   "title": "Eating at Warungs: How to Pick One",
+   "slug": "eating-at-warungs-in-bali",
+   "category_slug": "balinese-food",
+   "swamp": "health-chain",
+   "handoff": "seed",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Food Allergies and Dietary Needs in Bali: How to Ask",
+   "slug": "food-allergies-and-dietary-needs-in-bali",
+   "category_slug": "balinese-food",
+   "swamp": "health-chain",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1/R2; volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Alcohol in Bali: Why It Costs What It Does, and the Rules",
+   "slug": "alcohol-in-bali-prices-and-rules",
+   "category_slug": "cafes-bars-beach-clubs",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Nearest analog vermouth-cava-barcelona 53 imp @ 9.9 is a drinks-culture page, not the same query.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Bali Beach Clubs: Minimum Spends, Daybeds and Booking",
+   "slug": "bali-beach-clubs-how-they-work",
+   "category_slug": "cafes-bars-beach-clubs",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "INVESTIGATE",
+    "reason": "Survives R1 as titled (not 'best beach clubs'); volume unknown.",
+    "rules_fired": []
+   }
+  },
+  {
+   "title": "Things to Do in Bali",
+   "slug": "things-to-do-in-bali",
+   "category_slug": "things-to-do",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "REJECT",
+    "reason": "R1: 'things to do'. free-things-to-do-barcelona 239 imp @ 86.8.",
+    "rules_fired": [
+     "R1:things to do"
+    ]
+   }
+  },
+  {
+   "title": "Canggu vs. Seminyak",
+   "slug": "canggu-vs-seminyak",
+   "category_slug": "seminyak-canggu-kuta",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "REJECT",
+    "reason": "R2: place versus place. krabi-vs-phuket @ 58.2, santorini-vs-mykonos @ 85.4. Covered structurally by the four-stays page.",
+    "rules_fired": [
+     "R2"
+    ]
+   }
+  },
+  {
+   "title": "Tegalalang vs. Jatiluwih Rice Terraces",
+   "slug": "tegalalang-vs-jatiluwih",
+   "category_slug": "waterfalls-and-rice-terraces",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "REJECT",
+    "reason": "R2: sight versus sight. casa-batllo-vs-casa-mila 187 imp @ 59.0.",
+    "rules_fired": [
+     "R2"
+    ]
+   }
+  },
+  {
+   "title": "Best Beaches in Bali",
+   "slug": "best-beaches-in-bali",
+   "category_slug": "beaches-and-surf",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "REJECT",
+    "reason": "R1: 'best' + 'beaches'. santorini-best-beaches 209 imp @ 78.4.",
+    "rules_fired": [
+     "R1:best",
+     "R1:beaches"
+    ]
+   }
+  },
+  {
+   "title": "Private Villa vs. Hotel in Bali",
+   "slug": "private-villa-vs-hotel-in-bali",
+   "category_slug": "villas-and-resorts",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "REJECT",
+    "reason": "R1 fires on 'villa' and 'hotel' (beachfront-villas-thailand 264 imp @ 51.5). It is an options comparison, so say so if you want it kept as STRUCTURAL instead.",
+    "rules_fired": [
+     "R1:villa",
+     "R1:hotel"
+    ]
+   }
+  },
+  {
+   "title": "Best Villas in Seminyak",
+   "slug": "best-villas-in-seminyak",
+   "category_slug": "villas-and-resorts",
+   "swamp": "none",
+   "handoff": "none",
+   "opportunity": {
+    "verdict": "REJECT",
+    "reason": "R1: 'best' + 'villas'. best-luxury-hotels-istanbul 189 imp @ 53.4.",
+    "rules_fired": [
+     "R1:best",
+     "R1:villa"
+    ]
+   }
+  }
+ ]
+}
