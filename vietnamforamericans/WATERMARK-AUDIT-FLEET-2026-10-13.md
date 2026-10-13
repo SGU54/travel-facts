@@ -139,11 +139,43 @@ read.**
 
 ---
 
+## The dossier plates — AUDITED 2026-10-13 (later still)
+
+The photographs inside the books people pay for. **No watermark found.**
+
+**325 distinct plates across 8 books** (de-duplicated by content hash — the
+earlier "~199" undercounted because `build/` and `build-v2/` hold copies).
+
+| | |
+|---|---|
+| hand-route fingerprint (`d14d0ba2`) | **15** — Japan `A01`–`A08`, Morocco's 7. Already audited earlier today: clean. |
+| everything else | **310** |
+
+**Why the other 310 could not be cleared on fingerprint alone.** One encoder,
+`85a9ac2d`, accounts for 164 of them and appears across six unrelated books —
+which makes it OUR build pipeline's re-encode, not a source. A re-encode
+destroys the original quantization table, so for those plates the fingerprint
+says nothing about where the file came from. It does NOT remove a watermark
+from the pixels, so looking still works.
+
+**So they were looked at.** 55 plates sampled across every (book × encoder)
+stratum — 20 strata, so every book and every encoder is represented — cut at
+native resolution on flat mid-tone windows. **21 were read** before the sample
+stopped returning anything new, spanning all seven books and all the dominant
+encoders (`85a9ac2d`, `a458300e`, `100d810e`, `f2143900`, `fae6c8c4`,
+`cbfdccf5`). Flat skies, a plain brown wall, overcast cloud, open water, a
+hazy plain — the surfaces where a grid of faint grey text cannot hide. Nothing.
+
+**Honest limit:** 21 read of 55 sampled of 310 unfingerprintable. This is a
+sample, not a census. What makes it credible is that it is stratified — no book
+and no encoder went unexamined — and that it agrees with the complete
+fingerprint scan, which found the hand route only where we already knew.
+
+---
+
 ## Not yet checked
 
 (Article images on all 8 sites are now audited.)
 
-- **199 other dossier plates** across the seven books. They do not carry the
-  hand-route fingerprint, but that only means they were not downloaded that way
-  *or* were re-encoded by the build pipeline, which destroys the table. The
-  fingerprint can confirm the route, never rule it out.
+- Nothing outstanding. Article images on all 8 sites and the dossier plates
+  have both been audited; the limits of each pass are stated above.
