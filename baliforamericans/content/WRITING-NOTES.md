@@ -14,3 +14,12 @@ Batch 1 needed four review rounds. Every failure was one of these, so write to a
 Pipeline per batch (all in this folder): write src/*.html + meta.json -> build.py -> make-gate.py NN -> review in ChatGPT -> fix ->
 image-queries.json -> source-images.py NN -> contact-sheet.py NN (+ crops at full size) -> picks.json -> place-images.py NN ->
 upload-batch.mjs -> finalize.py NN -> validate-batch.mjs -> articles-batch.mjs update -> seed facts -> publish -> links.
+
+## Vein audit at 20 articles (2026-10-13, dossier/audit-synthesis.py, 4 themes each)
+entry-stack 2.4 · scooter liability chain 2.1 · health chain 2.9 · holiday calendar 3.8 · money leak 3.9.
+All thin (2-4), none a vein yet; the paperwork theses are the most pre-joined (2-3 articles already carry all four parts).
+The geography theses (base split x drive times x boat days x flight home; season x coast) could not be measured: no
+articles exist. Working rule until the re-run at 40: every area / transport / itinerary article carries ONE of
+{base choice, drive time, boat-day placement, season-by-coast} in depth and only names the others in a sentence.
+Do not write an article that works out base + drive times + boat day + departure day together: that is the guide.
+No `vein` block written to article-list.json yet (a signal at 20, not a verdict). Re-run at 40.
