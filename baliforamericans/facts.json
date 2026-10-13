@@ -754,6 +754,19 @@
    "review_after": "2027-10-13",
    "risk": "high",
    "caveat": "Not Bali-specific; gives no duration and no percentages. Do not state how long it lasts or how many travelers get it."
+  },
+  "jet_lag": {
+   "fact_key": "safety_health.jet_lag",
+   "value": "The CDC says jet lag is caused by a mismatch between a person's normal daily rhythms and a new time zone and can affect mood, concentration and physical and mental performance. Its advice: shift bedtime an hour or two toward the destination for a few days before travel (later going west, earlier going east); on the flight eat small meals, avoid alcohol, drink plenty of water and use caffeine strategically but not in the evening; after arrival stay in well-lit areas during the day, follow the destination's schedule, keep naps to 15 to 20 minutes, and arrive at least 2 days before any important event.",
+   "status": "verified",
+   "source_url": "https://wwwnc.cdc.gov/travel/page/jet-lag",
+   "source_kind": "primary",
+   "scope": "travelers crossing time zones",
+   "support": "CDC jet lag page (via fetch, quoted): 'Jet lag is caused by a mismatch between a person's normal daily rhythms and a new time zone.' 'Jet lag can affect your mood, your ability to concentrate, and your physical and mental performance.' Westbound 'go to bed an hour or two later than usual'; eastbound 'an hour or two earlier'. 'at least 2 days before any important events, to give your body time to adjust'. 'Eat small meals to avoid stomach aches'; 'Avoid alcohol as it disrupts sleep'; 'Use caffeine and exercise strategically...avoid these in the evening'; 'Drink plenty of water'; naps 'no more than 15-20 minutes'; 'Stay in well-lit areas at your destination during the day.' 'Take any medicine or sleep aids as directed by your healthcare provider.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "No statement on melatonin or on days-per-time-zone recovery. Do not state either."
   }
  },
  "getting_around": {
@@ -1112,6 +1125,33 @@
    "review_after": "2027-01-13",
    "risk": "standard",
    "caveat": "A schedule-data aggregator, not an airline or the airport. Schedules change; re-check before each batch that states it. Gives no door-to-door times from US airports - those stay serve-live."
+  },
+  "dps_hub_routes": {
+   "fact_key": "getting_there.dps_hub_routes",
+   "value": "Schedule data for Bali's airport (October 2026) lists nonstop flights from hubs including Singapore, Kuala Lumpur, Bangkok, Manila, Hong Kong, Taipei, Seoul, Tokyo, Sydney, Dubai, Doha and Istanbul, and no US city. Listed nonstop times to Bali run from about 3.5 hours (Singapore) through about 5 to 6 hours (Hong Kong, Taipei), about 7 to 8 hours (Seoul, Tokyo), about 10 hours (Dubai, Doha) and about 13 hours (Istanbul).",
+   "status": "verified",
+   "source_url": "https://aerocorner.com/airports/dps",
+   "source_kind": "secondary",
+   "scope": "flights into Bali (DPS)",
+   "support": "Aerocorner DPS page, data dated 9 October 2026 (via fetch): 41 international routes, 46 airlines; Singapore 3 hr 25 (Singapore Airlines, Scoot, Garuda and others); Kuala Lumpur 3 hr 45; Tokyo NRT 7 hr 40 (Garuda); Seoul ICN 7 hr 20 (Korean Air, Jeju Air); Taipei 5 hr 40 (China Airlines, EVA Air, Starlux); Hong Kong 5 hr 20 (Cathay Pacific, Hong Kong Airlines); Manila 4 hr 20; Bangkok 4 hr 55; Doha 10 hr 30 (Qatar Airways); Dubai 10 hr 5 (Emirates); Istanbul 13 hr 10 (Turkish Airlines); Sydney 6 hr 30. US destinations: none listed.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "standard",
+   "caveat": "Aggregator schedule data; routes and carriers change by season. Says nothing about the US-to-hub leg, fares, or total journey time: those stay serve-live and must not be printed as figures.",
+   "writing_rule": "Name hub CITIES as examples of where a connection can be made; give the hub-to-Bali times as approximate and dated; never state a total door-to-door time or a fare."
+  },
+  "dot_connections": {
+   "fact_key": "getting_there.dot_connections",
+   "value": "The US Department of Transportation advises travelers booking a connection to check the time between flights and ask what happens if the first flight is delayed; to choose the least-congested connecting airport and consider weather when fares are equal; and, on a connection involving two airlines, to ask whether bags will be transferred. It ranks itineraries from safest for baggage to riskiest: nonstop, through flight, same-airline connection, connection between different airlines. On international itineraries passengers may be able to claim expenses caused by a delay under Article 19 of the Montreal Convention by filing a claim with the airline; for US domestic itineraries airlines are not required to compensate for delays or cancellations.",
+   "status": "verified",
+   "source_url": "https://www.transportation.gov/airconsumer/fly-rights",
+   "source_kind": "primary",
+   "scope": "air travelers from the United States",
+   "support": "DOT 'Fly Rights', read directly in Chrome: 'When making your reservation for a connection, always check the amount of time between flights. Ask yourself what will happen if the first flight is delayed; if you don't like the answer, pick another flight or \"construct\" a connection that allows more time.' 'If you have a choice of connections and the fares and service are equivalent, choose the one with the least-congested connecting airport... You may wish to take into consideration the potential for adverse weather'. 'If you have a connection involving two airlines, ask whether your bags will be transferred.' Baggage ranking: '1) nonstop flight; 2) direct or through flight; 3) online connection (change of aircraft but not airlines); and 4) interline connection (change of aircraft and airlines)'. 'Contrary to popular belief, for domestic itineraries airlines are not required to compensate passengers whose flights are delayed or canceled.' 'On international itineraries, passengers may be able to recover reimbursement under Article 19 of the Montreal Convention for expenses resulting from a delayed or canceled flight by filing a claim with the airline.' 'if an early flight does get delayed or canceled, you have more rerouting options.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Does not use the phrase 'separate tickets' and does not say what an airline does when a passenger on a separately booked onward flight misses it. Do not state airline behaviour; frame it as a question to ask."
   }
  },
  "_held_secondary": {
