@@ -234,7 +234,7 @@ for slug,title,cat,swamp,hand,verd,reason,rules,analog,role in ROWS:
           "verdict":"PRODUCE","rules_fired":rules,
           "confidence":"unrated — prospective filing; the analog shows the shape has ranked on a sibling domain, it does not show Bali query volume",
           "risk":"Bali volume for this query is unmeasured; a sibling's result on another destination may not transfer. Rows decided by the SERP look used a general web-search tool, not Google's results page","reason":reason})
-out={"schema_version":4,"project":"baliforamericans","status":"DRAFT — categories APPROVED 2026-10-13; INVESTIGATE pass done; list + swamps awaiting approval","drafted_on":TODAY,
+out={"schema_version":4,"project":"baliforamericans","status":"APPROVED by user 2026-10-13 (categories, 73-article list, 10 swamps)","drafted_on":TODAY,
  "_README":"Stage 1 article plan. swamps = hypothesis-grade terrain map (the dossier cold-mine may re-rank). Per article: swamp + handoff (turn|seed|none) and the Stage 1c opportunity verdict. REJECT rows are kept as a record and are NOT written. Titles are working titles: any named product, form or rule in a title is confirmed in Stage 2 before it is written.",
  "swamps":[{"id":i,"name":n,"one_liner":o} for i,n,o in SWAMPS],"articles":arts}
 json.dump(out,open("article-list.json","w"),indent=1,ensure_ascii=False)

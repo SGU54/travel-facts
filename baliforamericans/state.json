@@ -2,11 +2,11 @@
  "_README": "Per-project progress state. Read FIRST. Trust this file plus the DB, not the chat scroll.",
  "schema_version": 3,
  "project": "baliforamericans",
- "stage": "architecture",
+ "stage": "facts",
  "batch": 0,
  "batches_total": null,
  "batch_status": "none",
  "published_slugs": [],
  "updated_at": "2026-10-13",
- "notes": "Stage 1 infra DONE and verified (schema bali, common.sites row, both Vercel projects live, domain on site project, admin on Vercel URL only, noindex on alias, /api/subscribe stored:true, GSC domain property verified, sitemap submitted - row said 'could not fetch' minutes after submit, recheck). CATEGORIES APPROVED by user 2026-10-13 (36 rows). Stage 1c INVESTIGATE pass DONE 2026-10-13: 98 rows = 36 PRODUCE, 37 STRUCTURAL, 25 REJECT; 73 to write; predictions.json has 36 rows. PENDING USER APPROVAL: the article list and the 10 swamps. No Bali volume measurement exists for any row. apps/site/lib/geo.ts still has FILL markers (skeleton-check fails by design until geography comes from the fact pipeline). Stage flips to 'facts' only after list approval."
+ "notes": "Stage 1 DONE. Categories, the 73-article list and the 10 swamps APPROVED by user 2026-10-13. predictions.json filed (36 PRODUCE rows) before any writing - never rewrite those rows. Stage 2 (facts) starting: no facts.json yet. Open items: GSC sitemap row said 'could not fetch' minutes after submit (recheck); apps/site/lib/geo.ts FILL markers (fill from facts); no Bali volume measurement exists for any row."
 }
