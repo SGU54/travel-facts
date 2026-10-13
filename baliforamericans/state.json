@@ -3,7 +3,7 @@
  "schema_version": 3,
  "project": "baliforamericans",
  "stage": "writing",
- "batch": 4,
+ "batch": 5,
  "batches_total": 15,
  "batch_status": "published",
  "published_slugs": [
@@ -26,7 +26,12 @@
   "extending-a-bali-visa-on-arrival",
   "passport-validity-rules-for-indonesia",
   "indonesia-drug-laws-for-travelers",
-  "arak-and-methanol-in-bali"
+  "arak-and-methanol-in-bali",
+  "bali-temple-dress-code-and-etiquette",
+  "galungan-and-kuningan-explained",
+  "bali-public-holidays-what-closes",
+  "can-you-drink-the-water-in-bali",
+  "dengue-and-mosquitoes-in-bali"
  ],
  "updated_at": "2026-10-13",
  "notes": "USER INSTRUCTION 2026-10-13: do not stop until ALL batches are written, imaged, imported and published; Claude sources and picks images itself and is the last check on facts (no human review lists; when the terminal cannot reach a page, use Chrome). Batches 1-4 PUBLISHED (20 articles, 40 images, 40 fact keys in common.facts). After ship.sh run content/links.sh (plan + deny filter + inject) and content/state-bump.py NN. Per-batch pipeline lives in content/ - READ content/WRITING-NOTES.md FIRST: write src/*.html + meta.json -> build.py -> make-gate.py NN -> review in ChatGPT via Chrome (paste with pbcopy, cmd+v, wait for the attachment to finish before Enter) -> fix -> image-queries.json -> source-images.py -> contact-sheet.py (+ crops at full size: reject faces, logos, wrong-country shots) -> picks.json -> place-images.py -> upload-batch.mjs (echo y |) -> finalize.py -> validate-batch.mjs -> articles-batch.mjs update -> ./ship.sh NN -> declare links in article-list.json -> pick-links --plan --apply -> filter with content/links-deny.json -> inject-links --apply -> commit both repos. facts.json: 57 records + 2 held-secondary (Nyepi airport hours, stay-indoors) which articles may describe only in attributed prose. Remaining 63 articles: next batches should take the money set (money-in-bali, tipping, is-bali-expensive, paying-by-qr, phone registration, esim), then arrival/flights, seasons, areas, itineraries; boat articles last (no sourced boat facts - Transport Ministry firewall). Many remaining articles need NEW fact sourcing before writing. Open infra: GSC sitemap row recheck; geo.ts FILL markers; FAQPage JSON-LD not emitted."

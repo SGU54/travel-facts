@@ -7,6 +7,7 @@ python3 - <<PY
 import json
 p='scripts/links-map.json'; m=json.load(open(p)); deny=set(json.load(open('$H/links-deny.json')))
 m2=[x for x in m if x['phrase'].lower() not in deny and len(x['phrase'].split())>1]
+extra=json.load(open('$H/links-extra.json')); have={x['phrase'].lower() for x in m2}; m2+=[x for x in extra if x['phrase'].lower() not in have]
 json.dump(m2,open(p,'w'),indent=1,ensure_ascii=False); print(len(m),'->',len(m2)); [print('  ',x['phrase'],'->',x['slug']) for x in m2]
 PY
 node scripts/inject-links.mjs --apply 2>&1 | tail -1

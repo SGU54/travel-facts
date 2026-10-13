@@ -615,6 +615,95 @@
    "review_after": "2027-10-13",
    "risk": "high",
    "caveat": "Both pages read through a fetch summary that quoted them; neither mentions Bali. Bali-specific risk comes only from the State Dept line in safety_health.drink_safety. No source here says how to tell a safe drink by look, taste or price - never claim one can."
+  },
+  "water_safety": {
+   "fact_key": "safety_health.water_safety",
+   "value": "The State Department says that in many areas of Indonesia tap water is not safe to drink, that bottled water and beverages are generally safe if they are a major brand with an intact seal, that many restaurants and hotels serve tap water unless bottled water is requested, and that ice may be made from tap water. Water can be made safe by filtering, boiling, disinfecting or distilling. Impure water can cause typhoid, cholera, hepatitis and dysentery.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "travelers in Indonesia",
+   "support": "State Dept Indonesia page, 'Water quality and food safety', read directly in Chrome: 'In many areas, tap water is not safe to drink. In some locations, tap water is not available every day. Bottled water and beverages are generally safe. Use major brands and ensure the seal is intact. Many restaurants and hotels serve tap water unless bottled water is specifically requested. You may want to request no ice in your drinks since it may be made using tap water. Make water safe by filtering, boiling, disinfecting, or distilling. Impure water can cause diseases like typhoid, cholera, hepatitis, and dysentery.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "caveat": "Says 'many areas' of Indonesia, not Bali by name. Nothing here says what any particular hotel, restaurant or ice supplier in Bali does."
+  },
+  "food_water_cdc": {
+   "fact_key": "safety_health.food_water_cdc",
+   "value": "CDC advice for destinations where tap water may be contaminated: do not drink tap water or use ice; drinks from unopened factory-sealed bottles or cans are safer; coffee or tea served steaming hot should be safe; brush teeth with bottled or disinfected water; skip fountain drinks; avoid raw foods and fresh salads; hot food should be served hot; avoid street food, or apply the same rules to it.",
+   "status": "verified",
+   "source_url": "https://wwwnc.cdc.gov/travel/page/food-water-safety",
+   "source_kind": "primary",
+   "scope": "travelers anywhere tap water may be contaminated",
+   "support": "CDC 'Choose Safe Food and Drinks When Traveling' (via fetch, quoted): 'Do not drink the tap water in countries where the tap water might be contaminated.' 'Do not use ice in destinations with limited access to clean water'. 'Drinks from unopened, factory-sealed bottles or cans are safer than tap water.' 'Hot coffee or tea should be safe if it is served steaming hot.' 'Brush your teeth with bottled or disinfected water.' 'do not drink fountain drinks.' 'Avoid eating raw foods.' 'Avoid eating fresh salads'. 'Avoid eating food from street vendors. If you choose to eat street food, follow the same food safety rules.' 'Tap water can be disinfected by boiling, filtering, or chemically treating it.' The CDC Indonesia page (read in Chrome) links to this page under 'Eat and drink safely'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "caveat": "General CDC guidance, not Bali-specific."
+  },
+  "bug_bites": {
+   "fact_key": "safety_health.bug_bites",
+   "value": "The CDC says bugs such as mosquitoes can spread a number of diseases in Indonesia, many of which cannot be prevented with a vaccine or medicine. Its steps: cover exposed skin with long sleeves, long pants and hats; use insect repellent (DEET, picaridin, oil of lemon eucalyptus, IR3535 or 2-undecanone); use permethrin-treated clothing; stay in air-conditioned or screened rooms; use a bed net if the sleeping area is open to the outdoors.",
+   "status": "verified",
+   "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia",
+   "source_kind": "primary",
+   "scope": "travelers in Indonesia",
+   "support": "CDC Indonesia page, 'Prevent bug bites', read directly in Chrome: 'Bugs (like mosquitoes, ticks, and fleas) can spread a number of diseases in Indonesia. Many of these diseases cannot be prevented with a vaccine or medicine.' 'Cover exposed skin by wearing long-sleeved shirts, long pants, and hats. Use an appropriate insect repellent. Use permethrin-treated clothing and gear ... Do not use permethrin directly on skin. Stay and sleep in air-conditioned or screened rooms. Use a bed net if the area where you are sleeping is exposed to the outdoors.' 'Use a repellent that contains 20% or more DEET for protection that lasts up to several hours.' Lists DEET, Picaridin, OLE/PMD, IR3535, 2-undecanone. Dengue row: transmission 'Mosquito bite', advice 'Avoid bug bites'. Page last reviewed August 25, 2026.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  },
+  "dengue": {
+   "fact_key": "safety_health.dengue",
+   "value": "Dengue is spread mainly by the bite of an infected Aedes mosquito, and these mosquitoes bite during the day and night. The most common symptom is fever with aches and pains, eye pain, nausea, vomiting or rash, typically lasting 2 to 7 days. Warning signs of severe dengue, which is a medical emergency, usually begin in the 24 to 48 hours after the fever goes away: belly pain, repeated vomiting, bleeding from the nose or gums, blood in vomit or stool, extreme tiredness or restlessness. No dengue vaccine is currently available in the United States.",
+   "status": "verified",
+   "source_url": "https://www.cdc.gov/dengue/signs-symptoms/index.html",
+   "source_kind": "primary",
+   "scope": "travelers anywhere dengue occurs",
+   "support": "CDC dengue pages (via fetch, quoted): 'All four dengue viruses are spread to people primarily through the bite of an infected Aedes species mosquito.' 'Mosquitoes bite during the day and night.' 'The most common symptom of dengue is fever with any of the following: Aches and pains (eye pain, typically behind the eyes, muscle, joint, or bone pain)'; nausea, vomiting, rash. 'Symptoms of dengue typically last 2-7 days.' 'Warning signs usually begin in the 24-48 hours after fever has gone away.' 'Belly pain or tenderness; Vomiting (at least 3 times in 24 hours); Bleeding from the nose or gums; Vomiting blood, or blood in the stool; Feeling extremely tired or restless'. 'Severe dengue is a medical emergency'. 'There are no dengue vaccines currently available in the United States.' 'A blood test is the only way to confirm the diagnosis'. Returning travelers: 'prevent mosquito bites for 3 weeks'. CDC Indonesia page lists Dengue with 'Avoid bug bites'; an earlier reading of that page noted dengue risk throughout Indonesia.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "caveat": "No Bali case numbers or seasonality sourced; do not state a 'dengue season' or name pain relievers."
+  },
+  "medical_care": {
+   "fact_key": "safety_health.medical_care",
+   "value": "The State Department says routine medical care is available in Indonesia's major cities, that adequate care may be harder to find in rural areas, that most foreigners with the resources leave the country for anything beyond basic procedures, and that medical staff may speak little or no English. Ambulance services are not widely available and can take 45 minutes or longer, so travelers may prefer a taxi or private vehicle to the hospital. The US embassy keeps a list of doctors and hospitals and does not endorse any.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept Indonesia page, read directly in Chrome: 'Health facilities are available throughout Indonesia. It may be harder to find adequate health care in rural areas. Routine medical care is available in major cities. Most foreigners in Indonesia who have the resources leave the country for anything beyond basic procedures.' 'Medical staff may speak little or no English. The U.S. embassy maintains a list of doctors and hospitals. The U.S. embassy does not endorse or recommend any specific medical provider or clinic.' 'Ambulance services are not widely available... Travelers may prefer to take a taxi or private vehicle to the hospital instead of waiting for an ambulance. Sometimes they can take 45 minutes or longer to arrive.' 'Dial 118 or 119 for emergency medical services.' 'If you get injured, you will likely need to travel to a major city for appropriate medical care.' 'Psychological and psychiatric services are limited'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "caveat": "Indonesia-wide; names no Bali hospital. Never name or rank a hospital or clinic."
+  },
+  "medical_payment": {
+   "fact_key": "safety_health.medical_payment",
+   "value": "Medical care is not free in Indonesia. The State Department says hospitals and doctors often require payment or sizable deposits upfront before service or admission, most care providers only accept cash, credit card payment is not always available, patients cover all costs of transfer between hospitals, most US health plans and Medicare do not cover care abroad, and the US government does not pay medical bills. It highly recommends travel insurance and strongly recommends supplemental insurance covering medical evacuation; with such insurance the traveler pays first and seeks reimbursement.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept Indonesia page, read directly in Chrome: 'Make sure you know if your health insurance plan covers any medical expenses abroad. Most U.S. plans do not. The U.S. government does not pay medical bills. U.S. Medicare and Medicaid do not cover expenses or bills abroad. Most hospitals and doctors abroad do not accept U.S. health insurance. Medical care is not free in Indonesia. If you require medical attention, you will incur expenses, even if you are treated in a public healthcare facility. Most care providers overseas only accept cash payments. Credit card payment is not always available.' 'The U.S. government strongly recommends supplemental insurance to cover medical evacuation. If you purchase supplemental insurance, you are responsible for seeking reimbursement from the insurance provider.' 'Hospitals and doctors often require payment or sizable deposits upfront prior to service or admission. Patients must cover all costs for transfer to or between hospitals.' 'We highly recommend that you buy travel insurance before you travel. Check with your travel insurance provider about evacuation assistance, medical insurance, and trip cancelation coverage.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "caveat": "No amounts. Never print a deposit, bill or premium figure, and never say what an insurer will or will not pay."
+  },
+  "medication_letter": {
+   "fact_key": "safety_health.medication_letter",
+   "value": "The State Department says to carry prescription medication in its original packaging with the prescription and a doctor's letter giving the patient name as in the passport, the medication name and daily dose, and confirmation it is for personal use; to declare all prescription medication on the All Indonesia arrival card; to hand-carry it; and never to mail or ship medication to Indonesia, where recipients of mailed medicines may be detained or arrested.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept, read directly in Chrome: 'Always carry your prescription medication in original packaging, along with your doctor's prescription. If you enter Indonesia with prescription medication, bring a letter from your doctor with the following details: Patient name, which should match the passport; Medication name and daily dosage amount; Confirmation the medication is for personal use only. All prescription medication must be declared on the All Indonesia website.' 'You should only hand-carry prescription medications into the country. Do not mail or ship medications to Indonesia. Authorities closely monitor packages containing pharmaceuticals. They may detain or arrest recipients of any prescription or over-the-counter medications.' 'Marijuana, cannabis, hash, edibles, and products containing CBD or THC are illegal in Indonesia. A medical prescription does not make these substances legal.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
   }
  },
  "getting_around": {
@@ -835,6 +924,19 @@
    "checked_at": "2026-10-13",
    "review_after": "2027-04-13",
    "risk": "standard"
+  },
+  "galungan_meaning": {
+   "fact_key": "culture.galungan_meaning",
+   "value": "Galungan marks the victory of dharma (good) over adharma (evil) and falls every 210 days in the Balinese Pawukon calendar; Kuningan follows ten days later and closes the festival. Families pray at home and at temples, ancestral spirits are believed to visit during the period, and penjor, curved bamboo poles decorated with produce, stand as a sign of gratitude. The day before Galungan is Penampahan.",
+   "status": "verified",
+   "source_url": "https://www.djkn.kemenkeu.go.id/kanwil-balinusra/baca-artikel/18481/Hari-Raya-Galungan-Perayaan-Kemenangan-Dharma-Melawan-Adharma.html",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Article on the Finance Ministry's Bali-Nusa Tenggara regional office site, dated 18 June 2026 (via fetch, quoted): 'Galungan menjadi simbol kemenangan Dharma (kebenaran, kebajikan, dan kesucian) atas Adharma'; 'setiap 210 hari sekali berdasarkan kalender Pawukon, tepatnya pada hari Budha Kliwon Wuku Dungulan'; 'Penjor, yang terbuat dari bambu melengkung dan dihias dengan hasil bumi, melambangkan rasa syukur'; Penampahan the day before; Kuningan ten days later; family prayers at homes and temples; ancestral spirits visit.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "caveat": "A government office's explanatory article, not a religious authority. Says nothing about closures, traffic or prices; make no claims about those."
   }
  },
  "stay": {
@@ -894,6 +996,20 @@
    "risk": "standard",
    "caveat": "The circular is an appeal to operators (himbauan) and covers mobile data and broadcasts, not fixed-line internet; a news report says hotel Wi-Fi stayed on. Confirms Nyepi 2026 was 19 March and that the observance window runs 6 a.m. to 6 a.m.",
    "writing_rule": "Give 2026 as the worked example; 2027 hours are not announced."
+  },
+  "national_holidays_2027": {
+   "fact_key": "when_to_go.national_holidays_2027",
+   "value": "Indonesia's 2027 national holidays include New Year (January 1), Chinese New Year (February 6), Nyepi (March 8), Eid al-Fitr (March 10-11), Good Friday (March 26), Labor Day (May 1), Ascension Day (May 6), Eid al-Adha (May 17), Vesak (May 20), Pancasila Day (June 1), Islamic New Year (June 6), Independence Day (August 17) and Christmas (December 25), with collective leave days on February 5, March 9, 12 and 15, March 25, May 18 and 19, and December 24.",
+   "status": "verified",
+   "source_url": "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2027",
+   "source_kind": "primary",
+   "scope": "Indonesia, calendar year 2027",
+   "support": "State Secretariat page on the three-minister Joint Decree No. 1205/2026, 3/2026 and 2/2026, signed 15 September 2026 (read directly earlier for Nyepi; full list re-read via fetch): 1 Jan New Year; 5 Jan Isra Mikraj; 6 Feb Chinese New Year; 8 Mar Nyepi; 10-11 Mar Idulfitri; 26 Mar Good Friday; 28 Mar Easter; 1 May Labour Day; 6 May Ascension; 17 May Iduladha; 20 May Vesak; 1 Jun Pancasila Day; 6 Jun Islamic New Year; 15 Aug Prophet's Birthday; 17 Aug Independence Day; 25 Dec Christmas. Collective leave: 5 Feb; 9, 12, 15 Mar; 25 Mar; 18 May; 19 May; 24 Dec.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "caveat": "Islamic holiday dates are set in advance and can shift by a day. The decree fixes public holidays; it does not say what any shop, attraction or office in Bali does on them. Galungan and Kuningan are not national holidays.",
+   "writing_rule": "2027 is the worked example; tell readers the list is issued each year."
   }
  },
  "getting_there": {
