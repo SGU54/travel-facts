@@ -329,3 +329,13 @@ values ('bali', 'safety_health.methanol_poisoning', '"1 to 72 hours"'::jsonb, 'v
 on conflict (scope, key) do update set
   value = excluded.value, status = excluded.status,
   checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- Batch-08 — 2026-10-13
+
+-- when_to_go.climate_normals — best-time-to-visit-bali
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'when_to_go.climate_normals', '"about 1 inch of rain in July and about 14 inches in January"'::jsonb, 'verified', now(),
+        'https://ds.data.jma.go.jp/gmd/tcc/tcc/products/climate/normal/parts/NrmMonth_e.php?stn=97230')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;

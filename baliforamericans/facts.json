@@ -876,6 +876,20 @@
    "checked_at": "2026-10-13",
    "review_after": "2027-04-13",
    "risk": "standard"
+  },
+  "road_distances": {
+   "fact_key": "getting_around.road_distances",
+   "value": "Approximate road distances in Bali, computed on the OpenStreetMap road network: from the airport, about 6 km to Kuta, 11 km to Seminyak, 19 km to Canggu, 13 km to Nusa Dua, 17 km to Sanur, 21 km to Uluwatu, 35 km to Ubud, 56 km to Padang Bai, 82 km to Munduk, 98 km to Amed and 100 km to Lovina. From Ubud: about 10 km to Tegallalang, 22 km to Sanur, 31 km to Canggu, 35 km to Sidemen, 44 km to Kintamani, 54 km to Uluwatu, 63 km to Munduk and 79 km to Amed. Canggu to Uluwatu is about 37 km; Amed to Munduk about 150 km.",
+   "status": "verified",
+   "source_url": "https://router.project-osrm.org/",
+   "source_kind": "secondary",
+   "scope": "driving distances between named areas of Bali, measured between approximate centre points",
+   "support": "Computed 2026-10-13 with the public OSRM routing service over OpenStreetMap data (table request, 23 points). Full matrix: {\"airport\": {\"airport\": 0, \"kuta\": 6, \"seminyak\": 11, \"canggu\": 19, \"ubud\": 35, \"uluwatu\": 21, \"jimbaran\": 9, \"nusa_dua\": 13, \"sanur\": 17, \"sanur_harbour\": 17, \"padang_bai\": 56, \"sidemen\": 57, \"amed\": 98, \"munduk\": 82, \"lovina\": 100, \"bedugul\": 64, \"kintamani\": 77, \"tanah_lot\": 27, \"besakih\": 66, \"lempuyang\": 92, \"tegallalang\": 47, \"jatiluwih\": 66, \"candidasa\": 64}, \"ubud\": {\"airport\": 38, \"kuta\": 36, \"seminyak\": 36, \"canggu\": 31, \"ubud\": 0, \"uluwatu\": 54, \"jimbaran\": 42, \"nusa_dua\": 42, \"sanur\": 22, \"sanur_harbour\": 21, \"padang_bai\": 37, \"sidemen\": 35, \"amed\": 79, \"munduk\": 63, \"lovina\": 81, \"bedugul\": 44, \"kintamani\": 44, \"tanah_lot\": 35, \"besakih\": 44, \"lempuyang\": 73, \"tegallalang\": 10, \"jatiluwih\": 47, \"candidasa\": 45}, \"canggu\": {\"airport\": 20, \"kuta\": 18, \"seminyak\": 12, \"canggu\": 0, \"ubud\": 31, \"uluwatu\": 37, \"jimbaran\": 25, \"nusa_dua\": 29, \"sanur\": 21, \"sanur_harbour\": 20, \"padang_bai\": 52, \"sidemen\": 53, \"amed\": 94, \"munduk\": 71, \"lovina\": 89, \"bedugul\": 53, \"kintamani\": 73, \"tanah_lot\": 11, \"besakih\": 61, \"lempuyang\": 88, \"tegallalang\": 43, \"jatiluwih\": 55, \"candidasa\": 60}, \"seminyak\": {\"airport\": 11, \"kuta\": 7, \"seminyak\": 0, \"canggu\": 11, \"ubud\": 32, \"uluwatu\": 27, \"jimbaran\": 15, \"nusa_dua\": 19, \"sanur\": 18, \"sanur_harbour\": 19, \"padang_bai\": 52, \"sidemen\": 53, \"amed\": 94, \"munduk\": 78, \"lovina\": 97, \"bedugul\": 60, \"kintamani\": 73, \"tanah_lot\": 19, \"besakih\": 62, \"lempuyang\": 88, \"tegallalang\": 44, \"jatiluwih\": 62, \"candidasa\": 60}, \"uluwatu\": {\"airport\": 21, \"kuta\": 23, \"seminyak\": 28, \"canggu\": 36, \"ubud\": 52, \"uluwatu\": 0, \"jimbaran\": 13, \"nusa_dua\": 20, \"sanur\": 34, \"sanur_harbour\": 34, \"padang_bai\": 73, \"sidemen\": 74, \"amed\": 115, \"munduk\": 99, \"lovina\": 117, \"bedugul\": 80, \"kintamani\": 94, \"tanah_lot\": 44, \"besakih\": 83, \"lempuyang\": 109, \"tegallalang\": 64, \"jatiluwih\": 83, \"candidasa\": 81}, \"sanur\": {\"airport\": 17, \"kuta\": 16, \"seminyak\": 19, \"canggu\": 21, \"ubud\": 22, \"uluwatu\": 34, \"jimbaran\": 21, \"nusa_dua\": 21, \"sanur\": 0, \"sanur_harbour\": 2, \"padang_bai\": 41, \"sidemen\": 42, \"amed\": 83, \"munduk\": 78, \"lovina\": 96, \"bedugul\": 60, \"kintamani\": 64, \"tanah_lot\": 29, \"besakih\": 51, \"lempuyang\": 77, \"tegallalang\": 34, \"jatiluwih\": 62, \"candidasa\": 49}, \"amed\": {\"airport\": 98, \"kuta\": 97, \"seminyak\": 99, \"canggu\": 94, \"ubud\": 79, \"uluwatu\": 114, \"jimbaran\": 102, \"nusa_dua\": 102, \"sanur\": 82, \"sanur_harbour\": 81, \"padang_bai\": 46, \"sidemen\": 42, \"amed\": 0, \"munduk\": 151, \"lovina\": 87, \"bedugul\": 132, \"kintamani\": 63, \"tanah_lot\": 101, \"besakih\": 54, \"lempuyang\": 14, \"tegallalang\": 86, \"jatiluwih\": 135, \"candidasa\": 34}, \"munduk\": {\"airport\": 82, \"kuta\": 79, \"seminyak\": 72, \"canggu\": 69, \"ubud\": 62, \"uluwatu\": 98, \"jimbaran\": 86, \"nusa_dua\": 90, \"sanur\": 77, \"sanur_harbour\": 76, \"padang_bai\": 107, \"sidemen\": 96, \"amed\": 149, \"munduk\": 0, \"lovina\": 33, \"bedugul\": 19, \"kintamani\": 73, \"tanah_lot\": 70, \"besakih\": 105, \"lempuyang\": 143, \"tegallalang\": 72, \"jatiluwih\": 42, \"candidasa\": 116}}",
+   "checked_at": "2026-10-13",
+   "review_after": "2028-10-13",
+   "risk": "standard",
+   "caveat": "Distances only. The service's durations are free-flow estimates and are NOT facts about Bali traffic: never print a drive time from them. Centre points are approximate, so round and say 'about'.",
+   "writing_rule": "Give distances in miles for Americans (km x 0.62), rounded, with 'about'. Drive TIMES stay serve-live: tell readers to check a live map at the hour they will travel. The point to make is that short distances take long."
   }
  },
  "money": {
@@ -1110,6 +1124,46 @@
    "risk": "standard",
    "caveat": "Islamic holiday dates are set in advance and can shift by a day. The decree fixes public holidays; it does not say what any shop, attraction or office in Bali does on them. Galungan and Kuningan are not national holidays.",
    "writing_rule": "2027 is the worked example; tell readers the list is issued each year."
+  },
+  "climate_normals": {
+   "fact_key": "when_to_go.climate_normals",
+   "value": "Monthly climate normals for Denpasar/Ngurah Rai (south Bali): rainfall is about 351 mm in January, 290 in February, 231 in March, 107 in April, 95 in May, 68 in June, 28 in July, 36 in August, 59 in September, 64 in October, 131 in November and 327 in December. Mean temperature stays between 26.3 C (August) and 28.2 C (November) all year.",
+   "status": "verified",
+   "source_url": "https://ds.data.jma.go.jp/gmd/tcc/tcc/products/climate/normal/parts/NrmMonth_e.php?stn=97230",
+   "source_kind": "primary",
+   "scope": "south Bali (Denpasar/Ngurah Rai station, 8.75 S 115.17 E)",
+   "support": "Japan Meteorological Agency, Tokyo Climate Center, 'Normals Data: DENPASAR/NGURAH RAI - INDONESIA', table read directly in Chrome: month, temperature C, precipitation mm: 1 27.9 350.7; 2 28.0 289.8; 3 28.0 231.1; 4 28.1 107.4; 5 27.8 94.7; 6 27.2 67.9; 7 26.5 27.6; 8 26.3 36.4; 9 26.8 59.4; 10 27.6 64.4; 11 28.2 131.2; 12 28.0 327.4.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "The page does not state the averaging period. One station at sea level in the south: Ubud, the central mountains and the north differ and are NOT covered. Normals are long-run averages, not a forecast; say nothing about rain days or hours of rain per day.",
+   "writing_rule": "Convert for Americans: 25.4 mm = 1 inch; 26.3-28.2 C = about 79-83 F. Describe months as wetter/drier by these numbers; never promise weather."
+  },
+  "dry_season_bmkg": {
+   "fact_key": "when_to_go.dry_season_bmkg",
+   "value": "Indonesia's meteorological agency BMKG forecasts the dry season zone by zone each year. For 2026 it predicted an earlier-than-normal start across most of Java, Bali and Nusa Tenggara, with zones entering the dry season from April through June and the peak in August.",
+   "status": "verified",
+   "source_url": "https://www.bmkg.go.id/siaran-pers/bmkg-musim-kemarau-2026-datang-lebih-awal-puncak-terjadi-agustus-mendatang",
+   "source_kind": "primary",
+   "scope": "Indonesia, 2026 dry season",
+   "support": "BMKG press release, 4 March 2026 (via fetch, quoted): 'sebagian besar wilayah Indonesia akan memasuki musim kemarau tahun 2026 lebih awal'; early onset in 'sebagian besar Sumatra, Jawa, Bali, Nusa Tenggara, Kalimantan bagian selatan dan timur'; 114 zones from April, 184 in May, 163 in June; 'puncak musim kemarau di sebagian besar wilayah Indonesia diprediksi terjadi pada bulan Agustus 2026'; drier than normal in 64.5% of zones.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "A forecast for one year. Shows that season start dates move year to year; use it for that point only."
+  },
+  "surf_by_coast": {
+   "fact_key": "when_to_go.surf_by_coast",
+   "value": "Bali surf guides agree on a seasonal split: in the dry season, roughly April to October, southeast trade winds blow offshore on the west-facing coast (Uluwatu, Padang Padang, Kuta, Canggu) and the largest swells arrive from June to August; in the wet season, roughly November to March, winds turn northwest and the east-facing coast (Keramas, Sanur, Nusa Dua) has the cleaner conditions.",
+   "status": "verified",
+   "source_url": "https://www.rapturecamps.com/blog/bali-weather-a-month-by-month",
+   "source_kind": "secondary",
+   "scope": "Bali surf breaks",
+   "support": "Search-result summaries of several Bali surf-camp and surf-guide pages (Rapture Camps month-by-month guide, Bali Surfing Camp conditions FAQ, Indonesian Surf Guide): 'dry season (April to October) and the wet season (November to March)'; 'southeast trade winds dominate, creating ideal conditions for many of Bali's west coast breaks... Uluwatu, Padang Padang, and Impossibles'; 'June, July and August, when the most powerful swells of the year arrive'; wet season 'northwest winds... excellent opportunities at east coast locations like Keramas and Nusa Dua'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Commercial surf operators, read as search summaries, not an official body. No wave heights, no claims about a named break's difficulty or safety. Attribute to 'surf guides'."
   }
  },
  "getting_there": {
