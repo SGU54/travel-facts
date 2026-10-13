@@ -28,12 +28,7 @@
       "grok"
     ],
     "reconciled_at": "2026-06-22",
-    "notes": "4 disputes ruled by human: (1) US visa-free [verify], (2) passport 150-day [verify], (3) currency limit→null/open-q, (4) vaccines conservative [verify]. | 2026-07-26 official-verification pass: the human ruling on US visa status was CONFIRMED; the ruling on passport validity (150 days) was OVERTURNED - it was wrong and had reached two live articles; currency limit resolved; advisory level updated. Panel consensus is not a substitute for an official source on YMYL entry rules.",
-    "verified_at": "2026-07-26",
-    "verification_sources": [
-      "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-      "https://tr.usembassy.gov/obtaining-a-visa-for-turkiye/"
-    ]
+    "notes": "4 disputes ruled by human: (1) US visa-free [verify], (2) passport 150-day [verify], (3) currency limit→null/open-q, (4) vaccines conservative [verify]."
   },
   "identity": {
     "name_local": {
@@ -82,44 +77,31 @@
   },
   "country_facts": {
     "visa": {
-      "_note": "RESOLVED 2026-07-26 against travel.state.gov and the U.S. Embassy in Turkiye: US ordinary-passport tourists are visa-free, 90 days per 180. The e-visa answer in the original panel was outdated.",
+      "_note": "YMYL. RULING: US ordinary-passport tourists are visa-free (2-of-3 panel; reflects the ~2020 change). grok's e-visa answer reflects pre-2020 rules. Confirm at evisa.gov.tr before relying.",
       "by_nationality": [
         {
           "passport": "United States",
           "type": {
             "value": "visa_free",
-            "status": "verified",
-            "notes": "Confirmed 2026-07-26. State Dept Quick Facts: tourist visa not required for stays under 90 days.",
-            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-            "checked_at": "2026-07-26"
+            "status": "verify_recommended",
+            "notes": "Visa-free for tourism since ~March 2020, reversing the prior e-visa requirement. Confirm at evisa.gov.tr."
           },
           "max_stay_days": {
             "value": "90 days within any 180-day period",
-            "status": "verified",
-            "notes": "Confirmed. Ordinary US passport holders exempted up to 90 days in any 180-day period.",
-            "source_url": "https://tr.usembassy.gov/obtaining-a-visa-for-turkiye/",
-            "checked_at": "2026-07-26"
+            "status": "verify_recommended"
           },
           "fee": {
-            "value": "None for tourist stays under 90 days",
-            "status": "verified",
-            "notes": "Confirmed. The prior ~$50 e-visa no longer applies to US ordinary passports.",
-            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-            "checked_at": "2026-07-26"
+            "value": "None for visa-free tourist entry (prior e-visa cost ~$50)",
+            "status": "verify_recommended"
           },
           "processing_time": {
             "value": "N/A (visa-free)",
-            "status": "verified",
-            "notes": "Derivative of type.",
-            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-            "checked_at": "2026-07-26"
+            "status": "verify_recommended"
           },
           "online_authorization_required": {
             "value": false,
-            "status": "verified",
-            "notes": "Confirmed. No ETA-style pre-authorization for US ordinary passports.",
-            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-            "checked_at": "2026-07-26"
+            "status": "verify_recommended",
+            "notes": "No ETA-style pre-authorization for US tourists as of last knowledge; confirm."
           },
           "official_application_url": {
             "value": "https://www.evisa.gov.tr",
@@ -137,11 +119,9 @@
     },
     "documents": {
       "passport_validity_required": {
-        "value": "Passport valid at least six months beyond your date of entry, with one blank page for entry and exit stamps",
-        "status": "verified",
-        "notes": "CORRECTED 2026-07-26. The 2026-06-22 panel ruled \"150 days beyond entry\", explicitly preferring it over the \"generic six-month rule\". That ruling was WRONG. Both travel.state.gov and the U.S. Embassy in Turkiye state six months beyond date of entry. The 150-day figure appears to be derived from a different framing (60 days beyond a 90-day intended stay) used by some visa-service sites; it is not the official US-facing requirement. Do not reinstate it.",
-        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-        "checked_at": "2026-07-26"
+        "value": "Passport valid at least 150 days beyond date of entry, with a blank page",
+        "status": "verify_recommended",
+        "notes": "RULING: state Turkey's specific 150-day rule (stricter/more precise than the generic 6-month default two models gave). Following 150 days also satisfies 6 months."
       },
       "onward_ticket_required": {
         "value": "Onward/return ticket may be requested at check-in or entry; not always enforced",
@@ -173,11 +153,9 @@
         "_from": "claude"
       },
       "currency_import_export_limit": {
-        "value": "No limit on entry. Exit maximum 25,000 Turkish lira or 10,000 euros (or equivalent).",
-        "status": "verified",
-        "notes": "RESOLVED 2026-07-26. The panel split three ways ($5,000 / $10,000 / 25,000 TRY) and the ruling left this null. State Dept Quick Facts give entry: none, exit: 25,000 TRY or 10,000 EUR.",
-        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-        "checked_at": "2026-07-26"
+        "value": null,
+        "status": "verify_recommended",
+        "notes": "RULING: sources disagreed ($5k vs $10k vs 25,000 TRY export) — left null pending official confirmation. See _open_questions."
       },
       "tipping_norm": {
         "value": "Tipping (bahşiş) is customary but modest: ~5-10% in restaurants if service not included, round up taxis, small tips for hotel staff and hammam attendants. Less aggressive than US tipping culture.",
@@ -236,11 +214,9 @@
         "_from": "claude"
       },
       "car_rental_and_driving": {
-        "value": "Drive on the right. For stays up to 180 days a valid U.S. driver's license is accepted (an International Driving Permit alongside a U.S. license is also accepted). Drink-driving limit is 0.05% BAC. Driving is aggressive in cities.",
-        "status": "verified",
-        "notes": "Licence rule and BAC limit confirmed 2026-07-26 against travel.state.gov.",
-        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-        "checked_at": "2026-07-26"
+        "value": "Drive on the RIGHT (same as US). US license accepted for short visits but an International Driving Permit (IDP) is recommended/sometimes required. Driving is aggressive in cities; renting makes sense for the coast/Cappadocia, not Istanbul. BAC limit 0.05% (0.00% if towing).",
+        "status": "verify_recommended",
+        "_from": "claude"
       }
     },
     "when_to_go": {
@@ -272,11 +248,9 @@
     "safety_health": {
       "_note": "YMYL. Advisory change-prone + partly regional (SE Syria border). Confirm at travel.state.gov before relying.",
       "advisory_level": {
-        "value": "Level 2: Exercise Increased Caution (terrorism, armed conflict, arbitrary detentions). Level 4 Do Not Travel within 10 km (6 miles) of the Syria and Iraq borders.",
-        "status": "verified",
-        "notes": "UPDATED 2026-07-26 (advisory dated 2026-06-09). The previous value named Sirnak/Hakkari provinces; the current advisory scopes Level 4 to the 10 km border strip and notes an area of increased risk was removed.",
-        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-        "checked_at": "2026-07-26"
+        "value": "US State Dept ~Level 2 ('Exercise Increased Caution') in most areas, with higher do-not-travel warnings near the Syria border and Şırnak/Hakkari provinces",
+        "status": "verify_recommended",
+        "notes": "Tourist regions (Istanbul, Cappadocia, coast) are not the high-warning zones. Confirm current level + date."
       },
       "main_risk": {
         "value": "Petty theft/pickpocketing in crowded tourist areas (Istanbul transit, bazaars), tourist-targeted scams, occasional anti-government demonstrations (avoid protests), and earthquake risk (Turkey is seismically active; major Feb 2023 quake affected the southeast, NOT the western tourist regions)",
@@ -284,11 +258,9 @@
         "_from": "claude"
       },
       "vaccines": {
-        "value": "No vaccinations required for entry. Proof of yellow fever vaccination only if arriving from a yellow-fever endemic country. Keep CDC-recommended routine vaccines current.",
-        "status": "verified",
-        "notes": "Confirmed 2026-07-26. State Dept Quick Facts: VACCINATIONS: None.",
-        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Turkey.html",
-        "checked_at": "2026-07-26"
+        "value": "No vaccines required for entry from the US. Keep routine vaccines current; CDC sometimes recommends Hepatitis A and typhoid for some travelers — check cdc.gov.",
+        "status": "verify_recommended",
+        "notes": "RULING: conservative 'none required, check CDC' framing."
       },
       "tap_water_safe": {
         "value": "Tap water is chlorinated and generally considered safe in major cities but is heavily mineralized and not pleasant-tasting; nearly everyone (locals included) drinks cheap bottled water. Stick to bottled to avoid stomach upset.",
@@ -1671,13 +1643,13 @@
     }
   },
   "_open_questions": {
-    "_note": "Updated 2026-07-26 after an official-verification pass against travel.state.gov and the U.S. Embassy in Turkiye. Four of the five original flags are resolved; the advisory level is inherently time-varying.",
+    "_note": "Honest flags, ranked by load-bearing risk. Confirm against official sources before relying (deferred official-verification phase).",
     "value": [
-      "RESOLVED 2026-07-26: US visa-free status confirmed (travel.state.gov + U.S. Embassy Turkiye).",
-      "RESOLVED 2026-07-26: passport validity is SIX MONTHS beyond entry, not 150 days. The panel ruling was overturned.",
-      "RESOLVED 2026-07-26: currency limits - no entry limit; exit max 25,000 TRY or 10,000 EUR.",
-      "RESOLVED 2026-07-26: vaccines - none required for entry; yellow fever certificate only from endemic countries.",
-      "OPEN: US State Dept advisory level and its wording change over time. Level 2 as of the 2026-06-09 advisory; re-check periodically."
+      "US VISA (highest): confirm US ordinary-passport tourists are visa-free for ≤90 days at evisa.gov.tr. Panel split (2 visa-free vs 1 e-visa); ruled visa-free as current state but kept verify_recommended.",
+      "Passport validity: confirm Turkey's 150-days-beyond-entry rule officially (panel gave 150 days vs generic 6 months).",
+      "Currency declaration limit: UNRESOLVED — sources gave $5,000 / $10,000 / 25,000 TRY export. Left null; verify before printing any number.",
+      "US State Dept advisory LEVEL + date and exact do-not-travel zones (Syria border / Şırnak / Hakkari).",
+      "Phone IMEI 120-day registration threshold for foreign devices — confirm exact day count and tourist impact."
     ]
   }
 }

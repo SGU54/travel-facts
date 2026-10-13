@@ -1,0 +1,118 @@
+{
+  "schema_version": 4,
+  "project": "turkeyforamericans",
+  "batch": 17,
+  "swamp": "S-calendar",
+  "_NUMBERING": "Turkey's corpus build ended at batch 15. This work runs 16-25. Batch 16 (S-insure) is written and gated.",
+  "_DOCTRINE": "Report mechanics, never make the call. check-noconnect.py exit 0 before import. A null fact DELETES its sentence. Dates are drift-prone: every one goes in a fact-span, and NONE goes in a title, heading or excerpt — those cannot carry a span.",
+  "_THE_BET": "S-calendar is the speculative swamp: 0 dedicated words and only 6 passing mentions in 72 articles. One of those mentions — getting-around-turkey's 'allow buffer time around the two major Bayram holidays' — is a WARNING with a single right answer, not a decision. Gate A after this batch decides whether a real decision sits underneath the warning, or whether the book runs on six swamps instead of seven.",
+  "_WHAT_WOULD_MAKE_IT_A_DECISION": "A warning becomes a decision when the reader faces a genuine trade-off with more than one defensible answer. The candidate here: the observance itself barely affects a visitor, while the two Bayram travel surges affect them enormously — and the surges move about 11 days earlier each year, so which season they collide with changes annually. That is a collision with S-regional-season, and the articles must report both halves WITHOUT joining them.",
+  "articles": [
+    {
+      "title": "Ramadan in Turkey: What Actually Changes for Visitors",
+      "slug": "ramadan-in-turkey-what-changes",
+      "category": "culture-etiquette",
+      "swamp": "S-calendar",
+      "handoff": "turn",
+      "reports": [
+        "when Ramadan falls and that it moves earlier each year against the solar calendar",
+        "what stays open: sites, museums, transport, tourist-area restaurants",
+        "what changes: some daytime dining, alcohol service in some venues, working hours",
+        "how observance differs between Istanbul, the coastal resorts and the conservative interior",
+        "the etiquette a visitor is actually expected to observe, and where"
+      ],
+      "must_not_say": "whether to avoid travelling during Ramadan — that is the reader's call and, if it connects to season, the book's",
+      "images": 2
+    },
+    {
+      "title": "The Two Bayram Holidays and How Turkey Travels",
+      "slug": "bayram-holidays-turkey-explained",
+      "category": "plan-your-trip",
+      "swamp": "S-calendar",
+      "handoff": "turn",
+      "reports": [
+        "the two Bayrams, what each marks, official duration in days, and how the gap between them works",
+        "that both move earlier each year against the solar calendar",
+        "the domestic travel surge: who travels, in which direction, and what fills",
+        "which parts of the country empty and which fill",
+        "government and bank closure versus what stays commercially open"
+      ],
+      "must_not_say": "any margin or buffer rule, any 'avoid these dates', any sequencing advice",
+      "images": 2
+    },
+    {
+      "title": "What Closes on a Turkish Public Holiday",
+      "slug": "turkish-public-holidays-what-closes",
+      "category": "plan-your-trip",
+      "swamp": "S-calendar",
+      "handoff": "turn",
+      "reports": [
+        "the full national public-holiday calendar with fixed dates",
+        "the legal closures: banks, government offices, post",
+        "museums and archaeological sites — which close, which run holiday hours",
+        "the Grand Bazaar and covered bazaars, which follow their own rule",
+        "transport on a public holiday versus a Bayram"
+      ],
+      "must_not_say": "which days are 'worth avoiding'",
+      "images": 1
+    },
+    {
+      "title": "How Turkey's Holiday Calendar Is Actually Set",
+      "slug": "how-turkeys-holiday-calendar-is-set",
+      "category": "plan-your-trip",
+      "swamp": "S-calendar",
+      "handoff": "turn",
+      "reports": [
+        "the three separate authorities: Diyanet declares the religious dates, Law 2429 fixes the public-holiday duration, and a presidential decree adds anything extra that year",
+        "why religious dates stay provisional until close to the time, and what moon sighting has to do with it",
+        "the arife half-day rule and the 3-full-days / 4-full-days structure written into law",
+        "that extra administrative leave and toll-free periods are decided year by year, not by standing rule",
+        "the toll-free mechanism when it is granted: KGM-operated bridges and motorways, free municipal transport, and BOT crossings excluded"
+      ],
+      "must_not_say": "how far ahead to book, how much slack to leave, or that a given year will have toll-free days",
+      "note": "This is the article most likely to drift into the call. The existing corpus already says 'allow buffer time'; this article must report the SELL-OUT MECHANICS and stop there.",
+      "images": 1,
+      "_REPLACED": "Was 'Booking Domestic Travel Around the Bayram Surge'. ALL SIX transport facts came back null from both panels — demand surge, booking lead time, bus/rail behaviour, ferry behaviour and fare behaviour are simply not published. The article could not be written without inventing them. This replacement is built only on what is sourceable: the legal and procedural machinery behind the calendar."
+    },
+    {
+      "title": "Iftar and Ramadan Dining in Turkey",
+      "slug": "iftar-and-ramadan-dining-turkey",
+      "category": "food-drink",
+      "swamp": "S-calendar",
+      "handoff": "seed",
+      "reports": [
+        "what iftar is, when it happens, and how restaurants handle it",
+        "the pide bread queues and the seasonal dishes that appear only then",
+        "sahur and what is open before dawn",
+        "booking behaviour at iftar time in restaurants that serve it",
+        "how tourist-area dining differs from neighbourhood dining during the month"
+      ],
+      "must_not_say": "that Ramadan is a good or bad time to eat in Turkey",
+      "images": 2
+    }
+  ],
+  "gate_A": {
+    "run_after": "this batch",
+    "pass_conditions": [
+      "check-noconnect.py exit 0 on all five",
+      "S-calendar dedicated words > 3,000 (from 0)",
+      "at least 3 articles carry a genuine option structure rather than a single-right-answer warning",
+      "cross-swamp joins (excluding S-calendar itself) between 1 and 4"
+    ],
+    "on_failure": "Drop S-calendar. Redistribute batches 18-25 across the six known-open swamps and accept ~34-36 pages rather than pad. This is a planned outcome, not a setback.",
+    "verdict_pending": "Run after the five are written. The transport half of the S-calendar thesis is unevidenced and has been dropped from the corpus; what remains is the calendar-collision half."
+  },
+  "_PANEL": {
+    "run": "2026-07-27",
+    "models": [
+      "deepseek",
+      "grok"
+    ],
+    "verified_official": "3/3 each, all on mevzuat.gov.tr or tbmm.gov.tr (Law 2429)",
+    "both_null": 8,
+    "recovered_by_search": [
+      "transport.toll_roads_bayram (mechanism only)"
+    ],
+    "see": "disputes-batch17.md"
+  }
+}

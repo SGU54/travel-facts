@@ -1,0 +1,747 @@
+[
+  {
+    "path": "identity.name_local",
+    "values": {
+      "claude": "Al-Maghrib (المغرب)",
+      "deepseek": "المملكة المغربية (al-Mamlaka al-Maghribiya)",
+      "gemini": "Al-Mamlakah al-Maghribiyyah",
+      "grok": "المغرب (Al-Maghrib)"
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "identity.official_languages",
+    "values": {
+      "claude": [
+        "Arabic",
+        "Amazigh (Berber/Tamazight)"
+      ],
+      "deepseek": [
+        "Arabic",
+        "Berber (Amazigh)"
+      ],
+      "gemini": [
+        "Arabic",
+        "Tamazight"
+      ],
+      "grok": [
+        "Arabic",
+        "Tamazight (Berber)"
+      ]
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "identity.timezones",
+    "values": {
+      "claude": [
+        "WET (UTC+0), observes DST as UTC+1 most of year; clocks fall back for Ramadan"
+      ],
+      "deepseek": [
+        "UTC+1 (WEST)"
+      ],
+      "gemini": [
+        "UTC+1"
+      ],
+      "grok": [
+        "UTC+1"
+      ]
+    },
+    "statuses": {
+      "claude": "verify_recommended",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "identity.power_plug_voltage",
+    "values": {
+      "claude": "220V, 50Hz, plug types C and E (European two-round-pin)",
+      "deepseek": "220V, 50Hz, Type C / E",
+      "gemini": "220V, Type C and E",
+      "grok": "220V / 50Hz, plugs Type C and E"
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.visa.by_nationality",
+    "values": {
+      "claude": [
+        {
+          "passport": "United States",
+          "type": {
+            "value": "visa_free",
+            "source_url": null,
+            "status": "verify_recommended",
+            "notes": "US citizens visa-free for tourism."
+          },
+          "max_stay_days": {
+            "value": 90,
+            "source_url": null,
+            "status": "verify_recommended",
+            "notes": "90 days within any period; overstay incurs fines/exit delays."
+          },
+          "fee": {
+            "value": "None for visa-free entry",
+            "source_url": null,
+            "status": "verify_recommended"
+          },
+          "processing_time": {
+            "value": "N/A (visa-free)",
+            "source_url": null,
+            "status": "agreed_stable"
+          },
+          "online_authorization_required": {
+            "value": false,
+            "source_url": null,
+            "status": "verify_recommended",
+            "notes": "No ETA/eVisa required for US tourists as of knowledge cutoff — Morocco has discussed an electronic travel authorization; VERIFY before travel."
+          },
+          "official_application_url": {
+            "value": null,
+            "source_url": null
+          }
+        }
+      ],
+      "deepseek": [
+        {
+          "passport": "American",
+          "type": {
+            "value": "visa_free",
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+            "status": "verified",
+            "notes": "No visa required for stays under 90 days."
+          },
+          "max_stay_days": {
+            "value": 90,
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+            "status": "verified"
+          },
+          "fee": {
+            "value": 0,
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+            "status": "verified"
+          },
+          "processing_time": {
+            "value": null,
+            "source_url": null,
+            "status": "verify_recommended"
+          },
+          "online_authorization_required": {
+            "value": false,
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+            "status": "verified",
+            "notes": "No eVisa or online authorization required for US citizens."
+          },
+          "official_application_url": {
+            "value": null,
+            "source_url": null
+          }
+        }
+      ],
+      "gemini": [
+        {
+          "passport": "American",
+          "type": {
+            "value": "visa_free",
+            "source_url": "[https://www.consulat.ma/en/ordinary-passports](https://www.google.com/search?q=https://www.consulat.ma/en/ordinary-passports)",
+            "status": "verified",
+            "notes": "Visa-free for tourism up to 90 days."
+          },
+          "max_stay_days": {
+            "value": 90,
+            "source_url": "[https://www.consulat.ma/en/ordinary-passports](https://www.google.com/search?q=https://www.consulat.ma/en/ordinary-passports)",
+            "status": "verified"
+          },
+          "fee": {
+            "value": 0,
+            "source_url": null,
+            "status": "verify_recommended"
+          },
+          "processing_time": {
+            "value": "N/A",
+            "source_url": null,
+            "status": "verify_recommended"
+          },
+          "online_authorization_required": {
+            "value": "None",
+            "source_url": null,
+            "status": "verify_recommended",
+            "notes": "No ETA required for Americans."
+          },
+          "official_application_url": {
+            "value": "[https://www.consulat.ma/](https://www.consulat.ma/)",
+            "source_url": null
+          }
+        }
+      ],
+      "grok": [
+        {
+          "passport": "US",
+          "type": {
+            "value": "visa_free",
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+            "status": "verified",
+            "notes": "visa_free for tourism"
+          },
+          "max_stay_days": {
+            "value": 90,
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+            "status": "verified"
+          },
+          "fee": {
+            "value": "None for stays under 90 days",
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+            "status": "verified"
+          },
+          "processing_time": {
+            "value": "N/A",
+            "source_url": null,
+            "status": "agreed_stable"
+          },
+          "online_authorization_required": {
+            "value": false,
+            "source_url": null,
+            "status": "agreed_stable",
+            "notes": "No ETA required"
+          },
+          "official_application_url": {
+            "value": null,
+            "source_url": null
+          }
+        }
+      ]
+    },
+    "statuses": {},
+    "reason": "array-structure (manual)"
+  },
+  {
+    "path": "country_facts.visa.scam_sites_to_avoid",
+    "values": {
+      "claude": [
+        "Third-party 'Morocco visa' sites charging fees for a visa-free entry"
+      ],
+      "deepseek": [
+        "Any site charging a fee for a 'Morocco visa' for US citizens",
+        "Non-official sites mimicking the 'Acces Maroc' portal"
+      ],
+      "gemini": [
+        "Any site asking for payment for a 'Morocco Visa' for US citizens"
+      ],
+      "grok": [
+        "Unofficial visa websites charging fees"
+      ]
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.documents.passport_validity_required",
+    "values": {
+      "claude": "Passport valid for at least 6 months beyond entry recommended",
+      "deepseek": "Valid for at least 6 months beyond entry date",
+      "gemini": "6 months beyond date of entry",
+      "grok": "At least 6 months beyond your planned stay in Morocco"
+    },
+    "statuses": {
+      "claude": "verify_recommended",
+      "deepseek": "verified",
+      "gemini": "verify_recommended",
+      "grok": "verified"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.documents.onward_ticket_required",
+    "values": {
+      "claude": "Return/onward ticket may be requested at check-in or entry",
+      "deepseek": true,
+      "gemini": "Yes",
+      "grok": "Proof of onward or return travel is often requested"
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.documents.notes",
+    "values": {
+      "claude": "Keep a copy of your passport; carry ID as police checkpoints exist, especially near the Sahara.",
+      "deepseek": "Blank page required for entry stamp.",
+      "gemini": "Ensure passport has at least one blank page for entry stamp.",
+      "grok": "One blank passport page required for entry stamp. Proof of sufficient funds may be requested."
+    },
+    "statuses": {
+      "claude": null,
+      "deepseek": null,
+      "gemini": null,
+      "grok": null
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.money.cash_vs_card",
+    "values": {
+      "claude": "Cash-heavy economy. Cards accepted at hotels, larger restaurants, and modern shops in cities; souks, taxis, small cafes, and rural areas are cash-only.",
+      "deepseek": "Cash is king, especially in medinas, souks, small restaurants, and for taxis. Cards accepted at hotels, upscale restaurants, and large supermarkets.",
+      "gemini": "Cash is king; cards accepted in large hotels/high-end riads/modern shops.",
+      "grok": "Cash (MAD) is king in souks and smaller places; cards accepted in tourist areas, hotels, and larger restaurants. ATMs widely available at airports and cities."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.money.atm_availability",
+    "values": {
+      "claude": "ATMs widespread in cities and towns; withdraw dirham on arrival (airport ATMs work). Sparse in the deep Sahara — carry cash for desert legs.",
+      "deepseek": "Widely available in cities and at airports. Use major banks (BMCE, Banque Populaire, Crédit Agricole). Withdrawal limits vary.",
+      "gemini": "Widespread in cities, rare in remote areas/desert.",
+      "grok": "Good in cities and tourist areas; withdraw MAD on arrival at CMN or RAK airports."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.money.currency_import_export_limit",
+    "values": {
+      "claude": "Dirham is a closed/non-convertible currency: importing or exporting it is restricted/prohibited. Convert leftover dirham back to USD/EUR before departing (keep ATM/exchange receipts).",
+      "deepseek": "No limit on foreign currency import, but amounts over MAD 100,000 must be declared. Export of MAD is restricted.",
+      "gemini": "1000 MAD limit on export; declare large amounts of foreign currency upon entry.",
+      "grok": "Declare amounts over 100,000 MAD or equivalent $10,000 USD"
+    },
+    "statuses": {
+      "claude": "verify_recommended",
+      "deepseek": "verify_recommended",
+      "gemini": "verify_recommended",
+      "grok": "verified"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.money.tipping_norm",
+    "values": {
+      "claude": "Tipping expected but modest: round up taxis, ~10% in restaurants if no service charge, small tips (a few dirham) for porters, guides, gas attendants, and hammam staff.",
+      "deepseek": "5-10% at restaurants if service not included; 20-50 MAD for guides; 10-20 MAD for porters.",
+      "gemini": "10% in restaurants, small change for service/bags, round up for taxis.",
+      "grok": "10-15% in restaurants for good service; small tips (5-10 MAD) for guides, porters, and taxi drivers common."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.getting_there.main_international_airports",
+    "values": {
+      "claude": [
+        "Casablanca Mohammed V (CMN)",
+        "Marrakech Menara (RAK)",
+        "Fez–Saïss (FEZ)",
+        "Rabat–Salé (RBA)",
+        "Tangier Ibn Battouta (TNG)"
+      ],
+      "deepseek": [
+        "Casablanca Mohammed V (CMN)",
+        "Marrakech Menara (RAK)",
+        "Agadir Al Massira (AGA)",
+        "Tangier Ibn Battouta (TNG)",
+        "Fes Saïss (FEZ)"
+      ],
+      "gemini": [
+        "Casablanca (CMN)",
+        "Marrakech (RAK)",
+        "Fez (FEZ)"
+      ],
+      "grok": [
+        "Casablanca Mohammed V (CMN) - main hub",
+        "Marrakech Menara (RAK) - popular for tourists",
+        "Fes-Saiss (FEZ)"
+      ]
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.getting_there.national_carrier",
+    "values": {
+      "claude": "Royal Air Maroc (RAM)",
+      "deepseek": "Royal Air Maroc",
+      "gemini": "Royal Air Maroc",
+      "grok": "Royal Air Maroc (RAM)"
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.getting_around.intercity_rail",
+    "values": {
+      "claude": "ONCF trains connect Casablanca, Rabat, Fez, Marrakech, Tangier; comfortable and punctual. Al Boraq high-speed line runs Tangier–Casablanca. Book first class for reserved seats. Note: NO train to Chefchaouen, Essaouira, or the Sahara.",
+      "deepseek": "ONCF operates trains including the high-speed Al Boraq (Tangier-Casablanca) and conventional lines connecting major cities.",
+      "gemini": "ONCF network is efficient, safe, and cost-effective (Casa, Rabat, Fez, Marrakech).",
+      "grok": "ONCF trains are reliable, comfortable, and affordable between major cities like Casablanca, Marrakech, Fez."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.getting_around.buses",
+    "values": {
+      "claude": "CTM and Supratours are the reliable intercity coach companies — used to reach Chefchaouen, Essaouira, and Sahara gateways not on the rail network. Book ahead in high season.",
+      "deepseek": "CTM and Supratours are the main intercity bus companies, offering comfortable and reliable service.",
+      "gemini": "Supratours and CTM are the most reliable and comfortable for Americans.",
+      "grok": "CTM and Supratours buses are good options for smaller towns and budget travel."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.getting_around.domestic_flights",
+    "values": {
+      "claude": "Royal Air Maroc and low-cost carriers link major cities; usually unnecessary for the compact first-timer loop.",
+      "deepseek": "Royal Air Maroc operates domestic routes, including Casablanca to major cities.",
+      "gemini": "Available, usually through Royal Air Maroc.",
+      "grok": "RAM and others connect major cities affordably."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.getting_around.ride_sharing",
+    "values": {
+      "claude": "Petit taxis (metered, in-city) and grand taxis (shared, intercity) are standard. Careem operates in some cities; insist on the meter or agree fare first in petit taxis.",
+      "deepseek": "Apps like Careem, Heetch, and InDrive operate in some cities. BlaBlaCar for intercity ridesharing.",
+      "gemini": "Limited to specific apps in large cities (e.g., inDrive, Roby).",
+      "grok": "Careem (Uber-like) available in major cities; grand taxis and petit taxis common."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.getting_around.car_rental_and_driving",
+    "values": {
+      "claude": "Drive on the RIGHT. US license accepted for short stays (IDP recommended). Cities are chaotic and parking is hard; many first-timers hire a driver instead. Toll motorways connect major cities. Police checkpoints common; keep documents handy.",
+      "deepseek": "Valid US driver's license accepted; IDP recommended. Drive on the right. Rental companies require credit card and passport.",
+      "gemini": "Driving is intense in cities; recommended only for experienced drivers on motorways or rural roads. International Driving Permit recommended.",
+      "grok": "Drive on the right; International Driving Permit recommended with US license. Roads vary; cautious driving advised due to local habits."
+    },
+    "statuses": {
+      "claude": "verify_recommended",
+      "deepseek": "verify_recommended",
+      "gemini": "verify_recommended",
+      "grok": "verify_recommended"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.when_to_go.climate_by_season",
+    "values": {
+      "claude": "Spring (Mar–May) and fall (Sep–Nov) are ideal: warm days, cool nights. Summer (Jun–Aug) is very hot inland (Marrakech, Fez, Sahara can exceed 100°F/38°C); coast (Essaouira) stays mild. Winter (Dec–Feb) is cool, Atlas gets snow, desert nights are cold.",
+      "deepseek": "Mediterranean along coast, continental inland, desert in south. Spring (Mar-May) and Fall (Sep-Nov) are mild. Summer (Jun-Aug) is hot inland. Winter (Dec-Feb) is cool with snow in Atlas.",
+      "gemini": "Spring (Mar-May) and Autumn (Sep-Nov) are mild. Summer is very hot, especially inland/desert. Winter is mild but nights are cold.",
+      "grok": "Spring (Mar-May) and Fall (Sep-Nov): mild 60-80°F (15-27°C). Summer hot (esp. inland >100°F/38°C). Winter mild coast, cold mountains/desert nights."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.safety_health.advisory_level",
+    "values": {
+      "claude": "US State Dept typically 'Level 2: Exercise Increased Caution' (terrorism) — VERIFY current level and date before travel.",
+      "deepseek": "Level 2: Exercise Increased Caution",
+      "gemini": "Level 2 (Exercise Increased Caution) - US Department of State (check current status)",
+      "grok": "Level 2: Exercise Increased Caution (due to terrorism) as of April 2025"
+    },
+    "statuses": {
+      "claude": "verify_recommended",
+      "deepseek": "verify_recommended",
+      "gemini": "verify_recommended",
+      "grok": "verify_recommended"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.safety_health.main_risk",
+    "values": {
+      "claude": "Petty crime (pickpocketing, aggressive touts/faux guides, medina scams) far more likely than violent crime. Morocco is generally considered safe for tourists including solo travelers with normal precautions.",
+      "deepseek": "Petty crime, scams, and overzealous attention in tourist areas.",
+      "gemini": "Petty theft, street harassment (touts), traffic accidents.",
+      "grok": "Petty crime, scams in tourist areas, road safety, terrorism in some areas"
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.safety_health.vaccines",
+    "values": {
+      "claude": "No mandatory vaccines for US travelers from the US; routine vaccinations up to date; Hep A and typhoid commonly recommended for food/water exposure — consult a travel clinic.",
+      "deepseek": "Routine vaccines (MMR, DTP, varicella, flu) recommended. Hepatitis A and Typhoid recommended for most travelers.",
+      "gemini": "Routine vaccines, Hepatitis A/B recommended. Consult CDC.",
+      "grok": "Routine vaccines recommended; hepatitis A, typhoid advised for most travelers. No mandatory."
+    },
+    "statuses": {
+      "claude": "verify_recommended",
+      "deepseek": "verify_recommended",
+      "gemini": "verify_recommended",
+      "grok": "verify_recommended"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.safety_health.tap_water_safe",
+    "values": {
+      "claude": "Stick to bottled or filtered water; tap water is chlorinated in cities but often causes stomach upset for visitors. Avoid ice from unknown sources.",
+      "deepseek": "Officially safe in major cities, but not recommended for tourists due to potential stomach upset. Stick to bottled water.",
+      "gemini": "Bottled water recommended for drinking.",
+      "grok": "Not recommended; stick to bottled water."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.safety_health.emergency_numbers",
+    "values": {
+      "claude": {
+        "police": "19 (urban) / 177 (Gendarmerie, rural)",
+        "ambulance": "15",
+        "fire": "15"
+      },
+      "deepseek": {
+        "police": "190 (or 112 from mobile)",
+        "ambulance": "150",
+        "fire": "150"
+      },
+      "gemini": {
+        "police": "190",
+        "ambulance": "150",
+        "fire": "150"
+      },
+      "grok": {
+        "police": "190 (cities) / 177 (rural gendarmerie)",
+        "ambulance": "150 / 15",
+        "fire": "15"
+      }
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.safety_health.common_scams",
+    "values": {
+      "claude": [
+        "Faux guides insisting you're going the wrong way / offering to lead you",
+        "'This street/tannery is closed, follow me'",
+        "Inflated 'friendship' prices in souks",
+        "Henna women grabbing hands then demanding payment",
+        "Taxi meter 'broken' — agree fare first",
+        "Overpriced camel/desert add-ons booked on the street"
+      ],
+      "deepseek": [
+        "Fake tour guides",
+        "Henna scams",
+        "Overcharging",
+        "Direction givers demanding money",
+        "Fake goods"
+      ],
+      "gemini": [
+        "Fake guides",
+        "Overpriced souk goods",
+        "Taxi meter 'broken'"
+      ],
+      "grok": [
+        "Fake guides in medinas",
+        "Overcharging taxis",
+        "Distraction scams in Jemaa el-Fnaa",
+        "Hotel scams"
+      ]
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.connectivity.sim_esim",
+    "values": {
+      "claude": "Local SIMs (Maroc Telecom, Orange, Inwi) cheap with data-heavy tourist packages, sold at airports/shops (passport needed). eSIMs (Airalo etc.) let you land connected — good since the dirham is closed and you may want maps/rideshare immediately on arrival.",
+      "deepseek": "Local SIMs available at airports (Orange, Maroc Telecom, Inwi). eSIMs (Airalo, Ubigi) can be activated before arrival.",
+      "gemini": "Maroc Telecom, Orange, Inwi. eSIMs (Airalo, etc.) are easy for US travelers.",
+      "grok": "eSIMs and local SIMs (Maroc Telecom, Orange, Inwi) easy at airports. Good for Americans with unlocked phones."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.connectivity.coverage",
+    "values": {
+      "claude": "Strong 4G/5G in cities and along main routes; patchy to none in the deep Sahara and remote Atlas — download offline maps before desert legs.",
+      "deepseek": "Good 4G/5G coverage in cities and major towns; spotty in rural/desert areas.",
+      "gemini": "Excellent in cities/towns; spotty in deep Sahara/Atlas Mountains.",
+      "grok": "Strong in cities and tourist routes; spotty in remote desert/mountains."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.culture_etiquette.dress_norms",
+    "values": {
+      "claude": "Morocco is a Muslim country; dress modestly especially outside tourist zones — shoulders and knees covered is respectful. Women aren't required to cover hair (except inside some religious sites, most of which are closed to non-Muslims). Cities like Marrakech are used to tourists; rural areas are more conservative. Lightweight, covering clothing also helps with sun and heat.",
+      "deepseek": "Modest dress appreciated. Cover shoulders and knees, especially in medinas and rural areas.",
+      "gemini": "Modest clothing recommended; shoulders and knees covered, especially in rural areas or religious sites.",
+      "grok": "Modest clothing recommended, especially for women in medinas and rural areas. Cover shoulders and knees at religious sites. Lightweight, breathable fabrics for heat."
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  },
+  {
+    "path": "country_facts.culture_etiquette.dos_and_donts",
+    "values": {
+      "claude": [
+        "Do use your right hand for eating and greeting",
+        "Do ask before photographing people (especially women and vendors)",
+        "Don't enter mosques unless signed open to non-Muslims (most aren't)",
+        "Do remove shoes when entering homes/riads where indicated",
+        "Don't show public displays of affection",
+        "Do accept mint tea when offered — it's hospitality",
+        "Be discreet with alcohol — legal for tourists but not consumed publicly"
+      ],
+      "deepseek": [
+        "Do greet with 'Salam Alaikum'",
+        "Do accept tea when offered",
+        "Do haggle in souks",
+        "Don't eat with your left hand",
+        "Don't point with your finger",
+        "Don't take photos of people without permission"
+      ],
+      "gemini": [
+        "Do accept mint tea",
+        "Do not photograph people without permission",
+        "Do learn basic 'Salam'"
+      ],
+      "grok": [
+        "Use right hand for eating/greeting",
+        "Remove shoes before entering homes/mosques",
+        "Haggle politely in souks",
+        "Avoid public displays of affection",
+        "Respect Ramadan observances",
+        "Tip appropriately"
+      ]
+    },
+    "statuses": {
+      "claude": "agreed_stable",
+      "deepseek": "agreed_stable",
+      "gemini": "agreed_stable",
+      "grok": "agreed_stable"
+    },
+    "reason": "differ"
+  }
+]

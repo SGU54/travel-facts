@@ -1,0 +1,114 @@
+[
+  {
+    "path": "identity.capital",
+    "value": "Rabat",
+    "status": "agreed_stable",
+    "coverage": "4/4 sources, identical"
+  },
+  {
+    "path": "identity.currency_code",
+    "value": "MAD",
+    "status": "agreed_stable",
+    "coverage": "4/4 sources, identical"
+  },
+  {
+    "path": "identity.currency_name",
+    "value": "Moroccan dirham",
+    "status": "agreed_stable",
+    "coverage": "4/4 sources, identical"
+  },
+  {
+    "path": "identity.calling_code",
+    "value": "+212",
+    "status": "agreed_stable",
+    "coverage": "4/4 sources, identical"
+  },
+  {
+    "path": "country_facts.money.currency_code",
+    "value": "MAD",
+    "status": "agreed_stable",
+    "coverage": "4/4 sources, identical"
+  },
+  {
+    "path": "country_facts.money.approx_rate_note",
+    "value": null,
+    "status": "serve_live",
+    "coverage": "volatile — value never frozen",
+    "note_values": {
+      "claude": null,
+      "deepseek": "Approximately 1 USD = 9.3–10.0 MAD (July 2026)",
+      "gemini": "1 USD ≈ 9-10 MAD",
+      "grok": "1 USD ≈ 9.3-9.4 MAD (as of July 2026; check live rate)"
+    }
+  },
+  {
+    "path": "country_facts.getting_there.flight_from_audience_origins",
+    "value": null,
+    "status": "serve_live",
+    "coverage": "volatile — value never frozen",
+    "note_values": {
+      "claude": [
+        {
+          "from": "JFK",
+          "nonstop": "Royal Air Maroc to CMN, ~7h",
+          "note": "prices serve_live"
+        },
+        {
+          "from": "IAD",
+          "nonstop": "Royal Air Maroc to CMN, ~7.5h",
+          "note": "prices serve_live"
+        },
+        {
+          "from": "Most US cities",
+          "nonstop": "1-stop via Europe (Paris, Madrid, Lisbon) or via CMN",
+          "note": "prices serve_live"
+        }
+      ],
+      "deepseek": [
+        "Direct flights from JFK, EWR, IAD, MIA to CMN on Royal Air Maroc. Connecting flights through European hubs from other cities."
+      ],
+      "gemini": [
+        "Direct flights typically JFK to CMN (approx. 7 hours)"
+      ],
+      "grok": [
+        "Direct or 1-stop flights from JFK/EWR (~7-9 hours to CMN), IAD, MIA, etc. via RAM or European hubs like CDG, MAD. Prices fluctuate $450-1200+ RT."
+      ]
+    }
+  },
+  {
+    "path": "country_facts.costs.daily_budget_low",
+    "value": null,
+    "status": "serve_live",
+    "coverage": "volatile — value never frozen",
+    "note_values": {
+      "claude": "$40–70/day (riad dorms/budget guesthouses, street food, shared transport)",
+      "deepseek": "$35–60 USD (350–600 MAD)",
+      "gemini": "75 - 120 USD",
+      "grok": "$40-60 USD (budget: hostels, street food, public transport)"
+    }
+  },
+  {
+    "path": "country_facts.costs.daily_budget_mid",
+    "value": null,
+    "status": "serve_live",
+    "coverage": "volatile — value never frozen",
+    "note_values": {
+      "claude": "$90–160/day (mid-range riad, mix of restaurants, some private transport/tours)",
+      "deepseek": "$100–180 USD (1,000–1,800 MAD)",
+      "gemini": "150 - 250 USD",
+      "grok": "$80-150 USD (mid-range riads, restaurants, some tours)"
+    }
+  },
+  {
+    "path": "country_facts.costs.daily_budget_high",
+    "value": null,
+    "status": "serve_live",
+    "coverage": "volatile — value never frozen",
+    "note_values": {
+      "claude": "$250+/day (luxury riads, private guide/driver, fine dining)",
+      "deepseek": "$200+ USD (2,000+ MAD)",
+      "gemini": "400+ USD",
+      "grok": "$250+ USD (luxury riads, private guides, fine dining)"
+    }
+  }
+]

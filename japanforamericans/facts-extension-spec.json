@@ -1,0 +1,63 @@
+{
+  "_README": "SCOPED FACT EXTENSION for japanforamericans — created 2026-09-16. This is NOT a replacement for facts.json. It covers only the fields the 10 new depth articles need (article-list.json slugs listed under each section). The standard facts-template.json has no fields at this granularity: when_to_go carries 3 fields, getting_around.intercity_rail is a single field, and connectivity has no IC-card field at all. That schema gap is WHY the jr-pass-math, ic-card-setup and seasonal-timing vein pieces measured THIN (4,305 / 4,294 / 821 corpus words) — the facts were never asked for. Reconcile the panel replies into facts.json as NEW keys; never overwrite an existing key or a human dispute ruling.",
+
+  "_fact_field_shape": "Every FACT uses { value, source_url, status, notes }. status is one of: verified (source_url MUST be the official page actually checked) | agreed_stable | verify_recommended | serve_live. Never invent a source_url. Prices and app behaviour here are VOLATILE — default them to verify_recommended, never verified, unless you genuinely checked the official page.",
+
+  "_meta": {
+    "project": "japanforamericans",
+    "db_scope": "japan",
+    "audience": "US passport holders, flying from US hubs, thinking in USD",
+    "locale_note": "facts.json _meta.locale governs units; keep yen as the native figure and let the site convert",
+    "extends": "facts.json (schema_version 3) — additive only"
+  },
+
+  "rail_passes": {
+    "_for_articles": ["regional-jr-passes-vs-national", "japan-rail-route-cost-without-pass"],
+    "_why": "The site's own swamp note already says 'the Pass price hike means a simple Tokyo-Kyoto round trip no longer breaks even' — but facts.json holds no price at all, so that claim cannot be written. These fields make the break-even argument writable.",
+    "national_pass_variants": { "value": null, "source_url": null, "status": null, "notes": "7 / 14 / 21-day, ordinary and Green. Give the CURRENT yen price of each. Six figures." },
+    "national_pass_price_change": { "value": null, "source_url": null, "status": null, "notes": "The most recent price change: old price, new price, effective date. This is the fact the whole break-even argument turns on." },
+    "nozomi_mizuho_rule": { "value": null, "source_url": null, "status": null, "notes": "Are the fastest Tokaido/Sanyo services covered by the national pass, and is there a paid supplement option? State the rule, not an opinion." },
+    "tokyo_kyoto_one_way_cost": { "value": null, "source_url": null, "status": null, "notes": "Shinkansen Tokyo→Kyoto, ordinary car, reserved seat, one way, in yen. The single number a reader needs to do the maths." },
+    "tokyo_osaka_one_way_cost": { "value": null, "source_url": null, "status": null, "notes": "Same basis, Tokyo→Shin-Osaka." },
+    "break_even_trips": { "value": null, "source_url": null, "status": null, "notes": "How many Tokyo-Kyoto-equivalent legs a 7-day national pass must cover to pay for itself, at current prices." },
+    "regional_passes_core": { "value": null, "source_url": null, "status": null, "notes": "The 3-5 regional passes that actually matter to a first-timer on a Tokyo/Kyoto/Osaka route. For each: name, issuer, duration, current yen price, what it covers, what it does NOT cover." },
+    "where_to_buy": { "value": null, "source_url": null, "status": null, "notes": "Online in advance vs at a Japanese station: is there still a price difference, and what does activation require (passport, temporary visitor stamp)?" },
+    "eligibility": { "value": null, "source_url": null, "status": null, "notes": "Who may buy the national pass — the 'temporary visitor' status rule, and anything that excludes a US visitor." }
+  },
+
+  "ic_cards": {
+    "_for_articles": ["mobile-suica-american-iphone", "ic-card-day-pass-or-single-ticket"],
+    "_why": "facts.json holds exactly 3 IC-card mentions, all generic ('Suica/Pasmo IC card', 'IC card works'). The site's swamp note already flags 'app-based with quirks for foreign phones' — these fields make that writable.",
+    "card_types_and_interop": { "value": null, "source_url": null, "status": null, "notes": "Suica / Pasmo / Icoca and the national interoperability rule — where a Tokyo card does and does not work." },
+    "physical_card_availability": { "value": null, "source_url": null, "status": null, "notes": "Are unregistered physical Suica/Pasmo cards currently sold to visitors, or is availability still restricted? State the current position and the date it applies to." },
+    "welcome_suica": { "value": null, "source_url": null, "status": null, "notes": "Tourist-specific card: what it is, validity period, where sold, whether the balance is refundable." },
+    "mobile_suica_ios": { "value": null, "source_url": null, "status": null, "notes": "Adding Suica/Pasmo to Apple Wallet on a US-bought iPhone: is a Japanese Apple ID or App Store region needed, which region setting matters, and what the actual steps are." },
+    "mobile_topup_us_cards": { "value": null, "source_url": null, "status": null, "notes": "Which US-issued cards can top up a mobile Suica in Apple Wallet, and which are refused. This is the single most common American failure point — be specific about card networks." },
+    "android_limitation": { "value": null, "source_url": null, "status": null, "notes": "Why a US Android phone generally cannot run mobile Suica (Osaifu-Keitai hardware), and what the workaround is if any." },
+    "balance_limits_and_refund": { "value": null, "source_url": null, "status": null, "notes": "Maximum stored balance, top-up increments, and how/whether a visitor can refund a remaining balance on departure (and any fee)." },
+    "day_passes_tokyo": { "value": null, "source_url": null, "status": null, "notes": "Tokyo Metro 24/48/72-hour tourist passes: current yen prices and what they cover (Metro only vs Toei)." },
+    "day_passes_kyoto": { "value": null, "source_url": null, "status": null, "notes": "Kyoto bus/subway day passes: current yen prices, coverage, and whether the bus-only pass still exists." },
+    "when_ic_beats_pass": { "value": null, "source_url": null, "status": null, "notes": "The practical rule of thumb for a first-timer: at what level of daily travel does a day pass beat pay-as-you-go on an IC card?" }
+  },
+
+  "seasonal": {
+    "_for_articles": ["cherry-blossom-season-japan", "autumn-foliage-japan-timing", "golden-week-japan-what-closes", "obon-japan-mid-august", "japan-rainy-season-typhoons", "winter-in-japan-snow-onsen"],
+    "_why": "facts.json covers seasons at the level of 'spring is mild, avoid Golden Week'. That supports one article — the corpus has exactly one (best-time-to-visit-japan, 821 words). Six articles need per-event specifics.",
+    "sakura_peak_windows": { "value": null, "source_url": null, "status": null, "notes": "Typical full-bloom window for Tokyo, Kyoto and Osaka, as date ranges with the caveat that it shifts yearly. Name the official forecast body." },
+    "sakura_booking_lead": { "value": null, "source_url": null, "status": null, "notes": "How far ahead accommodation in Kyoto/Tokyo realistically needs booking for the bloom window." },
+    "koyo_peak_windows": { "value": null, "source_url": null, "status": null, "notes": "Autumn foliage peak windows for Tokyo, Kyoto and the Japanese Alps, as date ranges." },
+    "golden_week_dates": { "value": null, "source_url": null, "status": null, "notes": "The constituent public holidays and their fixed dates, plus how the run-of-days forms. Fixed dates are stable; the exact run varies by year." },
+    "golden_week_effects": { "value": null, "source_url": null, "status": null, "notes": "What actually changes for a visitor: domestic rail and flight demand, accommodation pricing, which attractions and businesses close." },
+    "obon_dates_and_effects": { "value": null, "source_url": null, "status": null, "notes": "The mid-August observance: typical dates, and what it does to rail, domestic flights and regional closures." },
+    "new_year_closures": { "value": null, "source_url": null, "status": null, "notes": "Shogatsu — the end-December to early-January period. What closes and for how long. This is the closure period Americans most often walk into unaware." },
+    "public_holidays_list": { "value": null, "source_url": null, "status": null, "notes": "The national public holidays with their dates or rules. Name the official source." },
+    "tsuyu_rainy_season": { "value": null, "source_url": null, "status": null, "notes": "Typical start and end of the rainy season for Honshu vs Okinawa, and what it means in practice (all-day rain, or humid with showers?)." },
+    "typhoon_season": { "value": null, "source_url": null, "status": null, "notes": "Peak typhoon months, which regions are most exposed, and the practical disruption pattern for rail and flights." },
+    "summer_heat": { "value": null, "source_url": null, "status": null, "notes": "Typical August temperature and humidity in Tokyo/Kyoto, and whether heat is a genuine itinerary constraint." },
+    "winter_snow_regions": { "value": null, "source_url": null, "status": null, "notes": "Where snow is reliable (Hokkaido, Tohoku, the Japan Sea side), and the months." },
+    "winter_low_season": { "value": null, "source_url": null, "status": null, "notes": "Is winter genuinely cheaper and quieter outside New Year and ski areas? Give the pattern, not a slogan." }
+  },
+
+  "_open_questions": [],
+  "_human_checklist": []
+}

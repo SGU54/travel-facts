@@ -1,0 +1,63 @@
+{
+  "_README": "Accumulated local ground truth for this project. Every entry OVERRIDES facts.json and any AI output, permanently (hard rule 8). Stage 3 MUST load this alongside facts.json before writing any batch.",
+  "schema_version": 3,
+  "project": "vietnamforamericans",
+  "corrections": [
+    {
+      "id": 1,
+      "date": "2026-10-12",
+      "scope": "fact",
+      "wrong": "Stating a Vietnamese ATM withdrawal fee or per-transaction cap as a figure.",
+      "right": "Never print an ATM fee or cap figure. No bank's own foreign-card schedule was ever found; every available source is a commercial travel blog. Write the STRUCTURAL rule instead: the fee is flat, not a percentage, and caps are low, so the cost per dollar is set by how much you withdraw at once — take the maximum, rarely. This repeats deliberately the mistake made on the Thailand site, where an unsourced atm_fee span shipped and stayed unresolved.",
+      "applies_to": "all money, ATM and budget articles"
+    },
+    {
+      "id": 2,
+      "date": "2026-10-12",
+      "scope": "fact",
+      "wrong": "Framing Vietnam's motorbike licence question as an IDP / 1949-vs-1968 convention problem.",
+      "right": "The State Department states it directly and that is what we write: US driver's licences and International Driving Permits do not work in Vietnam, driving without a Vietnamese licence risks a fine, arrest or jail, renting without one is illegal, and travel insurance may not pay medical bills after an accident. Do not relitigate the convention argument in prose — it is weaker and less publishable than the plain government statement.",
+      "applies_to": "renting-a-motorbike-in-vietnam, hiring-a-driver-vs-self-drive-vietnam, all transport and insurance articles"
+    },
+    {
+      "id": 3,
+      "date": "2026-10-12",
+      "scope": "fact",
+      "wrong": "Describing the Vietnam pre-arrival declaration as simply 'required' or simply 'optional'.",
+      "right": "Two primary sources disagree and both get represented: travel.state.gov says travellers on a non-Vietnamese passport arriving by air must complete it; Vietnam's own Immigration Department portal presents it as advisory ('helps reduce waiting time'). Write both, then give the practical instruction — it is free and takes ten minutes, so do it. Never flatten the disagreement.",
+      "applies_to": "all entry and visa articles"
+    },
+    {
+      "id": 4,
+      "date": "2026-10-12",
+      "scope": "fact",
+      "wrong": "Writing the Vietnam visa extension article as a procedure for extending an e-visa.",
+      "right": "An e-visa cannot be renewed or extended from inside Vietnam, and Vietnam usually grants only the exact period requested. The article's premise is therefore 'request the right duration up front, because you cannot fix it later', plus a warning that intermediaries selling e-visa extensions are selling something the government says does not exist. In-person extension at an Immigration Office applies to OTHER visa types, not the e-visa.",
+      "applies_to": "vietnam-visa-extension-guide"
+    },
+    {
+      "id": 5,
+      "date": "2026-10-12",
+      "scope": "fact",
+      "wrong": "Repeating that Vietnam grants 45 days visa-free, or implying Americans benefit from it.",
+      "right": "US passport holders are NOT on Vietnam's unilateral exemption list (Resolutions 44/NQ-CP and 229/NQ-CP, which exclude the US, Canada and Australia). Americans need a visa, with the single exception of Phu Quoc for 30 days or less. This is the most wrongly reported Vietnam fact online and readers arrive believing the opposite.",
+      "applies_to": "all entry and visa articles"
+    },
+    {
+      "id": 6,
+      "date": "2026-10-12",
+      "scope": "style",
+      "wrong": "Calling the paid product 'the guide' in prose.",
+      "right": "The free articles on this site are already called guides. The paid product is a DECISION MANUAL (SITE.guide.kind). Guide-span gloss text must use that noun, e.g. 'the complete Vietnam decision manual'.",
+      "applies_to": "all"
+    },
+    {
+      "id": 7,
+      "date": "2026-10-12",
+      "scope": "fact",
+      "wrong": "Stating a consequence, fine or enforcement risk for an unregistered overnight stay in Vietnam.",
+      "right": "The registration duty is primary-verified (US Embassy: all visitors must register their overnight address with local police) but NO official statement of the consequence for a short-stay tourist was found. State the duty, note hotels do it automatically and that informal stays are the host's responsibility, and stop. Invent no threat.",
+      "applies_to": "accommodation and safety articles"
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+You are a fact-and-consistency checker for travel articles. Below are 5 articles plus the facts file they were written from. Your ONLY job is to find IN-CONTEXT ERRORS:
+
+- a number/date/claim stated one way in one place and differently in another
+- a recommendation that contradicts the facts file
+- a place treated as in-scope that the facts file doesn't support
+- an internal contradiction within an article
+- a claim that reads as factually wrong for Thailand
+
+IMPORTANT RULES:
+1. Do NOT flag "serve_live" items (exchange rates, prices, the visa day-count) for being hedged or non-specific — that is intentional and correct. Hedged visa language ("the rule has been changing, verify your date") is CORRECT, not an error.
+2. Do NOT ask for more specificity on prices/rates — those are deliberately served live via converters.
+3. Only report genuine contradictions or errors. If an article is clean, say "clean".
+4. Return a short list per article slug. Be concise.
+
+=== FACTS FILE (source of truth) ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_around": {
+   "intercity_rail": {
+    "value": "State Railway of Thailand (SRT). Atmospheric, slower than flights/buses. Highlight: the Bangkok–Chiang Mai overnight sleeper; southern line to Surat Thani for the Gulf islands.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "buses": {
+    "value": "Extensive intercity network from basic local buses to VIP/first-class and overnight coaches; minivans connect smaller towns. Use government BKS or reputable operators.",
+    "source_url": 
+
+=== ARTICLES TO CHECK ===
+
+
+----- SLUG: 7-day-thailand-itinerary -----
+TITLE: The Perfect 7-Day Thailand Itinerary
+CATEGORY: one-week
+
+<p>Seven days isn't long for a country this varied, but it's enough to taste the three Thailands most first-timers come for: the temple-and-street-food intensity of Bangkok, and then either the laid-back beaches of the south or the cooler mountains and elephants of the north. This itinerary takes the most popular route — <strong>Bangkok plus the southern islands</strong> — because it's the easiest first trip to pull off and the one most Americans picture when they think of Thailand. If you'd rather swap the beaches for the north, the structure still works; just fly to Chiang Mai instead of Phuket or Krabi on Day 4.</p>
+
+<p>A quick note before you start booking: Thailand's visa-free rules for U.S. passport holders are in flux in 2026, and the permitted length of a visa-exempt stay has been changing. A week-long trip sits comfortably inside any version of the rule, so this itinerary is unaffected — but always confirm the current entry requirements for your travel date, and file your free Thailand Digital Arrival Card (TDAC) online before you fly.</p>
+
+<!-- IMAGE_SLOT_1: A wide establishing shot of Bangkok at dusk — temple spires against the modern skyline -->
+
+<h2>Days 1–3: Bangkok</h2>
+
+<p>Most flights from the U.S. route through East Asia or the Middle East and land at Suvarnabhumi (BKK) in the late evening or early morning, so treat Day 1 as an arrival day. Get to your hotel, grab a first bowl of noodles, and sleep off the jet lag — you're roughly 11–12 hours ahead of the East Coast, and fighting it never works.</p>
+
+<h3>Where to base yourself</h3>
+<p>For a first visit, <strong>Sukhumvit</strong> (around the Asok or Thonglok BTS stations) is the easiest landing zone: it sits on the Skytrain, and it's wall-to-wall restaurants and rooftop bars. If you'd rather be among the temples and the river, base in the <strong>Riverside / Old Town (Rattanakosin)</strong> area instead — more atmospheric, though further from the metro.</p>
+
+<h3>Day 2: the temple core</h3>
+<p>Start early at the <strong>Grand Palace and Wat Phra Kaew</strong> (home of the Emerald Buddha) before the heat and crowds peak — and dress for it: shoulders and knees covered, or they won't let you in. From there it's a short walk to <strong>Wat Pho</strong> and its enormous Reclining Buddha, the spiritual home of Thai massage. Cross the river by ferry in the late afternoon for <strong>Wat Arun</strong>, the Temple of Dawn, which glows at sunset. Cap the night with a rooftop bar in Silom or a street-food crawl through <strong>Chinatown (Yaowarat)</strong>.</p>
+
+<div class="feature-map" data-points='[
+  {"name":"Grand Palace & Wat Phra Kaew","lat":13.7500,"lng":100.4915,"note":"Go at opening; strict dress code"},
+  {"name":"Wat Pho","lat":13.7466,"lng":100.4929,"note":"Reclining Buddha + Thai massage"},
+  {"name":"Wat Arun","lat":13.7437,"lng":100.4889,"note":"Best at sunset, cross by river ferry"},
+  {"name":"Chinatown (Yaowarat)","lat":13.7400,"lng":100.5100,"note":"Evening street-food crawl"}
+]'></div>
+
+<h3>Day 3: markets and a slower pace</h3>
+<p>If it's a weekend, spend the morning at the vast <strong>Chatuchak Weekend Market</strong>; midweek, swap in the <strong>Jim Thompson House</strong> for a calmer look at Thai silk and traditional teak architecture. Use the afternoon to do whatever Bangkok thing you've been eyeing — a canal long-tail boat ride, a cooking class, a spa — then pack, because tomorrow you fly south.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Bangkok temple tour / cooking class / canal tour -->
+
+<h2>Days 4–6: the southern islands</h2>
+
+<p>On the morning of Day 4, catch a short <strong>domestic flight</strong> south. Phuket (HKT) and Krabi (KBV) are both about 1.5 hours from Bangkok and serve as gateways to the Andaman coast's headline scenery; carriers like Thai AirAsia, Nok Air, and Bangkok Airways run the routes frequently and cheaply. <strong>Krabi</strong> is the better pick if you want dramatic limestone cliffs and a slightly mellower scene; <strong>Phuket</strong> if you want more nightlife, resorts, and direct boat connections.</p>
+
+<!-- AFFILIATE_SLOT: skyscanner — Bangkok to Phuket/Krabi domestic flight -->
+
+<h3>Day 4: arrive and settle</h3>
+<p>Fly down, check in, and spend the afternoon on the beach or by the pool. If you're in Krabi, base in <strong>Ao Nang</strong> for convenience or <strong>Railay</strong> for the cliffs (Railay is reachable only by boat — part of its charm). In Phuket, <strong>Kata</strong> or <strong>Karon</strong> beach are calmer family-friendly bases, while Patong is the loud, lively one.</p>
+
+<h3>Day 5: island-hopping</h3>
+<p>This is the day you came for. From either base you can take a longtail or speedboat day trip to the <strong>Phi Phi Islands</strong>, <strong>Phang Nga Bay</strong> (the "James Bond Island" karsts), or the <strong>Hong Islands</strong> lagoons. Book a small-group or private boat the day before, go early to beat the crowds, and bring reef-safe sunscreen.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Phi Phi / Phang Nga / Hong Islands boat trip -->
+
+<h3>Day 6: your own pace</h3>
+<p>Use Day 6 to do nothing in particular — a second beach, a snorkeling trip, a massage, a sunset longtail. In the evening, fly back to Bangkok (or position yourself for an onward connection). A late flight north keeps Day 6 fully on the beach.</p>
+
+<!-- IMAGE_SLOT_2: A longtail boat anchored off a limestone karst in the Andaman Sea -->
+
+<h2>Day 7: Bangkok and home</h2>
+
+<p>Most long-haul flights back to the U.S. leave Bangkok late at night, which hands you a bonus final day. Knock out any last shopping — a mall like ICONSIAM or one more market — grab a final plate of mango sticky rice, and head to the airport. If your flight is in the morning instead, spend the night before near Suvarnabhumi to keep the airport run short.</p>
+
+<h2>How much should you budget?</h2>
+
+<p>Thailand is inexpensive by U.S. standards, which is a big part of its appeal. Day-to-day spending on food and local transport is low; your real costs are the international flight, the two domestic flights, and accommodation. Because exchange rates and airfares move constantly, use a live converter rather than trusting any fixed figure:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<p>As a rough planning frame: budget travelers can get by on very little per day once they're in the country, mid-range travelers land somewhere comfortable, and luxury resorts are where the bill climbs. Treat those as indicative ranges and check current prices when you book — they're not fixed.</p>
+
+<h2>Should you do the north instead?</h2>
+
+<p>If beaches aren't your thing, swap Days 4–6 for <strong>Chiang Mai</strong>: fly up instead of south, spend a day on the old-city temples and Doi Suthep, take a cooking class, and devote a full day to an <strong>ethical elephant sanctuary</strong> (the observation-only kind — no riding). The pacing is identical; only the destination changes. Travelers with ten days or more can do both, which is the route our <a href="#">10-day itinerary</a> takes.</p>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is 7 days enough for Thailand?</summary><div><p>It's enough for one region plus Bangkok — either the southern beaches or the northern mountains, not both comfortably. For both, give yourself 10–14 days.</p></div></details>
+  <details><summary>Do I need a visa for a 7-day trip?</summary><div><p>U.S. tourists enter Thailand visa-free, and a week is well within any version of the visa-exempt stay. The exact day limit has been changing in 2026, so confirm the current rule for your travel date, and file the free TDAC online before you fly.</p></div></details>
+  <details><summary>Should I fly or take the train between cities?</summary><div><p>Fly. Domestic flights are cheap and quick (about 1.5 hours Bangkok–Phuket vs. 12+ hours overland), and on a 7-day trip your time is the scarce resource. Save the scenic overnight train for a longer itinerary.</p></div></details>
+  <details><summary>When is the best time to visit?</summary><div><p>The cool, dry months of November through February are peak season nationwide — the most reliable weather, and also the busiest and priciest.</p></div></details>
+  <details><summary>Is it better to base in Phuket or Krabi?</summary><div><p>Krabi for dramatic cliffs and a calmer vibe; Phuket for more nightlife, resorts, and flight connections. Both reach the same iconic islands by boat.</p></div></details>
+</section>
+
+
+----- SLUG: where-to-stay-in-bangkok -----
+TITLE: Where to Stay in Bangkok: Best Areas and Hotels
+CATEGORY: stay-bangkok
+
+<p>Bangkok is enormous, and where you sleep shapes your whole trip — a great area puts you minutes from the Skytrain and a night market; a bad one traps you in the city's legendary traffic. The good news: you really only need to choose between four neighborhoods, and each suits a clear kind of traveler. Here's how to pick, plus what to expect from each.</p>
+
+<p>One rule that overrides everything else: <strong>stay near the BTS Skytrain or MRT metro.</strong> Bangkok's surface traffic is brutal, and the elevated/underground trains are clean, cheap, air-conditioned, and skip all of it. An otherwise lovely hotel that's a sweaty 20-minute walk from a station will quietly cost you hours over a few days.</p>
+
+<!-- IMAGE_SLOT_1: The BTS Skytrain gliding past Bangkok high-rises at golden hour -->
+
+<h2>Sukhumvit — best for first-timers</h2>
+
+<p>If it's your first trip and you want the path of least resistance, base in <strong>Sukhumvit</strong>, around the Asok or Thonglor BTS stations. This is the modern heart of Bangkok: it runs along the Skytrain, so the whole city is easy to reach, and it's packed with restaurants, rooftop bars, malls, and nightlife. It's where the largest concentration of international hotels sits, at every price point.</p>
+
+<p>Asok is the practical, transit-hub end (it's where the BTS and MRT cross). Thonglor is more upscale and design-forward, full of cocktail bars and cafés popular with locals and expats. Either way, you trade a little "old Thailand" atmosphere for genuine convenience — a fair deal on a first visit.</p>
+
+<!-- AFFILIATE_SLOT: booking — Sukhumvit hotels -->
+
+<h2>Riverside / Old Town — best for sightseeing and atmosphere</h2>
+
+<p>The <strong>Riverside and Old Town (Rattanakosin)</strong> area is the Bangkok of postcards: it's where the Grand Palace, Wat Pho, Wat Arun, and the Chao Phraya River are. Staying here means you can walk or take a quick river ferry to the headline sights, and the riverfront luxury hotels are some of the most famous in Asia.</p>
+
+<p>The trade-off is transit: this historic district is less well connected to the Skytrain than Sukhumvit, so you'll lean more on river boats, taxis, and Grab to reach the modern parts of town. For travelers who came mainly for temples, river views, and atmosphere — and don't mind a slower commute to the malls — it's worth it.</p>
+
+<!-- AFFILIATE_SLOT: booking — Riverside / Old Town hotels -->
+
+<h2>Silom / Sathorn — best for business and rooftop bars</h2>
+
+<p><strong>Silom and Sathorn</strong> are Bangkok's business district by day and a serious dining-and-rooftop scene by night. The area sits on both the BTS and MRT, making it as well-connected as Sukhumvit, and it's home to some of the city's best-known sky bars. It's also the gateway to Patpong's night markets. Choose it if you want excellent transit and rooftop views without the wall-to-wall tourist density of central Sukhumvit.</p>
+
+<!-- AFFILIATE_SLOT: booking — Silom / Sathorn hotels -->
+
+<h2>Khao San / Banglamphu — best for budget and backpackers</h2>
+
+<p>The <strong>Khao San Road</strong> area in Banglamphu is the legendary backpacker hub: cheap guesthouses, hostels, street food, bars, and a young, party-leaning crowd. It's close to the Old Town temples, which is a real plus for sightseeing. The catch is that it's <strong>not</strong> on the Skytrain, so getting to the modern city means a taxi, Grab, or a river-boat connection. It's the right base if you're traveling cheap and want energy and proximity to the historic sights — and the wrong one if you want quiet or quick metro access.</p>
+
+<!-- IMAGE_SLOT_2: A lively Bangkok street-food scene at night with neon and food carts -->
+
+<h2>Getting from the airport to your hotel</h2>
+
+<p>Both airports are well outside the center. From <strong>Suvarnabhumi (BKK)</strong>, the Airport Rail Link runs into the city and connects to the BTS, which is the cheapest way in if your hotel is near a station; otherwise a metered taxi or Grab is straightforward, just budget for traffic. From <strong>Don Mueang (DMK)</strong>, the budget-airline airport, taxis and Grab are the simplest options. Either way, if you land late and exhausted, a pre-booked car or a Grab is worth the few extra dollars to skip the taxi queue.</p>
+
+<h2>A quick way to decide</h2>
+
+<p>If you want the single safest first-timer choice, book <strong>Sukhumvit near Asok</strong> and don't overthink it. Choose <strong>Riverside/Old Town</strong> if temples and river views matter more than nightlife and shopping. Pick <strong>Silom/Sathorn</strong> for rooftop bars plus great transit, and <strong>Khao San/Banglamphu</strong> if you're counting baht and want backpacker energy near the historic core.</p>
+
+<p>Prices swing a lot by season — the cool, dry stretch from November to February is peak, so book those months well ahead and expect higher rates. Because hotel pricing and exchange rates move constantly, compare current rates rather than relying on any fixed figure; a quick converter helps you sanity-check what you're seeing:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What's the best area in Bangkok for first-time visitors?</summary><div><p>Sukhumvit, around the Asok BTS station. It's on the Skytrain, central, and full of restaurants and hotels at every price — the easiest, lowest-stress base for a first trip.</p></div></details>
+  <details><summary>Where should I stay to be near the Grand Palace and temples?</summary><div><p>The Riverside / Old Town (Rattanakosin) area. You can walk or take a short river ferry to the Grand Palace, Wat Pho, and Wat Arun, though it's less connected to the metro.</p></div></details>
+  <details><summary>Is it important to stay near the BTS or MRT?</summary><div><p>Very. Bangkok's road traffic is severe, and the Skytrain and metro let you skip it entirely. Staying within a short walk of a station is the single best location decision you can make.</p></div></details>
+  <details><summary>Where's the cheapest place to stay in Bangkok?</summary><div><p>The Khao San / Banglamphu backpacker area has the most budget guesthouses and hostels. It's close to the Old Town temples but not on the Skytrain, so factor in taxi or Grab rides to the modern city.</p></div></details>
+</section>
+
+
+----- SLUG: which-thai-island-is-right-for-you -----
+TITLE: Which Thai Island Is Right for You?
+CATEGORY: islands-beaches
+
+<p>Thailand has hundreds of islands, and the single most useful thing to understand before you pick one is that the country has <strong>two separate coasts with opposite weather</strong>. The Andaman coast in the west (Phuket, Krabi, Phi Phi) and the Gulf coast in the east (Koh Samui, Koh Phangan, Koh Tao) have their rainy seasons at different times of year. So the first question isn't "which island is prettiest" — it's "when am I going, and which coast is dry then?"</p>
+
+<p>Get the coast right and almost any island delivers. Get it wrong and you can spend a week dodging storms while the other coast bakes in sunshine. Here's how to choose.</p>
+
+<!-- IMAGE_SLOT_1: Split-feel image of a turquoise Andaman bay with limestone karsts -->
+
+<h2>First, pick your coast by season</h2>
+
+<p>The <strong>Andaman coast</strong> (west) is at its best roughly November through April, with peak monsoon around September–October. The <strong>Gulf coast</strong> (east) runs on a different cycle and is often driest mid-year, with its wettest stretch around October–December. The cool, dry months of November to February are the overall national peak — and on the Andaman side, the prime window. If you're traveling in, say, October, leaning toward the Gulf islands can save your trip.</p>
+
+<h2>Phuket — best for convenience and variety</h2>
+
+<p><strong>Phuket</strong> is the largest island and the most developed, connected to the mainland by road and served by its own international airport (HKT). That makes it the easiest to reach and the most varied: lively beaches like Patong, calmer family bases like Kata and Karon, an atmospheric Sino-Portuguese Old Town with the island's best food, and quick boat access to the Phi Phi Islands and Phang Nga Bay. Choose Phuket if you want everything in one place and minimal logistics — and don't mind that it's busy and built-up.</p>
+
+<!-- AFFILIATE_SLOT: booking — Phuket hotels -->
+
+<h2>Krabi — best for scenery and a calmer pace</h2>
+
+<p><strong>Krabi</strong> province, just across the bay from Phuket, trades some of the development for more dramatic limestone scenery and a mellower feel. Base in <strong>Ao Nang</strong> for restaurants and boat access, or in <strong>Railay</strong> — a cliff-ringed peninsula reachable only by longtail boat, beloved by rock climbers and anyone who wants postcard scenery without a big resort strip. Krabi reaches the same headline islands (Phi Phi, the Hong Islands) and generally feels quieter than Phuket. It's our pick for first-timers who want beauty over nightlife.</p>
+
+<!-- AFFILIATE_SLOT: booking — Krabi / Ao Nang / Railay hotels -->
+
+<h2>Koh Samui — best for resorts and the Gulf-coast season</h2>
+
+<p>Over on the Gulf coast, <strong>Koh Samui</strong> is the big resort island, with its own airport (USM) and a polished, comfortable scene around beaches like Chaweng and the charming Fisherman's Village in Bophut. It's the natural choice if you're traveling mid-year when the Andaman coast is wet, or if you want a relaxed resort holiday with easy day trips to the Ang Thong Marine Park and the quieter neighboring islands. Samui's airport is pricier to fly into, so many travelers reach it via Surat Thani plus a ferry.</p>
+
+<!-- AFFILIATE_SLOT: booking — Koh Samui resorts -->
+
+<h2>Koh Phi Phi and the smaller islands</h2>
+
+<p><strong>Koh Phi Phi</strong> is the famous one — sheer cliffs, Maya Bay, electric-blue water — and it's stunning, but it's also small, busy, and party-leaning. Most people visit it as a day trip from Phuket or Krabi rather than basing there; an overnight works if you want the beaches before the day-trip boats arrive. If you specifically want quiet, look at <strong>Koh Lanta</strong> (laid-back, good for families, off Krabi) or, on the Gulf side, <strong>Koh Tao</strong> for world-class, affordable diving and snorkeling.</p>
+
+<!-- IMAGE_SLOT_2: A quiet longtail-dotted beach with clear shallow water, fewer crowds -->
+
+<h2>So which should you choose?</h2>
+
+<p>For a first trip in the November–April window, <strong>Krabi</strong> is the sweet spot of scenery, ease, and value, with <strong>Phuket</strong> the better call if you want maximum convenience and nightlife. Traveling mid-year, point yourself at <strong>Koh Samui</strong> and the Gulf. Want the iconic Phi Phi shots? Take them as a day trip and sleep somewhere calmer. And if diving is the goal, build the trip around <strong>Koh Tao</strong>.</p>
+
+<p>Resort and hotel pricing varies sharply by island and season — Samui resorts and peak-season Phuket sit at the top, while Lanta and the smaller islands run cheaper. Compare current rates rather than any fixed number, and use a converter to keep the baht honest:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Which Thai island is best for first-timers?</summary><div><p>Krabi (Ao Nang or Railay) for scenery and a calmer pace, or Phuket if you want the most convenience and variety. Both reach the famous Phi Phi and Phang Nga scenery by boat.</p></div></details>
+  <details><summary>What's the difference between the Andaman and Gulf coasts?</summary><div><p>They're on opposite sides of the southern peninsula with opposite rainy seasons. The Andaman (Phuket, Krabi) is driest roughly November–April; the Gulf (Samui, Phangan, Tao) is often best mid-year. Pick the coast that's dry when you travel.</p></div></details>
+  <details><summary>Should I stay on Koh Phi Phi?</summary><div><p>Most people visit Phi Phi as a day trip from Phuket or Krabi — it's small and busy. Stay overnight only if you want the beaches early before the day boats arrive, or you're after its nightlife.</p></div></details>
+  <details><summary>Which island is best for diving?</summary><div><p>Koh Tao, on the Gulf coast, is Thailand's diving hub — among the most affordable places in the world to learn, with easy snorkeling too.</p></div></details>
+  <details><summary>Can I visit more than one island in a week?</summary><div><p>Yes, but keep it to one coast to avoid long transfers. Pairing, say, Krabi with a nearby island like Koh Lanta is easy; hopping from the Andaman to the Gulf coast in a single week wastes a lot of time in transit.</p></div></details>
+</section>
+
+
+----- SLUG: best-esim-sim-thailand -----
+TITLE: The Best eSIMs and SIM Cards for Thailand
+CATEGORY: connectivity
+
+<p>Staying connected in Thailand is cheap, fast, and easy — the only real decision is <em>how</em> you get data: a physical SIM card bought locally, or an eSIM you set up before you even leave home. For most American travelers in 2026, an <strong>eSIM is the simplest option</strong>, because it works the moment you land with nothing to swap or fumble. But local SIMs still win on raw value. Here's how to choose and what to expect.</p>
+
+<!-- IMAGE_SLOT_1: A traveler checking their phone with a Thai beach or Bangkok street behind -->
+
+<h2>eSIM vs. physical SIM: which is right for you?</h2>
+
+<h3>Get an eSIM if you want zero hassle</h3>
+<p>An eSIM is a digital SIM you install by scanning a QR code; there's no physical card. You buy a Thailand data plan from a provider like <strong>Airalo</strong>, <strong>Holafly</strong>, or Nomad before your trip, install it in a few minutes, and it activates when you connect to a Thai network on arrival. The upside is huge for a short trip: you skip the airport SIM counter entirely and have working data the instant you turn off airplane mode. The catch is that your phone must support eSIM (every recent iPhone and most flagship Android phones do) and be carrier-unlocked.</p>
+
+<!-- AFFILIATE_SLOT: airalo — Thailand eSIM data plan -->
+
+<h3>Get a local physical SIM if you want the best value</h3>
+<p>Thailand's three big networks — <strong>AIS</strong>, <strong>TrueMove H</strong>, and <strong>dtac</strong> — all sell inexpensive tourist SIM packages with generous data, sold right at the airport arrivals hall and at convenience stores in town. For longer stays or heavy data use, a local SIM typically gives you more gigabytes for your money than an eSIM, and you'll get a Thai phone number. The trade-offs: you have to physically swap your SIM (and not lose your home one), and you may queue at the airport counter.</p>
+
+<h2>What coverage is actually like</h2>
+
+<p>Thailand's mobile network is genuinely good. You'll get fast, reliable <strong>4G and 5G</strong> across Bangkok, Chiang Mai, Phuket, and essentially all the major tourist areas. Coverage thins out only in the genuinely remote places — deep in national parks, on the smaller or more isolated islands, and in the far northern mountains. For the trip most people take, you'll have strong signal almost everywhere you go.</p>
+
+<h2>How much data should you buy?</h2>
+
+<p>For a typical week to ten days of maps, messaging, ride-hailing, and social media, a mid-size tourist data package is plenty; if you're working remotely, video-calling, or streaming, size up or choose an unlimited plan. Tourist packages are usually sold in tidy 8-, 15-, and 30-day blocks, so match the plan to your trip length rather than overbuying. Prices are low either way — data is one of the genuinely cheap things about Thailand, often a few dollars for a week's worth — but plan prices do shift, so check the current rate when you buy rather than trusting an old figure.</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">10 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<h2>Apps worth downloading before you go</h2>
+
+<p>Whatever you choose for data, install a few things while you're still on home Wi-Fi: <strong>Grab</strong> (ride-hailing and food delivery — the single most useful app in Thailand), <strong>Google Maps</strong> with offline maps downloaded for your cities, your <strong>airline and hotel apps</strong>, and a translation app. If you're filing the required Thailand Digital Arrival Card (TDAC), do that online before you fly as well — it's free on the official portal, and you don't want to be hunting for it on airport Wi-Fi.</p>
+
+<!-- IMAGE_SLOT_2: Close-up of a phone showing the Grab app or a map of Bangkok -->
+
+<h2>The bottom line</h2>
+
+<p>For most first-time visitors on a one-to-two-week trip, buy an <strong>eSIM before you leave</strong> for the convenience of landing with instant data — set it up the night before your flight and forget about it. If you're staying longer, using a lot of data, or want the absolute lowest cost, grab a <strong>local tourist SIM</strong> from AIS, TrueMove, or dtac at the airport. Either way you'll be connected within minutes of arriving, for very little money.</p>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is an eSIM or a physical SIM better for Thailand?</summary><div><p>An eSIM is more convenient — it works the moment you land with no counter visit. A local physical SIM from AIS, TrueMove, or dtac usually gives more data for the money, better for longer or heavier-use trips.</p></div></details>
+  <details><summary>Will my phone work in Thailand?</summary><div><p>Yes, as long as it's unlocked. For an eSIM, your phone also needs eSIM support (recent iPhones and most flagship Android phones have it). Otherwise, a local SIM works in any unlocked phone.</p></div></details>
+  <details><summary>Is the cell coverage good?</summary><div><p>Very. Fast 4G/5G covers Bangkok, Chiang Mai, Phuket, and the major tourist areas. Signal only weakens in remote national parks, isolated islands, and the far-northern mountains.</p></div></details>
+  <details><summary>Where do I buy a SIM at the airport?</summary><div><p>The arrivals halls at Bangkok, Phuket, and Chiang Mai airports have booths for AIS, TrueMove, and dtac selling tourist data packages. Convenience stores in town sell them too.</p></div></details>
+</section>
+
+
+----- SLUG: travel-insurance-thailand -----
+TITLE: Do You Need Travel Insurance for Thailand?
+CATEGORY: health-and-safety
+
+<p>Thailand doesn't legally require most tourists to have travel insurance, but going without it is one of the bigger avoidable risks of the trip. The reason is specific: the single most common serious problem travelers face in Thailand is a <strong>road accident</strong>, usually on a rented motorbike or scooter — and a medical evacuation or a stay in a private hospital can run into five figures in U.S. dollars. That's the scenario insurance exists for.</p>
+
+<p>This isn't a scare tactic; it's the actual risk profile. Here's what to know about whether you need coverage, what it should include, and the one exclusion that catches Americans out.</p>
+
+<!-- IMAGE_SLOT_1: A scooter parked on a Thai island road — the classic risk image -->
+
+<h2>Do you actually need it?</h2>
+
+<p>For a short beach-and-temples trip where you're taking taxis and Grab, your downside is mostly a cancelled flight, lost luggage, or an unexpected illness. For an active trip — riding scooters, diving, hiking, island-hopping on boats — the odds of needing real medical help go up. In both cases the math favors insurance, because Thai <strong>private hospitals</strong> (the ones tourists use, and they're excellent) expect payment and a serious injury is expensive. The premium for a week or two of coverage is small relative to a single hospital bill.</p>
+
+<h2>What your policy should cover</h2>
+
+<h3>Emergency medical and evacuation</h3>
+<p>This is the non-negotiable part. You want a policy with a high medical limit and, crucially, <strong>emergency medical evacuation</strong> — the coverage that flies you to an adequate hospital (or home) if you're somewhere remote, like a small island, when something serious happens. Confirm the evacuation limit specifically; it's the expensive line item.</p>
+
+<h3>Trip cancellation and interruption</h3>
+<p>This reimburses prepaid, non-refundable costs if you have to cancel or cut the trip short for a covered reason. It matters more the more you've prepaid — flights, resorts, tours.</p>
+
+<h3>Baggage and delays</h3>
+<p>Useful but secondary: coverage for lost or delayed luggage and for the costs of long flight delays, which are realistic on multi-stop routes from the U.S.</p>
+
+<!-- AFFILIATE_SLOT: safetywing — Thailand travel insurance -->
+
+<h2>The motorbike exclusion — read this carefully</h2>
+
+<p>Here's the trap. Many standard travel-insurance policies <strong>will not pay out for a motorbike or scooter accident unless you hold a valid motorcycle license</strong> (and sometimes an International Driving Permit) — and were wearing a helmet. Renting a scooter on an island is incredibly common and easy in Thailand; vendors rarely check anything. But if you crash without the right license, your insurer can deny the claim entirely, leaving you with the full hospital bill.</p>
+
+<p>So if there's any chance you'll ride: get a motorcycle endorsement on your license before the trip, carry an International Driving Permit, always wear a helmet, and confirm in writing that your policy covers motorbike riding under those conditions. If you won't ride, you don't need to worry about this — but know that "I'll just rent a scooter for a day" is exactly how people end up uninsured.</p>
+
+<!-- IMAGE_SLOT_2: A traveler comparing insurance options on a laptop -->
+
+<h2>U.S. health insurance and credit-card coverage</h2>
+
+<p>Two things Americans often assume cover them, but usually don't fully: your <strong>domestic U.S. health insurance</strong> generally provides little or no coverage abroad, and almost never covers evacuation. Some premium <strong>travel credit cards</strong> include trip-cancellation and limited medical or evacuation benefits — genuinely worth checking your card's benefits guide — but the limits are often lower than a dedicated policy and the medical coverage can be thin. Read the actual terms before relying on either.</p>
+
+<h2>The bottom line</h2>
+
+<p>Buy a travel-insurance policy with strong emergency medical and evacuation coverage for any Thailand trip — it's inexpensive relative to the risk, and the risk here is concrete rather than theoretical. If you might rent a scooter, sort out the license and confirm the coverage <em>before</em> you ride. Compare a couple of providers for your dates and trip type rather than grabbing the first option, since prices and limits vary:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is travel insurance required to enter Thailand?</summary><div><p>Not for most tourists in 2026. But it's strongly recommended — the main risk, a road or scooter accident, can mean an expensive private-hospital stay or evacuation. Always confirm current entry requirements for your travel date.</p></div></details>
+  <details><summary>What's the most important thing a policy should cover?</summary><div><p>Emergency medical treatment and, especially, emergency medical evacuation — the coverage that gets you from a remote island to an adequate hospital. Check the evacuation limit specifically.</p></div></details>
+  <details><summary>Does my policy cover renting a scooter?</summary><div><p>Often not, unless you hold a valid motorcycle license (and sometimes an International Driving Permit) and wear a helmet. Riding without the right license can void the claim entirely. Confirm the terms before you ride.</p></div></details>
+  <details><summary>Will my U.S. health insurance or credit card cover me?</summary><div><p>U.S. health plans usually offer little coverage abroad and rarely cover evacuation. Some premium travel credit cards include limited trip and medical benefits — check your card's terms, but don't assume they replace a dedicated policy.</p></div></details>
+</section>

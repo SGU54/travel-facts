@@ -1,0 +1,91 @@
+{
+  "schema_version": 4,
+  "project": "turkeyforamericans",
+  "batch": 18,
+  "swamp": "S-transit",
+  "_DOCTRINE": "Report mechanics, never make the call. check-noconnect exit 0 before import. A null fact DELETES its sentence. No drift-prone value in a title, heading or excerpt.",
+  "_WHY": "S-transit is open: the corpus covers WHICH airlines and airports and says 'check which airport your flight uses', but never who carries a missed connection, what a through-ticket obliges, or what a failed internal leg does to a fixed international return. These five report the components.",
+  "_DEPTH_TARGET": "Batches 18 and 19 together take S-transit from 1,662 to ~7,000 dedicated words, because a 2,000-word book chapter needs more corpus than the old 3,000 floor.",
+  "articles": [
+    {
+      "title": "Through-Tickets and Separate Tickets on a Turkey Trip",
+      "slug": "turkey-through-ticket-vs-separate-ticket",
+      "category": "getting-around",
+      "swamp": "S-transit",
+      "handoff": "turn",
+      "reports": [
+        "what a through-ticket is and what it obliges the carrier to do when a leg fails",
+        "what changes when two legs are bought separately, including who owns a missed connection",
+        "baggage: when it is checked through and when it must be reclaimed and re-checked",
+        "how a codeshare or interline agreement differs from two bookings on the same airline",
+        "how to tell which kind you actually hold from the confirmation"
+      ],
+      "must_not_say": "how much connection time to leave, or which way to book — the margin rule is the book's",
+      "images": 2
+    },
+    {
+      "title": "Istanbul's Two Airports and the Transfer Between Them",
+      "slug": "istanbul-ist-saw-airport-transfer",
+      "category": "getting-around",
+      "swamp": "S-transit",
+      "handoff": "turn",
+      "reports": [
+        "where IST and SAW sit relative to the city and to each other",
+        "the transfer options between them, journey times and what they cost",
+        "that this transfer exists in no airline system — it is landside, on the passenger",
+        "which carriers and route types typically use which airport",
+        "how a same-day itinerary using both airports actually plays out"
+      ],
+      "must_not_say": "how many hours to allow between flights at different airports",
+      "images": 2
+    },
+    {
+      "title": "What Turkish Airlines Owe You When a Domestic Flight Fails",
+      "slug": "turkey-domestic-flight-cancellation-rights",
+      "category": "getting-around",
+      "swamp": "S-transit",
+      "handoff": "turn",
+      "reports": [
+        "the Turkish civil-aviation passenger-rights regulation and what it covers",
+        "the duty of care thresholds: meals, communication, accommodation",
+        "rebooking versus refund, and who chooses",
+        "compensation levels by distance band, and the extraordinary-circumstances exception",
+        "how a claim is made and to whom"
+      ],
+      "must_not_say": "whether to claim, or that insurance is the answer",
+      "images": 1
+    },
+    {
+      "title": "Connecting Through Istanbul Airport",
+      "slug": "connecting-through-istanbul-airport",
+      "category": "getting-around",
+      "swamp": "S-transit",
+      "handoff": "turn",
+      "reports": [
+        "the published minimum connection times at IST, by connection type",
+        "the international-to-domestic path: passport control, baggage, terminal movement",
+        "transit without entering Turkey, and when that is and isn't possible",
+        "what a domestic-to-international connection requires instead",
+        "the airport's scale and what that means for walking time"
+      ],
+      "must_not_say": "a recommended connection buffer",
+      "images": 2
+    },
+    {
+      "title": "When a Bus or Train Beats a Flight in Turkey",
+      "slug": "turkey-bus-train-vs-flying",
+      "category": "getting-around",
+      "swamp": "S-transit",
+      "handoff": "seed",
+      "reports": [
+        "the high-speed rail network's actual routes and journey times",
+        "intercity coach journey times on the corridors travelers use",
+        "door-to-door comparison components: transfer time, check-in, city-centre arrival",
+        "which corridors have no flight at all",
+        "booking and ticketing mechanics for rail and coach"
+      ],
+      "must_not_say": "which mode to choose on any given route",
+      "images": 1
+    }
+  ]
+}

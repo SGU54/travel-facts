@@ -1,0 +1,21 @@
+{
+  "project": "greeceforamericans",
+  "title": "Greece, in Order.",
+  "brand_name": "Meltemi Press",
+  "note": "Print palette derived for a NEW project (no prior brand file). Greece's site identity is whitewash + Aegean blue; translated for ink on warm paper. Paper is warm bone (never pure white — it greys under ink); ink is deep Aegean slate darkened one step for paper; accent is a saturated Aegean teal that survives 40% coverage; gilt is weathered brass for rules and rings. Faces differ from a website by design: display Cormorant Garamond for a Mediterranean historical register, body Spectral to hold 13.4px justified over 14k words, mono IBM Plex Mono for apparatus and the provenance marks.",
+  "palette": {
+    "paper": "#F4EFE6", "ink": "#1E2A32", "accent": "#1C6E8C", "gilt": "#C6A15B",
+    "muted": "#6E7B82", "soft": "#94A0A6", "line": "#DCD3C4", "line_soft": "#E7DFD1",
+    "zone": "#E8E0D0", "stone": "#E0E6E4", "deep": "#144E63", "water": "#CFE0E4",
+    "wind": "#B9CDD2"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "display_note": "Medium (500) for standfirst/lead; SemiBold (600) for H1 — never synthetic bold",
+    "body": "Spectral",
+    "mono": "IBM Plex Mono"
+  },
+  "page": { "size": "8.5x11in", "margin": "82px 92px", "viewport": "816x1056" },
+  "audience": "first-time American visitors",
+  "price_band": "USD 29-39"
+}

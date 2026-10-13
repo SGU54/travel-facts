@@ -1,0 +1,428 @@
+You are a fact-and-consistency checker for travel articles. Below are articles plus the facts file they were written from. Find ONLY IN-CONTEXT ERRORS: a claim stated two different ways; a recommendation contradicting the facts file; an out-of-scope place; an internal contradiction; a claim factually wrong for Thailand.
+RULES: (1) Do NOT flag serve_live items (exchange rates, prices, visa day-count) for being hedged — that is correct. (2) Flight DURATIONS and stable facts are fine. (3) Only genuine errors; if an article is clean, say "clean". (4) Short list per slug.
+
+=== FACTS FILE ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_aro
+
+=== ARTICLES ===
+
+
+----- SLUG: thai-cooking-class-guide -----
+TITLE: Should You Take a Thai Cooking Class?
+CATEGORY: street-food-markets
+
+<p>A Thai cooking class is one of the most rewarding and fun activities you can do in Thailand — and one of the few souvenirs you bring home in your own skills. You'll learn to make dishes you've been eating all trip, usually starting with a market tour, and come away able to recreate real Thai food in your own kitchen. Here's why it's worth it and how to choose a good one.</p>
+
+<!-- IMAGE_SLOT_1: A Thai cooking class with woks, fresh ingredients, and students -->
+
+<h2>Why take a cooking class?</h2>
+<p>Beyond being genuinely enjoyable, a cooking class deepens your whole trip. You learn <strong>what's actually in the dishes</strong> you've been eating, demystify Thai ingredients and techniques, and gain a lasting skill. It's social, hands-on, and suits all ages and abilities. For food lovers it's often a trip highlight, and even reluctant cooks tend to leave delighted — plus you eat everything you make, so it doubles as a great meal.</p>
+
+<h2>What to expect</h2>
+<p>A typical class runs a half or full day and follows a familiar shape. Many start with a <strong>guided market visit</strong>, where the instructor introduces Thai vegetables, herbs, pastes, and ingredients. Back at the kitchen, you'll <strong>cook several dishes yourself</strong> — commonly a curry (often making the paste from scratch in a mortar and pestle), a stir-fry like pad thai or pad krapow, a soup such as tom yum, a salad like som tum, and a dessert like mango sticky rice. You eat each dish as you go, and usually take home a recipe booklet.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Thai cooking class -->
+
+<h2>Where to take one</h2>
+<p>You can take a cooking class almost anywhere tourists go, but a few places stand out. <strong>Chiang Mai</strong> is often considered the best — it has a huge number of excellent, well-organized classes, many at scenic farm settings outside the city. <strong>Bangkok</strong> offers everything from market-tour classes to upscale culinary experiences. The <strong>islands</strong> (Phuket, Krabi, Koh Samui) have classes too, often with a beachy, resort feel. Wherever you are, you'll find an option.</p>
+
+<!-- IMAGE_SLOT_2: Fresh Thai herbs, chilies, and curry paste ingredients -->
+
+<h2>How to choose a good class</h2>
+<p>Look for a class that <strong>includes a market tour</strong> (it adds a lot), has <strong>good recent reviews</strong>, offers a <strong>menu you're excited about</strong> (some let you choose your dishes), and keeps <strong>group sizes reasonable</strong> so you get hands-on time. Check whether it accommodates <strong>vegetarian or dietary needs</strong> if relevant. Farm-based classes outside the cities often include a lovely setting and a garden tour; city classes are more convenient. Both are great — pick based on your schedule and what you want to cook.</p>
+
+<h2>Is it worth it?</h2>
+<p>For most travelers, absolutely. It's affordable, fun, educational, and gives you a skill and memories that outlast the trip — far more lasting than a typical souvenir. Unless you have no interest in cooking whatsoever, a Thai cooking class is one of the easiest activities to recommend, and a highlight of many people's time in the country. Costs are reasonable; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is a Thai cooking class worth it?</summary><div><p>For most travelers, yes — it's fun, affordable, and educational, and you come away able to recreate Thai dishes at home. It's often a trip highlight and a far more lasting souvenir than typical purchases.</p></div></details>
+  <details><summary>What do you do in a Thai cooking class?</summary><div><p>Usually a market tour to learn the ingredients, then you cook several dishes yourself — typically a curry (often making the paste), a stir-fry, a soup, a salad, and a dessert — eating each as you go and taking home recipes.</p></div></details>
+  <details><summary>Where is the best place to take a cooking class in Thailand?</summary><div><p>Chiang Mai is often considered the best, with many excellent classes including scenic farm settings. Bangkok and the islands also offer great options, so you'll find one wherever you are.</p></div></details>
+  <details><summary>How long does a Thai cooking class take?</summary><div><p>Typically a half or full day, depending on whether it includes a market tour and how many dishes you make. You eat everything you cook, so it doubles as a substantial meal.</p></div></details>
+</section>
+
+
+----- SLUG: what-to-wear-thai-temples -----
+TITLE: What to Wear to Thai Temples (and Other Dress Rules)
+CATEGORY: temples-culture
+
+<p>Thailand's temples (wats) are active places of worship with a real dress code, and being turned away from a major sight like the Grand Palace because of your outfit is a common, avoidable disappointment. The rules are simple once you know them. Here's exactly what to wear to Thai temples, plus general dress guidance for your trip.</p>
+
+<!-- IMAGE_SLOT_1: Visitors appropriately dressed at a Thai temple -->
+
+<h2>The basic temple dress code</h2>
+<p>The core rule for everyone is to <strong>cover your shoulders and your knees</strong>. That means:</p>
+<p><strong>No bare shoulders</strong> — avoid tank tops, sleeveless shirts, and spaghetti straps. Sleeves (even short ones) or a covering layer are needed.</p>
+<p><strong>No exposed knees</strong> — shorts above the knee, short skirts, and short dresses aren't acceptable. Long trousers, long skirts, or below-the-knee shorts work.</p>
+<p>This applies to <strong>both men and women</strong>. It's about respect for a sacred space, not fashion, and it's enforced — especially at major temples.</p>
+
+<h2>What you'll need to remove</h2>
+<p>Before entering temple <strong>buildings</strong> (not just the grounds), you'll need to <strong>remove your shoes</strong> — so wear footwear that's easy to slip on and off, like sandals. Hats and sunglasses should also come off inside temple buildings. Socks are usually fine to keep on.</p>
+
+<!-- IMAGE_SLOT_2: Shoes left outside a temple entrance -->
+
+<h2>Extra notes for women</h2>
+<p>The shoulders-and-knees rule is the main thing for women too, but a couple of extras: clothing shouldn't be <strong>see-through or too tight</strong>, and at the most sacred sites you may want to err conservative. Importantly, <strong>women should never touch a monk</strong> or hand anything directly to one — place the item down for him to pick up, or pass it via a man. A <strong>scarf or sarong</strong> is the single most useful item to carry: it instantly covers shoulders or wraps as a skirt.</p>
+
+<h2>What if you're not dressed right?</h2>
+<p>Many major temples, including the Grand Palace, offer <strong>sarongs or cover-ups to rent or borrow</strong> at the entrance if you turn up underdressed — but this isn't guaranteed everywhere, can involve a queue or a deposit, and is best avoided. The easy solution is to <strong>carry a lightweight scarf or sarong</strong> in your bag whenever temples might be on the agenda, so you're always covered (literally).</p>
+
+<h2>General dress tips for Thailand</h2>
+<p>Outside temples, Thailand is relaxed but it helps to read the setting. <strong>Beachwear stays at the beach</strong> — cover up when walking through towns or to restaurants. In <strong>cities and rural areas</strong>, modest, lightweight clothing is respectful and practical in the heat. <strong>Some rooftop bars and upscale venues</strong> enforce smart-casual dress codes (no shorts, vests, or flip-flops). And lightweight, breathable fabrics that cover up also protect you from sun and mosquitoes. Dressing with a little awareness goes a long way in Thailand. For any cover-up purchases, a live converter helps with pricing:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What should I wear to temples in Thailand?</summary><div><p>Cover your shoulders and knees — no tank tops, short shorts, or short skirts, for both men and women. You'll also remove your shoes before entering temple buildings, so wear easy slip-on footwear.</p></div></details>
+  <details><summary>Can I rent appropriate clothing at temples?</summary><div><p>Many major temples, like the Grand Palace, offer sarongs or cover-ups to rent or borrow if you arrive underdressed — but it's not guaranteed everywhere. Carrying your own scarf or sarong is easier and more reliable.</p></div></details>
+  <details><summary>Do the temple dress rules apply to men?</summary><div><p>Yes — the shoulders-and-knees rule applies to everyone. Men should avoid tank tops and short shorts and wear sleeves and long trousers or below-the-knee shorts.</p></div></details>
+  <details><summary>What's the most useful thing to pack for temple visits?</summary><div><p>A lightweight scarf or sarong — it instantly covers bare shoulders or wraps around as a skirt, works for both men and women, and doubles as a beach and sun item.</p></div></details>
+</section>
+
+
+----- SLUG: best-time-to-visit-thailand -----
+TITLE: The Best Time to Visit Thailand
+CATEGORY: when-to-go
+
+<p>Thailand is a year-round destination, but <em>when</em> you go shapes your experience — the weather, the crowds, the prices, and even which part of the country is at its best. The country has three broad seasons, and crucially, its two coasts have different weather patterns. Here's how to choose the best time for your trip.</p>
+
+<!-- IMAGE_SLOT_1: A sunny Thai beach or temple under clear blue skies -->
+
+<h2>The three seasons</h2>
+<p>For most of Thailand, the year breaks into three seasons:</p>
+<p><strong>Cool and dry (roughly November to February):</strong> the peak and generally best season — pleasant temperatures, low humidity, little rain, and sunshine. It's the most reliable weather and also the busiest and priciest time.</p>
+<p><strong>Hot (roughly March to May):</strong> very hot and humid, building toward the rains, with temperatures that can be genuinely punishing, especially inland. Songkran (Thai New Year) in mid-April is a highlight of this season.</p>
+<p><strong>Rainy/monsoon (roughly June to October):</strong> the wet season, with downpours that are often short and heavy rather than all-day. Lush landscapes, fewer crowds, and lower prices are the upside.</p>
+
+<h2>The best months overall</h2>
+<p>For the most reliable weather across the country, <strong>November through February</strong> is the sweet spot — cool, dry, and sunny. This is peak season, so expect higher prices and more crowds, and book ahead. December and January in particular are prime time. If you want great weather and can travel then, this is the safest bet nationally.</p>
+
+<!-- IMAGE_SLOT_2: A lush green Thai landscape, suggesting the rainy season's upside -->
+
+<h2>The two coasts have different seasons</h2>
+<p>This is the key nuance for a beach trip. Thailand's <strong>two coasts have opposite rainy seasons</strong>:</p>
+<p>The <strong>Andaman coast</strong> (Phuket, Krabi, Phi Phi) is best roughly <strong>November to April</strong>, with peak monsoon around September–October.</p>
+<p>The <strong>Gulf coast</strong> (Koh Samui, Koh Phangan, Koh Tao) runs differently — often best <strong>mid-year</strong>, with its wettest stretch around October to December.</p>
+<p>So there's almost always a coast with good beach weather. If you're traveling in, say, July when the Andaman coast can be wet, head to the Gulf islands instead.</p>
+
+<h2>The north's timing</h2>
+<p>Northern Thailand (Chiang Mai) is best in the <strong>cool season (November to February)</strong>, when it's pleasant and clear — and can be genuinely chilly in the evenings. Crucially, <strong>avoid the burning season</strong> (roughly February to April), when agricultural fires cause poor air quality across the north. The lantern festivals (Yi Peng, Loy Krathong) usually fall in November, a beautiful but busy time.</p>
+
+<h2>Balancing weather, crowds, and prices</h2>
+<p>The trade-offs: <strong>peak season</strong> (Nov–Feb) gives the best weather but the highest prices and biggest crowds; <strong>shoulder months</strong> offer a good balance of decent weather and lower prices; and <strong>low/rainy season</strong> brings the cheapest prices, fewest crowds, and lush scenery, with the trade-off of rain (often manageable). For value with good weather, the shoulder periods are a savvy choice. Whenever you go, match your destinations to the season. For budgeting around seasonal prices, a live converter helps:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>When is the best time to visit Thailand?</summary><div><p>November to February — the cool, dry season — offers the most reliable weather nationwide, though it's also peak season with higher prices and crowds. December and January are prime.</p></div></details>
+  <details><summary>Do Thailand's coasts have different seasons?</summary><div><p>Yes — the Andaman coast (Phuket, Krabi) is best November–April, while the Gulf coast (Koh Samui) is often best mid-year. There's almost always a coast with good beach weather, so match your islands to your dates.</p></div></details>
+  <details><summary>When should I avoid visiting northern Thailand?</summary><div><p>The burning season, roughly February to April, when agricultural fires cause poor air quality around Chiang Mai. The cool season (November–February) is the best time for the north.</p></div></details>
+  <details><summary>Is it bad to visit Thailand in the rainy season?</summary><div><p>Not necessarily — the rains are often short, heavy downpours rather than all-day, and you get lush scenery, fewer crowds, and lower prices. Just pick the coast that's drier for your dates.</p></div></details>
+</section>
+
+
+----- SLUG: thailand-for-americans-first-timer-guide -----
+TITLE: Thailand for Americans: The Complete First-Timer's Guide
+CATEGORY: where-to-go
+
+<p>Thailand is one of the world's most rewarding first big international trips for Americans: it's affordable, welcoming, endlessly varied, and easier to travel than first-timers expect. From Bangkok's temples and street food to the northern mountains and the southern islands, it packs an incredible range into one country. This guide pulls together everything you need to plan a first trip.</p>
+
+<p><strong>Note:</strong> entry rules, advisories, and prices change. Verify current requirements with official sources before traveling.</p>
+
+<!-- IMAGE_SLOT_1: An iconic, welcoming Thailand scene — temple and skyline or island beach -->
+
+<h2>Entry: what Americans need</h2>
+<p>For tourism, U.S. passport holders enter Thailand <strong>visa-free</strong> under the visa-exemption scheme — no visa arranged in advance. You must complete the mandatory, free <strong>Thailand Digital Arrival Card (TDAC)</strong> online before arriving (use only the official site), and your passport should be valid at least six months out. The permitted length of visa-exempt stay has been changing in 2026, so confirm the current allowance on official sites near your travel date — a normal vacation fits comfortably within it.</p>
+
+<h2>When to go</h2>
+<p>The best overall weather is the <strong>cool, dry season (November to February)</strong> — also peak season. Remember the two coasts differ: the <strong>Andaman</strong> islands (Phuket, Krabi) are best November–April, the <strong>Gulf</strong> islands (Koh Samui) best mid-year. The north is best November–February; avoid its burning season (February–April).</p>
+
+<h2>Where to go</h2>
+<p>Thailand has three headline regions. <strong>Bangkok</strong>, the electric capital, for temples, street food, and markets. The <strong>north</strong> around <strong>Chiang Mai</strong> for culture, mountains, cooking classes, and ethical elephant sanctuaries. And the <strong>southern islands</strong> for beaches and boats. A classic first trip combines all three; with a week, do Bangkok plus one region.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Thailand tours and experiences -->
+
+<h2>How long and an itinerary shape</h2>
+<p><strong>Ten days</strong> is the sweet spot for a first trip — three days in Bangkok, three in the north, three on the islands, plus travel days, linked by short domestic flights. A week works for Bangkok plus one region; two weeks lets you go deeper or add a second island.</p>
+
+<h2>Getting around</h2>
+<p><strong>Fly</strong> between regions — domestic flights are cheap, frequent, and quick (1–1.5 hours versus 10+ overland). Locally, use the <strong>BTS Skytrain and river boats</strong> in Bangkok, <strong>Grab</strong> for ride-hailing, songthaews and metered taxis, and <strong>ferries</strong> to the islands. The scenic overnight train to Chiang Mai is a lovely option if you have time.</p>
+
+<!-- AFFILIATE_SLOT: skyscanner — domestic flights -->
+
+<h2>Money and costs</h2>
+<p>Thailand is <strong>great value</strong>. The big cost is the international flight; daily spending is low. It's largely <strong>cash-based</strong> for everyday purchases, with cards accepted in hotels and malls. Tipping is modest and not obligatory. Use ATMs wisely (withdraw larger amounts to limit fees). Prices and rates change, so check a live converter:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<h2>Food, safety, and culture</h2>
+<p><strong>Food</strong> is a highlight — eat street food fearlessly (busy stalls, cooked fresh) and try regional dishes; drink bottled water. Thailand is generally <strong>safe</strong>, with road accidents (especially scooters) and scams the main risks rather than violent crime — use Grab, be scam-aware, and get good travel insurance. Respect the <strong>culture</strong>: revere the monarchy, dress modestly at temples (cover shoulders and knees), mind the head-and-feet customs, and keep your cool. Thais are warm and forgiving of honest mistakes.</p>
+
+<h2>Your first-trip checklist</h2>
+<p>Before you go: confirm passport validity and current entry rules; complete the free TDAC; book flights early and domestic flights ahead; choose your season and regions; arrange travel insurance and any recommended vaccines; set up an eSIM or plan to buy a SIM; and pack light, breathable clothing plus temple-appropriate cover-ups. Do that, keep an open and easygoing attitude, and Thailand will likely become one of your favorite trips. For all the budgeting, a live converter keeps the baht clear:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is Thailand a good first international trip for Americans?</summary><div><p>Yes — it's affordable, welcoming, varied, and easier to travel than many expect, with good tourist infrastructure. The mix of cities, culture, and beaches makes it a rewarding and manageable first big trip.</p></div></details>
+  <details><summary>Do Americans need a visa for Thailand?</summary><div><p>For tourism, no — you enter visa-free under the exemption, but must complete the free online TDAC and have a passport valid six months out. Confirm the current permitted stay on official sites, as it's been changing.</p></div></details>
+  <details><summary>How long should a first trip to Thailand be?</summary><div><p>Ten days is ideal for covering Bangkok, the north, and the islands without rushing. A week works for Bangkok plus one region; two weeks lets you go deeper or add a second island.</p></div></details>
+  <details><summary>How much does a Thailand trip cost?</summary><div><p>It's excellent value — the international flight is the main expense, while daily costs for food, transport, and even accommodation are low. Prices and exchange rates change, so check current figures when booking.</p></div></details>
+</section>
+
+
+----- SLUG: how-many-days-in-thailand -----
+TITLE: How Many Days Do You Need in Thailand?
+CATEGORY: where-to-go
+
+<p>"How many days do I need in Thailand?" is one of the first questions travelers ask, and the honest answer is: it depends on what you want to see. Thailand is a large, varied country, and the right length depends on whether you want one region or all three. Here's a breakdown by trip length to help you decide.</p>
+
+<!-- IMAGE_SLOT_1: A montage feel of Thailand — temple, mountains, and island -->
+
+<h2>The short answer</h2>
+<p>For a first trip that captures the essence of Thailand, <strong>ten days to two weeks is ideal</strong>. That's enough to combine Bangkok with both the northern mountains and the southern islands at a comfortable pace. If you have less time, you can absolutely still have a great trip by focusing on fewer regions — and if you have more, Thailand will happily fill it.</p>
+
+<h2>A long weekend or 3–4 days</h2>
+<p>With just a few days, <strong>focus on one place</strong> — almost certainly <strong>Bangkok</strong>, which has more than enough to fill three or four days (temples, street food, markets, day trips). Alternatively, a short trip works for a single beach destination or Chiang Mai. Don't try to combine regions in this timeframe; you'd spend it traveling. A few days is enough for a taste, often as a stopover or an add-on to another trip.</p>
+
+<h2>One week (7 days)</h2>
+<p>A week lets you do <strong>Bangkok plus one other region</strong> comfortably. The two classic one-week trips are <strong>Bangkok and the beaches</strong> (three days in the city, four on a southern island) or <strong>Bangkok and the north</strong> (the city plus Chiang Mai). You can't do both the north and the islands well in a week — the transit eats too much time — so pick the one that appeals most.</p>
+
+<!-- IMAGE_SLOT_2: A traveler looking out over a Thai landscape, planning feel -->
+
+<h2>Ten days — the sweet spot</h2>
+<p>Ten days is the <strong>ideal first-trip length</strong>, because it lets you see all three headline regions without rushing: roughly three days in Bangkok, three in the north around Chiang Mai, and three on the southern islands, with travel days and short domestic flights linking them. This is the most popular first-timer itinerary for good reason — it's balanced, varied, and unhurried.</p>
+
+<h2>Two weeks</h2>
+<p>With <strong>two weeks</strong>, you can do everything ten days offers plus go deeper — more time in the north, a second island, central Thailand sights like Ayutthaya, and built-in rest days. It's enough to slow down and travel rather than sightsee, and many travelers feel it's the most satisfying length if you can manage it.</p>
+
+<h2>Three weeks or more</h2>
+<p><strong>Three weeks-plus</strong> lets you really explore — adding central Thailand, the deep north, multiple islands, and time to linger in places you love, or to take up a diving course or other multi-day activities. Note that longer stays approach the visa-exemption limits (which have been changing), so verify current rules for trips beyond a couple of weeks.</p>
+
+<h2>How to decide</h2>
+<p>Work backward from what you most want: if it's <strong>just beaches</strong>, even a week on the islands is plenty; if you want the <strong>full Thailand experience</strong>, give it ten days to two weeks; if you want to <strong>travel slowly and deeply</strong>, three weeks rewards you. Whatever your length, the key is not to over-pack the itinerary — fewer regions done well beats a frantic dash. For budgeting any length of trip, a live converter helps:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>How many days do you need in Thailand?</summary><div><p>Ten days to two weeks is ideal for a first trip combining Bangkok, the north, and the islands at a comfortable pace. With less time, focus on fewer regions; with more, you can go deeper.</p></div></details>
+  <details><summary>Is one week enough for Thailand?</summary><div><p>Yes, for Bangkok plus one region — either the beaches or the north, not both (the transit eats too much time). The two classic one-week trips are Bangkok and the islands, or Bangkok and Chiang Mai.</p></div></details>
+  <details><summary>Is 10 days enough for Thailand?</summary><div><p>It's the sweet spot — enough to see Bangkok, the north, and the southern islands without rushing, linked by short domestic flights. It's the most popular first-timer itinerary length.</p></div></details>
+  <details><summary>Is two weeks too long for Thailand?</summary><div><p>Not at all — two weeks lets you see all three regions plus go deeper, add a second island or central Thailand, and build in rest days. Many find it the most satisfying length.</p></div></details>
+</section>

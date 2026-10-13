@@ -1,0 +1,93 @@
+{
+  "_README": "Accumulated local ground truth for this project. Every entry OVERRIDES facts.json and any AI output, permanently (hard rule 8). Stage 3 MUST load this alongside facts.json before writing any batch. Append a record whenever the user corrects a fact, a recommendation, or a recurring style/voice mistake \u2014 future articles inherit the fix automatically.",
+  "schema_version": 3,
+  "project": "barcelonaforamericans",
+  "corrections": [
+    {
+      "id": 1,
+      "date": "2026-06-12",
+      "scope": "style",
+      "wrong": "AI panel members named specific websites as 'scam sites' (including at least one arguably legitimate info site)",
+      "right": "Never name specific domains as scams. Warn generically about paid third-party 'ETIAS/visa application' sites and link ONLY the official EU ETIAS URL",
+      "applies_to": "all"
+    },
+    {
+      "id": 2,
+      "date": "2026-06-12",
+      "scope": "fact",
+      "wrong": "Press claims of tourist tax 'up to \u20ac15/night' used as a citable figure",
+      "right": "Tourist-tax numbers come exclusively from the official Catalan tax agency (IEET) table, refreshed at write time",
+      "applies_to": "barcelona-tourist-tax-explained, where-to-stay articles, luxury-hotels-barcelona, all"
+    },
+    {
+      "id": 3,
+      "date": "2026-06-12",
+      "scope": "fact",
+      "wrong": "Writing Camp Nou tour details from memory mid-renovation",
+      "right": "camp-nou-tour-guide requires a mandatory live verification of tour/stadium status at write time; until then other articles mention Camp Nou only with 'check current tour status' framing",
+      "applies_to": "camp-nou-tour-guide, all"
+    },
+    {
+      "id": 4,
+      "date": "2026-06-12",
+      "scope": "fact",
+      "wrong": "Assuming T-casual or standard metro tickets work for the airport metro",
+      "right": "L9 Sud airport stations require a special Airport Ticket (~\u20ac5.50-5.90, serve_live); T-casual and standard singles are NOT valid at Aeroport T1/T2. Hola Barcelona passes DO include the airport metro",
+      "applies_to": "bcn-airport-to-city, barcelona-metro-transit-guide"
+    },
+    {
+      "id": 5,
+      "date": "2026-06-12",
+      "scope": "style",
+      "wrong": "Second-gate model (gemini) returned a fully hallucinated review: invented article slugs and quoted sentences that do not exist in the batch (likely input truncation on the 83k-char paste)",
+      "right": "Gate prompts must (a) be split so each paste stays well under free-tier input limits, (b) require the model to FIRST list the exact slugs it sees as a canary, and (c) require verbatim quotes. Every gate response is mechanically validated: quoted sentences must exist in the batch and slugs must match, else the review is rejected unread",
+      "applies_to": "all (pipeline process)"
+    },
+    {
+      "id": 6,
+      "date": "2026-06-12",
+      "scope": "style",
+      "wrong": "Gemini (free tier) failed the slug canary on BOTH split gate pastes \u2014 twice hallucinating non-existent articles, even recycling facts.json dispute content as fake findings",
+      "right": "Use DeepSeek as the default second-gate reader for this project. Any gate reply whose step-0 slug list does not exactly match the batch is rejected unread, regardless of model",
+      "applies_to": "all (pipeline process)"
+    },
+    {
+      "id": 7,
+      "date": "2026-06-12",
+      "scope": "style",
+      "wrong": "In-body <figure> image URLs were written with the literal placeholder res.cloudinary.com/CLOUD/ because the cloud name was not yet known when figures were generated; broke all body-image previews in admin",
+      "right": "Always substitute the real Cloudinary cloud name (from SITE_CONFIG.cloudinary.cloud / NEXT_PUBLIC_CLOUDINARY_CLOUD) into figure URLs BEFORE building the import file. Never ship a CLOUD/<placeholder> URL. Better: store only the public_id and let the site build the URL at render time, matching how featured_image works",
+      "applies_to": "all (publishing)"
+    },
+    {
+      "id": 8,
+      "date": "2026-06-12",
+      "scope": "style",
+      "wrong": "upload-batch.mjs defaulted CLOUDINARY_FOLDER to the literal previous site (vmarokko) and derived the preset name as <BASE>_articles (plural), while the actual preset was <site>_article (singular); images silently uploaded to vmarokko/articles/<site>/articles/<slug>",
+      "right": "Per upload run, set CLOUDINARY_FOLDER=<thissite> explicitly. Template fix: upload-batch.mjs must REQUIRE CLOUDINARY_FOLDER (no vmarokko fallback \u2014 throw if unset) and the preset name must match what is actually created in Cloudinary. Standardize preset names to <site>_articles + <site>_media at site setup. Presets are SIGNED across this network (script signs); do not switch to unsigned",
+      "applies_to": "all (publishing, cloudinary setup)"
+    },
+    {
+      "id": 9,
+      "date": "2026-06-13",
+      "scope": "style",
+      "wrong": "Gemini failed the slug canary again on batch 2 (both parts) \u2014 invented slugs from future/other batches (bcn-airport-to-city, barcelona-tourist-tax-explained, luxury-hotels-barcelona, camp-nou-tour-guide) and recycled corrections.json content as fake findings",
+      "right": "Confirmed: Gemini free-tier is unusable as a gate reader for this project. Grok passed both batch-2 parts with correct canaries and clean reads \u2014 Grok and DeepSeek are the approved gate readers; Gemini is filler-only",
+      "applies_to": "all (pipeline process)"
+    },
+    {
+      "id": 10,
+      "date": "2026-06-13",
+      "scope": "style",
+      "wrong": "Tourist-tax articles mentioned the press \"\u20ac15\" figure even to debunk it; gate readers split on whether corrections #2 allows surfacing the banned figure at all",
+      "right": "Do not surface the \"\u20ac15\" press figure even to correct it. State only the current official IEET rate and, if useful, note rates are set by the Catalan tax authority and scheduled to keep rising \u2014 without citing the specific future-ceiling number. Verified official Barcelona rates effective 1 Apr 2026: 5-star \u20ac12.00, 4-star \u20ac8.40, tourist apartments \u20ac9.50, youth hostels \u20ac6.00; per person, ages 16+, first 7 nights",
+      "applies_to": "all (tourist-tax content)"
+    },
+    {
+      "id": 11,
+      "rule": "Magic Fountain (Font M\u00e0gica, Montju\u00efc) shows have been subject to drought/water-restriction SUSPENSION. NEVER present showtimes or the show as definitely running. Always hedge: 'when/if running, check current status' + note seasonal schedule + water-restriction suspension. Applies to montjuic, rainy-day, best-views, with-kids, free-things, festivals \u2014 any article mentioning it.",
+      "added_batch": 14,
+      "source": "gate finding (DeepSeek) batch 14; facts.json _open_questions flag"
+    }
+  ]
+}

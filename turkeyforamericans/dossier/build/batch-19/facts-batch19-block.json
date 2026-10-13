@@ -1,0 +1,170 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 19,
+  "swamp": "S-licence",
+  "facts": {
+    "driving.speed_limits": {
+      "value": "Passenger cars (M1): 50 km/h in built-up areas; 90 km/h on ordinary intercity roads; 110 km/h on dual carriageways; 130 km/h (some YİD motorways 140 km/h) on motorways.",
+      "status": "verified",
+      "source_url": "https://www.kgm.gov.tr/Sayfalar/KGM/SiteTr/Trafik/HizSinirlari.aspx",
+      "notes": "CORRECTS deepseek, which gave 120 km/h on motorways and no 110 band at all, explicitly 'based on common knowledge, no official source opened'. grok opened the official Karayollari Genel Mudurlugu speed-limit table: 50 built-up, 90 ordinary intercity, 110 dual carriageway, 130 motorway (some build-operate-transfer motorways 140)."
+    },
+    "driving.alcohol_limit": {
+      "value": "0.50 promil (0.5 g/L) for private-car drivers; 0.20 promil for drivers of commercial vehicles and other non-private categories.",
+      "status": "verified",
+      "source_url": "https://trafik.gov.tr/alkollu-arac-kullanimi",
+      "notes": "CORRECTS deepseek, which said 0.00 promil for commercial drivers from memory. The official Emniyet Genel Mudurlugu traffic page gives 0.20 promil for commercial and other non-private categories, not zero. 0.50 for private cars is agreed."
+    },
+    "licence.foreign_licence_period": {
+      "value": "Foreign visitors may drive on a foreign licence for a maximum of six months from the date of entry into Turkey. After six months a Turkish licence is required.",
+      "status": "verified",
+      "source_url": "https://www.resmigazete.gov.tr/eskiler/2020/06/20200605-4.htm",
+      "notes": "BOTH PANELS VERIFIED against Resmi Gazete 5 June 2020 (Highway Traffic Regulation, Article 88). Six months from date of entry, then a Turkish licence is required."
+    },
+    "licence.turkey_requires_idp": {
+      "value": "Turkish law does not mandate an IDP for a US licence holder during the six-month visitor period; the foreign licence itself is recognised for that period. An official Turkish translation is required only after six months of presence for Turkish citizens, not as a general IDP requirement for short-stay foreigners.",
+      "status": "verified",
+      "source_url": "https://www.resmigazete.gov.tr/eskiler/2020/06/20200605-4.htm",
+      "notes": "BOTH PANELS VERIFIED, same source. THIS IS THE SWAMP'S CORE FACT AND IT CONTRADICTS THE FREE CORPUS: renting-car-turkey says an IDP is 'recommended and sometimes required'. Turkish law does not mandate one for a US licence holder inside the six-month visitor period. What a rental company requires is a separate, contractual question."
+    },
+    "licence.idp_us_issuers": {
+      "value": "Only AAA (American Automobile Association) and AATA (American Automobile Touring Alliance) are authorised by the US Department of State. Fee is USD 20.",
+      "status": "verified",
+      "source_url": "https://www.aaa.com/vacation/idpapplc.html",
+      "notes": "AAA official application page states the $20 fee and State Department authorisation. | deepseek returned null or unsourced on this; grok opened the AAA application page, which is the State-Department-authorised issuer and therefore the right source for a US traveller."
+    },
+    "licence.idp_validity": {
+      "value": "One year from the date of issue (or until the domestic licence expires, whichever is earlier). Not renewable; a new application is required. May be issued up to six months in advance. Can be obtained by mail from within the US.",
+      "status": "verified",
+      "source_url": "https://www.aaa.com/vacation/idpapplc.html",
+      "notes": "AAA official IDP application form and accompanying text. | deepseek returned null or unsourced on this; grok opened the AAA application page, which is the State-Department-authorised issuer and therefore the right source for a US traveller."
+    },
+    "licence.idp_must_accompany": {
+      "value": "Yes. The IDP is valid only when carried together with the valid domestic (US) driving licence.",
+      "status": "verified",
+      "source_url": "https://www.aaa.com/vacation/idpapplc.html",
+      "notes": "Explicit statement on the AAA IDP application form. | deepseek returned null or unsourced on this; grok opened the AAA application page, which is the State-Department-authorised issuer and therefore the right source for a US traveller."
+    },
+    "licence.turkey_convention_status": {
+      "value": "Turkey is a party to the 1968 Vienna Convention on Road Traffic (accession deposited 22 January 2013, entry into force 22 January 2014). It is also a party to the 1949 Geneva Convention on Road Traffic.",
+      "status": "verified",
+      "source_url": "https://treaties.un.org/doc/Publication/UNTS/Volume%202891/volume-2891-A-15705.pdf",
+      "notes": "grok opened the UN Treaty Series depositary notification; deepseek answered from general knowledge. Turkey is party to BOTH the 1949 Geneva and 1968 Vienna conventions."
+    },
+    "licence.idp_legal_nature": {
+      "value": "An International Driving Permit is a certified multilingual translation of a domestic driving licence issued under the 1949 Geneva or 1968 Vienna Conventions on Road Traffic; it is not a standalone driving entitlement and is valid only when accompanied by the domestic licence.",
+      "status": "agreed_stable",
+      "source_url": null,
+      "notes": "AGREED by both: a certified translation under the conventions, not a standalone entitlement, valid only alongside the domestic licence."
+    },
+    "licence.categories_by_engine": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "DO NOT PRINT A CATEGORY TABLE. grok returned null (no official table opened). deepseek gave A1 up to 125cc/11kW from a partial mevzuat search. My own search found the sources in open contradiction: several describe A1 as up to 125cc, while an expat motoring file and the RAC both state A1 covers only below 50cc and that anything over 50cc needs full class A. A Turkish outlet also reports a 2024 Official Gazette change letting a class-B holder of 2+ years ride up to 125cc under conditions. No .gov.tr table was opened by anyone. Report the STRUCTURE (classified by engine size and power) and the uncertainty; print no threshold."
+    },
+    "licence.car_licence_covers_scooter": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL on an official basis. deepseek asserted a car licence does NOT cover a scooter; my search found a reported 2024 regulation change pointing the other way for 125cc under conditions, plus sources saying anything over 50cc needs class A. Genuinely unsettled in the open sources. THE DECISION-RELEVANT POINT SURVIVES WITHOUT A NUMBER: a US car licence is not self-evidently a motorcycle entitlement in Turkey, and the insurer's exclusion in batch 16 is written against the licence CATEGORY. Report that; do not resolve the cc threshold."
+    },
+    "licence.atv_quad_status": {
+      "value": "ATVs and quads are classified as motor vehicles in Turkish law. For use on public roads, they require registration, a licence plate, and the driver must hold a valid driving licence (usually Class B for four-wheeled ATVs). Off-road use on public roads is prohibited unless registered and insured.",
+      "status": "verify_recommended",
+      "source_url": "https://www.mevzuat.gov.tr",
+      "notes": "SINGLE SOURCE, partial (grok null). deepseek read a mevzuat search result indicating off-road ATVs are barred from traffic. Report only that ATVs on public roads need registration, plates and a licence, and that off-road machines are not road-legal. No category claim."
+    },
+    "rental.minimum_age": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL, and both stated WHY: this is contractual/commercial practice, not statute. No Turkish regulation sets a minimum rental age, a licence-holding period, a deposit, a document list, or the terms of a collision damage waiver. THE ABSENCE IS THE FINDING — the rental desk's requirements are the one threshold that cannot be looked up, because each company writes its own."
+    },
+    "rental.licence_held_duration": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL, and both stated WHY: this is contractual/commercial practice, not statute. No Turkish regulation sets a minimum rental age, a licence-holding period, a deposit, a document list, or the terms of a collision damage waiver. THE ABSENCE IS THE FINDING — the rental desk's requirements are the one threshold that cannot be looked up, because each company writes its own."
+    },
+    "rental.credit_card_requirement": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL, and both stated WHY: this is contractual/commercial practice, not statute. No Turkish regulation sets a minimum rental age, a licence-holding period, a deposit, a document list, or the terms of a collision damage waiver. THE ABSENCE IS THE FINDING — the rental desk's requirements are the one threshold that cannot be looked up, because each company writes its own."
+    },
+    "rental.documents_inspected": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL, and both stated WHY: this is contractual/commercial practice, not statute. No Turkish regulation sets a minimum rental age, a licence-holding period, a deposit, a document list, or the terms of a collision damage waiver. THE ABSENCE IS THE FINDING — the rental desk's requirements are the one threshold that cannot be looked up, because each company writes its own."
+    },
+    "rental.cross_border_restrictions": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL, and both stated WHY: this is contractual/commercial practice, not statute. No Turkish regulation sets a minimum rental age, a licence-holding period, a deposit, a document list, or the terms of a collision damage waiver. THE ABSENCE IS THE FINDING — the rental desk's requirements are the one threshold that cannot be looked up, because each company writes its own."
+    },
+    "insurance.cdw_and_excess": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL, and both stated WHY: this is contractual/commercial practice, not statute. No Turkish regulation sets a minimum rental age, a licence-holding period, a deposit, a document list, or the terms of a collision damage waiver. THE ABSENCE IS THE FINDING — the rental desk's requirements are the one threshold that cannot be looked up, because each company writes its own."
+    },
+    "insurance.standard_exclusions": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL, and both stated WHY: this is contractual/commercial practice, not statute. No Turkish regulation sets a minimum rental age, a licence-holding period, a deposit, a document list, or the terms of a collision damage waiver. THE ABSENCE IS THE FINDING — the rental desk's requirements are the one threshold that cannot be looked up, because each company writes its own."
+    },
+    "insurance.deposit_vs_excess": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL, and both stated WHY: this is contractual/commercial practice, not statute. No Turkish regulation sets a minimum rental age, a licence-holding period, a deposit, a document list, or the terms of a collision damage waiver. THE ABSENCE IS THE FINDING — the rental desk's requirements are the one threshold that cannot be looked up, because each company writes its own."
+    },
+    "insurance.compulsory_third_party": {
+      "value": "Compulsory motor third-party liability insurance (Zorunlu Mali Sorumluluk Sigortası / Trafik Sigortası) is required for every motor vehicle. It covers liability for bodily injury and property damage caused to third parties; it does not cover damage to the insured vehicle itself or the driver’s own injuries.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "AGREED by both on substance (Zorunlu Mali Sorumluluk / Trafik Sigortasi: third-party bodily injury and property damage, not the insured vehicle or the driver's own injuries). Neither opened the statutory text, so verify_recommended. This is the ONLY statutory layer in Turkish rental insurance; everything above it is a contractual product."
+    },
+    "tolls.hgs_system": {
+      "value": "The HGS (Hızlı Geçiş Sistemi) is an electronic toll collection system for motorways and bridges in Turkey. Vehicles are equipped with an HGS sticker (etiket) linked to a prepaid account. Toll amounts are deducted automatically as the vehicle passes through toll plazas.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/yonetmelik/7.5.23336.pdf",
+      "notes": "deepseek opened an official mevzuat regulation on toll collection from foreign-plated vehicles which defines HGS and OGS; grok described the system without a source. deepseek's version taken."
+    },
+    "tolls.unpaid_penalty": {
+      "value": "If a toll goes unpaid (e.g., insufficient balance), it constitutes an 'ihlalli geçiş' (violation passage). The vehicle owner is sent a notice and must pay the toll plus an administrative fine within a grace period (typically 15 days). If unpaid, the fine increases and may be referred to enforcement.",
+      "status": "verify_recommended",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/yonetmelik/7.5.23336.pdf",
+      "notes": "SINGLE SOURCE and PARTIAL (grok null). deepseek read the regulation's definition of 'ihlalli gecis' but could not open the amounts or the grace period. Report the MECHANISM (an unpaid pass becomes a violation, notified to the registered owner, with a surcharge) and print no figure or number of days."
+    },
+    "driving.seatbelt_phone_childseat": {
+      "value": "Seatbelts are mandatory for all occupants. Mobile phone use while driving is prohibited except with hands-free systems. Child seats are mandatory for children under 150 cm or under 36 kg, with specific requirements by age/weight.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "No official source opened. Based on common knowledge. | SINGLE SOURCE, unsourced or commercial (grok null on all four, noting the statutory text was not opened). Report as ordinary practice and general rule; attach no citation and no figure."
+    },
+    "driving.helmet_law": {
+      "value": "Helmets are mandatory for motorcycle and scooter riders and passengers on all roads.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "No official source opened. Based on common knowledge. | SINGLE SOURCE, unsourced or commercial (grok null on all four, noting the statutory text was not opened). Report as ordinary practice and general rule; attach no citation and no figure."
+    },
+    "fines.how_they_reach_renter": {
+      "value": "Traffic and parking fines incurred in a rental car are sent to the vehicle owner (the rental company). The rental company then identifies the renter from the rental agreement and passes on the fine, typically adding an administrative fee. The renter is responsible for payment.",
+      "status": "verify_recommended",
+      "source_url": "https://www.europcar.com.tr",
+      "notes": "Based on rental company explanation. No official regulation on rental company fees opened. | SINGLE SOURCE, unsourced or commercial (grok null on all four, noting the statutory text was not opened). Report as ordinary practice and general rule; attach no citation and no figure."
+    },
+    "accident.legal_requirements": {
+      "value": "In a traffic accident, Turkish law requires: (1) Stopping the vehicle and securing the scene; (2) Providing first aid if needed; (3) Reporting the accident to the police if there are injuries or significant damage. For minor material-damage-only accidents, parties can fill out a joint accident report (trafik kazası tespit tutanağı) and move vehicles.",
+      "status": "verify_recommended",
+      "source_url": "https://www.seddk.gov.tr",
+      "notes": "Based on general information. Official procedure not fully opened. | SINGLE SOURCE, unsourced or commercial (grok null on all four, noting the statutory text was not opened). Report as ordinary practice and general rule; attach no citation and no figure."
+    }
+  }
+}

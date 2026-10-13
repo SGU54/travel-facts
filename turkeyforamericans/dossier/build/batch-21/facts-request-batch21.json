@@ -1,0 +1,166 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 21,
+  "swamp": "S-money2",
+  "_INSTRUCTIONS": "Return ONE JSON object with exactly these keys. For each: {value, status, source_url, notes}. status is one of verified | verify_recommended | serve_live | agreed_stable. DEFAULT TO verify_recommended. Mark verified ONLY if source_url is an OFFICIAL source you actually opened. If you cannot source a value, return null and list the key in _open_questions. Do NOT estimate. Do NOT average two sources. For inflation and exchange data prefer TUIK (the Turkish statistical institute) and the TCMB (central bank); for bank charges prefer the banks' own published tariff pages. A comparison site, a fintech blog or a travel forum is NOT official.",
+  "_CALIBRATION": "Track record on this project: batch 16 returned 1/1 and 4/5 verified-with-official-source; batch 17 3/3 and 3/3; batch 18 6/6 and 7/7 with both models locating the governing regulation itself; batch 19 3/3 and 8/8. That is the standard. Before these prompts were hardened, a Thailand panel marked 24 of 40 verified with only 2 officially sourced and all 22 others were downgraded.",
+  "_WHY_THIS_LOOKS_ODD": "This asks for COMPONENTS and no recommendations on purpose. The articles report mechanics; the paid guide makes the calls. Do not add advice, rankings or 'you should' framing to any notes field.",
+  "_open_questions": [],
+  "facts": {
+    "money.turkish_atm_fee": {
+      "_want": "The charge a Turkish bank levies on a foreign card cash withdrawal, and whether it differs between major Turkish banks.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.atm_fee_by_network": {
+      "_want": "Whether the Turkish ATM charge differs by card network (Visa vs Mastercard) on the same machine.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.home_bank_fee_structure": {
+      "_want": "The typical structure of a US bank's foreign ATM charge: fixed fee, percentage, or both.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.fx_margin": {
+      "_want": "How the foreign exchange margin on a card withdrawal is applied and by whom, separate from any fee.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.withdrawal_limits": {
+      "_want": "Per-withdrawal and per-day cash limits at Turkish ATMs for foreign cards.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.dcc_mechanism": {
+      "_want": "How dynamic currency conversion is presented at Turkish ATMs and card terminals, and who sets the rate used.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.card_acceptance_sectors": {
+      "_want": "Where card payment is reliably accepted in Turkey and where it is not.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.cash_only_contexts": {
+      "_want": "The settings a visitor meets where cash is required.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.regional_card_variation": {
+      "_want": "How card acceptance varies between major cities, resort areas and smaller towns.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.contactless_availability": {
+      "_want": "Contactless and mobile payment availability in Turkey.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.card_decline_causes": {
+      "_want": "Common causes of a foreign card being declined in Turkey.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.inflation_rate_recent": {
+      "_want": "Turkey's consumer price inflation over a recent stated period, from the official statistics agency.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.repricing_frequency": {
+      "_want": "How frequently consumer prices are revised in practice in a high-inflation environment.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.foreign_currency_pricing": {
+      "_want": "Which goods or services are lawfully priced in foreign currency in Turkey and which must be in lira.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.exchange_rate_recent": {
+      "_want": "The lira's movement against the US dollar over a recent stated period.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.exchange_offices": {
+      "_want": "How Turkish exchange offices (doviz burosu) operate, how the spread is presented, and whether commission is charged.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.bank_counter_exchange": {
+      "_want": "What a Turkish bank counter requires to exchange currency for a foreigner.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.airport_vs_city_exchange": {
+      "_want": "The structural difference between airport and city exchange rates.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.currency_import_declaration": {
+      "_want": "Rules on bringing foreign currency into Turkey and any declaration threshold.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.leftover_lira": {
+      "_want": "Rules or practicalities on converting or exporting leftover Turkish lira.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.fraud_hold_triggers": {
+      "_want": "What typically triggers a fraud hold on a foreign card used in Turkey.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "money.travel_notice_relevance": {
+      "_want": "Whether advance travel notice to a card issuer is still required or effective.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    }
+  }
+}

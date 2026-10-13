@@ -1,0 +1,1121 @@
+{
+  "_README": "Article plan for moroccoforamericans. schema_version 5 = swamp layer (v4) + VEIN layer (3b-vein-and-citability.md). The 20 published rows were reconstructed from the 2026-08-11 DB export. The planned rows RECOVER 19 slugs from the original locked 70-article plan, found as dangling /article/ links inside the published corpus (they 404 today) — `inbound_links` counts how many published articles already point at each. Reconcile against the local article-list.json before writing batch 5. Target: 80-100 articles for a 36-40pp dossier.",
+  "schema_version": 5,
+  "project": "moroccoforamericans",
+  "swamps": [
+    {
+      "id": "money",
+      "name": "The extraction economy",
+      "one_liner": "No price is a price, and you arrive unable to prepare — every transaction is negotiated in cash you could only get on landing."
+    },
+    {
+      "id": "desert",
+      "name": "The Sahara commitment",
+      "one_liner": "The desert trip is booked weeks ahead, costs a day each way, and the choice of dune field decides the whole middle of the itinerary."
+    },
+    {
+      "id": "base",
+      "name": "Where you sleep",
+      "one_liner": "Riad vs hotel, inside the medina vs outside, decides walkability, taxi cost and how much hassle you meet per day."
+    },
+    {
+      "id": "guides",
+      "name": "Who is being paid by whom",
+      "one_liner": "Guided, independent or hybrid — and behind it, the question of who pays the person walking you around."
+    },
+    {
+      "id": "transport",
+      "name": "Moving between cities",
+      "one_liner": "Train, CTM coach, grand taxi or private driver, each with a different price logic and a different failure mode."
+    }
+  ],
+  "vein": {
+    "thesis": "In Morocco, no price is a price — and you arrive unable to prepare for that.",
+    "measured": {
+      "headroom": 5.9,
+      "corpus_at_audit": 20,
+      "date": "2026-08-11",
+      "note": "Ranked against 3 rivals at an equal 4 themes: distances 1.5 (DEAD — 55% of articles already join it), guided-vs-independent 2.9, closed currency 3.9, extraction 5.9. Re-run at 40 articles.",
+      "real_joins_in_corpus": 0,
+      "join_note": "Article-level co-mention flags 4/20, but a 2-sentence-window read finds ZERO real joining passages — the headroom is genuine. Keyword co-presence is not a join (10th recorded case).",
+      "reaudit": {
+        "headroom": 17.7,
+        "corpus_at_audit": 41,
+        "date": "2026-08-11",
+        "prejoins": 0,
+        "note": "Re-audit after batches 5-8 wrote dedicated articles for all four bricks. Headroom ROSE 5.9->17.7: the new articles cover each piece separately without joining them, exactly as intended. Thesis confirmed STRONG."
+      },
+      "reaudit_69": {
+        "headroom": 15.6,
+        "corpus_at_audit": 69,
+        "date": "2026-08-11",
+        "prejoins": 0,
+        "scatter": 0.31,
+        "note": "Third audit (20->5.9, 41->17.7, 54->16.0, 69->15.6). Still STRONG, 0 pre-joins. Healthy slight drift as brick coverage deepens."
+      }
+    },
+    "max_pieces_per_article": 2,
+    "pieces": [
+      {
+        "id": "closed-currency",
+        "name": "the currency you cannot buy in advance",
+        "match": "closed currency|can't (?:buy|get) dirham|before you arrive|before arriving|export (?:cap|limit)|2,000 MAD",
+        "carried_by": [
+          "moroccan-dirham-money-guide"
+        ]
+      },
+      {
+        "id": "cash-cost",
+        "name": "what carrying cash actually costs",
+        "match": "\\bATM\\b|withdraw|cash machine|DCC|dynamic currency|tip(?:ping)?\\b|gratuity|small bills",
+        "carried_by": []
+      },
+      {
+        "id": "commission",
+        "name": "who is paying the person guiding you",
+        "match": "commission|faux guide|fake guide|unofficial guide|showroom|kickback",
+        "carried_by": [
+          "morocco-guided-vs-independent"
+        ]
+      },
+      {
+        "id": "anchor-price",
+        "name": "the opening price",
+        "match": "haggl|bargain|negotiat|opening price|asking price|first price|markup|overpay",
+        "carried_by": [
+          "how-to-haggle-morocco-souks",
+          "morocco-trip-cost"
+        ]
+      }
+    ]
+  },
+  "articles": [
+    {
+      "title": "The Classic 10-Day Morocco Itinerary for First-Timers",
+      "slug": "10-day-morocco-itinerary",
+      "category_slug": "first-timer-itineraries",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "desert",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "7 Days in Morocco: The Best Short First Trip",
+      "slug": "7-day-morocco-itinerary",
+      "category_slug": "first-timer-itineraries",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "desert",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Best Time to Visit Morocco: Month-by-Month Weather Guide",
+      "slug": "best-time-to-visit-morocco",
+      "category_slug": "when-to-go",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Chefchaouen: Visiting Morocco's Blue City",
+      "slug": "chefchaouen-blue-city-guide",
+      "category_slug": "chefchaouen",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Fez for First-Timers: The Complete Guide",
+      "slug": "fez-first-time-guide",
+      "category_slug": "fez",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "base",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Flying to Morocco from the US: Routes, Hubs, and What to Expect",
+      "slug": "flights-to-morocco-from-usa",
+      "category_slug": "flights-and-arrival",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "transport",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Getting Around Morocco: Trains, Buses, and Grand Taxis Explained",
+      "slug": "getting-around-morocco-transport",
+      "category_slug": "trains-buses-taxis",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "How to Haggle in Moroccan Souks Without Stress",
+      "slug": "how-to-haggle-morocco-souks",
+      "category_slug": "safety-and-scams",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Is Morocco Safe for American Tourists? An Honest Guide",
+      "slug": "is-morocco-safe",
+      "category_slug": "safety-and-scams",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "money",
+      "handoff": "seed",
+      "piece": "commission"
+    },
+    {
+      "title": "Marrakech for First-Timers: The Complete Guide",
+      "slug": "marrakech-first-time-guide",
+      "category_slug": "marrakech",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "base",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "The Moroccan Dirham: Why You Can't Get It Before You Arrive (and What to Do)",
+      "slug": "moroccan-dirham-money-guide",
+      "category_slug": "money-and-costs",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "closed-currency"
+    },
+    {
+      "title": "Moroccan Food: 15 Dishes Every First-Timer Should Try",
+      "slug": "moroccan-food-dishes",
+      "category_slug": "moroccan-food",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Morocco for First-Timers: Everything You Need to Know Before You Go",
+      "slug": "morocco-first-time-guide",
+      "category_slug": "plan-your-trip",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "money",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Guided Tour vs. Independent Travel in Morocco: Which Is Right for You?",
+      "slug": "morocco-guided-vs-independent",
+      "category_slug": "guides-and-tours",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "guides",
+      "handoff": "turn",
+      "piece": "commission"
+    },
+    {
+      "title": "Riads Explained: Where to Stay in Morocco and Why",
+      "slug": "morocco-riads-explained",
+      "category_slug": "riads-and-hotels",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "base",
+      "handoff": "turn",
+      "piece": "none"
+    },
+    {
+      "title": "How Much Does a Trip to Morocco Cost? A Dollar-by-Dollar Breakdown",
+      "slug": "morocco-trip-cost",
+      "category_slug": "money-and-costs",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Do Americans Need a Visa for Morocco? Entry Rules Explained",
+      "slug": "morocco-visa-for-americans",
+      "category_slug": "visas-and-entry",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "The Sahara Desert: A First-Timer's Guide to Merzouga and Zagora",
+      "slug": "sahara-desert-guide",
+      "category_slug": "sahara",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "desert",
+      "handoff": "turn",
+      "piece": "none"
+    },
+    {
+      "title": "Sahara Desert Tours from Marrakech: What to Expect",
+      "slug": "sahara-tours-from-marrakech",
+      "category_slug": "desert-and-atlas-trips",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "desert",
+      "handoff": "turn",
+      "piece": "none"
+    },
+    {
+      "title": "Best Things to Do in Marrakech",
+      "slug": "things-to-do-marrakech",
+      "category_slug": "marrakech",
+      "tier": 1,
+      "batch": 0,
+      "status": "published",
+      "swamp": "guides",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Getting Online in Morocco: eSIM, SIM Cards, and Wi-Fi",
+      "slug": "morocco-esim-sim-wifi",
+      "category_slug": "plan-your-trip",
+      "tier": 2,
+      "batch": 5,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none",
+      "inbound_links": 6
+    },
+    {
+      "title": "Where to Change Money in Morocco: Airport, Bank, or ATM?",
+      "slug": "where-to-exchange-money-morocco",
+      "category_slug": "money-and-costs",
+      "tier": 2,
+      "batch": 5,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "closed-currency"
+    },
+    {
+      "title": "How Much Cash to Bring to Morocco",
+      "slug": "morocco-how-much-cash-to-bring",
+      "category_slug": "money-and-costs",
+      "tier": 2,
+      "batch": 5,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "closed-currency"
+    },
+    {
+      "title": "Common Scams in Morocco and How They Actually Work",
+      "slug": "morocco-scams-to-avoid",
+      "category_slug": "safety-and-scams",
+      "tier": 2,
+      "batch": 5,
+      "status": "written",
+      "swamp": "guides",
+      "handoff": "turn",
+      "piece": "commission",
+      "inbound_links": 2
+    },
+    {
+      "title": "Where to Stay in Marrakech: Neighborhoods Compared",
+      "slug": "where-to-stay-marrakech",
+      "category_slug": "riads-and-hotels",
+      "tier": 2,
+      "batch": 5,
+      "status": "written",
+      "swamp": "base",
+      "handoff": "turn",
+      "piece": "none",
+      "inbound_links": 2
+    },
+    {
+      "title": "ATMs in Morocco: Fees, Limits, and Which Banks to Use",
+      "slug": "morocco-atm-fees-and-limits",
+      "category_slug": "money-and-costs",
+      "tier": 2,
+      "batch": 6,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "cash-cost"
+    },
+    {
+      "title": "Merzouga vs. Zagora: Which Sahara Trip to Take",
+      "slug": "merzouga-vs-zagora",
+      "category_slug": "sahara",
+      "tier": 2,
+      "batch": 6,
+      "status": "written",
+      "swamp": "desert",
+      "handoff": "turn",
+      "piece": "none",
+      "inbound_links": 2
+    },
+    {
+      "title": "Solo Female Travel in Morocco",
+      "slug": "solo-female-travel-morocco",
+      "category_slug": "safety-and-scams",
+      "tier": 2,
+      "batch": 6,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none",
+      "inbound_links": 2
+    },
+    {
+      "title": "“Dollars or Dirhams?” The Card Screen That Costs You",
+      "slug": "morocco-pay-in-dirhams-dcc",
+      "category_slug": "money-and-costs",
+      "tier": 2,
+      "batch": 6,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "cash-cost"
+    },
+    {
+      "title": "What to Pack for Morocco",
+      "slug": "what-to-pack-for-morocco",
+      "category_slug": "plan-your-trip",
+      "tier": 2,
+      "batch": 6,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Tipping in Morocco: Who, How Much, and When",
+      "slug": "tipping-in-morocco",
+      "category_slug": "money-and-costs",
+      "tier": 2,
+      "batch": 7,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "cash-cost"
+    },
+    {
+      "title": "Faux Guides in Morocco: How the Unofficial Guide Economy Works",
+      "slug": "faux-guides-in-morocco",
+      "category_slug": "guides-and-tours",
+      "tier": 2,
+      "batch": 7,
+      "status": "written",
+      "swamp": "guides",
+      "handoff": "turn",
+      "piece": "commission"
+    },
+    {
+      "title": "Etiquette and Customs in Morocco",
+      "slug": "morocco-etiquette-customs",
+      "category_slug": "plan-your-trip",
+      "tier": 2,
+      "batch": 7,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Getting to Chefchaouen: Every Route from Fez and Tangier",
+      "slug": "how-to-get-to-chefchaouen",
+      "category_slug": "trains-buses-taxis",
+      "tier": 2,
+      "batch": 7,
+      "status": "written",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Sahara Desert Camps: Standard, Deluxe, and What Changes",
+      "slug": "sahara-desert-camps",
+      "category_slug": "sahara",
+      "tier": 2,
+      "batch": 7,
+      "status": "written",
+      "swamp": "desert",
+      "handoff": "turn",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Petit and Grand Taxi Fares in Morocco: What's Actually Fair",
+      "slug": "morocco-taxi-fares",
+      "category_slug": "trains-buses-taxis",
+      "tier": 2,
+      "batch": 8,
+      "status": "written",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Arriving at Casablanca Airport: Your First Two Hours",
+      "slug": "casablanca-airport-arrival",
+      "category_slug": "flights-and-arrival",
+      "tier": 2,
+      "batch": 8,
+      "status": "written",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Shopping in Morocco: What to Buy and What Things Cost",
+      "slug": "shopping-in-morocco",
+      "category_slug": "money-and-costs",
+      "tier": 2,
+      "batch": 8,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "anchor-price",
+      "inbound_links": 1
+    },
+    {
+      "title": "Where Cards Actually Work in Morocco",
+      "slug": "paying-by-card-in-morocco",
+      "category_slug": "money-and-costs",
+      "tier": 2,
+      "batch": 8,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "seed",
+      "piece": "cash-cost"
+    },
+    {
+      "title": "The Atlas Mountains: Day Trips and Longer Stays",
+      "slug": "atlas-mountains-guide",
+      "category_slug": "desert-and-atlas-trips",
+      "tier": 2,
+      "batch": 8,
+      "status": "written",
+      "swamp": "desert",
+      "handoff": "seed",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Hiring an Official Guide in Morocco: Badges, Rates, Booking",
+      "slug": "official-guides-in-morocco",
+      "category_slug": "guides-and-tours",
+      "tier": 2,
+      "batch": 9,
+      "status": "written",
+      "swamp": "guides",
+      "handoff": "turn",
+      "piece": "commission"
+    },
+    {
+      "title": "Inside a Moroccan Carpet Shop: What Actually Happens",
+      "slug": "morocco-carpet-shop-visit",
+      "category_slug": "safety-and-scams",
+      "tier": 2,
+      "batch": 9,
+      "status": "written",
+      "swamp": "guides",
+      "handoff": "turn",
+      "piece": "commission"
+    },
+    {
+      "title": "Leftover Dirhams: What to Do Before You Fly Home",
+      "slug": "morocco-leftover-dirhams",
+      "category_slug": "money-and-costs",
+      "tier": 2,
+      "batch": 9,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "closed-currency"
+    },
+    {
+      "title": "Street Food in Morocco: What's Safe and What to Skip",
+      "slug": "morocco-street-food",
+      "category_slug": "moroccan-food",
+      "tier": 2,
+      "batch": 9,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Renting a Car in Morocco: When It's Worth It",
+      "slug": "renting-a-car-in-morocco",
+      "category_slug": "trains-buses-taxis",
+      "tier": 2,
+      "batch": 9,
+      "status": "written",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Visiting the Fez Tanneries Without the Hassle",
+      "slug": "fez-tanneries-visit",
+      "category_slug": "fez",
+      "tier": 2,
+      "batch": 10,
+      "status": "written",
+      "swamp": "guides",
+      "handoff": "turn",
+      "piece": "commission"
+    },
+    {
+      "title": "Riads in Marrakech: How to Choose One (Not Which One)",
+      "slug": "best-riads-marrakech",
+      "category_slug": "riads-and-hotels",
+      "tier": 2,
+      "batch": 10,
+      "status": "written",
+      "swamp": "base",
+      "handoff": "turn",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Travel Insurance for Morocco: What It Needs to Cover",
+      "slug": "morocco-travel-insurance",
+      "category_slug": "plan-your-trip",
+      "tier": 2,
+      "batch": 10,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Alcohol in Morocco: Where You Can and Can't Drink",
+      "slug": "alcohol-in-morocco",
+      "category_slug": "moroccan-food",
+      "tier": 2,
+      "batch": 10,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Traveling in Morocco During Ramadan",
+      "slug": "morocco-during-ramadan",
+      "category_slug": "when-to-go",
+      "tier": 2,
+      "batch": 10,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "The 14-Day Morocco Itinerary: The Full Loop",
+      "slug": "14-day-morocco-itinerary",
+      "category_slug": "first-timer-itineraries",
+      "tier": 2,
+      "batch": 11,
+      "status": "planned",
+      "swamp": "desert",
+      "handoff": "seed",
+      "piece": "none",
+      "inbound_links": 1
+    },
+    {
+      "title": "Trains in Morocco: ONCF Routes, Classes, and Booking",
+      "slug": "morocco-trains-oncf",
+      "category_slug": "trains-buses-taxis",
+      "tier": 2,
+      "batch": 11,
+      "status": "written",
+      "swamp": "transport",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "What Things Cost in the Souks: A First-Timer's Price Sheet",
+      "slug": "morocco-souk-price-guide",
+      "category_slug": "money-and-costs",
+      "tier": 2,
+      "batch": 11,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "From Marrakech Airport to the Medina: Every Option Priced",
+      "slug": "marrakech-airport-to-medina",
+      "category_slug": "flights-and-arrival",
+      "tier": 2,
+      "batch": 11,
+      "status": "written",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Essaouira: The Coast Escape from Marrakech",
+      "slug": "essaouira-guide",
+      "category_slug": "desert-and-atlas-trips",
+      "tier": 2,
+      "batch": 11,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "What to Do in Fez: The Essential First-Timer's List",
+      "slug": "things-to-do-fez",
+      "category_slug": "fez",
+      "tier": 3,
+      "batch": 11,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Fez vs Marrakech: Which to Visit (or Do Both)",
+      "slug": "fez-vs-marrakech",
+      "category_slug": "first-timer-itineraries",
+      "tier": 3,
+      "batch": 11,
+      "status": "written",
+      "swamp": "base",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "The Argan Oil Cooperative Visit: Real vs Tourist Trap",
+      "slug": "morocco-argan-cooperatives",
+      "category_slug": "safety-and-scams",
+      "tier": 3,
+      "batch": 11,
+      "status": "written",
+      "swamp": "guides",
+      "handoff": "turn",
+      "piece": "commission"
+    },
+    {
+      "title": "Guided Day Tours in Morocco: What They Really Include",
+      "slug": "morocco-day-tours-inclusions",
+      "category_slug": "guides-and-tours",
+      "tier": 3,
+      "batch": 11,
+      "status": "written",
+      "swamp": "guides",
+      "handoff": "turn",
+      "piece": "commission"
+    },
+    {
+      "title": "Cooking Classes in Morocco: Worth It and How to Choose",
+      "slug": "morocco-cooking-classes",
+      "category_slug": "moroccan-food",
+      "tier": 3,
+      "batch": 11,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Jemaa el-Fnaa: How to Do the Square Without Getting Fleeced",
+      "slug": "jemaa-el-fnaa-guide",
+      "category_slug": "marrakech",
+      "tier": 3,
+      "batch": 12,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Bahia Palace, Saadian Tombs and the Marrakech Monuments",
+      "slug": "marrakech-palaces-monuments",
+      "category_slug": "marrakech",
+      "tier": 3,
+      "batch": 12,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Majorelle Garden and the YSL Museum: Tickets and Timing",
+      "slug": "majorelle-garden-guide",
+      "category_slug": "marrakech",
+      "tier": 3,
+      "batch": 12,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "How Much Does a Marrakech Trip Cost?",
+      "slug": "marrakech-trip-cost",
+      "category_slug": "money-and-costs",
+      "tier": 3,
+      "batch": 12,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Marrakech in Two Days: A First-Timer's Plan",
+      "slug": "marrakech-two-day-itinerary",
+      "category_slug": "first-timer-itineraries",
+      "tier": 3,
+      "batch": 12,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Do You Need a Visa for Morocco? US Citizen Rules",
+      "slug": "morocco-entry-requirements",
+      "category_slug": "visas-and-entry",
+      "tier": 3,
+      "batch": 13,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Morocco Entry Stamp and Passport Rules Explained",
+      "slug": "morocco-passport-entry-stamp",
+      "category_slug": "visas-and-entry",
+      "tier": 3,
+      "batch": 13,
+      "status": "written",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Exchanging Money at Moroccan Airports: A Reality Check",
+      "slug": "morocco-airport-money-exchange",
+      "category_slug": "money-and-costs",
+      "tier": 3,
+      "batch": 13,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "closed-currency"
+    },
+    {
+      "title": "Is US Currency Accepted in Morocco?",
+      "slug": "us-dollars-in-morocco",
+      "category_slug": "money-and-costs",
+      "tier": 3,
+      "batch": 13,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "closed-currency"
+    },
+    {
+      "title": "Mobile Payments and Apps in Morocco",
+      "slug": "morocco-mobile-payments",
+      "category_slug": "money-and-costs",
+      "tier": 3,
+      "batch": 13,
+      "status": "written",
+      "swamp": "money",
+      "handoff": "seed",
+      "piece": "cash-cost"
+    },
+    {
+      "title": "CTM vs Supratours: Morocco's Coach Companies Compared",
+      "slug": "ctm-vs-supratours",
+      "category_slug": "trains-buses-taxis",
+      "tier": 3,
+      "batch": 14,
+      "status": "planned",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Getting from Marrakech to Fez: Every Option",
+      "slug": "marrakech-to-fez-transport",
+      "category_slug": "trains-buses-taxis",
+      "tier": 3,
+      "batch": 14,
+      "status": "planned",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Hiring a Private Driver in Morocco: Costs and How It Works",
+      "slug": "morocco-private-driver",
+      "category_slug": "trains-buses-taxis",
+      "tier": 3,
+      "batch": 14,
+      "status": "planned",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Airport Transfers in Morocco: What to Arrange in Advance",
+      "slug": "morocco-airport-transfers",
+      "category_slug": "flights-and-arrival",
+      "tier": 3,
+      "batch": 14,
+      "status": "planned",
+      "swamp": "transport",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "Day Trips from Fez: Meknes, Volubilis and Beyond",
+      "slug": "day-trips-from-fez",
+      "category_slug": "desert-and-atlas-trips",
+      "tier": 3,
+      "batch": 14,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "What to Eat in Morocco: The Essential Dishes",
+      "slug": "what-to-eat-in-morocco",
+      "category_slug": "moroccan-food",
+      "tier": 3,
+      "batch": 15,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Moroccan Mint Tea: The Ritual and the Etiquette",
+      "slug": "moroccan-mint-tea",
+      "category_slug": "moroccan-food",
+      "tier": 3,
+      "batch": 15,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Vegetarian and Vegan in Morocco: How to Eat Well",
+      "slug": "vegetarian-vegan-morocco",
+      "category_slug": "moroccan-food",
+      "tier": 3,
+      "batch": 15,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Is the Tap Water Safe in Morocco?",
+      "slug": "morocco-tap-water-safety",
+      "category_slug": "plan-your-trip",
+      "tier": 3,
+      "batch": 15,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Moroccan Hammam: What to Expect and How to Go",
+      "slug": "moroccan-hammam-guide",
+      "category_slug": "plan-your-trip",
+      "tier": 3,
+      "batch": 15,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Best Time to Visit Marrakech, Month by Month",
+      "slug": "marrakech-best-time",
+      "category_slug": "when-to-go",
+      "tier": 3,
+      "batch": 16,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Morocco Weather by Region and Season",
+      "slug": "morocco-weather-guide",
+      "category_slug": "when-to-go",
+      "tier": 3,
+      "batch": 16,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Traveling to Morocco with Kids: A Family Guide",
+      "slug": "morocco-with-kids",
+      "category_slug": "plan-your-trip",
+      "tier": 3,
+      "batch": 16,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Morocco Health and Vaccinations for Travelers",
+      "slug": "morocco-health-vaccinations",
+      "category_slug": "plan-your-trip",
+      "tier": 3,
+      "batch": 16,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Electricity, Plugs and Staying Charged in Morocco",
+      "slug": "morocco-plugs-electricity",
+      "category_slug": "plan-your-trip",
+      "tier": 3,
+      "batch": 16,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "The Perfect One-Week Morocco Itinerary",
+      "slug": "morocco-one-week-itinerary",
+      "category_slug": "first-timer-itineraries",
+      "tier": 3,
+      "batch": 17,
+      "status": "planned",
+      "swamp": "desert",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Chefchaouen: What to Do in the Blue City",
+      "slug": "things-to-do-chefchaouen",
+      "category_slug": "chefchaouen",
+      "tier": 3,
+      "batch": 17,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Sahara Sunrise and Sunset: What the Desert Night Is Like",
+      "slug": "sahara-night-experience",
+      "category_slug": "sahara",
+      "tier": 3,
+      "batch": 17,
+      "status": "planned",
+      "swamp": "desert",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Morocco Packing List for Women",
+      "slug": "morocco-packing-women",
+      "category_slug": "plan-your-trip",
+      "tier": 3,
+      "batch": 17,
+      "status": "planned",
+      "swamp": "none",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Common Mistakes First-Timers Make in Morocco",
+      "slug": "morocco-first-timer-mistakes",
+      "category_slug": "plan-your-trip",
+      "tier": 3,
+      "batch": 17,
+      "status": "planned",
+      "swamp": "money",
+      "handoff": "turn",
+      "piece": "anchor-price"
+    },
+    {
+      "title": "How Many Days Do You Need in Morocco?",
+      "slug": "how-many-days-in-morocco",
+      "category_slug": "first-timer-itineraries",
+      "tier": 3,
+      "batch": 17,
+      "status": "planned",
+      "swamp": "desert",
+      "handoff": "seed",
+      "piece": "none"
+    }
+  ],
+  "targets": {
+    "corpus_target": "80-100 articles",
+    "dossier_target_pages": "36-40",
+    "yield_model": "0.41-0.49 pp/article observed (Greece 0.41, Barcelona 0.44, Rome 0.49) — holds only at ~1000+ words/article",
+    "density_floor_words": 1000,
+    "re_audit_at": 40
+  }
+}

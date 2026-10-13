@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch FIRST before any work. Assistant outputs updated copy at each step boundary; USER pushes to travel-facts/moroccoforamericans/. Trust this file + the DB, not the chat scroll.",
+  "schema_version": 3,
+  "project": "moroccoforamericans",
+  "stage": "writing",
+  "batch": 1,
+  "batches_total": 4,
+  "batch_status": "cleaned",
+  "published_slugs": [],
+  "updated_at": "2026-07-06",
+  "notes": "STAGE 3 batch 1 WRITTEN + import file BUILT. 5 tier-1 articles (morocco-first-time-guide, morocco-visa-for-americans, moroccan-dirham-money-guide, is-morocco-safe, morocco-riads-explained), all 1000-1200w. import-batch-01.json built: DOM-cleaned, 8 IMAGE_SLOT comments converted to real <figure> tags (0 survivors), cloud=dsrkwieur folder=moroccoforamericans (rule 10 held), AFFILIATE_SLOT preserved (riads=Booking), all 5 FAQ blocks + money converter/price blocks intact, hero featured_image ids set. batch-01-images.md manifest ready (13 images: 5 hero + 8 in-body, Unsplash/Pexels candidate links, download order). Self-audit + reconciled-facts consistency passed (112/19/177/15 not 190; 2,000 MAD export cap). PENDING before live: (1) second-gate external read (second-gate-batch1.txt prepared, user runs); (2) source 13 images per manifest + run upload-batch.mjs; (3) import via articles-batch.mjs (lands draft); (4) publish 4 of 5 (hold 5th draft, user choice); (5) inject-links AFTER publish; (6) affiliates. Then Stage 5 DESIGN + next site. Facts reconciled (4-source). Article plan locked (70). WORKFLOW NOTE for batch 2+: produce second-gate FIRST, user validates, THEN produce batch-N.zip."
+}

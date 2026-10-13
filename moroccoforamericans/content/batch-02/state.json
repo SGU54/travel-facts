@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch FIRST before any work. Assistant outputs updated copy at each step boundary; USER pushes to travel-facts/moroccoforamericans/. Trust this file + the DB, not the chat scroll.",
+  "schema_version": 3,
+  "project": "moroccoforamericans",
+  "stage": "writing",
+  "batch": 2,
+  "batches_total": 4,
+  "batch_status": "cleaned",
+  "published_slugs": [],
+  "updated_at": "2026-07-06",
+  "notes": "STAGE 3 batch 2 WRITTEN + gated + import BUILT. 5 tier-1: morocco-trip-cost, flights-to-morocco-from-usa, 10-day + 7-day itineraries (feature-map, real coords), morocco-guided-vs-independent. All in word band; links FK-valid; serve_live held (converter+price, no frozen rate); scope clean (Ait Benhaddou/Volubilis only as day-trips FROM in-scope bases). SECOND GATE: Grok clean; DeepSeek 1 genuine catch (guided article overstated desert-tour prevalence as almost/nearly everyone vs facts.json most) — FIXED in body+FAQ, logged corrections.json #1 (style: match facts register on prevalence). import-batch-02.json built: 0 IMAGE_SLOT survivors, 2 maps + converter + 5 affiliate slots preserved, cloud=dsrkwieur. batch-02-images.md: 12 images (5 hero+7 in-body). ADMIN: bulk-publish fix built + skill-gated (patch notes 9, skill rule 5b). PENDING: source images, upload, import (draft), publish, inject-links, affiliates. Batch 1 also awaiting publish. Facts reconciled. Plan locked (70). Workflow: second-gate FIRST then zip (done for b2)."
+}

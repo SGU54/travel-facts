@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "stage": "publishing",
+  "batch": 14,
+  "batches_total": 15,
+  "batch_status": "cleaned",
+  "published_slugs": [],
+  "updated_at": "2026-06-23",
+  "notes": "Batch 14 (transport+connectivity+safety+health: turkey-domestic-flights, renting-car-turkey, turkey-esim-internet, is-turkey-safe, turkey-health-guide) written+validated (806-936w). HIGH-STAKES YMYL: safety = tourist-regions-safe + Syria-border do-not-travel + travel.state.gov verify nudge + 2023-quake-was-SE-not-west + 112, NO frozen Level claim. health = bottled water + no-vaccines-required/check-CDC + not-medical-advice disclaimer + 112. All conform to verify_recommended facts. eSIM=Airalo/120-day IMEI rule. SECOND GATE: grok + deepseek BOTH clean. Stage 4 next: images, upload, import (DRAFT), links, affiliates, publish. REMAINING: batch 15 (turkey-culture-etiquette, what-to-wear-turkey) = FINAL 2 articles -> 72 total."
+}

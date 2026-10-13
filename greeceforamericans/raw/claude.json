@@ -1,0 +1,344 @@
+{
+  "_README": "Panel member #1 (Claude) candidate fill for greeceforamericans, scoped to article-list.json. Working material — NEVER pushed. Statuses set honestly: agreed_stable for confident stable facts; verify_recommended for YMYL/change-prone (ETIAS, advisory, driving); serve_live for volatile (rates, flight prices, daily budgets). Reconciled later with external models into facts.json.",
+
+  "_meta": {
+    "schema_version": 3,
+    "project": "greeceforamericans",
+    "country": "Greece",
+    "country_iso": "GR",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": ["JFK", "EWR", "ORD", "ATL", "IAD", "BOS", "LAX", "PHL"],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "express costs in USD with EUR equivalents"
+    },
+    "ai_source": "claude",
+    "produced_at": "2026-06-18"
+  },
+
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status, notes }. source_url null where not officially checked (provisional per Stage-2 rules).",
+
+  "identity": {
+    "name_local": { "value": "Elláda (Ελλάδα)", "source_url": null, "status": "agreed_stable" },
+    "capital": { "value": "Athens", "source_url": null, "status": "agreed_stable" },
+    "official_languages": { "value": ["Greek"], "source_url": null, "status": "agreed_stable" },
+    "currency_code": { "value": "EUR", "source_url": null, "status": "agreed_stable" },
+    "currency_name": { "value": "Euro", "source_url": null, "status": "agreed_stable" },
+    "timezones": { "value": ["EET (UTC+2), EEST (UTC+3) in summer"], "source_url": null, "status": "agreed_stable" },
+    "calling_code": { "value": "+30", "source_url": null, "status": "agreed_stable" },
+    "power_plug_voltage": { "value": "230V, 50Hz, Type C and F (Americans need a plug adapter; 120V-only devices need a converter)", "source_url": null, "status": "agreed_stable" }
+  },
+
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL + change-prone. ETIAS is the big upcoming change for Americans — flag hard.",
+      "by_nationality": [
+        {
+          "passport": "United States",
+          "type": { "value": "visa_free", "source_url": null, "status": "verify_recommended", "notes": "visa_free for Schengen short stays" },
+          "max_stay_days": { "value": "90 days within any 180-day period (Schengen-wide, not per country)", "source_url": null, "status": "verify_recommended" },
+          "fee": { "value": "No visa fee. ETIAS, once required, is expected to cost about €20 (free for under-18 and over-70).", "source_url": null, "status": "verify_recommended" },
+          "processing_time": { "value": "ETIAS expected to approve most applications within minutes to 96 hours", "source_url": null, "status": "verify_recommended" },
+          "online_authorization_required": { "value": "ETIAS travel authorization is expected to become mandatory for Americans during 2025–2026 — verify current status before travel. The EU Entry/Exit System (EES) biometric border checks are also rolling out.", "source_url": null, "status": "verify_recommended", "notes": "ETIAS is NOT a visa; it's a pre-travel authorization like the US ESTA. Date has slipped repeatedly — MUST verify live." },
+          "official_application_url": { "value": "travel-europe.europa.eu/etias_en", "source_url": null }
+        }
+      ],
+      "scam_sites_to_avoid": { "value": ["Unofficial 'ETIAS' and 'Schengen visa' sites that charge inflated fees — only use the official EU europa.eu domain"], "source_url": null, "status": "agreed_stable" }
+    },
+    "documents": {
+      "passport_validity_required": { "value": "Passport must be valid for at least 3 months beyond your planned departure from the Schengen area, and issued within the previous 10 years", "source_url": null, "status": "verify_recommended" },
+      "onward_ticket_required": { "value": "A return or onward ticket may be requested at the border", "source_url": null, "status": "agreed_stable" },
+      "notes": { "value": "Carry proof of accommodation and sufficient funds; border officers can ask." }
+    },
+    "money": {
+      "currency_code": { "value": "EUR", "source_url": null, "status": "agreed_stable" },
+      "approx_rate_note": { "value": null, "source_url": null, "status": "serve_live", "notes": "VOLATILE — USD/EUR rate served live, never frozen into prose" },
+      "cash_vs_card": { "value": "Cards (incl. contactless, Apple/Google Pay) are widely accepted in cities, hotels, and most tavernas. Carry some cash for small islands, village kafenia, markets, and some ferries.", "source_url": null, "status": "agreed_stable" },
+      "atm_availability": { "value": "ATMs plentiful in Athens and on main islands. Prefer bank ATMs; AVOID Euronet ATMs (poor rates/fees). Always choose to be charged in EUR, not USD (decline dynamic currency conversion).", "source_url": null, "status": "agreed_stable" },
+      "currency_import_export_limit": { "value": "Amounts of €10,000 or more (cash equivalent) must be declared when entering/leaving the EU", "source_url": null, "status": "verify_recommended" },
+      "tipping_norm": { "value": "Tipping is modest and not obligatory. Rounding up or leaving 5–10% at tavernas is appreciated; a few euros for hotel staff and taxi rounding. No US-style 18–20% expectation.", "source_url": null, "status": "agreed_stable" }
+    },
+    "getting_there": {
+      "main_international_airports": { "value": ["Athens Eleftherios Venizelos International Airport (ATH)", "Heraklion Nikos Kazantzakis (HER), Crete", "Thessaloniki (SKG)", "seasonal island airports: Santorini (JTR), Mykonos (JMK)"], "source_url": null, "status": "agreed_stable", "notes": "ATH is the primary US gateway" },
+      "national_carrier": { "value": "Aegean Airlines (with Olympic Air for domestic)", "source_url": null, "status": "agreed_stable" },
+      "flight_from_audience_origins": { "value": ["Nonstop seasonal/year-round from JFK, EWR, ORD, ATL, IAD, PHL, BOS to ATH on carriers incl. Emirates (EWR/JFK), Delta, American, United, Aegean; ~9–11 hours eastbound depending on origin"], "source_url": null, "status": "serve_live", "notes": "Durations stable; PRICES serve_live. Nonstop routes are mostly seasonal (roughly May–Oct)." }
+    },
+    "getting_around": {
+      "intercity_rail": { "value": "Limited rail network (Athens–Thessaloniki main line). Not the backbone for a first-timer island trip; ferries and domestic flights matter more.", "source_url": null, "status": "agreed_stable" },
+      "buses": { "value": "KTEL intercity buses serve the mainland; on islands local buses are cheap but infrequent. KTEL for Athens-area day trips (e.g., Cape Sounion).", "source_url": null, "status": "agreed_stable" },
+      "domestic_flights": { "value": "Aegean, Olympic Air, Sky Express fly Athens to Santorini, Mykonos, Crete, Naxos, Paros (~45–55 min). Often faster than ferry for far islands like Crete; book ahead in summer.", "source_url": null, "status": "agreed_stable" },
+      "ride_sharing": { "value": "Uber operates in Athens but dispatches licensed taxis (not private drivers); the local 'FREENOW' app is widely used. On islands, taxis are scarce — pre-book transfers.", "source_url": null, "status": "agreed_stable" },
+      "car_rental_and_driving": { "value": "Greeks drive on the RIGHT. US license accepted in practice by many agencies, but Greek law requires an International Driving Permit (IDP) alongside it — get one from AAA before you go. Minimum rental age usually 21–25. Roads on islands can be narrow/steep; a car is great on Crete and Naxos, unnecessary on Santorini/Mykonos.", "source_url": null, "status": "verify_recommended", "notes": "IDP requirement is the load-bearing American-specific fact; drive-on-right; BAC limit 0.05%." }
+    },
+    "when_to_go": {
+      "climate_by_season": { "value": "Mediterranean: hot dry summers (Jul–Aug highs 85–95°F/29–35°C, peak crowds), mild wet winters. Sea is warmest Aug–Sep. The meltemi wind can disrupt Cyclades ferries in Jul–Aug.", "source_url": null, "status": "agreed_stable" },
+      "best_months": { "value": ["May", "June", "September", "early October"], "rank": "core", "notes": "RECOMMENDATION — shoulder season: warm, swimmable, fewer crowds, lower prices. The site's sweet-spot recommendation for first-timers." },
+      "avoid_periods": { "value": ["Mid-July to late August (heat, crowds, highest prices, meltemi wind)", "Winter for islands (many hotels/restaurants on small islands close Nov–Mar; Santorini/Mykonos partly shut down)"], "rank": "core", "notes": "RECOMMENDATION. Orthodox Easter (date varies yearly) brings domestic travel surges — verify the date each year." }
+    },
+    "safety_health": {
+      "_note": "YMYL. Greece is generally very safe for tourists; advisory level change-prone.",
+      "advisory_level": { "value": "Typically US State Department Level 1 (Exercise Normal Precautions) — verify current level and date before travel", "source_url": null, "status": "verify_recommended" },
+      "main_risk": { "value": "Petty theft/pickpocketing in crowded tourist areas (Athens metro, Monastiraki, Acropolis crowds); occasional strikes/demonstrations in Athens; summer heat and wildfire risk inland.", "source_url": null, "status": "agreed_stable" },
+      "vaccines": { "value": "No special vaccines required for US travelers; routine vaccinations recommended. Check CDC before travel.", "source_url": null, "status": "verify_recommended" },
+      "tap_water_safe": { "value": "Tap water is safe to drink in Athens and most of the mainland. On many islands (incl. Santorini, Mykonos) tap water is brackish/desalinated — locals drink bottled; fine for brushing teeth.", "source_url": null, "status": "agreed_stable" },
+      "emergency_numbers": { "value": { "police": "100 (or 112 EU-wide)", "ambulance": "166 (or 112)", "fire": "199 (or 112)" }, "source_url": null, "status": "agreed_stable" },
+      "common_scams": { "value": ["Taxi overcharging from Athens airport — agree on meter or fixed tariff", "Bar 'friendly local' scams in Athens nightlife districts", "Euronet ATM fee/rate gouging", "Inflated 'skip-the-line' resellers near the Acropolis"], "source_url": null, "status": "agreed_stable" }
+    },
+    "connectivity": {
+      "sim_esim": { "value": "eSIM is the easiest option for Americans — Airalo, Holafly, or local Cosmote/Vodafone/Nova eSIMs work well. EU roaming means a Greek SIM works across the EU. Verizon/AT&T/T-Mobile international day passes are pricier but simplest.", "source_url": null, "status": "agreed_stable" },
+      "coverage": { "value": "Excellent 4G/5G in cities and on main islands; can be patchy in remote mountain/coastal spots on Crete and smaller Cyclades.", "source_url": null, "status": "agreed_stable" }
+    },
+    "costs": {
+      "_note": "Approximate USD ranges per person/day excluding flights; serve_live and dated.",
+      "daily_budget_low": { "value": "~$70–110/day (hostels/budget rooms, ferries deck class, gyros & casual tavernas, public transit)", "status": "serve_live" },
+      "daily_budget_mid": { "value": "~$150–280/day (3–4★ hotels, mix of ferries/flights, sit-down tavernas, some tours)", "status": "serve_live" },
+      "daily_budget_high": { "value": "~$400+/day (4–5★ / cave suites, private transfers, fine dining, private tours)", "status": "serve_live" }
+    },
+    "culture_etiquette": {
+      "dress_norms": { "value": "Casual and beachy on islands; smart-casual for nicer dinners. Cover shoulders and knees to enter churches and monasteries (e.g., on Crete, in Athens). Bring sun protection and sturdy sandals for ancient-site stones.", "source_url": null, "status": "agreed_stable" },
+      "dos_and_donts": { "value": ["Do say 'kaliméra' (good morning) / 'efcharistó' (thank you)", "Do expect late dinners (9pm+) and a slow, lingering meal pace", "Don't rush the waiter for the check — you ask for it", "Don't flush toilet paper where bins are provided (older island plumbing)", "Don't expect everything open midday — some shops close for afternoon rest"], "source_url": null, "status": "agreed_stable" }
+    }
+  },
+
+  "cities": [
+    {
+      "name": "Athens",
+      "facts": {
+        "how_to_get_there": { "value": "Primary US gateway (ATH). Metro Line 3 connects the airport to the city center (~40 min, ~€9); taxi ~€40 flat daytime tariff to the center.", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "Walkable historic core (Plaka, Monastiraki). Clean, cheap metro reaches the Acropolis, port (Piraeus), and airport. Single ticket ~€1.20.", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Athens Eleftherios Venizelos International (ATH)", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [
+          { "name": "Acropolis & Parthenon", "why": "The iconic ancient citadel; go at opening or late afternoon to beat heat and crowds" },
+          { "name": "Acropolis Museum", "why": "Modern museum displaying the marbles in context — pair with the hill" },
+          { "name": "Ancient Agora", "why": "The civic heart of classical Athens, with the well-preserved Temple of Hephaestus" },
+          { "name": "Plaka & Anafiotika", "why": "Old town lanes and a tiny Cycladic-style neighborhood under the Acropolis" },
+          { "name": "National Archaeological Museum", "why": "World-class collection of Greek antiquities" }
+        ], "rank": "core", "notes": "your picks" },
+        "where_to_stay": { "value": [
+          { "area": "Plaka", "who_for": "First-timers wanting charm and walkability to the Acropolis" },
+          { "area": "Monastiraki / Psyrri", "who_for": "Nightlife, food, central transit" },
+          { "area": "Koukaki", "who_for": "Local feel, great value, short walk to the Acropolis" },
+          { "area": "Kolonaki", "who_for": "Upscale shopping and dining" }
+        ], "rank": "core", "notes": "[{area, who_for}]" },
+        "where_to_eat": { "value": [
+          { "name_or_type": "Traditional taverna (mezze, grilled meats, Greek salad)", "why": "The classic first meal" },
+          { "name_or_type": "Souvlaki/gyros spots in Monastiraki", "why": "Cheap, fast, excellent" },
+          { "name_or_type": "Rooftop bar with Acropolis view", "why": "Sunset drinks worth the splurge" }
+        ], "rank": "core", "notes": "types not single venues" },
+        "day_trips": { "value": [
+          { "place": "Cape Sounion (Temple of Poseidon)", "why": "Sunset over the Aegean at a clifftop temple", "rough_time": "Half day" },
+          { "place": "Delphi", "why": "Mountain sanctuary, the ancient 'center of the world'", "rough_time": "Full day" },
+          { "place": "Nafplio / Mycenae / Epidaurus", "why": "Pretty seaside town + Bronze Age ruins", "rough_time": "Full day" }
+        ], "rank": "core", "notes": "" }
+      }
+    },
+    {
+      "name": "Santorini",
+      "facts": {
+        "how_to_get_there": { "value": "Ferry from Piraeus (~5h high-speed to ~8h conventional) or ~45-min flight from Athens. Ferries dock at Athinios port; book transfers — it's a steep climb to the caldera towns.", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "Local buses hub at Fira; cars/ATVs popular but parking is tight in Oia/Fira. Pre-booked transfers easiest for the airport/port.", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Santorini (Thira) National Airport (JTR)", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [
+          { "name": "Oia sunset", "why": "The famous caldera sunset — arrive early or watch from a quieter spot to dodge the crush" },
+          { "name": "Fira-to-Oia caldera walk", "why": "Stunning ~6mi clifftop trail" },
+          { "name": "Red Beach & Akrotiri", "why": "Volcanic beach + remarkably preserved Bronze Age Minoan site" },
+          { "name": "Wine tasting (Assyrtiko)", "why": "Volcanic-soil wines unique to the island" }
+        ], "rank": "core", "notes": "" },
+        "where_to_stay": { "value": [
+          { "area": "Oia", "who_for": "Honeymoon/luxury, the iconic views, highest prices" },
+          { "area": "Imerovigli", "who_for": "Quieter caldera views, romantic, central-ish" },
+          { "area": "Fira", "who_for": "Nightlife, transport hub, more value" },
+          { "area": "Kamari / Perissa", "who_for": "Beach base, families, budget" }
+        ], "rank": "core", "notes": "" },
+        "where_to_eat": { "value": [
+          { "name_or_type": "Caldera-view fine dining in Oia", "why": "Splurge with a view" },
+          { "name_or_type": "Tavernas in Pyrgos or Megalochori", "why": "Better value, authentic, fewer crowds" }
+        ], "rank": "core", "notes": "" },
+        "day_trips": { "value": [
+          { "place": "Volcano & hot springs boat tour", "why": "Caldera boat trip to the volcanic islets", "rough_time": "Half/full day" },
+          { "place": "Thirassia island", "why": "The quiet side of the caldera", "rough_time": "Half day" }
+        ], "rank": "core", "notes": "" }
+      }
+    },
+    {
+      "name": "Mykonos",
+      "facts": {
+        "how_to_get_there": { "value": "Ferry from Piraeus (~3–5h) or ~40-min flight from Athens. Two ports: Old Port (near town) and New Port (most big ferries); confirm which.", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "Buses connect town to main beaches; taxis scarce and pricey — pre-book transfers. Sea taxis link beach clubs in summer.", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Mykonos National Airport (JMK)", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [
+          { "name": "Mykonos Town (Chora) & Little Venice", "why": "Whitewashed maze, windmills, waterfront bars" },
+          { "name": "Delos (UNESCO)", "why": "Boat trip to the sacred ancient island — open-air archaeological site" },
+          { "name": "Beaches (Paraga, Psarou, Elia, Agios Sostis)", "why": "From party clubs to quiet sand" }
+        ], "rank": "core", "notes": "" },
+        "where_to_stay": { "value": [
+          { "area": "Mykonos Town (Chora)", "who_for": "First-timers, walkable nightlife and dining" },
+          { "area": "Ornos / Platis Gialos", "who_for": "Beachfront, families, easy bus access" },
+          { "area": "Psarou / Elia", "who_for": "Luxury, beach-club scene" }
+        ], "rank": "core", "notes": "" },
+        "where_to_eat": { "value": [
+          { "name_or_type": "Seafood taverna in Little Venice", "why": "Sunset waterfront dining" },
+          { "name_or_type": "Beach-club lunch", "why": "Iconic Mykonos splurge" }
+        ], "rank": "core", "notes": "" },
+        "day_trips": { "value": [
+          { "place": "Delos", "why": "Half-day boat to the birthplace-of-Apollo ruins", "rough_time": "Half day" }
+        ], "rank": "core", "notes": "" }
+      }
+    },
+    {
+      "name": "Crete",
+      "facts": {
+        "how_to_get_there": { "value": "~1h flight from Athens to Heraklion (HER) or Chania (CHQ); or overnight ferry from Piraeus (~9h). It's big — pick a base or plan to drive.", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "A rental car is the best way to see Crete; KTEL buses link main towns along the north coast. Distances are large (Chania to Heraklion ~2h drive).", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Heraklion (HER) and Chania (CHQ)", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [
+          { "name": "Palace of Knossos", "why": "The great Minoan palace, near Heraklion" },
+          { "name": "Chania Old Town & Venetian Harbour", "why": "Crete's most beautiful town" },
+          { "name": "Samaria Gorge", "why": "Epic ~10mi hike (seasonal)" },
+          { "name": "Elafonisi & Balos", "why": "Pink-sand and lagoon beaches in the west" },
+          { "name": "Heraklion Archaeological Museum", "why": "The Minoan collection that explains Knossos" }
+        ], "rank": "core", "notes": "" },
+        "where_to_stay": { "value": [
+          { "area": "Chania", "who_for": "First-timers, charm, west-Crete beaches" },
+          { "area": "Heraklion", "who_for": "Knossos, central, transport hub" },
+          { "area": "Rethymno", "who_for": "Middle ground, Venetian old town, beach" },
+          { "area": "Elounda (east)", "who_for": "Luxury resorts" }
+        ], "rank": "core", "notes": "" },
+        "where_to_eat": { "value": [
+          { "name_or_type": "Cretan taverna (dakos, lamb, raki)", "why": "Distinct, celebrated regional cuisine" },
+          { "name_or_type": "Harbourfront seafood in Chania", "why": "Scenic and fresh" }
+        ], "rank": "core", "notes": "" },
+        "day_trips": { "value": [
+          { "place": "Balos Lagoon & Gramvousa", "why": "Boat or 4x4 to turquoise lagoon", "rough_time": "Full day" },
+          { "place": "Lasithi Plateau / Spinalonga", "why": "Windmills + the former leper-colony island", "rough_time": "Full day" }
+        ], "rank": "core", "notes": "" }
+      }
+    },
+    {
+      "name": "Naxos",
+      "facts": {
+        "how_to_get_there": { "value": "Ferry from Piraeus (~4–5h) or short hops from Santorini/Mykonos/Paros; small airport with Athens flights. Central Cyclades hub.", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "Buses from Naxos Town (Chora) to main beaches and villages; a rental car/ATV opens up the mountain villages. Walkable port town.", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Naxos Island National Airport (JNX) — small, Athens only", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [
+          { "name": "Portara (Temple of Apollo gate)", "why": "Giant marble doorway at the harbor, great at sunset" },
+          { "name": "Chora old town & Venetian Kastro", "why": "Atmospheric hilltop maze" },
+          { "name": "Plaka & Agios Prokopios beaches", "why": "Long sandy, shallow — family-friendly" },
+          { "name": "Mountain villages (Halki, Apiranthos)", "why": "Authentic interior, Kitron liqueur" }
+        ], "rank": "core", "notes": "" },
+        "where_to_stay": { "value": [
+          { "area": "Naxos Town (Chora)", "who_for": "First-timers, walkable, dining + ferry" },
+          { "area": "Agios Prokopios / Agia Anna", "who_for": "Beach base, families" },
+          { "area": "Plaka", "who_for": "Long quiet beach, relaxed stays" }
+        ], "rank": "core", "notes": "" },
+        "where_to_eat": { "value": [
+          { "name_or_type": "Taverna featuring local cheese (graviera) & potatoes", "why": "Naxos is an agricultural island — produce is a point of pride" }
+        ], "rank": "core", "notes": "" },
+        "day_trips": { "value": [
+          { "place": "Small Cyclades (Koufonisia)", "why": "Day boat to tiny turquoise-water islands", "rough_time": "Full day" }
+        ], "rank": "core", "notes": "" }
+      }
+    },
+    {
+      "name": "Paros",
+      "facts": {
+        "how_to_get_there": { "value": "Ferry from Piraeus (~3–4.5h) and a major Cyclades connection hub (easy hops to Naxos/Mykonos/Santorini); small airport with Athens flights.", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "Buses link Parikia (main port), Naoussa, and beaches; ATV/car common. Two main towns: Parikia and prettier Naoussa.", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Paros National Airport (PAS) — small, Athens only", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [
+          { "name": "Naoussa fishing village", "why": "Chic harbor, lanes, nightlife" },
+          { "name": "Parikia & Panagia Ekatontapyliani church", "why": "Port town + important Byzantine church" },
+          { "name": "Kolymbithres beach", "why": "Sculpted granite coves" },
+          { "name": "Lefkes mountain village", "why": "Marble-lane hill town" }
+        ], "rank": "core", "notes": "" },
+        "where_to_stay": { "value": [
+          { "area": "Naoussa", "who_for": "Style, dining, nightlife" },
+          { "area": "Parikia", "who_for": "Transport hub, value, central" },
+          { "area": "Golden Beach / Pounta", "who_for": "Windsurfers, beach base" }
+        ], "rank": "core", "notes": "" },
+        "where_to_eat": { "value": [
+          { "name_or_type": "Seafood taverna on the Naoussa harbor", "why": "Classic Paros evening" }
+        ], "rank": "core", "notes": "" },
+        "day_trips": { "value": [
+          { "place": "Antiparos", "why": "Tiny laid-back island + cave, 10-min ferry", "rough_time": "Half/full day" }
+        ], "rank": "core", "notes": "" }
+      }
+    }
+  ],
+
+  "itineraries": [
+    {
+      "title": "The Perfect 10-Day Greece Itinerary for First-Timers",
+      "days": 10,
+      "scope": "multi-city",
+      "plan": { "value": [
+        { "day": "1–3", "morning": "Athens: Acropolis & Acropolis Museum", "afternoon": "Ancient Agora, Plaka wandering", "evening": "Rooftop dinner with Acropolis view; day 3 Cape Sounion sunset" },
+        { "day": "4–6", "morning": "Ferry/flight to Naxos; beach time", "afternoon": "Chora & Portara, mountain village lunch", "evening": "Harborfront taverna" },
+        { "day": "7–9", "morning": "Ferry to Santorini; settle in Oia/Imerovigli", "afternoon": "Caldera walk, wine tasting, Akrotiri", "evening": "Oia sunset" },
+        { "day": "10", "morning": "Flight Santorini→Athens", "afternoon": "Departure", "evening": "" }
+      ], "notes": "RECOMMENDATION — Athens + Naxos (relaxed, authentic) + Santorini (the wow finish). Naxos can be swapped for Paros." },
+      "assumptions": { "value": "Shoulder-season travel; one-way ferries forward, fly back from Santorini to save backtracking." }
+    },
+    {
+      "title": "7 Days in Greece: Athens and Two Islands",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": { "value": [
+        { "day": "1–2", "morning": "Athens highlights", "afternoon": "Agora/Plaka", "evening": "Dinner in Monastiraki" },
+        { "day": "3–4", "morning": "Ferry to Paros or Mykonos", "afternoon": "Beaches/town", "evening": "Harbor dinner" },
+        { "day": "5–7", "morning": "Hop to Santorini", "afternoon": "Caldera + wine", "evening": "Oia sunset; fly home from JTR" }
+      ], "notes": "RECOMMENDATION — tight but doable; minimize ferry legs, fly back from Santorini." },
+      "assumptions": { "value": "Fast ferries; book flights/ferries ahead in summer." }
+    },
+    {
+      "title": "14 Days in Greece: The Unhurried First Trip",
+      "days": 14,
+      "scope": "whole-country",
+      "plan": { "value": [
+        { "day": "1–3", "morning": "Athens", "afternoon": "Sights + a day trip (Delphi or Sounion)", "evening": "" },
+        { "day": "4–6", "morning": "Naxos", "afternoon": "Beaches + villages", "evening": "" },
+        { "day": "7–9", "morning": "Paros + Antiparos", "afternoon": "Naoussa", "evening": "" },
+        { "day": "10–13", "morning": "Crete (fly or ferry): Chania, Knossos, a gorge or lagoon", "afternoon": "", "evening": "" },
+        { "day": "14", "morning": "Fly Crete→Athens→home", "afternoon": "", "evening": "" }
+      ], "notes": "RECOMMENDATION — adds Crete and a slower pace; Santorini optional swap for one of the Cyclades stops." },
+      "assumptions": { "value": "Mix of ferries and 1–2 domestic flights to cut long legs." }
+    }
+  ],
+
+  "national_recommendations": {
+    "must_see_overall": { "value": [
+      { "name": "Acropolis of Athens", "where": "Athens", "why": "The defining monument of Western antiquity" },
+      { "name": "Santorini caldera", "where": "Cyclades", "why": "The iconic Greece-postcard landscape" },
+      { "name": "Knossos & Minoan Crete", "where": "Crete", "why": "Europe's oldest civilization" },
+      { "name": "Delos", "where": "near Mykonos", "why": "An entire sacred ancient island" },
+      { "name": "A Cyclades ferry crossing", "where": "Aegean", "why": "The island-hopping experience itself" }
+    ], "rank": "core", "notes": "" }
+  },
+
+  "_open_questions": {
+    "_note": "Genuinely uncertain / change-prone — needs official verification before relying on it.",
+    "value": [
+      "ETIAS: is it LIVE and mandatory for US citizens at the planned travel date? Status and the ~€20 fee have slipped repeatedly — must verify against the official EU ETIAS site at write time and serve as change-prone.",
+      "EU Entry/Exit System (EES) biometric checks: rollout status and what it means for Americans at the border — verify.",
+      "US State Department advisory level for Greece (and any region-specific notes) — confirm current level + date.",
+      "International Driving Permit: confirm it remains legally required for US license holders renting cars in Greece (load-bearing for the car-rental article).",
+      "Passport validity / Schengen 90-180 rule wording — confirm exact current phrasing against official source for the visa/entry articles."
+    ]
+  }
+}

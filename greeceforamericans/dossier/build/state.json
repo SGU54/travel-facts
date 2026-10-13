@@ -1,0 +1,58 @@
+{
+  "project": "greeceforamericans",
+  "deliverable": "Greece, in Order.",
+  "brand": "Meltemi Press",
+  "build_type": "cold (corpus-decided; no prior brand or state)",
+  "corpus": {
+    "file": "corpus.json",
+    "articles": 80,
+    "words_in": 82059
+  },
+  "stage_A2_findings": {
+    "shape": "archipelago / sequencing (islands 22 art + ferries 14 art dominate)",
+    "organising_fact": "a first trip is a route through a ferry network with one immovable deadline (the fixed flight home)",
+    "corpus_headline_mistake": "trying to see too many islands",
+    "dominant_edge_by_tally": "EXPERIENCE/PACING 46%, MONEY 34%, BREAKAGE 19% (cover leads on pacing/worth-it, not savings)",
+    "synthesis_gate": "STRONG (headroom 3.5; four sequencing facts scattered across corpus, joined in only 8%)"
+  },
+  "title": "Greece, in Order.",
+  "subtitle": "Which islands are worth your week — and the one order that keeps a cancelled ferry from costing you the flight home.",
+  "free_hook": "end the island run on the node with the most/earliest links back to Athens, plus a buffer night",
+  "decisions": [
+    "d01 the order (sequencing — the one that decides the others)",
+    "d02 pacing (how many islands / how many nights)",
+    "d03 fast vs slow ferry (buy speed only where it buys daylight)",
+    "d04 which islands are worth the week (one headline + one hidden)",
+    "d05 Crete is a trip not a stop",
+    "d06 the money leaks (caldera premium, DCC prompt, fast-fare-on-windy-leg)",
+    "d07 ferry vs domestic flight (the Athens-hub quirk)",
+    "d08 how long in Athens (the on-ramp)",
+    "d09 the Oia sunset operation"
+  ],
+  "figures": [
+    "arrival (Day Zero flow)", "season (crowd vs wind strip)", "route (Cyclades trunk to scale)",
+    "meltemi (two orders asymmetry)", "pace (nights vs islands ladder)", "flyferry (hours by mode)",
+    "santstay (Santorini price gradient)", "crete (scale vs a Cyclades hop)", "athens (3-day shape)",
+    "sunset (four ways to watch)", "week (the operational week shape)", "failcost (mistakes by cost)"
+  ],
+  "field_sheet": "edition 2026.Q1 — ferries, domestic flights, entry (90/180, EES, ETIAS late-2026), season, money habits. Volatile figures only; 'confirm in your travel week' with official source named.",
+  "final_render": {
+    "pdf": "Greece-in-Order.pdf",
+    "pages": 43,
+    "words_out": 10600,
+    "figures": 12,
+    "photographs": 8
+  },
+  "gates": {
+    "audit_book": "CLEAN — Ship (all 7 rows green; median fill 72%)",
+    "audit_furniture": "PASS (every sheet painted to trim, furnished, body in column)",
+    "audit_depth": "MINED (0.54 pp/art, 134 w/art, 13.1% corpus)",
+    "audit_synthesis": "STRONG (headroom 3.5)"
+  },
+  "notes": {
+    "photographs": "8 real plates supplied by user and wired in as decision opening bands (A01 Hellenic Seaways catamaran->d01, A02 dusk harbour->d02, A03 Golden Star conventional ferry->d03, A04 Naousa/Paros->d04, A05 Crete coast->d05, A06 caldera terrace->d06, A08 Acropolis->d08, A07 Oia dusk->d09). Optimized to 2000px, EXIF stripped. d07 remains figure-only. Photos improved fill (median 66->72%) and eased marks density.",
+    "renderer": "render-paged.py extended so map figures are also feedable plates; with photos present the original photo-feed also activates (d02/d05 fed their plate to the tail).",
+    "cover_fix": "device drawn via <g transform> not nested <svg viewBox> (Chromium meet-scaling misplaced the nested viewBox).",
+    "font_note": "system Cormorant files mislabel their name-table style as 'Light' but contain correct SemiBold/Medium outlines; rendering weight is correct."
+  }
+}

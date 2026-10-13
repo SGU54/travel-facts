@@ -1,0 +1,91 @@
+{
+  "schema_version": 4,
+  "project": "turkeyforamericans",
+  "batch": 20,
+  "swamp": "S-customs",
+  "_DOCTRINE": "Report mechanics, never make the call. check-noconnect exit 0 before import. A null fact DELETES its sentence. No drift-prone value in a title, heading or excerpt.",
+  "_WHY": "The corpus contains exactly THREE relevant sentences: 'genuine antiques and antiquities are tightly restricted for export from Turkey, so be skeptical', 'Keep receipts for anything significant', and 'keep documentation for customs'. It never states what the law protects, what the threshold is, that the offence is criminal, who can authorise an export, or what a seller's certificate is worth. Everything else the scan found was 'antique pool' at Pamukkale and 'customs' meaning cultural courtesies.",
+  "_NEW_SWAMP": "Built from scratch, not found in the corpus. Gate it the way S-calendar was gated: if it turns out to be a warning with one right answer rather than a decision with defensible alternatives, it dies and the book runs shorter.",
+  "articles": [
+    {
+      "title": "What Turkish Law Protects, and Why It Matters at the Airport",
+      "slug": "turkey-antiquities-export-law",
+      "category": "culture-etiquette",
+      "swamp": "S-customs",
+      "handoff": "turn",
+      "reports": [
+        "which categories of object Turkish cultural property law protects, and the age or type threshold that brings an object inside it",
+        "that export of protected objects is a criminal matter, not a customs formality",
+        "the penalty range as the law states it",
+        "who has authority to authorise an export and by what process",
+        "what happens at departure control and what is actually inspected"
+      ],
+      "must_not_say": "whether to buy anything — and no reassurance that enforcement is light",
+      "images": 2
+    },
+    {
+      "title": "What a Seller's Certificate Actually Proves",
+      "slug": "turkey-antique-certificate-what-it-proves",
+      "category": "culture-etiquette",
+      "swamp": "S-customs",
+      "handoff": "turn",
+      "reports": [
+        "what documents a Turkish vendor typically issues with an expensive purchase",
+        "which of those have legal standing in an export decision and which are commercial paperwork",
+        "the role of a state museum expertise report, if one exists, and who requests it",
+        "what a receipt establishes and what it does not",
+        "how the seller's incentive differs from the buyer's at the moment the document is written"
+      ],
+      "must_not_say": "which documents to demand — listing them as a checklist makes the call",
+      "images": 1
+    },
+    {
+      "title": "Buying a Rug in Turkey and Getting It Home",
+      "slug": "buying-a-rug-in-turkey-getting-it-home",
+      "category": "bazaars-hammams",
+      "swamp": "S-customs",
+      "handoff": "turn",
+      "reports": [
+        "the age bands the trade uses, and where the legal threshold sits relative to them",
+        "shipping by the seller versus carrying it yourself, and what each does to the documentation trail",
+        "what US customs asks of a personal rug import",
+        "duty treatment for personal purchases",
+        "what the buyer holds at each stage of either route"
+      ],
+      "must_not_say": "ship or carry — that is the decision",
+      "images": 2
+    },
+    {
+      "title": "The Objects Travelers Get Stopped With",
+      "slug": "turkey-restricted-souvenirs",
+      "category": "culture-etiquette",
+      "swamp": "S-customs",
+      "handoff": "turn",
+      "reports": [
+        "coins, fossils, ceramic fragments and stones — how each is treated",
+        "picking something up at a site versus buying it in a shop, and whether the law distinguishes them",
+        "religious objects and icons",
+        "what is genuinely unrestricted",
+        "the practical difference between an object being old and an object being protected"
+      ],
+      "must_not_say": "a safe-to-buy list, which is the call in disguise",
+      "images": 2
+    },
+    {
+      "title": "Bringing Turkish Purchases into the United States",
+      "slug": "bringing-turkish-purchases-into-the-us",
+      "category": "plan-your-trip",
+      "swamp": "S-customs",
+      "handoff": "seed",
+      "reports": [
+        "the US personal exemption and how declaring works on return",
+        "any US import restriction specific to Turkish cultural property",
+        "which categories US customs treats separately from ordinary goods",
+        "food, textiles and other everyday purchases",
+        "what documentation US customs expects for a high-value item"
+      ],
+      "must_not_say": "how to declare in a way that minimises duty",
+      "images": 1
+    }
+  ]
+}

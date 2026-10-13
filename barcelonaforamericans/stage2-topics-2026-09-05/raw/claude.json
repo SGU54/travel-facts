@@ -1,0 +1,103 @@
+{
+  "_README": "TOPICAL TEMPLATE — Stage 2 scoped fact-build for 3 domains ABSENT from the standard facts-template.json (health/pharmacy/hospital billing, Balearic ferries, public holidays/closures).",
+
+  "_meta": {
+    "schema_version": 1,
+    "project": "barcelonaforamericans",
+    "country": "Spain",
+    "country_iso": "ES",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": ["JFK", "EWR", "ORD", "MIA", "LAX"],
+      "home_currency": "USD"
+    },
+    "locale": { "site_language": "en-US", "units": "imperial", "money_framing": "express costs in USD with EUR equivalents" },
+    "ai_source": "claude",
+    "produced_at": "2026-09-05"
+  },
+
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status (verified|agreed_stable|verify_recommended|serve_live), notes }.",
+
+  "health_care": {
+    "medication_import": {
+      "prescription_medication_rules": { "value": "General Schengen practice: carry only a personal supply for the length of the trip, in original labeled packaging, plus a copy of the prescription or a doctor's letter naming the generic (INN) drug name — brand names differ by country. No single published day-count limit for tourists that I can confirm confidently.", "source_url": null, "status": "verify_recommended", "notes": "Day-count / quantity threshold NOT confirmed against an official source — leave verify_recommended, do not present a number as fact" },
+        "controlled_substances_note": { "value": "Narcotic/psychotropic medications (opioids, many benzodiazepines, and notably stimulant ADHD meds like Adderall — amphetamine salts are controlled and NOT approved for sale in Spain) require a 'Schengen certificate' for stays under 30 days, issued by the traveler's home-country competent authority, to legally carry them across a Schengen border. This is a genuine risk point for Americans specifically because Adderall is a common US prescription with no direct Spanish equivalent.", "source_url": null, "status": "verify_recommended", "notes": "HIGH-STAKES for this audience — verify against Spain's AEMPS or the Schengen certificate official text before publishing" },
+      "customs_declaration_threshold": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "No confirmed threshold — leave null rather than guess" },
+      "official_source_url": { "value": null, "notes": "AEMPS (Agencia Española de Medicamentos) or the US Embassy Madrid 'Medical' page are the likely official sources — need the panel/user to confirm the exact URL" }
+    },
+    "pharmacy_system": {
+      "farmacia_identification": { "value": "Green cross sign (often lit and animated at night); ubiquitous even in small neighborhoods", "source_url": null, "status": "agreed_stable" },
+      "farmacia_de_guardia": { "value": "A rotating duty-pharmacy system keeps at least one pharmacy open 24h per zone even on nights/Sundays/holidays; the current on-duty pharmacy is posted in the window of every closed pharmacy and listed online (Barcelona's pharmacists' college, COFB, runs a farmacias de guardia lookup)", "source_url": null, "status": "verify_recommended", "notes": "confirm the exact current lookup URL/tool before publishing" },
+      "otc_vs_prescription_differences": { "value": "Spain is somewhat more permissive at the pharmacist's discretion than the US for some items (e.g. the morning-after pill is sold OTC to adults without a prescription); conversely some US OTC staples may require asking the pharmacist by symptom rather than brand name since US brand names don't exist there", "source_url": null, "status": "verify_recommended" },
+      "pharmacist_role": { "value": "Spanish pharmacists are trained to diagnose and treat minor ailments directly at the counter (colds, minor wounds, rashes) and are a legitimate first stop before a clinic", "source_url": null, "status": "agreed_stable" }
+    },
+    "clinic_vs_er": {
+      "private_clinic_access": { "value": "Private walk-in clinics accept cash/card pay without an appointment; a straightforward consultation is a same-day, hours-not-days wait", "source_url": null, "status": "verify_recommended", "notes": "cost range NOT filled here — belongs in typical_costs as serve_live" },
+      "public_hospital_er_access": { "value": "Public hospital urgencias (ER) will treat any emergency regardless of ability to pay or nationality — emergency stabilization cannot legally be refused — but a US tourist is NOT covered by Spain's public system the way an EU resident is, so billing follows afterward for non-emergency-classified care", "source_url": null, "status": "verify_recommended" },
+      "when_to_choose_which": { "value": "Pharmacy first for anything minor; a private clinic for a non-urgent issue that still needs a doctor (better speed, English more likely, bill goes to travel insurance); public ER (or 112) only for a true emergency", "notes": "RECOMMENDATION" }
+    },
+    "hospital_billing": {
+      "billing_model_public": { "value": "Non-EU tourists are generally billed for public hospital care beyond emergency stabilization; billing can happen at discharge or by mailed invoice afterward depending on the hospital", "source_url": null, "status": "verify_recommended", "notes": "mechanism (discharge vs mailed invoice) not confirmed — real variation by hospital, needs a source" },
+      "billing_model_private": { "value": "Private hospitals/clinics typically ask for a card guarantee or upfront payment before non-emergency treatment, then the patient files for reimbursement with their own travel insurer", "source_url": null, "status": "verify_recommended" },
+      "typical_costs": { "value": "Rough, unverified order of magnitude only: a private walk-in consultation roughly $80-150; an ER visit/workup somewhat more; an ambulance ride and any overnight stay materially more — DO NOT publish these numbers as fact, they need a real source or should stay qualitative", "status": "serve_live", "notes": "Flagging low confidence explicitly — this is the field most likely to need panel/human correction" },
+      "travel_insurance_necessity": { "value": "Essential, not optional, for this audience — US health insurance and Medicare do not cover care in Spain", "notes": "RECOMMENDATION" },
+      "what_to_keep_for_reimbursement": { "value": "Itemized invoice (factura desglosada), the medical report (informe médico), and all payment receipts — a US insurer's claim form will ask for all three", "source_url": null, "status": "agreed_stable" }
+    }
+  },
+
+  "ferries_balearics": {
+    "operators": { "value": ["Trasmediterránea", "Baleària"], "source_url": null, "status": "agreed_stable", "notes": "the two main operators running Barcelona-Balearics; GNV also runs some Mediterranean routes but I'm not confident it covers Barcelona-Balearics specifically — verify" },
+    "port_terminal": { "value": "Port de Barcelona, near Drassanes/Barceloneta — Trasmediterránea uses the Moll de Barcelona / Terminal Drassanes/Ferry area, reachable by metro L3 (Drassanes) plus a short walk or port shuttle bus", "source_url": null, "status": "verify_recommended", "notes": "exact current terminal assignment per operator needs a live check" },
+    "routes_and_durations": {
+      "to_palma_mallorca": { "value": "Historically an overnight slow ferry of roughly 7-8h with cabins is the mainstay; a faster daytime option in the 4.5-5h range has existed seasonally on some operators", "status": "serve_live", "notes": "LOW CONFIDENCE — durations/existence of the fast option must be verified against the current operator timetable before writing" },
+      "to_ibiza": { "value": "Typically an overnight ferry in the roughly 8-9h range; I am not confident a same-day fast ferry exists on this specific leg", "status": "serve_live", "notes": "LOW CONFIDENCE — verify" },
+      "to_menorca": { "value": "Often routed via Mallorca rather than direct, and more seasonal (summer-only) than the Ibiza/Mallorca legs", "status": "serve_live", "notes": "LOW CONFIDENCE — verify direct vs routed and seasonality" }
+    },
+    "fast_vs_slow_tradeoffs": { "value": "Slow overnight ferry: cheaper per berth, you sleep through the crossing and arrive rested with a full day ahead, but you're committed to a cabin booking; fast ferry: burns a travel day but frees the evening — pick fast only if the schedule and price both work out, since it isn't always offered", "notes": "RECOMMENDATION" },
+    "booking_advice": { "value": "Book weeks ahead for July-August sailings, earlier still if bringing a car; compare both the operator's own site and an aggregator (e.g. Direct Ferries) since fares/schedules aren't always mirrored", "source_url": null, "status": "agreed_stable" },
+    "cancellation_policy": {
+      "typical_causes": { "value": "High wind and rough sea state are the recurring cause, most common in the shoulder/winter months but possible any time", "source_url": null, "status": "agreed_stable" },
+      "passenger_rights": { "value": "EU Regulation (EC) No 1177/2010 on the rights of passengers when traveling by sea and inland waterway governs assistance, rerouting, and compensation for cancelled/delayed EU ferry services", "source_url": null, "status": "verify_recommended", "notes": "confirm the regulation number/current text and how it's applied in practice by these two operators" },
+      "operator_rebooking_practice": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "not confirmed — needs the panel or a real source" },
+      "travel_insurance_interaction": { "value": "A standard travel-insurance policy's 'trip interruption'/'common carrier delay' clause is what would cover a missed onward connection caused by a cancelled ferry — plain trip-cancellation coverage usually does not", "notes": "RECOMMENDATION, moderate confidence" }
+    }
+  },
+
+  "public_holidays_closures": {
+    "national_holidays": { "value": [
+      { "name": "Año Nuevo (New Year's Day)", "typical_date": "Jan 1" },
+      { "name": "Epifanía / Reyes (Epiphany)", "typical_date": "Jan 6" },
+      { "name": "Viernes Santo (Good Friday)", "typical_date": "movable (March/April)" },
+      { "name": "Fiesta del Trabajo (Labour Day)", "typical_date": "May 1" },
+      { "name": "Asunción (Assumption)", "typical_date": "Aug 15" },
+      { "name": "Fiesta Nacional de España (National Day)", "typical_date": "Oct 12" },
+      { "name": "Todos los Santos (All Saints)", "typical_date": "Nov 1" },
+      { "name": "Día de la Constitución (Constitution Day)", "typical_date": "Dec 6" },
+      { "name": "Inmaculada Concepción (Immaculate Conception)", "typical_date": "Dec 8" },
+      { "name": "Navidad (Christmas)", "typical_date": "Dec 25" }
+    ], "source_url": null, "status": "verify_recommended", "notes": "the fixed Spain-wide set; moderate-high confidence on the list, but yearly official gazette confirmation is the correct source" },
+    "catalonia_regional_holidays": { "value": [
+      { "name": "Dilluns de Pasqua Florida (Easter Monday)", "typical_date": "movable — observed in Catalonia though not nationally" },
+      { "name": "Sant Joan (Revetlla)", "typical_date": "Jun 24" },
+      { "name": "Diada Nacional de Catalunya", "typical_date": "Sep 11" },
+      { "name": "Sant Esteve (St Stephen's Day / Boxing Day)", "typical_date": "Dec 26" }
+    ], "source_url": null, "status": "verify_recommended", "notes": "Catalonia picks its own subset within the national 14-day cap — this list is my best general recall, NOT verified against the current year's official Generalitat calendar" },
+    "barcelona_local_holidays": { "value": [
+      { "name": "La Mercè (Barcelona's patron festival)", "typical_date": "Sep 24" }
+    ], "source_url": null, "status": "verify_recommended", "notes": "Barcelona city council designates 2 local holidays per year and the second one varies/rotates — I could NOT confidently name the second one, left out rather than guessed. Santa Eulàlia (Feb 12) is a major festival but I'm not certain it's an official non-working local holiday vs. just a festival — flag for the panel" },
+    "what_typically_closes": { "value": "On the bigger national/religious holidays: most independent shops close, malls and big chains often stay open, restaurants (especially in tourist zones) mostly stay open, banks and post offices close, museums commonly run a Sunday-style schedule rather than closing outright, and public transport switches to its reduced Sunday/holiday timetable", "source_url": null, "status": "agreed_stable" },
+    "august_shutdown_specifics": { "value": "Many small, family-run businesses and neighborhood restaurants post 'cerrado por vacaciones' and close for one to a few weeks sometime in July-August, with no single fixed date across the city; tourist-center restaurants, hotels, major attractions, and chains stay open throughout", "status": "verify_recommended", "notes": "the general shape is well known; I can't confirm a specific percentage or exact typical window — needs either a source or should stay qualitative" },
+    "advance_planning_note": { "value": "Book sit-down dinner reservations further ahead around these dates, and double-check any specific restaurant/attraction's hours for the exact day rather than assuming normal hours", "notes": "RECOMMENDATION" }
+  },
+
+  "_open_questions": {
+    "_note": "Genuinely unsure / needs a real source before publishing.",
+    "value": [
+      "Medication import: no confirmed quantity/day-count threshold for personal prescription supply — needs an official source (AEMPS or embassy guidance)",
+      "Adderall/controlled-substance import: Schengen certificate requirement needs verification against the current official text, this is high-stakes for the US audience",
+      "Ferry durations/existence of fast options on all three Balearic legs are LOW CONFIDENCE — must be checked against current Trasmediterránea/Baleària timetables before writing",
+      "Hospital billing typical costs are unverified order-of-magnitude guesses only — should not be published as numbers without a source, or must stay qualitative",
+      "Barcelona's second annual local holiday (beyond La Mercè) could not be confidently named — needs the current city council decree"
+    ]
+  }
+}

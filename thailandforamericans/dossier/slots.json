@@ -1,0 +1,73 @@
+{
+  "project": "Thailand, Covered.",
+  "edition": "2026.09",
+  "_note": "Ten plates over a 31-page text block — one per three pages, comfortably above e-image.md's 1-per-6 floor, with the first inside the opening 12% and no text-only run longer than three pages. Five fall in each half. The cover stays type-only: it is the cover already published on the sales page, and the book should stay the same object on the shelf. Every slot sits WITH the paragraph it argues for, never at the top of a page by default, and never ahead of a drawn figure that carries the page.",
+  "rules": {
+    "shape": "3:2 landscape, >=1600px. A portrait cannot be used — it needs 10.2in of height in a 6.8in column.",
+    "licence": "Pexels or Unsplash, free commercial use, confirmed per file.",
+    "people": "No recognizable faces. No brand or logo signage. No selfie-stick tourists unless the crowd IS the argument (A09).",
+    "caption": "Every caption argues. A description is a rewrite."
+  },
+  "slots": [
+    {
+      "id": "A01", "chapter": "Before the eight · the calendar", "page": 4,
+      "argument": "The wet season is not a washout. The rain arrives in intense bursts, usually afternoon, and leaves dry hours around them.",
+      "shot": "A tropical downpour in progress with bright sky still at the frame's edge — wet road or sand, light returning. NOT a flat grey all-day overcast, which argues the opposite.",
+      "query": "thailand-rain-street-tropical-downpour"
+    },
+    {
+      "id": "A02", "chapter": "01 · Ride", "page": 6,
+      "argument": "Street lighting is poor to absent outside the cities and most island roads have no footpath at all — the most consistent finding in the whole corpus.",
+      "shot": "An island or rural road at dusk: no streetlights, no pavement, scrub or palms running straight to the carriageway edge. A scooter may be in frame, distant and unidentifiable.",
+      "query": "thailand-island-road-dusk-empty"
+    },
+    {
+      "id": "A03", "chapter": "02 · Sequence", "page": 8,
+      "argument": "A transfer is not travel time, it is a working half-day: each island transfer eats half a day or more.",
+      "shot": "A pier at loading time — luggage stacked, a ferry alongside, passengers from behind. The crossing as labour, not as a holiday postcard.",
+      "query": "thailand-ferry-pier-luggage-boarding"
+    },
+    {
+      "id": "A04", "chapter": "03 · Base", "page": 11,
+      "argument": "The islands without an airstrip are not the lesser islands. They are small, beautiful, and reached only by boat — which is the whole point.",
+      "shot": "High or aerial view of a small Thai island: one bay, one road, no runway anywhere in frame, no resort branding.",
+      "query": "koh-tao-aerial-small-island-bay"
+    },
+    {
+      "id": "A05", "chapter": "04 · Transit", "page": 14,
+      "argument": "An international-to-domestic connection across Bangkok is a complete re-entry into the system, not a transfer within one.",
+      "shot": "An airport landside departures hall: check-in queues, trolleys, checked bags. Ordinary and public; no identifiable faces, no airline logos dominant.",
+      "query": "bangkok-airport-check-in-hall-departures"
+    },
+    {
+      "id": "A06", "chapter": "05 · Insure", "page": 17,
+      "argument": "On four of these islands, care is a clinic. A clinic stabilises and moves; it does not treat.",
+      "shot": "A small island clinic exterior, or a boat at a pier in the role of transport rather than leisure. No patients, no staff faces, nothing that reads as a stock hospital.",
+      "query": "thai-island-clinic-village-building"
+    },
+    {
+      "id": "A07", "chapter": "06 · City", "page": 19,
+      "argument": "The trains fly over the traffic — which is why the station, not the neighbourhood, is the decision.",
+      "shot": "THE argument in one frame: a BTS Skytrain viaduct above a jammed Bangkok road, both clearly visible. This is the single most specific brief in the set.",
+      "query": "bangkok-skytrain-above-traffic-bts"
+    },
+    {
+      "id": "A08", "chapter": "07 · Culture", "page": 21,
+      "argument": "The temple door is an enforced threshold, not a suggestion: shoulders and knees covered, shoes off, and staff who turn people away.",
+      "shot": "Shoes left in a row at a temple entrance, or a visitor from behind, covered, at a wat doorway. No monk close-ups, no faces.",
+      "query": "thai-temple-entrance-shoes-removed"
+    },
+    {
+      "id": "A09", "chapter": "08 · Eat", "page": 23,
+      "argument": "Turnover is simultaneously the quality test and the safety test. The crowd IS the evidence.",
+      "shot": "A busy street-food stall: locals standing and waiting, a wok or grill working, steam. Here the crowd is the argument, so people in frame are wanted — but not identifiable.",
+      "query": "bangkok-street-food-stall-busy-night"
+    },
+    {
+      "id": "A10", "chapter": "Money · the arithmetic of cash", "page": 25,
+      "argument": "The cash floor is set by where you spend, not by your budget: markets, stalls, songthaews and small vendors are cash-only in practice.",
+      "shot": "Baht notes or coins changing hands at a market stall, close and ordinary. No faces, no card machines, no bank branding.",
+      "query": "thai-baht-cash-market-stall-money"
+    }
+  ]
+}

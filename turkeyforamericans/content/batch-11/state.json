@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "stage": "publishing",
+  "batch": 11,
+  "batches_total": 15,
+  "batch_status": "cleaned",
+  "published_slugs": [],
+  "updated_at": "2026-06-23",
+  "notes": "Batch 11 (hotels cluster finish + food start: best-luxury-hotels-istanbul, best-all-inclusive-turkey, best-boutique-hotels-turkey, turkish-food-guide, turkish-street-food) written+validated (819-884w). Hotel rankings written by area/type not fabricated property names. SECOND GATE: grok clean; deepseek flagged Bodrum in boutique article — RULING: Bodrum has own approved article (bodrum-guide), so RESOLVED by linking it (now in-scope on-site reference, 3 links total). Stage 4 next: images, upload, import (DRAFT), links, affiliates, publish."
+}

@@ -1,0 +1,1938 @@
+You are a fact-checking editor. Below are 5 travel articles for an Americans-visiting-Turkey site, plus the FACTS file they must conform to. Your ONLY job is to find IN-CONTEXT ERRORS:
+- a number/date stated one way then contradicted later
+- a price or figure given two different ways
+- a claim that contradicts the FACTS file
+- a recommendation that drifts to a place NOT in the FACTS pools
+- an internal contradiction or a sentence that reads factually wrong
+
+Do NOT rewrite for style. Do NOT suggest additions. If a figure looks current but differs from the FACTS file, NOTE it but don't assume the article is wrong. Return a short list: [slug] - issue - suggested fix. If clean, say so.
+
+===== FACTS FILE =====
+{
+  "_README": "Reconciled facts for turkeyforamericans (3-AI panel: claude+deepseek+grok). The ONLY facts file in the repo. serve_live values never frozen. verify_recommended = confirm against official source before relying. Stage 3 reads this + corrections.json.",
+  "_meta": {
+    "schema_version": 3,
+    "project": "turkeyforamericans",
+    "country": "Turkey",
+    "country_iso": "TR",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": [
+        "JFK",
+        "EWR",
+        "IAD",
+        "ORD",
+        "LAX",
+        "MIA"
+      ],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "express costs in USD with Turkish lira (TRY) equivalents"
+    },
+    "panel": [
+      "claude",
+      "deepseek",
+      "grok"
+    ],
+    "reconciled_at": "2026-06-22",
+    "notes": "4 disputes ruled by human: (1) US visa-free [verify], (2) passport 150-day [verify], (3) currency limit→null/open-q, (4) vaccines conservative [verify]."
+  },
+  "identity": {
+    "name_local": {
+      "value": "Türkiye",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "capital": {
+      "value": "Ankara",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "official_languages": {
+      "value": [
+        "Turkish"
+      ],
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "currency_code": {
+      "value": "TRY",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "currency_name": {
+      "value": "Turkish lira",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "timezones": {
+      "value": [
+        "UTC+3 (TRT, no DST)"
+      ],
+      "status": "agreed_stable",
+      "notes": "7-8h ahead of US Eastern depending on US DST."
+    },
+    "calling_code": {
+      "value": "+90",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "power_plug_voltage": {
+      "value": "230V / 50Hz, Type C and Type F (European round-pin). Americans need a plug adapter; most phone/laptop chargers are dual-voltage, but 120V-only devices need a converter.",
+      "status": "agreed_stable"
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL. RULING: US ordinary-passport tourists are visa-free (2-of-3 panel; reflects the ~2020 change). grok's e-visa answer reflects pre-2020 rules. Confirm at evisa.gov.tr before relying.",
+      "by_nationality": [
+        {
+          "passport": "United States",
+          "type": {
+            "value": "visa_free",
+            "status": "verify_recommended",
+            "notes": "Visa-free for tourism since ~March 2020, reversing the prior e-visa requirement. Confirm at evisa.gov.tr."
+          },
+          "max_stay_days": {
+            "value": "90 days within any 180-day period",
+            "status": "verify_recommended"
+          },
+          "fee": {
+            "value": "None for visa-free tourist entry (prior e-visa cost ~$50)",
+            "status": "verify_recommended"
+          },
+          "processing_time": {
+            "value": "N/A (visa-free)",
+            "status": "verify_recommended"
+          },
+          "online_authorization_required": {
+            "value": false,
+            "status": "verify_recommended",
+            "notes": "No ETA-style pre-authorization for US tourists as of last knowledge; confirm."
+          },
+          "official_application_url": {
+            "value": "https://www.evisa.gov.tr",
+            "notes": "Official portal — used by nationalities that DO need an e-visa; US tourists generally do not."
+          }
+        }
+      ],
+      "scam_sites_to_avoid": {
+        "value": [
+          "Any third-party 'Turkey visa' site charging fees above the official cost",
+          "Any site that is not evisa.gov.tr for e-visas"
+        ],
+        "status": "agreed_stable"
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "Passport valid at least 150 days beyond date of entry, with a blank page",
+        "status": "verify_recommended",
+        "notes": "RULING: state Turkey's specific 150-day rule (stricter/more precise than the generic 6-month default two models gave). Following 150 days also satisfies 6 months."
+      },
+      "onward_ticket_required": {
+        "value": "Onward/return ticket may be requested at check-in or entry; not always enforced",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "notes": {
+        "value": "Carry proof of accommodation and return travel; rarely checked but officially expected."
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "TRY",
+        "status": "agreed_stable"
+      },
+      "approx_rate_note": {
+        "value": null,
+        "status": "serve_live",
+        "notes": "VOLATILE — lira depreciates persistently; never freeze a USD/TRY rate. Serve live."
+      },
+      "cash_vs_card": {
+        "value": "Cards widely accepted in cities, hotels, and tourist areas; carry some cash for markets, taxis, small towns, tips, and rural areas",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "atm_availability": {
+        "value": "ATMs plentiful in cities and tourist towns. Decline the ATM's offered conversion (choose to be charged in TRY, not USD) to avoid bad DCC rates. Watch for high fees on some bank ATMs.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "currency_import_export_limit": {
+        "value": null,
+        "status": "verify_recommended",
+        "notes": "RULING: sources disagreed ($5k vs $10k vs 25,000 TRY export) — left null pending official confirmation. See _open_questions."
+      },
+      "tipping_norm": {
+        "value": "Tipping (bahşiş) is customary but modest: ~5-10% in restaurants if service not included, round up taxis, small tips for hotel staff and hammam attendants. Less aggressive than US tipping culture.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": [
+          "Istanbul Airport (IST) — main hub, European side",
+          "Sabiha Gökçen (SAW) — Istanbul, Asian side, budget-heavy",
+          "Antalya (AYT)",
+          "Izmir Adnan Menderes (ADB)",
+          "Ankara Esenboğa (ESB)"
+        ],
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "national_carrier": {
+        "value": "Turkish Airlines (THY)",
+        "status": "agreed_stable",
+        "notes": "Star Alliance; many US nonstops to IST."
+      },
+      "flight_from_audience_origins": {
+        "value": [
+          "JFK/EWR–IST ~10-11h",
+          "IAD–IST ~10h",
+          "ORD–IST ~11h",
+          "LAX–IST ~13-14h",
+          "MIA–IST seasonal"
+        ],
+        "status": "serve_live",
+        "notes": "Durations stable; PRICES serve_live."
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "High-speed rail (YHT) connects Istanbul–Ankara–Konya and Ankara–Sivas; useful but network is limited. Most intercity travel is by plane or bus, not train.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "buses": {
+        "value": "Extensive, comfortable, and cheap intercity bus network (otobüs) — companies like Metro, Kamil Koç, Pamukkale. Long distances (e.g. Istanbul–Cappadocia ~11h overnight) make flying often preferable.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "domestic_flights": {
+        "value": "Cheap, frequent domestic flights are the backbone of multi-region trips. Turkish Airlines, AnadoluJet/AJet, Pegasus. Key routes: IST–Kayseri/Nevşehir (for Cappadocia), IST–Antalya, IST–Izmir, IST–Dalaman.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "ride_sharing": {
+        "value": "BiTaksi and iTaksi apps hail licensed taxis in Istanbul; Uber operates in Istanbul but dispatches yellow taxis. Always insist on the meter ('taksimetre'). Trams, metro, ferries, and the Istanbulkart make Istanbul easy without taxis.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "car_rental_and_driving": {
+        "value": "Drive on the RIGHT (same as US). US license accepted for short visits but an International Driving Permit (IDP) is recommended/sometimes required. Driving is aggressive in cities; renting makes sense for the coast/Cappadocia, not Istanbul. BAC limit 0.05% (0.00% if towing).",
+        "status": "verify_recommended",
+        "_from": "claude"
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Spring (Apr-May) and fall (Sep-Oct) are ideal nearly everywhere: warm, dry, fewer crowds. Summer (Jun-Aug) is hot — great for coast/beaches, brutal for sightseeing in Istanbul and harsh in the interior. Winter is cold inland (Cappadocia can snow — atmospheric for balloons) and mild but rainy on the coast. Istanbul winters are gray and chilly.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "best_months": {
+        "value": [
+          "April",
+          "May",
+          "September",
+          "October"
+        ],
+        "rank": "core",
+        "notes": "Shoulder seasons; reliable balloon mornings."
+      },
+      "avoid_periods": {
+        "value": [
+          "Peak Jul-Aug heat for interior sightseeing",
+          "Ramadan affects some dining hours (date shifts ~11 days earlier yearly)",
+          "Major Turkish holidays (Kurban/Şeker Bayramı) — domestic travel/hotels surge"
+        ],
+        "rank": "core",
+        "notes": "Verify religious-holiday dates yearly."
+      }
+    },
+    "safety_health": {
+      "_note": "YMYL. Advisory change-prone + partly regional (SE Syria border). Confirm at travel.state.gov before relying.",
+      "advisory_level": {
+        "value": "US State Dept ~Level 2 ('Exercise Increased Caution') in most areas, with higher do-not-travel warnings near the Syria border and Şırnak/Hakkari provinces",
+        "status": "verify_recommended",
+        "notes": "Tourist regions (Istanbul, Cappadocia, coast) are not the high-warning zones. Confirm current level + date."
+      },
+      "main_risk": {
+        "value": "Petty theft/pickpocketing in crowded tourist areas (Istanbul transit, bazaars), tourist-targeted scams, occasional anti-government demonstrations (avoid protests), and earthquake risk (Turkey is seismically active; major Feb 2023 quake affected the southeast, NOT the western tourist regions)",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "vaccines": {
+        "value": "No vaccines required for entry from the US. Keep routine vaccines current; CDC sometimes recommends Hepatitis A and typhoid for some travelers — check cdc.gov.",
+        "status": "verify_recommended",
+        "notes": "RULING: conservative 'none required, check CDC' framing."
+      },
+      "tap_water_safe": {
+        "value": "Tap water is chlorinated and generally considered safe in major cities but is heavily mineralized and not pleasant-tasting; nearly everyone (locals included) drinks cheap bottled water. Stick to bottled to avoid stomach upset.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "emergency_numbers": {
+        "value": {
+          "police": "155",
+          "ambulance": "112",
+          "fire": "110"
+        },
+        "status": "agreed_stable",
+        "notes": "112 is the unified emergency number (works for medical); Jandarma (rural) 156."
+      },
+      "common_scams": {
+        "value": [
+          "The 'friendly local' / shoe-shine drop scam in Istanbul",
+          "Inflated taxi fares + 'broken meter' — insist on the meter",
+          "Bar/club scams where solo male tourists are lured and hit with a huge bill",
+          "Carpet-shop high-pressure commissions via 'helpful' guides",
+          "Overpriced 'student' currency exchange / DCC at ATMs"
+        ],
+        "status": "agreed_stable",
+        "_from": "claude"
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": "eSIM is the easiest option for Americans (Airalo, Holafly, etc.) — install before arrival. Physical Turkish SIMs (Turkcell, Vodafone, Türk Telekom) require passport registration; phones used >120 days must be IMEI-registered (a tax) or get blocked, but short tourist visits are fine.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "coverage": {
+        "value": "Excellent 4G/5G in cities and tourist regions; good even in Cappadocia and along the coast. Patchy in remote eastern mountains.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      }
+    },
+    "costs": {
+      "_note": "serve_live ranges; Turkey is cheap for Americans (lira weakness) but high local inflation moves lira prices constantly.",
+      "daily_budget_low": {
+        "value": "~$40-60/day (budget guesthouses, street food, transit)",
+        "status": "serve_live"
+      },
+      "daily_budget_mid": {
+        "value": "~$100-180/day (good 3-4 star, restaurants, some tours, domestic flights)",
+        "status": "serve_live"
+      },
+      "daily_budget_high": {
+        "value": "~$300+/day (cave suites, luxury Bosphorus hotels, private guides)",
+        "status": "serve_live"
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "Turkey is secular and Western-dressed in cities and resorts — normal Western clothing is fine. For MOSQUES: women cover hair (scarf), shoulders, and knees; men wear long pants; shoes off. Carry a scarf when mosque-visiting. More conservative dress respected in rural/eastern areas.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "dos_and_donts": {
+        "value": [
+          "Remove shoes when entering homes and mosques",
+          "Accept offered tea (çay) — it's a sign of hospitality, refusing can seem cold",
+          "Don't blow your nose loudly at the table",
+          "Be respectful around Atatürk imagery/statues — insulting him is a legal offense",
+          "Avoid political discussion/criticism of the government in public",
+          "Use your right hand for giving/receiving",
+          "Bargaining is expected in bazaars, not in shops/restaurants"
+        ],
+        "status": "agreed_stable",
+        "_from": "claude"
+      }
+    }
+  },
+  "cities": [
+    {
+      "name": "Istanbul",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Primary US gateway — nonstop Turkish Airlines/United from JFK, EWR, IAD, ORD, LAX, SFO, IAH, MIA (seasonal). Arrive at Istanbul Airport (IST).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Get an Istanbulkart (rechargeable transit card) — works on metro, tram, ferries, funiculars, buses. The T1 tram serves Sultanahmet (old city). Ferries across the Bosphorus are scenic and cheap. Walkable historic core.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Istanbul Airport (IST), ~28 mi NW of city center on the European side. Havaist airport buses, M11 metro, or taxi (~45-90 min depending on traffic). Sabiha Gökçen (SAW) is on the Asian side — cheaper flights but far from Sultanahmet.",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Hagia Sophia",
+              "why": "1,500-year-old Byzantine masterpiece, now a working mosque (free entry, dress code; an upper-gallery ticket was introduced — verify)",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Blue Mosque (Sultanahmet Camii)",
+              "why": "Iconic six-minaret mosque facing Hagia Sophia; free, active mosque",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Topkapı Palace",
+              "why": "Ottoman imperial palace with treasures, harem, and courtyards.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Grand Bazaar",
+              "why": "One of the world's oldest and largest covered markets.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Basilica Cistern",
+              "why": "Underground ancient water reservoir with Medusa column bases.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Bosphorus Cruise",
+              "why": "Boat tour along the strait separating Europe and Asia.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Süleymaniye Mosque",
+              "why": "Sinan's masterwork, fewer crowds, great views",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Spice Bazaar (Mısır Çarşısı)",
+              "why": "Colorful market for spices, sweets, and Turkish delights.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Topkapi Palace",
+              "why": "Former home of Ottoman sultans",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Sultanahmet",
+              "who_for": "First-timers who want to walk to the major sights; quieter at night, touristy",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Beyoğlu / Galata / Karaköy",
+              "who_for": "Nightlife, dining, design hotels, İstiklal Street; more local-modern energy",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Beşiktaş / Nişantaşı",
+              "who_for": "Upscale, residential-chic, good base for Bosphorus",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Kadıköy (Asian side)",
+              "who_for": "Hip, foodie, local feel, fewer tourists",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Beyoğlu / Taksim",
+              "who_for": "Nightlife, dining, and shopping; more modern vibe.",
+              "rank": "core",
+              "named_by": [
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Karaköy / Galata",
+              "who_for": "Trendy neighborhood with boutique hotels and Bosphorus views.",
+              "rank": "core",
+              "named_by": [
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Beşiktaş",
+              "who_for": "Lively local area with ferry access and dining.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Balık ekmek (fish sandwich) by Galata Bridge / Eminönü",
+              "why": "Classic cheap waterfront eat",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Meyhane (Beyoğlu/Çiçek Pasajı)",
+              "why": "Meze + rakı evening, the social heart of Turkish dining",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Karaköy/Kadıköy bakeries & börek",
+              "why": "Breakfast and pastries",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Çiya Sofrası (Kadıköy)",
+              "why": "Renowned regional Anatolian home cooking",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Balıkçı (Fish restaurants) along the Bosphorus",
+              "why": "Fresh seafood with a view.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Kebapçı (Kebab restaurants) in Beyoğlu",
+              "why": "Traditional Turkish kebabs.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Street food: simit, balık ekmek, midye dolma",
+              "why": "Affordable and delicious local bites.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Traditional meyhane",
+              "why": "Shared plates and raki",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            },
+            {
+              "name_or_type": "Street food (simit, balik ekmek, döner)",
+              "why": "Authentic and affordable",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            },
+            {
+              "name_or_type": "Bosphorus waterfront restaurants",
+              "why": "Scenic seafood dinners",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Princes' Islands",
+              "why": "Car-free islands with horse-drawn carriages and beaches.",
+              "rough_time": "1 hour ferry",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "place": "Bursa",
+              "why": "Historic Ottoman city with the Green Mosque and Uludağ mountain.",
+              "rough_time": "2.5 hours by ferry + bus",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "place": "Edirne",
+              "why": "Former Ottoman capital with Selimiye Mosque.",
+              "rough_time": "2.5 hours by car/bus",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Cappadocia",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly from Istanbul to Kayseri (ASR, ~1h15) or Nevşehir (NAV); ~1h transfer to Göreme. Or overnight bus (~11h). Most US travelers fly.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Base in Göreme and walk/hike; rent a car, scooter, or ATV for valleys; guided 'Red' and 'Green' tours cover the spread-out sights. Hotel airport transfers are standard.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Kayseri (ASR) — more flights, ~1h to Göreme; Nevşehir (NAV) — closer, fewer flights",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Hot air balloon flight at sunrise",
+              "why": "The defining Cappadocia experience; book ahead, weather-dependent",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Göreme Open-Air Museum",
+              "why": "UNESCO rock-cut Byzantine churches with frescoes",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Underground cities (Derinkuyu/Kaymaklı)",
+              "why": "Multi-level ancient subterranean refuges",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "grok"
+              ]
+            },
+            {
+              "name": "Valleys (Love, Rose, Red, Pigeon, Ihlara)",
+              "why": "Hiking among fairy chimneys",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Uçhisar Castle",
+              "why": "Rock fortress with panoramic views.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Ihlara Valley",
+              "why": "Canyon hike with rock-cut churches.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Derinkuyu or Kaymaklı Underground City",
+              "why": "Ancient multi-level subterranean cities.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Paşabağ (Monks Valley)",
+              "why": "Stunning fairy chimneys with multiple caps.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Göreme",
+              "who_for": "First-timers; central, most cave hotels, walkable, balloon-launch views",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Uçhisar",
+              "who_for": "Upscale cave suites, quieter, best views",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Ürgüp",
+              "who_for": "Larger town, wineries, more restaurants/nightlife",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Ortahisar",
+              "who_for": "Authentic village atmosphere.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Testi kebab (pottery kebab)",
+              "why": "Regional specialty cooked and cracked open in a clay pot",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Cave restaurants in Göreme/Ürgüp",
+              "why": "Atmosphere + Anatolian dishes",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Mantı (Turkish ravioli)",
+              "why": "Tiny dumplings with yogurt and garlic.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Dibek Restaurant (Göreme)",
+              "why": "Traditional stone-walled restaurant.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Cappadocia Home Cooking (Ürgüp)",
+              "why": "Home-style regional dishes.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Traditional Cappadocian pottery kebab",
+              "why": "Local specialty cooked in clay pots",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            },
+            {
+              "name_or_type": "Wine tasting in Urgup",
+              "why": "Local wines from volcanic soil",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Ihlara Valley + Selime Monastery",
+              "why": "Canyon hike, part of Green Tour",
+              "rough_time": "Half-full day",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "place": "Salt Lake (Tuz Gölü)",
+              "why": "Vast salt flat with pink hues at sunset.",
+              "rough_time": "1.5 hours",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "place": "Kayseri",
+              "why": "City with Seljuk architecture and mount Erciyes.",
+              "rough_time": "1 hour",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "place": "Ihlara Valley",
+              "why": "Beautiful canyon hike with rock churches",
+              "rough_time": "Half to full day",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            },
+            {
+              "place": "Pasabag (Monks Valley)",
+              "why": "Iconic fairy chimneys",
+              "rough_time": "Half day",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Ephesus / Aegean (Selçuk-Kuşadası)",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly Istanbul–Izmir (ADB, ~1h), then ~1h drive south to Selçuk/Ephesus. Kuşadası is the cruise port nearby.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Rent a car for the Aegean coast, or use dolmuş (shared minibuses) between Selçuk, Ephesus, and Kuşadası. Ephesus has two gates ~2 mi apart.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Izmir Adnan Menderes (ADB)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Ephesus",
+              "why": "One of the best-preserved ancient cities in the Mediterranean — Library of Celsus, Great Theatre",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Terrace Houses (Ephesus, extra ticket)",
+              "why": "Remarkable Roman mosaics/frescoes, worth the add-on",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "House of the Virgin Mary",
+              "why": "Pilgrimage site near Ephesus",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Şirince village",
+              "why": "Hillside wine village near Selçuk",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Library of Celsus",
+              "why": "Iconic Roman library facade.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Great Theatre",
+              "why": "Massive 25,000-seat amphitheater with views.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Temple of Artemis",
+              "why": "One of the Seven Wonders of the Ancient World (only ruins remain).",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Basilica of St. John",
+              "why": "Ancient church believed to be the burial site of St. John.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Selçuk",
+              "who_for": "Closest town to the ruins; budget to mid-range.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "area": "Kuşadası",
+              "who_for": "Beach resort town, 20 min drive; cruise port.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "area": "Şirince",
+              "who_for": "Charming boutique stays in the hills",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Selçuk köfte/gözleme spots",
+              "why": "Local Aegean home cooking",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Selçuk local restaurants",
+              "why": "Traditional Turkish and Aegean cuisine.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Kuşadası waterfront",
+              "why": "Seafood with marina views.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Pamukkale & Hierapolis",
+              "why": "White travertine terraces + ancient spa city",
+              "rough_time": "Long day (~3h each way) — consider overnight",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "place": "Pamukkale",
+              "why": "White travertine terraces and Hierapolis ruins.",
+              "rough_time": "3 hours",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "place": "Şirince",
+              "why": "Hilltop Greek village with wine tasting.",
+              "rough_time": "30 min",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Antalya / Mediterranean (Turquoise) Coast",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly Istanbul–Antalya (AYT, ~1h15) or Istanbul–Dalaman (DLM) for the Fethiye/Ölüdeniz area. Coastal road connects resort towns.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Renting a car is ideal for the Lycian coast; intercity buses and dolmuş connect towns; Antalya has a tram in the center.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Antalya (AYT) for the east Med; Dalaman (DLM) for Fethiye/Ölüdeniz/Kaş-Kalkan",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Kaleiçi (Old Town)",
+              "why": "Charming Ottoman-era streets, harbor, and Hadrian's Gate.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Ölüdeniz Blue Lagoon + paragliding",
+              "why": "Iconic beach and tandem flights off Babadağ",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Lycian ruins (Myra, Patara, Olympos)",
+              "why": "Coastal archaeology mixed with beaches",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Düden Waterfalls",
+              "why": "Spectacular waterfalls, both upper and lower (into the sea).",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Aspendos Theatre",
+              "why": "Well-preserved Roman theater, still used for performances.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Perge Ancient City",
+              "why": "Large Roman city with stadium, baths, and colonnaded street.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Lara Beach",
+              "why": "Long sandy beach with resorts.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Antalya (Kaleiçi)",
+              "who_for": "Boutique old-town charm + city base",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Belek/Side/Kemer",
+              "who_for": "All-inclusive resort holidays",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Kaş",
+              "who_for": "Laid-back, diving, boutique, less package-tourism",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Fethiye/Ölüdeniz",
+              "who_for": "Beach + paragliding + gulet cruises",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Kaleiçi",
+              "who_for": "Historic atmosphere, boutique hotels.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "area": "Lara / Konyaaltı",
+              "who_for": "Beach resorts and all-inclusive hotels.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Seafood meyhanes along the coast",
+              "why": "Fresh Mediterranean fish + meze",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Kaleiçi restaurants",
+              "why": "Traditional Turkish and seafood with harbor views.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Piyaz (local bean dish)",
+              "why": "Antalya specialty.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Saklıkent Gorge",
+              "why": "Dramatic canyon walk",
+              "rough_time": "Half day from Fethiye",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "place": "Blue Cruise (gulet)",
+              "why": "Multi-day wooden-boat sailing the coast",
+              "rough_time": "1-4 days",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "place": "Side",
+              "why": "Ancient city with a Roman temple and sandy beaches.",
+              "rough_time": "1 hour",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "place": "Termessos",
+              "why": "Mountain-top ancient city with stunning views.",
+              "rough_time": "1 hour",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Pamukkale",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly Istanbul–Denizli (DNZ/Çardak) then ~1h to Pamukkale; or long day trip from Selçuk/Kuşadası/Antalya; many do it as part of an Aegean route.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Pamukkale village is small and walkable to the travertine entrance; dolmuş from Denizli.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Denizli Çardak (DNZ)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Travertine terraces",
+              "why": "Surreal white calcium pools — walk barefoot, go early or late for light/crowds",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Hierapolis",
+              "why": "Extensive Greco-Roman ruins atop the terraces",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Cleopatra's Antique Pool",
+              "why": "Swim among submerged Roman columns (extra fee)",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Pamukkale village",
+              "who_for": "Budget guesthouses to overnight and beat day-tripper crowds",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Village guesthouse restaurants",
+              "why": "Simple home-style Turkish meals",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Laodicea / Aphrodisias",
+              "why": "More ancient cities within reach",
+              "rough_time": "Half-full day",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "Turkey in a Week: Istanbul & Cappadocia",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Istanbul (IST), transfer to Sultanahmet",
+            "afternoon": "Settle in, walk Sultanahmet Square",
+            "evening": "Dinner + rooftop view of Blue Mosque"
+          },
+          {
+            "day": 2,
+            "morning": "Hagia Sophia + Blue Mosque",
+            "afternoon": "Topkapı Palace + Basilica Cistern",
+            "evening": "Meyhane dinner in Beyoğlu"
+          },
+          {
+            "day": 3,
+            "morning": "Grand Bazaar + Spice Bazaar",
+            "afternoon": "Bosphorus cruise",
+            "evening": "Kadıköy (Asian side) food crawl"
+          },
+          {
+            "day": 4,
+            "morning": "Fly to Cappadocia (Kayseri/Nevşehir), transfer to Göreme",
+            "afternoon": "Göreme Open-Air Museum",
+            "evening": "Sunset at a panorama point, cave-hotel dinner"
+          },
+          {
+            "day": 5,
+            "morning": "Sunrise hot air balloon",
+            "afternoon": "Red/Rose Valley hike",
+            "evening": "Testi kebab in Ürgüp"
+          },
+          {
+            "day": 6,
+            "morning": "Derinkuyu underground city",
+            "afternoon": "Uçhisar Castle + Pigeon Valley",
+            "evening": "Fly back to Istanbul"
+          },
+          {
+            "day": 7,
+            "morning": "Any missed Istanbul sight / shopping",
+            "afternoon": "Depart IST",
+            "evening": "—"
+          }
+        ],
+        "notes": "RECOMMENDATION — the most popular first-timer route; tight but doable."
+      },
+      "assumptions": {
+        "value": "Two internal flights; balloon weather-dependent (build a buffer morning)."
+      }
+    },
+    {
+      "title": "7 Days in Turkey: The Classic First-Timer Route",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": {
+        "value": [],
+        "notes": "RECOMMENDATION — same spine as 'Turkey in a Week' (Istanbul + Cappadocia); writer differentiates angle/pacing. Cross-reference, don't duplicate the day-by-day."
+      },
+      "assumptions": {
+        "value": "Treat as the flagship 7-day plan; 'Turkey in a Week' is the Istanbul+Cappadocia-only variant."
+      }
+    },
+    {
+      "title": "10 Days in Turkey: Istanbul, Cappadocia & the Coast",
+      "days": 10,
+      "scope": "whole-country",
+      "plan": {
+        "value": [
+          {
+            "day": "1-3",
+            "morning": "Istanbul highlights (as 7-day days 1-3)",
+            "afternoon": "",
+            "evening": ""
+          },
+          {
+            "day": "4-6",
+            "morning": "Cappadocia (balloon, valleys, underground city)",
+            "afternoon": "",
+            "evening": ""
+          },
+          {
+            "day": "7",
+            "morning": "Fly to Izmir, drive to Selçuk",
+            "afternoon": "Ephesus",
+            "evening": "Şirince"
+          },
+          {
+            "day": "8",
+            "morning": "Pamukkale & Hierapolis day",
+            "afternoon": "",
+            "evening": "Back toward coast"
+          },
+          {
+            "day": "9",
+            "morning": "Antalya old town or Kaş",
+            "afternoon": "Beach/coast time",
+            "evening": "Seafood meyhane"
+          },
+          {
+            "day": "10",
+            "morning": "Fly Antalya–Istanbul",
+            "afternoon": "Depart",
+            "evening": "—"
+          }
+        ],
+        "notes": "RECOMMENDATION — adds the Aegean/Med to the classic core."
+      },
+      "assumptions": {
+        "value": "Three internal flights; car rental on the coast helps."
+      }
+    },
+    {
+      "title": "14 Days in Turkey: The Grand Tour",
+      "days": 14,
+      "scope": "whole-country",
+      "plan": {
+        "value": [],
+        "notes": "RECOMMENDATION — 10-day route plus deeper coast (Fethiye/Ölüdeniz, Blue Cruise), more Aegean ruins, optional Ankara or an Eastern Turkey extension (Nemrut/Gaziantep). Writer builds full day-by-day from the city pools."
+      },
+      "assumptions": {
+        "value": "Slower pace; one multi-day gulet cruise; room for an offbeat region."
+      }
+    },
+    {
+      "title": "Best Turkey Itineraries by Trip Length",
+      "days": "varies",
+      "scope": "whole-country",
+      "plan": {
+        "value": [],
+        "notes": "RECOMMENDATION — overview/hub article comparing 5/7/10/14-day options; links to the specific itinerary guides. No new day-by-day; it's a routing/index piece."
+      },
+      "assumptions": {
+        "value": "Acts as the itineraries category anchor."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "value": [
+        {
+          "name": "Istanbul historic peninsula",
+          "where": "Istanbul",
+          "why": "Byzantine + Ottoman monuments in one walkable core",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Cappadocia + sunrise balloon",
+          "where": "Central Anatolia",
+          "why": "Otherworldly landscape, Turkey's signature image",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Ephesus",
+          "where": "Aegean coast",
+          "why": "Premier ancient city of the eastern Mediterranean",
+          "rank": "core",
+          "named_by": [
+            "claude",
+            "deepseek",
+            "grok"
+          ]
+        },
+        {
+          "name": "Pamukkale & Hierapolis",
+          "where": "Denizli",
+          "why": "Unique natural travertines + ruins",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Turquoise Coast (Lycian)",
+          "where": "Mediterranean coast",
+          "why": "Beaches, gulet cruises, coastal ruins",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Pergamon / Troy",
+          "where": "Aegean/NW",
+          "why": "For ancient-history travelers",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Göbeklitepe",
+          "where": "Şanlıurfa (east)",
+          "why": "World's oldest known temple, ~11,000 years old — for the intrepid",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Hagia Sophia",
+          "where": "Istanbul",
+          "why": "One of the greatest architectural wonders",
+          "rank": "core",
+          "named_by": [
+            "deepseek",
+            "grok"
+          ]
+        },
+        {
+          "name": "Cappadocia Hot Air Balloons",
+          "where": "Cappadocia",
+          "why": "Unforgettable aerial view of fairy chimneys.",
+          "rank": "core",
+          "named_by": [
+            "deepseek",
+            "grok"
+          ]
+        },
+        {
+          "name": "Pamukkale",
+          "where": "Denizli",
+          "why": "Surreal white travertine terraces and ancient Hierapolis.",
+          "rank": "core",
+          "named_by": [
+            "deepseek",
+            "grok"
+          ]
+        },
+        {
+          "name": "Blue Mosque",
+          "where": "Istanbul",
+          "why": "Stunning Ottoman architecture with blue tiles.",
+          "rank": "optional",
+          "named_by": [
+            "deepseek"
+          ]
+        },
+        {
+          "name": "Topkapı Palace",
+          "where": "Istanbul",
+          "why": "Opulent palace of Ottoman sultans.",
+          "rank": "optional",
+          "named_by": [
+            "deepseek"
+          ]
+        },
+        {
+          "name": "Bosphorus Cruise",
+          "where": "Istanbul",
+          "why": "Scenic boat ride between Europe and Asia.",
+          "rank": "core",
+          "named_by": [
+            "deepseek",
+            "grok"
+          ]
+        }
+      ],
+      "rank": "core"
+    }
+  },
+  "_open_questions": {
+    "_note": "Honest flags, ranked by load-bearing risk. Confirm against official sources before relying (deferred official-verification phase).",
+    "value": [
+      "US VISA (highest): confirm US ordinary-passport tourists are visa-free for ≤90 days at evisa.gov.tr. Panel split (2 visa-free vs 1 e-visa); ruled visa-free as current state but kept verify_recommended.",
+      "Passport validity: confirm Turkey's 150-days-beyond-entry rule officially (panel gave 150 days vs generic 6 months).",
+      "Currency declaration limit: UNRESOLVED — sources gave $5,000 / $10,000 / 25,000 TRY export. Left null; verify before printing any number.",
+      "US State Dept advisory LEVEL + date and exact do-not-travel zones (Syria border / Şırnak / Hakkari).",
+      "Phone IMEI 120-day registration threshold for foreign devices — confirm exact day count and tourist impact."
+    ]
+  }
+}
+
+===== ARTICLES =====
+
+----- izmir-guide -----
+TITLE: Izmir Travel Guide
+<p>Izmir is Turkey's third-largest city and the easygoing capital of the Aegean coast — a palm-lined waterfront, a mild Mediterranean climate, and a famously laid-back, secular feel that surprises Americans expecting another Istanbul. Most travelers use it as the gateway to Ephesus, but the city itself rewards a day or two. Here's how to make the most of it.</p>
+
+<!-- IMAGE_SLOT_1: Izmir's Kordon waterfront promenade at golden hour, palm trees and the bay, no recognizable faces -->
+
+<h2>How to get there</h2>
+<p>Izmir is an easy hop from Istanbul: a domestic flight to <strong>Adnan Menderes Airport (ADB)</strong> takes about an hour, and from there it's roughly an hour's drive south to Selçuk and Ephesus. Turkish Airlines, AnadoluJet/AJet, and Pegasus all fly the route frequently and cheaply. The airport connects to the city center by the İZBAN commuter rail, a taxi, or a Havabus shuttle.</p>
+
+<h2>What to do in Izmir</h2>
+<p>Izmir is more about atmosphere than blockbuster sights. Stroll the <strong>Kordon</strong>, the long seafront promenade where locals walk, cycle, and sip tea as the sun sets over the bay. Dive into the <strong>Kemeraltı Bazaar</strong>, a sprawling, atmospheric market that's far less touristy than Istanbul's. Ride the historic elevator at the <strong>Asansör</strong> for a view, and wander the cafe-lined streets of the Alsancak district after dark. History buffs can explore the ancient <strong>Agora</strong> of Smyrna in the city center.</p>
+
+<!-- IMAGE_SLOT_2: The covered lanes of Kemeraltı Bazaar in Izmir with stalls and lanterns -->
+
+<h2>Where to stay</h2>
+<p>For first-timers, <strong>Alsancak</strong> is the best base — central, walkable to the Kordon, and packed with restaurants and nightlife. The <strong>Konak</strong> area near the bazaar and the iconic Clock Tower puts you in the historic heart. If you're mainly here for Ephesus, consider basing in nearby <strong>Selçuk</strong> instead (see below). Izmir offers strong value across the board thanks to the weak lira, though rates rise in summer, so check current prices and book ahead in peak season.</p>
+
+<!-- AFFILIATE_SLOT: hotels — Booking.com CTA for Izmir hotels in Alsancak and Konak -->
+
+<h2>Day trips from Izmir</h2>
+<p>This is where Izmir earns its keep as a base. The headline is <strong>Ephesus</strong>, one of the best-preserved ancient cities in the Mediterranean and an easy day trip via Selçuk — see our <a data-internal="ephesus-guide">complete Ephesus guide</a>. Also within reach: the hillside wine village of <strong>Şirince</strong>, the <strong>House of the Virgin Mary</strong> pilgrimage site, and the white travertine terraces of <a data-internal="pamukkale-guide">Pamukkale</a>, though that's a long day better done as an overnight. Beach towns like <strong>Çeşme</strong> on the peninsula make a relaxed summer escape.</p>
+
+<h2>What to eat in Izmir</h2>
+<p>The Aegean is Turkey's olive-oil and seafood heartland, and Izmir eats lighter and greener than the interior. Seek out <strong>boyoz</strong>, the city's signature flaky pastry, best with a glass of tea for breakfast. Along the Kordon and in Alsancak, seafood meyhanes serve fresh fish with cold <em>meze</em> built around olive oil, herbs, and vegetables. <strong>Kumru</strong> (a stuffed sesame sandwich) and <strong>gevrek</strong> (the Izmir take on the simit ring) are classic cheap street bites, and the bazaar is full of dried figs, olives, and the region's prized produce.</p>
+
+<h2>Getting around the city</h2>
+<p>Izmir is easy to navigate. The metro, tram, and İZBAN commuter rail cover the central districts, and ferries cross the bay between Konak, Karşıyaka, and other neighborhoods — a scenic, cheap way to travel that doubles as a mini-cruise. Pick up an <strong>Izmirim Kart</strong>, the local transit card, to ride them all. The Kordon, Alsancak, and Konak are walkable end to end.</p>
+
+<h2>Money and practical tips</h2>
+<p>Like the rest of Turkey, Izmir is excellent value for Americans thanks to the weak lira, though prices rise along the coast in summer — check current rates rather than memorizing a figure. Cards are widely accepted in the city; carry some cash for the bazaar, ferries, and small cafes. Izmir is among Turkey's most relaxed, secular cities, so Western dress is the norm everywhere except when visiting a mosque.</p>
+
+<h2>When to go</h2>
+<p>Spring (April–May) and fall (September–October) are ideal: warm, dry, and comfortable for both the city and the nearby ruins. Summer is hot and busy along the coast — fine for the beaches, sweaty for sightseeing at Ephesus, where shade is scarce. Izmir's winters are mild but can be rainy.</p>
+
+<div class="feature-map" data-points="[
+{&quot;name&quot;:&quot;Kordon Promenade&quot;,&quot;lat&quot;:38.4360,&quot;lng&quot;:27.1392,&quot;note&quot;:&quot;Sunset waterfront walk&quot;},
+{&quot;name&quot;:&quot;Kemeraltı Bazaar&quot;,&quot;lat&quot;:38.4189,&quot;lng&quot;:27.1287},
+{&quot;name&quot;:&quot;Konak Clock Tower&quot;,&quot;lat&quot;:38.4189,&quot;lng&quot;:27.1283},
+{&quot;name&quot;:&quot;Selçuk (for Ephesus)&quot;,&quot;lat&quot;:37.9510,&quot;lng&quot;:27.3680,&quot;note&quot;:&quot;~1h south, gateway to Ephesus&quot;}
+]"></div>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>Is Izmir worth visiting?</summary><div><p>Yes, especially as a relaxed base for the Aegean. The city has a great waterfront, an atmospheric bazaar, and easy access to Ephesus and other ancient sites.</p></div></details>
+<details><summary>How do I get from Izmir to Ephesus?</summary><div><p>Drive or take a train/bus about an hour south to Selçuk, the town next to the Ephesus ruins. Many visitors do it as a day trip.</p></div></details>
+<details><summary>How many days do I need in Izmir?</summary><div><p>One to two days for the city itself is plenty, plus extra days if you're using it as a base for Ephesus, Pamukkale, or the beaches.</p></div></details>
+<details><summary>Is Izmir or Selçuk better for visiting Ephesus?</summary><div><p>Selçuk is closer to Ephesus and quieter; Izmir has more nightlife, dining, and flight connections. Choose based on whether you want city energy or proximity to the ruins.</p></div></details>
+</section>
+
+----- kusadasi-guide -----
+TITLE: Kusadasi & the Ephesus Cruise Port
+<p>Kuşadası is Turkey's busiest Aegean cruise port and a lively beach-resort town — for many American travelers, it's the gateway to Ephesus on a Mediterranean cruise itinerary. Whether you're stepping off a ship for the day or basing here for a beach break, here's how to make the most of it.</p>
+
+<!-- IMAGE_SLOT_1: Kusadasi harbor with cruise ships and the marina, Pigeon Island in the background, no faces -->
+
+<h2>The cruise port and getting to Ephesus</h2>
+<p>Kuşadası's port sits right in town, and the main reason most visitors come is the short trip to <strong>Ephesus</strong> — one of the great ancient cities of the Mediterranean, about 30–40 minutes north near Selçuk. If you're on a cruise, you can book a ship excursion or an independent tour; independent guides are usually cheaper and run smaller groups, but make sure any operator guarantees you'll return before the ship departs. Our <a data-internal="ephesus-guide">Ephesus guide</a> covers the site in full, including the extra-ticket Terrace Houses and the House of the Virgin Mary nearby.</p>
+
+<!-- AFFILIATE_SLOT: tours — GetYourGuide CTA for a Kusadasi-to-Ephesus shore excursion -->
+
+<h2>What to do in Kusadasi itself</h2>
+<p>With time to spare, the town has its own low-key appeal. Walk out to <strong>Pigeon Island (Güvercinada)</strong>, the small fortress-topped islet connected by a causeway that gives the town its name. Browse the harbor-front bazaar (bargaining expected), relax on <strong>Ladies Beach</strong>, or simply enjoy a seafood lunch along the marina. It's a resort town at heart, so expect a holiday atmosphere rather than deep history.</p>
+
+<!-- IMAGE_SLOT_2: Pigeon Island fortress connected by causeway at Kusadasi, blue Aegean water -->
+
+<h2>Day trips beyond Ephesus</h2>
+<p>If you're staying longer, Kuşadası is well placed for the Aegean's highlights: the hillside wine village of <strong>Şirince</strong>, the white travertine terraces of <a data-internal="pamukkale-guide">Pamukkale</a> (a long day or an overnight), and the <strong>Dil ek Peninsula National Park</strong> for quieter beaches and hiking just south of town.</p>
+
+<h2>Making the most of a day in port</h2>
+<p>If you're on a cruise, time is everything. Ephesus deserves at least two to three hours, and the drive each way eats into your window, so a typical port day is Ephesus in the morning (before the midday heat and the biggest crowds) followed by a relaxed harbor lunch and some browsing back in town. If you'd rather skip the ruins, Kuşadası itself fills a half day easily between Pigeon Island, the bazaar, and a beach. Whatever you choose, leave a comfortable buffer before all-aboard time — traffic on the Ephesus road can be unpredictable in peak season.</p>
+
+<h2>Beaches around Kusadasi</h2>
+<p>Kuşadası is a beach town at heart. <strong>Ladies Beach</strong> is the closest and liveliest, with sunbeds and cafes; for cleaner water and pine-backed coves, head south to the <strong>Dilek Peninsula National Park</strong>, where a string of quieter beaches sits against a protected mountain backdrop. Boat trips from the harbor also run to swimming spots along the coast in summer.</p>
+
+<h2>Practical tips</h2>
+<p>The lira's weakness makes Kuşadası inexpensive for Americans, though the harbor bazaar is firmly tourist-priced — bargaining is expected, so take your time and compare. Cards work in hotels and larger restaurants; carry cash for the market, dolmuş minibuses, and beach cafes. Summer is hot and busy; spring and fall are more comfortable for pairing the beach with Ephesus.</p>
+
+<h2>Should you stay overnight?</h2>
+<p>For most travelers, Kuşadası is a stop rather than a destination — a day is enough to combine Ephesus with a wander around the harbor. If you want a beach-resort base for exploring the region, it works well, but for a quieter, more authentic Aegean stay, nearby <strong>Selçuk</strong> or the village of Şirince have more character. See where each fits in our <a data-internal="where-to-stay-aegean">where to stay on the Aegean Coast guide</a>.</p>
+
+<h2>Is Kusadasi too touristy?</h2>
+<p>It's worth setting expectations: Kuşadası is unapologetically a resort and cruise town, and on days when several ships are in port the harbor area gets busy and the bazaar can feel pushy. That's the trade-off for its convenience as an Ephesus base. If you came to Turkey for atmosphere and history, treat Kuşadası as a practical hub rather than the highlight — the real magic is at Ephesus and in the quieter Aegean villages inland. If you came for a straightforward beach-and-sun break with easy excursions laid on, it delivers exactly that, and at prices that feel like a bargain to American visitors thanks to the weak lira. Going in with the right frame makes all the difference.</p>
+
+<div class="feature-map" data-points="[
+{&quot;name&quot;:&quot;Kuşadası Port&quot;,&quot;lat&quot;:37.8600,&quot;lng&quot;:27.2590,&quot;note&quot;:&quot;Cruise port, in town&quot;},
+{&quot;name&quot;:&quot;Pigeon Island&quot;,&quot;lat&quot;:37.8567,&quot;lng&quot;:27.2547},
+{&quot;name&quot;:&quot;Ephesus&quot;,&quot;lat&quot;:37.9410,&quot;lng&quot;:27.3419,&quot;note&quot;:&quot;~30-40 min north&quot;},
+{&quot;name&quot;:&quot;Selçuk&quot;,&quot;lat&quot;:37.9510,&quot;lng&quot;:27.3680}
+]"></div>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>How far is Ephesus from the Kusadasi cruise port?</summary><div><p>About 30–40 minutes by road, near the town of Selçuk. It's the most popular excursion from the port.</p></div></details>
+<details><summary>Can I visit Ephesus independently from a cruise?</summary><div><p>Yes. Independent tours are usually cheaper and smaller than ship excursions, but confirm the operator guarantees your return before the ship sails.</p></div></details>
+<details><summary>Is Kusadasi worth staying overnight?</summary><div><p>It's mainly a beach-resort and cruise town. A day covers Ephesus plus the harbor; for a quieter Aegean base, consider Selçuk or Şirince.</p></div></details>
+<details><summary>What is there to do in Kusadasi besides Ephesus?</summary><div><p>Walk to Pigeon Island, browse the bazaar, relax on Ladies Beach, and visit the Dilek Peninsula National Park for beaches and hiking.</p></div></details>
+</section>
+
+----- where-to-stay-mediterranean -----
+TITLE: Where to Stay on the Turkish Riviera
+<p>Turkey's Mediterranean coast — the "Turquoise Coast" — runs for hundreds of miles past beaches, pine-covered mountains, and ancient ruins, so where you base yourself shapes the whole trip. From Antalya's atmospheric old town to all-inclusive resorts and laid-back boutique towns, here's how to choose the right stretch of coast and who each suits.</p>
+
+<!-- IMAGE_SLOT_1: Turquoise Coast view — a beach or bay with pine hills and clear blue water, no recognizable faces -->
+
+<h2>How the coast is laid out</h2>
+<p>Before picking a hotel, it helps to picture the geography. Turkey's Mediterranean coast curves for hundreds of miles, and the towns fall into two broad clusters anchored by two airports. The <strong>eastern cluster</strong> around Antalya (served by AYT) holds the main city, the big all-inclusive resort belt, and the great Roman ruins. The <strong>western cluster</strong> around Dalaman (DLM) is more about boutique towns, dramatic beaches, and outdoor adventure. They're a long drive apart — several hours — so most first trips pick one cluster rather than trying to span the whole coast. The four areas below run roughly east to west.</p>
+
+<h2>Antalya (Kaleiçi) — best for old-town charm and a city base</h2>
+<p><strong>Kaleiçi</strong>, Antalya's atmospheric Ottoman old town, wraps a restored Roman harbor in cobbled lanes, boutique hotels in converted mansions, and easy access to the wider coast. It's the best all-rounder: you get character, dining, and an airport an hour or less away, plus day trips to ancient sites. The newer beach districts of <strong>Lara</strong> and <strong>Konyaaltı</strong> add long stretches of sand.</p>
+<p><strong>Who it's for:</strong> first-timers who want a walkable, characterful base with both city life and the coast on the doorstep.</p>
+
+<h2>Belek, Side &amp; Kemer — best for all-inclusive resorts</h2>
+<p>East and west of Antalya, the resort belt of <strong>Belek, Side, and Kemer</strong> is built for the all-inclusive holiday: big beachfront properties, pools, and family amenities, often at prices that astonish American visitors. Side also has genuine ancient ruins right in town. This is the stretch to choose if you want to settle into one resort and barely leave.</p>
+<p><strong>Who it's for:</strong> families, couples after a relaxed beach-and-buffet week, and anyone who values value-for-money resort comfort over exploring.</p>
+
+<!-- IMAGE_SLOT_2: A relaxed beach-club or resort pool overlooking the Mediterranean on the Turkish Riviera -->
+
+<h2>Kaş — best for laid-back, boutique, and diving</h2>
+<p>Farther west, <strong>Kaş</strong> is the antidote to the package-resort belt: a small, bohemian town of whitewashed lanes, bougainvillea, boutique guesthouses, and some of Turkey's best diving and sea kayaking (over the sunken ruins at nearby Kekova). It draws independent travelers rather than tour groups.</p>
+<p><strong>Who it's for:</strong> travelers who want personality, outdoor activities, and a quieter, more local feel — and don't need a sprawling resort.</p>
+
+<h2>Fethiye &amp; Ölüdeniz — best for beaches and adventure</h2>
+<p>The <strong>Fethiye/Ölüdeniz</strong> hub pairs a working harbor town with one of Turkey's most famous beaches — the Ölüdeniz Blue Lagoon — plus paragliding off Babadağ, gulet cruises, and the Lycian Way hiking trail. It's served by Dalaman Airport (DLM). Base here for an active beach-and-adventure trip.</p>
+<p><strong>Who it's for:</strong> active travelers, beach lovers, and anyone planning a <a data-internal="blue-cruise-gulet">Blue Cruise</a> or paragliding.</p>
+
+<!-- AFFILIATE_SLOT: hotels — Booking.com CTA for Turkish Riviera hotels by area -->
+
+<h2>Kalkan — a quieter upscale alternative</h2>
+<p>Between Kaş and the Fethiye area, <strong>Kalkan</strong> deserves a mention: a steep, pretty harbor town known for boutique villa rentals, rooftop restaurants, and a more grown-up, upscale feel than the big resorts. It pairs well with Kaş for travelers touring the western coast by car, and suits couples and small groups renting a villa for a week.</p>
+
+<h2>What it costs and when to book</h2>
+<p>The Turkish Riviera is some of the best beach value in the Mediterranean for Americans, thanks to the weak lira — all-inclusive resorts in particular can cost a fraction of comparable spots in Western Europe. Prices still swing hard by season: July and August are peak and priciest, while late spring and early fall offer warm seas at lower rates. Because the best-located boutique hotels in Antalya's old town and the villas in Kaş and Kalkan are limited in number, book those well ahead for summer. Check live rates rather than relying on a fixed figure, since both demand and the exchange rate move.</p>
+
+<h2>How to pick — and which airport</h2>
+<p>Fly into <strong>Antalya (AYT)</strong> for the eastern Med — Antalya city, Belek, Side, Kemer — or <strong>Dalaman (DLM)</strong> for the western towns of Fethiye, Ölüdeniz, Kaş, and Kalkan. For a first trip, Antalya's old town is the easiest, most flexible base; for a resort week choose the Belek/Side/Kemer belt; for boutique calm pick Kaş; for beaches and adventure, Fethiye/Ölüdeniz. The full coast overview is in our <a data-internal="turquoise-coast-guide">Turquoise Coast guide</a>.</p>
+
+<div class="feature-map" data-points="[
+{&quot;name&quot;:&quot;Antalya (Kaleiçi)&quot;,&quot;lat&quot;:36.8841,&quot;lng&quot;:30.7056,&quot;note&quot;:&quot;Old-town base, AYT airport&quot;},
+{&quot;name&quot;:&quot;Side&quot;,&quot;lat&quot;:36.7676,&quot;lng&quot;:31.3890,&quot;note&quot;:&quot;Resorts + ruins&quot;},
+{&quot;name&quot;:&quot;Kaş&quot;,&quot;lat&quot;:36.2018,&quot;lng&quot;:29.6386,&quot;note&quot;:&quot;Boutique, diving&quot;},
+{&quot;name&quot;:&quot;Fethiye&quot;,&quot;lat&quot;:36.6217,&quot;lng&quot;:29.1164,&quot;note&quot;:&quot;Beaches, DLM airport&quot;},
+{&quot;name&quot;:&quot;Ölüdeniz&quot;,&quot;lat&quot;:36.5486,&quot;lng&quot;:29.1156,&quot;note&quot;:&quot;Blue Lagoon, paragliding&quot;}
+]"></div>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>Which airport is best for the Turkish Riviera?</summary><div><p>Antalya (AYT) for the eastern coast — Antalya, Belek, Side, Kemer. Dalaman (DLM) for the western towns of Fethiye, Ölüdeniz, Kaş, and Kalkan.</p></div></details>
+<details><summary>Where should I stay for an all-inclusive resort holiday?</summary><div><p>The Belek, Side, and Kemer belt near Antalya is built for all-inclusive resorts, often at excellent value.</p></div></details>
+<details><summary>What's the best base for a first-timer?</summary><div><p>Antalya's old town (Kaleiçi) is the most flexible — character, dining, beaches, and easy day trips, with an airport close by.</p></div></details>
+<details><summary>Where should I stay for beaches and adventure?</summary><div><p>Fethiye and Ölüdeniz — famous beaches, paragliding, gulet cruises, and the Lycian Way trail.</p></div></details>
+</section>
+
+----- turquoise-coast-guide -----
+TITLE: The Turquoise Coast: A First-Timer's Guide
+<p>Turkey's Mediterranean coast — known as the Turquoise Coast for its impossibly blue water — is where ancient ruins meet pine-clad mountains and beach towns string along a dramatic shoreline. It's Turkey at its most relaxed, and a perfect counterweight to the intensity of Istanbul and Cappadocia. Here's what a first-timer needs to know.</p>
+
+<!-- IMAGE_SLOT_1: Sweeping Turquoise Coast view — a turquoise bay framed by pine-covered mountains, no recognizable faces -->
+
+<h2>Why Americans love it</h2>
+<p>For travelers coming from the US, the Turquoise Coast hits a sweet spot that is hard to find at home: Caribbean-clear water and Mediterranean beaches, genuine ancient ruins you can have nearly to yourself, and prices — thanks to the weak lira — that make a comfortable trip remarkably affordable. It is the part of Turkey that feels most like a true vacation rather than a sightseeing marathon, which is why so many itineraries save it for last.</p>
+
+<h2>Where the coast goes</h2>
+<p>The Turquoise Coast runs roughly from <strong>Antalya</strong> in the east to <strong>Fethiye</strong> and beyond in the west. Antalya is the main city and eastern gateway, with the atmospheric <strong>Kaleiçi</strong> old town and a Roman harbor; the resort belt of <strong>Belek, Side, and Kemer</strong> stretches nearby. Heading west you reach laid-back <strong>Kaş</strong> and <strong>Kalkan</strong>, then the beaches and adventure hub of <strong>Fethiye and Ölüdeniz</strong>. Our <a data-internal="where-to-stay-mediterranean">where to stay guide</a> breaks down which base suits which trip.</p>
+
+<h2>The best things to do</h2>
+<p>The coast blends beach time with genuine history and outdoor adventure:</p>
+<ul>
+<li><strong>Kaleiçi (Antalya Old Town)</strong> — wander the cobbled lanes and restored Roman harbor.</li>
+<li><strong>Ölüdeniz Blue Lagoon</strong> — the iconic beach, with tandem <strong>paragliding</strong> off Babadağ mountain.</li>
+<li><strong>Lycian ruins</strong> — ancient sites like Myra, Patara, and Olympos dot the coast, often paired with a beach.</li>
+<li><strong>Düden Waterfalls</strong> — falls that plunge dramatically into the sea near Antalya.</li>
+<li><strong>Blue Cruise</strong> — a multi-day gulet (wooden boat) sail along the coast; see our <a data-internal="blue-cruise-gulet">Blue Cruise guide</a>.</li>
+</ul>
+
+<!-- IMAGE_SLOT_2: Ölüdeniz Blue Lagoon from above with paragliders, turquoise water -->
+
+<h2>Getting there and around</h2>
+<p>Fly from Istanbul to <strong>Antalya (AYT)</strong>, about 1h15, for the eastern coast, or to <strong>Dalaman (DLM)</strong> for the western towns around Fethiye, Ölüdeniz, Kaş, and Kalkan. A coastal road connects the resort towns, and renting a car is the best way to explore the Lycian coast at your own pace — intercity buses and shared <em>dolmuş</em> minibuses also link the towns. Antalya has a tram in its center.</p>
+
+<!-- AFFILIATE_SLOT: tours — GetYourGuide CTA for Turquoise Coast tours: paragliding, boat trips, Lycian ruins -->
+
+<h2>Outdoor adventure on the coast</h2>
+<p>Beyond the beaches, the Turquoise Coast is one of Turkey's best outdoor playgrounds. The <strong>Lycian Way</strong>, a long-distance hiking trail, traces the coastline past ruins and coves — you can walk a single scenic stretch without committing to the whole route. <strong>Sea kayaking</strong> over the sunken ruins at Kekova near Kaş is a highlight, as is <strong>scuba diving</strong> in the clear water. Thrill-seekers come for the tandem <strong>paragliding</strong> off Babadağ above Ölüdeniz, regularly rated among the world's best flights. And the multi-day <strong>Blue Cruise</strong> on a wooden gulet is the classic way to reach beaches accessible only by boat.</p>
+
+<h2>What to eat</h2>
+<p>Coastal dining means fresh fish and Mediterranean flavors. Seek out seafood <em>meyhanes</em> along the harbors for grilled catch and cold meze, and look for regional specialties as you go — Antalya's <strong>piyaz</strong> (a tahini-dressed white-bean salad) is a local standout. Long, lazy lunches by the water are part of the coast's relaxed rhythm.</p>
+
+<h2>When to go</h2>
+<p>The coast has a long season. <strong>Spring (April–May)</strong> and <strong>fall (September–October)</strong> are ideal for combining beach time with sightseeing and hiking — warm seas, comfortable temperatures, fewer crowds. <strong>Summer (June–August)</strong> is peak beach season: hot, busy, and perfect if sand and sea are the goal, less so for long days among the ruins. Winters are mild but quieter, with many resorts winding down.</p>
+
+<h2>Who the Turquoise Coast is for</h2>
+<p>The coast suits a wide range of travelers, which is part of its appeal. Beach-and-resort vacationers gravitate to the all-inclusive belt around Antalya for value and ease. Independent and active travelers favor the western towns — Kaş, Kalkan, Fethiye — for diving, hiking, paragliding, and gulet cruises. History lovers can thread ancient Lycian and Roman ruins between swims. And anyone burned out on the intensity of Istanbul will find the coast's slow, sun-soaked pace a relief. The one group that should look elsewhere: travelers chasing big-city culture and nightlife, which the coast offers only in a low-key, seasonal form.</p>
+
+<h2>How it fits a Turkey trip</h2>
+<p>The Turquoise Coast pairs naturally with the Aegean and the classic Istanbul–Cappadocia core for a longer trip — see our <a data-internal="10-days-turkey">10-day Turkey itinerary</a>. Even three or four days here makes a relaxing finale after the cities.</p>
+
+<div class="feature-map" data-points="[
+{&quot;name&quot;:&quot;Antalya&quot;,&quot;lat&quot;:36.8969,&quot;lng&quot;:30.7133,&quot;note&quot;:&quot;Eastern gateway, AYT&quot;},
+{&quot;name&quot;:&quot;Side&quot;,&quot;lat&quot;:36.7676,&quot;lng&quot;:31.3890},
+{&quot;name&quot;:&quot;Kaş&quot;,&quot;lat&quot;:36.2018,&quot;lng&quot;:29.6386},
+{&quot;name&quot;:&quot;Ölüdeniz&quot;,&quot;lat&quot;:36.5486,&quot;lng&quot;:29.1156,&quot;note&quot;:&quot;Blue Lagoon&quot;},
+{&quot;name&quot;:&quot;Fethiye&quot;,&quot;lat&quot;:36.6217,&quot;lng&quot;:29.1164,&quot;note&quot;:&quot;DLM airport&quot;}
+]"></div>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>What is the Turquoise Coast in Turkey?</summary><div><p>It's the Mediterranean coastline from roughly Antalya west to Fethiye, named for its blue water and known for beaches, ancient Lycian ruins, and gulet cruises.</p></div></details>
+<details><summary>How many days do I need on the Turquoise Coast?</summary><div><p>Three to four days for a relaxing taste; a week or more if you want to combine beaches, ruins, hiking, and a Blue Cruise.</p></div></details>
+<details><summary>What's the best way to get around?</summary><div><p>Renting a car gives the most freedom along the coastal road. Intercity buses and dolmuş minibuses also connect the towns.</p></div></details>
+<details><summary>When is the best time to visit?</summary><div><p>Spring and fall for a mix of beach and sightseeing; summer for peak beach weather; both shoulder seasons avoid the biggest crowds.</p></div></details>
+</section>
+
+----- antalya-guide -----
+TITLE: Antalya Travel Guide
+<p>Antalya is the capital of Turkey's Mediterranean coast and the gateway to the Turquoise Coast — a city that pairs a beautifully preserved Ottoman old town with long beaches, Roman ruins, and a backdrop of the Taurus Mountains. It's where many Americans start a coastal trip, and it rewards a couple of days before you head along the shore. Here's the first-timer's rundown.</p>
+
+<!-- IMAGE_SLOT_1: Antalya's Kaleiçi old harbor with boats and the old town walls above, mountains behind, no faces -->
+
+<h2>How to get there</h2>
+<p>Antalya is an easy domestic flight from Istanbul — about 1h15 to <strong>Antalya Airport (AYT)</strong> — with frequent, inexpensive service on Turkish Airlines, AJet, and Pegasus. The airport is about 20–30 minutes from the center, connected by a tram line, airport bus (Havas), or taxi. Antalya is the natural arrival point for the eastern Turquoise Coast.</p>
+
+<h2>A quick orientation</h2>
+<p>Antalya is bigger than first-timers expect — a city of over a million spread along the coast — but the part that matters for visitors is compact. <strong>Kaleiçi</strong>, the walled old town, sits on a cliff above the old Roman harbor and holds most of the charm, hotels, and restaurants you'll want. Flanking it are two beach zones: pebbly <strong>Konyaaltı</strong> to the west with mountain views, and sandy <strong>Lara</strong> to the east where the resort hotels cluster. Inland rise the Taurus Mountains, the source of the dramatic day trips and the snowmelt that feeds the city's waterfalls. Keep that simple map in mind — old town, two beaches, mountains behind — and Antalya is easy to navigate.</p>
+
+<h2>Things to do in Antalya</h2>
+<p>The heart of the city is <strong>Kaleiçi</strong>, the old town: a maze of cobbled lanes, restored Ottoman mansions, boutique hotels, and a picturesque restored <strong>Roman harbor</strong>. Wander through Hadrian's Gate, browse the bazaars, and stop for tea overlooking the marina. Just outside the center, the <strong>Düden Waterfalls</strong> plunge dramatically into the sea — a memorable, easy excursion. For beaches, the city is flanked by <strong>Konyaaltı</strong> (pebble, with mountain views) and <strong>Lara</strong> (sand, with the big resorts).</p>
+
+<!-- IMAGE_SLOT_2: Cobbled lane in Kaleiçi old town with Ottoman houses and bougainvillea -->
+
+<h2>Day trips: ancient ruins</h2>
+<p>Antalya is surrounded by some of Turkey's finest classical sites, making it a superb base for history:</p>
+<ul>
+<li><strong>Aspendos</strong> — one of the best-preserved Roman theatres anywhere, still used for performances.</li>
+<li><strong>Perge</strong> — an extensive ancient city with a colonnaded street and stadium.</li>
+<li><strong>Side</strong> — a resort town built around seafront temple ruins.</li>
+<li><strong>Termessos</strong> — a dramatic ruined city high in the mountains, for the more adventurous.</li>
+</ul>
+
+<!-- AFFILIATE_SLOT: tours — GetYourGuide CTA for Antalya day tours to Aspendos, Perge, and Side -->
+
+<h2>Where to stay</h2>
+<p>For first-timers, base in <strong>Kaleiçi</strong> — the old town's boutique hotels put you in the most atmospheric part of the city, walkable to the harbor and bazaars. For a beach-and-resort stay, <strong>Lara</strong> and <strong>Konyaaltı</strong> have the bigger hotels, while the all-inclusive belt of <strong>Belek, Side, and Kemer</strong> spreads out on either side. Our <a data-internal="where-to-stay-mediterranean">Turkish Riviera accommodation guide</a> compares each area. Thanks to the weak lira, Antalya delivers strong value, though prices climb in the summer peak — check current rates and book early.</p>
+
+<h2>What to eat</h2>
+<p>Seafood is the coastal star — look for <strong>seafood meyhanes</strong> along the harbor for fresh fish and meze. Don't miss <strong>piyaz</strong>, the local white-bean salad that's an Antalya specialty, and round off a meal with Turkish tea overlooking the water.</p>
+
+<h2>Getting around Antalya</h2>
+<p>The old town of Kaleiçi is compact and walkable — you'll explore it on foot. A modern <strong>tram</strong> connects the center with the Konyaaltı beach and museum area, and the nostalgic old tram trundles along the cliff-top. For the ancient-site day trips, the easiest options are a rental car, a guided tour, or intercity buses from the otogar (bus station); Aspendos and Perge are common combined excursions. Taxis are metered — insist on the meter.</p>
+
+<h2>When to go</h2>
+<p>Antalya enjoys one of Turkey's longest, sunniest seasons. <strong>Spring (April–May)</strong> and <strong>fall (September–October)</strong> are the sweet spots, with warm seas and comfortable temperatures for both beach time and exploring the ruins, which offer little shade. <strong>Summer</strong> is hot and busy — ideal for a pure beach holiday, harder for sightseeing. Even <strong>winter</strong> is mild and quiet, when you can pair the old town with snow-capped mountain views just inland.</p>
+
+<h2>How many days?</h2>
+<p>Two days covers the old town, a beach afternoon, and the Düden Waterfalls; add a third for an ancient-ruins day trip to Aspendos and Perge. From here, the rest of the <a data-internal="turquoise-coast-guide">Turquoise Coast</a> opens up to the west.</p>
+
+<div class="feature-map" data-points="[
+{&quot;name&quot;:&quot;Kaleiçi Old Town&quot;,&quot;lat&quot;:36.8841,&quot;lng&quot;:30.7056,&quot;note&quot;:&quot;Best first-timer base&quot;},
+{&quot;name&quot;:&quot;Roman Harbor&quot;,&quot;lat&quot;:36.8845,&quot;lng&quot;:30.7033},
+{&quot;name&quot;:&quot;Düden Waterfalls&quot;,&quot;lat&quot;:36.8606,&quot;lng&quot;:30.7872,&quot;note&quot;:&quot;Falls into the sea&quot;},
+{&quot;name&quot;:&quot;Aspendos Theatre&quot;,&quot;lat&quot;:36.9390,&quot;lng&quot;:31.1722,&quot;note&quot;:&quot;Day trip&quot;},
+{&quot;name&quot;:&quot;Perge&quot;,&quot;lat&quot;:36.9614,&quot;lng&quot;:30.8539}
+]"></div>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>Is Antalya worth visiting?</summary><div><p>Yes — it combines a charming Ottoman old town and Roman harbor with beaches, waterfalls, and easy access to some of Turkey's best ancient ruins.</p></div></details>
+<details><summary>How many days should I spend in Antalya?</summary><div><p>Two days for the city and beaches, three if you want a day trip to ancient sites like Aspendos and Perge.</p></div></details>
+<details><summary>What is Kaleiçi?</summary><div><p>Kaleiçi is Antalya's historic old town — cobbled streets, Ottoman houses, boutique hotels, and a restored Roman harbor. It's the best area to stay for first-timers.</p></div></details>
+<details><summary>What are the best day trips from Antalya?</summary><div><p>The Roman theatre at Aspendos, the ancient city of Perge, the seaside ruins at Side, and the mountaintop ruins of Termessos.</p></div></details>
+</section>

@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "stage": "publishing",
+  "batch": 5,
+  "batches_total": 15,
+  "batch_status": "cleaned",
+  "published_slugs": [],
+  "updated_at": "2026-06-23",
+  "notes": "Batch 5 (Aegean-tail + Mediterranean intro: izmir-guide, kusadasi-guide, where-to-stay-mediterranean, turquoise-coast-guide, antalya-guide) WRITTEN this session, validated (802-878w), DOM-cleaned into import-batch-05.json. Stage 4 next: 15 images via batch-05-images.md, upload-batch.mjs, import (DRAFT), inject-links, affiliates+disclosure, validate+publish. DB steps need live sg54 keys (user runs)."
+}

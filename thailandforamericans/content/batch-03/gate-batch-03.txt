@@ -1,0 +1,573 @@
+You are a fact-and-consistency checker for travel articles. Below are 5 articles plus the facts file they were written from. Your ONLY job is to find IN-CONTEXT ERRORS:
+- a number/date/claim stated one way in one place and differently in another
+- a recommendation that contradicts the facts file
+- a place treated as in-scope that the facts file doesn't support
+- an internal contradiction within an article
+- a claim that reads as factually wrong for Thailand
+
+IMPORTANT RULES:
+1. Do NOT flag "serve_live" items (exchange rates, prices, the visa day-count) for being hedged or non-specific — that is intentional and correct. Hedged visa language is CORRECT, not an error.
+2. Do NOT ask for more specificity on prices/rates — those are deliberately served live via converters. Flight DURATIONS (e.g. "about 1h25") are stable facts and are fine.
+3. Only report genuine contradictions or errors. If an article is clean, say "clean".
+4. Return a short list per article slug. Be concise.
+
+=== FACTS FILE (source of truth) ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_around": {
+   "intercity_rail": {
+    "value": "State Railway of Thailand (SRT). Atmospheric, slower than flights/buses. Highlight: the Bangkok–Chiang Mai overnight sleeper; southern line to Surat Thani for the Gulf islands.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "buses": {
+    "value": "Extensive intercity network from basic local buses to VIP/first-class and overnight coaches; minivans connect smaller towns. Use government BKS or reputable operators.",
+    "source_url": 
+
+=== ARTICLES TO CHECK ===
+
+
+----- SLUG: 3-days-in-bangkok-itinerary -----
+TITLE: 3 Days in Bangkok: The Perfect First-Visit Itinerary
+CATEGORY: bangkok
+
+<p>Three days is the right amount of time for a first visit to Bangkok — enough to cover the famous temples, eat your way through the street-food scene, and still leave room for the markets and a rooftop sunset, without burning out on a city that runs hot and loud. This itinerary is built for a first-timer landing with limited time, and it's organized so you're never crisscrossing the city in its notorious traffic.</p>
+
+<p>The one rule that shapes everything: <strong>use the BTS Skytrain, the MRT metro, and the river boats</strong> rather than fighting road traffic. Base yourself near a Skytrain station — <strong>Sukhumvit</strong> is the easiest first-timer choice — and the days below flow naturally.</p>
+
+<!-- IMAGE_SLOT_1: Bangkok's Grand Palace or Wat Arun glowing, with the city beyond -->
+
+<h2>Day 1: the temple core and the river</h2>
+
+<p>Start early, before the heat peaks, at the <strong>Grand Palace and Wat Phra Kaew</strong>, home of the Emerald Buddha — and dress correctly, with shoulders and knees covered, or you'll be turned away. A short walk takes you to <strong>Wat Pho</strong> and its enormous Reclining Buddha, the birthplace of Thai massage (a foot massage here is a perfect midday reset).</p>
+
+<p>In the late afternoon, cross the Chao Phraya River by ferry to <strong>Wat Arun</strong>, the Temple of Dawn, which glows beautifully at sunset. End the night with a street-food dinner in <strong>Chinatown (Yaowarat)</strong>, the city's most electric food street.</p>
+
+<div class="feature-map" data-points='[
+  {"name":"Grand Palace & Wat Phra Kaew","lat":13.7500,"lng":100.4915,"note":"Open early; strict dress code"},
+  {"name":"Wat Pho","lat":13.7466,"lng":100.4929,"note":"Reclining Buddha + massage"},
+  {"name":"Wat Arun","lat":13.7437,"lng":100.4889,"note":"Sunset; cross by river ferry"},
+  {"name":"Chinatown (Yaowarat)","lat":13.7400,"lng":100.5100,"note":"Evening street food"}
+]'></div>
+
+<!-- AFFILIATE_SLOT: getyourguide — Bangkok temple / river tour -->
+
+<h2>Day 2: markets, modern Bangkok, and a rooftop</h2>
+
+<p>If Day 2 falls on a weekend, spend the morning at the vast <strong>Chatuchak Weekend Market</strong> — thousands of stalls of everything imaginable. Midweek, swap in the <strong>Jim Thompson House</strong> (Thai silk and traditional teak architecture) and a modern mall like ICONSIAM or Siam Paragon for air-conditioned relief.</p>
+
+<p>In the afternoon, consider a <strong>Thai cooking class</strong> or a long-tail boat ride through the canals (khlongs) of Thonburi for a glimpse of older, water-bound Bangkok. As the sun drops, head to one of the city's famous <strong>rooftop bars</strong> in Silom or Sukhumvit for a skyline view and a drink.</p>
+
+<!-- IMAGE_SLOT_2: A bustling Bangkok market or a rooftop bar view over the skyline at dusk -->
+
+<!-- AFFILIATE_SLOT: getyourguide — cooking class / canal tour -->
+
+<h2>Day 3: your choice — a day trip or a deeper dive</h2>
+
+<p>With the headline sights covered, Day 3 is flexible. Three strong options:</p>
+
+<p><strong>Take a day trip.</strong> <strong>Ayutthaya</strong>, the ancient capital, is about an hour and a half away by train or minivan — atmospheric temple ruins and a UNESCO site. A floating market (like Damnoen Saduak or Amphawa) is another classic half-to-full-day outing.</p>
+
+<p><strong>Go deeper in the city.</strong> Explore a neighborhood you liked, visit more temples, hit a spa, or shop the markets you didn't reach.</p>
+
+<p><strong>Pre-position for your next stop.</strong> If you're flying north or south next, an easy morning and an early-afternoon flight keeps the day relaxed.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Ayutthaya day trip -->
+
+<h2>Where to base yourself</h2>
+
+<p>For three days, location is everything. Stay in <strong>Sukhumvit</strong> (around the Asok or Thonglor BTS stations) for the easiest first-timer experience — it's on the Skytrain and surrounded by restaurants and hotels. If temples and the river are your priority, the <strong>Riverside / Old Town</strong> area puts you within walking or short-ferry distance of the Grand Palace and Wat Pho, though it's less connected to the metro. Budget travelers gravitate to the <strong>Khao San</strong> area near the Old Town, which is cheap and close to the sights but off the Skytrain.</p>
+
+<h2>When to come</h2>
+
+<p>Bangkok is hot year-round, but the most comfortable stretch is the cool, dry season from <strong>November to February</strong> — still warm, but less punishing than the March-to-May hot season or the June-to-October rains. Whenever you visit, plan temple visits for the cooler mornings and save air-conditioned malls, markets, and spas for the peak afternoon heat.
+
+<h2>Practical tips for three days</h2>
+
+<p>Stay near a Skytrain station to save hours. Carry small cash for street food, markets, and tuk-tuks, even though cards work in malls and hotels. Use <strong>Grab</strong> for rides rather than negotiating with tuk-tuks. And pace yourself in the heat — mornings for temples, afternoons for air-conditioned markets or spas, evenings for food and rooftops. Costs day-to-day are low, but rates move, so check a live converter rather than trusting a fixed figure:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is 3 days enough for Bangkok?</summary><div><p>Yes — three days comfortably covers the major temples, the street-food scene, markets, and a rooftop sunset, with room on the third day for a day trip like Ayutthaya.</p></div></details>
+  <details><summary>What's the best order to see Bangkok's temples?</summary><div><p>Do the Grand Palace and Wat Pho together in the morning (they're a short walk apart), then cross the river to Wat Arun for sunset. Start early to beat the heat and crowds.</p></div></details>
+  <details><summary>How do I get around Bangkok efficiently?</summary><div><p>Use the BTS Skytrain, MRT metro, and river ferries to skip the heavy road traffic, and use Grab for door-to-door rides. Staying near a Skytrain station saves the most time.</p></div></details>
+  <details><summary>What's a good day trip from Bangkok?</summary><div><p>Ayutthaya, the ancient capital with its temple ruins, about 1.5 hours away; or a floating market like Damnoen Saduak or Amphawa. Both make a great third day.</p></div></details>
+</section>
+
+
+----- SLUG: best-thailand-itinerary-first-timers -----
+TITLE: The Best Thailand Itinerary for First-Timers
+CATEGORY: itineraries-by-interest
+
+<p>There is no single "best" Thailand itinerary, because the right one depends on how much time you have and what you came for. But there is a best <em>approach</em> for first-timers — a simple framework that lands almost everyone on a trip they love and steers you away from the classic rookie mistakes (trying to see too much, picking the wrong island for the season, wasting days on long overland journeys). Here's how to build yours.</p>
+
+<!-- IMAGE_SLOT_1: A bright, iconic Thailand scene that signals "first big trip" -->
+
+<h2>Step 1: start with Bangkok — always</h2>
+
+<p>Nearly every first trip begins in <strong>Bangkok</strong>, because that's where the long-haul flights land and because the capital is an essential experience in its own right: the Grand Palace and the riverside temples, the street food, the markets, the rooftop bars. Give it <strong>three days</strong> at the start (you'll be jet-lagged anyway), or split it — two days on arrival and one at the end before you fly home.</p>
+
+<h2>Step 2: pick your second region by what you love</h2>
+
+<p>This is the real decision. After Bangkok, Thailand splits into two very different experiences, and the best first trip usually picks <em>one</em> as the focus (with short trips) or <em>both</em> (with more time):</p>
+
+<h3>The north (Chiang Mai) — for culture, mountains, and elephants</h3>
+<p>Choose the north if you're drawn to temples, cooler mountain scenery, Thai cooking classes, and ethical elephant sanctuaries. It's calmer and more cultural than the islands.</p>
+
+<h3>The southern islands — for beaches and boats</h3>
+<p>Choose the south if you came for turquoise water, limestone cliffs, snorkeling, and island-hopping. Match the coast to your season: the Andaman side (Phuket, Krabi) is best roughly November–April; the Gulf islands (Koh Samui) shine mid-year.</p>
+
+<!-- IMAGE_SLOT_2: A split-feel image — northern temple/mountain on one hand, island beach on the other -->
+
+<h2>Step 3: match the route to your trip length</h2>
+
+<p><strong>One week:</strong> Bangkok plus <em>one</em> region — either the north or the islands, not both. Trying to do both in seven days means more time in transit than on the ground.</p>
+
+<p><strong>Ten days:</strong> the sweet spot — Bangkok, the north, <em>and</em> the islands, linked by short domestic flights. This is the classic first-timer route.</p>
+
+<p><strong>Two weeks or more:</strong> all three regions at a relaxed pace, with room for a second island or deeper time in the north.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — multi-day Thailand tours -->
+
+<h2>Step 4: fly between regions — don't drive</h2>
+
+<p>Thailand's regions are far apart, but <strong>domestic flights are cheap, frequent, and short</strong> — typically an hour to ninety minutes between Bangkok, Chiang Mai, and the southern airports. For a first trip with limited days, flying is almost always the right call; save the scenic overnight train for when you have time to spare. Book a week or two ahead for the best fares.</p>
+
+<!-- AFFILIATE_SLOT: skyscanner — domestic flights -->
+
+<h2>A worked example: the ideal 10-day split</h2>
+
+<p>To make the framework concrete, here's how the classic ten-day first trip breaks down: <strong>three days in Bangkok</strong> (temples, street food, markets), <strong>three days in the north</strong> around Chiang Mai (old-city temples, a cooking class, an ethical elephant sanctuary), <strong>three days on the southern islands</strong> (beach time and an island-hopping boat trip), and a <strong>final day</strong> back in Bangkok before your flight home. Two short domestic flights link the regions. It's popular precisely because it balances culture, nature, and beach without rushing — and it's easy to stretch to two weeks by adding island or northern days, or compress to a week by dropping one region.</p>
+
+<h2>The mistakes to avoid</h2>
+
+<p>First-timers consistently trip over the same few things: <strong>cramming in too much</strong> (three regions in a week), <strong>picking the wrong island for the season</strong> (the Andaman coast in peak monsoon), <strong>underestimating travel time</strong> (treating a country the size of France like a single city), and <strong>not booking domestic flights early</strong>. Avoid those four and almost any route works.</p>
+
+<h2>Budgeting your first trip</h2>
+
+<p>Thailand is inexpensive once you're there; your fixed costs are the international flight, domestic flights, and accommodation. Because airfares and rates move constantly, plan with a live converter and treat any daily-budget figure as an indicative range:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<p>And before you book anything, confirm your entry requirements: Thailand's visa-free rules for Americans have been changing in 2026, and the permitted visa-exempt stay has been in flux. File the free Thailand Digital Arrival Card (TDAC) online before you fly.</p>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What's the best Thailand itinerary for a first trip?</summary><div><p>For most first-timers with around ten days, the classic route is Bangkok, then the north (Chiang Mai), then the southern islands, connected by short domestic flights. With only a week, do Bangkok plus one region.</p></div></details>
+  <details><summary>Should I do the north or the islands first?</summary><div><p>Either works, but many people do the north before the islands so the trip ends on the beach. Whichever order, fly between regions rather than traveling overland.</p></div></details>
+  <details><summary>How long should a first trip to Thailand be?</summary><div><p>Ten days is ideal for seeing all three regions without rushing. A week works for Bangkok plus one region; two weeks lets you go deeper or add a second island.</p></div></details>
+  <details><summary>What's the most common first-timer mistake?</summary><div><p>Trying to see too much, too fast. Thailand is a large country — pick a focus, fly between regions, and leave room to actually enjoy each place.</p></div></details>
+</section>
+
+
+----- SLUG: beaches-only-thailand-itinerary -----
+TITLE: A Beaches-Only Thailand Itinerary
+CATEGORY: itineraries-by-interest
+
+<p>If you're not interested in temples and cities and just want sun, sand, and turquoise water, you can build a Thailand trip that's almost entirely beaches — and it'll be spectacular. The key decisions are which coast (the weather differs), how many islands to combine, and how to minimize time spent in transit. Here's a beaches-only route that skips the cultural circuit and maximizes beach time.</p>
+
+<p>One unavoidable bit of logistics: nearly all international flights land in <strong>Bangkok</strong>, so you'll pass through the capital even on a beach trip. You can treat it as a single overnight on the way through, or skip straight to a connecting domestic flight south the same day. If you do overnight, stay near the airport to keep the next morning's connection short rather than venturing into the city center, since the point of this trip is to maximize time on the sand.</p>
+
+<!-- IMAGE_SLOT_1: A dreamy Thai beach with clear shallow water and a longtail boat -->
+
+<h2>First: pick your coast by season</h2>
+
+<p>Thailand's two coasts have <strong>opposite weather</strong>, and this single choice makes or breaks a beach trip:</p>
+
+<p><strong>The Andaman coast</strong> (Phuket, Krabi, Phi Phi) is best roughly <strong>November through April</strong>, with peak monsoon around September–October.</p>
+
+<p><strong>The Gulf coast</strong> (Koh Samui, Koh Phangan, Koh Tao) runs on a different cycle and is often driest <strong>mid-year</strong>, with its wettest spell around October–December.</p>
+
+<p>Book the coast that's dry for your dates. If you're traveling in, say, July, the Gulf islands are the smart call even though the Andaman coast gets more headlines.</p>
+
+<!-- IMAGE_SLOT_2: A map-like wide shot suggesting island-hopping across turquoise sea -->
+
+<h2>The Andaman beaches route (Nov–Apr)</h2>
+
+<h3>Days 1–4: Krabi</h3>
+<p>Fly into <strong>Krabi</strong> and base in <strong>Ao Nang</strong> or boat-access-only <strong>Railay</strong>. Spend your days on the beaches and taking longtail or speedboat trips to the <strong>Phi Phi Islands</strong>, <strong>Phang Nga Bay</strong>, and the <strong>Hong Islands</strong> lagoons.</p>
+
+<h3>Days 5–8: a second island</h3>
+<p>Ferry to a contrasting island — quiet <strong>Koh Lanta</strong> for laid-back, family-friendly beaches, or <strong>Phuket</strong> if you want more resorts, dining, and nightlife. Keep it on the same coast to avoid long transfers.</p>
+
+<!-- AFFILIATE_SLOT: booking — Krabi + second-island beach hotels -->
+<!-- AFFILIATE_SLOT: getyourguide — island-hopping boat trips -->
+
+<h2>The Gulf beaches route (mid-year)</h2>
+
+<h3>Days 1–4: Koh Samui</h3>
+<p>Fly into <strong>Koh Samui</strong> (or via Surat Thani plus ferry) and settle into a resort beach like <strong>Chaweng</strong> or the quieter <strong>Choeng Mon</strong>. Day-trip to the <strong>Ang Thong Marine Park</strong> for its emerald lagoon and karsts.</p>
+
+<h3>Days 5–8: Koh Phangan or Koh Tao</h3>
+<p>Ferry to <strong>Koh Phangan</strong> for quieter beaches (or the Full Moon Party, if that's your thing), or to <strong>Koh Tao</strong> for some of the most affordable diving and snorkeling in the world.</p>
+
+<!-- AFFILIATE_SLOT: booking — Koh Samui + Phangan/Tao hotels -->
+
+<h2>Beach-trip practicalities</h2>
+
+<p>A few things make an islands-only trip smoother. <strong>Pack reef-safe sunscreen</strong> — it's better for the coral and increasingly expected on tours. <strong>Bring motion-sickness tablets</strong> if you're prone to it; longtail and speedboat crossings can be choppy. <strong>Carry cash</strong>, since smaller islands and beach vendors often don't take cards and ATMs can be sparse or charge high fees. And <strong>book island accommodation ahead</strong> in peak season (November–April on the Andaman coast), when the best beachfront places fill early.</p>
+
+<p>If you plan to rent a scooter to explore an island, know that many travel-insurance policies won't cover a motorbike accident without a valid motorcycle license — and island roads claim a lot of tourist injuries. Factor that in before you ride.</p>
+
+<h2>How to maximize beach time</h2>
+
+<p>A few rules keep a beach trip from turning into a transit slog. <strong>Stick to one coast.</strong> Hopping from the Andaman to the Gulf coast mid-trip wastes a full day or more. <strong>Limit yourself to two islands</strong> on a one-week trip — more than that and you spend your holiday packing. <strong>Use flight-plus-ferry combo tickets</strong> where they exist, and book ferries for daytime crossings so you don't lose beach hours. And <strong>build in nothing days</strong> — the whole point is to slow down.</p>
+
+<p>Resort and ferry prices vary by island and season; use a live converter rather than a fixed number:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Can I skip Bangkok and the temples entirely?</summary><div><p>Almost — you'll likely transit Bangkok since that's where international flights land, but you can connect straight to a domestic flight south and spend the rest of the trip on the islands.</p></div></details>
+  <details><summary>Which coast is best for a beach trip?</summary><div><p>Match it to your season: the Andaman coast (Phuket, Krabi, Phi Phi) is best November–April; the Gulf islands (Koh Samui, Phangan, Tao) are best mid-year. Pick the dry coast for your dates.</p></div></details>
+  <details><summary>How many islands should I visit in a week?</summary><div><p>Two at most. More than that and you'll spend the trip packing and in transit. Pick one lively island and one calm one on the same coast.</p></div></details>
+  <details><summary>Which island is best purely for the beach?</summary><div><p>Krabi (Railay) and Phi Phi for dramatic Andaman scenery; Koh Lanta for quiet sand; Koh Tao for snorkeling and diving. The "best" depends on whether you want scenery, calm, or underwater life.</p></div></details>
+</section>
+
+
+----- SLUG: domestic-flights-thailand -----
+TITLE: Domestic Flights in Thailand: Airlines, Routes, and Booking Tips
+CATEGORY: flights-trains
+
+<p>Domestic flights are the secret to a good Thailand itinerary. The country is large — driving or training between Bangkok, the north, and the southern islands eats whole days — but a flight covers the same distance in an hour or two for not much money. If you're combining regions on a short trip, flying is almost always the right move. Here's how Thailand's domestic flight network works and how to book it well.</p>
+
+<!-- IMAGE_SLOT_1: A plane on the tarmac or wing-over-islands view, bright and travel-y -->
+
+<h2>The main airlines</h2>
+
+<p>Thailand has a competitive domestic market, which keeps fares low. The main carriers you'll see:</p>
+
+<p><strong>Budget airlines:</strong> <strong>Thai AirAsia</strong>, <strong>Thai Lion Air</strong>, <strong>Nok Air</strong>, and <strong>Thai Vietjet</strong> run the bulk of domestic routes at low base fares (with extra charges for bags and seats, as budget airlines do everywhere).</p>
+
+<p><strong>Full-service:</strong> <strong>Bangkok Airways</strong> (which owns and exclusively serves Samui airport) and <strong>Thai Airways</strong>, the national carrier, offer a more comfortable experience at higher prices.</p>
+
+<!-- AFFILIATE_SLOT: skyscanner — compare Thailand domestic flights -->
+
+<h2>Bangkok's two airports — don't mix them up</h2>
+
+<p>This catches people out: Bangkok has <strong>two</strong> airports. <strong>Suvarnabhumi (BKK)</strong> handles most full-service and international flights; <strong>Don Mueang (DMK)</strong> is the budget-airline hub. When you book a domestic flight, check which airport it departs from — if you're connecting from an international arrival, you may need to transfer between the two, which takes an hour or more across the city. Leave plenty of time, or book your domestic leg from the same airport you land at where possible.</p>
+
+<h2>The most useful routes</h2>
+
+<p>For a typical first trip, these are the flights that save the most time:</p>
+
+<p><strong>Bangkok ↔ Chiang Mai</strong> (about 1h15) — the north. Far better than the 10–12 hour overland trip.</p>
+
+<p><strong>Bangkok ↔ Phuket</strong> (about 1h25) — the Andaman coast.</p>
+
+<p><strong>Bangkok ↔ Krabi</strong> (about 1h25) — the other Andaman gateway.</p>
+
+<p><strong>Bangkok ↔ Koh Samui</strong> (about 1h) — the Gulf coast, served by Bangkok Airways.</p>
+
+<p>There are also useful direct routes that skip Bangkok, such as <strong>Chiang Mai to Phuket</strong>, which save a backtrack when you're moving from the north straight to the south.</p>
+
+<!-- IMAGE_SLOT_2: Aerial view of Thai islands from a plane window -->
+
+<h2>What about luggage and small airports?</h2>
+
+<p>Budget-airline fares usually include only a small carry-on, so add checked baggage when you book (it's cheaper online than at the counter) and weigh your bags — Thai budget carriers enforce limits strictly. The island airports are small and can get congested in peak season, so arrive with a comfortable buffer. Samui's airport, run by Bangkok Airways, is unusually pleasant — an open-air, garden-style terminal — but its flights are pricier than the budget norm.</p>
+
+<h2>Is flying always the right call?</h2>
+
+<p>For linking distant regions on a trip of two weeks or less, almost always yes — the time saved is enormous. The exception is when the journey itself is the experience: the <strong>overnight sleeper train</strong> from Bangkok to Chiang Mai is a genuinely enjoyable, scenic ride that also saves a hotel night. On a longer, slower trip, mixing in one or two train or bus legs for the scenery can be worth it. But for getting to the islands quickly, fly.
+
+<h2>How to book well</h2>
+
+<p><strong>Book a week or two ahead.</strong> Fares are cheapest in advance and climb close to departure, especially in peak season (November–February).</p>
+
+<p><strong>Compare across airlines.</strong> A flight-comparison search shows all the budget and full-service options side by side; the cheapest carrier varies by route and date.</p>
+
+<p><strong>Read the baggage rules.</strong> Budget fares often include only a small carry-on; add checked bags during booking, where they're cheaper than at the airport.</p>
+
+<p><strong>Factor airport transfers.</strong> A "cheap" flight from the far Bangkok airport can cost you the savings in a cross-city taxi and lost time.</p>
+
+<p><strong>Book directly or through a comparison tool.</strong> A flight-comparison search is the easiest way to see every airline at once, and you can either book through it or go to the airline's own site once you've found the route and price you want. Either works; the comparison step is what saves you money, because the cheapest carrier genuinely changes from route to route and day to day.</p>
+
+<p>Fares move constantly, so check current prices rather than trusting any fixed figure, and translate baht with a live converter:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Are domestic flights in Thailand cheap?</summary><div><p>Generally yes — a competitive market with several budget airlines keeps base fares low, especially booked a week or two ahead. Watch for extra charges on bags and seat selection.</p></div></details>
+  <details><summary>Which airlines fly domestically in Thailand?</summary><div><p>Budget carriers Thai AirAsia, Thai Lion Air, Nok Air, and Thai Vietjet, plus full-service Bangkok Airways (which serves Koh Samui) and Thai Airways.</p></div></details>
+  <details><summary>Why does Bangkok have two airports?</summary><div><p>Suvarnabhumi (BKK) handles most international and full-service flights; Don Mueang (DMK) is the budget-airline hub. Check which one your domestic flight uses — transferring between them takes over an hour.</p></div></details>
+  <details><summary>Should I fly or take the train between Thai cities?</summary><div><p>Fly if your time is limited — a flight is 1–1.5 hours versus 10+ hours overland. The overnight train to Chiang Mai is a lovely experience if you have time to spare, but flying wins for short trips.</p></div></details>
+</section>
+
+
+----- SLUG: bangkok-to-islands-transport -----
+TITLE: How to Get from Bangkok to Phuket, Krabi, and Koh Samui
+CATEGORY: ferries-islands
+
+<p>Once you've done Bangkok, the big logistical question is how to reach the southern islands. The three most popular destinations — <strong>Phuket</strong>, <strong>Krabi</strong>, and <strong>Koh Samui</strong> — each have a best route from the capital, and they're not all the same. Here's exactly how to get to each, with the fast way, the cheap way, and which to choose.</p>
+
+<!-- IMAGE_SLOT_1: A longtail boat heading toward a Thai island, or a ferry on turquoise water -->
+
+<h2>Bangkok to Phuket</h2>
+
+<p><strong>The fast way (recommended): fly.</strong> Phuket has its own international airport (HKT), and the flight from Bangkok takes about <strong>1 hour 25 minutes</strong>. Both Bangkok airports serve it, with frequent budget and full-service flights. From Phuket airport it's a 30-minute-to-one-hour taxi to most beaches. For almost everyone, flying is the clear choice.</p>
+
+<p><strong>The slow/cheap way:</strong> overland by bus or train to the south plus a road connection — a long journey (often overnight) that only makes sense if you're specifically avoiding flying or stopping somewhere en route.</p>
+
+<!-- AFFILIATE_SLOT: skyscanner — Bangkok to Phuket flights -->
+
+<h2>Bangkok to Krabi</h2>
+
+<p><strong>Fly.</strong> Krabi also has its own airport (KBV), about <strong>1 hour 25 minutes</strong> from Bangkok, and it's the gateway to Ao Nang, Railay, and the Andaman islands. From the airport it's roughly 30–45 minutes to Ao Nang. As with Phuket, flying is the sensible default; the overland alternative is long.</p>
+
+<p>If you're deciding between Phuket and Krabi as a destination, both are easy to reach — the choice is about the place, not the journey (Krabi for dramatic cliffs and a calmer scene, Phuket for more resorts and nightlife).</p>
+
+<!-- AFFILIATE_SLOT: skyscanner — Bangkok to Krabi flights -->
+
+<h2>Bangkok to Koh Samui</h2>
+
+<p>Koh Samui is an island, so reaching it always ends with either a flight or a ferry — and this is where the routes genuinely differ:</p>
+
+<p><strong>The fast way: fly direct to Samui (USM).</strong> The flight is about <strong>1 hour</strong>, but Samui's airport is privately operated (by Bangkok Airways) and fares run higher than to other islands. It's the quickest, most comfortable option.</p>
+
+<p><strong>The cheaper way: fly to Surat Thani, then ferry.</strong> Fly Bangkok → Surat Thani (on the mainland), then take a bus-and-ferry or combined ticket across to Koh Samui. It's noticeably cheaper than flying direct to Samui, at the cost of a few extra hours and a transfer.</p>
+
+<p><strong>The budget way: train or bus plus ferry.</strong> An overnight train or bus from Bangkok to Surat Thani, then the ferry — slow but inexpensive, and the overnight leg saves a hotel night.</p>
+
+<!-- IMAGE_SLOT_2: A passenger ferry approaching a Gulf island like Koh Samui -->
+
+<!-- AFFILIATE_SLOT: skyscanner — Bangkok to Samui / Surat Thani flights -->
+
+<h2>How long does the whole journey really take?</h2>
+
+<p>The flight time is only part of the door-to-door picture, and it's worth planning around. To <strong>Phuket or Krabi</strong>, budget roughly half a day total: time to the Bangkok airport, the 1h25 flight, and 30–60 minutes from the island airport to your beach. To <strong>Koh Samui direct</strong>, similar — about an hour in the air plus transfers. The <strong>Surat Thani-plus-ferry</strong> route to Samui is the long one: the flight is short, but the airport-to-pier transfer and the ferry crossing add several hours, so treat it as most of a travel day.</p>
+
+<p>The practical takeaway: if you're flying to an island on the same day you arrive internationally in Bangkok, give yourself a generous connection — especially if your domestic flight leaves from the other Bangkok airport — or simply overnight in Bangkok and fly south fresh the next morning.
+
+<h2>Which route should you choose?</h2>
+
+<p>For <strong>Phuket and Krabi</strong>, just fly — it's cheap, fast, and obvious. For <strong>Koh Samui</strong>, fly direct if you value time and comfort and don't mind paying more; fly to Surat Thani and ferry across if you'd rather save money. Whichever island, book domestic flights a week or two ahead for the best fares, and check which Bangkok airport your flight departs from.</p>
+
+<p>One season note: ferry crossings to the Gulf islands can be rough or disrupted during the wettest months (around October–December for the Gulf), so build in buffer time if you're traveling then. Fares move, so check current prices and convert with a live tool:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What's the fastest way from Bangkok to the islands?</summary><div><p>Fly. Phuket and Krabi are about 1h25 from Bangkok and have their own airports; Koh Samui is about 1 hour direct. Flying beats the long overland routes for all three.</p></div></details>
+  <details><summary>Is it cheaper to fly to Koh Samui or take a ferry?</summary><div><p>Flying direct to Samui is fastest but pricier (its airport is privately run). Flying to Surat Thani and taking a bus-and-ferry across is noticeably cheaper, at the cost of a few extra hours.</p></div></details>
+  <details><summary>Do I need to fly into Phuket, or can I go overland?</summary><div><p>You can go overland by bus or train plus a road connection, but it's a long, often overnight journey. Flying (about 1h25) is far easier and usually inexpensive.</p></div></details>
+  <details><summary>Should I worry about ferries in the rainy season?</summary><div><p>Crossings to the Gulf islands (Samui, Phangan, Tao) can be rough or disrupted during their wettest months around October–December. Build in buffer time and check conditions if traveling then.</p></div></details>
+</section>

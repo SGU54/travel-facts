@@ -1,0 +1,180 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 18,
+  "swamp": "S-transit",
+  "_INSTRUCTIONS": "Return ONE JSON object with exactly these keys. For each: {value, status, source_url, notes}. status is one of verified | verify_recommended | serve_live | agreed_stable. DEFAULT TO verify_recommended. Mark verified ONLY if source_url is an OFFICIAL source you actually opened — shgm.gov.tr (Turkish civil aviation), mevzuat.gov.tr, resmigazete.gov.tr, an airport operator's own site (istairport.com, sabihagokcen.aero), TCDD, or a named carrier's own conditions of carriage. A travel blog, OTA, comparison site or news roundup is NOT official. If you cannot source a value, return null and list the key in _open_questions. Do NOT estimate. Do NOT average two sources.",
+  "_CALIBRATION": "Track record so far on this project: Turkey batch 16 returned 1/1 and 4/5 verified-with-official-source; batch 17 returned 3/3 and 3/3. Before those prompts were hardened, a Thailand panel marked 24 of 40 facts verified with only 2 citing an official source and all 22 others were downgraded. Hold the current standard.",
+  "_WHY_THIS_LOOKS_ODD": "This asks for COMPONENTS and no recommendations on purpose. The articles report mechanics; the paid guide makes the calls. Do not add advice, rankings, or 'you should' framing to any notes field. In particular do NOT advise how much connection time to leave — that is the single thing this request must not contain.",
+  "_open_questions": [],
+  "facts": {
+    "transit.shy_yolcu_regulation": {
+      "_want": "The Turkish civil aviation passenger rights regulation (SHY-Yolcu / SHY-PASSENGER) — its official name, the authority behind it, and which flights it covers.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.cancellation_rebook_or_refund": {
+      "_want": "On cancellation of a domestic Turkish flight, what the carrier must offer: rebooking, rerouting, refund — and who chooses.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.compensation_bands": {
+      "_want": "Compensation amounts under the Turkish regulation by distance band, and the currency they are expressed in.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.extraordinary_circumstances": {
+      "_want": "The extraordinary-circumstances exception under the Turkish regulation — what it excuses and what it does not.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.duty_of_care_thresholds": {
+      "_want": "Delay thresholds at which the carrier owes meals, communication and accommodation.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.claim_procedure": {
+      "_want": "How a passenger files a claim under the Turkish regulation, and to which body.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.denied_boarding": {
+      "_want": "What the regulation provides on denied boarding for domestic Turkish flights.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.ist_minimum_connection_time": {
+      "_want": "Published minimum connection times at Istanbul Airport (IST) by connection type: international-to-international, international-to-domestic, domestic-to-international.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.saw_minimum_connection_time": {
+      "_want": "Published minimum connection time at Sabiha Gokcen (SAW), if published.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.ist_intl_to_domestic_path": {
+      "_want": "The physical process at IST for an international-to-domestic connection: passport control, baggage reclaim or through-check, terminal movement.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.transit_without_entry": {
+      "_want": "Whether a passenger can connect at IST without clearing immigration, and the conditions.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.ist_terminal_scale": {
+      "_want": "Istanbul Airport's terminal layout and the realistic walking distance between the furthest gates.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.ist_saw_distance_time": {
+      "_want": "Distance and typical travel time between IST and SAW.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.ist_saw_transfer_options": {
+      "_want": "The ways to travel between IST and SAW — shuttle, metro, taxi — with journey times.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.ist_saw_transfer_cost": {
+      "_want": "Typical cost of each IST-SAW transfer option. Return null rather than estimating.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.airport_by_carrier": {
+      "_want": "Which carriers principally operate from IST and which from SAW.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.through_ticket_definition": {
+      "_want": "What legally or commercially constitutes a through-ticket versus separate tickets, and what the carrier owes in each case when a connection is missed.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.baggage_through_check": {
+      "_want": "When baggage is checked through to a final destination and when it must be reclaimed and re-checked, for Turkish domestic connections.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.interline_agreements_turkey": {
+      "_want": "Whether Turkish Airlines, AJet and Pegasus interline with each other, and what that means for a passenger holding legs on two of them.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.self_transfer_protection": {
+      "_want": "What protection, if any, a passenger has on a self-transfer itinerary booked as separate tickets.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.yht_routes_times": {
+      "_want": "Turkish high-speed rail (YHT) routes actually in service and their scheduled journey times.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.coach_journey_times": {
+      "_want": "Intercity coach journey times on the main corridors used by visitors (Istanbul-Cappadocia, Istanbul-Izmir, Izmir-Antalya).",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.rail_booking_mechanics": {
+      "_want": "How YHT tickets are sold, how far ahead, and whether a foreign passport can book online.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transit.no_flight_corridors": {
+      "_want": "Domestic corridors visitors use that have no scheduled flight, requiring road or rail.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    }
+  }
+}

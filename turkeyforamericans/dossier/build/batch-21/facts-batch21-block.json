@@ -1,0 +1,140 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 21,
+  "swamp": "S-money2",
+  "facts": {
+    "money.turkish_atm_fee": {
+      "value": "Akbank publishes a fee for withdrawals by foreign/overseas cards at its domestic ATMs of 12.50% to 25.00% (excluding BSMV). Other major banks' published domestic ATM tariffs primarily cover Turkish cards; a uniform foreign-card ATM operator fee is not published as a single national figure.",
+      "status": "verified",
+      "source_url": "https://www.akbank.com/urun-ve-hizmet-ucretleri",
+      "notes": "THE HEADLINE FACT OF THIS BATCH. Akbank's own published tariff page lists the foreign-card domestic ATM withdrawal charge as 12.50% to 25.00% (excluding BSMV) — a PERCENTAGE, not a flat fee. deepseek gave unsourced and mutually inconsistent figures (TEB 10%, Ziraat 45 TRY fixed, some banks free). grok also notes no uniform national figure is published and that other banks' pages cover Turkish cards only. Report Akbank's published range as what ONE major bank publishes, never as a national rate."
+    },
+    "money.currency_import_declaration": {
+      "value": "Import of foreign currency into Turkey is free. For export (taking out) of cash, amounts exceeding 10 000 euro or equivalent in foreign currency, or exceeding 185 000 TL in Turkish lira, must be declared to customs on the official cash declaration form.",
+      "status": "verified",
+      "source_url": "https://gumrukrehberi.gov.tr/Generals/PagePdf/12404",
+      "notes": "deepseek HAD THE DIRECTION BACKWARDS. It said amounts over EUR 10,000 must be declared when bringing currency IN. The official Customs Guide says import of foreign currency is FREE; it is EXPORT — taking cash OUT — that must be declared above EUR 10,000 equivalent or 185,000 TL. Same class of error as the entry-versus-exit confusion caught on the batch-16 currency question."
+    },
+    "money.leftover_lira": {
+      "value": "Turkish lira may be taken out of Turkey subject to the same declaration threshold (above 185 000 TL requires declaration). Conversion back to foreign currency is available at banks and licensed exchange offices.",
+      "status": "verified",
+      "source_url": "https://gumrukrehberi.gov.tr/Generals/PagePdf/12404",
+      "notes": "Same customs cash-control rules apply to outgoing Turkish lira."
+    },
+    "money.foreign_currency_pricing": {
+      "value": "Under the Turkish Currency Protection regime (Law 1567 and implementing decisions), contracts between persons resident in Turkey for the sale of goods, services, real estate, vehicle hire and similar transactions may not be denominated or indexed in foreign currency except in cases determined by the Ministry. Tourist-facing retail pricing in practice frequently displays dual figures, but the statutory rule requires lira denomination for domestic resident-to-resident contracts.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/20.5.8914391.pdf",
+      "notes": "NOT RETURNED BY DEEPSEEK AT ALL (null). grok opened the decision implementing Law 1567: contracts between persons resident in Turkey may not be denominated or indexed in foreign currency except as the Ministry determines. Non-obvious, and it explains why dual pricing aimed at tourists sits in an odd position."
+    },
+    "money.inflation_rate_recent": {
+      "value": "Consumer price index (TÜFE) rose 32.11% year-on-year and 0.99% month-on-month in June 2026.",
+      "status": "verified",
+      "source_url": "https://x.com/tuikbilgi/status/2072945466090590625",
+      "notes": "BOTH AGREE on 32.11% year-on-year and 0.99% month-on-month for June 2026. grok cites the TUIK announcement directly; deepseek cited a newspaper reporting TUIK. Same figure, better provenance."
+    },
+    "money.exchange_rate_recent": {
+      "value": "TCMB indicative USD/TRY rate on 27 July 2026: forex buying 47.2681, forex selling 47.3533.",
+      "status": "serve_live",
+      "source_url": "https://www.tcmb.gov.tr/wps/wcm/connect/tr/tcmb+tr/main+page+site+area/bugun",
+      "notes": "MINOR DISCREPANCY, same day: deepseek gave 47.0705 selling, grok 47.2681 buying / 47.3533 selling from the TCMB indicative bulletin. grok's pair is internally coherent (buying below selling) and is taken. THIS IS A SERVE-LIVE VALUE — it will be wrong within days and must never be printed as a fixed figure in prose."
+    },
+    "money.exchange_offices": {
+      "value": "Licensed döviz bürosu display separate buying and selling rates; the spread is the difference between the two rates. Commission practice varies by office and is not uniformly prohibited or required by a single published rule opened in this pass.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "grok's operational description (separate buy/sell rates, spread is the difference, commission practice varies) with the gap named. deepseek returned null."
+    },
+    "money.home_bank_fee_structure": {
+      "value": "US issuing banks commonly apply a fixed per-withdrawal fee and/or a percentage foreign-transaction fee on cash withdrawals abroad; exact structure is set by each issuer.",
+      "status": "agreed_stable",
+      "source_url": null,
+      "notes": "grok marked agreed_stable and declined to name banks. deepseek named Bank of America and Capital One with specific figures and no source. NAME NO BANK AND NO FIGURE — US issuer tariffs are per-issuer, change without notice, and are the reader's own to look up."
+    },
+    "money.fx_margin": {
+      "value": "The foreign-exchange conversion rate applied to a card withdrawal is set by the card network and/or the issuing bank; it is separate from any ATM operator fee and appears as a markup over the wholesale rate.",
+      "status": "agreed_stable",
+      "source_url": null,
+      "notes": "Standard card-network mechanics."
+    },
+    "money.dcc_mechanism": {
+      "value": "Dynamic currency conversion (DCC) is offered at some Turkish ATMs and POS terminals; the terminal presents a choice of billing in the local currency or the cardholder’s home currency, with the conversion rate set by the DCC provider (not the card issuer).",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Both describe the same mechanism. CAUTION: the corpus already makes the DCC CALL ('Always pay and withdraw in lira, never the offered dollar conversion'). Report the mechanism only; do not restate the call."
+    },
+    "money.atm_fee_by_network": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL. No official source. DELETE any sentence depending on it. NOTE on atm_fee_by_network: the Thailand finding that the ATM charge differs by card network does NOT replicate here — nothing published differentiates Visa from Mastercard on a Turkish machine. The absence is the answer; do not import the Thailand conclusion."
+    },
+    "money.repricing_frequency": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL. No official source. DELETE any sentence depending on it. NOTE on atm_fee_by_network: the Thailand finding that the ATM charge differs by card network does NOT replicate here — nothing published differentiates Visa from Mastercard on a Turkish machine. The absence is the answer; do not import the Thailand conclusion."
+    },
+    "money.bank_counter_exchange": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL. No official source. DELETE any sentence depending on it. NOTE on atm_fee_by_network: the Thailand finding that the ATM charge differs by card network does NOT replicate here — nothing published differentiates Visa from Mastercard on a Turkish machine. The absence is the answer; do not import the Thailand conclusion."
+    },
+    "money.airport_vs_city_exchange": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL. No official source. DELETE any sentence depending on it. NOTE on atm_fee_by_network: the Thailand finding that the ATM charge differs by card network does NOT replicate here — nothing published differentiates Visa from Mastercard on a Turkish machine. The absence is the answer; do not import the Thailand conclusion."
+    },
+    "money.fraud_hold_triggers": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL. No official source. DELETE any sentence depending on it. NOTE on atm_fee_by_network: the Thailand finding that the ATM charge differs by card network does NOT replicate here — nothing published differentiates Visa from Mastercard on a Turkish machine. The absence is the answer; do not import the Thailand conclusion."
+    },
+    "money.travel_notice_relevance": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL. No official source. DELETE any sentence depending on it. NOTE on atm_fee_by_network: the Thailand finding that the ATM charge differs by card network does NOT replicate here — nothing published differentiates Visa from Mastercard on a Turkish machine. The absence is the answer; do not import the Thailand conclusion."
+    },
+    "money.card_acceptance_sectors": {
+      "value": "Card payment is reliably accepted at hotels, major restaurants, supermarkets, shopping malls, and tourist shops in big cities. Visa and Mastercard are widely accepted. Acceptance is more limited at small shops, street vendors, public transport (Istanbulkart requires cash or top-up), and in rural areas.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Based on travel guides; no official source. | SINGLE SOURCE, travel-guide grade (grok null against official sources, correctly noting no national acceptance map or official list exists). Write as observed practice that varies, never as a rule or a statistic."
+    },
+    "money.cash_only_contexts": {
+      "value": "Cash is required at small family-run restaurants (lokantas), street food stalls, bazaar stalls (especially for bargaining), taxis (if not using app-based payment), public toilets, and for tips.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Based on travel guides; no official source. | SINGLE SOURCE, travel-guide grade (grok null against official sources, correctly noting no national acceptance map or official list exists). Write as observed practice that varies, never as a rule or a statistic."
+    },
+    "money.regional_card_variation": {
+      "value": "Card acceptance is most widespread in Istanbul, Ankara, and Izmir, and in tourist resorts like Antalya and Cappadocia. In smaller towns and rural areas, cash is more dominant.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Based on travel guides; no official source. | SINGLE SOURCE, travel-guide grade (grok null against official sources, correctly noting no national acceptance map or official list exists). Write as observed practice that varies, never as a rule or a statistic."
+    },
+    "money.contactless_availability": {
+      "value": "Contactless payment is widely available in Turkey, especially in major cities and tourist areas. Most POS terminals support contactless, and major banks offer contactless cards and mobile payment options.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Based on payment industry reports and bank pages; no official source. | SINGLE SOURCE, travel-guide grade (grok null against official sources, correctly noting no national acceptance map or official list exists). Write as observed practice that varies, never as a rule or a statistic."
+    },
+    "money.card_decline_causes": {
+      "value": "Common causes of foreign card declines in Turkey include: insufficient funds, daily withdrawal limits, fraud detection (unusual location), incorrect PIN, network issues, or the card not being enabled for international use.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "General knowledge; no official source. | SINGLE SOURCE, travel-guide grade (grok null against official sources, correctly noting no national acceptance map or official list exists). Write as observed practice that varies, never as a rule or a statistic."
+    },
+    "money.withdrawal_limits": {
+      "value": "Per-withdrawal and daily cash limits at Turkish ATMs for foreign cards vary by bank and card type. Daily limits for domestic cards are typically 20,000–50,000 TRY. Foreign card limits are often lower and set by the issuing bank.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "No official source on foreign card limits opened. Domestic limits from news sources. | SINGLE SOURCE, travel-guide grade (grok null against official sources, correctly noting no national acceptance map or official list exists). Write as observed practice that varies, never as a rule or a statistic."
+    }
+  }
+}

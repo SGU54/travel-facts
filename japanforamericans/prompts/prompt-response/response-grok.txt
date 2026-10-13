@@ -1,0 +1,168 @@
+{
+  "rail_passes": {
+    "national_pass_variants": {
+      "value": "Ordinary (standard) and Green (first-class) car versions, each in continuous 7-day, 14-day, or 21-day validity. Adult Ordinary: ¥50,000 / ¥80,000 / ¥100,000; Green: ¥70,000 / ¥110,000 / ¥140,000 (online or overseas agents until 30 Sep 2026 local time). Child (6-11) half price. From 1 Oct 2026 overseas-agent prices rise ~5-6% (Ordinary 7-day to ¥53,000 etc.).",
+      "source_url": "https://japanrailpass.net/en/purchase/price/",
+      "status": "verified"
+    },
+    "national_pass_price_change": {
+      "value": "Major increase effective for purchases from 1 Oct 2023: Ordinary 7-day rose from ¥29,650–¥33,610 to ¥50,000 (65-70%); Green 7-day from ¥39,600–¥44,810 to ¥70,000 (70-77%). Subsequent planned ~5-6% rise for overseas-agent purchases from 1 Oct 2026.",
+      "source_url": "https://www.jreast.co.jp/e/pdf/press_japanrailpass_e.pdf",
+      "status": "verified"
+    },
+    "nozomi_mizuho_rule": {
+      "value": "JR Pass does not cover any seats on Nozomi or Mizuho trains on Tokaido/Sanyo/Kyushu Shinkansen. Holders may ride them only by purchasing a separate [ONLY WITH JAPAN RAIL PASS] NOZOMI MIZUHO Ticket (e.g. Tokyo–Kyoto/Shin-Osaka supplement ¥4,960). Hikari, Sakura, Kodama and Tsubame are fully covered.",
+      "source_url": "https://japanrailpass.net/en/about_jrp/route",
+      "status": "verified"
+    },
+    "tokyo_kyoto_one_way_cost": {
+      "value": "Ordinary non-reserved ¥13,320; reserved Hikari/Kodama ¥13,850; Nozomi reserved ~¥14,170 (regular season; slight seasonal variation).",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "tokyo_osaka_one_way_cost": {
+      "value": "Ordinary non-reserved ¥13,870; reserved Nozomi ¥14,720; Hikari/Kodama reserved ~¥14,400 (regular season; slight seasonal variation).",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "break_even_trips": {
+      "value": "Roughly 2–3 long-haul Shinkansen round-trips (e.g. Tokyo–Kyoto/Osaka return) needed to break even on a 7-day Ordinary pass at current prices; fewer if including multiple regional legs. Exact depends on itinerary and seat class.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "regional_passes_core": {
+      "value": "Key options include JR Tokyo Wide Pass (3 days), JR East Pass (Tohoku/Nagano-Niigata variants), Hokuriku Arch Pass, Kansai Area/Wide Area passes, Sanyo-San'in, Hokkaido Rail Pass, and various JR West/Central/Kyushu regional passes. Prices and coverage vary; often better value than national pass for single-region trips.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "where_to_buy": {
+      "value": "Online via official JAPAN RAIL PASS Reservation site (payment in yen); overseas JR-designated travel agencies (Exchange Order, redeemable in Japan); major JR stations and travel centers after arrival (same prices).",
+      "source_url": "https://japanrailpass.net/en/purchase/price/",
+      "status": "verified"
+    },
+    "eligibility": {
+      "value": "Foreign passport holders entering Japan under 'Temporary Visitor' status (or Japanese nationals who have resided abroad continuously for 10+ years with proof). Passport stamp/sticker required for exchange/activation.",
+      "source_url": "https://japanrailpass.net/en/",
+      "status": "verified"
+    }
+  },
+  "ic_cards": {
+    "card_types_and_interop": {
+      "value": "Nationwide mutual use of major IC cards (Suica, PASMO, ICOCA, TOICA, manaca, Kitaca, SUGOCA, nimoca, hayakaken) on trains, subways, buses and many stores. Suica (JR East) and PASMO (private Tokyo lines) most common for visitors; ICOCA dominant in Kansai.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "physical_card_availability": {
+      "value": "Unregistered physical Suica and PASMO sales resumed 1 March 2025 after chip-shortage restrictions (¥500 refundable deposit + load amount, max balance ¥20,000). Widely available at major JR East stations and ticket machines. Welcome Suica (no deposit, 28-day validity) still sold at Narita/Haneda airports and selected centers.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "welcome_suica": {
+      "value": "Tourist-oriented physical card: no deposit, sold pre-loaded (¥1,000–¥10,000), valid 28 days from purchase/first use, no refund of remaining balance, cannot transfer to mobile. Available at Narita (T1/T2·3), Haneda Terminal 3 (Tokyo Monorail), and JR East Travel Service Centers. Welcome Suica Mobile (iPhone only) valid 180 days.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "mobile_suica_ios": {
+      "value": "Fully supported on iPhone (Apple Wallet / Express Mode). Add via Wallet > Transit Card > Suica (or Welcome Suica Mobile app for tourist version). Can be set up before arrival; works with Express Transit even on low battery.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "mobile_topup_us_cards": {
+      "value": "US-issued Mastercard and American Express generally succeed for Apple Wallet top-ups. US-issued Visa cards are frequently refused (payment-network restriction on foreign Visa for Suica recharges). Debit cards mixed/unreliable. Workaround: use Mastercard/Amex in Wallet, or cash top-up of physical card, or Seven Bank ATM.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "android_limitation": {
+      "value": "Mobile Suica on Android requires Japanese-market handset with FeliCa / Osaifu-Keitai hardware. Virtually all Android phones sold outside Japan lack this chip and cannot add Suica/PASMO to Google Wallet. Physical card required for most US Android users (Samsung overseas Galaxy support for Welcome Suica Mobile announced for 1H 2027).",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "balance_limits_and_refund": {
+      "value": "Maximum balance ¥20,000. Unregistered physical cards: refund of remaining balance possible at stations (minus handling fee, deposit returned). Welcome Suica: no refund. Mobile Suica: refund process via app/JR East after card deletion (subject to rules).",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "day_passes_tokyo": {
+      "value": "Tokyo Metro 24-hour ticket, Tokyo Combination Ticket, and various one-day passes covering subway + some JR/private lines exist; prices typically ¥900–¥1,600 range depending on coverage. Check current at stations/apps.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "day_passes_kyoto": {
+      "value": "Kyoto City Bus & Subway One-Day Pass and similar city/private-line day tickets available; typical adult price around ¥900–¥1,100. Useful for intensive temple-hopping days.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "when_ic_beats_pass": {
+      "value": "IC cards (pay-as-you-go) are cheaper and more flexible for short stays, single-city trips, or itineraries with limited long-distance rail. National/regional rail passes only pay off with multiple long Shinkansen or extensive JR travel within the validity window.",
+      "source_url": null,
+      "status": "agreed_stable"
+    }
+  },
+  "seasonal": {
+    "sakura_peak_windows": {
+      "value": "Typical ranges (Somei Yoshino): Kyushu late March; Tokyo/Kyoto/Osaka late March–early April (full bloom often ~28 Mar–5 Apr); Tohoku mid–late April; Hokkaido late April–early May. Exact dates vary yearly with temperature; check Japan Meteorological Agency / weather services forecasts closer to travel.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "sakura_booking_lead": {
+      "value": "Peak sakura (late March–early April in major cities) is high season: book hotels and popular trains 2–4+ months ahead; some ryokan and key properties sell out earlier.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "koyo_peak_windows": {
+      "value": "Autumn foliage: high elevations/Hokkaido/Tohoku from mid-September–October; Kyoto/Tokyo area typically mid–late November (can extend into early December in mild years). Mountain areas earlier than cities.",
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "golden_week_dates": {
+      "value": "2026: Showa Day 29 Apr, Constitution Memorial Day 3 May (observed 6 May), Greenery Day 4 May, Children's Day 5 May. Many Japanese take additional leave, creating roughly 29 Apr–6 May cluster of heavy domestic travel.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "golden_week_effects": {
+      "value": "Extremely crowded transport, attractions and hotels; higher prices; advance reservations essential for Shinkansen, flights and popular lodging. Avoid if possible for first-time visitors seeking quieter experience.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "obon_dates_and_effects": {
+      "value": "Mid-August (around 13–16 Aug, varies by region); major homecoming travel period with crowded trains/highways, some local closures or limited services, higher accommodation demand in hometowns and resorts.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "new_year_closures": {
+      "value": "Widespread closures roughly 29/30 Dec–3/4 Jan (peak 31 Dec–3 Jan). Most independent restaurants, small shops, many museums and government offices closed; department stores typically closed 1 Jan (some also 2 Jan) then reopen with New Year sales. Convenience stores (7-Eleven, Lawson, FamilyMart) remain open 24/7. Temples/shrines open and extremely crowded for hatsumode. Banks/post offices closed several days. Plan food and cash in advance.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "public_holidays_list": {
+      "value": "2026: 1 Jan (New Year), 12 Jan (Coming of Age), 11 Feb (Foundation), 23 Feb (Emperor's Birthday), 20 Mar (Vernal Equinox), 29 Apr (Showa), 3 May (Constitution, observed 6 May), 4 May (Greenery), 5 May (Children's), 20 Jul (Marine), 11 Aug (Mountain), 21 Sep (Respect for Aged), 22 Sep (Citizen's Holiday), 23 Sep (Autumnal Equinox), 12 Oct (Sports), 3 Nov (Culture), 23 Nov (Labor Thanksgiving).",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "tsuyu_rainy_season": {
+      "value": "Moves south to north: Okinawa early May–late June; Kyushu/Shikoku late May/early June–mid-July; Kanto (Tokyo)/Kansai (Kyoto/Osaka) ~early June–mid/late July; Tohoku later into late July. Hokkaido essentially none. Humid with intermittent rain rather than continuous monsoon.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "typhoon_season": {
+      "value": "Primarily July–October, peak August–September. Can disrupt travel (flights, trains, ferries) especially in western/southern Japan and Okinawa. Monitor JMA forecasts.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "summer_heat": {
+      "value": "July–August very hot and humid across most of Honshu (Tokyo/Kyoto/Osaka routinely 30–35°C+ with high humidity); heatstroke risk high. Hokkaido cooler. Pack light clothing, hydration, sun protection.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "winter_snow_regions": {
+      "value": "Heavy snow on Japan Sea side (Hokkaido, Tohoku, Hokuriku/Niigata, parts of Chubu) and mountains; Pacific side (Tokyo, Kyoto, Osaka) milder with occasional light snow. Ski resorts active Dec–March.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "winter_low_season": {
+      "value": "Mid-January to early March (post-New Year, pre-sakura) is generally lower tourist demand outside ski areas and New Year period; better hotel availability and lower rates in major cities, though weather is cold.",
+      "source_url": null,
+      "status": "agreed_stable"
+    }
+  }
+}

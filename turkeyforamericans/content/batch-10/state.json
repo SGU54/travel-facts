@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "stage": "publishing",
+  "batch": 10,
+  "batches_total": 15,
+  "batch_status": "cleaned",
+  "published_slugs": [],
+  "updated_at": "2026-06-23",
+  "notes": "Batch 10 (itineraries cluster + first hotels: 10-days-turkey, 14-days-turkey, turkey-one-week, turkey-itineraries-overview, best-cave-hotels-cappadocia) written+validated (833-878w). Itineraries built on facts.json spines, kept distinct. SECOND GATE: grok + deepseek BOTH clean. Trimmed 10-day + overview from 5->3 internal links. Stage 4 next: images, upload, import (DRAFT), links, affiliates, publish."
+}

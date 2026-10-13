@@ -1,0 +1,1678 @@
+{
+  "_README": "Panel member fill. Status is set honestly: 'verified' ONLY where the named source_url was opened and read on checked_at; 'agreed_stable' = confident, no source opened today; 'verify_recommended' = change-prone or high-stakes and NOT primary-confirmed; 'serve_live' = must never be frozen into prose.",
+  "_meta": {
+    "schema_version": 3,
+    "project": "vietnamforamericans",
+    "country": "Vietnam",
+    "country_iso": "VN",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": [
+        "JFK",
+        "EWR",
+        "LAX",
+        "SFO",
+        "SEA",
+        "ORD",
+        "IAD",
+        "DFW"
+      ],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "express costs in USD with Vietnamese dong (VND) equivalents"
+    },
+    "ai_source": "claude",
+    "produced_at": "2026-10-12",
+    "checked_at": "2026-10-12",
+    "_primary_sources_opened_today": [
+      "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "https://evisa.gov.vn/faq",
+      "https://evisa.gov.vn/instruction",
+      "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+      "https://prearrival.immigration.gov.vn/",
+      "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam"
+    ]
+  },
+  "_fact_field_shape": "{ value, source_url, status, notes }",
+  "identity": {
+    "name_local": {
+      "value": "Việt Nam (official: Cộng hòa Xã hội Chủ nghĩa Việt Nam — Socialist Republic of Viet Nam). Vietnamese government English-language sites write it as two words, 'Viet Nam'.",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "capital": {
+      "value": "Hanoi (Hà Nội)",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "official_languages": {
+      "value": [
+        "Vietnamese"
+      ],
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_code": {
+      "value": "VND",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_name": {
+      "value": "Vietnamese dong (đồng)",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "timezones": {
+      "value": [
+        "Asia/Ho_Chi_Minh (ICT, UTC+7)"
+      ],
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "status": "verified",
+      "notes": "State Dept Vietnam page, read 2026-10-12: Vietnam has ONE time zone and does NOT observe daylight saving, so the gap to the US shifts twice a year — 11 hours ahead of Washington DC during EST, 12 during EDT. Practical consequence for the audience: the arrival-day calendar date is almost always +1."
+    },
+    "calling_code": {
+      "value": "+84",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "power_plug_voltage": {
+      "value": "220V / 50Hz. Sockets commonly take Type A (US flat two-pin), Type C (Euro round two-pin) and combined A/C outlets; Type F appears in newer hotels. A US two-prong plug usually fits physically — but 220V means a 110V-only appliance will be destroyed. Almost all phone/laptop chargers are 100–240V and need no converter, only (sometimes) nothing at all.",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "The socket SHAPE is the part Americans get told about; the VOLTAGE is the part that costs them a hair dryer. Flag the dual-voltage check, not the adapter."
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "Primary-verified against travel.state.gov and evisa.gov.vn on 2026-10-12. The FEE and PROCESSING TIME could not be primary-verified — evisa.gov.vn does not publish them outside a started application — so they are left null rather than filled from secondary sources. See _open_questions.",
+      "by_nationality": [
+        {
+          "passport": "United States (ordinary)",
+          "type": {
+            "value": "e_visa",
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+            "status": "verified",
+            "notes": "State Dept, read 2026-10-12, verbatim: 'A visa is required... An exception is allowed for stays of 30 days or less on the island of Phu Quoc only.' There is NO general visa exemption for US passport holders — the 45-day unilateral exemption widely reported online applies to other nationalities, not Americans. The e-visa is the normal route; an embassy visa remains available."
+          },
+          "max_stay_days": {
+            "value": 90,
+            "source_url": "https://evisa.gov.vn/faq",
+            "status": "verified",
+            "notes": "evisa.gov.vn FAQ, read 2026-10-12, citing the Law on Entry, Exit, Transit and Residence of Foreigners in Viet Nam 2014 (amended 2019, 2023), Articles 8(1)-(4) and 21: 'the visa cannot exceed 90 days'. Single- and multiple-entry e-visas are both issued; 90 days is the ceiling, not the default grant. Independently corroborated by the U.S. Embassy page (https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/), 'up to 90 days', and agreed three ways across the panel."
+          },
+          "fee": {
+            "value": "USD 25 single-entry / USD 50 multiple-entry, payable by bank transfer.",
+            "source_url": "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+            "status": "verified",
+            "notes": "RESOLVED 2026-10-12 after the panel pass. U.S. Embassy Hanoi, read verbatim: 'E-visas are issued with a validity period of up to 90 days, one-entry for 25 USD or multiple entries for 50 USD, and payable via bank transfer.' evisa.gov.vn itself publishes no public fee schedule; this US-government page is the best available primary source. DeepSeek found this source independently; ChatGPT left the fee null."
+          },
+          "processing_time": {
+            "value": "Usually 3 to 5 working days after the Immigration Department receives the completed application and payment; longer during application surges or holidays.",
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+            "status": "verified",
+            "notes": "RESOLVED 2026-10-12, verbatim from travel.state.gov. NOTE FOR THE RECORD: I suspected ChatGPT had fabricated this citation and it had not — the text is on the page exactly as it reported. My own string check missed it because the page writes '3 to 5', not '3-5'. Counter-evidence to keep visible: the Vietnamese Embassy in India publishes '05-30 working days', and the commercial visa-agent industry quotes 3 days. Planning advice should follow the pessimistic official figure, not the agents': apply weeks ahead and do not buy non-refundable flights against a 3-day assumption."
+          },
+          "online_authorization_required": {
+            "value": "Yes, separately from the visa: an online pre-arrival declaration at the Immigration Department's portal, prearrival.immigration.gov.vn. Free, roughly 10 minutes, no earlier than 3 days before arrival. It is NOT the visa and NOT a fee — any site charging for it is an intermediary.",
+            "source_url": "https://prearrival.immigration.gov.vn/",
+            "status": "verified",
+            "notes": "RESOLVED 2026-10-12 by search after neither panel model could place it — the scheme dates from around 15 April 2026, which is why older coverage and both models missed it. The portal is confirmed official: title 'Pre-Arrival Information - Cuc Quan ly xuat nhap canh' on an immigration.gov.vn domain, and it is the portal named by Vietjet and by Singapore's embassy in Hanoi. DISCREPANCY TO KEEP VISIBLE — two primary sources, two different statuses: travel.state.gov says travellers on a non-Vietnamese passport arriving by air 'must' complete it; the Immigration Department's OWN portal frames it as advisory, saying only that submitting in advance 'helps reduce waiting time at the immigration area.' Do not flatten this into either 'required' or 'optional'. The honest and useful line is that the two governments disagree, it is free and takes ten minutes, so do it."
+          },
+          "official_application_url": {
+            "value": "https://evisa.gov.vn",
+            "source_url": "https://evisa.gov.vn/faq"
+          }
+        }
+      ],
+      "valid_entry_points": {
+        "value": {
+          "_note": "An e-visa is only usable at border gates on the government's approved list. Verified against evisa.gov.vn/instruction, read 2026-10-12.",
+          "air_gates_count": 15,
+          "air_gates": [
+            "Noi Bai (Hanoi)",
+            "Tan Son Nhat (Ho Chi Minh City)",
+            "Da Nang",
+            "Cam Ranh (Nha Trang)",
+            "Phu Quoc",
+            "Cat Bi (Hai Phong)",
+            "Phu Bai (Hue)",
+            "Van Don",
+            "Can Tho",
+            "Lien Khuong (Da Lat)",
+            "Tho Xuan",
+            "Dong Hoi",
+            "Phu Cat",
+            "Vinh",
+            "Chu Lai"
+          ],
+          "land_gates_count": 27,
+          "practical_reading": "RESOLVED. The U.S. Embassy states it plainly: 'E-visa holders may enter and exit Vietnam through 42 designated international border gates, including all international airports.' 27 land + 15 air = 42, matching the Immigration Department's own list. So for air arrivals the restriction is a non-issue and should not be written as a gotcha; it bites only on OVERLAND crossings to Cambodia and Laos, where a crossing off the 27-gate list will refuse an e-visa.",
+          "official_total": 42
+        },
+        "source_url": "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+        "status": "verified",
+        "notes": "Secondary sources treat the gate list as a scary gotcha for all travellers. Measured against the actual list, it is a non-issue for air arrivals and a real one for the overland-crossing article. That inversion is the useful finding."
+      },
+      "scam_sites_to_avoid": {
+        "value": [
+          "Any domain that is not evisa.gov.vn. The paid-intermediary market around the Vietnam e-visa is unusually aggressive: sites styled as official ('vietnamvisa', 'vietnam-evisa', '.org'/'.com' lookalikes) charge USD 50-100+ on top of the government fee for submitting the same free form. Some are legitimate agents; the issue is that the markup is rarely disclosed as a markup."
+        ],
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "Do not name specific domains in prose — they rotate, and naming one implies the unnamed ones are fine. The durable rule is the positive one: the government site is evisa.gov.vn and nothing else is."
+      },
+      "extension": {
+        "value": "An e-visa CANNOT be extended or renewed from inside Vietnam. travel.state.gov: 'Vietnam does not allow you to renew or extend an E-visa while you are in the country.' It also notes Vietnam 'usually only gives you a visa for the exact time period you requested' — so the 90-day ceiling is not a default grant, and asking for too little cannot be fixed later. Separately, holders of other visa types seeking an extension or resolving an overstay must appear IN PERSON at the Immigration Office for the jurisdiction where they are staying: Hanoi, 69 Mac Thai To St, Yen Hoa Ward (024 3825-7941); Da Nang, 78 Le Loi, Hai Chau (central Vietnam); HCMC, 196 Nguyen Thi Minh Khai, Xuan Hoa Ward (028 3829-9398).",
+        "source_url": "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+        "status": "verified",
+        "notes": "RESHAPES A PLANNED ARTICLE. vietnam-visa-extension-guide was scoped on the assumption that extension is a procedure to explain. For the e-visa the honest answer is that there IS no extension — the decision moves to the application, before you fly. Rewrite the article's premise around 'request the right duration up front, because you cannot fix it later', and flag that intermediaries selling e-visa extensions are selling something the government says does not exist. ChatGPT independently flagged this in its documents.notes; DeepSeek did not."
+      },
+      "evisa_traps": {
+        "value": "Four ways an e-visa fails at the border, all from travel.state.gov. (1) PORT MISMATCH: 'The entry and exit location must match the port of entry you chose when you applied' — an e-visa naming Noi Bai does not work if you land at Tan Son Nhat. (2) ERRORS: if the e-visa has a mistake, 'immigration may not let you enter the country. You may have to pay a travel agency at the airport for an expensive visa sponsorship.' (3) PRINT IT: 'You must print your E-visa and bring it with your valid passport' — a phone screen is not stated as sufficient. (4) NO RESCUE: 'The U.S. embassy and consulate general cannot change your E-visa information or speed up your application.'",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "This is the spine of vietnam-evisa-how-to-apply and a genuine swamp: four independent, pre-departure, self-inflicted failure modes with an expensive airport remedy. Neither panel model surfaced any of the four. CLOSED the 'is printing really enforced' question editorially rather than by evidence: the official instruction is unambiguous ('You must print your E-visa'), the practice is not documentable from any source, and the cost of complying is one sheet of paper. Write 'print it' without hedging; do not speculate about enforcement."
+      },
+      "exemption_status": {
+        "value": "US passport holders are NOT on Vietnam's visa-exemption list. The 45-day unilateral exemption (Resolutions 44/NQ-CP and 229/NQ-CP, extended to 12 further countries from 15 August 2026) covers a number of European and Asian nationalities but excludes the United States, Canada and Australia. Americans use the e-visa. The one exception is the Vietnamese diaspora: an overseas Vietnamese with the relevant Vietnamese documents can hold a 5-year visa-exemption certificate instead.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "The exclusion is settled by travel.state.gov's own 'A visa is required' for US passports; the resolution numbers and the 12-country August 2026 addition come from secondary sources and are context, not load-bearing. THIS IS THE MOST-WRONGLY-REPORTED VIETNAM FACT ONLINE — readers arrive believing they get 45 days visa-free. Short review_after: the list is amended by resolution and could add the US at any time. The diaspora certificate matters commercially: Vietnamese-Americans are a large slice of 'Americans travelling to Vietnam' and are under different rules."
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "Six months beyond the date of arrival, plus at least one blank page per entry stamp. Separately, and less widely known: an e-visa's validity must be at least 30 days SHORTER than the passport's remaining validity.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "The second half is from evisa.gov.vn's FAQ (https://evisa.gov.vn/faq), read 2026-10-12, verbatim: 'the validity of the electronic visa must be at least 30 days shorter than the passport validity.' This compounds with the 6-month rule and is the genuinely non-obvious part: a traveler whose passport expires in just over 6 months clears the entry rule but CANNOT be granted a 90-day e-visa — the system will cap or refuse it. No secondary source I checked states this. Strong candidate for a fact span. CONTRADICTION CONFIRMED 2026-10-12: travel.state.gov contradicts ITSELF on blank pages — its entry-requirements block says 'You must have 1 blank page available per stamp', while its E-visa warnings block says 'Your passport must have at least 2 blank pages required for stamps.' ChatGPT flagged exactly this internal conflict and was right; I had recorded only the 1-page figure. Write the conservative number (2+) and do not cite the page as if it spoke with one voice."
+      },
+      "emergency_passport_note": {
+        "value": "State Dept, read 2026-10-12: 'Vietnam may not accept the 12-page U.S. emergency passport for e-visa for entry.' A traveler who replaces a lost passport at a US embassy mid-trip in the region may therefore be unable to enter or re-enter Vietnam on the replacement.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified"
+      },
+      "onward_ticket_required": {
+        "value": "Not stated as a legal entry requirement by the State Department. Airlines, however, enforce their own onward/return-ticket checks at US departure gates under carrier-liability rules — which is where an American actually encounters it.",
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "Distinguish the two: this is an airline rule, not a Vietnamese one. Articles routinely conflate them."
+      },
+      "notes": {
+        "value": "Entry rules attach to the actual passport, route and dates — not to 'American' as a label. A dual national entering on a Vietnamese passport, or a traveler arriving overland rather than by air, is under a different rule set."
+      },
+      "police_registration": {
+        "value": "Every visitor must register their overnight address with the local police — this applies to everyone staying in Vietnam, Vietnamese citizens included. Hotels do it automatically from your passport at check-in, which is why they ask for it. The gap is informal stays: an Airbnb, a homestay or a friend's apartment, where the host is responsible and may not do it.",
+        "source_url": "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+        "status": "verified",
+        "notes": "PANEL FIND. DeepSeek surfaced this and I had missed it; confirmed against the U.S. Embassy page the same day, verbatim: 'all visitors (including Vietnamese) are required to register their temporary residence with the police station where they are staying overnight.' This is the clearest case this pass of the panel earning its cost. SCOPE DECIDED 2026-10-12: I could not find any official statement of the CONSEQUENCE for a short-stay tourist in an unregistered Airbnb, and absent that, writing it as a risk would be inventing a threat. Editorial rule for the articles: state the duty and say hotels handle it automatically, note that informal stays are the host's responsibility and worth confirming when booking — and stop there. No fine figures, no warnings, until a source exists."
+      },
+      "child_exit_requirement": {
+        "value": "A U.S.-citizen child may need a Vietnamese passport or a Vietnamese exit visa to LEAVE Vietnam — the requirement attaches to the child's Vietnamese parentage, not to how they entered. Families with a Vietnamese-born parent should settle this with a Vietnamese immigration office before travelling, not at the airport.",
+        "source_url": "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+        "status": "verified",
+        "notes": "An exit-side trap: nothing at entry warns about it, and it is invisible to a family that assumes a US passport is sufficient both ways."
+      },
+      "overstay": {
+        "value": "State Department: check your entry stamp and visa carefully — 'If you stay longer than your visa allows, even by accident, you will have to pay fines and may face long delays getting an exit visa.' The failure mode is an entry stamp that grants less time than the visa does.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "'Even by accident' is the operative phrase and the reason to tell people to photograph the stamp at the border."
+      },
+      "exit_control": {
+        "value": "Leaving requires documentation too: Vietnam 'requires a valid visa, residence card, or approval from the Immigration Department to leave the country.' Combined with the overstay rule, an expired visa is not just an entry problem — it blocks departure. travel.state.gov: if you cannot leave on time 'for any reason, including a medical emergency, you will likely pay overstay fines and face delays getting permission to leave.'",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "The medical-emergency clause is the one to write: the thing most likely to make you overstay is also explicitly not an excuse."
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "VND",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "approx_rate_note": {
+        "value": null,
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "VOLATILE — never freeze. The dong trades in the tens of thousands per USD, which is itself the teachable point: prices carry three extra zeros and the 500,000 and 20,000 notes are both blue-ish, a documented and expensive confusion. Serve the rate live; teach the note colours in prose."
+      },
+      "cash_vs_card": {
+        "value": "Cash-first in practice. Cards work in hotels, chain supermarkets, malls and mid/upper restaurants in Hanoi, HCMC, Da Nang and Hoi An; street food, markets, most cafes, grab-a-bike fares, train and bus tickets bought locally, and nearly everything outside the big cities are cash. QR payment (VietQR) is near-universal among Vietnamese but normally requires a domestic bank account, so it is largely unavailable to a visiting American.",
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "The QR gap is the part Americans are unprepared for: they watch everyone pay by phone and assume Apple Pay will work."
+      },
+      "atm_availability": {
+        "value": "Dense in cities and tourist towns, thin in rural north and mountain areas. Vietnamese bank ATMs commonly charge a withdrawal fee per transaction on top of the US bank's foreign-transaction fee, and many cap a single withdrawal at a low amount — which multiplies the fee against the total.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "The FEE and the WITHDRAWAL CAP are the useful numbers and I have not verified either; they vary by bank and change. Do NOT state amounts until a source exists. Flagged — the Thailand site shipped with an unresolved atm_fee span for months (see fleet memory)."
+      },
+      "currency_import_export_limit": {
+        "value": "No limit on the amount brought in, but a written customs declaration is required above the thresholds: more than 15,000,000 VND, or more than 5,000 USD (or foreign-currency equivalent).",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "State Dept Vietnam page, read 2026-10-12. Directly relevant to the customs/duty-free article. Note the asymmetry travellers miss: the obligation is to DECLARE, not to seek permission."
+      },
+      "tipping_norm": {
+        "value": "Not customary and not expected in the way it is in the US; no tip is a normal, non-rude outcome. Tipping has become common in tourist-facing service (hotel porters, spa, private guides and drivers, Western-facing restaurants, cruise crews, where a pooled envelope at the end is the norm). Service charge appears on upper-end restaurant and hotel bills.",
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "The American failure mode is over-tipping from anxiety, not under-tipping. Frame the article around 'when it IS expected' — a short list — rather than a percentage."
+      },
+      "atm_fees": {
+        "value": "The durable fact is the STRUCTURE, not the number: Vietnamese ATMs charge a FLAT fee per withdrawal, not a percentage, and they cap each withdrawal low. So the cost per dollar is set by how much you take out at once. A 55,000 VND fee on a 2,000,000 VND withdrawal (~$75) is about 2.7%; the same fee on a 10,000,000 VND withdrawal (~$380) is about 0.55%. The rule that follows holds whatever the exact figures: find a bank with a high per-transaction cap and withdraw the maximum, rarely — never small amounts, often. Your US bank's own foreign-transaction fee stacks on top of this.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "PROVISIONAL RANGE, DO NOT SHIP AS A FACT SPAN: sources cluster at roughly 22,000-66,000 VND per withdrawal (Wise says 50,000-55,000) with per-transaction caps commonly 2-5 million VND; two independent sources say VPBank charges foreign cards nothing and allows 10,000,000 VND, and that BIDV allows 5,000,000. EVERY one of these is a commercial travel blog — I found no bank's own published schedule for foreign cards. Per the Thailand precedent (see the fleet's unresolved atm_fee span), do not seed a precise number here. Ship the structural rule, which is sourced by arithmetic rather than by a blog, and name specific banks only if a bank's own page is ever opened."
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": [
+          {
+            "name": "Noi Bai International",
+            "iata": "HAN",
+            "city": "Hanoi"
+          },
+          {
+            "name": "Tan Son Nhat International",
+            "iata": "SGN",
+            "city": "Ho Chi Minh City"
+          },
+          {
+            "name": "Da Nang International",
+            "iata": "DAD",
+            "city": "Da Nang"
+          },
+          {
+            "name": "Cam Ranh International",
+            "iata": "CXR",
+            "city": "Nha Trang"
+          },
+          {
+            "name": "Phu Quoc International",
+            "iata": "PQC",
+            "city": "Phu Quoc"
+          },
+          {
+            "name": "Cat Bi International",
+            "iata": "HPH",
+            "city": "Hai Phong"
+          },
+          {
+            "name": "Phu Bai International",
+            "iata": "HUI",
+            "city": "Hue"
+          },
+          {
+            "name": "Lien Khuong",
+            "iata": "DLI",
+            "city": "Da Lat"
+          },
+          {
+            "name": "Can Tho International",
+            "iata": "VCA",
+            "city": "Can Tho"
+          }
+        ],
+        "source_url": "https://evisa.gov.vn/instruction",
+        "status": "verified",
+        "notes": "Cross-checked against the government's approved e-visa air border-gate list (15 gates), read 2026-10-12. Long Thanh (HCMC's replacement airport) is under construction and NOT yet an entry point — do not write it as operational."
+      },
+      "national_carrier": {
+        "value": "Vietnam Airlines (SkyTeam). Bamboo Airways, VietJet Air and Vietravel Airlines are the main other Vietnamese carriers; VietJet and Bamboo are low-cost and dominate domestic routes.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "flight_from_audience_origins": {
+        "value": [],
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "PRICES are serve_live and must never be frozen. DURATIONS and ROUTING are stable enough to write: there is no nonstop from the US East Coast; Vietnam Airlines flies nonstop SFO-SGN and LAX-SGN (roughly 16-17 hours westbound), and everything else routes one stop through a North Asian or Gulf hub (ICN, NRT/HND, TPE, HKG, SIN, DOH, DXB). From JFK/EWR/IAD/ORD/DFW expect ~22-26 hours door-to-door with one stop. Total elapsed time, not flight time, is what the reader is actually planning around."
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "The Reunification Express runs the ~1,000-mile Hanoi-Ho Chi Minh City spine (roughly 32-36 hours end to end; almost nobody rides it end to end). It is used in segments — Hanoi-Hue/Da Nang overnight, and the Hue-Da Nang daytime leg over the Hai Van Pass, which is the one rail segment that is a sight in itself. Classes run from hard seat to 4-berth soft sleeper with air conditioning. Operated by Vietnam Railways; tickets are sold on the official site and at stations.",
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "The honest framing: the train is slower than the bus and far slower than flying, and is chosen for comfort and the Hai Van leg, not for speed."
+      },
+      "buses": {
+        "value": "Sleeper buses (reclining berths, not seats) cover every route, cost less than the train, and run overnight. They are the budget default and genuinely uncomfortable for a 6-foot American — the berths are built to a different frame. Open-tour bus passes (Hanoi-Hue-Hoi An-Nha Trang-HCMC) are sold by several operators.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "domestic_flights": {
+        "value": "Cheap, frequent, and the default for long hops: Hanoi-Da Nang or Hanoi-HCMC is roughly 1h15-2h versus 14-36h on the ground. VietJet and Bamboo undercut Vietnam Airlines heavily; VietJet's on-time record is the known tradeoff and its baggage allowance is sold separately.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "ride_sharing": {
+        "value": "Grab is the dominant app (car and motorbike taxi — GrabBike). Be (Vietnamese) and Xanh SM (electric, taxi and bike) are real competitors, Xanh SM increasingly so. Grab works on a foreign phone number and foreign card and is the single highest-leverage thing an American can install before arriving: it removes taxi meter disputes entirely by fixing the fare up front.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "car_rental_and_driving": {
+        "value": "Drives on the RIGHT, and for a tourist the practical answer is: you cannot legally ride. travel.state.gov is blunt — 'U.S. driver's licenses and International Driving Permits do not work in Vietnam. If you drive without a Vietnamese license, you can be fined, arrested, or sent to jail.' Separately: 'Renting a moped or motorbike without a Vietnamese driver's license is illegal' and 'If you get in an accident without a license, your travel insurance may not pay your medical bills.' A Vietnamese licence is obtained through the Traffic Police Office of the Provincial Public Security and may require a medical exam. Self-drive car rental effectively does not exist for visitors; the normal product is a car with a driver.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "FULLY RESOLVED 2026-10-12 and it closes the project's former top blocker. DeepSeek's 1949-vs-1968 convention reasoning reached the right conclusion from the wrong (commercial) sources; the US government states it directly, which is both stronger and publishable. METHOD NOTE: this sentence is NOT in the page's rendered innerText — travel.state.gov hides large sections in collapsed accordions, so it only appears when you search the raw HTML. My first pass missed it and reported the question unresolved. Search the HTML, not the rendered text, on this site."
+      },
+      "licence_conversion": {
+        "value": "Conversion is open to RESIDENTS, not visitors. Converting a foreign licence to a Vietnamese one requires a Temporary Residence Card issued by the Immigration Department — a document a tourist on an e-visa does not hold and cannot obtain for a short trip. So there is no lawful route for a two-week visitor to ride their own motorbike.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "The TRC requirement is consistent across many secondary sources (Vietnam Law Magazine, Vietnam News, and several visa agencies) and several report it tightened in 2026, but I did not open a Vietnamese government page stating it, so it stays verify_recommended. The CONSEQUENCE, however, rests on travel.state.gov and is solid: whatever the conversion rules, a US licence and an IDP do not work. That is enough to write the articles honestly."
+      },
+      "traffic_laws": {
+        "value": "Law vs practice, and the gap is the point. travel.state.gov: 'Although laws require helmets, following speed limits, and zero alcohol while driving, many people don't follow these rules consistently.' Note ZERO alcohol — not a BAC threshold like the US. Enforcement is tightening: 'The government is cracking down with higher fines and cameras in big cities like Hanoi and Ho Chi Minh City', and traffic police now have cameras and speed detectors, some speaking English. You must carry your licence, vehicle registration and ID while driving; police can stop and check, and you are fined if you lack them. On bribery: 'Although bribery is illegal, some people report being asked for informal payments for minor violations. Always ask for an official receipt and follow proper procedures.'",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "Zero-alcohol is a genuine trap for Americans who assume a 0.05/0.08 allowance — one beer with dinner is over the limit."
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Vietnam is ~1,000 miles north-to-south and has no single season — this is the defining planning fact. THREE regimes: (1) NORTH (Hanoi, Sapa, Ha Long, Ninh Binh) has four seasons including a genuinely cold, damp winter (Dec-Feb, 50s-60s F, grey drizzle 'mua phun'), a hot humid summer (Jun-Aug, 90s F, heaviest rain) and short pleasant shoulders (Oct-Nov, Mar-Apr). (2) CENTRE (Hue, Da Nang, Hoi An) is driest Feb-Aug and has a short, violent wet season Sep-Nov — typhoon season, and Hoi An floods most years. (3) SOUTH (HCMC, Mekong, Phu Quoc) is tropical and warm year-round, split into dry (Dec-Apr) and wet (May-Nov, afternoon downpours rather than all-day rain).",
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "The consequence no single-answer article can state: there is NO month that is good everywhere. Oct-Nov is excellent in the north and the worst of the year in the centre; Jun-Aug is good for the centre's beaches and brutal in Hanoi. This is a genuine swamp — an itinerary's shape is decided by it."
+      },
+      "best_months": {
+        "value": [
+          {
+            "months": "March-April",
+            "why": "The best single compromise across all three regions: north warming and dry, centre firmly in its dry run, south still in dry season. Shoulder pricing."
+          },
+          {
+            "months": "October-November",
+            "why": "Outstanding in the north (clear, cool, Sapa's rice terraces harvested and the trekking at its best) and in the south, but overlaps the centre's typhoon/flood window — only choose it if the itinerary skips or buffers Hoi An and Hue."
+          }
+        ],
+        "rank": "core",
+        "notes": "RECOMMENDATION. State the regional tradeoff rather than a single 'best time' — a single answer is wrong for at least one third of the country."
+      },
+      "avoid_periods": {
+        "value": [
+          {
+            "period": "Tet (Lunar New Year)",
+            "why": "The single biggest planning hazard. Dates move with the lunar calendar and MUST be verified per year. For roughly a week either side the country travels home: domestic flights and trains sell out months ahead at multiples of normal fare, many family-run restaurants, shops and tour operators close for days, and cities empty while the countryside fills. It is not unvisitable — it is unmissable if unplanned for. Verify the year's dates; never write them from memory."
+          },
+          {
+            "period": "September-November in the centre",
+            "why": "Typhoon season. Hoi An's old town floods in most years; Hue is the wettest major city in the country in this window; coastal and Ha Long Bay boat trips are cancelled on short notice."
+          },
+          {
+            "period": "Late April-early May (Reunification Day 30 Apr + Labour Day 1 May)",
+            "why": "Domestic holiday — beaches and Da Lat/Sapa fill with Vietnamese travellers, prices spike, and the long weekend's dates shift with government announcements."
+          }
+        ],
+        "rank": "core",
+        "notes": "RECOMMENDATION. Tet's dates are a recurring verify-yearly item and belong in the fact DB with a review_after, not frozen in prose."
+      },
+      "tet_dates": {
+        "value": "TET 2027: Vietnamese New Year falls on Saturday 6 February 2027 (New Year's Eve, 5 February). The Ministry of Home Affairs has set the official public-sector holiday as 4-10 February 2027, seven days. The TRAVEL disruption runs wider than the official holiday — Vietnam Airlines' own Tet schedule treats 12-21 February 2027 as the return-surge window for Ho Chi Minh City to northern routes. Plan around roughly two weeks, not one.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Announced early October 2026 and reported consistently by VietnamPlus, Tuoi Tre and VietnamNet; I did not open the Ministry's own announcement, so verify_recommended rather than verified. MUST CARRY AN ANNUAL review_after — the dates are lunar and move every year, and this is the single biggest planning hazard in the Vietnamese calendar. The airline's own surge window is the genuinely useful half and the part no travel article prints."
+      }
+    },
+    "safety_health": {
+      "advisory_level": {
+        "value": "Level 1 — Exercise Normal Precautions. Date issued: June 24, 2026.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "travel.state.gov Vietnam page, read 2026-10-12. Level 1 is the LOWEST of four and the same level the State Department assigns to most of Western Europe — worth saying plainly, because the audience's prior is shaped by the war rather than by the current advisory. Change-prone: re-check before each publish and give it a short review_after."
+      },
+      "main_risk": {
+        "value": "Petty theft, overwhelmingly. State Dept, read 2026-10-12, verbatim: 'Vietnam is generally a safe destination for travelers. Petty crime is common, especially in popular tourist locations.' The dominant specific mode is drive-by phone and bag snatching from a moving motorbike, in Ho Chi Minh City above all. Violent crime against foreigners is rare. The genuinely under-weighted risk is ROAD TRAFFIC: motorbike injury is the leading cause of serious harm and medical evacuation for visitors, not crime.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "The risk an American fears (crime, residual war hostility) and the risk that actually hurts them (traffic) are different risks. The safety article should say so in the first paragraph."
+      },
+      "landmines_uxo": {
+        "value": "Real but narrowly located. State Dept, read 2026-10-12: 'Areas of greatest risk are construction sites. Landmine risk is low in urban and populated areas, including tourist destinations.' Unexploded ordnance remains present in the former DMZ area (Quang Tri) and parts of the central highlands; the rule is to stay on marked paths and not handle metal objects, which matters on DMZ tours and rural treks, not in cities.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified"
+      },
+      "vaccines": {
+        "value": "Two different claims, and the article is the distinction. REQUIRED FOR ENTRY: none — the State Department says 'No vaccinations are required.' RECOMMENDED by CDC for Vietnam: Hepatitis A (unvaccinated travellers 1 year and older), Hepatitis B (unvaccinated travellers of all ages), Typhoid ('recommended for most travelers'), plus routine vaccines up to date and COVID-19. Conditional, not blanket: Japanese encephalitis (only for long stays or rural living), Rabies (dog exposure risk), Measles, Monkeypox (activity-based). Nothing is required at the border; all of it is a conversation with a travel clinic ideally a month out.",
+        "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam",
+        "status": "verified",
+        "notes": "CDC Vietnam destination page read 2026-10-12. The entry-requirement half is travel.state.gov. Keep the two authorities separate in prose — conflating 'required' with 'recommended' is the standard error in this article type."
+      },
+      "tap_water_safe": {
+        "value": "No — do not drink the tap water anywhere in Vietnam, including the major cities. Bottled and filtered water is universal and cheap; hotels and many cafes provide refills. Ice in established restaurants and cafes is commercially produced and generally fine, which surprises travellers who have been told to refuse all ice.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "emergency_numbers": {
+        "value": {
+          "police": "113",
+          "ambulance": "115",
+          "fire": "114"
+        },
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "Also worth carrying: these numbers are frequently answered only in Vietnamese. For a serious medical event in Hanoi or HCMC, travellers are usually better served going direct to an international hospital than waiting on 115."
+      },
+      "us_embassy": {
+        "value": {
+          "embassy_hanoi": {
+            "address": "Rose Garden Tower, 170 Ngoc Khanh, Ba Dinh District, Hanoi",
+            "phone": "+84-24-3850-5000",
+            "email": "ACShanoi@state.gov"
+          },
+          "consulate_hcmc": {
+            "address": "4 Le Duan Blvd., Sai Gon Ward, Ho Chi Minh City",
+            "phone": "+84-28-3520-4200",
+            "note": "A September 2026 security alert advised avoiding the Le Duan Street entrance — check vn.usembassy.gov for the current entrance before going."
+          },
+          "immigration_offices": {
+            "hanoi": "69 Mac Thai To, Yen Hoa Ward (024 3825-7941)",
+            "da_nang": "78 Le Loi, Hai Chau",
+            "hcmc": "196 Nguyen Thi Minh Khai, Xuan Hoa Ward (028 3829-9398)"
+          }
+        },
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "RESOLVED 2026-10-12 from vn.usembassy.gov pages. The consulate entrance advisory is change-prone — short review_after, and never print an entrance instruction as durable."
+      },
+      "common_scams": {
+        "value": [
+          "Taxi meter manipulation and lookalike liveries — the reason Grab/Xanh SM is the standing advice: the fare is fixed before the ride and there is no meter to argue with.",
+          "The 500,000 / 20,000 dong note confusion at change — similar colours, a 25x difference. Learn the two notes before arriving.",
+          "Cyclo and xich lo rides where the agreed price turns out to be per person, per hour, or in USD.",
+          "Shoe-repair and fruit-basket approaches in Hanoi's Old Quarter: an unsolicited service performed before a price is named, then an aggressive price.",
+          "Motorbike rental damage claims — pre-existing scratches charged at return. Photograph the whole bike, with the renter present, before riding off.",
+          "'Closed today' redirection at major sights, steering to a commission shop or alternate tour."
+        ],
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "Every one of these is a price-ambiguity scam, not a theft. The single durable defence is the same each time: fix the price, in dong, before the service. That generalisation is worth more to the reader than the list."
+      },
+      "drug_laws": {
+        "value": "The highest-consequence legal trap for this audience. State Department: 'Using narcotic drugs in Vietnam is illegal. Police sometimes test people's blood for drugs. If drugs are in your system, even if you used them in another country where they were legal, you can be arrested and face a long prison sentence.' It adds that ingredients in common prescription drugs, ADHD medication among them, may be illegal in Vietnam.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "Aimed squarely at an American audience: a traveller from a state where cannabis is legal can be arrested in Vietnam for what is still in their blood on arrival. The prescription-ADHD half matters to a completely different and larger group. Neither panel model surfaced either."
+      },
+      "consular_access": {
+        "value": "State Department: 'Vietnamese authorities routinely delay notification and consular access to detained U.S. citizens, often leading to delays of several weeks or more for embassy visits.'",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "The reason the drug and overstay facts above carry real weight: if it goes wrong, the embassy may not reach you for weeks."
+      },
+      "malaria": {
+        "value": "Mostly NOT a concern on a standard tourist itinerary, which contradicts the generic 'take antimalarials for Southeast Asia' advice. CDC, verbatim: transmission is in 'Rural areas only; rare cases in the Mekong and Red River Deltas', and there is 'None in the cities of Da Nang, Hai Phong, Hanoi, Ho Chi Minh City (Saigon), Nha Trang, and Quy Nhon.' So a Hanoi / Ha Long / Hoi An / HCMC trip has essentially no malaria exposure. Chemoprophylaxis is recommended for rural transmission areas, with named provinces including Binh Phuoc, Dak Lak, Dak Nong, Gia Lai, Khanh Hoa, Kon Tum, Lam Dong, Ninh Thuan and Tay Ninh. Chloroquine and mefloquine resistance is present, so those two are not the drugs.",
+        "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam",
+        "status": "verified",
+        "notes": "Strong candidate for a fact span and a genuinely money-saving finding: most readers are told to buy antimalarials they do not need. CARE REQUIRED on two points before writing: (1) Lam Dong is Da Lat's province and appears on the province list, so do not write 'Da Lat is risk-free' — CDC names provinces for DRUG CHOICE within transmission areas, which is not the same as saying the whole province transmits. (2) Sapa and Ha Giang are rural northern areas and are therefore NOT covered by the city exemption. Mosquito-bite avoidance still applies everywhere for dengue, which has no vaccine in this context."
+      },
+      "road_emergency_numbers": {
+        "value": "Dial 113 for traffic police, 115 for ambulance, and 1900-54-55-70 for the Vietnam Expressway Corporation (VEC) hotline. Expressways have emergency call boxes every 1 to 3 miles.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified"
+      },
+      "air_quality": {
+        "value": "A real health consideration the panel missed entirely. travel.state.gov: 'Air pollution is a significant problem in Vietnam's major cities, especially Hanoi. You should consult your doctor prior to travel and consider the impact that poor air quality may have on you.' Hanoi's worst stretch is the winter dry season, which overlaps the northern shoulder months this site will recommend.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+        "status": "verified",
+        "notes": "Affects best-time-to-visit and anyone asthmatic. Do NOT print an AQI number — that is serve_live; point at a live source instead. Honest tension to hold: Oct-Nov and Mar-Apr are the best months for weather in the north AND part of the worse air window, so the recommendation needs the caveat attached rather than buried."
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": "Excellent and cheap. Viettel (widest rural coverage, state-owned), Vinaphone and Mobifone are the three carriers; Viettel is the default choice for anyone going to Sapa, Ha Giang or the Mekong. Physical tourist SIMs are sold at airport arrivals and require passport registration. eSIM is supported by all three and by the usual resellers (Airalo and similar), which is the lower-friction route for a recent iPhone — installed before departure, live on landing.",
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "Did not verify current data-package pricing and should not: it is serve_live. The durable facts are which carrier covers the mountains and that registration requires a passport."
+      },
+      "coverage": {
+        "value": "4G is near-universal including on most of the Ha Giang loop and in Sapa; 5G is live in Hanoi, HCMC and Da Nang. Dead zones are limited to deep karst valleys, parts of Ha Long Bay out on the water, and remote trekking. Wi-Fi is free and ubiquitous in cafes, hotels and many restaurants — more reliably so than in the US.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "costs": {
+      "_note": "RECOMMENDATION-ish ranges, dated, per person per day excluding international flights. Vietnam is among the cheapest destinations an American can fly to, and the gap between the budget and comfort tiers is unusually small — which is itself the useful point.",
+      "daily_budget_low": {
+        "value": null,
+        "status": "serve_live",
+        "notes": "Do not freeze. Indicative only and must be dated at publish."
+      },
+      "daily_budget_mid": {
+        "value": null,
+        "status": "serve_live"
+      },
+      "daily_budget_high": {
+        "value": null,
+        "status": "serve_live"
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "Day-to-day dress is relaxed and Western in cities; shorts and t-shirts are unremarkable. Two hard exceptions: temples and pagodas require shoulders and knees covered (and shoes off), and the Ho Chi Minh Mausoleum in Hanoi enforces a strict dress code and bans shorts, bare shoulders, hats, cameras and phones inside. Beachwear stays at the beach.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "dos_and_donts": {
+        "value": [
+          "Remove shoes entering a home, a temple, and many homestays and small shops — follow the pile of shoes at the door.",
+          "Hand and receive things — money, a business card, a gift — with both hands, or with the right hand supported at the elbow by the left. Small, noticed, easy.",
+          "Do not touch an adult's head, and do not point the soles of your feet at a person or an altar.",
+          "Public anger loses the argument. Raised voices cause loss of face on both sides and end negotiations rather than winning them; the smile that appears in a tense exchange is defusing embarrassment, not mocking you.",
+          "Photograph people only after asking, especially ethnic-minority women in Sapa and Ha Giang, where the camera has become an extractive transaction.",
+          "On the war: Vietnamese people are overwhelmingly warm to American visitors and the median citizen was born long after 1975. It is called the American War there. Museums present it from the Vietnamese side, bluntly — read that as a national account rather than a provocation.",
+          "Bargaining is expected in markets and with cyclos, not in shops with marked prices, restaurants or supermarkets. Do it lightly and stop once the price is reasonable."
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    }
+  },
+  "cities": [
+    {
+      "name": "Hanoi",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Noi Bai International (HAN), ~16 miles / 45-60 min north of the centre; longer in peak traffic. Grab, airport taxi and the 86 express bus all serve the Old Quarter. Rail and sleeper bus to Hue, Da Nang, Sapa and the south; short flights to everywhere.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Walkable in the Old Quarter and around Hoan Kiem — which is how most visitors should move, because the traffic makes everything else slower than it looks. Grab car and GrabBike for distance. Metro Line 2A (Cat Linh-Ha Dong) and Line 3 exist but serve commuter corridors, not the sights. Cyclos are a tourist ride, priced accordingly.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Noi Bai (HAN) — international Terminal 2, domestic Terminal 1. Allow more time than the distance suggests.",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Hoan Kiem Lake and the Old Quarter",
+              "why": "The city's organising centre. Walk it at 6am with the exercise classes and again at night — two different cities. The weekend car-free streets change the whole district's character."
+            },
+            {
+              "name": "Temple of Literature",
+              "why": "Vietnam's first university, 1070. The calmest thirty minutes in the Old Quarter and the best single place to see pre-colonial Vietnamese architecture."
+            },
+            {
+              "name": "Ho Chi Minh Mausoleum complex",
+              "why": "The mausoleum, the stilt house and the One Pillar Pagoda in one walk. Strict rules, limited morning hours, closed for annual maintenance — check before going."
+            },
+            {
+              "name": "Vietnamese Women's Museum",
+              "why": "Consistently the best-curated museum in the city and the one that reframes the war and the country most for an American visitor."
+            },
+            {
+              "name": "Hoa Lo Prison",
+              "why": "The 'Hanoi Hilton'. Its presentation of the American POW period is partisan, and knowing that going in is part of why it is worth seeing."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Old Quarter",
+              "who_for": "First-timers and short stays. Everything on foot, maximum noise, best street food density. Pick a street off the bar strip (avoid Ta Hien at night) or do not sleep."
+            },
+            {
+              "area": "French Quarter / around the Opera House",
+              "who_for": "Quieter, wider streets, the grander hotels, 10-15 minutes' walk from Hoan Kiem. The right choice for a second visit or anyone noise-sensitive."
+            },
+            {
+              "area": "Tay Ho (West Lake)",
+              "who_for": "Longer stays, families, expat cafes and lake air. Genuinely pleasant and genuinely far — budget a Grab for every outing."
+            },
+            {
+              "area": "Ba Dinh",
+              "who_for": "Embassies and the mausoleum complex; calm, leafy, under-touristed, and a reasonable base if the Old Quarter is full."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Pho (the northern version)",
+              "why": "Hanoi's pho is the plainer original — clear broth, no basil plate, no hoisin. Eaten at breakfast, from a shop that sells nothing else."
+            },
+            {
+              "name_or_type": "Bun cha",
+              "why": "The Hanoi dish. Grilled pork patties in a bowl of dressed broth with cold noodles. Lunchtime only at the real places."
+            },
+            {
+              "name_or_type": "Egg coffee (ca phe trung)",
+              "why": "A Hanoi invention and not the novelty it sounds like. Also: Vietnamese coffee is robusta, served with condensed milk, and much stronger than it looks."
+            },
+            {
+              "name_or_type": "Cha ca",
+              "why": "Turmeric-and-dill fish cooked at the table, served by restaurants that make one dish."
+            },
+            {
+              "name_or_type": "Banh mi and bun bo nam bo from street carts",
+              "why": "The cheapest consistently excellent food in the city. Pick a cart with a queue of locals and a high turnover."
+            }
+          ],
+          "rank": "core",
+          "notes": "RECOMMENDATION: dish types rather than named restaurants, deliberately. Named street-food vendors move, close and get bought; a dish and a selection rule stay true."
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Ninh Binh (Trang An / Tam Coc)",
+              "why": "Karst landscape on a river rather than the sea — the 'Ha Long on land'. Rowed boats, Hang Mua steps, Bai Dinh. More rewarding than a Ha Long day trip and less compromised.",
+              "rough_time": "Full day; 2h each way by train or bus"
+            },
+            {
+              "place": "Ha Long Bay",
+              "why": "The headline sight. As a DAY trip it is roughly 8 hours of transport and crowding for 3 on the water — the overnight cruise is the version that works. Treat the day/overnight choice as a real decision, not a formality.",
+              "rough_time": "Long full day, or 1-2 nights"
+            },
+            {
+              "place": "Perfume Pagoda",
+              "why": "Boat up the Yen stream plus a cable car or a steep climb to a cave temple. Mobbed during the Jan-Mar festival; quiet otherwise.",
+              "rough_time": "Full day"
+            },
+            {
+              "place": "Bat Trang ceramic village",
+              "why": "Half a day, close to the city, and the lowest-effort escape from Old Quarter traffic.",
+              "rough_time": "Half day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Ho Chi Minh City",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Tan Son Nhat (SGN), unusually close — about 4 miles from District 1, but 30-50 minutes in traffic. Vietnam Airlines flies nonstop from SFO and LAX. Rail terminus of the Reunification Express; the hub for the Mekong Delta and Phu Quoc.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Grab car and GrabBike dominate; a GrabBike through District 1 traffic is both the fastest option and the city's defining experience. Metro Line 1 (Ben Thanh-Suoi Tien) opened and is useful along its corridor but does not yet replace a Grab. The city is hotter, flatter and less walkable than Hanoi.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Tan Son Nhat (SGN) — T1 domestic, T2 international; the new T3 handles domestic traffic. Long Thanh, the future replacement, is NOT yet open.",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "War Remnants Museum",
+              "why": "The most affecting place in the city for an American and the one that will shape the rest of the trip. Go early and go first."
+            },
+            {
+              "name": "Independence (Reunification) Palace",
+              "why": "Frozen in April 1975, basement war rooms intact. The counterpart to the museum: the same event from inside the government that lost."
+            },
+            {
+              "name": "Ben Thanh Market and the surrounding streets",
+              "why": "More useful as orientation and street food than as shopping — prices inside are tourist-set. The night market outside is the better version."
+            },
+            {
+              "name": "Cho Lon (District 5)",
+              "why": "The Chinese quarter: Thien Hau temple, herb streets, Binh Tay market. The part of the city most visitors skip and the part that feels least staged."
+            },
+            {
+              "name": "A rooftop on the river at dusk",
+              "why": "The only way to read the city's shape; from street level it is unreadable."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "District 1 (Dong Khoi / Nguyen Hue)",
+              "who_for": "First-timers. Central, walkable to the major sights, the full hotel range from hostel to Reverie."
+            },
+            {
+              "area": "Pham Ngu Lao / Bui Vien",
+              "who_for": "Backpackers and anyone who wants the nightlife strip. Loud until very late — a mistake for anyone who is not there for it."
+            },
+            {
+              "area": "District 3",
+              "who_for": "Quieter, leafier, locals' cafes, 10 minutes from D1 by Grab. The best value-per-dong in the city."
+            },
+            {
+              "area": "Thao Dien (District 2)",
+              "who_for": "Families and long stays — riverside, international schools, Western groceries. Far from the sights and a different trip."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Southern pho and broken rice (com tam)",
+              "why": "Southern pho is sweeter and comes with a plate of herbs, bean sprouts, lime and sauces — the version Americans recognise. Com tam with grilled pork is the city's workhorse lunch."
+            },
+            {
+              "name_or_type": "Banh mi",
+              "why": "Saigon's is the definitive one; the baguette is the colonial inheritance that Vietnam improved."
+            },
+            {
+              "name_or_type": "Hu tieu",
+              "why": "The southern noodle soup, Chinese-Cambodian in ancestry, sold from carts and found at its best in Cho Lon."
+            },
+            {
+              "name_or_type": "Street seafood on a plastic stool, Districts 4 or 5",
+              "why": "Where the city actually eats at night. Point at what is alive, agree the price first."
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Cu Chi Tunnels",
+              "why": "The standard half-day. Crowded and partly reconstructed; Ben Duoc is the less-visited of the two sites. Claustrophobia is not a joke here.",
+              "rough_time": "Half day"
+            },
+            {
+              "place": "Mekong Delta (My Tho / Ben Tre)",
+              "why": "The common day trip is heavily packaged. Can Tho and its Cai Rang floating market — which happens at dawn and requires an overnight — is the version worth the time.",
+              "rough_time": "Full day packaged, or 2 days to Can Tho"
+            },
+            {
+              "place": "Cao Dai Temple, Tay Ninh",
+              "why": "Usually paired with Cu Chi. A syncretic religion with an all-seeing eye, a noon ceremony and a building unlike anything else in Asia.",
+              "rough_time": "Full day with Cu Chi"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Hoi An",
+      "facts": {
+        "how_to_get_there": {
+          "value": "No airport of its own: fly to Da Nang (DAD), then 40-50 minutes by car south. Hue is 3-4 hours north by road over the Hai Van Pass, or by train to Da Nang then car.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Bicycle, on foot, and Grab for the beach. The Ancient Town is pedestrianised for much of the day. An Bang and Cua Dai beaches are 10-15 minutes by bike.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Da Nang International (DAD)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "The Ancient Town at night",
+              "why": "Lanterns lit, traffic gone. It is genuinely beautiful and genuinely overrun; before 8am and after 9pm are the two windows."
+            },
+            {
+              "name": "Japanese Covered Bridge",
+              "why": "The town's emblem, on the 20,000 dong note."
+            },
+            {
+              "name": "A tailor",
+              "why": "Hoi An's real industry. A credible suit or dress in 24-48 hours — but quality varies enormously and the cheapest shops are a false economy. Allow two fittings, which means arriving with time."
+            },
+            {
+              "name": "My Son Sanctuary",
+              "why": "Cham temple ruins, 4th-13th century, an hour away. Go at opening or late; midday is both hot and full."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Ancient Town edge",
+              "who_for": "Walk everywhere, lantern-light at the door, some noise."
+            },
+            {
+              "area": "An Bang Beach",
+              "who_for": "Beach days with the town a 15-minute bike ride away. The better choice for more than two nights."
+            },
+            {
+              "area": "Cam Thanh / the rice paddies",
+              "who_for": "Quiet, green, small resorts and homestays; needs a bike or Grab for everything."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Cao lau",
+              "why": "Hoi An and nowhere else — the noodles are traditionally made with water from one local well."
+            },
+            {
+              "name_or_type": "White rose dumplings and banh mi",
+              "why": "Both local specialities; Hoi An's banh mi has a serious claim to being the country's best."
+            },
+            {
+              "name_or_type": "Com ga Hoi An",
+              "why": "Turmeric chicken rice, a distinct local version."
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "My Son",
+              "why": "The region's major archaeological site.",
+              "rough_time": "Half day"
+            },
+            {
+              "place": "Da Nang (Marble Mountains, Son Tra, Dragon Bridge)",
+              "why": "A city most visitors use only as an airport and which rewards a day.",
+              "rough_time": "Half to full day"
+            },
+            {
+              "place": "Ba Na Hills / Golden Bridge",
+              "why": "The hands-holding-a-bridge photograph. It is a hilltop theme park with a French village, and knowing that in advance decides it for most people.",
+              "rough_time": "Full day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Sapa",
+      "facts": {
+        "how_to_get_there": {
+          "value": "From Hanoi: the expressway makes it 5-6 hours by day bus or limousine van, which has largely replaced the overnight train to Lao Cai plus an hour's transfer up the hill. The train is slower and is chosen for the sleeper experience, not the speed.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Sapa town is walkable and heavily built up; everything worth coming for is in the valleys below it, reached on foot with a guide, by motorbike, or by car to a trailhead.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "None. Nearest is Hanoi (HAN).",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "The Muong Hoa valley terraces",
+              "why": "The reason to come. Walking down through Lao Chai and Ta Van beats any viewpoint."
+            },
+            {
+              "name": "Fansipan",
+              "why": "Indochina's highest peak, reachable by cable car in 15 minutes or on a hard two-day trek. The cable car arrives in cloud more often than not."
+            },
+            {
+              "name": "A homestay night in the valley",
+              "why": "The difference between seeing Sapa and visiting it — and the choice that separates a good trip here from a disappointing one."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Sapa town",
+              "who_for": "One night, bad weather, or an early bus. Developed, cold, hotel-dense."
+            },
+            {
+              "area": "Ta Van / Lao Chai valley homestays",
+              "who_for": "Anyone with two nights. Quiet, terraced, the actual landscape."
+            },
+            {
+              "area": "Ta Phin / Ban Ho",
+              "who_for": "Further out and less visited; needs a transfer."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Homestay family dinner",
+              "why": "Communal, included, and better than anything in town."
+            },
+            {
+              "name_or_type": "Thang co and grilled skewers at the market",
+              "why": "Local highland food; thang co is an acquired taste and honest to say so."
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Bac Ha Sunday market",
+              "why": "Flower Hmong market, 2.5-3 hours away, Sundays only — a real calendar constraint on an itinerary.",
+              "rough_time": "Full day, Sunday"
+            },
+            {
+              "place": "Ha Giang loop (from Sapa or Hanoi)",
+              "why": "The country's best motorbike route and a 3-4 day commitment, not a day trip. Most visitors ride pillion with an 'easy rider' — which also sidesteps the licence problem.",
+              "rough_time": "3-4 days"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Hue",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Phu Bai airport (HUI) with domestic flights; on the Reunification Express; 2.5 hours from Da Nang by road or rail over the Hai Van Pass, which is the best rail hour in Vietnam.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "The Citadel side and the hotel side face each other across the Perfume River and are walkable within themselves; Grab or a cyclo between. Royal tombs are spread out — a car, a motorbike or a river boat.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Phu Bai International (HUI), domestic-focused",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "The Imperial City (Citadel)",
+              "why": "The Nguyen dynasty's walled capital, heavily damaged in 1968 and under continuous restoration. Allow three hours and bring sun cover — there is very little shade."
+            },
+            {
+              "name": "The royal tombs (Minh Mang, Tu Duc, Khai Dinh)",
+              "why": "Three completely different aesthetics; Khai Dinh's concrete-and-mosaic hybrid is the strangest building in Vietnam. Pick two, not all seven."
+            },
+            {
+              "name": "Thien Mu Pagoda",
+              "why": "On the river, and the origin of the Austin car driven by Thich Quang Duc in 1963 — which is displayed here."
+            },
+            {
+              "name": "The DMZ / Vinh Moc tunnels",
+              "why": "North from Hue: Khe Sanh, the Ben Hai river, and the Vinh Moc tunnels where a village lived underground. More sobering and far less crowded than Cu Chi."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "South bank (Le Loi riverfront)",
+              "who_for": "Most hotels, restaurants and the walking strip."
+            },
+            {
+              "area": "Inside the Citadel walls",
+              "who_for": "A handful of guesthouses; quieter and more atmospheric at night."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Bun bo Hue",
+              "why": "The city's dish and a different animal from pho — lemongrass, chilli, beef shank."
+            },
+            {
+              "name_or_type": "Banh beo, banh nam, banh loc",
+              "why": "Hue's steamed rice-cake family, eaten as a set of small plates. Imperial-cuisine descendants, sold cheaply."
+            },
+            {
+              "name_or_type": "Com hen",
+              "why": "Baby clam rice, a Hue speciality, served at room temperature."
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "DMZ tour",
+              "why": "Quang Tri, Khe Sanh, Vinh Moc. The single most substantive war-history day in the country.",
+              "rough_time": "Full day"
+            },
+            {
+              "place": "Hai Van Pass to Da Nang",
+              "why": "By motorbike, car, or the train. One of Asia's great coastal roads; the train does it for the price of a coffee.",
+              "rough_time": "Half day"
+            },
+            {
+              "place": "Bach Ma National Park",
+              "why": "Cloud forest and waterfalls, an hour away, almost empty.",
+              "rough_time": "Full day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Ninh Binh",
+      "facts": {
+        "how_to_get_there": {
+          "value": "~2 hours from Hanoi by train, bus or limousine van. Doable as a day trip; better with a night.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Bicycle and motorbike between the sites, which are spread over several miles of flat country. Sites themselves are visited by rowed sampan.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "None. Hanoi (HAN).",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Trang An",
+              "why": "UNESCO-listed; a two to three hour rowed loop through karst and water caves. Three routes — the longest is the quietest. Choose this over Tam Coc if choosing one."
+            },
+            {
+              "name": "Tam Coc",
+              "why": "Shorter, prettier in the May-June golden rice weeks, and more commercial — hawking from boats is common."
+            },
+            {
+              "name": "Hang Mua viewpoint",
+              "why": "~500 steps to the dragon ridge and the view that sells Ninh Binh. Go at dawn."
+            },
+            {
+              "name": "Bai Dinh Pagoda",
+              "why": "Enormous, modern, and a complete contrast to the landscape — worth an hour, not a morning."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Tam Coc village",
+              "who_for": "Walkable restaurants and bike hire, closest to the action."
+            },
+            {
+              "area": "Trang An / countryside homestays",
+              "who_for": "Quiet, karst views from the room, needs a bike."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Goat (de nui) and com chay",
+              "why": "Mountain goat and crispy scorched rice are the Ninh Binh pair, on every local menu."
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Cuc Phuong National Park",
+              "why": "Vietnam's first national park and a serious primate rescue centre.",
+              "rough_time": "Full day"
+            },
+            {
+              "place": "Phat Diem stone cathedral",
+              "why": "A Catholic cathedral built in Vietnamese temple form. Genuinely unusual and almost unvisited.",
+              "rough_time": "Half day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Da Nang",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Da Nang International (DAD) — the centre of the country's air network, with the most domestic routes and a growing list of international ones. Mid-point of the Reunification Express.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Grab; the city is spread along a beach strip and a river and is not walkable end to end. Hoi An is 40-50 minutes south, Hue 2.5 hours north.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Da Nang International (DAD), ~2 miles from the centre — unusually close",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "My Khe Beach",
+              "why": "Miles of wide clean sand inside a major city. The best urban beach in Vietnam."
+            },
+            {
+              "name": "Marble Mountains",
+              "why": "Five limestone hills with cave pagodas and sea views, between the city and Hoi An."
+            },
+            {
+              "name": "Son Tra peninsula",
+              "why": "Lady Buddha, forest road, endangered red-shanked douc langurs. Best early morning."
+            },
+            {
+              "name": "Dragon Bridge",
+              "why": "Breathes fire and water at 9pm on weekends. Kitsch, and the city turns out for it."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "My Khe beachfront",
+              "who_for": "Beach-first stays; resorts and towers."
+            },
+            {
+              "area": "Han River / city centre",
+              "who_for": "Food, markets and the real city rather than the resort strip."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Mi Quang",
+              "why": "The regional noodle dish — turmeric noodles, very little broth, peanuts and a sheet of rice cracker."
+            },
+            {
+              "name_or_type": "Banh xeo and nem lui",
+              "why": "Central-style, wrapped at the table in rice paper and herbs."
+            },
+            {
+              "name_or_type": "Seafood on the beach road",
+              "why": "Priced by weight — confirm before it is cooked."
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Hoi An",
+              "why": "Most people base in one and day-trip the other; Hoi An is the better base.",
+              "rough_time": "Half to full day"
+            },
+            {
+              "place": "Hai Van Pass and Lang Co",
+              "why": "The coast road north.",
+              "rough_time": "Half day"
+            },
+            {
+              "place": "Ba Na Hills",
+              "why": "Cable car, Golden Bridge, French village. A theme park with a famous photograph.",
+              "rough_time": "Full day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Phu Quoc",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Phu Quoc International (PQC); ~1 hour from HCMC, ~2 from Hanoi. Fast ferries from Rach Gia and Ha Tien in the Mekong Delta.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Grab operates but thinly outside the main strip; most visitors use hotel transfers, taxis or a rented scooter. The island is larger than it looks — about 30 miles long.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Phu Quoc International (PQC) — and an approved e-visa air border gate",
+          "source_url": "https://evisa.gov.vn/instruction",
+          "status": "verified"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "The beaches (Sao, Long, Ong Lang)",
+              "why": "Sao Beach is the postcard; Long Beach is the sunset strip; Ong Lang is the quiet middle ground."
+            },
+            {
+              "name": "Phu Quoc National Park",
+              "why": "More than half the island is protected forest, and almost nobody goes in."
+            },
+            {
+              "name": "An Thoi archipelago and the Hon Thom cable car",
+              "why": "The world's longest over-sea cable car, plus snorkelling islands."
+            },
+            {
+              "name": "Fish sauce distilleries and pepper farms",
+              "why": "Phu Quoc nuoc mam is a protected designation. Short, genuinely interesting, and the smell is the point."
+            }
+          ],
+          "rank": "core",
+          "notes": "Honest caveat for the article: Phu Quoc has been developed hard and fast, and the gap between the marketing images and the construction on the ground is the thing reviewers complain about most."
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Long Beach (Duong Dong end)",
+              "who_for": "Restaurants, night market, sunset, most hotels."
+            },
+            {
+              "area": "Ong Lang",
+              "who_for": "Quieter mid-island, smaller resorts."
+            },
+            {
+              "area": "An Thoi / south",
+              "who_for": "Sao Beach, the cable car, the newest big resorts and the most construction."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Duong Dong night market seafood",
+              "why": "Priced by weight; agree it first."
+            },
+            {
+              "name_or_type": "Herring salad (goi ca trich)",
+              "why": "The island dish, raw herring with coconut and herbs in rice paper."
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "An Thoi island-hopping boat",
+              "why": "Snorkelling and three or four islands; the standard full-day tour.",
+              "rough_time": "Full day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Ha Long Bay",
+      "facts": {
+        "how_to_get_there": {
+          "value": "~2.5 hours from Hanoi on the expressway to Ha Long City or Tuan Chau; most visitors arrive on a cruise operator's transfer rather than independently. Cat Ba Island is reached via Hai Phong (Cat Bi airport, HPH) or by ferry.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "You are on a boat. The decisions are which bay (Ha Long, the quieter Bai Tu Long, or Lan Ha off Cat Ba) and which operator.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Van Don (VDO) is closest; most arrive overland from Hanoi (HAN).",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Lan Ha Bay",
+              "why": "Same karst, a fraction of the boats, reached from Cat Ba. The informed choice."
+            },
+            {
+              "name": "Bai Tu Long Bay",
+              "why": "North-east of the main bay, fewer permits issued, noticeably quieter."
+            },
+            {
+              "name": "Sung Sot (Surprise) Cave",
+              "why": "The big one on the standard route — and standing room only by 11am."
+            },
+            {
+              "name": "Kayaking at Luon Cave",
+              "why": "The low tunnel into an enclosed lagoon; the hour that justifies the overnight."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "On a 2-day/1-night cruise",
+              "who_for": "The default. One night on the water, which is enough for most."
+            },
+            {
+              "area": "On a 3-day/2-night cruise",
+              "who_for": "Reaches the quieter bays, which the one-night routes cannot."
+            },
+            {
+              "area": "Cat Ba Island",
+              "who_for": "Independent travellers: cheaper, land-based, day boats into Lan Ha, plus a national park."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "All meals are on the boat",
+              "why": "Food quality tracks the cruise tier almost exactly and is one of the clearest differences between price bands."
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Cat Ba National Park",
+              "why": "If based on the island rather than a boat.",
+              "rough_time": "Half day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Da Lat",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Lien Khuong airport (DLI), ~45 minutes from town, with flights from Hanoi, HCMC and Da Nang. 6-7 hours by bus from HCMC, 4 from Nha Trang.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Walkable centre around the market and lake; Grab and rented scooters for the waterfalls and farms outside town.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Lien Khuong (DLI)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "The climate itself",
+              "why": "4,900 feet up: 60s-70s F year-round, pine forest, and the reason the French built it. The only place in Vietnam where an American needs a jacket in summer."
+            },
+            {
+              "name": "Canyoning at Datanla",
+              "why": "Abseiling down waterfalls — Da Lat's signature activity. Safety records vary sharply between operators and there have been fatalities; this is a place to pay for the licensed one."
+            },
+            {
+              "name": "Crazy House (Hang Nga)",
+              "why": "An architect's inhabitable sculpture. Genuinely odd."
+            },
+            {
+              "name": "Coffee and flower farms",
+              "why": "Vietnam is the world's second-largest coffee producer and this is where the arabica grows."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Around Xuan Huong Lake / the market",
+              "who_for": "Central, walkable, the night market at the door."
+            },
+            {
+              "area": "Hillside outside town",
+              "who_for": "Views and pine quiet; needs transport."
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Night market banh trang nuong",
+              "why": "'Vietnamese pizza' — grilled rice paper, a Da Lat street invention."
+            },
+            {
+              "name_or_type": "Hot pot and artichoke tea",
+              "why": "Cold-weather food in a country that mostly has none."
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Elephant Falls and Linh An Pagoda",
+              "why": "Half a day west.",
+              "rough_time": "Half day"
+            },
+            {
+              "place": "The Da Lat-Nha Trang road",
+              "why": "A mountain descent to the coast that is better as a ride than a transfer.",
+              "rough_time": "Half day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "Vietnam in one week — north and centre, one internal flight",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Land Hanoi (HAN). Transfer to the Old Quarter; stay awake.",
+            "afternoon": "Walk Hoan Kiem and the Old Quarter at low effort.",
+            "evening": "Bun cha, early night. The jet lag from the US is the real constraint on day 1."
+          },
+          {
+            "day": 2,
+            "morning": "Temple of Literature, Ho Chi Minh complex (morning hours only).",
+            "afternoon": "Vietnamese Women's Museum or Hoa Lo Prison.",
+            "evening": "Egg coffee; street food walk."
+          },
+          {
+            "day": 3,
+            "morning": "Transfer to Ha Long / Lan Ha for an overnight cruise.",
+            "afternoon": "On the water: kayak, cave, swim.",
+            "evening": "Dinner and night on board."
+          },
+          {
+            "day": 4,
+            "morning": "Cruise morning activity; disembark.",
+            "afternoon": "Return to Hanoi.",
+            "evening": "Evening flight Hanoi to Da Nang; transfer to Hoi An."
+          },
+          {
+            "day": 5,
+            "morning": "Hoi An Ancient Town before the crowds; tailor fitting #1 if wanted.",
+            "afternoon": "An Bang beach or cycle the paddies.",
+            "evening": "Ancient Town lanterns after 9pm."
+          },
+          {
+            "day": 6,
+            "morning": "My Son Sanctuary at opening.",
+            "afternoon": "Back to Hoi An; second fitting; Marble Mountains if time.",
+            "evening": "Last dinner in the old town."
+          },
+          {
+            "day": 7,
+            "morning": "Hai Van Pass or beach morning.",
+            "afternoon": "Transfer to Da Nang (DAD).",
+            "evening": "Fly out."
+          }
+        ]
+      },
+      "assumptions": {
+        "value": "Seven days ON THE GROUND, which from the US means nine to ten days off work — the trans-Pacific flight eats a calendar day each way. The itinerary deliberately drops the south entirely: a week that tries to include Ho Chi Minh City as well spends a third of itself in transit. One internal flight (HAN-DAD) is the minimum; doing this leg by train or bus costs a full day and a half."
+      }
+    },
+    {
+      "title": "Vietnam in two weeks — north to south, three internal flights",
+      "days": 14,
+      "scope": "whole-country",
+      "plan": {
+        "value": [
+          {
+            "day": "1-3",
+            "morning": "Hanoi: arrive, Old Quarter, museums, the Ho Chi Minh complex.",
+            "afternoon": "",
+            "evening": ""
+          },
+          {
+            "day": "4-5",
+            "morning": "Sapa (5-6h van) or Ninh Binh (2h) — mountains or karst, not both.",
+            "afternoon": "",
+            "evening": "Valley homestay if Sapa."
+          },
+          {
+            "day": "6-7",
+            "morning": "Ha Long / Lan Ha overnight cruise, back to Hanoi.",
+            "afternoon": "",
+            "evening": "Fly Hanoi to Hue."
+          },
+          {
+            "day": "8-9",
+            "morning": "Hue: Citadel, two royal tombs, DMZ day.",
+            "afternoon": "",
+            "evening": ""
+          },
+          {
+            "day": "10",
+            "morning": "Hai Van Pass to Da Nang by train or car.",
+            "afternoon": "Marble Mountains; on to Hoi An.",
+            "evening": "Hoi An."
+          },
+          {
+            "day": "11-12",
+            "morning": "Hoi An: Ancient Town, My Son, beach, tailor.",
+            "afternoon": "",
+            "evening": ""
+          },
+          {
+            "day": "13",
+            "morning": "Fly Da Nang to Ho Chi Minh City.",
+            "afternoon": "War Remnants Museum, Reunification Palace.",
+            "evening": "District 4 street seafood."
+          },
+          {
+            "day": "14",
+            "morning": "Cu Chi or Cho Lon.",
+            "afternoon": "Ben Thanh, last shopping.",
+            "evening": "Fly out of SGN."
+          }
+        ]
+      },
+      "assumptions": {
+        "value": "North to south, which is the right direction for an American: the long-haul arrives in the north with the jet lag, and the trip ends at SGN where the nonstops to SFO and LAX leave. Three internal flights. The Mekong Delta and Phu Quoc are both deliberately omitted — adding either means removing Sapa or Hue, and the half-day packaged Mekong trip out of HCMC is the weakest day on offer in the country."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "value": [
+        {
+          "name": "Hanoi's Old Quarter",
+          "where": "Hanoi",
+          "why": "A thousand-year-old street plan still functioning as a street plan."
+        },
+        {
+          "name": "Lan Ha / Ha Long Bay overnight",
+          "where": "North coast",
+          "why": "The landscape the country is known for, and worth the night rather than the day."
+        },
+        {
+          "name": "Hoi An Ancient Town",
+          "where": "Central coast",
+          "why": "An intact trading port, best in its two uncrowded hours."
+        },
+        {
+          "name": "Hue's Citadel and the DMZ",
+          "where": "Central",
+          "why": "The imperial past and the war in one base."
+        },
+        {
+          "name": "War Remnants Museum",
+          "where": "Ho Chi Minh City",
+          "why": "For an American audience specifically, the single most consequential room in the country."
+        },
+        {
+          "name": "Sapa's Muong Hoa valley",
+          "where": "Far north",
+          "why": "Terraced mountain agriculture at a scale photographs flatten."
+        },
+        {
+          "name": "Ha Giang loop",
+          "where": "Far north",
+          "why": "The best road in Vietnam, 3-4 days, usually ridden pillion."
+        },
+        {
+          "name": "Cai Rang floating market",
+          "where": "Mekong Delta, Can Tho",
+          "why": "The real one, at dawn, which requires the overnight that most itineraries refuse to spend."
+        }
+      ],
+      "rank": "core"
+    }
+  },
+  "_open_questions": {
+    "_note": "Material unknowns from this pass. Each is something I could NOT resolve against a source today and must not be written as fact until someone does.",
+    "value": [
+      {
+        "q": "None blocking. Three questions were closed by decision rather than by evidence — see notes on money.atm_fees (ship the structural rule, not a number), visa.evisa_traps (print it; enforcement undocumentable) and documents.police_registration (state the duty, not a threat).",
+        "why_it_matters": "Recorded so a later pass does not mistake a deliberate editorial decision for an unexamined gap. The standing research gaps that remain are all SOFT: no bank's own foreign-card fee schedule was ever found; the Ministry of Home Affairs' own Tet 2027 announcement was not opened (reported consistently by three Vietnamese outlets); and the Temporary Residence Card requirement for licence conversion rests on secondary sources, though the consequence that matters rests on travel.state.gov and is solid.",
+        "blocks": []
+      }
+    ]
+  }
+}

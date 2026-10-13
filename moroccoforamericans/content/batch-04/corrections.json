@@ -1,0 +1,15 @@
+{
+  "_README": "Accumulated local ground truth for moroccoforamericans. Every entry OVERRIDES facts.json and any AI output, permanently (hard rule 8). Stage 3 loads this alongside facts.json before writing any batch.",
+  "schema_version": 3,
+  "project": "moroccoforamericans",
+  "corrections": [
+    {
+      "id": 1,
+      "date": "2026-07-06",
+      "scope": "style",
+      "wrong": "Overstating prevalence beyond what facts.json supports — e.g. 'almost everyone / nearly everyone does the desert as a guided tour'",
+      "right": "Match facts.json's register on prevalence claims. Facts say 'most first-timers take a tour with driver' and note self-driving to the dune edge is possible, so write 'most first-timers' and acknowledge the alternative — not an absolute.",
+      "applies_to": "all"
+    }
+  ]
+}

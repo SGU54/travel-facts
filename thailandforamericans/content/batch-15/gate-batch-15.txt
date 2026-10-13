@@ -1,0 +1,434 @@
+You are a fact-and-consistency checker for travel articles. Below are articles plus the facts file they were written from. Find ONLY IN-CONTEXT ERRORS: a claim stated two different ways; a recommendation contradicting the facts file; an out-of-scope place; an internal contradiction; a claim factually wrong for Thailand.
+RULES: (1) Do NOT flag serve_live items (exchange rates, prices, visa day-count) for being hedged — that is correct. (2) Flight DURATIONS and stable facts are fine. (3) Only genuine errors; if an article is clean, say "clean". (4) Short list per slug.
+
+=== FACTS FILE ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_aro
+
+=== ARTICLES ===
+
+
+----- SLUG: elephant-tourism-ethics-thailand -----
+TITLE: The Ethics of Elephant Tourism in Thailand
+CATEGORY: ethical-wildlife
+
+<p>Elephants are woven deeply into Thai culture and history, and seeing them is a dream for many visitors. But elephant tourism is ethically fraught, and the choices travelers make have a direct impact on these animals' welfare. Understanding the issues helps you experience elephants in a way that helps rather than harms them. Here's an honest look at the ethics of elephant tourism in Thailand.</p>
+
+<!-- IMAGE_SLOT_1: Elephants roaming freely in a natural sanctuary setting -->
+
+<h2>A complicated history</h2>
+<p>Elephants have been part of Thai life for centuries — in warfare, religion, and especially the <strong>logging industry</strong>, where domesticated elephants hauled timber until logging was largely banned in 1989. That ban left thousands of captive elephants and their handlers (mahouts) without work, and <strong>tourism became the main alternative livelihood</strong>. This history explains why so many elephants are in tourism today, and why the issue isn't simply "good" versus "evil" — it's tangled up with the welfare of both animals and the people who depend on them.</p>
+
+<h2>Why riding and shows are harmful</h2>
+<p>The central ethical problem is how elephants are made compliant enough to ride or perform. Traditionally, this involves a brutal training process to break a young elephant's spirit, and a lifetime of control through fear. <strong>Riding</strong> — especially with heavy seats — can also physically harm elephants' backs over time. <strong>Performances</strong> (painting, tricks, circus shows) require similar coercive training and put animals in unnatural, stressful situations. These are the practices welfare advocates urge travelers to avoid entirely.</p>
+
+<!-- IMAGE_SLOT_2: A mahout caring for an elephant in an ethical setting -->
+
+<h2>How genuine sanctuaries are different</h2>
+<p>In response, a movement of genuine <strong>sanctuaries</strong> has emerged that rescue elephants from logging, riding, and street-begging backgrounds and let them live more naturally. The best of these <strong>don't allow riding or performances</strong>, let elephants roam in herds and natural habitat, limit tourist interaction to observation (and sometimes feeding or bathing), and are increasingly moving toward fully hands-off models. They fund elephant care through ethical tourism — a model that channels visitors' money toward welfare rather than exploitation.</p>
+
+<h2>The nuances worth understanding</h2>
+<p>It's not entirely black-and-white. Captive elephants <strong>can't simply be released</strong> into the wild — there isn't enough protected habitat, and many have known only human care. So responsible captive management, funded sustainably, is part of the realistic solution. Mahouts and their families <strong>depend on these animals</strong> for their livelihoods, so ethical tourism that supports good mahout practices matters. And some "interaction" (like feeding) at otherwise ethical places isn't inherently harmful. The goal is supporting genuinely welfare-focused operations, not demanding an impossible purity.</p>
+
+<h2>How to be a responsible visitor</h2>
+<p>The practical guidance: <strong>never ride elephants or attend shows</strong>; <strong>choose observation-based sanctuaries</strong> that don't offer riding; <strong>research before booking</strong> (read recent reviews critically, look for transparency about rescue and care, be wary of "sanctuaries" that still advertise riding); <strong>support places that prioritize the elephants' wellbeing</strong> over tourist photo ops; and <strong>spread the word</strong>, since demand drives the industry. Where you spend your money is the single most powerful vote you cast for how these animals are treated.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — ethical elephant sanctuary experiences -->
+
+<h2>The bottom line</h2>
+<p>Elephant tourism in Thailand is improving as travelers increasingly reject riding and shows in favor of genuine sanctuaries — and that shift is driven entirely by visitor choices. By doing a little research and choosing a welfare-focused, observation-based experience, you can have a moving encounter with these remarkable animals while actively supporting their better treatment. It's one of the clearest cases in travel where being a thoughtful tourist genuinely matters. Sanctuary visits vary in cost; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is elephant tourism ethical in Thailand?</summary><div><p>It can be, if you choose carefully. Riding and performances are harmful and best avoided, but genuine observation-based sanctuaries that rescue elephants and prioritize their welfare offer an ethical way to see them.</p></div></details>
+  <details><summary>Why is riding elephants considered bad?</summary><div><p>Making elephants compliant enough to ride traditionally involves a brutal training process and lifelong control through fear, and riding (especially with heavy seats) can harm their backs. Welfare advocates urge avoiding it.</p></div></details>
+  <details><summary>Why are there so many captive elephants in Thai tourism?</summary><div><p>Largely due to the 1989 logging ban, which left thousands of working elephants and their mahouts without livelihoods. Tourism became the main alternative, which is why the issue is tangled with both animal and human welfare.</p></div></details>
+  <details><summary>How can I visit elephants responsibly?</summary><div><p>Choose observation-based sanctuaries that don't offer riding or shows, research them critically before booking, support places that prioritize the elephants' wellbeing, and never ride or attend performances. Your spending shapes the industry.</p></div></details>
+</section>
+
+
+----- SLUG: isan-northeast-thailand-guide -----
+TITLE: Isan: Exploring Thailand's Northeast
+CATEGORY: isan-northeast
+
+<p>Isan — Thailand's vast northeastern region — is the part of the country most tourists never see, and that's precisely its appeal. Off the standard trail, it offers a deeper, more authentic slice of Thai life: distinctive food and culture, ancient Khmer temples, friendly locals, and almost no crowds. For adventurous travelers wanting the real Thailand beyond the beaches, Isan rewards the effort. Here's a guide.</p>
+
+<!-- IMAGE_SLOT_1: An Isan rural scene — rice fields, a local market, or a Khmer ruin -->
+
+<h2>What and where is Isan?</h2>
+<p><strong>Isan</strong> (also spelled Isaan) covers the broad northeastern plateau of Thailand, bordering Laos and Cambodia. It's the country's <strong>largest and most populous region</strong>, yet the least visited by foreign tourists — a land of rice fields, the Mekong River along its edge, and a culture distinct from the rest of Thailand, with strong Lao and Khmer influences. This is agricultural heartland, the source of much of Thailand's labor and many of its most famous dishes.</p>
+
+<h2>The food — some of Thailand's best</h2>
+<p>Here's a reason to go on its own: much of the Thai food the world loves <strong>comes from Isan</strong>. The famous trio of <strong>som tum</strong> (spicy green papaya salad), <strong>gai yang</strong> (grilled chicken), and <strong>sticky rice</strong> is Isan's gift to Thai cuisine, along with <strong>laab</strong> (a zesty minced-meat salad) and a host of bold, spicy, fermented flavors. Eating Isan food at its source — fresh, fiery, and authentic — is a highlight for any food lover, and it's everywhere and cheap in the region.</p>
+
+<!-- IMAGE_SLOT_2: Isan food — som tum, grilled chicken, and sticky rice -->
+
+<h2>The Khmer ruins</h2>
+<p>Long before the Thai kingdoms, this region was part of the Khmer Empire, and Isan holds some of the <strong>most impressive Khmer temple ruins outside Cambodia</strong>. <strong>Phanom Rung</strong>, a magnificent hilltop sanctuary, is the standout — often compared to Angkor and far less crowded. <strong>Phimai</strong> is another major Khmer site. For history lovers, these ancient sandstone temples, beautifully set and almost empty of tourists, are a revelation.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Isan / Khmer ruins tours -->
+
+<h2>Other highlights</h2>
+<p>Isan rewards exploration. The <strong>Mekong River</strong> towns like Nong Khai and Nakhon Phanom offer riverside calm and views across to Laos. <strong>Khao Yai National Park</strong> sits on the region's edge. There are unusual sights like the surreal sculpture parks, vibrant <strong>silk-weaving</strong> villages, prehistoric rock art, and lively local festivals (the Rocket Festival and candle festivals are famous). Cities like <strong>Khon Kaen</strong> and <strong>Udon Thani</strong> serve as friendly, workaday bases.</p>
+
+<h2>Why visit Isan — and what to expect</h2>
+<p><strong>Visit Isan if</strong> you want authentic, off-the-beaten-path Thailand, love food and history, and enjoy connecting with everyday life away from tourist crowds. <strong>Expect</strong> fewer English speakers, less tourist infrastructure, and a need for more patience and independence than the well-trodden south — which is exactly what makes it rewarding. It's not a beach holiday or a first-timer's must; it's a region for curious, adventurous travelers wanting depth. Travel here is very cheap; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<!-- AFFILIATE_SLOT: booking — Isan accommodation -->
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What is Isan in Thailand?</summary><div><p>Isan is Thailand's northeastern region — its largest and most populous, bordering Laos and Cambodia, with a distinct culture influenced by both. It's the least-visited region by foreign tourists, which is part of its appeal.</p></div></details>
+  <details><summary>Is Isan worth visiting?</summary><div><p>For adventurous travelers wanting authentic, crowd-free Thailand with great food and history, yes. It's not a beach or first-timer destination, but it rewards those seeking depth and everyday Thai life off the trail.</p></div></details>
+  <details><summary>What food is Isan known for?</summary><div><p>Much-loved Thai dishes originate here — som tum (papaya salad), gai yang (grilled chicken), sticky rice, and laab (minced-meat salad), all bold, spicy, and best eaten at their source.</p></div></details>
+  <details><summary>What are the main attractions in Isan?</summary><div><p>The Khmer ruins of Phanom Rung and Phimai (Angkor-like and uncrowded), the Mekong River towns, silk-weaving villages, sculpture parks, and lively local festivals — plus Khao Yai National Park on its edge.</p></div></details>
+</section>
+
+
+----- SLUG: railay-beach-guide -----
+TITLE: Railay Beach: Thailand's Cliff-Ringed Paradise
+CATEGORY: islands-beaches
+
+<p>Railay is one of Thailand's most beautiful spots — a small peninsula near Krabi so hemmed in by towering limestone cliffs that it can only be reached by boat, giving it an island feel despite being on the mainland. With gorgeous beaches, world-class rock climbing, and a car-free serenity, it's a slice of paradise. Here's everything you need to know about Railay.</p>
+
+<!-- IMAGE_SLOT_1: Railay's towering limestone cliffs over a turquoise beach with longtail boats -->
+
+<h2>What makes Railay special</h2>
+<p>Railay (also spelled Rai Leh) is cut off from the mainland by sheer <strong>limestone karst cliffs</strong>, so there are no roads in — you arrive by longtail boat from Krabi's Ao Nang or Krabi town. That isolation is the magic: <strong>no cars, no traffic, just beaches, cliffs, and jungle</strong>. It's stunningly scenic, relaxed, and compact enough to explore on foot, yet it offers enough to fill several days. For many visitors it's the highlight of the Krabi area.</p>
+
+<h2>The beaches</h2>
+<p>Railay has a few distinct beaches. <strong>Railay West</strong> is the main event — a beautiful stretch of soft sand with the best swimming and spectacular sunsets, lined with the nicer resorts. <strong>Railay East</strong> is the mangrove-lined side where the boats from Ao Nang dock; it's not for swimming but has cheaper accommodation and a lively bar scene. The jewel is <strong>Phra Nang Beach</strong>, a gorgeous cove framed by cliffs and a sacred "princess cave," widely rated one of Thailand's most beautiful beaches.</p>
+
+<!-- IMAGE_SLOT_2: Phra Nang Beach with its dramatic cliffs and clear water -->
+
+<h2>Rock climbing capital</h2>
+<p>Railay is one of the <strong>world's premier rock-climbing destinations</strong>. Its limestone cliffs offer hundreds of bolted routes for all levels, dramatic sea views, and a welcoming scene with plenty of schools offering lessons and gear. Even complete beginners can take a half-day or full-day course and climb above the turquoise water — an exhilarating Railay rite of passage. If you've ever wanted to try climbing, this is a spectacular place to do it.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Railay rock climbing / boat tours -->
+
+<h2>Other things to do</h2>
+<p>Beyond beaches and climbing, Railay offers <strong>kayaking</strong> among the karsts, <strong>snorkeling and island-hopping</strong> boat trips to nearby islands, a viewpoint and lagoon hike (a muddy scramble rewarded by views), and the atmospheric <strong>Phra Nang Cave</strong>. Or simply relax — Railay is a wonderful place to do very little amid extraordinary scenery, with sunset drinks on Railay West a daily highlight.</p>
+
+<h2>Where to stay and how to get there</h2>
+<p>Accommodation ranges from <strong>budget bungalows on Railay East</strong> to <strong>upscale resorts on Railay West</strong> and around Phra Nang. There's something for most budgets, though prices run a bit higher than the mainland since everything arrives by boat. To get there, take a <strong>longtail boat from Ao Nang</strong> (about 10–15 minutes) or from Krabi town — boats run when they have enough passengers. Many visitors base in Railay for a few nights; others day-trip from Ao Nang. Costs are moderate-to-higher; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<!-- AFFILIATE_SLOT: booking — Railay accommodation -->
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>How do you get to Railay Beach?</summary><div><p>Only by boat — Railay is cut off from the mainland by cliffs, so you take a longtail boat from Krabi's Ao Nang (about 10–15 minutes) or from Krabi town. There are no roads in.</p></div></details>
+  <details><summary>Is Railay West or Railay East better?</summary><div><p>Railay West has the best beach, swimming, sunsets, and nicer resorts; Railay East is the mangrove-lined boat-landing side with cheaper accommodation and a lively bar scene but no swimming. Many enjoy both, plus stunning Phra Nang Beach.</p></div></details>
+  <details><summary>Is Railay good for rock climbing?</summary><div><p>It's world-class — one of the top climbing destinations anywhere, with hundreds of routes for all levels, sea views, and schools offering lessons and gear. Even beginners can take a course and climb above the water.</p></div></details>
+  <details><summary>Should I stay in Railay or day-trip?</summary><div><p>Both work. Staying a few nights lets you enjoy the car-free serenity and beaches before and after day-trippers; day-tripping from Ao Nang is easy if you're short on time. Railay accommodation runs a bit pricier since everything comes by boat.</p></div></details>
+</section>
+
+
+----- SLUG: best-beaches-in-thailand -----
+TITLE: The Best Beaches in Thailand
+CATEGORY: islands-beaches
+
+<p>Thailand has some of the most beautiful beaches on earth, scattered across two coasts and dozens of islands. With so many to choose from, "the best" depends on what you want — dramatic cliffs, party energy, family calm, or remote seclusion. Here's a guide to Thailand's standout beaches and what makes each special, so you can find the right sand for your trip.</p>
+
+<p>One reminder before you choose: Thailand's two coasts have <strong>opposite seasons</strong>. The Andaman coast (west) is best roughly November–April; the Gulf coast (east) is often best mid-year. Pick beaches on the coast that's dry for your dates.</p>
+
+<!-- IMAGE_SLOT_1: A stunning Thai beach with white sand, turquoise water, and cliffs -->
+
+<h2>Andaman coast beauties (best Nov–Apr)</h2>
+
+<h3>Railay and Phra Nang (Krabi)</h3>
+<p>The cliff-ringed <strong>Railay</strong> peninsula and its jewel <strong>Phra Nang Beach</strong> are among Thailand's most beautiful — dramatic limestone karsts, soft sand, and a boat-only serenity. Often topping "best beach" lists.</p>
+
+<h3>The Phi Phi Islands</h3>
+<p>The famous <strong>Phi Phi</strong> beaches, including Maya Bay, deliver the postcard image — sheer cliffs and electric-blue water. Stunning, if busy; best early or as an overnight.</p>
+
+<h3>Phuket's beaches</h3>
+<p>Phuket offers variety, from lively <strong>Patong</strong> to calmer <strong>Kata and Karon</strong> and the quieter, upscale northwest beaches like <strong>Surin</strong> and <strong>Bang Tao</strong>.</p>
+
+<h3>Koh Lanta</h3>
+<p>For long, quiet, flat beaches and a laid-back vibe, <strong>Koh Lanta</strong>'s west-coast strands are family-friendly gems that get quieter the further south you go.</p>
+
+<!-- IMAGE_SLOT_2: A quiet, palm-fringed Thai beach with calm clear water -->
+
+<h2>Gulf coast gems (best mid-year)</h2>
+
+<h3>Koh Samui's beaches</h3>
+<p><strong>Chaweng</strong> is the long, lively main beach; <strong>Choeng Mon</strong> and others are quieter and family-friendly. Samui pairs good beaches with resort comfort.</p>
+
+<h3>Koh Phangan</h3>
+<p>Beyond the Full Moon Party beach, <strong>Koh Phangan</strong> has gorgeous quiet beaches and coves, especially in the north and east — a mix of party and serenity.</p>
+
+<h3>Koh Tao</h3>
+<p>Small <strong>Koh Tao</strong> has lovely beaches and bays, and it's the Gulf's snorkeling and diving star, with vibrant marine life just offshore.</p>
+
+<h2>For seclusion and adventure</h2>
+<p>If you want to escape the crowds entirely, head further afield. <strong>Koh Lipe</strong>, near the Malaysian border, has stunning beaches and clear water in the remote Tarutao park. The <strong>Similan Islands</strong> (seasonal) offer pristine, protected beaches and world-class diving. Smaller, lesser-known islands across both coasts reward travelers willing to go beyond the famous names with quieter, unspoiled sand.</p>
+
+<!-- AFFILIATE_SLOT: booking — beach hotels and resorts -->
+
+<h2>How to choose your beach</h2>
+<p>Match the beach to your trip: for <strong>dramatic scenery</strong>, Railay and Phi Phi; for <strong>variety and convenience</strong>, Phuket; for <strong>quiet and families</strong>, Koh Lanta or Choeng Mon; for <strong>diving and snorkeling</strong>, Koh Tao or the Similans; for <strong>party energy</strong>, Patong or Koh Phangan; and for <strong>remote seclusion</strong>, Koh Lipe or lesser-known islands. Above all, pick the coast that's in its dry season for your dates — that single choice matters more than any individual beach. For budgeting beach stays, a live converter helps:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What is the best beach in Thailand?</summary><div><p>It depends on what you want, but Railay and Phra Nang Beach in Krabi frequently top the lists for sheer beauty — dramatic limestone cliffs and soft sand. Phi Phi's beaches are the famous postcard image.</p></div></details>
+  <details><summary>Which coast has the best beaches?</summary><div><p>Both are spectacular, on opposite seasons. The Andaman coast (Railay, Phi Phi, Phuket, Lanta) is best November–April; the Gulf (Samui, Phangan, Tao) is best mid-year. Choose the coast that's dry for your dates.</p></div></details>
+  <details><summary>Where are the quietest beaches in Thailand?</summary><div><p>Koh Lanta, the northern and eastern beaches of Koh Phangan, remote Koh Lipe near Malaysia, and lesser-known smaller islands across both coasts offer seclusion away from the famous crowds.</p></div></details>
+  <details><summary>Which Thai beach is best for families?</summary><div><p>Koh Lanta's long flat beaches, Kata or Karon on Phuket, and Choeng Mon on Koh Samui offer calm, shallow water and a relaxed, family-friendly atmosphere.</p></div></details>
+</section>
+
+
+----- SLUG: trekking-northern-thailand -----
+TITLE: Trekking in Northern Thailand: What to Expect
+CATEGORY: nature-adventure
+
+<p>The mountains and jungles of northern Thailand are one of the country's great adventure draws, offering treks through lush forest, to waterfalls and viewpoints, and to the villages of the region's hill-tribe communities. Based out of Chiang Mai or Chiang Rai, a trek is a wonderful way to experience the north's nature and cultures. Here's what to expect and how to choose a good one.</p>
+
+<!-- IMAGE_SLOT_1: Trekkers on a jungle trail in the misty northern Thai mountains -->
+
+<h2>What trekking in the north involves</h2>
+<p>Northern Thailand treks range from <strong>easy half-day walks to multi-day expeditions</strong>, typically combining jungle trails, river crossings, waterfalls, viewpoints, and visits to <strong>hill-tribe villages</strong>. Many treks include extras like bamboo rafting, elephant sanctuary visits, and overnight stays in village guesthouses. The scenery is beautiful — forested mountains, terraced fields, and mist-filled valleys — and the cultural element adds depth. Treks are usually guided, with the guide handling navigation, logistics, and translation.</p>
+
+<h2>Where to base your trek</h2>
+<p><strong>Chiang Mai</strong> is the main hub, with countless operators offering treks of every length and difficulty into the surrounding mountains. <strong>Chiang Rai</strong> is a quieter alternative, with access to its own scenic areas and hill-tribe regions near the Golden Triangle. Other northern towns like <strong>Pai</strong> and <strong>Mae Hong Son</strong> offer treks in more remote, less-visited terrain for those wanting to get further off the trail.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — northern Thailand trekking tours -->
+
+<h2>The hill-tribe villages</h2>
+<p>A defining feature of northern trekking is visiting the <strong>ethnic minority hill-tribe communities</strong> — such as the Karen, Hmong, Lahu, and Akha — who live in the mountains with distinct cultures, dress, and traditions. These visits can be a meaningful cultural exchange, but they raise <strong>ethical questions</strong>: some operators reduce villages to a tourist spectacle, and the controversial "long-neck" Kayan villages in particular are criticized as exploitative human zoos. Choose operators that engage respectfully and benefit the communities, and approach visits with sensitivity rather than as a photo opportunity.</p>
+
+<!-- IMAGE_SLOT_2: A northern Thai hill-tribe village or a mountain viewpoint -->
+
+<h2>Choosing an ethical, good-quality trek</h2>
+<p>Pick your trek carefully. Look for operators with <strong>good recent reviews</strong>, <strong>small group sizes</strong> (a more genuine experience), <strong>fair treatment of guides and villages</strong>, and <strong>responsible practices</strong> around any elephant or wildlife elements (no riding). Decide how <strong>remote and challenging</strong> you want it — popular routes near Chiang Mai are more trodden, while longer or further treks reach quieter areas. Clarify what's included (meals, accommodation, transport, activities) and match the difficulty to your fitness honestly.</p>
+
+<h2>What to bring and when to go</h2>
+<p>Pack <strong>good walking shoes</strong>, <strong>insect repellent</strong> (essential in the jungle), <strong>sun protection</strong>, a <strong>light layer</strong> (cool at altitude and at night), a <strong>rain layer</strong>, a small <strong>daypack</strong>, and any personal medication. The best season is the <strong>cool, dry months (November to February)</strong> — comfortable temperatures and clear views; avoid the burning season (roughly March–April) for air quality, and expect mud and leeches in the rainy season (though the jungle is at its lushest then). Treks are affordable; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<!-- AFFILIATE_SLOT: booking — Chiang Mai trekking-base accommodation -->
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Where can I go trekking in northern Thailand?</summary><div><p>Chiang Mai is the main hub with treks of all lengths into the surrounding mountains. Chiang Rai, Pai, and Mae Hong Son offer quieter, more remote alternatives for getting further off the beaten path.</p></div></details>
+  <details><summary>What does a northern Thailand trek involve?</summary><div><p>Guided walks (half-day to multi-day) through jungle and mountains, taking in waterfalls, viewpoints, and hill-tribe villages, often with extras like bamboo rafting or village homestays. Scenery and culture are the draws.</p></div></details>
+  <details><summary>Are hill-tribe village visits ethical?</summary><div><p>It varies. Done respectfully, they're a meaningful cultural exchange, but some operators treat villages as a spectacle, and the "long-neck" Kayan villages are widely criticized as exploitative. Choose responsible operators and visit with sensitivity.</p></div></details>
+  <details><summary>When is the best time to trek in northern Thailand?</summary><div><p>The cool, dry season (November to February) — comfortable temperatures and clear views. Avoid the burning season (around March–April) for air quality; the rainy season is lush but muddy with leeches.</p></div></details>
+</section>

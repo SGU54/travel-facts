@@ -1,0 +1,42 @@
+{
+  "project": "thailandforamericans",
+  "title": "Thailand, Covered.",
+  "brand_name": "Isthmus Press",
+  "note": "Print palette, sampled from the shipped 2026 edition so the rebuilt book stays the same object on the shelf and beside the cover already published on the site. Paper #F7F1E4 and chrome #2B1E28 were measured off pages 1 and 8 of thailand-covered.pdf, not lifted from globals.css. The site's magenta #D81264 survives verbatim because it IS the brand and it holds on this paper; the site's lime, teal and saffron do not enter the book — a paid object carries one accent, and the site's five are a screen palette. `ink` is darkened from the site's #17120F toward the aubergine family so body text belongs to the same book as the chrome.",
+  "palette": {
+    "paper": "#F7F1E4",
+    "paper_deep": "#EFE5D2",
+    "ink": "#241A21",
+    "ink_soft": "#6B5F66",
+    "rule": "#DCCFC0",
+    "chrome": "#2B1E28",
+    "accent": "#D81264",
+    "accent_deep": "#9C0C48"
+  },
+  "fonts": {
+    "display": "Anton",
+    "body": "Archivo",
+    "mono": "Archivo"
+  },
+  "page": {
+    "size": "US Letter",
+    "width_px": 816,
+    "height_px": 1056,
+    "body_top_px": 92,
+    "body_bottom_px": 984,
+    "text_margin_px": 82
+  },
+  "audience": "American first-timers, 7-14 nights, arriving with the islands already imagined as interchangeable",
+  "price_band": "$34",
+  "contrast_measured": {
+    "_note": "Measured on paper #F7F1E4, not eyeballed. Each token's JOB follows from its ratio — this is what stops accent being used for 11px labels.",
+    "ink on paper": "14.99:1 — body",
+    "ink_soft on paper": "5.40:1 — secondary text, clears AA",
+    "accent on paper": "4.45:1 — BELOW AA for small text. Rules, large type and fills ONLY.",
+    "accent_deep on paper": "7.29:1 — the accent for anything small: eyebrows, keys, labels",
+    "chrome on paper": "14.14:1",
+    "rule on paper": "1.36:1 — hairlines only, never text",
+    "paper on chrome": "14.14:1 — cover",
+    "accent on chrome": "3.18:1 — cover display type only, never a cover label"
+  }
+}

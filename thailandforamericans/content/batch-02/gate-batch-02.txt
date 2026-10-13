@@ -1,0 +1,555 @@
+You are a fact-and-consistency checker for travel articles. Below are 5 articles plus the facts file they were written from. Your ONLY job is to find IN-CONTEXT ERRORS:
+
+- a number/date/claim stated one way in one place and differently in another
+- a recommendation that contradicts the facts file
+- a place treated as in-scope that the facts file doesn't support
+- an internal contradiction within an article
+- a claim that reads as factually wrong for Thailand
+
+IMPORTANT RULES:
+1. Do NOT flag "serve_live" items (exchange rates, prices, the visa day-count) for being hedged or non-specific — that is intentional and correct. Hedged visa language ("the rule has been changing, verify your date") is CORRECT, not an error.
+2. Do NOT ask for more specificity on prices/rates — those are deliberately served live via converters.
+3. Only report genuine contradictions or errors. If an article is clean, say "clean".
+4. Return a short list per article slug. Be concise.
+
+=== FACTS FILE (source of truth) ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_around": {
+   "intercity_rail": {
+    "value": "State Railway of Thailand (SRT). Atmospheric, slower than flights/buses. Highlight: the Bangkok–Chiang Mai overnight sleeper; southern line to Surat Thani for the Gulf islands.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "buses": {
+    "value": "Extensive intercity network from basic local buses to VIP/first-class and overnight coaches; minivans connect smaller towns. Use government BKS or reputable operators.",
+    "source_url": 
+
+=== ARTICLES TO CHECK ===
+
+
+----- SLUG: 10-day-thailand-itinerary -----
+TITLE: The Perfect 10-Day Thailand Itinerary
+CATEGORY: two-weeks
+
+<p>Ten days is the sweet spot for a first trip to Thailand. It's enough to see all three of the country's headline regions — Bangkok, the northern mountains around Chiang Mai, and the southern islands — without the forced march that a shorter trip becomes. This is the classic first-timer route, and it works because each leg is a short domestic flight from the last.</p>
+
+<p>One housekeeping note before you book: Thailand's visa-free rules for U.S. passport holders have been changing in 2026, and the permitted length of a visa-exempt stay has been in flux. Ten days sits comfortably inside any version of the rule, so this trip is unaffected — but confirm the current entry requirements for your travel date, and file your free Thailand Digital Arrival Card (TDAC) online before you fly.</p>
+
+<!-- IMAGE_SLOT_1: A montage-feel hero — Bangkok temple, northern mountains, and an island beach -->
+
+<h2>Days 1–3: Bangkok</h2>
+
+<p>Most flights from the U.S. connect through East Asia or the Middle East and land at Suvarnabhumi (BKK) late, so treat Day 1 as arrival and recovery — you're 11–12 hours ahead of the U.S. East Coast. Base yourself in <strong>Sukhumvit</strong> for the easiest first-timer experience (it's on the BTS Skytrain) or the <strong>Riverside / Old Town</strong> if you want to be among the temples.</p>
+
+<p>Spend Day 2 on the temple core: the <strong>Grand Palace</strong> and <strong>Wat Pho</strong> in the morning (shoulders and knees covered), then <strong>Wat Arun</strong> across the river at sunset, capped by a <strong>Chinatown</strong> street-food crawl. On Day 3, hit <strong>Chatuchak Weekend Market</strong> if it's a weekend (or the Jim Thompson House midweek), and consider a half-day cooking class or canal boat ride before you fly north.</p>
+
+<div class="feature-map" data-points='[
+  {"name":"Grand Palace & Wat Phra Kaew","lat":13.7500,"lng":100.4915,"note":"Open early; strict dress code"},
+  {"name":"Wat Pho","lat":13.7466,"lng":100.4929,"note":"Reclining Buddha"},
+  {"name":"Wat Arun","lat":13.7437,"lng":100.4889,"note":"Sunset, cross by ferry"},
+  {"name":"Chatuchak Weekend Market","lat":13.7999,"lng":100.5503,"note":"Weekends only"}
+]'></div>
+
+<!-- AFFILIATE_SLOT: getyourguide — Bangkok temple tour / cooking class -->
+
+<h2>Days 4–6: Chiang Mai and the north</h2>
+
+<p>Fly to <strong>Chiang Mai</strong> (CNX) on the morning of Day 4 — about 1 hour 15 minutes. The pace up north is gentler than Bangkok's, and the city is walkable. Spend the afternoon on the <strong>Old City temples</strong> (Wat Chedi Luang, Wat Phra Singh) and the evening at a night market.</p>
+
+<p>Day 5 is for the mountain temple <strong>Wat Phra That Doi Suthep</strong>, which overlooks the city, paired with a Thai <strong>cooking class</strong> — Chiang Mai is one of the best places in the country to take one. Reserve Day 6 for an <strong>ethical elephant sanctuary</strong>: the observation-only kind where you don't ride the animals. Book a reputable one in advance; it's usually a full day including transport.</p>
+
+<!-- IMAGE_SLOT_2: Mountain temple Doi Suthep with its golden chedi, or elephants in a green sanctuary -->
+
+<!-- AFFILIATE_SLOT: getyourguide — Chiang Mai elephant sanctuary / cooking class -->
+
+<h2>Days 7–9: the southern islands</h2>
+
+<p>On Day 7, fly south — Chiang Mai connects to <strong>Phuket</strong> (HKT) and <strong>Krabi</strong> (KBV) directly or via Bangkok. For this itinerary, Krabi is the easier, calmer landing; Phuket if you want more nightlife and resorts. Check in and spend the afternoon decompressing on the beach.</p>
+
+<p>Day 8 is your big island-hopping day: a longtail or speedboat trip to the <strong>Phi Phi Islands</strong>, <strong>Phang Nga Bay</strong>, or the <strong>Hong Islands</strong> lagoons. Go early to beat the crowds. Day 9 is yours to do nothing in particular — a quiet beach, a snorkeling trip, a massage, a sunset longtail to a hidden cove.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Phi Phi / Phang Nga boat trip -->
+
+<h2>Day 10: Bangkok and home</h2>
+
+<p>Fly back to Bangkok on Day 10. Most long-haul U.S. flights leave late at night, so you'll likely have a few bonus hours for last-minute shopping — a mall like ICONSIAM, or one more market — and a final plate of mango sticky rice before the airport.</p>
+
+<h2>How to adjust this itinerary</h2>
+
+<h3>If you only care about beaches</h3>
+<p>Skip the north. Do Bangkok for three days, then give a full week to two southern islands — one lively (Phuket or Phi Phi), one calm (Krabi, Koh Lanta, or a Gulf island like Koh Samui if you're traveling mid-year when the Andaman coast is wet).</p>
+
+<h3>If you want more culture</h3>
+<p>Trade an island day for an extra day in the north — add Chiang Rai's White Temple, the laid-back town of Pai, or Doi Inthanon National Park.</p>
+
+<h2>What to budget</h2>
+
+<p>Your big costs are the international flight, the two or three domestic flights, and accommodation; day-to-day food and transport are cheap. Because airfares and exchange rates move constantly, plan with a live converter rather than a fixed figure:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<p>Domestic flights between these regions are inexpensive and quick — far better use of a 10-day trip than long overland journeys. Treat any budget figure you see as an indicative range and confirm current prices when you book.</p>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is 10 days enough to see Thailand?</summary><div><p>Yes — it's the ideal length for a first trip covering all three headline regions: Bangkok, the north (Chiang Mai), and the southern islands, with short domestic flights between them.</p></div></details>
+  <details><summary>Should I do the north or the islands if I have to choose?</summary><div><p>With 10 days you don't have to — you can do both. If you cut one, keep the islands for a classic beach trip, or keep the north if temples, mountains, and elephants matter more to you than beaches.</p></div></details>
+  <details><summary>How many domestic flights will I take?</summary><div><p>Two or three: Bangkok to Chiang Mai, Chiang Mai to the south, and the south back to Bangkok. They're cheap and short (around 1–1.5 hours each) and save days versus traveling overland.</p></div></details>
+  <details><summary>Do I need a visa for a 10-day trip?</summary><div><p>U.S. tourists enter visa-free, and 10 days is within any version of the visa-exempt stay. The exact limit has been changing in 2026, so confirm the current rule for your travel date and file the free TDAC online before you fly.</p></div></details>
+  <details><summary>When is the best time to go?</summary><div><p>November through February is peak season nationwide — cool, dry, and the most reliable weather, though also the busiest and priciest.</p></div></details>
+</section>
+
+
+----- SLUG: 2-weeks-in-thailand-itinerary -----
+TITLE: 2 Weeks in Thailand: The Complete Itinerary
+CATEGORY: two-weeks
+
+<p>Two weeks is enough to see Thailand properly — not just the highlights, but with the breathing room to slow down, add a second island, and go deeper into the north. This itinerary builds on the classic 10-day route and uses the extra days where they matter most: a calmer pace, an additional island, and time for the side trips most people wish they'd had room for.</p>
+
+<p>As always, confirm your entry requirements before booking. Thailand's visa-free stay rules for Americans have been changing in 2026, though two weeks falls inside any version of the rule. File the free Thailand Digital Arrival Card (TDAC) online before you fly.</p>
+
+<!-- IMAGE_SLOT_1: A sweeping Thailand hero — ideally combining temple, mountain, and sea -->
+
+<h2>Days 1–3: Bangkok</h2>
+
+<p>Land, recover from the long flight, and give the capital three full days. Base in <strong>Sukhumvit</strong> (easiest, on the Skytrain) or the <strong>Riverside / Old Town</strong> for atmosphere. Cover the temple core — <strong>Grand Palace</strong>, <strong>Wat Pho</strong>, <strong>Wat Arun</strong> — plus a <strong>Chinatown</strong> food crawl, a market, and a day trip to <strong>Ayutthaya</strong>, the ancient capital, which is an easy hour and a half from the city.</p>
+
+<div class="feature-map" data-points='[
+  {"name":"Grand Palace","lat":13.7500,"lng":100.4915,"note":"Strict dress code"},
+  {"name":"Wat Arun","lat":13.7437,"lng":100.4889,"note":"Sunset"},
+  {"name":"Ayutthaya Historical Park","lat":14.3550,"lng":100.5600,"note":"Day trip from Bangkok"}
+]'></div>
+
+<!-- AFFILIATE_SLOT: getyourguide — Bangkok + Ayutthaya tours -->
+
+<h2>Days 4–7: Chiang Mai and the north</h2>
+
+<p>Fly to <strong>Chiang Mai</strong> and give the north four days instead of the rushed two most short trips allow. Do the <strong>Old City temples</strong> and <strong>Doi Suthep</strong>, take a <strong>cooking class</strong>, and devote a full day to an <strong>ethical elephant sanctuary</strong>. With the extra time, add a day trip to <strong>Chiang Rai</strong> for the surreal White Temple and Blue Temple, or an overnight in the laid-back mountain town of <strong>Pai</strong>.</p>
+
+<!-- IMAGE_SLOT_2: Chiang Rai's White Temple, or a misty northern mountain scene -->
+
+<!-- AFFILIATE_SLOT: getyourguide — Chiang Mai elephant sanctuary / Chiang Rai day trip -->
+
+<h2>Days 8–13: two southern islands</h2>
+
+<p>This is where two weeks pays off: instead of one island, do two. Fly south on Day 8 and start with a base around <strong>Krabi</strong> — <strong>Ao Nang</strong> for convenience or <strong>Railay</strong> for the cliffs. Spend three days here: an island-hopping boat trip to Phi Phi or the Hong Islands, a beach day, and a slower day exploring.</p>
+
+<p>Around Day 11, ferry or fly to a <strong>second island</strong> with a different character — quieter <strong>Koh Lanta</strong> for a relaxed finish, or <strong>Koh Phi Phi</strong> itself if you want to be there before the day-trippers arrive. Keep both islands on the same coast (Andaman in the Nov–Apr dry season; the Gulf islands like Koh Samui if you're traveling mid-year) to avoid long transfers.</p>
+
+<!-- AFFILIATE_SLOT: booking — Krabi + second-island hotels -->
+<!-- AFFILIATE_SLOT: getyourguide — island-hopping boat trips -->
+
+<h2>Day 14: back to Bangkok and home</h2>
+
+<p>Fly back to Bangkok for your departure. As ever, late-night long-haul flights leave room for a final morning of shopping and one last great meal before the airport.</p>
+
+<h2>Getting between the regions</h2>
+
+<p>The logistics that make this itinerary work are the short domestic flights linking each leg. Bangkok to Chiang Mai is about 1 hour 15 minutes; Chiang Mai to the southern islands is typically routed via Bangkok or flown direct to Phuket or Krabi; and the islands back to Bangkok is a quick hop. Carriers like Thai AirAsia, Nok Air, Thai Lion Air, and Bangkok Airways run these routes frequently and cheaply, and booking a week or two ahead keeps fares low. Between the two southern islands you'll usually take a ferry or a combined flight-and-boat ticket rather than flying.</p>
+
+<p>If you'd rather slow down and see the landscape, the overnight sleeper train from Bangkok to Chiang Mai is an atmospheric alternative to flying north — it costs you a night but saves a hotel and delivers you rested in the morning. On a two-week trip you have the room to fold one scenic journey like this in without losing a destination.
+
+<h2>Other ways to spend the extra week</h2>
+
+<h3>The slow-and-deep version</h3>
+<p>Rather than adding destinations, add nights. Three or four days on a single island lets you actually unwind — diving courses, day trips, and long empty afternoons — instead of packing and moving constantly.</p>
+
+<h3>The honeymoon version</h3>
+<p>Swap a day-trip-heavy schedule for a couple of nights at a standout resort — an overwater or beachfront villa on the islands — and keep the cities to the essentials.</p>
+
+<h2>Budgeting two weeks</h2>
+
+<p>A longer trip spreads your fixed costs (the international flight) over more days, which makes the daily average feel lower. Domestic flights, ferries, accommodation, and tours are your variable costs. Use a live converter rather than trusting any fixed number, since rates and prices shift constantly:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is two weeks too long for Thailand?</summary><div><p>Not at all — two weeks lets you see all three regions without rushing and add a second island or deeper time in the north. Many travelers wish they'd had it.</p></div></details>
+  <details><summary>Should I add a second island or stay longer on one?</summary><div><p>Both work. A second island gives variety (one lively, one calm); staying longer on one lets you truly relax and add diving or day trips. Just keep islands on the same coast to avoid long transfers.</p></div></details>
+  <details><summary>Can I see both the north and the south in two weeks?</summary><div><p>Yes, comfortably — that's the strength of two weeks. You get Bangkok, several days in the north around Chiang Mai, and a proper stretch on the southern islands.</p></div></details>
+  <details><summary>Which coast should my islands be on?</summary><div><p>In the November–April dry season, the Andaman coast (Phuket, Krabi, Phi Phi). Mid-year, lean toward the Gulf islands (Koh Samui, Phangan, Tao), which have their best weather then.</p></div></details>
+</section>
+
+
+----- SLUG: where-to-stay-in-phuket -----
+TITLE: Where to Stay in Phuket: Best Areas and Resorts
+CATEGORY: stay-islands
+
+<p>Phuket is big — Thailand's largest island, roughly the size of Singapore — and where you base yourself completely changes the trip. Pick the wrong beach and you'll either be stuck in a party zone you didn't want or marooned far from the action. The island's beaches each have a distinct personality, so the move is to match the area to the kind of trip you're after. Here's how.</p>
+
+<!-- IMAGE_SLOT_1: A sweeping Phuket coastline with a beach and headland, daytime -->
+
+<h2>Patong — best for nightlife and action</h2>
+
+<p><strong>Patong</strong> is the loud, bright heart of Phuket: the biggest beach, the most hotels, and the famous (or infamous) Bangla Road nightlife strip. It's crowded, commercial, and not for everyone — but if you want everything within walking distance, a buzzing scene, and the widest range of budget-to-midrange hotels, this is the spot. Choose it for energy and convenience; avoid it if you want calm.</p>
+
+<!-- AFFILIATE_SLOT: booking — Patong hotels -->
+
+<h2>Kata and Karon — best for families and a calmer beach</h2>
+
+<p>Just south of Patong, <strong>Kata</strong> and <strong>Karon</strong> offer the same lovely Andaman beaches with a fraction of the chaos. They're more relaxed, more family-friendly, and still have plenty of restaurants and shops — a comfortable middle ground between Patong's intensity and the island's quieter corners. This is the easy default for most first-time visitors who want a good beach without the party.</p>
+
+<!-- AFFILIATE_SLOT: booking — Kata / Karon hotels -->
+
+<h2>Bang Tao and Surin — best for upscale resorts</h2>
+
+<p>On the northwest coast, <strong>Bang Tao</strong> and <strong>Surin</strong> are where Phuket's luxury sits — the long beach at Bang Tao is lined with high-end resorts and the polished "Laguna" complex, while Surin is a smaller, chic stretch. Come here for a resort-focused holiday with space, style, and quieter sand, and expect to rely on taxis or Grab to reach the busier parts of the island.</p>
+
+<!-- AFFILIATE_SLOT: booking — Bang Tao / Surin resorts -->
+
+<h2>Phuket Old Town — best for culture and food (not the beach)</h2>
+
+<p>Here's the one many people miss: <strong>Phuket Old Town</strong> isn't on a beach at all, but it's the most characterful part of the island — colorful Sino-Portuguese shophouses, the best local food, cafés, and street art. It's a great base for a night or two if you care more about atmosphere and eating well than rolling out of bed onto the sand. Pair it with a beach base, or use it as a day trip from one.</p>
+
+<!-- IMAGE_SLOT_2: Colorful Sino-Portuguese shophouses of Phuket Old Town -->
+
+<h2>Getting to and around Phuket</h2>
+
+<p>Phuket has its own international airport (HKT) in the north of the island, with direct flights from Bangkok (about 1.5 hours) and some international routes. From the airport, most resorts are 30 minutes to an hour away by taxi or pre-arranged transfer, depending on which beach you've chosen — another reason to pick your base before you book.</p>
+
+<p>Getting around once you're there is the island's weak point. Local taxis have long resisted ride-hailing apps, so fares can be high and negotiation common; Grab and Bolt do operate but availability varies by area. Many visitors rent a scooter for short hops, though Phuket's traffic and hills make that riskier than on flatter islands — and your travel insurance may not cover a crash without a motorcycle license. The simplest approach for most: choose a base near the things you most want to do, and budget for taxis when you venture out.
+
+<h2>How to choose, quickly</h2>
+
+<p>For a first trip, <strong>Kata or Karon</strong> is the safe, comfortable default — a real beach without the madness. Pick <strong>Patong</strong> if nightlife and walkable convenience are the priority, <strong>Bang Tao or Surin</strong> for an upscale resort holiday, and add a night in <strong>Old Town</strong> if food and culture matter to you. Many travelers split their stay: a few nights resort-side, a night or two in Old Town.</p>
+
+<p>One island-wide note: getting around Phuket can be pricier and more awkward than elsewhere in Thailand, since local taxis have historically resisted ride-hailing apps. Grab and Bolt do operate; factor transport into your choice of base, and consider staying near the things you most want to do.</p>
+
+<p>Resort and hotel prices swing sharply by season and location — peak season (roughly November to April on the Andaman coast) and the luxury northwest beaches sit at the top. Compare current rates rather than any fixed figure, and use a converter to keep the baht honest:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What's the best area to stay in Phuket for first-timers?</summary><div><p>Kata or Karon beach — lovely Andaman sand with a relaxed, family-friendly feel and plenty of restaurants, without Patong's party intensity.</p></div></details>
+  <details><summary>Where should I stay in Phuket for nightlife?</summary><div><p>Patong. It has the biggest beach, the most hotels, and the main nightlife strip (Bangla Road), all walkable — though it's crowded and commercial.</p></div></details>
+  <details><summary>Where are the luxury resorts in Phuket?</summary><div><p>Mostly on the northwest coast around Bang Tao and Surin, where long quiet beaches are lined with high-end resorts. Expect to use taxis or Grab to reach the busier areas.</p></div></details>
+  <details><summary>Is it worth staying in Phuket Old Town?</summary><div><p>For a night or two, yes — it's the island's most characterful area, with Sino-Portuguese architecture and the best food, though it isn't on a beach. Many people pair it with a beach base.</p></div></details>
+</section>
+
+
+----- SLUG: where-to-stay-in-krabi -----
+TITLE: Where to Stay in Krabi: Ao Nang, Railay, and Beyond
+CATEGORY: stay-islands
+
+<p>Krabi province, on Thailand's Andaman coast just across the bay from Phuket, is where you go for the dramatic limestone-cliff scenery without Phuket's scale and intensity. But "Krabi" covers several very different bases — a beach-town hub, a cliff-ringed peninsula reachable only by boat, and quieter islands offshore. Where you stay shapes whether your trip is convenient, scenic, or secluded. Here's how to choose.</p>
+
+<!-- IMAGE_SLOT_1: Krabi's limestone karsts rising from turquoise water with longtail boats -->
+
+<h2>Ao Nang — best for convenience and first-timers</h2>
+
+<p><strong>Ao Nang</strong> is Krabi's main beach town and the practical hub for most visitors. It has the widest range of hotels at every price, plenty of restaurants and shops, and — crucially — it's the launch point for boats to Railay and the islands. The beach itself is pleasant rather than spectacular, but you trade that for genuine convenience: you can walk to dinner, book a tour next door, and hop a longtail in the morning. For a first trip to Krabi, this is the easy choice.</p>
+
+<!-- AFFILIATE_SLOT: booking — Ao Nang hotels -->
+
+<h2>Railay — best for scenery and a car-free escape</h2>
+
+<p><strong>Railay</strong> is the postcard: a small peninsula hemmed in by sheer limestone cliffs, reachable only by longtail boat (no roads). That isolation is the appeal — no cars, world-class rock climbing, and some of Thailand's most beautiful beaches, including Phra Nang. Railay West has the best swimming and sunsets and the nicer resorts; Railay East is the mangrove-lined boat-landing side with cheaper stays. It's more scenic and more secluded than Ao Nang, at the cost of convenience — everything arrives by boat, so prices run a little higher.</p>
+
+<!-- IMAGE_SLOT_2: Railay West beach at sunset, longtail boats and towering cliffs -->
+
+<!-- AFFILIATE_SLOT: booking — Railay resorts -->
+
+<h2>Koh Lanta — best for a quiet, family-friendly island</h2>
+
+<p>South of Krabi town, <strong>Koh Lanta</strong> is a laid-back island of long, flat beaches and a slower pace — popular with families and anyone who wants to settle in one calm spot rather than chase sights. It's less dramatic than Railay but far more relaxed, with a string of beaches running down the west coast that get quieter the further south you go. Reach it by ferry or minivan-and-ferry from the mainland; it rewards a stay of several days rather than a quick stop.</p>
+
+<!-- AFFILIATE_SLOT: booking — Koh Lanta hotels -->
+
+<h2>Klong Muang and Tubkaek — best for upscale quiet</h2>
+
+<p>A short drive north of Ao Nang, <strong>Klong Muang</strong> and <strong>Tubkaek</strong> are where Krabi's higher-end resorts cluster — calm beaches, sea views toward the offshore islands, and a peaceful setting. Choose this area for a resort-focused stay where you want quiet and comfort over a walkable town, accepting that you'll drive or taxi to Ao Nang for more dining and nightlife.</p>
+
+<h2>Getting to Krabi and getting around</h2>
+
+<p>Krabi has its own airport (KBV) with direct flights from Bangkok (about 1.5 hours) and some regional international routes; many travelers also arrive overland from Phuket or by ferry from the islands. From the airport it's roughly 30–45 minutes to Ao Nang, the main hub.</p>
+
+<p>Once you're based, getting around is a mix of songthaews (shared pickup trucks), tuk-tuks, and longtail boats — the boats are how you reach Railay and the offshore islands, since there are no roads to Railay at all. Grab availability is more limited here than in Bangkok, so for island and beach hopping you'll lean on boats and arranged tours. If you're staying on Koh Lanta, factor in the ferry or minivan-and-ferry connection from the mainland when planning arrival and departure days.
+
+<h2>How to choose, quickly</h2>
+
+<p>Book <strong>Ao Nang</strong> for your first Krabi trip — it's the convenient hub that connects to everything. Choose <strong>Railay</strong> for scenery, climbing, and a car-free escape; <strong>Koh Lanta</strong> for a quiet, family-friendly island stay; and <strong>Klong Muang/Tubkaek</strong> for an upscale, peaceful resort base. A popular combination is a few nights in Ao Nang or Railay for the scenery, then a few on Koh Lanta to unwind.</p>
+
+<p>Prices vary by area and season — peak season runs roughly November to April on the Andaman coast, and the boat-access and upscale areas sit at the higher end. Compare current rates rather than relying on a fixed figure:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Where should I stay in Krabi for the first time?</summary><div><p>Ao Nang — it's the main beach town and transport hub, with the most hotels, restaurants, and boat connections to Railay and the islands.</p></div></details>
+  <details><summary>Is it better to stay in Ao Nang or Railay?</summary><div><p>Ao Nang for convenience (walkable town, easy boats, more dining); Railay for scenery and seclusion (cliffs, climbing, no roads — everything comes by boat). Many people do a few nights in each.</p></div></details>
+  <details><summary>Can you only reach Railay by boat?</summary><div><p>Yes. Railay is cut off from the mainland by limestone cliffs, so you arrive by longtail boat from Ao Nang (about 10–15 minutes) or Krabi town. That's part of its car-free appeal.</p></div></details>
+  <details><summary>Is Koh Lanta good for families?</summary><div><p>Very. Its long, flat, calm beaches and relaxed pace suit families and anyone wanting to settle in one quiet place rather than move around a lot.</p></div></details>
+</section>
+
+
+----- SLUG: best-island-resorts-thailand -----
+TITLE: The Best Island Resorts in Thailand
+CATEGORY: stay-islands
+
+<p>Thailand does island resorts as well as anywhere on earth, from honeymoon hideaways on stilts to family-friendly beach clubs. But "best" depends entirely on which island, which coast, and what kind of trip you want — and the right answer changes with the season, because Thailand's two coasts have opposite weather. This guide breaks down where to look for a great resort stay across the country's main island destinations, all within the areas this site covers.</p>
+
+<p>First principle: <strong>match the coast to your dates.</strong> The Andaman coast (Phuket, Krabi) is at its best roughly November through April; the Gulf coast (Koh Samui) often shines mid-year. Book the coast that's dry when you travel, then pick the island and area.</p>
+
+<!-- IMAGE_SLOT_1: A luxurious Thai beachfront resort pool overlooking the sea -->
+
+<h2>Phuket — the widest range of resorts</h2>
+
+<p><strong>Phuket</strong> has more resorts, at more price points, than anywhere else in Thailand, and its own international airport makes it the easiest to reach. For upscale stays, look at the quieter northwest beaches — <strong>Bang Tao</strong> and <strong>Surin</strong> — where long stretches of sand are lined with high-end properties. Families do well in <strong>Kata</strong> and <strong>Karon</strong>, which pair good beaches with a relaxed scene. Phuket is the safe pick when you want resort choice and easy logistics in one place.</p>
+
+<!-- AFFILIATE_SLOT: booking — Phuket resorts -->
+
+<h2>Krabi — dramatic scenery, fewer crowds</h2>
+
+<p>For resorts framed by limestone cliffs rather than a busy strip, <strong>Krabi</strong> delivers. The upscale enclaves around <strong>Klong Muang</strong> and <strong>Tubkaek</strong> offer calm beaches and island views in a peaceful setting, while a stay on the <strong>Railay</strong> peninsula puts you among the cliffs with no cars and boat-only access — about as scenic as a Thai resort gets. Krabi suits travelers who want beauty and quiet over nightlife.</p>
+
+<!-- AFFILIATE_SLOT: booking — Krabi resorts -->
+
+<h2>Koh Samui — the Gulf-coast resort island</h2>
+
+<p>Over on the Gulf coast, <strong>Koh Samui</strong> is the polished resort island, with its own airport and a comfortable, well-developed scene. <strong>Chaweng</strong> is the main beach with the liveliest mix; <strong>Bophut</strong> and its charming Fisherman's Village lean boutique and romantic; <strong>Choeng Mon</strong> is quieter and good for families. Samui is the natural choice for a resort holiday from roughly mid-year, when the Andaman coast is wetter.</p>
+
+<!-- IMAGE_SLOT_2: A serene Koh Samui beach resort with palms and calm water -->
+
+<!-- AFFILIATE_SLOT: booking — Koh Samui resorts -->
+
+<h2>Koh Lanta — relaxed island resorts</h2>
+
+<p>If your idea of a great resort stay is a long, quiet beach and nowhere you need to be, <strong>Koh Lanta</strong> (reached from Krabi) is a strong, lower-key option. Its west-coast beaches host a string of comfortable resorts, with the southern end the quietest. It's less about luxury polish and more about unhurried, settle-in relaxation — ideal for families and couples who want calm.</p>
+
+<h2>What to look for when booking</h2>
+
+<p>A few things separate a great Thai island resort stay from a frustrating one. <strong>Beach access and quality</strong> vary hugely even within one island — read recent reviews to confirm the beach in front of the resort is swimmable (some are rocky or tidal). <strong>Location relative to a town</strong> matters: a remote luxury resort is blissful but means taxi rides for every meal out, while a town-adjacent property trades some quiet for convenience. And <strong>transfer time from the airport or pier</strong> can be an hour or more on the bigger islands, so check it before you book a place that looks close on a map.</p>
+
+<p>For honeymooners and anyone after privacy, look specifically for the words "beachfront" or "pool villa" and confirm what's actually included; for families, prioritize calm, shallow water and on-site dining so you're not commuting with kids at dinnertime.
+
+<h2>What kind of resort stay are you after?</h2>
+
+<p>For a <strong>honeymoon</strong>, lean toward Bophut on Samui or a boutique Krabi/Railay property for romance and scenery. For <strong>families</strong>, Kata/Karon on Phuket, Choeng Mon on Samui, or Koh Lanta offer space and calm. For <strong>maximum choice and easy logistics</strong>, Phuket. For <strong>drama and quiet</strong>, Krabi. And always let the season steer you to the right coast first.</p>
+
+<p>Resort pricing varies enormously by island, area, and season — peak months and the top-tier properties sit far above the average. Rather than trust any fixed number, compare current rates and use a converter to translate baht to dollars:</p>
+
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Which Thai island has the best resorts?</summary><div><p>It depends on your dates and style. Phuket has the widest range and easiest access; Krabi offers dramatic cliff scenery; Koh Samui is the polished Gulf-coast choice. Match the coast to your season first.</p></div></details>
+  <details><summary>Where are the best resorts for a honeymoon?</summary><div><p>Bophut on Koh Samui for boutique romance, or a Railay/Krabi property for cliff-and-sea drama. Both deliver scenery and seclusion.</p></div></details>
+  <details><summary>Which island is best for a family resort holiday?</summary><div><p>Kata or Karon on Phuket, Choeng Mon on Koh Samui, or laid-back Koh Lanta — all offer calm beaches and space without a heavy party scene.</p></div></details>
+  <details><summary>Does the season affect which island I should book?</summary><div><p>Yes, a lot. The Andaman islands (Phuket, Krabi) are best roughly November–April; the Gulf's Koh Samui is often best mid-year. Choose the coast that's dry for your travel dates.</p></div></details>
+</section>

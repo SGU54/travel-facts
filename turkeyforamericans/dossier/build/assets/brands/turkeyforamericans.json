@@ -1,0 +1,34 @@
+{
+  "project": "turkeyforamericans",
+  "title": "Turkey, Worked Out.",
+  "note": "Print palette. Derived from the site's globals.css (bone/near-black/flag-red identity) and adjusted for ink on paper — NOT lifted verbatim. The site's --accent #E4121F is the Turkish flag red at full saturation; on paper it vibrates against warm stock, so the BOOK's working accent is the site's own deep #A60A14 and the flag red is reserved for the single thesis line on the cover. Site --ink #15110D is opened to #1C1712 so 13.4px serif does not crush. Fonts differ from the site by design: the site runs Inter + Archivo + Spline Sans Mono; the book runs Anton + Gelasio + Space Mono. PAPER: the site's #F8F5EE is R248/G245/B238 — inside the near-white band, and a paid object on near-white stock reads as a printout. Warmed to #F5F0E4 for ink on paper, the same move Rome made; the screen value stays on the site.",
+  "palette": {
+    "paper": "#F5F0E4",
+    "ink": "#1C1712",
+    "accent": "#A60A14",
+    "flag": "#E4121F",
+    "gilt": "#C98F3C",
+    "muted": "#6E665A",
+    "soft": "#8C8477",
+    "read": "#2A241D",
+    "line": "#E7E1D3",
+    "line_soft": "#F0EADC",
+    "zone": "#EFE9DC",
+    "stone": "#E5DDCC",
+    "deep": "#0E0B08",
+    "water": "#D6DEDC"
+  },
+  "fonts": {
+    "display": "Anton",
+    "display_note": "single 400 weight only — never font-weight:bold, and it is ALL-CAPS by construction; set letter-spacing negative at cover size",
+    "body": "Gelasio",
+    "mono": "Space Mono"
+  },
+  "page": {
+    "size": "8.5x11in",
+    "margin": "92px 82px 72px 82px",
+    "viewport": "816x1056"
+  },
+  "audience": "first-time American visitors",
+  "price_band": "USD 29-39"
+}

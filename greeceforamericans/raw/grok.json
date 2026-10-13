@@ -1,0 +1,189 @@
+```json
+{
+  "_README": "BLANK TEMPLATE v3 — the contract every AI fills for ONE PROJECT (destination + audience, e.g. romeforamericans). Do NOT change field NAMES or STRUCTURE; fill VALUES only. Keep every key (use null if you can't fill it). Frame everything for the audience in _meta (their passports for visa rules, their hubs for flights, their currency for money). TWO data types, reconciled differently: (1) FACTS — objective checkable values. (2) RECOMMENDATIONS — judgments with no single right answer. STATUS MODEL (set 'status' honestly per fact): 'verified' = confirmed against an OFFICIAL source (put the URL in source_url); 'agreed_stable' = a stable fact you're confident on but didn't open a source for (capital, currency code, emergency numbers); 'verify_recommended' = change-prone or high-stakes (visa rules/fees, advisories, entry rules) — flag it; 'serve_live' = volatile, must NOT be stored as a fact (exchange rate, flight prices). For RECOMMENDATIONS use rank 'core' (your strong picks) — no status needed. Return ONLY valid JSON in EXACTLY this structure. Fill EVERY section — do not skip any.",
+  "_meta": {
+    "schema_version": 3,
+    "project": "greeceforamericans",
+    "country": "Greece",
+    "country_iso": "GR",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": ["JFK", "EWR", "ORD", "ATL", "IAD", "BOS", "LAX", "PHL"],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "express costs in USD with euro equivalents"
+    },
+    "ai_source": "deepseek",
+    "produced_at": "2026-06-18"
+  },
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status (verified|agreed_stable|verify_recommended|serve_live), notes }. For 'verified' the source_url MUST be the official page you checked. Never invent a source.",
+  "identity": {
+    "name_local": { "value": "Ελλάδα (Elláda)", "source_url": null, "status": "agreed_stable" },
+    "capital": { "value": "Athens", "source_url": null, "status": "agreed_stable" },
+    "official_languages": { "value": ["Greek"], "source_url": null, "status": "agreed_stable" },
+    "currency_code": { "value": "EUR", "source_url": null, "status": "agreed_stable" },
+    "currency_name": { "value": "Euro", "source_url": null, "status": "agreed_stable" },
+    "timezones": { "value": ["UTC+2"], "source_url": null, "status": "agreed_stable" },
+    "calling_code": { "value": "+30", "source_url": null, "status": "agreed_stable" },
+    "power_plug_voltage": { "value": "230V, 50Hz, types C and F", "source_url": "https://www.power-plugs-sockets.com/in/greece/", "status": "verified" }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL + change-prone. Try to set 'verified' against the official consular/eVisa site; otherwise 'verify_recommended'.",
+      "by_nationality": [
+        {
+          "passport": "US",
+          "type": { "value": "visa_free", "source_url": "https://gr.usembassy.gov/travel-to-greece/", "status": "verified", "notes": "Up to 90 days in 180 for tourism/business" },
+          "max_stay_days": { "value": 90, "source_url": "https://gr.usembassy.gov/travel-to-greece/", "status": "verified" },
+          "fee": { "value": "None for short stay", "source_url": "https://gr.usembassy.gov/travel-to-greece/", "status": "verified" },
+          "processing_time": { "value": null, "source_url": null, "status": "verify_recommended" },
+          "online_authorization_required": { "value": "ETIAS starting late 2026", "source_url": "https://etias.com/etias-countries/greece-etias", "status": "verify_recommended", "notes": "Pre-travel authorization for visa-exempt" },
+          "official_application_url": { "value": "https://gr.usembassy.gov/travel-to-greece/", "source_url": "https://gr.usembassy.gov/travel-to-greece/" }
+        }
+      ],
+      "scam_sites_to_avoid": { "value": ["Unofficial visa/ETIAS application sites charging high fees"], "source_url": null, "status": "agreed_stable" }
+    },
+    "documents": {
+      "passport_validity_required": { "value": "At least 3 months beyond planned departure from Schengen; issued within last 10 years", "source_url": "https://www.mfa.gr/usa/en/services/visas/", "status": "verified" },
+      "onward_ticket_required": { "value": "Not strictly required but may be requested as proof of intent to leave", "source_url": null, "status": "agreed_stable" },
+      "notes": { "value": "Passport must have at least 2 blank pages. ETIAS expected late 2026 for US citizens." }
+    },
+    "money": {
+      "currency_code": { "value": "EUR", "source_url": null, "status": "agreed_stable" },
+      "approx_rate_note": { "value": "1 USD ≈ 0.85-0.95 EUR (check live rate)", "source_url": null, "status": "serve_live", "notes": "VOLATILE — never freeze; serve live" },
+      "cash_vs_card": { "value": "Cards widely accepted in cities/tourist areas; carry cash for tavernas, small shops, islands, and ferries", "source_url": null, "status": "agreed_stable" },
+      "atm_availability": { "value": "Excellent in Athens and major tourist spots; reliable ATMs with low fees using networks like Visa/Mastercard", "source_url": null, "status": "agreed_stable" },
+      "currency_import_export_limit": { "value": "Declare amounts over €10,000", "source_url": null, "status": "verify_recommended" },
+      "tipping_norm": { "value": "Not obligatory; round up or 5-10% for good service in restaurants; small for taxis/tours", "source_url": null, "status": "agreed_stable" }
+    },
+    "getting_there": {
+      "main_international_airports": { "value": ["Athens (ATH) - Eleftherios Venizelos", "Heraklion (HER) Crete", "Thessaloniki (SKG)"], "source_url": "https://www.visitgreece.gr/transportation/by-air/", "status": "verified", "notes": "name + IATA" },
+      "national_carrier": { "value": "Aegean Airlines", "source_url": null, "status": "agreed_stable" },
+      "flight_from_audience_origins": { "value": ["Direct or 1-stop from major US hubs like JFK/ATL to ATH; 9-12 hours typical"], "source_url": null, "status": "serve_live", "notes": "durations stable-ish; PRICES are serve_live" }
+    },
+    "getting_around": {
+      "intercity_rail": { "value": "Limited; useful for some mainland routes but not extensive", "source_url": null, "status": "agreed_stable" },
+      "buses": { "value": "KTEL buses reliable for mainland and some islands; affordable", "source_url": null, "status": "agreed_stable" },
+      "domestic_flights": { "value": "Aegean, Sky Express, Olympic Air; fast for distant islands", "source_url": null, "status": "agreed_stable" },
+      "ride_sharing": { "value": "Uber limited; taxis and local apps common", "source_url": null, "status": "agreed_stable" },
+      "car_rental_and_driving": { "value": "Drive on right; international permit recommended; manual common; winding island roads", "source_url": null, "status": "verify_recommended", "notes": "driving side, license/IDP, BAC limit" }
+    },
+    "when_to_go": {
+      "climate_by_season": { "value": "Hot dry summers (Jun-Sep, 80-95F+ islands); mild springs/falls (60-80F); cool wet winters", "source_url": null, "status": "agreed_stable" },
+      "best_months": { "value": ["May", "June", "September", "October"], "rank": "core", "notes": "RECOMMENDATION" },
+      "avoid_periods": { "value": ["Mid-July to late August (peak heat/crowds/prices)", "Major holidays if avoiding crowds"], "rank": "core", "notes": "RECOMMENDATION + dated festivals (verify dates yearly)" }
+    },
+    "safety_health": {
+      "_note": "YMYL. Advisory level is change-prone → verify_recommended. Stable items (emergency numbers) → agreed_stable.",
+      "advisory_level": { "value": "Level 1: Exercise Normal Precautions (US State Dept)", "source_url": "https://travel.state.gov", "status": "verify_recommended", "notes": "e.g. US State Dept level + date" },
+      "main_risk": { "value": "Petty theft in tourist areas; traffic; heat in summer", "source_url": null, "status": "agreed_stable" },
+      "vaccines": { "value": "Routine US vaccines; no special required", "source_url": null, "status": "verify_recommended" },
+      "tap_water_safe": { "value": "Generally safe in Athens but bottled preferred on islands", "source_url": null, "status": "agreed_stable" },
+      "emergency_numbers": { "value": { "police": "100 or 112", "ambulance": "166 or 112", "fire": "199 or 112" }, "source_url": null, "status": "agreed_stable" },
+      "common_scams": { "value": ["Overpriced tourist tavernas", "Fake taxi overcharges", "Pickpocketing in crowds"], "source_url": null, "status": "agreed_stable" }
+    },
+    "connectivity": {
+      "sim_esim": { "value": "eSIMs easy via Airalo etc.; local SIMs at airport/kiosks", "source_url": null, "status": "agreed_stable" },
+      "coverage": { "value": "Good in populated areas and most islands", "source_url": null, "status": "agreed_stable" }
+    },
+    "costs": {
+      "_note": "RECOMMENDATION-ish ranges; approximate + dated.",
+      "daily_budget_low": { "value": "80-120 USD", "status": "serve_live" },
+      "daily_budget_mid": { "value": "150-250 USD", "status": "serve_live" },
+      "daily_budget_high": { "value": "350+ USD", "status": "serve_live" }
+    },
+    "culture_etiquette": {
+      "dress_norms": { "value": "Modest at religious sites (cover shoulders/knees); beachwear fine at beaches", "source_url": null, "status": "agreed_stable" },
+      "dos_and_donts": { "value": ["Greet with 'Kalimera'", "Don't rush meals", "Respect siesta hours", "Tip modestly in cash"], "source_url": null, "status": "agreed_stable" }
+    }
+  },
+  "cities": [
+    {
+      "name": "Athens",
+      "facts": {
+        "how_to_get_there": { "value": "Metro/bus/taxi from ATH airport (~30-45 min to center)", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "Metro, buses, walking; tickets affordable", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Athens International Airport (ATH)", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [{"name": "Acropolis & Parthenon", "why": "Iconic ancient wonder"}, {"name": "Ancient Agora", "why": "Historic heart of democracy"}, {"name": "Plaka neighborhood", "why": "Charming streets and tavernas"}], "rank": "core", "notes": "[{name, why}] — your picks" },
+        "where_to_stay": { "value": [{"area": "Plaka", "who_for": "First-timers wanting charm and walkability"}, {"area": "Koukaki", "who_for": "Quieter vibe near Acropolis"}, {"area": "Monastiraki", "who_for": "Central transport hub"}], "rank": "core", "notes": "[{area, who_for}]" },
+        "where_to_eat": { "value": [{"name_or_type": "Traditional tavernas in Plaka", "why": "Authentic Greek food"}, {"name_or_type": "Central Market area", "why": "Fresh local produce and street eats"}], "rank": "core", "notes": "[{name_or_type, why}]" },
+        "day_trips": { "value": [{"place": "Delphi", "why": "Ancient oracle site", "rough_time": "Full day"}, {"place": "Cape Sounion", "why": "Temple of Poseidon sunset", "rough_time": "Half day"}], "rank": "core", "notes": "[{place, why, rough_time}]" }
+      }
+    },
+    {
+      "name": "Santorini",
+      "facts": {
+        "how_to_get_there": { "value": "Fly to JTR or ferry from Athens/Piraeus", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "Buses, taxis, rentals, ATVs", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Santorini Airport (JTR)", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [{"name": "Oia Caldera Sunset", "why": "Iconic views"}, {"name": "Fira", "why": "Vibrant capital"}, {"name": "Akrotiri", "why": "Ancient Minoan site"}], "rank": "core", "notes": "[{name, why}] — your picks" },
+        "where_to_stay": { "value": [{"area": "Oia", "who_for": "Romantic caldera views"}, {"area": "Fira", "who_for": "Central access"}, {"area": "Imerovigli", "who_for": "Luxury quieter spots"}], "rank": "core", "notes": "[{area, who_for}]" },
+        "where_to_eat": { "value": [{"name_or_type": "Caldera-view restaurants", "why": "Sunset dining"}, {"name_or_type": "Local tavernas", "why": "Fresh seafood"}], "rank": "core", "notes": "[{name_or_type, why}]" },
+        "day_trips": { "value": [{"place": "Nea Kameni volcano", "why": "Hike and hot springs", "rough_time": "Half day boat trip"}], "rank": "core", "notes": "[{place, why, rough_time}]" }
+      }
+    },
+    {
+      "name": "Mykonos",
+      "facts": {
+        "how_to_get_there": { "value": "Fly to JMK or ferry", "source_url": null, "status": "agreed_stable" },
+        "local_transport": { "value": "Buses, taxis, rentals", "source_url": null, "status": "agreed_stable" },
+        "airport": { "value": "Mykonos Airport (JMK)", "source_url": null, "status": "agreed_stable" }
+      },
+      "recommendations": {
+        "top_sights": { "value": [{"name": "Mykonos Town (Chora)", "why": "Windmills and alleys"}, {"name": "Beaches", "why": "Varied party to peaceful"}], "rank": "core", "notes": "[{name, why}] — your picks" },
+        "where_to_stay": { "value": [{"area": "Mykonos Town", "who_for": "Nightlife and dining"}, {"area": "Beach areas like Ornos", "who_for": "Relaxed beach access"}], "rank": "core", "notes": "[{area, who_for}]" },
+        "where_to_eat": { "value": [{"name_or_type": "Seafood tavernas", "why": "Fresh catches"}, {"name_or_type": "International spots in town", "why": "Variety"}], "rank": "core", "notes": "[{name_or_type, why}]" },
+        "day_trips": { "value": [{"place": "Delos island", "why": "Archaeological site", "rough_time": "Half day ferry"}], "rank": "core", "notes": "[{place, why, rough_time}]" }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "The Perfect 10-Day Greece Itinerary for First-Timers",
+      "days": "10",
+      "scope": "multi-city",
+      "plan": { "value": [
+        {"day": 1, "morning": "Arrive Athens", "afternoon": "Acropolis", "evening": "Plaka dinner"},
+        {"day": 2-3, "morning": "Ancient sites", "afternoon": "Neighborhoods", "evening": "Roof bars"},
+        {"day": 4-7, "morning": "Fly/ferry to Santorini", "afternoon": "Caldera views", "evening": "Sunsets"},
+        {"day": 8-9, "morning": "Mykonos or Naxos", "afternoon": "Beaches", "evening": "Relax"},
+        {"day": 10, "morning": "Return to Athens", "afternoon": "Depart"}
+      ], "notes": "[{day, morning, afternoon, evening}] — RECOMMENDATION" },
+      "assumptions": { "value": "Moderate pace, mix of culture and islands" }
+    },
+    {
+      "title": "7 Days in Greece: Athens and Two Islands",
+      "days": "7",
+      "scope": "multi-city",
+      "plan": { "value": [
+        {"day": 1-3, "morning": "Athens sights", "afternoon": "Day trip or explore", "evening": "Taverna"},
+        {"day": 4-7, "morning": "Island hop Santorini/Mykonos", "afternoon": "Beaches/sights", "evening": "Sunset"}
+      ], "notes": "[{day, morning, afternoon, evening}] — RECOMMENDATION" },
+      "assumptions": { "value": "Focus on highlights" }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": { "value": [
+      {"name": "Acropolis", "where": "Athens", "why": "Ultimate ancient icon"},
+      {"name": "Santorini Caldera", "where": "Santorini", "why": "Dramatic views and sunsets"},
+      {"name": "Greek Islands beaches", "where": "Cyclades/Crete", "why": "Turquoise waters and relaxation"},
+      {"name": "Taverna dining", "where": "Everywhere", "why": "Fresh Mediterranean cuisine"}
+    ], "rank": "core", "notes": "[{name, where, why}]" }
+  },
+  "_open_questions": {
+    "_note": "Anything genuinely unsure / conflicting / that needs a real source. Be honest — this is more useful than false confidence.",
+    "value": [
+      "Exact ETIAS launch date and fees in 2026",
+      "Current exact daily budget ranges (serve live)",
+      "Ferry schedules for specific routes (seasonal)"
+    ]
+  }
+}
+```

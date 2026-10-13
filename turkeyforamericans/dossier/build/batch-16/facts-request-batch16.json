@@ -1,0 +1,173 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 16,
+  "swamp": "S-insure",
+  "_INSTRUCTIONS": "Return ONE JSON object with exactly these keys. For each: {value, status, source_url, notes}. status is one of verified | verify_recommended | serve_live | agreed_stable. DEFAULT TO verify_recommended. Mark verified ONLY if source_url is an OFFICIAL source you actually opened (a .gov.tr / ministry / embassy / regulator / named insurer's own policy wording). A visa agency, hospital marketing page, insurance comparison site, blog or aggregator is NOT official — those stay verify_recommended. If you cannot source a value, return null and list it in _open_questions. Do NOT estimate. Do NOT average two sources into a middle number.",
+  "_CALIBRATION": "On the Thailand batch-19 panel, one model marked 24 of 40 facts 'verified' and only 2 of those 24 cited an official source — the other 22 were visa agencies and hospital marketing pages. All 22 were downgraded. On batch 20, after this failure was named with numbers, the same model returned 9 of 30 verified and all 9 were official. Be the second one.",
+  "_WHY_THIS_LOOKS_ODD": "This request asks for COMPONENTS and no recommendations on purpose. The articles report mechanics; the paid guide makes the calls. Do not add advice, rankings, or 'you should' framing to any notes field.",
+  "_open_questions": [],
+  "facts": {
+    "health.hospital_types": {
+      "_want": "Public (Devlet) vs private (Özel) vs university hospitals — which treat foreign visitors and how billing differs. Text.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "health.er_visit_cost_private_try": {
+      "_want": "Typical PRIVATE hospital emergency-room consultation charge for a self-paying foreigner, in TRY. Range acceptable. null if unsourceable.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "health.fracture_treatment_cost_private_try": {
+      "_want": "Typical private-hospital cost, simple limb fracture: imaging + casting, self-pay foreigner, TRY. null if unsourceable.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "health.inpatient_night_cost_private_try": {
+      "_want": "Typical private-hospital inpatient night, self-pay foreigner, TRY. null if unsourceable.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "health.air_ambulance_repatriation_usd": {
+      "_want": "Typical medical repatriation cost Turkey → US, USD. Order of magnitude acceptable, MUST be labelled as such.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "health.payment_before_treatment": {
+      "_want": "Do private hospitals require a deposit or an insurer guarantee-of-payment BEFORE non-emergency treatment? Text describing the practice.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "health.state_emergency_obligation_foreigners": {
+      "_want": "What emergency care the Turkish state guarantees a foreign visitor regardless of payment, and where that obligation stops.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "health.direct_billing_hospitals": {
+      "_want": "Do major private hospital groups direct-bill international insurers, or is it pay-and-claim? Text.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.exclusion_motorcycle": {
+      "_want": "Standard travel-policy treatment of motorbike/scooter/quad: excluded outright, or conditional on licence/engine size/helmet? Text.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.exclusion_licence_condition": {
+      "_want": "Where a policy covers two-wheelers, what licence does it require the rider to hold — home licence, IDP, or a specific category?",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.balloon_classification": {
+      "_want": "How hot-air ballooning is classified in standard travel policy wordings: covered adventure activity, aviation exclusion, or requires an add-on. Text — this is the key one.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.exclusion_alcohol": {
+      "_want": "Standard wording on injury sustained under the influence. Text.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.exclusion_watersports": {
+      "_want": "Standard treatment of diving and paragliding (Ölüdeniz is the relevant case).",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.operator_liability_turkey": {
+      "_want": "What a licensed Turkish activity operator's own insurance covers for a paying passenger, and where the passenger's own policy has to take over.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.claim_documents": {
+      "_want": "Documents an insurer requires for a Turkish medical claim, gathered at the time of treatment.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.primary_vs_secondary": {
+      "_want": "Primary vs secondary coverage — what changes for a claimant who also has a US health plan.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "pharmacy.eczane_scope": {
+      "_want": "What a Turkish pharmacist may dispense or advise on without a doctor's prescription.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "pharmacy.nobetci_rota": {
+      "_want": "How the nöbetçi (duty) pharmacy rota works out of hours and how a visitor finds the open one.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "pharmacy.walkin_clinic_cost_try": {
+      "_want": "Typical private walk-in clinic consultation, TRY. null if unsourceable.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "medication.restricted_categories": {
+      "_want": "Categories of medication restricted or prohibited on entry to Turkey.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "medication.quantity_limit": {
+      "_want": "Personal-use quantity limit for prescription medication carried into Turkey.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "medication.doctor_letter_requirements": {
+      "_want": "What a doctor's letter must contain to be accepted at the Turkish border.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "medication.common_us_restricted": {
+      "_want": "Common US prescriptions that are restricted, controlled or unavailable in Turkey.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    }
+  }
+}

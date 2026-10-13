@@ -1,0 +1,103 @@
+{
+  "schema_version": 4,
+  "project": "turkeyforamericans",
+  "batch": 16,
+  "swamp": "S-insure",
+  "_DOCTRINE": "Every article REPORTS MECHANICS and never makes the call. The call is the book's. check-noconnect.py must exit 0 before any of these enters an import batch. A fact with value null DELETES its sentence — it is never softened to 'sometimes' or 'often'. No drift-prone value in a title, heading or excerpt: they cannot carry a fact-span.",
+  "_WHY_THESE_FIVE": "S-insure is the widest gap in the corpus (932 dedicated words) and the highest stakes. The existing turkey-health-guide prescribes bottled water and nothing else; what a US traveler is actually exposed to, what a policy pays, and what voids it appear nowhere. These five report the components separately. The book connects them.",
+  "articles": [
+    {
+      "title": "What to Expect When a Turkish Hospital Bills You",
+      "slug": "turkey-hospital-billing-what-to-expect",
+      "category": "health-safety",
+      "swamp": "S-insure",
+      "handoff": "turn",
+      "reports": [
+        "the three hospital types (Devlet / Ozel / university) and who bills whom",
+        "the emergency obligation: admission and intervention are unconditional, charges are collected AFTER care",
+        "that emergency transport itself is chargeable, unlike the emergency care obligation",
+        "deposit / prepayment / guarantee-of-payment practice for NON-emergency treatment",
+        "direct billing vs pay-and-claim, and which groups do which",
+        "that pricing under tourist health sits in a Ministry of Health framework rather than a published hospital tariff — which is why no figure can be quoted in advance"
+      ],
+      "must_not_say": "any price figure, any version of 'so buy travel insurance', and no conflation of medical-tourism rules with tourist health",
+      "images": 2,
+      "_REVISED": "Was 'What Healthcare Actually Costs in Turkey Without Insurance'. All four price facts came back null from BOTH panel models — no public self-pay tariff exists. Prices deleted, not estimated. The article now reports the billing MECHANICS, and the absence of a quotable price becomes the finding."
+    },
+    {
+      "title": "What a Standard US Travel Policy Pays For in Turkey",
+      "slug": "us-travel-insurance-turkey-what-it-covers",
+      "category": "health-safety",
+      "swamp": "S-insure",
+      "handoff": "turn",
+      "reports": [
+        "the four coverage heads a traveler meets: medical, evacuation, trip cancellation, baggage",
+        "primary vs secondary coverage and what that means when a US health plan is involved",
+        "direct billing vs pay-and-claim — which Turkish hospitals do which",
+        "the documents a claim needs, gathered at the time, not after"
+      ],
+      "must_not_say": "which policy or provider to buy; no policy is arbitrated",
+      "images": 1
+    },
+    {
+      "title": "The Activities That Void Travel Insurance in Turkey",
+      "slug": "turkey-insurance-exclusions-activities",
+      "category": "health-safety",
+      "swamp": "S-insure",
+      "handoff": "turn",
+      "reports": [
+        "the standard exclusion families: motorised two-wheelers, unlicensed operation, altitude/aviation, watersports, alcohol",
+        "how the balloon flight is classified across policy wordings (aviation vs adventure activity vs excluded)",
+        "the scooter/quad case: the licence condition inside the exclusion, not the exclusion itself",
+        "paragliding at Ölüdeniz, diving, and where operator insurance ends and yours begins"
+      ],
+      "must_not_say": "'check your policy' as a conclusion, or any margin/sequencing rule",
+      "note": "This is the article that makes the balloon a node in S-insure. It reports how the balloon is CLASSIFIED. It does not say what to do about it.",
+      "images": 2
+    },
+    {
+      "title": "Getting Treated in Turkey: Pharmacies, Clinics and the ER",
+      "slug": "turkey-getting-treated-pharmacy-clinic-er",
+      "category": "health-safety",
+      "swamp": "S-insure",
+      "handoff": "seed",
+      "reports": [
+        "the eczane system: what a pharmacist can dispense and decide without a doctor",
+        "nöbetçi eczane (duty pharmacy) — how the rota works out of hours",
+        "walk-in private clinic vs hospital ER: cost, wait, English availability",
+        "prescription rules for medication a traveler already carries"
+      ],
+      "must_not_say": "a recommended first stop — reporting the ladder is not ranking it",
+      "images": 1
+    },
+    {
+      "title": "Bringing Medication into Turkey",
+      "slug": "bringing-medication-into-turkey",
+      "category": "health-safety",
+      "swamp": "S-insure",
+      "handoff": "seed",
+      "reports": [
+        "controlled/restricted categories and the documentation each needs",
+        "quantity limits and original-packaging rules",
+        "what a doctor's letter must contain to be useful at the border",
+        "which common US prescriptions are restricted or unavailable in Turkey"
+      ],
+      "must_not_say": "reassurance ('you'll be fine') or a blanket warning — report the rule or delete the sentence",
+      "images": 1
+    }
+  ],
+  "gate": {
+    "before_import": "check-noconnect.py exit 0 on all five",
+    "after_batch_21": "S-insure dedicated words measured; pattern confirmed before batch 22 spends the speculative bet"
+  },
+  "_PANEL": {
+    "run": "2026-07-27",
+    "models": [
+      "deepseek",
+      "grok"
+    ],
+    "verified_official": "deepseek 1/1, grok 4/5 — the hardened prompt held",
+    "nulls": "5 facts carry value:null and DELETE their sentences",
+    "see": "disputes.md"
+  }
+}

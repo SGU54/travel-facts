@@ -1,0 +1,25 @@
+{
+  "name": "Japan, Worked Out.",
+  "subtitle": "A decision manual for your first trip.",
+  "thesis": "Most first trips to Japan are two cities, one Shinkansen leg and a fortnight of day trips — which means a lot of the advice you have read, starting with \"buy the rail pass\", is priced for a trip you are not taking.",
+  "hooks": {
+    "route-sequencing": "Two bases beats four every time, but the day-trip-versus-relocate call is where a whole travel day quietly disappears — the guide works out which side each city falls on.",
+    "jr-pass-economics": "The national pass needs about four long journeys to pay for itself and your trip probably has two; the guide shows the arithmetic before you spend ¥50,000 on a reflex.",
+    "ic-card-transit": "A US-issued Visa will not top up a mobile Suica — Mastercard and Amex will — and discovering that at a Shinjuku gate costs you an afternoon; the guide sets the card up before you fly.",
+    "seasonal-timing": "Golden Week and Obon do not just raise prices, they change which trip is possible — the guide names the weeks worth moving and the ones that are fine.",
+    "ryokan-onsen": "The ryokan worth the splurge books out first and the tattoo rule is not negotiable at most onsen; the guide picks which city to spend that night in."
+  },
+  "no_hook": {
+    "cash-access": "DEMOTED by the cold mine — only 1 article and 921w of money-and-costs corpus behind it. Surfaces fall back to the thesis. Either write 2-3 more cash/ATM articles or retire the swamp."
+  },
+  "swamp_reconciliation": {
+    "confirmed": ["route-sequencing (20 arts, 13,312w — the spine)", "jr-pass-economics (5 arts)", "seasonal-timing (7 arts, 6,979w)", "ryokan-onsen (5 arts, folds into the sleeping decision)"],
+    "demoted": ["ic-card-transit — real but marginal alone (5,381w); merged with jr-pass-economics into one 12,419w decision about what it costs to MOVE", "cash-access — 1 article, effectively unsupported"],
+    "surfaced_by_the_mine_but_NOT_declared": [
+      "FOOD: 10,523w across what-to-eat/where-to-eat/food-and-drink and no swamp declared at all — the largest gap in the site's hypothesis",
+      "WITHIN-CITY BASING: 11,429w (tokyo + kyoto neighborhoods) — distinct from route-sequencing, which is about which cities",
+      "ARRIVAL / FIRST 24H: 7,450w",
+      "SIGHTS WORTH THE DAY: 8,656w"
+    ]
+  }
+}

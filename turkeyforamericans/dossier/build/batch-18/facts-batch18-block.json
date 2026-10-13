@@ -1,0 +1,206 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 18,
+  "swamp": "S-transit",
+  "facts": {
+    "transit.shy_yolcu_regulation": {
+      "value": "Regulation on Air Passenger Rights (SHY-PASSENGER), issued by the Directorate General of Civil Aviation. It covers passengers with a confirmed reservation on scheduled or non-scheduled flights operated by Turkish-origin carriers from or to Turkish airports, and by foreign-origin carriers departing Turkish airports. It is drafted in parallel with EU Regulation 261/2004.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "READ FROM THE REGULATION TEXT. Articles 1-3. Both panels agreed; the EU 261 parallel is stated explicitly in Article 3(b)."
+    },
+    "transit.checkin_condition": {
+      "value": "The regulation only protects a passenger who presents at check-in on time: at the time specified in advance by the carrier, tour operator or agency, or — where no time is specified — at least 45 minutes before the announced departure.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "NOT RETURNED BY EITHER PANEL. Article 2(1)(a)(2). This is a CONDITION ON THE WHOLE REGULATION: miss it and none of the rights below apply."
+    },
+    "transit.cancellation_rebook_or_refund": {
+      "value": "On cancellation the carrier must offer the Article 9 choice, and the passenger chooses: a full refund of the ticket (plus a free flight back to the first point of departure where the rest of the journey no longer makes sense), re-routing to the final destination at the earliest opportunity under similar conditions, or re-routing at a later date the passenger finds suitable, subject to seat availability.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "Article 6(1)(a) and Article 9(1). Both panels agreed; the return-to-origin leg inside option (a) is easy to miss."
+    },
+    "transit.reroute_different_airport": {
+      "value": "Where more than one airport serves a city or region and the carrier re-routes a passenger to an alternative airport, the carrier must cover the passenger's transfer from that alternative airport to the one on the original reservation, or to another nearer destination the passenger accepts.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "NOT RETURNED BY EITHER PANEL — and it is the single most load-bearing fact in this batch. Article 9(3). Istanbul has two airports, so a re-route from IST to SAW (or the reverse) puts the inter-airport transfer on the CARRIER, not the passenger. Directly relevant to the IST/SAW article."
+    },
+    "transit.compensation_bands": {
+      "value": "Domestic flights: the Turkish Lira equivalent of EUR 100. International: EUR 250 up to 1,500 km, EUR 400 between 1,500 and 3,500 km, EUR 600 over 3,500 km. Distance is measured to the planned final destination by the great circle method.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "Article 8(1)-(2), (5)."
+    },
+    "transit.compensation_conversion_rate": {
+      "value": "The Lira equivalent is calculated at the Central Bank rate on the day the TICKET WAS PAID FOR — not the day the compensation is paid.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "BOTH PANELS GOT THIS WRONG. Both wrote 'the selling rate on the day of payment', which reads as the day compensation is paid. Article 8(1) is explicit: 'the exchange rate when the ticket is purchased, i.e. the foreign exchange rate ... on the day of the payment for the ticket'. In a depreciating lira this is materially less money, and it is exactly the kind of mechanic the free corpus never carries."
+    },
+    "transit.compensation_halved_on_reroute": {
+      "value": "Compensation may be reduced by 50% where the carrier re-routes the passenger on an alternative flight arriving within 2 hours of the planned arrival (flights up to 1,500 km), 3 hours (1,500-3,500 km) or 4 hours (over 3,500 km).",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "NOT RETURNED BY EITHER PANEL. Article 8(3)."
+    },
+    "transit.compensation_notice_window": {
+      "value": "Compensation is only due if the passenger was not told of the cancellation at least two weeks ahead; between two weeks and seven days it is due unless re-routing departs no more than 2 hours early and arrives within 4 hours of plan; inside seven days unless re-routing departs no more than 1 hour early and arrives within 2 hours of plan. The burden of proving notice is on the carrier.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "NOT RETURNED BY EITHER PANEL. Article 6(2) and 6(5). The burden-of-proof point is a genuine asymmetry in the passenger's favour."
+    },
+    "transit.delay_thresholds_article7": {
+      "value": "Delay triggers assistance at 2 hours or more for domestic flights and flights up to 1,500 km, 3 hours for 1,500-3,500 km, and 4 hours for flights over 3,500 km. At 5 hours the passenger also gains the Article 9 right to a refund.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "DISPUTE RESOLVED: grok described these distance-banded TRIGGERS (Article 7), deepseek described the time-banded SERVICE LADDER (Article 10). Both were right about different articles. The structure is TWO-LAYERED and neither panel had the whole of it."
+    },
+    "transit.duty_of_care_thresholds": {
+      "value": "Once triggered, the service owed scales with waiting time: hot and cold drinks for delays of two to three hours; breakfast or lunch appropriate to the time of day, plus drinks, for three to five hours; further drinks and an additional snack on top for five hours or more. Where one or more nights become necessary, hotel accommodation and transport between airport and hotel. Two free phone calls, faxes or emails are owed with no time limit at all.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "Article 10(1)-(2). The two free communications carry NO delay threshold — they are owed whenever the article is engaged."
+    },
+    "transit.extraordinary_circumstances": {
+      "value": "Force majeure is defined to include political instability, meteorological conditions unsuitable for the flight, natural disasters, security risks, unexpected flight-safety deficiencies AND STRIKES. Proving it, having taken all possible precautions, excuses the carrier from COMPENSATION under Article 8 only — the Article 9 refund/re-routing right and the Article 10 duty of care still stand.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "Article 4(ğ) and 6(4). Strikes are named in the definition — grok had this, deepseek did not. Both correctly noted force majeure does not excuse care."
+    },
+    "transit.denied_boarding": {
+      "value": "The carrier must first call for volunteers to give up their reservations in exchange for agreed benefits. If too few come forward it may deny boarding at its discretion, and involuntary denied boarding immediately engages compensation (Article 8), refund or re-routing (Article 9) and duty of care (Article 10).",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "Article 5. Both panels agreed on substance; their article cross-references disagreed and are corrected here against the text."
+    },
+    "transit.downgrading_refund": {
+      "value": "If the carrier downgrades a passenger it must refund the fare difference plus 30% of the ticket price on flights up to 1,500 km, 50% between 1,500 and 3,500 km, and 75% over 3,500 km, within seven days.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "NOT RETURNED BY EITHER PANEL. Article 11(2)-(3). An upgrade may never be charged for."
+    },
+    "transit.carrier_must_notify": {
+      "value": "Carriers must display a legible notice at check-in, in Turkish and English, telling passengers to request the text of their rights. A carrier that denies boarding or cancels must notify each affected passenger in writing, and must inform passengers of any delay of two hours or more.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "NOT RETURNED BY EITHER PANEL. Article 15."
+    },
+    "transit.rights_cannot_be_waived": {
+      "value": "Liability to passengers under the regulation cannot be restricted or excluded by the contract of carriage, and a passenger who accepted less than the regulation provides without being informed of their rights keeps the right to pursue the difference.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "NOT RETURNED BY EITHER PANEL. Article 16."
+    },
+    "transit.claim_procedure": {
+      "value": "Claims for denied boarding, delay/cancellation or class change are first lodged with the operating carrier. Passengers may then submit via the SHGM online system (kdmerp.shgm.gov.tr). Applications must be made by the passenger or a notarised proxy; bag claims and pure ticket-change issues fall outside SHY-YOLCU.",
+      "status": "verified",
+      "source_url": "https://web.shgm.gov.tr/tr/yolcu-haklari",
+      "notes": "grok opened the official SHGM passenger-rights page; deepseek described the same route without opening it. Claims go first to the operating carrier, then to SHGM's online system. Baggage claims and ticket-change disputes fall OUTSIDE this regulation."
+    },
+    "transit.ist_minimum_connection_time": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL, and both stated they checked the official istairport.com transfer pages. NO PUBLISHED MINIMUM CONNECTION TIME EXISTS for Istanbul Airport. This is the Thailand BKK/DMK pattern: the ABSENCE is the fact. Unofficial figures circulate (60-90 min) with no authority behind them — DO NOT PRINT THEM."
+    },
+    "transit.saw_minimum_connection_time": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS NULL against the official sabihagokcen.aero site. Same finding."
+    },
+    "transit.ist_saw_transfer_cost": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH NULL. No official tariff from either airport operator."
+    },
+    "transit.no_flight_corridors": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH NULL. No official list of domestic corridors without scheduled service."
+    },
+    "transit.ist_saw_distance_time": {
+      "value": "The road distance between IST and SAW is approximately 78 km. Driving time is typically 55 minutes to 1 hour 15 minutes depending on traffic.",
+      "status": "verify_recommended",
+      "source_url": "https://www.rome2rio.com",
+      "notes": "SINGLE SOURCE (grok returned null, saying neither airport operator publishes it). deepseek's ~78 km / 55-75 min comes from an aggregator. Usable only as an approximation, explicitly flagged as such. Not a published figure."
+    },
+    "transit.ist_saw_transfer_options": {
+      "value": "Options: (1) Direct shuttle bus (Havaist HVİST-13) – journey ~2 hours; (2) Metro combination (M11 from IST to city, then Marmaray or M4 to SAW) – ~2+ hours; (3) Taxi or ride-hail – ~55–75 min; (4) Private transfer.",
+      "status": "verify_recommended",
+      "source_url": "https://lostin.istanbul",
+      "notes": "SINGLE SOURCE from travel guides; grok null against official operator pages. Report the OPTIONS (shuttle, metro combination, taxi) without presenting the timings as published."
+    },
+    "transit.interline_agreements_turkey": {
+      "value": "Turkish Airlines and AJet (formerly AnadoluJet) are both part of the Turkish Airlines group; they have interline and codeshare arrangements allowing through-check and coordinated ticketing. Pegasus Airlines does not have a general interline agreement with Turkish Airlines or AJet; it operates on a point-to-point basis, though it has individual interline deals with some international carriers (e.g., Air Canada). For a passenger holding separate legs on two different carriers without an interline agreement, baggage will not be through-checked and missed connections are not protected.",
+      "status": "verify_recommended",
+      "source_url": "https://simpleflying.com",
+      "notes": "SINGLE SOURCE (grok null). Industry reporting, not a carrier conditions-of-carriage page. The substance — Turkish Airlines and AJet inside one group with through-check, Pegasus operating point-to-point without general interline — is checkable and consistent with the booking behaviour travelers describe. Report as the commercial pattern, not as a published agreement."
+    },
+    "transit.coach_journey_times": {
+      "value": "Istanbul–Cappadocia (Göreme): ~11–12 hours (overnight). Istanbul–Izmir: ~6–8 hours. Izmir–Antalya: ~6–7 hours. Times vary by operator, route, and traffic.",
+      "status": "verify_recommended",
+      "source_url": "https://www.rome2rio.com",
+      "notes": "SINGLE SOURCE aggregator (grok null). Journey times only, no operator named, explicitly approximate."
+    },
+    "transit.yht_routes_times": {
+      "value": "Ankara–İstanbul (Söğütlüçeşme ≈4 h 30 min–5 h; Halkalı ≈5 h); Ankara–Eskişehir ≈1 h 21–1 h 26 min; Ankara–Konya ≈1 h 49 min; Ankara–Karaman ≈2 h 49 min; İstanbul–Konya ≈5 h; İstanbul–Karaman also operated.",
+      "status": "verified",
+      "source_url": "https://www.tcddtasimacilik.gov.tr/en/high_speed_train",
+      "notes": "grok opened the official TCDD Tasimacilik YHT page; deepseek used a news article. Official version taken."
+    },
+    "transit.ist_intl_to_domestic_path": {
+      "value": "International-to-domestic transfer passengers clear passport control, then proceed to the domestic transfer point / concourse G; on a single ticket baggage is normally transferred, otherwise reclaim and re-check is required.",
+      "status": "verify_recommended",
+      "source_url": "https://www.istairport.com/en/flights/airport-guides/transfer-passenger-guide/",
+      "notes": "Official IST transfer-passenger guide describes the process categories; exact bag-handling wording is high-level. | grok cited the OFFICIAL IST transfer-passenger guide; deepseek used forums. Official version taken."
+    },
+    "transit.transit_without_entry": {
+      "value": "International-to-international transfer passengers remain airside, pass transfer security and proceed to the departure gate without clearing immigration, provided the itinerary is on a single ticket and the passenger holds the required documents for the onward destination.",
+      "status": "verify_recommended",
+      "source_url": "https://www.istairport.com/en/flights/airport-guides/transfer-passenger-guide/",
+      "notes": "Official IST transfer guide indicates airside transfer for int-to-int. | grok cited the OFFICIAL IST transfer-passenger guide; deepseek used forums. Official version taken."
+    },
+    "transit.baggage_through_check": {
+      "value": "On a single-ticket itinerary baggage is normally tagged through to the final destination; on separate tickets the passenger must reclaim and re-check.",
+      "status": "verify_recommended",
+      "source_url": "https://www.istairport.com/en/flights/airport-guides/transfer-passenger-guide/",
+      "notes": "Official IST transfer guide states the distinction for connected versus unconnected reservations. | grok cited the OFFICIAL IST transfer-passenger guide; deepseek used forums. Official version taken."
+    },
+    "transit.ist_terminal_scale": {
+      "value": "Single main terminal building with multiple concourses (A, B, D, F international; G and parts of F domestic). Walking distances between furthest gates can exceed 20–30 minutes.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Both describe a single terminal with multiple concourses and 20-30 minute walks between far gates. deepseek's 800-1,000 m figure is from a non-official guide site and is NOT printed as a measurement."
+    },
+    "transit.through_ticket_definition": {
+      "value": "A through-ticket is a single contract of carriage (one PNR) covering successive flights; the operating carrier remains responsible for re-routing or care if a connection is missed for reasons covered by SHY-YOLCU. Separate tickets create independent contracts; the second carrier has no obligation arising from delay on the first.",
+      "status": "verify_recommended",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "Both agree on substance. NOTE grok's own caveat, which the regulation confirms: there is NO statutory definition of a through-ticket in SHY-PASSENGER. The regulation attaches rights to the flight for which the passenger holds a confirmed reservation, which is exactly why separate tickets leave the passenger exposed. Report the mechanism, not a legal definition."
+    },
+    "transit.self_transfer_protection": {
+      "value": "None under SHY-YOLCU or the operating carrier’s contract for the second flight; the passenger bears the risk of a missed connection on separate tickets.",
+      "status": "verify_recommended",
+      "source_url": "https://web.shgm.gov.tr/doc4/shy-passenger.pdf",
+      "notes": "Both agree. Confirmed against the regulation: Article 2 scopes protection to the flight the passenger is confirmed on, so a delay on an earlier separate ticket creates no obligation for the next carrier."
+    },
+    "transit.airport_by_carrier": {
+      "value": "Turkish Airlines principally operates from IST; AJet and Pegasus principally operate from SAW (with limited IST presence for some carriers).",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Both agree: Turkish Airlines principally IST, Pegasus and AJet principally SAW. Operational pattern, not a regulatory assignment — neither found an official list."
+    },
+    "transit.rail_booking_mechanics": {
+      "value": "YHT tickets are sold online via the TCDD Taşımacılık website and app; advance purchase is possible; foreign passports are accepted for online booking.",
+      "status": "verify_recommended",
+      "source_url": "https://www.tcddtasimacilik.gov.tr/en/high_speed_train",
+      "notes": "grok on the official TCDD site. Both flag that foreign-passport online booking is not explicitly confirmed in the opened pages — report that tickets are sold online and in stations, do not promise the passport field works."
+    }
+  }
+}

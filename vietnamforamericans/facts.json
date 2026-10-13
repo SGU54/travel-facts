@@ -1,0 +1,499 @@
+{
+  "_README": "Vietnam fact layer. CONTAINS ONLY PRIMARY-VERIFIED FACTS — every row's source_url was opened and read on checked_at. Anything provisional, consensus-only or secondary deliberately did NOT make it in; it stays in raw/claude.json under _open_questions and in disputes.md. An absent fact means 'not proven', never 'not true'. serve_live values (exchange rates, prices, daily budgets, AQI) are intentionally absent and must be served live, never frozen here.",
+  "_meta": {
+    "schema_version": 4,
+    "project": "vietnamforamericans",
+    "country": "Vietnam",
+    "country_iso": "VN",
+    "built_at": "2026-10-12",
+    "built_from": "raw/claude.json + raw/chatgpt.json + raw/deepseek.json, reconciled; promoted by hand",
+    "audience": {
+      "nationality": "American",
+      "home_currency": "USD"
+    },
+    "primary_sources": [
+      "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+      "https://evisa.gov.vn/faq",
+      "https://prearrival.immigration.gov.vn/",
+      "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam"
+    ]
+  },
+  "identity": {
+    "timezone": {
+      "fact_key": "identity.timezone",
+      "value": "Vietnam has a single time zone (Indochina Time, UTC+7) and does not observe daylight saving, so the gap to the United States shifts by an hour twice a year. It is 12 hours ahead of Washington DC during Eastern Standard Time and 11 hours ahead during Eastern Daylight Time.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Dept Vietnam page states Vietnam has one time zone and does not observe daylight saving. CORRECTED 2026-10-12: that page also states Vietnam is '11 hours ahead of Washington, D.C. during Eastern Standard Time', which is arithmetically wrong — UTC+7 against UTC-5 is 12 hours, and 11 hours applies to EDT (UTC-4). The figures here are the computed ones. A PRIMARY SOURCE CAN BE WRONG ON A COMPUTABLE FACT; check the arithmetic rather than copying the number.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12"
+    }
+  },
+  "visa": {
+    "type": {
+      "fact_key": "visa.type",
+      "value": "A visa is required. There is no general visa exemption for US passport holders; the e-visa is the normal route. The main exception is a stay of 30 days or less on the island of Phu Quoc, arriving and leaving directly. A separate narrow exception exists for overseas Vietnamese holding a 5-year visa-exemption certificate.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'A visa is required. You must apply for a visa before you travel. An exception is allowed for stays of 30 days or less on the island of Phu Quoc only.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "max_stay_days": {
+      "fact_key": "visa.max_stay_days",
+      "value": 90,
+      "status": "verified",
+      "source_url": "https://evisa.gov.vn/faq",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "Vietnam Immigration Department e-visa FAQ, citing the Law on Entry, Exit, Transit and Residence of Foreigners 2014 (amended 2019, 2023): 'the visa cannot exceed 90 days'. Corroborated by the US Embassy ('up to 90 days').",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "fee": {
+      "fact_key": "visa.fee",
+      "value": "USD 25 for a single-entry e-visa, USD 50 for multiple entry, payable by bank transfer.",
+      "status": "verified",
+      "source_url": "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "US Embassy Hanoi, verbatim: 'E-visas are issued with a validity period of up to 90 days, one-entry for 25 USD or multiple entries for 50 USD, and payable via bank transfer.' evisa.gov.vn publishes no public fee schedule.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "processing_time": {
+      "fact_key": "visa.processing_time",
+      "value": "Usually 3 to 5 working days after the Immigration Department receives the completed application and payment; longer during application surges or holidays.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'E-visa applications are usually processed within 3 to 5 working days after the Vietnam Immigration Department receives the completed application and payment. However, this time may change depending on the number of applications or holidays.' Counter-evidence exists (Vietnam's embassy in India publishes 05-30 working days), so do not promise the lower figure.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12"
+    },
+    "passport_validity_vs_evisa": {
+      "fact_key": "visa.passport_validity_rule",
+      "value": "An e-visa's validity must be at least 30 days shorter than the passport's remaining validity. This never binds an eligible tourist: a 90-day e-visa needs roughly four months of passport validity, and Vietnam already requires six months at entry, so anyone who can enter already satisfies it.",
+      "status": "verified",
+      "source_url": "https://evisa.gov.vn/faq",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "evisa.gov.vn FAQ, verbatim: 'the validity of the electronic visa must be at least 30 days shorter than the passport validity.' The second sentence is arithmetic on that rule (90 + 30 = 120 days), not a sourced claim. CORRECTED 2026-10-12: an earlier version asserted that a passport expiring in just over six months could not carry a 90-day visa. That was my own inference and it was wrong — the second gate caught it. A 'verified' status covers the SOURCE's claim only; never append your own reasoning inside a verified value.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "pre_arrival_declaration": {
+      "fact_key": "visa.pre_arrival_declaration",
+      "value": "A pre-arrival declaration is filed online at prearrival.immigration.gov.vn. It is free, takes about ten minutes, is separate from the visa, and is filed no earlier than three days before arrival. Note the two governments describe its status differently: the US State Department says travellers on a non-Vietnamese passport arriving by air must complete it, while Vietnam's own Immigration Department portal presents it as advisory, saying only that submitting in advance helps reduce waiting time at immigration.",
+      "status": "verified",
+      "source_url": "https://prearrival.immigration.gov.vn/",
+      "source_kind": "primary",
+      "scope": "Non-Vietnamese passport holders arriving in Vietnam by air",
+      "support": "Portal confirmed official: title 'Pre-Arrival Information - Cuc Quan ly xuat nhap canh' on an immigration.gov.vn domain, text 'Submitting your declaration in advance helps reduce waiting time at the immigration area.' The mandatory framing and the three-day window are from travel.state.gov: 'All travelers on a non-Vietnamese passport and entering Vietnam by air must also fill out a pre-arrival declaration form no earlier than 3 days prior to their arrival.' The discrepancy between the two is deliberately preserved in the value.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-01-12",
+      "risk": "high"
+    },
+    "entry_gates": {
+      "fact_key": "visa.entry_gates",
+      "value": "An e-visa is valid at 83 designated international border gates — 17 airports, 27 land crossings and 39 seaports — since Resolution 389/NQ-CP of 2 December 2025 added 41 to the previous 42. Every international airport an American would fly into is covered. Gate eligibility is a separate question from the port you select on your application, which is binding.",
+      "status": "verified",
+      "source_url": "https://en.baochinhphu.vn/viet-nam-adds-41-international-border-gates-for-e-visa-holders.htm",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "Vietnam Government Portal (baochinhphu.vn), 3 Dec 2025: Resolution No. 389/NQ-CP dated December 2, 2025 brings the total ports to 83. Corroborated by Vietnam Law Magazine, VietnamPlus and the National Tourism Administration (17 airports / 27 land / 39 seaports). SUPERSEDES the figure of 42 still published by vn.usembassy.gov as of 2026-10-12 — a US primary source lagging a Vietnamese regulatory change by ten months. Long Thanh airport appears in some lists but is not yet operational; do not write it as usable.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "no_extension_in_country": {
+      "fact_key": "visa.no_extension_in_country",
+      "value": "An e-visa cannot be renewed or extended from inside Vietnam, and Vietnam usually grants only the period requested rather than the maximum. Changing the duration means leaving and applying again from outside, not filing anything locally.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'Vietnam does not allow you to renew or extend an E-visa while you are in the country.' and 'Vietnam usually only gives you a visa for the exact time period you requested.' CORRECTED 2026-10-12: an earlier version said 'the duration decision is made at application and cannot be corrected later'. The source establishes an IN-COUNTRY limitation only; a fresh application from outside Vietnam is available, so the broader finality claim was unsupported and inflated the handoff.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "port_must_match": {
+      "fact_key": "visa.port_must_match",
+      "value": "The entry and exit location on an e-visa must match the port chosen in the application. An e-visa naming one airport does not work at another, and an error on the e-visa can mean refused entry.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'The entry and exit location must match the port of entry you chose when you applied.' and 'If your E-visa has an error, immigration may not let you enter the country. You may have to pay a travel agency at the airport for an expensive visa sponsorship.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "must_print": {
+      "fact_key": "visa.must_print",
+      "value": "The e-visa must be printed and carried with the passport at entry.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'You must print your E-visa and bring it with your valid passport when you enter Vietnam.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "exemption_excludes_us": {
+      "fact_key": "visa.exemption_excludes_us",
+      "value": "US passport holders are not covered by Vietnam's unilateral visa-exemption scheme and must hold a visa. The 45-day exemption extended to 12 further European countries by Resolution 229/NQ-CP runs 15 August 2025 to 14 August 2028 and does not include the United States, Canada or Australia. The one exception for Americans is the Vietnamese diaspora: an overseas Vietnamese with the relevant documents can hold a 5-year visa-exemption certificate.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "travel.state.gov states a visa is required for US passports. Resolution 229/NQ-CP was issued 8 August 2025, effective 15 August 2025 to 14 August 2028 — confirmed by Vietnam's own embassies (Japan, Switzerland) and LuatVietnam. CORRECTED 2026-10-12: an earlier version dated this expansion to 2026.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-01-12",
+      "risk": "high"
+    },
+    "phu_quoc_exception": {
+      "fact_key": "visa.phu_quoc_exception",
+      "value": "A stay of 30 days or less on the island of Phu Quoc is exempt from the visa requirement, provided you do not clear immigration on the mainland.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'An exception is allowed for stays of 30 days or less on the island of Phu Quoc only.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    }
+  },
+  "documents": {
+    "passport_validity": {
+      "fact_key": "documents.passport_validity",
+      "value": "The passport must be valid at entry with six months' validity beyond the arrival date, and carry blank pages for stamps. Allow at least two blank pages.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept states 'Your passport must have 6 months validity beyond your arrival date.' NOTE: the same page contradicts itself on blank pages, saying both 'You must have 1 blank page available per stamp' and 'Your passport must have at least 2 blank pages required for stamps.' The conservative figure is recorded here deliberately.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "emergency_passport": {
+      "fact_key": "documents.emergency_passport",
+      "value": "Vietnam may not accept the 12-page US emergency passport for e-visa entry, so a passport replaced mid-trip at a US embassy in the region may not get you in.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'Vietnam may not accept the 12-page U.S. emergency passport for e-visa for entry.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "currency_declaration": {
+      "fact_key": "documents.currency_declaration",
+      "value": "There is no limit on currency brought in or out, but a declaration is required above either threshold: more than 15,000,000 VND, or more than 5,000 USD in foreign currency.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Dept, verbatim: 'Entry maximum: None. However, you must declare any Vietnamese Dong over 15,000,000 VND or any foreign currency over 5,000 USD.' The same thresholds are stated for exit. A competing figure of USD 7,000 circulates and traces to a superseded 2005 embassy notice.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "police_registration": {
+      "fact_key": "documents.police_registration",
+      "value": "Every visitor must have their overnight address registered with the local police, Vietnamese citizens included. Hotels do this automatically at check-in, which is why they take your passport. In informal stays such as an Airbnb or a homestay the host is responsible, and it is worth confirming they have done it.",
+      "status": "verified",
+      "source_url": "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "US Embassy Hanoi, verbatim: 'all visitors (including Vietnamese) are required to register their temporary residence with the police station where they are staying overnight.' No official statement of the consequence for a short-stay tourist was found, so none is asserted.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "exit_control": {
+      "fact_key": "documents.exit_control",
+      "value": "Leaving Vietnam requires a valid visa, a residence card, or Immigration Department approval. The State Department warns that if you cannot leave on time for any reason, including a medical emergency, you will likely pay overstay fines and face delays getting permission to leave.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'Vietnam requires a valid visa, residence card, or approval from the Immigration Department to leave the country.' and 'If you change your plans or cannot leave Vietnam on time for any reason, including a medical emergency, you will likely pay overstay fines and face delays getting permission to leave.' CORRECTED 2026-10-12: an earlier version rendered 'you will likely pay' as 'overstaying brings fines and delays', dropping the qualifier, and treated an expired visa as an absolute departure bar when the source lists Immigration Department approval as an alternative route out.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "child_exit": {
+      "fact_key": "documents.child_exit",
+      "value": "A US-citizen child of Vietnamese parentage may need a Vietnamese passport or a Vietnamese exit visa to leave Vietnam. The requirement attaches to parentage, not to how the child entered.",
+      "status": "verified",
+      "source_url": "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+      "source_kind": "primary",
+      "scope": "US-citizen children with Vietnamese parentage",
+      "support": "US Embassy Hanoi: 'In general, a Vietnamese passport or a Vietnamese exit visa is required by the Vietnamese government in the event your child needs to exit Vietnam.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    }
+  },
+  "safety_health": {
+    "advisory_level": {
+      "fact_key": "safety.advisory_level",
+      "value": "Level 1 - Exercise Normal Precautions, the lowest of the State Department's four levels. Date issued: June 24, 2026.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept Vietnam travel advisory header: 'Level 1 - Exercise normal precautions', 'Date issued: June 24, 2026'.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-01-12",
+      "risk": "high"
+    },
+    "main_risk": {
+      "fact_key": "safety.main_risk",
+      "value": "Vietnam is generally safe for travellers; petty crime is the common risk, especially in tourist areas, with bag and phone snatching from moving motorbikes the dominant mode. Violent crime against foreigners is rare. Road traffic is the hazard the State Department warns about at greatest length, and the one most likely to put a visitor in hospital.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'Vietnam is generally a safe destination for travelers. Petty crime is common, especially in popular tourist locations.' CORRECTED 2026-10-12: an earlier version asserted road traffic was 'the leading cause of serious injury to visitors', a statistical ranking the source does not make — it gives extensive road-safety and licence warnings, which supports emphasis, not a ranking. The second gate caught the fact layer's own support not matching its claim.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "uxo": {
+      "fact_key": "safety.uxo",
+      "value": "Unexploded ordnance remains a real but narrowly located hazard. Risk is concentrated at construction sites and is low in urban and populated areas, including tourist destinations.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Dept, verbatim: 'Areas of greatest risk are construction sites. Landmine risk is low in urban and populated areas, including tourist destinations.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12",
+      "risk": "high"
+    },
+    "vaccines_required": {
+      "fact_key": "safety.vaccines_required",
+      "value": "No vaccinations are required to enter Vietnam. This is an entry requirement only and is not medical advice; several vaccines are recommended without being required.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Dept Vietnam entry requirements, verbatim: 'No vaccinations are required.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "vaccines_recommended": {
+      "fact_key": "safety.vaccines_recommended",
+      "value": "CDC recommends for Vietnam: Hepatitis A for unvaccinated travellers aged one and over, Hepatitis B for unvaccinated travellers of all ages, and Typhoid for most travellers, alongside routine vaccines and COVID-19. Japanese encephalitis, rabies and monkeypox are conditional on length of stay, rural exposure or specific activities rather than recommended for every traveller.",
+      "status": "verified",
+      "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "CDC Travelers' Health Vietnam destination page, Vaccines and Medicines table: Hepatitis A 'Recommended for unvaccinated travelers one year old or older going to Vietnam'; Hepatitis B 'Recommended for unvaccinated travelers of all ages'; Typhoid 'Recommended for most travelers'; Japanese Encephalitis recommended for those moving to or spending long periods in affected areas.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12",
+      "risk": "high"
+    },
+    "malaria": {
+      "fact_key": "safety.malaria",
+      "value": "Malaria transmission in Vietnam is rural only, with rare cases in the Mekong and Red River deltas, and CDC lists no transmission in the cities of Da Nang, Hai Phong, Hanoi, Ho Chi Minh City, Nha Trang or Quy Nhon. Chloroquine and mefloquine resistance is present in named provinces (Binh Phuoc, Dak Lak, Dak Nong, Gia Lai, Khanh Hoa, Kon Tum, Lam Dong, Ninh Thuan, Tay Ninh), where CDC points to atovaquone-proguanil, doxycycline or tafenoquine; elsewhere in transmission areas mefloquine remains listed. Whether any prophylaxis is warranted depends on the specific itinerary.",
+      "status": "verified",
+      "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "CDC Vietnam destination page, malaria transmission areas, verbatim: 'Rural areas only; rare cases in the Mekong and Red River Deltas' and 'None in the cities of Da Nang, Hai Phong, Hanoi, Ho Chi Minh City (Saigon), Nha Trang, and Quy Nhon.' Drug resistance listed as chloroquine and mefloquine. CORRECTED 2026-10-12: an earlier version generalised the resistance-driven drug choice to the whole country, dropping CDC's province-level qualification. The six named cities are the ONLY places CDC names as transmission-free — do not extend that list to other destinations by inference.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12",
+      "risk": "high"
+    },
+    "drug_laws": {
+      "fact_key": "safety.drug_laws",
+      "value": "Drug offences carry severe penalties and police sometimes test blood for drugs. Substances consumed legally in another country before arrival can still be detected and lead to arrest and a long prison sentence. Ingredients in some common prescription medicines, including for ADHD, may be illegal in Vietnam.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Dept, verbatim: 'Using narcotic drugs in Vietnam is illegal. Police sometimes test people's blood for drugs. If drugs are in your system, even if you used them in another country where they were legal, you can be arrested and face a long prison sentence. Please note that some ingredients for common prescription drugs to treat conditions such as ADHD may be illegal in Vietnam.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12",
+      "risk": "high"
+    },
+    "consular_access": {
+      "fact_key": "safety.consular_access",
+      "value": "Consular access to detained US citizens is routinely delayed, often by several weeks, so the US Embassy may not be able to reach you quickly if something goes wrong.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'Vietnamese authorities routinely delay notification and consular access to detained U.S. citizens, often leading to delays of several weeks or more for embassy visits.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "emergency_numbers": {
+      "fact_key": "safety.emergency_numbers",
+      "value": {
+        "traffic_police": "113",
+        "ambulance": "115",
+        "expressway_hotline": "1900-54-55-70"
+      },
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Dept transportation section, verbatim: 'Dial 113 for traffic police', 'Dial 115 for ambulance services', 'Dial 1900-54-55-70 for Vietnam Expressway Corporation (VEC hotline)'. The fire number is deliberately omitted: it was not stated on any primary source opened.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12",
+      "risk": "high"
+    },
+    "air_quality": {
+      "fact_key": "safety.air_quality",
+      "value": "Air pollution is a significant problem in Vietnam's major cities, Hanoi above all, and travellers with respiratory conditions should consult a doctor before travelling. Current readings are volatile and must be checked live rather than quoted.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Dept, verbatim: 'Air pollution is a significant problem in Vietnam's major cities, especially Hanoi. You should consult your doctor prior to travel and consider the impact that poor air quality may have on you.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12"
+    }
+  },
+  "getting_around": {
+    "driving_licence": {
+      "fact_key": "transport.driving_licence",
+      "value": "A US driver's licence and an International Driving Permit are both invalid in Vietnam. Driving without a Vietnamese licence can mean a fine, arrest or jail, renting a moped or motorbike without one is illegal, and travel insurance may not pay medical bills after an accident without a licence. Licence conversion requires residency documentation a short-stay visitor does not hold.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'U.S. driver's licenses and International Driving Permits do not work in Vietnam. If you drive without a Vietnamese license, you can be fined, arrested, or sent to jail.' and 'Renting a moped or motorbike without a Vietnamese driver's license is illegal. If you get in an accident without a license, your travel insurance may not pay your medical bills.' The conversion-requires-residency half is secondary and is stated here only as the reason no short-trip route exists; the licence invalidity and its consequences are primary.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "traffic_laws": {
+      "fact_key": "transport.traffic_laws",
+      "value": "Vietnamese law requires helmets, speed-limit compliance and zero alcohol while driving — zero, not a blood-alcohol threshold. Enforcement is tightening, with higher fines and cameras in Hanoi and Ho Chi Minh City. Licence, vehicle registration and identification must be carried while driving.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Dept, verbatim: 'Although laws require helmets, following speed limits, and zero alcohol while driving, many people don't follow these rules consistently. The government is cracking down with higher fines and cameras in big cities like Hanoi and Ho Chi Minh City.' Required documents listed as valid driver's license, vehicle registration, personal identification.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "driving_penalty": {
+      "fact_key": "transport.driving_penalty",
+      "value": "Driving without a Vietnamese licence can result in a fine, arrest, or jail.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "Anyone driving in Vietnam",
+      "support": "State Dept, verbatim: 'If you drive without a Vietnamese license, you can be fined, arrested, or sent to jail.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    },
+    "unlicensed_insurance": {
+      "fact_key": "transport.unlicensed_insurance",
+      "value": "After an accident while riding without a valid licence, travel insurance may not pay your medical bills.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "source_kind": "primary",
+      "scope": "US ordinary passport holders travelling to Vietnam as tourists",
+      "support": "State Dept, verbatim: 'If you get in an accident without a license, your travel insurance may not pay your medical bills.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    }
+  },
+  "customs": {
+    "alcohol": {
+      "fact_key": "customs.alcohol",
+      "value": "Per entry: 1.5 litres of alcohol at 20% ABV or above, or 2 litres under 20% ABV, or 3 litres of beer or other alcoholic drinks.",
+      "status": "verified",
+      "source_url": "https://www.customs.gov.vn/index.jsp?pageId=2311&id=84471&cid=4203",
+      "source_kind": "primary",
+      "scope": "All travellers entering Vietnam, per passport, per entry",
+      "support": "Vietnam Customs Department, quoting Decree 134/2016/ND-CP Article 6 verbatim: '1.5 liters of alcohol of >=20% ABV or 2.0 liters of alcohol of <20% ABV or 3.0 liters of other alcoholic drinks or beer.' The three limits are alternatives, not cumulative.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12"
+    },
+    "alcohol_overflow": {
+      "fact_key": "customs.alcohol_overflow",
+      "value": "A single bottle that exceeds the limit by no more than one litre passes duty-free in its entirety; beyond one litre over, only the excess is dutiable.",
+      "status": "verified",
+      "source_url": "https://www.customs.gov.vn/index.jsp?pageId=2311&id=84471&cid=4203",
+      "source_kind": "primary",
+      "scope": "All travellers entering Vietnam, per passport, per entry",
+      "support": "Decree 134/2016/ND-CP Article 6 via Vietnam Customs: 'If the traveler carries a bottle or can of alcohol whose volume exceeds the limit by not more than 01 liter, the whole bottle will be duty-free. If the volume exceeds the limit by more than 01 liter, the exceed amount shall be dutiable.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12"
+    },
+    "tobacco": {
+      "fact_key": "customs.tobacco",
+      "value": "Per entry: 200 cigarettes, or 250 grams of shredded tobacco, or 20 cigars. These limits do not apply to anyone under 18.",
+      "status": "verified",
+      "source_url": "https://www.customs.gov.vn/index.jsp?pageId=2311&id=84471&cid=4203",
+      "source_kind": "primary",
+      "scope": "All travellers entering Vietnam, per passport, per entry",
+      "support": "Decree 134/2016/ND-CP Article 6(b) via Vietnam Customs. The under-18 exclusion is stated on the Customs Department's entry-procedures guidance.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12"
+    },
+    "goods_value": {
+      "fact_key": "customs.goods_value",
+      "value": "Other goods are duty-free up to a total customs value of 10,000,000 VND per entry, on top of the alcohol, tobacco and personal-belongings allowances.",
+      "status": "verified",
+      "source_url": "https://www.customs.gov.vn/index.jsp?pageId=2311&id=84471&cid=4203",
+      "source_kind": "primary",
+      "scope": "All travellers entering Vietnam, per passport, per entry",
+      "support": "Decree 134/2016/ND-CP Article 6(d) via Vietnam Customs: 'Other items ... whose total customs value does not exceed VND 10,000,000.' Express this in dong; the USD equivalent moves with the rate and must not be frozen.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12",
+      "risk": "high"
+    },
+    "traveller_chooses": {
+      "fact_key": "customs.traveller_chooses",
+      "value": "If you are over the allowance, you choose which items count inside it and which are declared — the decision is the traveller's, not the officer's.",
+      "status": "verified",
+      "source_url": "https://www.customs.gov.vn/index.jsp?pageId=2311&id=84471&cid=4203",
+      "source_kind": "primary",
+      "scope": "All travellers entering Vietnam, per passport, per entry",
+      "support": "Decree 134/2016/ND-CP Article 6 via Vietnam Customs: 'Where the aforementioned allowance is exceeded, the traveler may decide which items are within the allowance and which are not.'",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-10-12"
+    },
+    "prohibited_list": {
+      "fact_key": "customs.prohibited_list",
+      "value": "The list of goods banned from import changed on 5 September 2026: Decree 69/2018/ND-CP applied until that date and Decree 292/2026/ND-CP applies from it. Anything over the allowance must clear customs as imported goods.",
+      "status": "verified",
+      "source_url": "https://www.customs.gov.vn/index.jsp?pageId=2311&id=84471&cid=4203",
+      "source_kind": "primary",
+      "scope": "All travellers entering Vietnam, per passport, per entry",
+      "support": "Vietnam Customs Department, 2026: 'The list of goods prohibited from import is stipulated in Decree No. 69/2018/ND-CP (effective until September 5, 2026) and Decree No. 292/2026/ND-CP (effective from September 5, 2026).' Also Customs Law Article 54(2): luggage exceeding duty-exempt quotas must go through customs formalities like imported goods.",
+      "checked_at": "2026-10-12",
+      "review_after": "2027-04-12",
+      "risk": "high"
+    }
+  }
+}

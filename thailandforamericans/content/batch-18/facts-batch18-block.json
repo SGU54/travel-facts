@@ -1,0 +1,335 @@
+{
+ "_README": "Batch 18 facts (D-ride) — reconciled 2026-07-24 from deepseek+grok panel, rulings in disputes-batch18.md. Merge into thailandforamericans/facts.json. Nothing self-promoted to verified. value:null = UNSOURCED, the sentence is deleted rather than softened.",
+ "_reconciled_from": [
+  "deepseek",
+  "grok",
+  "claude-web-verify"
+ ],
+ "_produced_at": "2026-07-24",
+ "_REQUEST_ERROR_NOTED": "deepseek correctly flagged that my facts request asked for 'island_length_km' for krabi_ao_nang, which is on the MAINLAND, not an island. That key is dropped rather than answered. Good panel behaviour — the request was wrong, not the model.",
+ "transport_no_scooter": {
+  "_note": "The no-wheels alternative, per island. This is the component set that lets the book ask whether a base needs wheels. It does NOT answer that question.",
+  "koh_samui": {
+   "songthaew_network": {
+    "value": "Functioning shared-truck network circling the ring road; routes follow driver preference rather than a fixed timetable",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Both agree a real network exists."
+   },
+   "typical_fare_baht": {
+    "value": "Roughly 30-150 depending on distance",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DS 30-100, GK 50-150 — band reported rather than a false midpoint."
+   },
+   "hours": {
+    "value": "Daylight hours, thinning out in the evening; no fixed timetable",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Both agree."
+   },
+   "ring_road_km": {
+    "value": "About 51 km",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Web-confirmed. The scale figure for the island."
+   },
+   "grab_available": {
+    "value": true,
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "Both agree."
+   }
+  },
+  "phuket": {
+   "songthaew_network": {
+    "value": "Fixed routes running from Phuket Town out to the beaches, hail-and-ride",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Both agree. NOTE: routes are town-to-beach, not beach-to-beach."
+   },
+   "typical_fare_baht": {
+    "value": "Roughly 15-50",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DS 30-50, GK 15-50."
+   },
+   "hours": {
+    "value": "Roughly 6am to 6pm",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Both agree exactly — unusually strong for an hours fact."
+   },
+   "island_length_km": {
+    "value": "About 48-50 km",
+    "source_url": null,
+    "status": "verify_recommended"
+   },
+   "grab_available": {
+    "value": true,
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "koh_tao": {
+   "songthaew_network": {
+    "value": "Pickup trucks marked as taxis operate from Mae Haad pier, Sairee and Chalok Baan Kao, but they run as charter-priced taxis rather than a hail-and-ride shared network; they often wait to fill before departing",
+    "source_url": "https://www.kohtaocompleteguide.com/fact/getting-around-koh-tao/",
+    "status": "verify_recommended",
+    "notes": "RULED (disputes-batch18.md). DS said a network exists, GK said it does not — both half-right, so I web-checked. The vehicles exist; the shared-network behaviour does not."
+   },
+   "typical_fare_baht": {
+    "value": "Fixed per-route rates, commonly 300-500 for one or two people from Mae Haad, with about 100 baht added per extra passenger",
+    "source_url": "https://www.travelfish.org/transport/thailand/southern_thailand/surat_thani/ko_tao/all",
+    "status": "verify_recommended",
+    "notes": "Both panel members returned null. Web-sourced. HIGH-VALUE: these fares are strikingly high for the distances involved, which is exactly the component the wheels question turns on."
+   },
+   "hours": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "UNSOURCED by both and by web check. Sentence deleted, not softened."
+   },
+   "island_length_km": {
+    "value": "About 7.5 km",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DS 7.6, GK 7.5 — agree."
+   },
+   "walkable_core": {
+    "value": "Mae Haad and southern Sairee are walkable; distances between the main bays are generally under 5 km but the terrain is hilly and there are no footpaths",
+    "source_url": "https://www.kohtaocompleteguide.com/fact/getting-around-koh-tao/",
+    "status": "verify_recommended"
+   },
+   "grab_available": {
+    "value": false,
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "Both agree."
+   }
+  },
+  "koh_phangan": {
+   "songthaew_network": {
+    "value": "Shared pickup trucks along the main roads, frequently negotiated rather than fixed-fare",
+    "source_url": null,
+    "status": "verify_recommended"
+   },
+   "typical_fare_baht": {
+    "value": "Roughly 50-500 depending on distance and negotiation",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DS 50-150, GK 100-500 — WIDE disagreement. Band reported honestly; the spread is itself the finding."
+   },
+   "hours": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "UNSOURCED by both, both listed it in open questions."
+   },
+   "island_length_km": {
+    "value": "About 16-18 km",
+    "source_url": null,
+    "status": "verify_recommended"
+   },
+   "grab_available": {
+    "value": false,
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "koh_lanta": {
+   "songthaew_network": {
+    "value": "Fixed routes between the west-coast beaches and Saladan town",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Both agree."
+   },
+   "typical_fare_baht": {
+    "value": "Roughly 50-100",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Both agree exactly."
+   },
+   "hours": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "UNSOURCED by both."
+   },
+   "island_length_km": {
+    "value": "About 25-30 km, long and narrow",
+    "source_url": null,
+    "status": "verify_recommended"
+   },
+   "grab_available": {
+    "value": false,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DS False, GK null. Single-source."
+   }
+  },
+  "krabi_ao_nang": {
+   "songthaew_network": {
+    "value": "Colour-coded fixed routes with flag-down stops, running frequently through the day",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Both agree; DS every 10-15 min, GK every 15-20 min."
+   },
+   "typical_fare_baht": {
+    "value": "Roughly 50-60",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Both agree exactly."
+   },
+   "krabi_town_to_ao_nang_km": {
+    "value": "About 17-20 km",
+    "source_url": null,
+    "status": "verify_recommended"
+   },
+   "grab_available": {
+    "value": true,
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "_note": "Ao Nang is on the MAINLAND, not an island — no island_length figure applies."
+  },
+  "koh_chang": {
+   "songthaew_network": {
+    "value": "Shared trucks along the west-coast main road, flagged down; services tend to coincide with ferry arrivals",
+    "source_url": null,
+    "status": "verify_recommended"
+   },
+   "typical_fare_baht": {
+    "value": "Roughly 50-200",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DS 50-100, GK 50-200."
+   },
+   "hours": {
+    "value": "Daytime, tied loosely to ferry arrivals",
+    "source_url": null,
+    "status": "verify_recommended"
+   },
+   "grab_available": {
+    "value": false,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DS False, GK null."
+   }
+  }
+ },
+ "grab_coverage_pattern": {
+  "_note": "THE STRONGEST FINDING IN THE BATCH. Grab covers the large developed places and stops at the small islands — and the small islands are exactly where the songthaew network is weakest and fares are highest. Both panel members independently produced the same split. Report the pattern; do NOT draw the conclusion.",
+  "covered": {
+   "value": [
+    "Bangkok",
+    "Chiang Mai",
+    "Phuket",
+    "Koh Samui",
+    "Krabi/Ao Nang"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "Both agree on all five."
+  },
+  "not_covered": {
+   "value": [
+    "Koh Tao",
+    "Koh Phangan",
+    "Koh Lanta",
+    "Koh Chang"
+   ],
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree on Koh Tao and Koh Phangan; Lanta and Chang single-source (DS)."
+  },
+  "wait_times_small_islands": {
+   "value": null,
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "UNSOURCED by both — moot where Grab does not operate."
+  }
+ },
+ "car_rental": {
+  "licence_requirement": {
+   "value": "A valid home driving licence plus an International Driving Permit under the 1949 Geneva Convention",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. NOTE the contrast the book can use: a car needs the ordinary licence an American already holds, where a motorbike needs an endorsement most do not."
+  },
+  "typical_daily_cost_baht": {
+   "value": "Roughly 700-1,500 per day depending on class",
+   "source_url": null,
+   "status": "serve_live",
+   "notes": "VOLATILE — never frozen into prose."
+  },
+  "where_roads_suit_it": {
+   "value": "Phuket, Koh Samui, the mainland and northern routes have road networks suited to a car; the smaller islands have narrow roads that do not",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. Phrased as road suitability, NOT as a recommendation."
+  },
+  "parking_reality": {
+   "value": "Resorts and shopping centres generally provide parking; the busy beach towns are constrained",
+   "source_url": null,
+   "status": "verify_recommended"
+  },
+  "insurance_included": {
+   "value": "Standard rentals include compulsory third-party liability covering injury only; collision damage waiver and theft protection are extra, with common exclusions",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree on the shape. YMYL-adjacent — category level only, no insurer named."
+  }
+ },
+ "road_conditions": {
+  "_note": "Physical inputs, reported not judged.",
+  "night_lighting_general": {
+   "value": "Street lighting is poor outside Bangkok and the main urban areas; island and mountain roads are largely unlit after dark",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree across every region. The most consistent finding in the section."
+  },
+  "southern_islands": {
+   "value": "Mixed: ring roads are generally paved, interiors hilly, with steep access roads to some bays",
+   "source_url": null,
+   "status": "verify_recommended"
+  },
+  "phuket": {
+   "value": "Hilly with winding coastal and mountain roads; heavier traffic than the smaller islands",
+   "source_url": null,
+   "status": "verify_recommended"
+  },
+  "chiang_mai_and_north": {
+   "value": "Mountainous with sharp curves and switchbacks",
+   "source_url": null,
+   "status": "verify_recommended"
+  },
+  "pai_road": {
+   "value": "Route 1095 to Pai is mountainous, commonly cited as having 762 curves over roughly 135 km",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both returned the 762 figure independently. It is a widely repeated tourist-signage number rather than a survey measurement — attribute it as commonly cited, not as measured."
+  },
+  "bangkok": {
+   "value": "Flat, dense traffic, well lit in the urban core",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "koh_samui_ring_road": {
+   "value": "Mostly flat coastal road with hilly interior sections",
+   "source_url": null,
+   "status": "verify_recommended"
+  }
+ },
+ "_open_questions": {
+  "_note": "Carried from both panel members plus the web check. None of these is written into prose.",
+  "items": [
+   "Songthaew operating hours on Koh Tao, Koh Phangan and Koh Lanta — unsourced by both panel members and by web check",
+   "Koh Phangan songthaew fares — panel returns differ by a factor of several (50-150 vs 100-500); the true shape is unclear",
+   "Koh Phangan main town to main beach distance — exact figure not found",
+   "Grab wait times where it operates — no reliable figure",
+   "Whether Grab coverage on Koh Lanta and Koh Chang is genuinely absent or merely thin (single-source)",
+   "Current car rental pricing and insurance terms for 2026 — volatile, serve live"
+  ]
+ }
+}

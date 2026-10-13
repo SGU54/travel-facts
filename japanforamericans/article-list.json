@@ -1,0 +1,837 @@
+{
+  "schema_version": 5,
+  "swamps": [
+    {
+      "id": "route-sequencing",
+      "name": "How many bases, and in what order",
+      "one_liner": "First-timers either over-split across too many hotels or under-plan the day-trip-vs-relocate math, and the wrong call costs a full travel day."
+    },
+    {
+      "id": "jr-pass-economics",
+      "name": "Whether the JR Pass actually pays for itself",
+      "one_liner": "The Pass price hike means a simple Tokyo-Kyoto round trip no longer breaks even, but travelers still buy it out of habit."
+    },
+    {
+      "id": "ic-card-transit",
+      "name": "Getting IC-card transit right from day one",
+      "one_liner": "Suica/Pasmo now run mostly app-based with quirks for foreign phones, and getting it wrong at the airport eats the first afternoon."
+    },
+    {
+      "id": "seasonal-timing",
+      "name": "Which weeks will wreck the trip",
+      "one_liner": "Golden Week, Obon and the rainy/typhoon season each spike prices or crowd out the exact sights a first-timer came for."
+    },
+    {
+      "id": "cash-access",
+      "name": "Cash access outside the big cities",
+      "one_liner": "Cards work in central Tokyo/Kyoto but plenty of temples, rural shops and ryokan are cash-only with few foreign-card ATMs nearby."
+    },
+    {
+      "id": "ryokan-onsen",
+      "name": "Booking a ryokan/onsen without the tattoo trap",
+      "one_liner": "Tattoos can get you turned away at an onsen, and the best ryokan book out first for cherry-blossom and foliage season."
+    }
+  ],
+  "vein": {
+    "thesis": "Getting TO Japan is easy (visa-free, safe, no ETA); getting the ROUTE right is where first-timers lose money and time — city sequencing, JR Pass economics, IC-card transit setup, and seasonal timing all interact, and getting one wrong cascades into the others.",
+    "measured": {
+      "headroom": 8.2,
+      "corpus_at_audit": 94,
+      "date": "2026-09-17",
+      "note": "re-measured on the LIVE published corpus after batches A+B; batch C (2 articles) added to clear jr-pass-math and ic-card-setup to VIABLE"
+    },
+    "max_pieces_per_article": 2,
+    "pieces": [
+      {
+        "id": "jr-pass-math",
+        "name": "whether the JR Pass actually pays for itself",
+        "match": "jr pass|rail pass"
+      },
+      {
+        "id": "ic-card-setup",
+        "name": "getting your IC card right from day one",
+        "match": "suica|pasmo|ic card"
+      },
+      {
+        "id": "city-sequencing",
+        "name": "how many bases, and in what order",
+        "match": "open-jaw|open jaw|two bases|two cities|day trip.{0,15}(relocat|instead of)"
+      },
+      {
+        "id": "seasonal-timing",
+        "name": "which weeks to avoid entirely",
+        "match": "golden week|obon|rainy season|cherry blossom|autumn foliage|best months"
+      }
+    ]
+  },
+  "articles": [
+    {
+      "title": "Do Americans Need a Visa for Japan? (2026 Entry Guide)",
+      "slug": "do-americans-need-visa-japan",
+      "category_slug": "visas-and-documents",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Flights to Japan from the US: Routes, Times & Booking Tips",
+      "slug": "flights-to-japan-from-us",
+      "category_slug": "flights-and-arrival",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Is Japan Safe for American Travelers?",
+      "slug": "is-japan-safe-for-americans",
+      "category_slug": "safety-and-health",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Money in Japan: Cash, Cards & IC Cards Explained",
+      "slug": "money-in-japan-cash-cards-ic",
+      "category_slug": "money-and-costs",
+      "swamp": "cash-access",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Japan Etiquette: 10 Things Americans Should Know",
+      "slug": "japan-etiquette-for-americans",
+      "category_slug": "etiquette-and-culture",
+      "swamp": "ryokan-onsen",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Where to Stay in Tokyo: Best Neighborhoods for First-Timers",
+      "slug": "where-to-stay-in-tokyo",
+      "category_slug": "tokyo-neighborhoods",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Best Things to Do in Tokyo",
+      "slug": "best-things-to-do-in-tokyo",
+      "category_slug": "things-to-do",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Best Day Trips from Tokyo (Hakone, Nikko & Kamakura)",
+      "slug": "best-day-trips-from-tokyo",
+      "category_slug": "day-trips",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Getting from the Airport to Central Tokyo (Narita & Haneda)",
+      "slug": "tokyo-airport-transfers",
+      "category_slug": "airports-and-transfers",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Where to Stay in Kyoto: Best Neighborhoods for First-Timers",
+      "slug": "where-to-stay-in-kyoto",
+      "category_slug": "kyoto-neighborhoods",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Best Things to Do in Kyoto",
+      "slug": "best-things-to-do-in-kyoto",
+      "category_slug": "things-to-do",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Best Day Trips from Kyoto (Nara, Osaka & Himeji)",
+      "slug": "best-day-trips-from-kyoto",
+      "category_slug": "day-trips",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Getting Around Kyoto: Buses, Subway & Walking",
+      "slug": "getting-around-kyoto",
+      "category_slug": "getting-around",
+      "swamp": "ic-card-transit",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Japan in 7 Days: The Perfect First-Timer Itinerary (Tokyo + Kyoto)",
+      "slug": "japan-itinerary-7-days",
+      "category_slug": "first-timer-itineraries",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "The Best Places to Visit in Japan (First-Timer's Guide)",
+      "slug": "best-places-to-visit-in-japan",
+      "category_slug": "plan-your-trip",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Japan Accommodation Types Explained (Ryokan, Hotels, Capsules & More)",
+      "slug": "japan-accommodation-types-explained",
+      "category_slug": "where-to-stay",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Best Areas to Stay in Japan: A First-Timer's Overview",
+      "slug": "best-areas-to-stay-in-japan",
+      "category_slug": "where-to-stay",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Booking Hotels in Japan: Tips for American Travelers",
+      "slug": "booking-hotels-in-japan-tips",
+      "category_slug": "where-to-stay",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "What Is a Ryokan? A First-Timer's Guide to Japanese Inns",
+      "slug": "what-is-a-ryokan",
+      "category_slug": "ryokan-and-onsen",
+      "swamp": "ryokan-onsen",
+      "handoff": "turn",
+      "piece": "none"
+    },
+    {
+      "title": "Onsen Etiquette: How to Use a Japanese Hot Spring",
+      "slug": "onsen-etiquette-for-foreigners",
+      "category_slug": "ryokan-and-onsen",
+      "swamp": "ryokan-onsen",
+      "handoff": "turn",
+      "piece": "none"
+    },
+    {
+      "title": "Best Onsen Towns Near Tokyo and Kyoto",
+      "slug": "best-onsen-towns-near-tokyo-kyoto",
+      "category_slug": "ryokan-and-onsen",
+      "swamp": "ryokan-onsen",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Tattoos and Onsen: What Travelers Need to Know",
+      "slug": "tattoos-and-onsen",
+      "category_slug": "ryokan-and-onsen",
+      "swamp": "ryokan-onsen",
+      "handoff": "turn",
+      "piece": "none"
+    },
+    {
+      "title": "Where to Stay in Osaka: Best Areas for Visitors",
+      "slug": "where-to-stay-in-osaka",
+      "category_slug": "where-to-stay",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Tokyo Travel Guide for First-Timers",
+      "slug": "tokyo-travel-guide-first-timers",
+      "category_slug": "tokyo",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "3 Days in Tokyo: The Perfect Itinerary",
+      "slug": "3-days-in-tokyo-itinerary",
+      "category_slug": "tokyo",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Tokyo with Kids: A Family Travel Guide",
+      "slug": "tokyo-with-kids-family-guide",
+      "category_slug": "tokyo",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Tokyo Nightlife: The Best Evening Districts",
+      "slug": "tokyo-nightlife-evening-districts",
+      "category_slug": "tokyo",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Kyoto Travel Guide for First-Timers",
+      "slug": "kyoto-travel-guide-first-timers",
+      "category_slug": "kyoto",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "2 Days in Kyoto: The Perfect Itinerary",
+      "slug": "2-days-in-kyoto-itinerary",
+      "category_slug": "kyoto",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Kyoto Temples: Which Ones to Prioritize",
+      "slug": "kyoto-temples-which-to-prioritize",
+      "category_slug": "kyoto",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Shinjuku Area Guide: What to Do in Tokyo's Busiest Hub",
+      "slug": "shinjuku-area-guide",
+      "category_slug": "tokyo-neighborhoods",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Shibuya & Harajuku Area Guide",
+      "slug": "shibuya-harajuku-area-guide",
+      "category_slug": "tokyo-neighborhoods",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Asakusa & Old Tokyo Area Guide",
+      "slug": "asakusa-old-tokyo-area-guide",
+      "category_slug": "tokyo-neighborhoods",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Gion & Higashiyama Area Guide (Kyoto)",
+      "slug": "gion-higashiyama-area-guide",
+      "category_slug": "kyoto-neighborhoods",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Arashiyama Area Guide (Kyoto)",
+      "slug": "arashiyama-area-guide",
+      "category_slug": "kyoto-neighborhoods",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Best Things to Do in Osaka",
+      "slug": "best-things-to-do-in-osaka",
+      "category_slug": "things-to-do",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "teamLab in Tokyo: A Visitor's Guide",
+      "slug": "teamlab-tokyo-guide",
+      "category_slug": "things-to-do",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Best Free Things to Do in Japan",
+      "slug": "best-free-things-to-do-in-japan",
+      "category_slug": "things-to-do",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Hakone Day Trip Guide: Hot Springs and Mt Fuji Views",
+      "slug": "hakone-day-trip-guide",
+      "category_slug": "day-trips",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Nara Day Trip Guide: Deer and a Giant Buddha",
+      "slug": "nara-day-trip-guide",
+      "category_slug": "day-trips",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Nikko Day Trip Guide: Shrines in the Forest",
+      "slug": "nikko-day-trip-guide",
+      "category_slug": "day-trips",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Senso-ji Temple Guide (Asakusa, Tokyo)",
+      "slug": "senso-ji-temple-guide",
+      "category_slug": "temples-and-shrines",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Fushimi Inari Shrine Guide (Kyoto)",
+      "slug": "fushimi-inari-shrine-guide",
+      "category_slug": "temples-and-shrines",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Meiji Shrine Guide (Tokyo)",
+      "slug": "meiji-shrine-guide",
+      "category_slug": "temples-and-shrines",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Temple and Shrine Etiquette in Japan",
+      "slug": "temple-shrine-etiquette-japan",
+      "category_slug": "temples-and-shrines",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Kamakura Day Trip Guide: The Great Buddha by the Sea",
+      "slug": "kamakura-day-trip-guide",
+      "category_slug": "day-trips",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Himeji Castle Day Trip Guide",
+      "slug": "himeji-castle-day-trip-guide",
+      "category_slug": "day-trips",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Best Things to Do in Japan: Top Experiences for First-Timers",
+      "slug": "best-things-to-do-in-japan",
+      "category_slug": "things-to-do",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Japanese Food Guide for First-Timers",
+      "slug": "japanese-food-guide-first-timers",
+      "category_slug": "food-and-drink",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "How to Order and Eat in Japan",
+      "slug": "how-to-order-and-eat-in-japan",
+      "category_slug": "food-and-drink",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Vegetarian and Dietary Needs in Japan",
+      "slug": "vegetarian-dietary-needs-japan",
+      "category_slug": "food-and-drink",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Ramen Types Explained: A Guide for First-Timers",
+      "slug": "ramen-types-explained",
+      "category_slug": "what-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Sushi Guide for Beginners",
+      "slug": "sushi-guide-for-beginners",
+      "category_slug": "what-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Must-Try Japanese Dishes for First-Timers",
+      "slug": "must-try-japanese-dishes",
+      "category_slug": "what-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Japanese Convenience Store Food Guide",
+      "slug": "convenience-store-food-guide",
+      "category_slug": "what-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Where to Eat in Tokyo: Best Areas and Food Experiences",
+      "slug": "where-to-eat-in-tokyo",
+      "category_slug": "where-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Where to Eat in Kyoto: Best Areas and Local Specialties",
+      "slug": "where-to-eat-in-kyoto",
+      "category_slug": "where-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Izakaya Guide: How to Enjoy a Japanese Pub",
+      "slug": "izakaya-guide-for-visitors",
+      "category_slug": "where-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Japanese Drinks Guide: Sake, Beer, Whisky and More",
+      "slug": "japanese-drinks-sake-beer-whisky",
+      "category_slug": "what-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Food Tours in Japan: Are They Worth It?",
+      "slug": "food-tours-in-japan",
+      "category_slug": "where-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "What to Eat in Osaka: The Nation's Kitchen",
+      "slug": "what-to-eat-in-osaka",
+      "category_slug": "what-to-eat",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Japan eSIM and SIM Card Guide for Travelers",
+      "slug": "japan-esim-sim-guide",
+      "category_slug": "connectivity",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Pocket WiFi vs eSIM in Japan: Which Should You Choose?",
+      "slug": "pocket-wifi-vs-esim-japan",
+      "category_slug": "connectivity",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Suica vs Pasmo: Japan IC Card Guide",
+      "slug": "suica-pasmo-ic-card-guide",
+      "category_slug": "local-transit-ic-cards",
+      "swamp": "ic-card-transit",
+      "handoff": "turn",
+      "piece": "ic-card-setup"
+    },
+    {
+      "title": "Tokyo Subway and Train System Explained",
+      "slug": "tokyo-subway-explained",
+      "category_slug": "local-transit-ic-cards",
+      "swamp": "ic-card-transit",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "How to Navigate Japanese Train Stations",
+      "slug": "navigating-japanese-train-stations",
+      "category_slug": "local-transit-ic-cards",
+      "swamp": "ic-card-transit",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Is the Japan Rail Pass Worth It?",
+      "slug": "japan-rail-pass-worth-it",
+      "category_slug": "trains-and-jr-pass",
+      "swamp": "jr-pass-economics",
+      "handoff": "turn",
+      "piece": "jr-pass-math"
+    },
+    {
+      "title": "How to Ride the Shinkansen (Bullet Train)",
+      "slug": "how-to-ride-the-shinkansen",
+      "category_slug": "trains-and-jr-pass",
+      "swamp": "jr-pass-economics",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Renting a Car in Japan: What to Know",
+      "slug": "renting-a-car-in-japan",
+      "category_slug": "trains-and-jr-pass",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "What to Expect at Japanese Immigration",
+      "slug": "japanese-immigration-what-to-expect",
+      "category_slug": "flights-and-arrival",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Visit Japan Web: How to Use It",
+      "slug": "visit-japan-web-how-to-use",
+      "category_slug": "flights-and-arrival",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Kansai Airport to Kyoto and Osaka: Transfer Guide",
+      "slug": "kansai-airport-to-kyoto-osaka",
+      "category_slug": "airports-and-transfers",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Narita vs Haneda: Which Tokyo Airport Is Better?",
+      "slug": "narita-vs-haneda-which-airport",
+      "category_slug": "airports-and-transfers",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "Passport Requirements for Japan",
+      "slug": "passport-requirements-for-japan",
+      "category_slug": "visas-and-documents",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "1 Week in Japan: The Perfect First-Timer Itinerary",
+      "slug": "1-week-in-japan-itinerary",
+      "category_slug": "itineraries-by-length",
+      "swamp": "route-sequencing",
+      "handoff": "turn",
+      "piece": "city-sequencing"
+    },
+    {
+      "title": "5 Days in Japan: A Short-Trip Itinerary",
+      "slug": "5-days-in-japan-itinerary",
+      "category_slug": "itineraries-by-length",
+      "swamp": "route-sequencing",
+      "handoff": "turn",
+      "piece": "none"
+    },
+    {
+      "title": "10 Days in Japan: The Ideal Itinerary",
+      "slug": "10-days-in-japan-itinerary",
+      "category_slug": "itineraries-by-length",
+      "swamp": "route-sequencing",
+      "handoff": "turn",
+      "piece": "none"
+    },
+    {
+      "title": "2 Weeks in Japan: A Comprehensive Itinerary",
+      "slug": "2-weeks-in-japan-itinerary",
+      "category_slug": "itineraries-by-length",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "3 Weeks in Japan: The Extended Itinerary",
+      "slug": "3-weeks-in-japan-itinerary",
+      "category_slug": "itineraries-by-length",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Japan Itinerary Ideas: How to Plan Your Route",
+      "slug": "japan-itinerary-ideas",
+      "category_slug": "itineraries",
+      "swamp": "route-sequencing",
+      "handoff": "turn",
+      "piece": "city-sequencing"
+    },
+    {
+      "title": "Beyond the Basics: A Second-Trip Japan Itinerary",
+      "slug": "japan-second-trip-itinerary",
+      "category_slug": "itineraries",
+      "swamp": "none",
+      "handoff": "none",
+      "piece": "none"
+    },
+    {
+      "title": "How to Plan Your First Japan Itinerary (Step by Step)",
+      "slug": "how-to-plan-first-japan-itinerary",
+      "category_slug": "first-timer-itineraries",
+      "swamp": "route-sequencing",
+      "handoff": "turn",
+      "piece": "city-sequencing"
+    },
+    {
+      "title": "Getting Around Japan: Shinkansen, JR Pass & Subways",
+      "slug": "getting-around-japan-trains-jr-pass",
+      "category_slug": "getting-around",
+      "swamp": "route-sequencing",
+      "handoff": "seed",
+      "piece": "none"
+    },
+    {
+      "title": "Best Time to Visit Japan (and When to Avoid)",
+      "slug": "best-time-to-visit-japan",
+      "category_slug": "when-to-go",
+      "swamp": "seasonal-timing",
+      "handoff": "turn",
+      "piece": "seasonal-timing"
+    },
+    {
+      "title": "Cherry Blossom Season in Japan: When to Go and What It Costs",
+      "slug": "cherry-blossom-season-japan",
+      "category_slug": "when-to-go",
+      "swamp": "seasonal-timing",
+      "handoff": "turn",
+      "piece": "seasonal-timing"
+    },
+    {
+      "title": "Autumn Foliage in Japan: Timing Your Trip",
+      "slug": "autumn-foliage-japan-timing",
+      "category_slug": "when-to-go",
+      "swamp": "seasonal-timing",
+      "handoff": "seed",
+      "piece": "seasonal-timing"
+    },
+    {
+      "title": "Golden Week in Japan: What Closes and What It Costs",
+      "slug": "golden-week-japan-what-closes",
+      "category_slug": "when-to-go",
+      "swamp": "seasonal-timing",
+      "handoff": "turn",
+      "piece": "seasonal-timing"
+    },
+    {
+      "title": "Obon in Japan: What Changes in Mid-August",
+      "slug": "obon-japan-mid-august",
+      "category_slug": "when-to-go",
+      "swamp": "seasonal-timing",
+      "handoff": "seed",
+      "piece": "seasonal-timing"
+    },
+    {
+      "title": "Japan's Rainy Season and Typhoons: What They Mean for Your Trip",
+      "slug": "japan-rainy-season-typhoons",
+      "category_slug": "when-to-go",
+      "swamp": "seasonal-timing",
+      "handoff": "seed",
+      "piece": "seasonal-timing"
+    },
+    {
+      "title": "Winter in Japan: Snow, Onsen and the Quiet Season",
+      "slug": "winter-in-japan-snow-onsen",
+      "category_slug": "when-to-go",
+      "swamp": "seasonal-timing",
+      "handoff": "seed",
+      "piece": "seasonal-timing"
+    },
+    {
+      "title": "Regional JR Passes vs the National Japan Rail Pass",
+      "slug": "regional-jr-passes-vs-national",
+      "category_slug": "trains-and-jr-pass",
+      "swamp": "jr-pass-economics",
+      "handoff": "turn",
+      "piece": "jr-pass-math"
+    },
+    {
+      "title": "What a Japan Rail Route Actually Costs Without a Pass",
+      "slug": "japan-rail-route-cost-without-pass",
+      "category_slug": "trains-and-jr-pass",
+      "swamp": "jr-pass-economics",
+      "handoff": "seed",
+      "piece": "jr-pass-math"
+    },
+    {
+      "title": "Mobile Suica on an American iPhone: Setup and Limits",
+      "slug": "mobile-suica-american-iphone",
+      "category_slug": "local-transit-ic-cards",
+      "swamp": "ic-card-transit",
+      "handoff": "turn",
+      "piece": "ic-card-setup"
+    },
+    {
+      "title": "IC Card, Day Pass or Single Ticket: What to Use",
+      "slug": "ic-card-day-pass-or-single-ticket",
+      "category_slug": "local-transit-ic-cards",
+      "swamp": "ic-card-transit",
+      "handoff": "seed",
+      "piece": "ic-card-setup"
+    },
+    {
+      "title": "Green Car or Ordinary: Is the Japan Rail Pass Upgrade Worth It?",
+      "slug": "green-car-or-ordinary-japan-rail-pass",
+      "category_slug": "trains-and-jr-pass",
+      "swamp": "jr-pass-economics",
+      "handoff": "seed",
+      "piece": "jr-pass-math"
+    },
+    {
+      "title": "When Your IC Card Will Not Open the Gate: Fare Adjustment Explained",
+      "slug": "ic-card-wont-open-gate-fare-adjustment",
+      "category_slug": "local-transit-ic-cards",
+      "swamp": "ic-card-transit",
+      "handoff": "seed",
+      "piece": "ic-card-setup"
+    }
+  ]
+}

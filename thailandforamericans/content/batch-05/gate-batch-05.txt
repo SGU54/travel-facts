@@ -1,0 +1,446 @@
+You are a fact-and-consistency checker for travel articles. Below are articles plus the facts file they were written from. Find ONLY IN-CONTEXT ERRORS: a claim stated two different ways; a recommendation contradicting the facts file; an out-of-scope place; an internal contradiction; a claim factually wrong for Thailand.
+RULES: (1) Do NOT flag serve_live items (exchange rates, prices, visa day-count) for being hedged — that is correct. (2) Flight DURATIONS and stable facts are fine. (3) Only genuine errors; if an article is clean, say "clean". (4) Short list per slug.
+
+=== FACTS FILE ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_aro
+
+=== ARTICLES ===
+
+
+----- SLUG: budget-hotels-hostels-bangkok -----
+TITLE: Bangkok on a Budget: Best Affordable Hotels and Hostels
+CATEGORY: stay-bangkok
+
+<p>Bangkok is a budget traveler's dream: you can sleep clean, safe, and central for a fraction of what a bed costs in most Western cities, with everything from social hostels to smart budget hotels on offer. The trick isn't finding something cheap — that's easy — it's finding cheap <em>and</em> well-located, so you're not losing time and taxi money commuting. Here's how to do Bangkok on a budget without compromising on the things that matter.</p>
+
+<!-- IMAGE_SLOT_1: A clean, stylish Bangkok hostel common area or a budget hotel room -->
+
+<h2>How cheap is cheap in Bangkok?</h2>
+<p>Bangkok offers some of the best accommodation value in Southeast Asia. Hostel dorm beds are inexpensive, private rooms in budget hotels cost a little more, and even mid-range hotels with pools and rooftops are affordable by Western standards. Because exact prices shift with season and demand, check current rates rather than trusting a fixed figure — but the takeaway is that your money stretches remarkably far here. Use a live converter to keep the baht in perspective:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<h2>Best budget areas by traveler type</h2>
+
+<h3>Khao San Road and Banglamphu — backpacker central</h3>
+<p>The legendary <strong>Khao San</strong> area is the budget heartland: the highest concentration of cheap hostels and guesthouses, a young social scene, street food, and bars. It's close to the Old Town temples, which is great for sightseeing. The catch is that it's <em>not</em> on the BTS Skytrain, so reaching the modern city means a taxi, Grab, or river boat. Pick it for backpacker energy and proximity to the historic sights.</p>
+
+<!-- AFFILIATE_SLOT: booking — Khao San / Banglamphu hostels -->
+
+<h3>Sukhumvit — budget beds with great transit</h3>
+<p>You don't have to spend big to stay in modern, well-connected <strong>Sukhumvit</strong>. Around the Skytrain stations you'll find plenty of budget hotels and stylish hostels mixed in among the pricier places, giving you cheap rates <em>and</em> the easy access to the metro, restaurants, and malls that makes Sukhumvit so convenient. This is often the best balance of value and location for first-timers.</p>
+
+<!-- AFFILIATE_SLOT: booking — Sukhumvit budget hotels -->
+
+<h3>Chinatown — value plus the city's best street food</h3>
+<p><strong>Chinatown (Yaowarat)</strong> has a growing crop of budget hotels and boutique hostels, and it puts you in the middle of Bangkok's most exciting food scene. It's atmospheric and central, near the Old Town, and now connected to the MRT metro — a strong value choice for travelers who prioritize eating well.</p>
+
+<!-- IMAGE_SLOT_2: Bangkok Chinatown street life at night, neon and food stalls -->
+
+<h2>What to look for in a budget stay</h2>
+<p>A few things separate a great cheap stay from a regrettable one. <strong>Air conditioning</strong> is worth confirming — Bangkok is hot, and not every budget room has it. Check that the place is <strong>within a short walk of a BTS or MRT station</strong> (or accept that Khao San means relying on taxis). Read <strong>recent reviews</strong> for cleanliness and noise, since both vary a lot at the budget end. And look for <strong>included extras</strong> like breakfast, a rooftop, or a pool, which some Bangkok budget hotels offer surprisingly often.</p>
+
+<h2>Hostel or budget hotel?</h2>
+<p>Choose a <strong>hostel</strong> if you want to meet people, don't mind a dorm, and value the social scene and organized activities — Bangkok's hostels are some of the best and most stylish in the region. Choose a <strong>budget hotel</strong> if you want privacy, a quiet night's sleep, and your own bathroom for not much more money. Couples and light sleepers usually find a private budget-hotel room the better value; solo travelers and the social-minded lean hostel.</p>
+
+<h2>Saving money beyond the room</h2>
+<p>Where you stay is only part of a budget trip. Eat at street stalls and local restaurants (delicious and astonishingly cheap), use the BTS, MRT, and river boats instead of taxis, and stay near a station so you're not paying for rides. With those habits plus a well-chosen budget base, Bangkok is one of the most affordable major cities in the world to enjoy fully.</p>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Where's the cheapest area to stay in Bangkok?</summary><div><p>The Khao San Road / Banglamphu area has the most budget hostels and guesthouses. It's close to the Old Town temples but not on the Skytrain, so factor in taxi or Grab rides to the modern city.</p></div></details>
+  <details><summary>Can I stay somewhere central in Bangkok on a budget?</summary><div><p>Yes — Sukhumvit and Chinatown both have budget hotels and hostels near the metro, giving you affordable rates with great transit access. Sukhumvit is often the best value-plus-location balance.</p></div></details>
+  <details><summary>Is a hostel or budget hotel better in Bangkok?</summary><div><p>Hostels for socializing and the lowest dorm prices; budget hotels for privacy and a quiet room for not much more. Couples usually prefer a private budget-hotel room; solo travelers often choose hostels.</p></div></details>
+  <details><summary>What should I check before booking a budget room?</summary><div><p>Confirm air conditioning, proximity to a BTS or MRT station, and recent reviews for cleanliness and noise. Look for extras like breakfast or a pool, which some Bangkok budget hotels include.</p></div></details>
+</section>
+
+
+----- SLUG: beachfront-villas-thailand -----
+TITLE: Overwater and Beachfront Villas in Thailand
+CATEGORY: stay-islands
+
+<p>For a special-occasion trip — a honeymoon, an anniversary, or simply a splurge — Thailand's private villas are among the best value in luxury travel anywhere. A beachfront villa with a private pool here costs a fraction of the equivalent in the Maldives or the Caribbean, and the islands deliver scenery to match. Here's where to look for the best beachfront and pool villas, and what to know before booking.</p>
+
+<!-- IMAGE_SLOT_1: A private beachfront villa with an infinity pool overlooking the sea -->
+
+<h2>A note on "overwater" villas in Thailand</h2>
+<p>First, a clarification: Thailand isn't really an <em>overwater</em> bungalow destination the way the Maldives or Bora Bora are — you'll find very few true stilted-over-the-lagoon villas here. What Thailand does superbly is <strong>beachfront and clifftop villas with private pools</strong>, often steps from the sand or perched above a bay. If your dream is specifically an overwater bungalow, Thailand isn't the classic choice; if it's a private pool villa with a stunning sea view, Thailand is one of the best-value places on earth to have one.</p>
+
+<h2>Where to find the best villas</h2>
+
+<h3>Phuket — the widest luxury selection</h3>
+<p><strong>Phuket</strong> has the deepest range of luxury villas, concentrated on the quieter northwest beaches around <strong>Bang Tao</strong>, <strong>Surin</strong>, and the headlands, plus the Cape Panwa and Kamala areas. With its own international airport, it's also the easiest luxury base to reach. This is the place to start if you want choice and convenience.</p>
+
+<!-- AFFILIATE_SLOT: booking — Phuket pool villas -->
+
+<h3>Krabi — dramatic cliffside settings</h3>
+<p>For villas framed by limestone cliffs and quiet bays, <strong>Krabi</strong> delivers some of Thailand's most scenic luxury, especially around the upscale <strong>Tubkaek</strong> and <strong>Klong Muang</strong> areas north of Ao Nang. The setting is more dramatic and secluded than Phuket, ideal for a romantic retreat.</p>
+
+<!-- IMAGE_SLOT_2: A clifftop or beachfront villa in Krabi with sea and karst views -->
+
+<h3>Koh Samui — Gulf-coast villa luxury</h3>
+<p>On the Gulf coast, <strong>Koh Samui</strong> has a strong villa scene, particularly around the northern beaches and the hills above Chaweng and Bophut, with sweeping sea views. It's the natural choice for a luxury stay from roughly mid-year, when the Andaman coast is wetter.</p>
+
+<!-- AFFILIATE_SLOT: booking — Koh Samui villas -->
+
+<h2>What to know before you book</h2>
+<p><strong>Match the coast to your season.</strong> The Andaman islands (Phuket, Krabi) are best November–April; Koh Samui and the Gulf are best mid-year. A stunning villa in a rainstorm is still a rainstorm.</p>
+<p><strong>Check what "beachfront" really means.</strong> Some villas are directly on the sand; others are a short walk or shuttle away with a sea <em>view</em>. Read the location details and recent photos carefully.</p>
+<p><strong>Understand what's included.</strong> Many villas come with staff — a housekeeper, sometimes a private chef or daily breakfast — which adds enormous value. Confirm what's bundled versus extra.</p>
+<p><strong>Factor transfers.</strong> The most secluded villas can be a long drive from the airport or pier, so check transfer times and whether the villa arranges them.</p>
+
+<h2>Is a villa worth it over a resort?</h2>
+<p>A villa gives you <strong>privacy and space</strong> — your own pool, no crowds, often a kitchen and living areas — which suits couples, families, or groups who want seclusion. A <strong>resort</strong> gives you facilities, restaurants, and service on tap. For honeymoons and milestone trips, a private pool villa is hard to beat, and in Thailand the price difference over a nice hotel room is smaller than you'd expect. Compare current rates rather than any fixed figure, and convert with a live tool:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Does Thailand have overwater bungalows?</summary><div><p>Very few true overwater bungalows — that's more a Maldives or Bora Bora thing. Thailand excels instead at beachfront and clifftop villas with private pools, which offer world-class luxury for far less.</p></div></details>
+  <details><summary>Where are the best beachfront villas in Thailand?</summary><div><p>Phuket has the widest selection (especially the northwest beaches), Krabi offers dramatic cliffside settings around Tubkaek and Klong Muang, and Koh Samui is the Gulf-coast choice for mid-year travel.</p></div></details>
+  <details><summary>Are private villas in Thailand expensive?</summary><div><p>By global luxury standards, they're excellent value — a private pool villa here costs a fraction of the equivalent in the Maldives or Caribbean. Prices still vary a lot by property and season.</p></div></details>
+  <details><summary>Is a villa better than a resort for a honeymoon?</summary><div><p>For privacy and space, yes — your own pool and no crowds. A resort wins for on-site restaurants and service. Many villas include staff like a housekeeper or chef, adding great value for a special trip.</p></div></details>
+</section>
+
+
+----- SLUG: where-to-stay-in-chiang-mai -----
+TITLE: Where to Stay in Chiang Mai: Best Areas and Hotels
+CATEGORY: stay-north
+
+<p>Chiang Mai is far smaller and more relaxed than Bangkok, which makes choosing a base easier — but the neighborhood you pick still shapes your trip, from temple-hopping convenience to café culture to riverside calm. Here's a guide to the city's main areas and who each one suits.</p>
+
+<!-- IMAGE_SLOT_1: Chiang Mai's Old City — a temple, the moat, or a leafy lane -->
+
+<h2>The Old City — best for first-timers and temples</h2>
+<p>The historic heart of Chiang Mai is a square, moated <strong>Old City</strong> packed with ancient temples, guesthouses, cafés, and the famous Sunday Walking Street market. For most first-time visitors, this is the ideal base: you can walk to dozens of temples (Wat Chedi Luang, Wat Phra Singh), it's full of character, and it's central to everything. Accommodation ranges from budget guesthouses to boutique hotels in restored teak buildings. If you want to be in the thick of old Chiang Mai, stay here.</p>
+
+<!-- AFFILIATE_SLOT: booking — Old City hotels -->
+
+<h2>Nimmanhaemin (Nimman) — best for cafés, design, and nightlife</h2>
+<p>West of the Old City near the university, <strong>Nimman</strong> is Chiang Mai's trendy, modern district: specialty coffee shops, design boutiques, rooftop bars, co-working spaces, and a young, stylish crowd (including many digital nomads). It's less historic but more contemporary and lively, with excellent dining. Choose Nimman if you want café culture, modern hotels, and a bit of nightlife over temple-side atmosphere.</p>
+
+<!-- AFFILIATE_SLOT: booking — Nimman hotels -->
+
+<h2>The Riverside — best for scenery and calm</h2>
+<p>Along the Ping River east of the Old City, the <strong>Riverside</strong> area (around Wat Ket) is quieter and more scenic, with leafy lanes, riverside restaurants, and some lovely boutique hotels and resorts. It's a little removed from the temple core but peaceful and atmospheric — a good pick for a relaxed, romantic, or slower-paced stay.</p>
+
+<!-- IMAGE_SLOT_2: A peaceful Ping River scene in Chiang Mai, or a riverside boutique hotel -->
+
+<h2>The Night Bazaar area — best for markets and convenience</h2>
+<p>Between the Old City and the river, the <strong>Night Bazaar</strong> district is a busier, more commercial zone centered on its famous nightly market. It's convenient and has plenty of hotels, though it lacks the charm of the Old City or the style of Nimman. It suits travelers who want shopping and a central location and don't mind a more workaday feel.</p>
+
+<h2>How to choose, quickly</h2>
+<p>For a first trip, book the <strong>Old City</strong> — it's central, walkable, and full of the temples and atmosphere you came for. Choose <strong>Nimman</strong> for cafés, design hotels, and nightlife; the <strong>Riverside</strong> for calm and scenery; and the <strong>Night Bazaar</strong> area for market-side convenience. Because Chiang Mai is compact, none of these are far apart — you can easily visit the others wherever you stay.</p>
+
+<h2>A note on timing and value</h2>
+<p>Chiang Mai is excellent value, with quality boutique hotels at prices well below Western equivalents. Rates rise during the cool high season (November–February) and around big festivals like Yi Peng and Loy Krathong, when the city fills and the best places book out far ahead. Avoid the burning season (roughly February–April), when air quality drops. Compare current rates rather than a fixed figure, and convert with a live tool:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Where should I stay in Chiang Mai for the first time?</summary><div><p>The Old City — it's central, walkable, and surrounded by temples, with accommodation from budget guesthouses to boutique hotels. It puts you in the heart of historic Chiang Mai.</p></div></details>
+  <details><summary>What's the Nimman area like?</summary><div><p>Trendy and modern: specialty cafés, design shops, rooftop bars, and a young crowd including digital nomads. Choose it for café culture and nightlife over temple-side atmosphere.</p></div></details>
+  <details><summary>Is Chiang Mai expensive to stay in?</summary><div><p>No — it's great value, with quality boutique hotels well below Western prices. Rates rise in the cool high season and around major festivals, when the best places book out early.</p></div></details>
+  <details><summary>Does it matter which area I choose in Chiang Mai?</summary><div><p>Less than in Bangkok, because the city is compact and the areas are close together. Pick by vibe — Old City for temples, Nimman for cafés, Riverside for calm — and you can easily visit the others.</p></div></details>
+</section>
+
+
+----- SLUG: 3-weeks-in-thailand-itinerary -----
+TITLE: 3 Weeks in Thailand: Bangkok, North, and Islands
+CATEGORY: two-weeks
+
+<p>Three weeks in Thailand is a luxury of time that lets you move from highlight-chasing to genuine travel: you can linger in places you love, add destinations most itineraries skip, and build in the slow, unscheduled days that make a trip restorative rather than exhausting. Here's how to spend three weeks covering Bangkok, the full north, and a proper island stretch — without rushing.</p>
+
+<p>Confirm your entry requirements before booking, since a three-week stay sits closer to the visa-exemption limits that have been changing in 2026. U.S. tourists enter visa-free, but verify the current permitted length for your travel date, and file the free Thailand Digital Arrival Card (TDAC) online before you fly.</p>
+
+<!-- IMAGE_SLOT_1: A sweeping, aspirational Thailand montage — temple, mountain, and island -->
+
+<h2>Week 1: Bangkok and central Thailand</h2>
+<p>Give the capital and its surroundings a full, unhurried week. Spend the first <strong>three or four days in Bangkok</strong> — the temple core, markets, street food, rooftops, a cooking class — then use the rest of the week on <strong>central Thailand</strong>, which most short trips skip entirely. Day-trip or overnight to <strong>Ayutthaya</strong> (the ancient capital's ruins), <strong>Kanchanaburi</strong> (the River Kwai and WWII history plus nearby waterfalls and national parks), and the floating markets. This is the kind of depth a shorter trip never allows.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Bangkok + Ayutthaya + Kanchanaburi tours -->
+
+<h2>Week 2: the north in depth</h2>
+<p>Fly to <strong>Chiang Mai</strong> and spend a full week exploring the north properly. Cover the <strong>Old City temples</strong>, <strong>Doi Suthep</strong>, a <strong>cooking class</strong>, and an <strong>ethical elephant sanctuary</strong> in the first few days, then range further: <strong>Chiang Rai</strong> for the White and Blue Temples, the laid-back mountain town of <strong>Pai</strong>, and <strong>Doi Inthanon National Park</strong> for Thailand's highest peak. With a week you can slow down and actually absorb the Lanna north rather than sprinting through it.</p>
+
+<!-- IMAGE_SLOT_2: Northern Thailand mountains, Chiang Rai's White Temple, or elephants in green -->
+
+<!-- AFFILIATE_SLOT: getyourguide — northern Thailand tours / elephant sanctuary -->
+
+<h2>Week 3: the islands, properly</h2>
+<p>Now reward yourself with a genuine island stretch. Fly south and split the week between <strong>two or even three islands</strong> on the same coast: in the Andaman season (November–April), pair Krabi or Phuket with quieter Koh Lanta or Koh Phi Phi; mid-year, do Koh Samui with Koh Phangan or Koh Tao. A full week lets you take a diving course, do several boat trips, and still have empty beach days. End back in Bangkok for your flight home.</p>
+
+<!-- AFFILIATE_SLOT: booking — island hotels for the final week -->
+
+<h2>How to use three weeks well</h2>
+<p>The temptation with three weeks is to cram in everywhere; resist it. The magic of a longer trip is <strong>depth, not breadth</strong> — staying three or four nights in places you'd normally rush through, returning to a beach you loved, taking a multi-day course. Build in <strong>buffer and rest days</strong>, especially between regions, and don't book every night in advance — leaving some flexibility lets you extend a stay that's going well. Move between regions by short <strong>domestic flights</strong>, but consider one scenic overnight train (Bangkok–Chiang Mai) since you have the time.</p>
+
+<h2>Budgeting three weeks</h2>
+<p>A longer trip spreads the big international airfare across more days, lowering the daily average, while your variable costs — domestic flights, ferries, hotels, tours, and food — scale with how you travel. Thailand's low day-to-day costs make three weeks more affordable than the same length in most destinations. Use a live converter rather than any fixed number:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is three weeks too long for Thailand?</summary><div><p>Not at all — three weeks lets you see Bangkok and central Thailand, the full north, and a proper island stretch without rushing, with room for slow days. There's easily enough to fill it.</p></div></details>
+  <details><summary>What can I add with three weeks that shorter trips skip?</summary><div><p>Central Thailand (Ayutthaya, Kanchanaburi), deeper northern travel (Chiang Rai, Pai, Doi Inthanon), a second or third island, and multi-day activities like a diving course — plus genuine rest days.</p></div></details>
+  <details><summary>Do I need to worry about the visa for three weeks?</summary><div><p>Three weeks is closer to the visa-exemption limits, which have been changing in 2026. U.S. tourists enter visa-free, but confirm the current permitted length for your dates and file the free TDAC before flying.</p></div></details>
+  <details><summary>Should I plan every night in advance?</summary><div><p>No — leave some flexibility. Part of the value of three weeks is being able to extend a stay that's going well or change plans, so book the fixed points and keep some nights open.</p></div></details>
+</section>
+
+
+----- SLUG: bangkok-first-timer-guide -----
+TITLE: Bangkok First-Timer's Guide: Everything You Need to Know
+CATEGORY: bangkok
+
+<p>Bangkok overwhelms first-timers in the best and worst ways: it's hot, vast, chaotic, and intense, but also one of the world's great cities for food, temples, markets, and nightlife. A little orientation transforms it from exhausting to exhilarating. Here's everything you need to know before your first visit.</p>
+
+<!-- IMAGE_SLOT_1: A classic Bangkok scene — temple spires, the river, and the skyline -->
+
+<h2>How long to stay</h2>
+<p>Two to three days is the sweet spot for a first visit — enough to see the headline temples, eat well, hit a market, and enjoy a rooftop sunset, without burning out on the heat and intensity. Many travelers do two days on arrival and save a final day for the end of the trip before flying home.</p>
+
+<h2>Where to stay</h2>
+<p>For a first visit, base near the <strong>BTS Skytrain</strong> — it's the key to beating Bangkok's traffic. <strong>Sukhumvit</strong> (around Asok or Thonglor) is the easiest, most convenient choice. The <strong>Riverside / Old Town</strong> is more atmospheric and close to the temples but less connected to the metro. Budget travelers gravitate to the <strong>Khao San</strong> area near the Old Town.</p>
+
+<!-- AFFILIATE_SLOT: booking — Bangkok hotels by area -->
+
+<h2>Getting around</h2>
+<p>The golden rule: <strong>avoid road traffic wherever possible.</strong> Use the <strong>BTS Skytrain</strong> and <strong>MRT metro</strong> (clean, cheap, air-conditioned, and they skip the gridlock), the <strong>Chao Phraya river boats</strong> for the temple area, and <strong>Grab</strong> for door-to-door rides at clear prices. Tuk-tuks are fun but negotiate hard and aren't cheaper than Grab. Taxis are fine if metered. Staying near a Skytrain station is the single best decision for getting around efficiently.</p>
+
+<h2>What to see and do</h2>
+<p>The essentials for a first visit: the <strong>Grand Palace and Wat Phra Kaew</strong> (the Emerald Buddha), <strong>Wat Pho</strong> (the Reclining Buddha and Thai massage), and <strong>Wat Arun</strong> (the Temple of Dawn, best at sunset). Beyond the temples: the vast <strong>Chatuchak Weekend Market</strong>, a <strong>Chinatown (Yaowarat)</strong> street-food crawl, a canal (khlong) boat ride, a Thai cooking class, and a <strong>rooftop bar</strong> for the skyline. Easy day trips include <strong>Ayutthaya</strong> and the floating markets.</p>
+
+<!-- IMAGE_SLOT_2: Bangkok street food or a bustling market scene at night -->
+
+<!-- AFFILIATE_SLOT: getyourguide — Bangkok tours and experiences -->
+
+<h2>Temple etiquette and dress</h2>
+<p>Temples enforce a dress code: <strong>cover your shoulders and knees</strong>, and remove your shoes before entering temple buildings. Dress modestly at the Grand Palace especially, or you'll be turned away (or have to rent a cover-up). Always treat Buddha images respectfully, and never climb on or pose disrespectfully with them.</p>
+
+<h2>Safety and etiquette basics</h2>
+<p>Bangkok is generally safe for tourists, but stay alert for common scams — the "the temple is closed today, let me take you somewhere" tuk-tuk gem-shop detour is the classic. Use Grab or metered taxis, keep an eye on belongings in crowds, and be wary of overly helpful strangers steering you to shops. Culturally: <strong>never disrespect the monarchy</strong> (it's a serious crime), don't touch people's heads or point your feet at others or Buddha images, and keep your cool — public anger is deeply frowned upon. A respectful, easygoing manner goes a long way.</p>
+
+<h2>Practical tips</h2>
+<p>Carry <strong>cash</strong> for street food, markets, and tuk-tuks (cards work in malls and hotels). Stay hydrated and pace yourself in the heat — temples in the cool morning, air-conditioned malls or spas in the afternoon. Get a <strong>local SIM or eSIM</strong> for data and Grab. And don't try to see everything: Bangkok rewards a relaxed pace. Day-to-day costs are low; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>How many days do I need in Bangkok?</summary><div><p>Two to three days for a first visit — enough for the major temples, street food, a market, and a rooftop sunset without burning out on the heat and intensity.</p></div></details>
+  <details><summary>What's the best way to get around Bangkok?</summary><div><p>The BTS Skytrain, MRT metro, and river boats to skip the heavy road traffic, plus Grab for door-to-door rides. Stay near a Skytrain station to save the most time.</p></div></details>
+  <details><summary>What should I wear to Bangkok's temples?</summary><div><p>Cover your shoulders and knees, and remove your shoes before entering temple buildings. The Grand Palace enforces this strictly — dress modestly or rent a cover-up there.</p></div></details>
+  <details><summary>Is Bangkok safe for tourists?</summary><div><p>Generally yes. The main risks are scams (like the tuk-tuk gem-shop detour) and petty theft in crowds. Use Grab or metered taxis, watch your belongings, and be wary of strangers steering you to shops.</p></div></details>
+</section>

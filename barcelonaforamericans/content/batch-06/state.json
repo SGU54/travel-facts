@@ -1,0 +1,23 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll \u2014 trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "barcelonaforamericans",
+  "stage": "writing",
+  "batch": 6,
+  "batches_total": 15,
+  "batch_status": "written_gated",
+  "published_slugs": [
+    "sagrada-familia-tickets-guide",
+    "park-guell-tickets-guide",
+    "where-to-stay-in-barcelona",
+    "3-days-in-barcelona",
+    "bcn-airport-to-city",
+    "casa-batllo-vs-casa-mila",
+    "sagrada-familia-towers-guide",
+    "montserrat-day-trip",
+    "barcelona-metro-transit-guide",
+    "airbnb-barcelona-rental-crackdown"
+  ],
+  "updated_at": "2026-06-13",
+  "notes": "TIER 1 COMPLETE \u2014 29 of 72 articles written. BATCH 1+2 PUBLISHED (10 live). BATCHES 3,4,5 gated clean (import-batch-03/04/05.json) \u2014 user publishing. BATCH 6 WRITTEN+GATED clean (import-batch-06.json): best-hotels-first-timers-barcelona, best-beach-hotels-barcelona, best-family-hotels-barcelona, luxury-hotels-barcelona (1000-1069w, FAQ x5, figs x2, maps on all 4, cloud dsrkwieur, affiliate booking x4, NO links yet). Batch 6 = final T1 hotel roundups, written by AREA/TYPE not named properties (luxury names only landmark institutions: W Barcelona, Hotel Arts, Mandarin Oriental, Majestic, with confirm caveat). TOURIST TAX verified official (effective 1 Apr 2026): 5-star \u20ac12.00, 4-star \u20ac8.40, tourist apts \u20ac9.50, hostels \u20ac6.00; per person, 16+, first 7 nights; \u20ac15 is FUTURE ceiling not current. GATE: single file (canary all 4). Grok: no findings. DeepSeek: 3 findings applied \u2014 beach tax got age/7-night detail; luxury surcharge parenthetical trimmed; \u20ac15 reference REMOVED from both body AND faq (new corrections #10: never surface the \u20ac15 press figure even to debunk it \u2014 state only current IEET rate + 'rates rising'). Readers Grok+DeepSeek; Gemini banned. corrections.json now 10 entries. NEXT: TIER 2 begins (batch 7). 43 T2/T3 articles remain. STRONG SUGGESTION: publish backlog (batches 3-6 = 19 articles staged) before writing more, so written vs live don't drift. DEFERRED to end: internal links + affiliates whole-site pass; monetization PDF idea (trip-pack upsell, post-content); admin View-article link (TODO-admin-view-link.md); apply template-patch.zip + skill-patch.md (now incl PATCH 8 file-handoff rule) before site #3; delete orphan Cloudinary vmarokko/articles/barcelonaforamericans/."
+}

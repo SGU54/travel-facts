@@ -1,0 +1,244 @@
+{
+ "_README": "Batch 19 facts (D-insure + D-entry) — reconciled 2026-07-24 from deepseek+grok, rulings in disputes-batch19.md. ENTIRELY YMYL. Merge into thailandforamericans/facts.json.",
+ "_reconciled_from": [
+  "deepseek",
+  "grok",
+  "claude-web-verify"
+ ],
+ "_produced_at": "2026-07-24",
+ "_STATUS_RULING": "deepseek marked 24 of 40 facts 'verified' against an explicit instruction to default to verify_recommended. Auditing the source URLs: only 2 of those 24 cite an official government source. The other 22 cite visa agencies (shathailand.com, thailandelite.net), hospital marketing pages, an insurer's own claims page, and a booking site. Those are DOWNGRADED to verify_recommended here. Where I independently confirmed a fact against a Thai embassy or .go.th immigration source, it is marked verified with THAT source, not the model's.",
+ "immigration_mechanics": {
+  "_note": "Independently web-verified against Royal Thai Embassy and Thai immigration sources. Both panel members agreed on every number here before verification.",
+  "overstay_fine": {
+   "value": "500 baht per day, capped at 20,000 baht — the cap is reached at 40 days and the fine stops accumulating after that",
+   "source_url": "https://washingtondc.thaiembassy.org/en/page/advice-on-thailand-visa-overstay-regulations",
+   "status": "verified",
+   "notes": "Both panel members agreed; confirmed against Royal Thai Embassy Washington DC. Also confirmed at bucharest.thaiembassy.org and samutprakanimmigration.go.th."
+  },
+  "overstay_short_waiver": {
+   "value": "For an overstay of a few hours caused by a flight delay or schedule change, the fine is usually waived when explained to the immigration officer at departure",
+   "source_url": "https://washingtondc.thaiembassy.org/en/page/advice-on-thailand-visa-overstay-regulations",
+   "status": "verified",
+   "notes": "Stated directly by the embassy. Neither panel member surfaced this and it is the most reassuring fact in the section."
+  },
+  "overstay_ban_voluntary": {
+   "value": "Surrendering voluntarily: under 90 days is a fine with no re-entry ban; over 90 days brings a 1-year ban; over 1 year a 3-year ban; over 3 years a 5-year ban; over 5 years a 10-year ban",
+   "source_url": "https://www.samutprakanimmigration.go.th/warning-of-overstay-in-thailand/",
+   "status": "verified",
+   "notes": "Thai immigration .go.th source confirms the 90-day and 1-year thresholds. Both panel members gave the same ladder."
+  },
+  "overstay_caught_vs_surrender": {
+   "value": "Being caught rather than surrendering carries substantially harsher consequences including detention and a longer ban; the cash fine is the same either way",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree on the structure. Exact ban lengths when caught differ across sources, so only the direction is stated."
+  },
+  "where_fine_is_paid": {
+   "value": "At the immigration counter on departure, at an airport or land border; officers calculate the days, collect the fine and issue a receipt",
+   "source_url": "https://washingtondc.thaiembassy.org/en/page/advice-on-thailand-visa-overstay-regulations",
+   "status": "verified",
+   "notes": "Embassy also notes that travellers unable to pay may be held until funds are raised."
+  },
+  "extension_length": {
+   "value": "30 days",
+   "source_url": "https://th.usembassy.gov/thai-visas-for-americans/",
+   "status": "verified",
+   "notes": "Both panel members agreed; grok cited the US Embassy in Thailand."
+  },
+  "extension_fee": {
+   "value": "1,900 baht",
+   "source_url": "https://th.usembassy.gov/thai-visas-for-americans/",
+   "status": "verified",
+   "notes": "Both agreed exactly."
+  },
+  "extension_where": {
+   "value": "At a Thai Immigration Bureau office",
+   "source_url": "https://th.usembassy.gov/thai-visas-for-americans/",
+   "status": "verified"
+  },
+  "extension_documents": {
+   "value": "TM7 application form, passport, a passport photo, and copies; proof of address may be requested",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree on the core list. DS added detail from a visa agency page — downgraded."
+  },
+  "extension_processing": {
+   "value": "Usually same day if filed early in the day",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "extension_how_many": {
+   "value": "Commonly once per entry for a visa exemption or tourist visa; anything beyond that is discretionary",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. CHANGE-PRONE."
+  },
+  "tdac": {
+   "value": "The Thailand Digital Arrival Card replaced the paper TM6 in May 2025. It is mandatory, free, filed online before arrival",
+   "source_url": "https://tdac.immigration.go.th/",
+   "status": "verified",
+   "notes": "Both agree. Official Thai immigration domain. DS says within 3 days of arrival — filing window is CHANGE-PRONE, do not state a precise window without re-checking."
+  },
+  "onward_ticket_enforcement": {
+   "value": "Checked primarily by airlines at check-in rather than by immigration on arrival",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. Practically important: the airline is the party that turns people away."
+  },
+  "proof_of_funds": {
+   "value": "A funds requirement exists in the regulations — commonly cited as 20,000 baht per person or 40,000 per family — but it is not routinely checked in practice",
+   "source_url": "https://budapest.thaiembassy.org/en/publicservice/tourist-visa-tr",
+   "status": "verify_recommended",
+   "notes": "DS cited a Thai embassy page for the amounts. Enforcement reality is the unsourced half; stated as the gap it is."
+  },
+  "entry_stamp_check": {
+   "value": "Verify the 'admitted until' date written on the entry stamp before leaving the immigration desk",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. The date on the stamp governs, not the traveller's assumption about the exemption length."
+  },
+  "border_run_status": {
+   "value": "Leaving and re-entering produces a new entry stamp, but repeated back-to-back entries attract additional scrutiny and are not guaranteed",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. HIGHLY CHANGE-PRONE — policy has tightened repeatedly."
+  }
+ },
+ "medical_mechanics": {
+  "_note": "Category-level only. Never adjudicate a specific policy, never name an insurer as good or bad.",
+  "emergency_number": {
+   "value": "1669 for medical emergencies nationwide; 1155 for the Tourist Police, which is English-speaking",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both gave 1669. DS added 1155 Tourist Police, which is the more useful number for a visitor with a language barrier."
+  },
+  "direct_billing_vs_reimbursement": {
+   "value": "Private Thai hospitals commonly require payment or a guarantee of payment before treating a foreign patient. Direct billing happens where the insurer issues a guarantee to that hospital; otherwise the patient pays and claims back afterwards",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. THE MOST PRACTICALLY IMPORTANT MECHANIC IN THE BATCH — it decides whether a traveller needs funds available at the moment of the emergency."
+  },
+  "guarantee_of_payment": {
+   "value": "A guarantee of payment is the document an insurer issues to a hospital to enable direct billing; obtaining one means contacting the insurer's assistance line rather than the hospital",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "DS supplied the mechanism; GK described the same thing less specifically."
+  },
+  "evacuation_vs_repatriation": {
+   "value": "Evacuation moves a patient to the nearest facility able to treat them. Repatriation returns them to their home country. They are separate coverages and a policy may include one without the other",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. Commonly conflated by travellers."
+  },
+  "interruption_vs_cancellation": {
+   "value": "Cancellation applies before departure; interruption applies once the trip has started. Interruption is the one that speaks to problems encountered abroad",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "claim_process": {
+   "value": "Notify the insurer's assistance line as early as possible, ideally before treatment; obtain itemised bills and medical reports from the hospital; submit for reimbursement where direct billing was not arranged",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree on the sequence."
+  },
+  "documentation": {
+   "value": "Itemised receipts, the doctor's report and proof of payment are what Thai hospitals issue and what insurers typically require",
+   "source_url": null,
+   "status": "verify_recommended"
+  },
+  "common_exclusions": {
+   "value": "Pre-existing conditions without a waiver, adventure activities without a rider, incidents involving alcohol or illegal acts, and routine or non-emergency care",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. CATEGORY LEVEL — no insurer named."
+  },
+  "adventure_exclusions": {
+   "value": "Motorbike riding, scuba diving, zip-lining and rock climbing are commonly excluded or require a rider",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. Connects to the existing scooter article without repeating it."
+  },
+  "pre_existing_conditions": {
+   "value": "Commonly excluded unless a waiver is purchased, typically requiring the condition to have been stable for a defined period",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree on the shape; the stability period varies by policy and is not stated here."
+  },
+  "payment_upfront": {
+   "value": "Private hospitals typically require payment or a guarantee before non-emergency treatment",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "public_vs_private": {
+   "value": "Private hospitals cost more and generally offer English-speaking staff and shorter waits; public hospitals cost less with longer waits and more variable English",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "pharmacy_scope": {
+   "value": "Thai pharmacies dispense many medications over the counter that would require a prescription in the United States",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. Deliberately NOT listing which drugs — that would be medical advice."
+  },
+  "consultation_cost": {
+   "value": null,
+   "source_url": null,
+   "status": "serve_live",
+   "notes": "VOLATILE. GK gave 1,000-5,000 baht for a private outpatient consultation; single-source and price-like, so not frozen into prose."
+  }
+ },
+ "island_medical": {
+  "_note": "The sharpest sub-topic — the corpus has nothing on it.",
+  "facilities_by_island": {
+   "value": "Koh Samui and Phuket have full private hospitals. Koh Phangan, Koh Tao, Koh Lanta and Koh Chang have clinics or basic facilities rather than full hospitals",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree on the split. DS sourced it to hospital marketing pages — downgraded, but the substance is corroborated by both."
+  },
+  "hyperbaric_chambers": {
+   "value": "Koh Tao has hyperbaric chamber facilities, which matters because it is one of the world's busiest dive-training destinations. Koh Phangan and Phuket also have chambers",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree Koh Tao has one. DS adds Phangan and Phuket, and states Koh Samui does not — that last claim is single-source and is NOT written into prose."
+  },
+  "transfer_to_bangkok": {
+   "value": "By boat plus ambulance, or by air ambulance where the island has an airstrip and the case warrants it",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "who_arranges": {
+   "value": "The insurer's assistance line coordinates evacuation with local providers; it is not arranged by the patient or typically by the treating clinic",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. Practically important: the number to call is the insurer's, not an ambulance service."
+  },
+  "evacuation_cost": {
+   "value": "Costs run into the tens of thousands of US dollars, with dedicated air ambulance at the higher end",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "RULED. DS gave $10,000-50,000+; GK gave 'tens to hundreds of thousands'. They overlap at the lower bound only, so the shared floor is stated as an order of magnitude rather than either range."
+  },
+  "timing": {
+   "value": null,
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "UNSOURCED. GK said 'hours to same day' unsourced; DS gave a range from a commercial page. Not written into prose."
+  }
+ },
+ "_open_questions": {
+  "_note": "Carried from both panel members plus the verification pass.",
+  "items": [
+   "Exact TDAC filing window — DS says within 3 days of arrival, unconfirmed against the official site and highly change-prone",
+   "Ban lengths when caught rather than surrendering — sources disagree",
+   "Whether Koh Samui has a hyperbaric chamber — single-source negative claim, not published",
+   "Island-to-Bangkok medical transfer timing — no reliable figure",
+   "Pre-existing condition waiver stability periods — vary by policy, not generalisable",
+   "Typical private consultation cost — single-source and volatile"
+  ]
+ }
+}

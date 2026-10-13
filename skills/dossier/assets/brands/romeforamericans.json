@@ -1,0 +1,20 @@
+{
+  "project": "romeforamericans",
+  "title": "Rome, Solved.",
+  "brand_name": "La Tavola",
+  "note": "Print palette. Derived from the site's cream/espresso/terracotta identity and darkened for ink on paper — NOT lifted verbatim from globals.css (the site's --ink is #241C16; print wants #2B241A). Fonts differ from the site by design: the site runs Cormorant Garamond + Source Sans 3; the book runs IM Fell English for its 17th-century Roman register.",
+  "palette": {
+    "paper": "#F6EEDB", "ink": "#2B241A", "accent": "#8A3324", "gilt": "#C9A84C",
+    "muted": "#7A6B4E", "soft": "#9C8C6B", "line": "#DED0AF", "line_soft": "#E7DCC0",
+    "zone": "#E9DEC2", "stone": "#E3D6B4", "deep": "#6E241D", "water": "#CFD8CE"
+  },
+  "fonts": {
+    "display": "IM Fell English",
+    "display_note": "NO bold weight exists — never font-weight:bold on it",
+    "body": "Sorts Mill Goudy",
+    "mono": "IBM Plex Mono"
+  },
+  "page": { "size": "8.5x11in", "margin": "0.85in", "viewport": "816x1056" },
+  "audience": "first-time American visitors",
+  "price_band": "USD 29-39"
+}

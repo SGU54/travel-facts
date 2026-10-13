@@ -1,0 +1,105 @@
+You are filling a structured travel facts file. Follow these rules EXACTLY.
+
+PROJECT: barcelonaforamericans — Spain for American travelers.
+AUDIENCE: American passport holders, flying from JFK, EWR, ORD, MIA, LAX, thinking in USD. Frame visa rules for THEIR passports, flights from THEIR hubs, money in THEIR terms.
+LOCALE: language en-US, units imperial.
+
+The site will contain exactly these articles — your facts and recommendation pools must cover what THEY need, nothing generic:
+- Bringing Medication into Spain (plan-your-trip)
+- Getting Treated in Barcelona: Pharmacy, Clinic or ER (plan-your-trip)
+- What to Expect When a Spanish Hospital Bills You (plan-your-trip)
+- Ferries from Barcelona to the Balearics: Fast vs Slow (getting-around)
+- When a Balearic Ferry Cancels, and What You're Owed (getting-around)
+- What Closes on a Spanish Public Holiday (plan-your-trip)
+
+OUTPUT RULES (non-negotiable):
+1. Return ONLY valid JSON, in EXACTLY the structure below. Do not rename, remove, reorder, or restructure any key. Fill VALUES only. If you cannot fill a value, use null — never delete the key.
+2. Fill EVERY section. Do not skip any. Do not summarize. No preamble, no markdown fences, no commentary — the very first character of your reply must be "{".
+3. Set _meta.ai_source to "deepseek" and _meta.produced_at to today's date.
+4. Be honest with each fact's "status". Volatile values (exchange rates, flight/ticket prices) stay status "serve_live" with at most a rough note — never a hard number presented as durable.
+5. For recommendations, give YOUR genuine strong picks (rank "core"). Do not pad.
+6. Anything you are genuinely unsure about goes into _open_questions. Honesty beats confidence.
+
+THE TEMPLATE TO FILL:
+{
+  "_README": "TOPICAL TEMPLATE — Stage 2 scoped fact-build for 3 domains ABSENT from the standard facts-template.json (health/pharmacy/hospital billing, Balearic ferries, public holidays/closures). Same contract as the standard template: do NOT change field NAMES or STRUCTURE, fill VALUES only, keep every key (null if you can't fill it). Frame everything for the audience in _meta. STATUS MODEL: 'verified' = confirmed against an OFFICIAL source (URL in source_url); 'agreed_stable' = confident, no source opened; 'verify_recommended' = change-prone or high-stakes, flag it; 'serve_live' = volatile, must NOT be frozen (prices, exchange-driven costs). Return ONLY valid JSON in EXACTLY this structure. Fill EVERY section.",
+
+  "_meta": {
+    "schema_version": 1,
+    "project": "FILL e.g. barcelonaforamericans",
+    "country": "",
+    "country_iso": "",
+    "audience": {
+      "nationality": "FILL e.g. American",
+      "home_hubs": ["FILL"],
+      "home_currency": "FILL e.g. USD"
+    },
+    "locale": { "site_language": "FILL", "units": "FILL", "money_framing": "FILL" },
+    "ai_source": "FILL: claude | chatgpt | gemini | grok | deepseek",
+    "produced_at": "YYYY-MM-DD"
+  },
+
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status (verified|agreed_stable|verify_recommended|serve_live), notes }. For 'verified' the source_url MUST be the official page you checked. Never invent a source.",
+
+  "health_care": {
+    "_note": "Covers: Bringing Medication into Spain / Getting Treated in Barcelona: Pharmacy, Clinic or ER / What to Expect When a Spanish Hospital Bills You. YMYL — be conservative, prefer verify_recommended over agreed_stable.",
+    "medication_import": {
+      "prescription_medication_rules": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "quantity limits (e.g. ~personal supply for trip length), need for original packaging / doctor's letter or prescription copy" },
+      "controlled_substances_note": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "narcotics/psychotropics — Schengen certificate requirement for travelers carrying controlled meds across borders" },
+      "customs_declaration_threshold": { "value": null, "source_url": null, "status": "verify_recommended" },
+      "official_source_url": { "value": null }
+    },
+    "pharmacy_system": {
+      "farmacia_identification": { "value": null, "source_url": null, "status": "agreed_stable", "notes": "the green cross sign" },
+      "farmacia_de_guardia": { "value": null, "source_url": null, "status": "agreed_stable", "notes": "24h rotating duty-pharmacy system — how a tourist finds the open one" },
+      "otc_vs_prescription_differences": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "things OTC in Spain but Rx-only in the US or vice versa" },
+      "pharmacist_role": { "value": null, "source_url": null, "status": "agreed_stable", "notes": "Spanish pharmacists routinely advise/treat minor ailments directly" }
+    },
+    "clinic_vs_er": {
+      "private_clinic_access": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "walk-in private clinics for tourists — typical cost range" },
+      "public_hospital_er_access": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "urgencias access for non-residents, triage-based, whether insurance card is asked for AT the door" },
+      "when_to_choose_which": { "value": null, "notes": "RECOMMENDATION — minor issue vs true emergency (112) decision guide" }
+    },
+    "hospital_billing": {
+      "billing_model_public": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "does a public hospital bill a non-EU tourist directly, and when — at discharge or by mail" },
+      "billing_model_private": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "upfront payment / card guarantee expectations" },
+      "typical_costs": { "value": null, "status": "serve_live", "notes": "rough ranges only: ER visit, ambulance ride, one overnight stay — never frozen as durable prices" },
+      "travel_insurance_necessity": { "value": null, "notes": "RECOMMENDATION — is it a hard requirement in practice for this audience" },
+      "what_to_keep_for_reimbursement": { "value": null, "source_url": null, "status": "agreed_stable", "notes": "itemized invoice / informe médico / payment receipts for a US insurer claim" }
+    }
+  },
+
+  "ferries_balearics": {
+    "_note": "Covers: Ferries from Barcelona to the Balearics: Fast vs Slow / When a Balearic Ferry Cancels, and What You're Owed.",
+    "operators": { "value": [], "source_url": null, "status": "agreed_stable", "notes": "e.g. Trasmediterránea, Baleària — who actually runs Barcelona-Balearics" },
+    "port_terminal": { "value": null, "source_url": null, "status": "agreed_stable", "notes": "which Port de Barcelona terminal, how to get there from the center" },
+    "routes_and_durations": {
+      "to_palma_mallorca": { "value": null, "status": "serve_live", "notes": "fast vs slow ferry duration + rough price range" },
+      "to_ibiza": { "value": null, "status": "serve_live" },
+      "to_menorca": { "value": null, "status": "serve_live", "notes": "note if it's direct or routed via Mallorca/Valencia, and seasonality" }
+    },
+    "fast_vs_slow_tradeoffs": { "value": null, "notes": "RECOMMENDATION — price/time/overnight-cabin tradeoff, who should pick which" },
+    "booking_advice": { "value": null, "source_url": null, "status": "agreed_stable", "notes": "how far ahead in summer, walk-on vs car ferry, aggregator vs operator site" },
+    "cancellation_policy": {
+      "typical_causes": { "value": null, "source_url": null, "status": "agreed_stable", "notes": "e.g. wind/sea state thresholds" },
+      "passenger_rights": { "value": null, "source_url": null, "status": "verify_recommended", "notes": "EU ferry passenger rights regulation — compensation, rerouting, care obligations" },
+      "operator_rebooking_practice": { "value": null, "source_url": null, "status": "verify_recommended" },
+      "travel_insurance_interaction": { "value": null, "notes": "does standard travel insurance cover a missed connection from a cancelled ferry" }
+    }
+  },
+
+  "public_holidays_closures": {
+    "_note": "Covers: What Closes on a Spanish Public Holiday (and feeds the existing barcelona-august-shutdown article as a targeted addition). Dates are change-prone per year — flag accordingly.",
+    "national_holidays": { "value": [], "source_url": null, "status": "verify_recommended", "notes": "[{name, typical_date}] — Spain-wide fixed public holidays" },
+    "catalonia_regional_holidays": { "value": [], "source_url": null, "status": "verify_recommended", "notes": "[{name, typical_date}] — Catalonia-specific (e.g. Sant Esteve, Diada)" },
+    "barcelona_local_holidays": { "value": [], "source_url": null, "status": "verify_recommended", "notes": "[{name, typical_date}] — city-specific (e.g. La Mercè, Santa Eulàlia)" },
+    "what_typically_closes": { "value": null, "source_url": null, "status": "agreed_stable", "notes": "shops (small vs chain), restaurants, banks, museums, transit schedule ('horario festivo')" },
+    "august_shutdown_specifics": { "value": null, "status": "verify_recommended", "notes": "how widespread, typical closure window, what stays open (malls, tourist-facing restaurants, museums) — feeds barcelona-august-shutdown" },
+    "advance_planning_note": { "value": null, "notes": "RECOMMENDATION — booking restaurants/checking attraction hours around these dates" }
+  },
+
+  "_open_questions": {
+    "_note": "Anything genuinely unsure / conflicting / needing a real source. Be honest.",
+    "value": []
+  }
+}

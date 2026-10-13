@@ -1,0 +1,450 @@
+You are a fact-and-consistency checker for travel articles. Below are articles plus the facts file they were written from. Find ONLY IN-CONTEXT ERRORS: a claim stated two different ways; a recommendation contradicting the facts file; an out-of-scope place; an internal contradiction; a claim factually wrong for Thailand.
+RULES: (1) Do NOT flag serve_live items (exchange rates, prices, visa day-count) for being hedged — that is correct. (2) Flight DURATIONS and stable facts are fine. (3) Only genuine errors; if an article is clean, say "clean". (4) Short list per slug.
+
+=== FACTS FILE ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_aro
+
+=== ARTICLES ===
+
+
+----- SLUG: best-things-to-do-bangkok -----
+TITLE: The Best Things to Do in Bangkok
+CATEGORY: bangkok
+
+<p>Bangkok rewards the curious. Beyond the famous temples lies a city of street-food alleys, weekend markets the size of small towns, canal neighborhoods, and some of the best rooftop bars on the planet. Whether it's your first visit or your fifth, here are the best things to do — the essentials you shouldn't miss and a few experiences that go deeper.</p>
+
+<!-- IMAGE_SLOT_1: A vibrant Bangkok collage feel — temple, market, and skyline -->
+
+<h2>See the headline temples</h2>
+<p>Start with the big three. The <strong>Grand Palace and Wat Phra Kaew</strong> house the revered Emerald Buddha and are Bangkok's most spectacular sight (strict dress code — cover shoulders and knees). A short walk away, <strong>Wat Pho</strong> holds the enormous gold Reclining Buddha and is the birthplace of Thai massage — a foot massage in its school is the perfect break. Across the river, <strong>Wat Arun</strong>, the Temple of Dawn, is most beautiful at sunset. Together they're a half to full day and the cultural heart of any Bangkok visit.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Bangkok temple tour -->
+
+<h2>Eat your way through the city</h2>
+<p>Bangkok is one of the world's great food cities, and eating is itself a top activity. Crawl the street stalls of <strong>Chinatown (Yaowarat)</strong> in the evening, try boat noodles and mango sticky rice, and consider a guided <strong>street-food tour</strong> to find the best stalls without the guesswork. A <strong>Thai cooking class</strong> — many include a market visit — is one of the most popular and rewarding half-days in the city, and you'll bring the skills home.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — street food tour / cooking class -->
+
+<h2>Explore the markets</h2>
+<p>Markets are Bangkok at its most alive. The vast <strong>Chatuchak Weekend Market</strong> has thousands of stalls selling everything imaginable — go early, wear comfortable shoes, and be ready to get lost. For something different, take a boat to a <strong>floating market</strong> like Damnoen Saduak or the more local Amphawa. The night markets and the riverside <strong>ICONSIAM</strong> mall round out the shopping.</p>
+
+<!-- IMAGE_SLOT_2: Chatuchak market stalls or a colorful floating market scene -->
+
+<h2>Get on the water</h2>
+<p>Bangkok grew up around the Chao Phraya River and its canals (khlongs), and seeing it from the water is a revelation. Take the public <strong>river ferries</strong> between temples, or book a <strong>long-tail boat</strong> through the quieter canals of Thonburi to glimpse a slower, water-bound side of the city. A dinner cruise is a relaxed way to see the illuminated riverside temples at night.</p>
+
+<h2>Experience the nightlife</h2>
+<p>As the heat fades, Bangkok's evenings come alive. The city is famous for its <strong>rooftop sky bars</strong>, where a sunset drink high above the traffic is unforgettable (smart-casual dress required at most). Beyond the rooftops, there are night markets, live-music venues, and the buzzing nightlife districts — as lively or as low-key as you want.</p>
+
+<h2>Take a day trip</h2>
+<p>When you've had your fill of the city, escape for a day. <strong>Ayutthaya</strong>, the ancient capital, offers atmospheric temple ruins about ninety minutes away. <strong>Kanchanaburi</strong> combines WWII history (the River Kwai) with waterfalls and nature. Both are easy, rewarding breaks from the urban intensity.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Ayutthaya / Kanchanaburi day trips -->
+
+<h2>Planning your time</h2>
+<p>With two or three days, prioritize the temples, a market, a food experience, a river trip, and a rooftop — that covers the essence of Bangkok. Beat the heat by doing outdoor sights in the morning and saving air-conditioned malls or massages for the afternoon, and use the BTS Skytrain and river boats to skip the traffic. Day-to-day costs are low; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What are the must-do things in Bangkok?</summary><div><p>The Grand Palace, Wat Pho, and Wat Arun; a Chinatown street-food crawl or cooking class; the Chatuchak Weekend Market; a river or canal boat trip; and a rooftop bar at sunset.</p></div></details>
+  <details><summary>What's the best food experience in Bangkok?</summary><div><p>An evening street-food crawl through Chinatown (Yaowarat), or a Thai cooking class that includes a market visit. Both are highlights and easy to book.</p></div></details>
+  <details><summary>Is a floating market worth visiting?</summary><div><p>Yes, for the experience — Damnoen Saduak is the famous one, while Amphawa feels more local. They're a half- to full-day trip from the city.</p></div></details>
+  <details><summary>What's a good day trip from Bangkok?</summary><div><p>Ayutthaya for ancient temple ruins (about 90 minutes), or Kanchanaburi for WWII history and waterfalls. Both make a great break from the city.</p></div></details>
+</section>
+
+
+----- SLUG: day-trips-from-bangkok -----
+TITLE: Day Trips from Bangkok Worth Taking
+CATEGORY: bangkok
+
+<p>Bangkok is intense, and one of the best things you can do on a longer visit is escape it for a day. Within a couple of hours of the city lie ancient capitals, floating markets, WWII history, and national parks. Here are the day trips worth taking, with how to reach each and what to expect.</p>
+
+<!-- IMAGE_SLOT_1: Ayutthaya's temple ruins, or a colorful floating market -->
+
+<h2>Ayutthaya — the ancient capital</h2>
+<p>The single most rewarding day trip, <strong>Ayutthaya</strong> was Thailand's capital for four centuries until its destruction in the 18th century, and its atmospheric temple ruins are a UNESCO World Heritage Site. The iconic image — a stone Buddha head wrapped in tree roots at Wat Mahathat — is here, along with sprawling brick temples you can explore by bicycle or tuk-tuk. <strong>Getting there:</strong> about 1.5 hours by train, minivan, or organized tour. <strong>Allow:</strong> a full day.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Ayutthaya day tour -->
+
+<h2>The floating markets</h2>
+<p>A classic Thai experience just outside the city. <strong>Damnoen Saduak</strong> is the famous, photogenic (and touristy) one, with vendors paddling produce-laden boats through the canals; <strong>Amphawa</strong> is more local and atmospheric, busiest in the late afternoon and evening, and known for its fireflies. <strong>Getting there:</strong> 1–2 hours by tour or minivan. <strong>Allow:</strong> a half to full day, often combined with other stops.</p>
+
+<!-- IMAGE_SLOT_2: Vendors in boats at a Thai floating market -->
+
+<h2>Kanchanaburi and the River Kwai</h2>
+<p>West of Bangkok, <strong>Kanchanaburi</strong> combines moving WWII history with beautiful nature. Visit the <strong>Bridge over the River Kwai</strong> and the war cemeteries and museums that tell the story of the "Death Railway," then enjoy the waterfalls of Erawan National Park and the surrounding countryside. <strong>Getting there:</strong> 2–3 hours by train, bus, or tour. <strong>Allow:</strong> a long full day, or better, an overnight.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Kanchanaburi / River Kwai tour -->
+
+<h2>Khao Yai National Park</h2>
+<p>For nature lovers, <strong>Khao Yai</strong> is Thailand's oldest national park, a few hours northeast of Bangkok, with waterfalls, viewpoints, and wildlife including wild elephants, gibbons, and hornbills. The surrounding area has also become a popular wine-and-vineyard region. <strong>Getting there:</strong> about 3 hours; best as an overnight rather than a rushed day trip. <strong>Allow:</strong> ideally a weekend.</p>
+
+<h2>Other options</h2>
+<p>Closer escapes include <strong>Nakhon Pathom</strong> (home to the world's tallest Buddhist monument) and the seaside town of <strong>Hua Hin</strong> for a beach day (about 2.5–3 hours). The <strong>Erawan Museum</strong> and the ancient-city open-air museum of <strong>Muang Boran</strong> on Bangkok's outskirts are quirky half-day alternatives that need far less travel.</p>
+
+<h2>How to do day trips well</h2>
+<p>For the further destinations like Kanchanaburi and Khao Yai, consider an overnight rather than cramming everything into one exhausting day. Organized tours simplify logistics and are good value for places like Ayutthaya and the floating markets, while independent travel by train or minivan is cheap and flexible if you're comfortable navigating. Either way, start early — Bangkok traffic and the heat both reward a dawn departure. Costs are low; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What's the best day trip from Bangkok?</summary><div><p>Ayutthaya, the ancient capital, for its atmospheric UNESCO temple ruins — about 1.5 hours away and easily a full, rewarding day.</p></div></details>
+  <details><summary>Which floating market should I visit?</summary><div><p>Damnoen Saduak is the famous, photogenic one; Amphawa is more local and atmospheric, best in the late afternoon. Both are 1–2 hours from the city.</p></div></details>
+  <details><summary>Is Kanchanaburi worth a day trip?</summary><div><p>Yes — the River Kwai bridge, WWII history, and Erawan waterfalls are moving and beautiful. It's 2–3 hours away, so a long day or an overnight works best.</p></div></details>
+  <details><summary>Should I take a tour or go independently?</summary><div><p>Tours simplify logistics and are good value for Ayutthaya and the floating markets; independent train or minivan travel is cheaper and more flexible. Either way, start early to beat traffic and heat.</p></div></details>
+</section>
+
+
+----- SLUG: island-hopping-thailand -----
+TITLE: Island Hopping in Thailand: How to Plan It
+CATEGORY: beaches-islands
+
+<p>Island hopping is one of the great joys of a Thailand trip — turquoise water, limestone cliffs, and a different beach every few days. But doing it well takes a little planning: Thailand's islands are split across two coasts with opposite seasons, and the boats and ferries connecting them follow patterns worth understanding. Here's how to plan a smooth island-hopping trip.</p>
+
+<!-- IMAGE_SLOT_1: A speedboat or ferry crossing turquoise water between Thai islands -->
+
+<h2>Step 1: choose your coast</h2>
+<p>This is the decision everything else hangs on, because Thailand's two coasts have <strong>opposite weather</strong>. The <strong>Andaman coast</strong> (Phuket, Krabi, Phi Phi, Koh Lanta, Koh Lipe) is best roughly November–April. The <strong>Gulf coast</strong> (Koh Samui, Koh Phangan, Koh Tao) is often best mid-year. Pick the coast that's dry for your dates and hop within it — crossing between the two coasts mid-trip means returning to the mainland and a long transfer, which wastes precious days.</p>
+
+<h2>Step 2: pick your islands</h2>
+<p>Choose a mix of characters. Pair a <strong>lively, well-connected island</strong> (Phuket or Krabi on the Andaman; Koh Samui on the Gulf) with one or two <strong>quieter or more scenic ones</strong> (Koh Lanta, Phi Phi, or Railay; Koh Phangan or Koh Tao). Two to three islands is plenty for a one-to-two-week trip — more than that and you spend your holiday packing and in transit rather than on the beach.</p>
+
+<!-- IMAGE_SLOT_2: A quiet Thai island beach with longtail boats -->
+
+<h2>Step 3: understand the boats</h2>
+<p>Island transport comes in a few forms. <strong>Ferries</strong> are the workhorses — scheduled crossings between major islands and mainland piers, comfortable enough and reasonably priced. <strong>Speedboats</strong> are faster and pricier, good for shorter hops and day trips. <strong>Longtail boats</strong> handle short local transfers (like Ao Nang to Railay). Many routes sell <strong>combined tickets</strong> — bus-plus-ferry or flight-plus-ferry — that handle the whole journey on one booking, which is the easiest way to move between regions.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — island day trips and boat tours -->
+
+<h2>Sample Andaman route (Nov–Apr)</h2>
+<p>Fly into <strong>Krabi</strong> or <strong>Phuket</strong>, spend a few days with island day trips to Phi Phi and Phang Nga Bay, then ferry to <strong>Koh Lanta</strong> or <strong>Koh Phi Phi</strong> for a quieter few days before flying out. Adventurous travelers can continue south to remote <strong>Koh Lipe</strong> near the Malaysian border.</p>
+
+<h2>Sample Gulf route (mid-year)</h2>
+<p>Fly into <strong>Koh Samui</strong> (or via Surat Thani plus ferry), settle in for a few days with a trip to the Ang Thong Marine Park, then ferry to <strong>Koh Phangan</strong> for quieter beaches or <strong>Koh Tao</strong> for world-class diving. The three Gulf islands are close together and well linked by frequent ferries, making this an especially easy hop.</p>
+
+<!-- AFFILIATE_SLOT: booking — island hotels -->
+
+<h2>Practical tips</h2>
+<p><strong>Book ahead in peak season</strong> for both ferries and accommodation. <strong>Travel light</strong> — you'll be loading bags on and off boats. <strong>Choose daytime crossings</strong> so you don't lose beach hours, and bring motion-sickness tablets if you're prone to it. <strong>Build in buffer days</strong>, since weather can occasionally disrupt crossings (especially in the wetter months). And carry <strong>cash</strong>, as smaller islands have limited ATMs and card acceptance. Costs vary by route and season; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>How does island hopping work in Thailand?</summary><div><p>You move between islands by ferry, speedboat, or longtail boat, often on combined bus-plus-ferry or flight-plus-ferry tickets. Pick one coast and hop within it to avoid long transfers.</p></div></details>
+  <details><summary>Which coast is better for island hopping?</summary><div><p>Match it to your season: the Andaman coast (Phuket, Krabi, Phi Phi) November–April; the Gulf (Koh Samui, Phangan, Tao) mid-year. Don't cross between coasts mid-trip.</p></div></details>
+  <details><summary>How many islands should I visit?</summary><div><p>Two or three for a one-to-two-week trip. More than that and you'll spend the holiday packing and in transit rather than enjoying the beaches.</p></div></details>
+  <details><summary>Do I need to book ferries in advance?</summary><div><p>In peak season, yes — book ferries and accommodation ahead. Combined tickets simplify longer journeys, and daytime crossings save your beach hours.</p></div></details>
+</section>
+
+
+----- SLUG: chiang-mai-first-timer-guide -----
+TITLE: Chiang Mai First-Timer's Guide
+CATEGORY: chiang-mai-north
+
+<p>Chiang Mai is the relaxed, cultural counterpoint to Bangkok's intensity: a walkable old city ringed by mountains, full of temples, cooking schools, markets, and the country's most ethical elephant experiences. It's many travelers' favorite place in Thailand. Here's everything you need to know for a first visit.</p>
+
+<!-- IMAGE_SLOT_1: Chiang Mai's old-city temples or the mountain temple Doi Suthep -->
+
+<h2>How long to stay</h2>
+<p>Three to four days is ideal for a first visit — enough to cover the old-city temples, the mountain temple Doi Suthep, a cooking class, and a full day at an elephant sanctuary, with time for the markets. Add more days if you want to range further to Chiang Rai, Pai, or the national parks.</p>
+
+<h2>Where to stay</h2>
+<p>For a first trip, base in or near the <strong>Old City</strong>, the moated historic square where many temples, guesthouses, and the Sunday Walking Street are. For cafés, design hotels, and nightlife, the <strong>Nimman</strong> area near the university is the trendy alternative. The <strong>Riverside</strong> is quieter and scenic. The city is compact, so wherever you stay, the rest is a short songthaew ride away.</p>
+
+<!-- AFFILIATE_SLOT: booking — Chiang Mai hotels -->
+
+<h2>The must-do experiences</h2>
+
+<h3>Temples</h3>
+<p>Explore the <strong>Old City temples</strong> on foot — Wat Chedi Luang (a massive ruined chedi), Wat Phra Singh, and many smaller wats — then head up the mountain to <strong>Wat Phra That Doi Suthep</strong>, the glittering hilltop temple that overlooks the city and is Chiang Mai's most iconic sight.</p>
+
+<h3>An ethical elephant sanctuary</h3>
+<p>The northern highlight for many. Choose an <strong>observation-only sanctuary</strong> (no riding) where you can see rescued elephants roam, feed, and bathe. Book a reputable one in advance; it's typically a full day including transport, and it's one of the most memorable experiences in Thailand.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — elephant sanctuary / cooking class -->
+
+<h3>A Thai cooking class</h3>
+<p>Chiang Mai is one of the best places in the country to learn Thai cooking. Most classes include a local market tour and teach you several dishes you can recreate at home — a fun, hands-on half or full day.</p>
+
+<!-- IMAGE_SLOT_2: Elephants bathing at a sanctuary, or a Thai cooking class in progress -->
+
+<h2>Eat the northern specialties</h2>
+<p>The north has its own cuisine. Don't miss <strong>khao soi</strong>, a rich coconut-curry noodle soup that's the region's signature dish, along with <strong>sai ua</strong> (northern herb sausage) and the array of dips and vegetables that define Lanna food. The night markets and the Sunday Walking Street are great places to graze.</p>
+
+<h2>When to go</h2>
+<p>The best time is the <strong>cool, dry season from November to February</strong>, when the weather is pleasant and clear — though this is also peak season and around the Yi Peng and Loy Krathong lantern festivals the city fills fast. Crucially, <strong>avoid the burning season</strong> (roughly February–April), when agricultural fires send air quality plummeting. Costs in Chiang Mai are low and it's excellent value; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>How many days do I need in Chiang Mai?</summary><div><p>Three to four for a first visit — enough for the temples, Doi Suthep, a cooking class, and an elephant sanctuary, with time for markets. Add days to reach Chiang Rai, Pai, or the parks.</p></div></details>
+  <details><summary>What's the must-do experience in Chiang Mai?</summary><div><p>For many, a day at an ethical, observation-only elephant sanctuary — alongside the old-city temples, Doi Suthep, and a Thai cooking class.</p></div></details>
+  <details><summary>When should I avoid visiting Chiang Mai?</summary><div><p>The burning season, roughly February to April, when agricultural fires cause poor air quality. The cool, dry months of November to February are best.</p></div></details>
+  <details><summary>What food is Chiang Mai known for?</summary><div><p>Khao soi, a coconut-curry noodle soup, is the signature northern dish, along with sai ua (herb sausage) and other Lanna specialties found at the night markets.</p></div></details>
+</section>
+
+
+----- SLUG: best-things-to-do-chiang-mai -----
+TITLE: The Best Things to Do in Chiang Mai
+CATEGORY: chiang-mai-north
+
+<p>Chiang Mai packs an enormous amount into a compact, laid-back city and its mountain surroundings: ancient temples, ethical elephant encounters, cooking schools, hill-tribe treks, and some of Thailand's best markets. Here are the best things to do, from the essentials to the experiences worth ranging out for.</p>
+
+<!-- IMAGE_SLOT_1: A sweeping Chiang Mai scene — temples and mountains -->
+
+<h2>Temple-hop the Old City</h2>
+<p>Chiang Mai has hundreds of temples, and the moated <strong>Old City</strong> is dense with them. Wander between <strong>Wat Chedi Luang</strong> (a huge, partly ruined 14th-century chedi), <strong>Wat Phra Singh</strong> (one of the city's most revered), and dozens of smaller wats where you can often chat with monks. It's free, atmospheric, and easily done on foot.</p>
+
+<h2>Climb to Doi Suthep</h2>
+<p>The mountain temple <strong>Wat Phra That Doi Suthep</strong> is Chiang Mai's most iconic sight — a glittering golden chedi reached by a long staircase (or funicular), with sweeping views over the city below. Go in the morning for the clearest views, and combine it with the nearby royal gardens or a viewpoint.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Doi Suthep tour -->
+
+<h2>Visit an ethical elephant sanctuary</h2>
+<p>One of the most meaningful experiences in northern Thailand. Choose an <strong>observation-and-care sanctuary</strong> rather than any place offering rides, and spend a day watching, feeding, and bathing rescued elephants in a natural setting. It's a full-day trip and a highlight of most visitors' time in the north.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — ethical elephant sanctuary -->
+
+<h2>Take a cooking class</h2>
+<p>Chiang Mai is arguably Thailand's best city for learning to cook. Classes typically start with a market tour, then teach you to make several classic dishes — a curry paste from scratch, a stir-fry, a soup, a dessert — that you'll eat for lunch and recreate at home.</p>
+
+<!-- IMAGE_SLOT_2: A Chiang Mai cooking class or a vibrant night market -->
+
+<h2>Explore the markets</h2>
+<p>The <strong>Sunday Walking Street</strong> fills the Old City with crafts, street food, and music; the <strong>Saturday Walking Street</strong> and the nightly <strong>Night Bazaar</strong> offer more. They're the best places to sample northern food, buy handicrafts, and soak up the relaxed evening atmosphere.</p>
+
+<h2>Head into the mountains</h2>
+<p>The countryside around Chiang Mai is a major draw. Trek to <strong>hill-tribe villages</strong> and waterfalls, visit <strong>Doi Inthanon National Park</strong> (Thailand's highest peak, with twin royal pagodas and trails), or take the winding road to the laid-back town of <strong>Pai</strong>. Adventure options include zip-lining, white-water rafting, and mountain biking.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Doi Inthanon / trekking tours -->
+
+<h2>Day-trip to Chiang Rai</h2>
+<p>About three hours away, <strong>Chiang Rai</strong> is worth a long day or overnight for its extraordinary modern temples — the dazzling white <strong>Wat Rong Khun</strong> (White Temple) and the vivid <strong>Wat Rong Suea Ten</strong> (Blue Temple) — plus the Golden Triangle region beyond.</p>
+
+<h2>Planning your time</h2>
+<p>With three or four days, prioritize the Old City temples, Doi Suthep, an elephant sanctuary, and a cooking class, adding a mountain trip or Chiang Rai if you have longer. The city is cheap and easy to get around by songthaew and Grab. Aim for the cool season (November–February) and avoid the smoky burning season (February–April). Check a live converter rather than a fixed figure for costs:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What are the best things to do in Chiang Mai?</summary><div><p>Temple-hop the Old City, climb to Doi Suthep, visit an ethical elephant sanctuary, take a cooking class, explore the walking-street markets, and head into the mountains or to Chiang Rai.</p></div></details>
+  <details><summary>Is the elephant sanctuary worth it?</summary><div><p>For most visitors, yes — it's a highlight. Choose an observation-and-care sanctuary with no riding, and allow a full day including transport.</p></div></details>
+  <details><summary>What's the best day trip from Chiang Mai?</summary><div><p>Chiang Rai (about 3 hours) for its striking White and Blue Temples, or Doi Inthanon National Park for Thailand's highest peak and waterfalls.</p></div></details>
+  <details><summary>How many days should I spend in Chiang Mai?</summary><div><p>Three to four for the core experiences, more if you want to trek, visit national parks, or day-trip to Chiang Rai or Pai.</p></div></details>
+</section>

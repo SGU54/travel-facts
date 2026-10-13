@@ -1,0 +1,195 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 17,
+  "swamp": "S-calendar",
+  "_INSTRUCTIONS": "Return ONE JSON object with exactly these keys. For each: {value, status, source_url, notes}. status is one of verified | verify_recommended | serve_live | agreed_stable. DEFAULT TO verify_recommended. Mark verified ONLY if source_url is an OFFICIAL source you actually opened (.gov.tr, Diyanet, Resmi Gazete, Ministry of Culture and Tourism, TCDD, a state operator). A travel blog, tour agency, aggregator or news roundup is NOT official. If you cannot source a value, return null and list the key in _open_questions. Do NOT estimate. Do NOT average two sources.",
+  "_DATES_ARE_THE_CORE": "Religious holiday dates are astronomically determined and OFFICIALLY DECLARED in Turkey — Diyanet publishes the calendar and the Official Gazette fixes the public-holiday days. Give the Gregorian dates you actually found, name the source, and if a date is provisional pending moon sighting SAY SO in notes rather than presenting it as fixed.",
+  "_CALIBRATION": "On the Thailand batch-19 panel one model marked 24 of 40 facts 'verified' and only 2 of those cited an official source; the other 22 were agencies and marketing pages, and all 22 were downgraded. After that failure was named with numbers, the next panel returned 9 of 30 verified and all 9 were official. On Turkey batch 16 the two panels returned 1/1 and 4/5 official. Hold that standard.",
+  "_WHY_THIS_LOOKS_ODD": "This asks for COMPONENTS and no recommendations on purpose. The articles report mechanics; the paid guide makes the calls. Do not add advice, rankings, 'best time to' framing or 'you should' language to any notes field. In particular: do NOT advise how far ahead to book or how much slack to leave.",
+  "_open_questions": [],
+  "facts": {
+    "calendar.ramadan_dates_next": {
+      "_want": "Gregorian start and end dates of Ramadan for the next TWO occurrences from 2026-07-27. Give both years explicitly.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "calendar.ramadan_annual_shift": {
+      "_want": "How far Ramadan moves against the Gregorian calendar each year, and why.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "calendar.ramazan_bayram_dates_next": {
+      "_want": "Gregorian dates of the next TWO Ramazan Bayramı (Eid al-Fitr) holidays, and the OFFICIAL number of public-holiday days Turkey grants for it.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "calendar.kurban_bayram_dates_next": {
+      "_want": "Gregorian dates of the next TWO Kurban Bayramı (Eid al-Adha) holidays, and the OFFICIAL number of public-holiday days.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "calendar.bayram_gap": {
+      "_want": "The interval between the two Bayrams in a given year.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "calendar.bridge_days_practice": {
+      "_want": "Does Turkey officially extend Bayram holidays with bridge days (köprü/arife), and is that a government decision announced per year? Describe the mechanism.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "calendar.national_holidays_list": {
+      "_want": "Turkey's FIXED-DATE national public holidays with their dates and names (e.g. Republic Day, Victory Day, Youth and Sports Day, National Sovereignty and Children's Day, Labour Day, Democracy Day).",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "calendar.arife_half_day": {
+      "_want": "The arife (eve) half-day rule before a religious holiday — what closes and from what time.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "closures.banks_government": {
+      "_want": "What legally closes on a Turkish national public holiday: banks, government offices, post.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "closures.museums_sites": {
+      "_want": "Do state museums and archaeological sites close on public holidays and Bayrams, or run altered hours? Any free-entry days?",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "closures.grand_bazaar": {
+      "_want": "Opening rule for the Grand Bazaar and Istanbul's covered bazaars on Sundays, national holidays and Bayrams.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "closures.shops_restaurants_bayram": {
+      "_want": "Do ordinary shops and restaurants close during Bayram, and does this differ between big cities, coastal resorts and smaller inland towns?",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transport.bayram_demand_surge": {
+      "_want": "What happens to domestic transport demand during Bayram — direction of travel, which cities empty, which regions fill.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transport.bayram_booking_leadtime": {
+      "_want": "How far ahead domestic FLIGHTS typically sell out around Bayram. Report observed booking behaviour, no advice.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transport.bus_rail_bayram": {
+      "_want": "How intercity buses and Turkish State Railways handle Bayram demand — extra services, sell-out behaviour, ticket release timing.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transport.toll_roads_bayram": {
+      "_want": "Are motorway tolls and Bosphorus bridge crossings free during Bayram? If so, which and by what mechanism?",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transport.ferry_coastal_bayram": {
+      "_want": "How coastal and island ferry services behave over Bayram.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "transport.fare_behaviour_bayram": {
+      "_want": "How domestic fares behave in the run-up to Bayram.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "ramadan.daytime_dining": {
+      "_want": "During Ramadan, what changes for daytime dining in Turkey, and how does it differ by region and by tourist density?",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "ramadan.alcohol_service": {
+      "_want": "Does alcohol service change during Ramadan? Is any change legal or discretionary?",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "ramadan.working_hours": {
+      "_want": "Do public-sector or general working hours change during Ramadan?",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "ramadan.etiquette_expectation": {
+      "_want": "What is actually expected of a non-Muslim visitor during Ramadan daylight hours, and where does that expectation vary?",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "ramadan.iftar_timing": {
+      "_want": "How iftar timing is determined and how it moves across the month.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "ramadan.iftar_restaurant_practice": {
+      "_want": "How Turkish restaurants handle iftar — set menus, booking behaviour, timing of service.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "ramadan.seasonal_foods": {
+      "_want": "Foods that appear specifically during Ramadan in Turkey (e.g. Ramazan pidesi, güllaç) and how they are sold.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "ramadan.sahur_availability": {
+      "_want": "What is open for sahur (pre-dawn meal) and where.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    }
+  }
+}

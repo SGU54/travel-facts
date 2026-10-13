@@ -1,0 +1,1396 @@
+SECOND GATE — moroccoforamericans batch 14 (transport depth). Check against facts.json.
+Report ONLY: fact stated two ways, internal number contradiction, drift from facts.json, scope violation, or cultural appropriation.
+SCOPE: Marrakech, Fez, Chefchaouen, Sahara, Essaouira, Atlas, Meknes/Volubilis/Moulay Idriss (day-trip from Fez OK). Casablanca = transit hub OK for train changes.
+ALSO CHECK appropriation: any dish/craft/ritual presented as Moroccan in ORIGIN vs regional. Give slug + exact text.
+
+======================================================================
+FACTS.JSON
+======================================================================
+{
+  "_README": "moroccoforamericans facts.json (schema_version 3) — RECONCILED across 4 sources (claude, gemini, deepseek, grok) via reconcile.mjs + manual dispute resolution. Agreed facts → agreed_stable. Material disputes on YMYL/safety fields (emergency numbers, currency export rule) were resolved against OFFICIAL sources and marked 'verified' with source_url — NOT by vote-counting (the majority was wrong on both). serve_live fields (exchange rate, flight prices, daily budgets) carry ranges as notes but value stays null — serve live, never frozen. Content stages read THIS file only.",
+  "_meta": {
+    "schema_version": 3,
+    "project": "moroccoforamericans",
+    "country": "Morocco",
+    "country_iso": "MA",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": [
+        "JFK",
+        "EWR",
+        "BOS",
+        "IAD",
+        "ATL",
+        "ORD",
+        "MIA"
+      ],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "Express costs in USD with MAD (dirham) equivalents. Dirham is a CLOSED currency — cannot be obtained before arrival; withdraw at ATMs on arrival or exchange USD locally."
+    },
+    "ai_source": "reconciled",
+    "produced_at": "2026-07-06",
+    "reconciled": true,
+    "panel": [
+      "claude",
+      "gemini",
+      "deepseek",
+      "grok"
+    ]
+  },
+  "_fact_field_shape": "{ value, source_url, status, notes }",
+  "identity": {
+    "name_local": {
+      "value": "al-Mamlaka al-Maghribiya (المملكة المغربية) — 'the Kingdom of Morocco'; commonly al-Maghrib (المغرب)",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "capital": {
+      "value": "Rabat",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "Rabat is the capital; Casablanca is the largest city and main air gateway."
+    },
+    "official_languages": {
+      "value": [
+        "Arabic",
+        "Tamazight (Amazigh/Berber)"
+      ],
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "French widely used in business/tourism though not official."
+    },
+    "currency_code": {
+      "value": "MAD",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_name": {
+      "value": "Moroccan dirham",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "timezones": {
+      "value": [
+        "UTC+1 (permanent, since 2018)"
+      ],
+      "source_url": null,
+      "status": "verify_recommended",
+      "notes": "Morocco stays on UTC+1 year-round BUT reverts to UTC+0 during Ramadan, then back. Confirm offset for travel dates if they overlap Ramadan."
+    },
+    "calling_code": {
+      "value": "+212",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "power_plug_voltage": {
+      "value": "220V, 50Hz, plug types C and E (European two-round-pin)",
+      "source_url": null,
+      "status": "agreed_stable",
+      "notes": "US 120V devices need a converter unless dual-voltage; all need a plug adapter."
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL + change-prone. Flagged verify_recommended pending official-source check.",
+      "by_nationality": [
+        {
+          "passport": "United States",
+          "type": {
+            "value": "visa_free",
+            "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+            "status": "verify_recommended",
+            "notes": "All 4 panel sources agree US citizens are visa-free for tourism. Still YMYL — confirm before travel."
+          },
+          "max_stay_days": {
+            "value": 90,
+            "source_url": null,
+            "status": "verify_recommended",
+            "notes": "90 days; overstay incurs fines/exit delays."
+          },
+          "fee": {
+            "value": "None for visa-free entry",
+            "source_url": null,
+            "status": "verify_recommended"
+          },
+          "processing_time": {
+            "value": "N/A (visa-free)",
+            "source_url": null,
+            "status": "agreed_stable"
+          },
+          "online_authorization_required": {
+            "value": false,
+            "source_url": null,
+            "status": "verify_recommended",
+            "notes": "No ETA/eVisa required for US tourists across all sources as of mid-2026 — Morocco has discussed an electronic authorization; VERIFY before travel."
+          },
+          "official_application_url": {
+            "value": null,
+            "source_url": null
+          }
+        }
+      ],
+      "scam_sites_to_avoid": {
+        "value": [
+          "Third-party 'Morocco visa' sites charging fees for a visa-free entry"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "Passport valid at least 6 months beyond entry (recommended); at least one blank page for the entry stamp.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "All sources converge on 6 months + blank page."
+      },
+      "onward_ticket_required": {
+        "value": "Proof of onward/return travel may be requested at check-in or entry.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "notes": {
+        "value": "Carry a passport copy; a blank page is needed for the entry stamp; proof of sufficient funds may occasionally be requested. Police checkpoints exist, especially near the Sahara."
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "MAD",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "approx_rate_note": {
+        "value": null,
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "VOLATILE — serve live USD↔MAD. Roughly 1 USD ≈ 10 MAD historically but MUST be served live, never frozen."
+      },
+      "cash_vs_card": {
+        "value": "Cash-heavy economy. Cards accepted at hotels, upscale restaurants, and modern city shops; souks, taxis, small cafes, and rural/desert areas are cash-only.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "atm_availability": {
+        "value": "ATMs widespread in cities, towns, and at CMN/RAK airports — withdraw dirham on arrival (major banks: Attijariwafa, BMCE/Bank of Africa, Banque Populaire, CIH). Sparse in the deep Sahara; carry cash for desert legs.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "currency_import_export_limit": {
+        "value": "MAD is a CLOSED currency: you cannot obtain it before arrival and cannot take more than 2,000 MAD out of the country (exceeding this is illegal, not just declarable). Foreign currency: no import limit, but amounts over the equivalent of 100,000 MAD must be declared to customs on arrival (form J7). Keep exchange receipts to reconvert leftover dirham to USD/EUR before departure.",
+        "source_url": "https://www.iatatravelcentre.com/MA-Morocco-customs-currency-airport-tax-regulations-details.htm",
+        "status": "verified",
+        "notes": "RESOLVED against IATA + Moroccan customs + Wise. Panel disagreed (1,000 vs 100,000 vs 'prohibited') — majority conflated the 2,000 MAD export cap with the 100,000 MAD foreign-currency declaration threshold. Both figures are real but apply to different things."
+      },
+      "tipping_norm": {
+        "value": "Tipping expected but modest: ~10% in restaurants if no service charge, round up taxis, small tips (5–20 MAD) for guides, porters, and hammam staff.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": [
+          "Casablanca Mohammed V (CMN) — main US gateway",
+          "Marrakech Menara (RAK) — main tourist entry",
+          "Fez–Saïss (FEZ)",
+          "Tangier Ibn Battouta (TNG)",
+          "Agadir Al Massira (AGA)",
+          "Rabat–Salé (RBA)"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "national_carrier": {
+        "value": "Royal Air Maroc (RAM)",
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "oneworld member; nonstop JFK/IAD–CMN."
+      },
+      "flight_from_audience_origins": {
+        "value": [
+          {
+            "from": "JFK",
+            "nonstop": "Royal Air Maroc to CMN, ~7h",
+            "note": "prices serve_live"
+          },
+          {
+            "from": "IAD",
+            "nonstop": "Royal Air Maroc to CMN, ~7.5h",
+            "note": "prices serve_live"
+          },
+          {
+            "from": "Most US cities",
+            "nonstop": "1-stop via Europe (Paris, Madrid, Lisbon) or via CMN",
+            "note": "prices serve_live"
+          }
+        ],
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "Durations roughly stable; PRICES serve_live."
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "ONCF trains connect Casablanca, Rabat, Fez, Marrakech, Tangier; comfortable and punctual. Al Boraq high-speed line runs Tangier–Casablanca. Book first class for reserved seats. Note: NO train to Chefchaouen, Essaouira, or the Sahara.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "buses": {
+        "value": "CTM and Supratours are the reliable intercity coach companies — used to reach Chefchaouen, Essaouira, and Sahara gateways not on the rail network. Book ahead in high season.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "domestic_flights": {
+        "value": "Royal Air Maroc and low-cost carriers link major cities; usually unnecessary for the compact first-timer loop.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "ride_sharing": {
+        "value": "Petit taxis (metered, in-city) and grand taxis (shared, intercity) are standard — insist on the meter or agree fare first. Ride-hail apps (Careem, Heetch, inDrive) operate in some larger cities.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "car_rental_and_driving": {
+        "value": "Drive on the RIGHT. US license accepted for short stays (IDP recommended). Cities are chaotic and parking is hard; many first-timers hire a driver instead. Toll motorways connect major cities. Police checkpoints common; keep documents handy.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Driving side right; BAC limit low (~0.02%) — verify. Avoid night driving in rural/mountain areas."
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Spring (Mar–May) and fall (Sep–Nov) are ideal: warm days, cool nights. Summer (Jun–Aug) is very hot inland (Marrakech, Fez, Sahara can exceed 100°F/38°C); coast (Essaouira) stays mild. Winter (Dec–Feb) is cool, Atlas gets snow, desert nights are cold.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "best_months": {
+        "value": [
+          "April",
+          "May",
+          "October",
+          "November"
+        ],
+        "rank": "core",
+        "notes": "RECOMMENDATION — shoulder seasons balance heat, crowds, and desert comfort."
+      },
+      "avoid_periods": {
+        "value": [
+          "Peak summer heat inland (July–August)",
+          "Ramadan for first-timers if you want full restaurant/cafe rhythm (dates shift ~11 days earlier yearly — verify)"
+        ],
+        "rank": "core",
+        "notes": "RECOMMENDATION + dated (Ramadan moves yearly)."
+      }
+    },
+    "safety_health": {
+      "_note": "YMYL. Advisory level change-prone → verify_recommended.",
+      "advisory_level": {
+        "value": "US State Dept Level 2: Exercise Increased Caution (terrorism) — reported as of early-mid 2026. VERIFY current level + date before travel.",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+        "status": "verify_recommended"
+      },
+      "main_risk": {
+        "value": "Petty crime (pickpocketing, aggressive touts/faux guides, medina scams) and traffic — violent crime against tourists is rare. Morocco is generally considered safe, including for solo travelers, with normal precautions.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "vaccines": {
+        "value": "No mandatory vaccines for US travelers arriving from the US. Routine vaccinations current; Hepatitis A and typhoid commonly recommended (food/water); consult a travel clinic or CDC.",
+        "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/morocco",
+        "status": "verify_recommended"
+      },
+      "tap_water_safe": {
+        "value": "Officially chlorinated in cities but commonly causes stomach upset for visitors — stick to bottled/filtered water; avoid ice from unknown sources.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "emergency_numbers": {
+        "value": {
+          "universal_mobile": "112",
+          "police_city": "19",
+          "police_rural_gendarmerie": "177",
+          "ambulance_SAMU": "15",
+          "fire_civil_protection": "15 or 150"
+        },
+        "source_url": "https://app.moroccocloser.com/",
+        "status": "verified",
+        "notes": "RESOLVED against multiple 2026 sources. Primary: 112 (universal from mobile) and 19 (police in cities); 177 Gendarmerie (rural/highway); 15 ambulance (SAMU); fire is 15 or 150 (civil protection). NOTE: 3 of 4 panel models said police='190' — that is a secondary/older listing; 19 and 112 are the current primary numbers. Vote-counting would have picked the wrong value."
+      },
+      "common_scams": {
+        "value": [
+          "Faux guides insisting you're going the wrong way / offering to lead you",
+          "'This street/tannery is closed, follow me'",
+          "Inflated 'friendship' prices in souks",
+          "Henna women grabbing hands then demanding payment",
+          "Taxi meter 'broken' — agree fare first",
+          "Overpriced camel/desert add-ons booked on the street"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": "Local SIMs (Maroc Telecom, Orange, Inwi) cheap with data-heavy tourist packages, sold at airports/shops (passport needed). eSIMs (Airalo etc.) let you land connected — good since the dirham is closed and you may want maps/rideshare immediately on arrival.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "coverage": {
+        "value": "Strong 4G/5G in cities and along main routes; patchy to none in the deep Sahara and remote Atlas — download offline maps before desert legs.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "costs": {
+      "_note": "Approximate USD/day per person excluding international flights; serve_live-ish.",
+      "daily_budget_low": {
+        "value": "$40–70/day (riad dorms/budget guesthouses, street food, shared transport)",
+        "status": "serve_live"
+      },
+      "daily_budget_mid": {
+        "value": "$90–160/day (mid-range riad, mix of restaurants, some private transport/tours)",
+        "status": "serve_live"
+      },
+      "daily_budget_high": {
+        "value": "$250+/day (luxury riads, private guide/driver, fine dining)",
+        "status": "serve_live"
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "Morocco is a Muslim country; dress modestly especially outside tourist zones — shoulders and knees covered is respectful. Women aren't required to cover hair (except inside some religious sites, most of which are closed to non-Muslims). Cities like Marrakech are used to tourists; rural areas are more conservative. Lightweight, covering clothing also helps with sun and heat.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "dos_and_donts": {
+        "value": [
+          "Do use your right hand for eating and greeting",
+          "Do ask before photographing people (especially women and vendors)",
+          "Don't enter mosques unless signed open to non-Muslims (most aren't)",
+          "Do remove shoes when entering homes/riads where indicated",
+          "Don't show public displays of affection",
+          "Do accept mint tea when offered — it's hospitality",
+          "Be discreet with alcohol — legal for tourists but not consumed publicly"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    }
+  },
+  "cities": [
+    {
+      "name": "Marrakech",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly into Marrakech Menara (RAK) directly, or ONCF train from Casablanca (~3h) / Tangier. Main entry point for the classic loop.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Walk the medina (cars can't enter most of it); petit taxis for longer hops; agree fare or insist on meter.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Marrakech Menara (RAK), ~15 min from the medina",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Jemaa el-Fnaa",
+              "why": "The legendary main square — food stalls, performers, energy at dusk"
+            },
+            {
+              "name": "Bahia Palace",
+              "why": "Ornate 19th-c. palace and gardens"
+            },
+            {
+              "name": "Majorelle Garden & YSL",
+              "why": "Cobalt-blue garden, botanical calm"
+            },
+            {
+              "name": "Koutoubia Mosque",
+              "why": "Iconic minaret (exterior; non-Muslims can't enter)"
+            },
+            {
+              "name": "Souks of the medina",
+              "why": "Labyrinth of craft markets"
+            },
+            {
+              "name": "Saadian Tombs / Ben Youssef Madrasa",
+              "why": "Stunning zellij and stucco"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Medina",
+              "who_for": "First-timers wanting to stay in a riad steps from the action"
+            },
+            {
+              "area": "Gueliz (Ville Nouvelle)",
+              "who_for": "Modern hotels, restaurants, easier logistics"
+            },
+            {
+              "area": "Hivernage",
+              "who_for": "Upscale hotels, quieter, near nightlife"
+            },
+            {
+              "area": "Palmeraie",
+              "who_for": "Resort-style stays outside the center"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Jemaa el-Fnaa food stalls",
+              "why": "Iconic but choose busy stalls"
+            },
+            {
+              "name_or_type": "Rooftop riad restaurants",
+              "why": "Tagine with a view over the medina"
+            },
+            {
+              "name_or_type": "Gueliz modern Moroccan",
+              "why": "For a calmer sit-down meal"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Ourika Valley / Atlas foothills",
+              "why": "Greenery, Berber villages, waterfalls",
+              "rough_time": "Half/full day"
+            },
+            {
+              "place": "Essaouira",
+              "why": "Coastal escape",
+              "rough_time": "Full day"
+            },
+            {
+              "place": "Agafay Desert",
+              "why": "Stone desert close to the city, sunset camps",
+              "rough_time": "Half day"
+            },
+            {
+              "place": "Sahara (Merzouga)",
+              "why": "Overnight desert trip",
+              "rough_time": "3 days / 2 nights"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Fez",
+      "facts": {
+        "how_to_get_there": {
+          "value": "ONCF train from Casablanca/Rabat/Marrakech, or fly into Fez–Saïss (FEZ). Common pairing with Chefchaouen (bus, ~4h).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Fès el-Bali medina is pedestrian-only and famously maze-like — a local guide for the first day is worth it. Petit taxis outside the medina.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Fez–Saïss (FEZ), ~15 min from the city",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Fès el-Bali medina",
+              "why": "World's largest car-free urban area, a living medieval city"
+            },
+            {
+              "name": "Chouara Tannery",
+              "why": "Iconic dye pits viewed from surrounding terraces"
+            },
+            {
+              "name": "Al-Qarawiyyin",
+              "why": "One of the world's oldest universities"
+            },
+            {
+              "name": "Bou Inania & Al-Attarine Madrasas",
+              "why": "Exquisite Marinid craftsmanship"
+            },
+            {
+              "name": "Blue Gate (Bab Bou Jeloud)",
+              "why": "Grand tiled medina gateway"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Fès el-Bali (old medina)",
+              "who_for": "Riad immersion in the historic core"
+            },
+            {
+              "area": "Fès el-Jdid / Ville Nouvelle",
+              "who_for": "Modern hotels and easier access"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Riad rooftop dining",
+              "why": "Traditional Fassi cuisine"
+            },
+            {
+              "name_or_type": "Pastilla specialists",
+              "why": "Fez is the home of the sweet-savory pigeon/chicken pie"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Meknes & Volubilis",
+              "why": "Imperial city + Roman ruins",
+              "rough_time": "Full day"
+            },
+            {
+              "place": "Chefchaouen",
+              "why": "The blue city (often an overnight, not a day trip)",
+              "rough_time": "Overnight"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Chefchaouen",
+      "facts": {
+        "how_to_get_there": {
+          "value": "No airport or train — reach by CTM/Supratours bus or grand taxi from Fez (~4h) or Tangier (~2h). Often combined with a Fez or northern leg.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Small and walkable; the blue medina is explored on foot.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "None — nearest are Fez (FEZ) or Tangier (TNG)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "The blue medina",
+              "why": "Photogenic blue-washed lanes"
+            },
+            {
+              "name": "Plaza Uta el-Hammam & Kasbah",
+              "why": "Central square and museum"
+            },
+            {
+              "name": "Spanish Mosque viewpoint",
+              "why": "Sunset panorama over the town"
+            },
+            {
+              "name": "Ras el-Maa waterfall",
+              "why": "Where locals gather at the medina edge"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Medina",
+              "who_for": "Blue-lane charm, small guesthouses"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Rooftop cafes",
+              "why": "Views over the blue rooftops"
+            },
+            {
+              "name_or_type": "Local tagine spots on the square",
+              "why": "Simple, cheap, good"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Akchour waterfalls / God's Bridge",
+              "why": "Rif Mountains hiking",
+              "rough_time": "Full day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Sahara (Merzouga / Zagora)",
+      "facts": {
+        "how_to_get_there": {
+          "value": "No airport/train to the dunes. Reached by multi-day tour or drive from Marrakech (Merzouga ~9-10h, usually a 3-day trip) or Fez. Zagora is closer/faster (smaller dunes); Merzouga (Erg Chebbi) has the classic tall dunes.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "4x4 and camel; organized through desert camps/tours. Self-driving possible to the dune edge but most first-timers take a tour with driver.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Errachidia (ERH) is nearest to Merzouga but rarely used by tourists; most arrive overland.",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Erg Chebbi dunes (Merzouga)",
+              "why": "The postcard Sahara — tall golden dunes"
+            },
+            {
+              "name": "Overnight desert camp",
+              "why": "Sunset camel ride, dinner, stargazing, sunrise"
+            },
+            {
+              "name": "Todra Gorge (en route)",
+              "why": "Dramatic canyon on the Marrakech road"
+            },
+            {
+              "name": "Aït Benhaddou (en route)",
+              "why": "UNESCO kasbah, film-famous"
+            },
+            {
+              "name": "Dades Valley / Valley of Roses",
+              "why": "Scenic drive stops"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Desert camp (Erg Chebbi)",
+              "who_for": "The signature night in the dunes — standard or luxury camps"
+            },
+            {
+              "area": "Merzouga village kasbahs",
+              "who_for": "Comfort base at the dune edge"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Camp dinners (tagine, communal)",
+              "why": "Included in most desert packages"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Khamlia (Gnaoua music village)",
+              "why": "Local music culture",
+              "rough_time": "Couple hours"
+            },
+            {
+              "place": "Dune sunrise 4x4",
+              "why": "Photography",
+              "rough_time": "Morning"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Essaouira",
+      "facts": {
+        "how_to_get_there": {
+          "value": "~2.5-3h by Supratours/CTM bus from Marrakech (the usual approach); small airport (ESU) with limited flights. Popular as a coastal break or day trip.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Compact, walkable walled medina; everything is on foot.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Essaouira–Mogador (ESU), limited service",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Skala de la Ville ramparts",
+              "why": "Sea walls and cannons over the Atlantic"
+            },
+            {
+              "name": "The port & fish market",
+              "why": "Blue boats, fresh grilled seafood"
+            },
+            {
+              "name": "Medina (UNESCO)",
+              "why": "Relaxed, less hassle than Marrakech"
+            },
+            {
+              "name": "Beach & windsurfing",
+              "why": "Windy Atlantic bay, kite/windsurf hub"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Medina",
+              "who_for": "Riads inside the walls"
+            },
+            {
+              "area": "Beachfront",
+              "who_for": "Surf/relax stays"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Port grilled-fish stalls",
+              "why": "Pick your catch, grilled fresh"
+            },
+            {
+              "name_or_type": "Medina cafes",
+              "why": "Argan-oil specialties, relaxed"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Argan cooperatives (road to Marrakech)",
+              "why": "See argan-oil production",
+              "rough_time": "En route"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Atlas Mountains",
+      "facts": {
+        "how_to_get_there": {
+          "value": "High Atlas foothills are ~1-1.5h from Marrakech (Imlil, Ourika). Reached by grand taxi, private driver, or organized trek/day tour.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Mule and foot for trekking; 4x4/driver to trailheads.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "None — access via Marrakech (RAK)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Imlil & Toubkal base",
+              "why": "Gateway to North Africa's highest peak"
+            },
+            {
+              "name": "Ourika Valley",
+              "why": "Waterfalls, Berber villages, easy day trip"
+            },
+            {
+              "name": "Berber village visits",
+              "why": "Tea, terraced fields, mountain life"
+            },
+            {
+              "name": "Setti Fatma waterfalls",
+              "why": "Popular hiking spot"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Imlil",
+              "who_for": "Trekkers and mountain lodges"
+            },
+            {
+              "area": "Ouirgane / Kasbah stays",
+              "who_for": "Scenic overnight, relaxation"
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Mountain lodge / guesthouse meals",
+              "why": "Home-style tagine after a hike"
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Three Valleys tour from Marrakech",
+              "why": "Ourika + Asni + Oukaimeden sampler",
+              "rough_time": "Full day"
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "7-Day Morocco: Imperial Cities + Desert Taste",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Marrakech (RAK), riad check-in",
+            "afternoon": "Ease into the medina",
+            "evening": "Jemaa el-Fnaa at dusk"
+          },
+          {
+            "day": 2,
+            "morning": "Marrakech sights (Bahia, Majorelle)",
+            "afternoon": "Souks",
+            "evening": "Rooftop dinner"
+          },
+          {
+            "day": 3,
+            "morning": "Depart on 3-day Sahara tour (Todra/Dades)",
+            "afternoon": "Aït Benhaddou, Ouarzazate",
+            "evening": "Overnight en route (Dades)"
+          },
+          {
+            "day": 4,
+            "morning": "Drive to Merzouga",
+            "afternoon": "Camel ride into Erg Chebbi",
+            "evening": "Desert camp, stargazing"
+          },
+          {
+            "day": 5,
+            "morning": "Dune sunrise, drive back toward Marrakech or on to Fez",
+            "afternoon": "Long transfer day",
+            "evening": "Arrive Fez"
+          },
+          {
+            "day": 6,
+            "morning": "Fez medina with a guide",
+            "afternoon": "Tanneries, madrasas",
+            "evening": "Fassi dinner"
+          },
+          {
+            "day": 7,
+            "morning": "Last medina wander",
+            "afternoon": "Depart (FEZ or transfer to CMN)",
+            "evening": "Fly home"
+          }
+        ],
+        "notes": "RECOMMENDATION — fast-paced; the desert eats 3 days. Fly out of Fez to save backtracking."
+      },
+      "assumptions": {
+        "value": "One international arrival (RAK) and departure (FEZ); books the standard shared/private desert tour."
+      }
+    },
+    {
+      "title": "10-Day Morocco: The Classic First-Timer Loop",
+      "days": 10,
+      "scope": "whole-country",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Marrakech",
+            "afternoon": "Riad settle-in",
+            "evening": "Jemaa el-Fnaa"
+          },
+          {
+            "day": 2,
+            "morning": "Marrakech highlights",
+            "afternoon": "Souks + gardens",
+            "evening": "Rooftop dinner"
+          },
+          {
+            "day": 3,
+            "morning": "Atlas day trip (Ourika/Imlil)",
+            "afternoon": "Berber village + waterfall",
+            "evening": "Back in Marrakech"
+          },
+          {
+            "day": 4,
+            "morning": "Begin 3-day desert tour",
+            "afternoon": "Aït Benhaddou, Dades",
+            "evening": "Overnight Dades/Todra"
+          },
+          {
+            "day": 5,
+            "morning": "Todra Gorge",
+            "afternoon": "Drive to Merzouga, camel ride",
+            "evening": "Sahara camp"
+          },
+          {
+            "day": 6,
+            "morning": "Dune sunrise, drive to Fez",
+            "afternoon": "Long scenic transfer",
+            "evening": "Arrive Fez"
+          },
+          {
+            "day": 7,
+            "morning": "Fez medina guided",
+            "afternoon": "Tanneries + madrasas",
+            "evening": "Fassi dinner"
+          },
+          {
+            "day": 8,
+            "morning": "Bus/taxi to Chefchaouen",
+            "afternoon": "Blue medina wander",
+            "evening": "Sunset at Spanish Mosque"
+          },
+          {
+            "day": 9,
+            "morning": "Chefchaouen morning",
+            "afternoon": "Return toward Fez/Casablanca",
+            "evening": "Overnight transit city"
+          },
+          {
+            "day": 10,
+            "morning": "Transfer to airport",
+            "afternoon": "Depart (CMN)",
+            "evening": "Fly home"
+          }
+        ],
+        "notes": "RECOMMENDATION — the balanced classic; add Essaouira by dropping Chefchaouen if you prefer coast to blue city."
+      },
+      "assumptions": {
+        "value": "Arrive RAK, depart CMN; mix of tour + train/bus; moderate pace."
+      }
+    },
+    {
+      "title": "14-Day Morocco: The Complete First-Timer Grand Tour",
+      "days": 14,
+      "scope": "whole-country",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Marrakech",
+            "afternoon": "Riad",
+            "evening": "Jemaa el-Fnaa"
+          },
+          {
+            "day": 2,
+            "morning": "Marrakech sights",
+            "afternoon": "Souks",
+            "evening": "Dinner"
+          },
+          {
+            "day": 3,
+            "morning": "Atlas / Ourika day trip",
+            "afternoon": "Villages",
+            "evening": "Marrakech"
+          },
+          {
+            "day": 4,
+            "morning": "Bus to Essaouira",
+            "afternoon": "Ramparts + port",
+            "evening": "Seafood by the sea"
+          },
+          {
+            "day": 5,
+            "morning": "Essaouira beach/medina",
+            "afternoon": "Return to Marrakech",
+            "evening": "Overnight Marrakech"
+          },
+          {
+            "day": 6,
+            "morning": "Start 3-day desert tour",
+            "afternoon": "Aït Benhaddou",
+            "evening": "Dades"
+          },
+          {
+            "day": 7,
+            "morning": "Todra Gorge",
+            "afternoon": "To Merzouga, camel ride",
+            "evening": "Desert camp"
+          },
+          {
+            "day": 8,
+            "morning": "Sunrise, drive to Fez",
+            "afternoon": "Transfer",
+            "evening": "Fez"
+          },
+          {
+            "day": 9,
+            "morning": "Fez medina guided",
+            "afternoon": "Tanneries",
+            "evening": "Dinner"
+          },
+          {
+            "day": 10,
+            "morning": "Meknes + Volubilis day trip",
+            "afternoon": "Roman ruins",
+            "evening": "Back in Fez"
+          },
+          {
+            "day": 11,
+            "morning": "To Chefchaouen",
+            "afternoon": "Blue medina",
+            "evening": "Sunset viewpoint"
+          },
+          {
+            "day": 12,
+            "morning": "Akchour waterfalls hike",
+            "afternoon": "Rif nature",
+            "evening": "Chefchaouen"
+          },
+          {
+            "day": 13,
+            "morning": "Travel to Casablanca/Rabat",
+            "afternoon": "Hassan II Mosque (Casa) or Rabat sights",
+            "evening": "Farewell dinner"
+          },
+          {
+            "day": 14,
+            "morning": "Depart CMN",
+            "afternoon": "Fly home",
+            "evening": "—"
+          }
+        ],
+        "notes": "RECOMMENDATION — adds Essaouira, Meknes/Volubilis, Rif hiking, and a Casa/Rabat finish."
+      },
+      "assumptions": {
+        "value": "Arrive RAK, depart CMN; relaxed pace with coastal + northern add-ons."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "value": [
+        {
+          "name": "Jemaa el-Fnaa & Marrakech medina",
+          "where": "Marrakech",
+          "why": "The sensory heart of Morocco"
+        },
+        {
+          "name": "A night in the Sahara (Erg Chebbi)",
+          "where": "Merzouga",
+          "why": "The bucket-list desert experience"
+        },
+        {
+          "name": "Fès el-Bali medina",
+          "where": "Fez",
+          "why": "The world's most intact medieval city"
+        },
+        {
+          "name": "The blue city",
+          "where": "Chefchaouen",
+          "why": "Unmistakable and photogenic"
+        },
+        {
+          "name": "Aït Benhaddou",
+          "where": "En route to the desert",
+          "why": "UNESCO earthen kasbah"
+        },
+        {
+          "name": "Atlas Berber villages",
+          "where": "High Atlas",
+          "why": "Mountain culture a short hop from Marrakech"
+        },
+        {
+          "name": "Essaouira ramparts & coast",
+          "where": "Essaouira",
+          "why": "Windswept Atlantic counterpoint to the cities"
+        }
+      ],
+      "rank": "core"
+    }
+  },
+  "_open_questions": {
+    "_note": "Items still needing official-source confirmation before their specific articles publish. Emergency numbers and the currency export rule were RESOLVED this pass (now 'verified'); these remain open.",
+    "value": [
+      "VISA/ENTRY: All 4 sources agree US = visa-free 90 days, but confirm against official Moroccan consular source AND whether any electronic travel authorization (AEVM/ETA) has been activated — highest-stakes fact for the visa article.",
+      "SAFETY ADVISORY: Confirm the CURRENT US State Dept advisory level + date for Morocco at publish time (was Level 2).",
+      "TIMEZONE: Confirm UTC+1 permanent-DST logic and the Ramadan UTC+0 reversion for any travel dates referenced.",
+      "DRIVING: Confirm whether an IDP is REQUIRED (vs. recommended) for US license holders and the current BAC limit (panel split 0.0 vs low-limit)."
+    ]
+  }
+}
+
+======================================================================
+ARTICLES
+======================================================================
+
+----- ctm-vs-supratours -----
+TITLE: CTM vs. Supratours: Morocco's Coach Companies Compared
+
+ Where Morocco's trains stop, its coaches take over, and two companies dominate the intercity network: CTM and Supratours. For a first-timer they are the reliable, comfortable way to reach Chefchaouen, Essaouira and the towns off the rail line, and the difference between them is small but worth knowing before you book. Here is how the two compare, where each one goes, and the luggage detail that catches people out. 
+
+ 
+
+ The two companies at a glance 
+ CTM is Morocco's long-established national coach line, running a comprehensive network of comfortable, air-conditioned buses across the country and to many smaller towns. Supratours, run by the national railway ONCF, was built to extend the train network by coach, so its routes deliberately connect to rail hubs and reach destinations like Essaouira that the trains do not. Both are modern, reliable and inexpensive, and either is a fine choice on the routes they share. 
+ How they actually differ 
+ In practice the differences are modest: CTM has the broader independent network and its own station buildings, while Supratours excels where a journey combines train and coach, since its timetables and ticketing dovetail with ONCF rail. On a route both serve, pick by schedule and price rather than agonising over the brand. Where only one runs your route — Supratours to Essaouira, for instance — the choice makes itself. 
+
+ Where each one goes 
+ Between them the two cover the country's coach needs comprehensively: the classic first-timer routes include the coach from Fez to Chefchaouen, Marrakech to Essaouira, and connections to the desert gateways and the smaller towns off the rail line. Supratours is the usual choice for Essaouira and for legs that continue a train journey; CTM is the workhorse for the wider network. For the places trains reach, the train still wins, but for everywhere else these coaches are the backbone. 
+
+ The luggage fee catch 
+ The detail that surprises travellers is that both companies charge a small separate fee for hold luggage, paid at the station when you check your bag, on top of the ticket. It is inexpensive but unexpected if you have not budgeted for it, and you get a tag for your bag in return. Keep a little cash for this, arrive with time to check the bag, and hold onto the tag for collection at the other end. 
+
+ How to book 
+ Both companies sell tickets online and at their station counters, and for popular routes in high season — especially Fez to Chefchaouen — booking a day or two ahead secures a seat on the departure you want rather than the next one hours later. Off-peak, buying at the station on the day is usually fine. Arrive with time to check luggage and find the right bay, and keep your ticket accessible for the journey. 
+
+ What the ride is actually like 
+ Both companies run modern, air-conditioned coaches with assigned or open seating depending on the route, and the longer journeys usually include a rest stop where you can buy snacks and use facilities. The buses are a comfortable, low-stress way to cover distance, and on scenic routes like Fez to Chefchaouen the window views are part of the pleasure. Bring water, a snack and something to read, and the hours pass easily. 
+ Arriving at the right station 
+ One practical wrinkle: CTM often uses its own dedicated terminals, which can sit apart from the main municipal bus station, so confirm which station your departure leaves from when you book. Turning up at the wrong terminal is the classic missed-coach mistake. Your ticket states the departure point, and a quick check the day before — or a word with your riad — saves a stressful taxi dash across town on the morning. 
+
+ Coaches versus the alternatives 
+ On routes with no train, the coach beats the shared grand taxi for comfort and predictability, though the taxi is faster and more flexible if you do not mind the format. A private driver costs more and buys door-to-door convenience. For most first-timers reaching Chefchaouen or Essaouira, a CTM or Supratours coach is the sweet spot of comfort, price and reliability — the sensible default where the rails run out. 
+
+ 
+
+ Choosing coach, train, taxi or driver for each leg is one thread of the sequencing that decides how a whole trip flows and where you can base. How the modes fit a first-timer route is worked out in  the complete Morocco trip guide . 
+
+ For the rail side, see our  trains guide ; for the full picture, the  transport overview  covers every mode. 
+
+ 
+   CTM vs Supratours: FAQ 
+    What's the difference between them?   CTM is the long-established national line with the broadest network; Supratours is run by the railway and excels where a trip combines train and coach.   
+    Which reaches Essaouira and Chefchaouen?   Supratours is the usual choice for Essaouira; both run to Chefchaouen from Fez. Neither is on the rail line, so the coach is how you get there.   
+    Is there a luggage fee?   Yes — both charge a small separate fee for hold luggage, paid at the station. Keep a little cash and hold onto the bag tag.   
+    Should I book ahead?   For popular routes in high season, yes — a day or two ahead. Off-peak, buying at the station on the day is usually fine.   
+    Coach or grand taxi?   The coach is more comfortable and predictable; the grand taxi is faster and more flexible. For most first-timers, the coach wins.   
+ 
+
+
+----- marrakech-to-fez-transport -----
+TITLE: Getting from Marrakech to Fez: Every Option
+
+ Marrakech and Fez are the two anchors of a classic Morocco loop, and getting between them is one of the trip's defining logistical choices — not because it is hard, but because the option you pick reshapes the itinerary. You can take the direct train, a coach, a private driver, or fold the journey into a multi-day desert tour that turns the transfer into the highlight of the trip. Here is every option and when each makes sense. 
+
+ 
+
+ The train: the standard choice 
+ The ONCF train is the default way between Marrakech and Fez, a comfortable ride of roughly seven to eight hours, usually with a change at Casablanca, and it is the option most independent first-timers take. First class buys a reserved seat for a small premium — worth it on a journey this length, especially with luggage. It is calm, reliable and lets you read or watch the country pass, and it drops you in the centre of each city. 
+ Why the train usually wins 
+ For a straightforward city-to-city transfer, the train beats the alternatives on comfort and simplicity: no driving, no negotiation, a fixed schedule and a seat you can book. Booking a day ahead in high season secures first class. Unless you specifically want the desert in between or door-to-door service, the train is the sensible default, and the change at Casablanca is simple rather than a hassle. 
+
+ The coach 
+ A CTM coach runs the route too, comparable in time to the train and slightly cheaper, and it is a fine alternative if the train schedule does not suit or seats are sold out. It is comfortable and air-conditioned, though it lacks the train's room to move on a long journey. For most travellers the train edges it, but the coach is a solid backup and occasionally the better fit for timing. 
+
+ The private driver 
+ Hiring a private driver for the Marrakech-to-Fez run costs considerably more but buys door-to-door service and the freedom to stop along the way, and it makes most sense if you want to see sights between the cities rather than travel directly. A driver can route you past Beni Mellal or through scenery a train skips, turning the transfer into a touring day. For a family or a group, the cost per head narrows and the convenience can justify it. 
+
+ Flying between them 
+ There are also domestic flights on some city pairs, though for Marrakech to Fez the short flight time is usually outweighed by the airport rigmarole at both ends, and the train often wins door to door once you count check-in and transfers. Flying makes more sense for longer hops — reaching the far south or the coast — than for a route the train covers comfortably in an afternoon. For most first-timers, the direct train remains the better use of the day. 
+
+ The desert tour route 
+ The most rewarding option for many is not a direct transfer at all: a multi-day desert tour that starts in Marrakech and ends in Fez, crossing the High Atlas, Aït Benhaddou, the Dades Valley and the dunes of Merzouga on the way. This turns the journey between the cities into the centerpiece of the whole trip, and it neatly solves the transfer by making it the Sahara leg. If the desert is on your list, ending it in Fez is the elegant way to sequence a loop. 
+ One-way tours solve the logistics 
+ Because these tours run one-way, Marrakech to Fez, they save you doubling back over the long southern drive, and they fold the transport, the guide and the desert night into a single booking. It is the reason so many first-timer loops put the desert in the middle: you are travelling between the cities anyway, so you might as well do it through the Sahara. Confirm the tour ends in Fez when you book. 
+
+ 
+
+ Whether the Marrakech-Fez leg is a train ride or the desert centerpiece is the single choice that most shapes a first loop's order and pace. How that decision ripples through the trip is worked out in  the complete Morocco trip guide . 
+
+ For the desert version, see our  Sahara tours guide ; for the rail option, the  trains guide  covers routes and classes. 
+
+ 
+   Marrakech to Fez: FAQ 
+    What's the best way from Marrakech to Fez?   The train for a direct transfer — about seven to eight hours, usually via Casablanca, comfortable and reliable. First class is worth it.   
+    How long does the train take?   Roughly seven to eight hours with a change at Casablanca. Book first class a day ahead in high season for a reserved seat.   
+    Is a private driver worth it?   If you want to stop at sights along the way or need door-to-door service, yes. It costs more but turns the transfer into a touring day.   
+    Can I see the desert on the way?   Yes — a multi-day one-way desert tour from Marrakech to Fez crosses the Atlas and the dunes, turning the transfer into the trip's highlight.   
+    Coach or train?   Similar time, coach slightly cheaper. The train edges it for comfort and room, but the coach is a solid backup.   
+ 
+
+
+----- morocco-private-driver -----
+TITLE: Hiring a Private Driver in Morocco: Costs and How It Works
+
+ Hiring a private driver is one of the best-value decisions on a Morocco trip, and it costs far less than most Americans assume — a fraction of what an equivalent service would run at home. It removes the hardest logistical parts of the country, the long drives and the navigation, and often doubles as informal guiding. Knowing what it costs, what it should include, and where it beats the train helps you decide when to book one. Here is how it works. 
+
+ 
+
+ What a private driver actually is 
+ A private driver in Morocco means hiring a car with a professional driver, typically by the day or for a multi-day route, who handles all the driving, navigation and often the practical arrangements along the way. It is not a chauffeur in the luxury sense so much as a practical, affordable way to move around a country where the drives are long and the roads demanding. Many drivers speak good English and know the routes and stops intimately. 
+
+ What it costs, roughly 
+ Private drivers are usually priced as a day rate, sometimes with fuel included and sometimes added, and the figure is genuinely modest by American standards — this is one area where Morocco offers real value. The rate typically covers the car, the driver and the driving; it does not usually cover your accommodation, meals or entry fees, nor the driver's tip at the end. Confirm exactly what is included before you book, and get it in writing. 
+ What's included and what isn't 
+ Establish up front whether fuel is in the rate, whether the driver's own meals and lodging on a multi-day trip are your responsibility (they often are, and are inexpensive), and whether the itinerary includes shopping stops — because a driver paid commission at cooperatives and shops has a quiet incentive to detour. A good driver is transparent about all of this. State clearly that you are not shopping if that is your preference, and a professional respects it. 
+
+ When a driver beats the train 
+ The driver wins where the train cannot help: the desert and the deep south, the Atlas Mountains, scenic routes between towns off the rail line, and any itinerary where stopping at sights along the way is the point. It also suits families and groups, for whom the per-head cost drops and the door-to-door convenience with luggage and children is worth a great deal. On the rail spine between the imperial cities, though, the train is usually the better and cheaper choice. 
+
+ The commission question, plainly 
+ The one thing to settle honestly with any driver is shopping stops, because some drivers earn a commission at the cooperatives, carpet shops and craft workshops they bring clients to, and an itinerary can quietly fill with retail detours if you do not raise it. This does not make drivers dishonest — it is simply how part of the trade works — but stating clearly at the outset that you are not shopping, or want only stops you request, keeps the days yours. A good driver agrees without fuss. 
+
+ How to book a good one 
+ The reliable routes are through your riad or hotel, a reputable tour operator, or a personal recommendation, rather than hailing one off the street. Booking through your accommodation means someone has vetted the driver and you have recourse if something goes wrong. Read recent reviews where you can, confirm the language you need, and agree the route, the rate and the inclusions the day before rather than on the morning. 
+ Tipping the driver 
+ A multi-day driver who has looked after you well is tipped at the end, in a lump, more substantially than any single daily service — there is no fixed figure, but it should feel proportional to the days and the care. This is separate from the rate and expected, so budget for it. A driver who has navigated the long desert roads, handled the stops and been good company has earned a genuine tip. 
+
+ 
+
+ Choosing a private driver over the train for certain legs is one of the transport calls that shape a trip's cost and rhythm, and it interacts with where you base and how many days the desert takes. How those choices fit together is worked out in  the complete Morocco trip guide . 
+
+ For when to self-drive instead, see our  car rental guide ; for the desert the driver often handles, the  Sahara tours guide  covers it. 
+
+ 
+   Private drivers in Morocco: FAQ 
+    Is a private driver expensive?   Far less than Americans expect — a modest day rate by US standards. It's one of Morocco's real values.   
+    What does the rate include?   Usually the car, driver and driving. Not your meals, lodging or entry fees, nor the end-of-trip tip. Confirm fuel and shopping stops in writing.   
+    When is a driver better than the train?   For the desert, the Atlas, scenic off-rail routes, and any trip where stopping along the way is the point. Families and groups benefit most.   
+    How do I book a reliable one?   Through your riad or hotel, a reputable operator, or a recommendation — not off the street. Agree route, rate and inclusions in advance.   
+    Do I tip the driver?   Yes, at the end, as a lump proportional to the days and care — separate from the rate and expected. Budget for it.   
+ 
+
+
+----- morocco-airport-transfers -----
+TITLE: Airport Transfers in Morocco: What to Arrange in Advance
+
+ The ride from a Moroccan airport into town is your first negotiation in the country, arriving at the worst possible moment: jet-lagged, unfamiliar, and holding dirham you withdrew ten minutes ago. It is short and cheap in principle, and the single most common place first-timers overpay. Arranging the transfer in advance removes the whole problem, and the options divide neatly by how much hassle each one spares you. Here is what to arrange and why. 
+
+ 
+
+ Why arrange it in advance 
+ A prearranged transfer means a driver is waiting for you with your name, at a fixed price agreed before you fly, so there is no haggling at the rank when you are least equipped for it. For a first arrival — especially into a medina where cars cannot reach the door and you must be walked in — this is worth the small premium over a haggled taxi many times over. The peace of mind of a known driver and a known price is the whole point. 
+ The medina complication 
+ Riad addresses in the medina are often unreachable by car, so arrival involves meeting someone at a car-accessible point and walking through lanes you do not yet know. A transfer booked through your riad folds that into the price and the plan: the driver knows where to drop you and the riad knows to meet you. Arriving cold to find your own way in, in the dark, with luggage, is the classic first-night ordeal this avoids. 
+
+ The options, ranked by hassle 
+ In rough order from least to most friction: a riad or hotel transfer arranged in advance is the smoothest; a prebooked private airport-transfer service is similar; a petit taxi from the official rank with a fare agreed before the doors close is the solid standard; and the public bus, where it exists, is the budget option for light, confident travellers arriving in daylight. The right choice depends on how much of a negotiation you want in your first hour — usually as little as possible. 
+
+ The taxi option, done right 
+ If you take a taxi from the rank rather than a prearranged transfer, the airport is exactly where the meter is often declared "unavailable," so agree a fixed fare before you get in, and know the going rate beforehand — your riad can tell you the day before. A fair, slightly-above-city airport fare is reasonable; a wildly inflated one is the tourist tax you decline by taking the next car. Settle the number outside the taxi, never at the destination. 
+
+ Grand taxi versus petit taxi at the airport 
+ At the rank you may be offered a grand taxi (a larger shared or private car) or a petit taxi (the small city cab), and for an airport run with luggage the grand taxi is often the practical choice, especially for a family or a group. Either way the principle holds: agree the fare before the doors close. The petit taxi is metered in the city but frequently runs on a fixed "airport price," so the negotiation matters more here than anywhere else in town. 
+ Late-night arrivals 
+ Many US flights land in the evening, exactly when the arrivals hall is quietest and your leverage lowest, which is the strongest argument for a prearranged transfer on the first night. A waiting driver at a known price turns a tired, dark arrival into a simple pickup, with no debate over fares at eleven at night. Save the taxi rank for daytime departures later in the trip, when you know the fair rate and have your bearings. 
+
+ What to arrange before you fly 
+ The simple pre-trip checklist: message your riad or hotel to ask about an airport transfer and its fixed price, or book a reputable transfer service; confirm the meeting point and time in writing; and, if you would rather taxi, ask what the going airport fare should be so you have a number in your head. Ten minutes of arranging before you leave turns the first hour in Morocco from a negotiation into a simple handshake with a waiting driver. 
+
+ 
+
+ The airport transfer is where the trip's pricing habit first shows itself — a known fair number versus an opening position, decided when you have the least leverage. How arrival, cash and the first fare fit together is worked out in  the complete Morocco trip guide . 
+
+ For the Marrakech run specifically, see our  airport-to-medina guide ; for the taxi systems, the  taxi fares guide  covers meters and grand taxis. 
+
+ 
+   Morocco airport transfers: FAQ 
+    Should I arrange a transfer in advance?   For a first arrival, yes. A driver waiting with your name at a fixed price removes the arrivals-hall haggle when you're least equipped for it.   
+    Why does it matter for a medina riad?   Cars can't reach most medina addresses, so you're met and walked in. A booked transfer folds that into the price and plan.   
+    What are the options?   Riad transfer (smoothest), prebooked private service, petit taxi with a pre-agreed fare, or the public bus for light daytime arrivals.   
+    How do I take a taxi without overpaying?   Agree a fixed fare before the doors close — the meter is often "unavailable" at airports. Know the going rate first; take the next car if it's inflated.   
+    What should I do before I fly?   Message your riad about a transfer and price, or book a service, confirm the meeting point in writing, and learn the going taxi fare as a backup.   
+ 
+
+
+----- day-trips-from-fez -----
+TITLE: Day Trips from Fez: Meknes, Volubilis and Beyond
+
+ Fez is not just a destination but a base, and some of the most rewarding half-days of a Morocco trip lie within an easy drive of it: the imperial city of Meknes, the Roman ruins of Volubilis, and the sacred hilltown of Moulay Idriss, often combined into a single excellent day. After the intensity of the Fez medina, a day in the surrounding countryside and its quieter historic sites is a welcome change of pace. Here is what to see and how to do it. 
+
+ 
+
+ Volubilis: the Roman ruins 
+ Volubilis is the best-preserved Roman site in Morocco, a UNESCO-listed city of columns, arches and remarkably intact floor mosaics set in rolling green countryside about an hour from Fez. Walking among the ruins of a Roman provincial capital, with its triumphal arch and basilica standing against the hills, is a startling contrast to the medieval medina you left that morning. A guide on site brings the mosaics and the layout to life, and the light is best in the morning or late afternoon. 
+
+ Moulay Idriss: the sacred town 
+ A short distance from Volubilis, Moulay Idriss is one of Morocco's holiest towns, a whitewashed settlement tumbling across two hills around the tomb of the country's founder, and for centuries it was closed to non-Muslims entirely. Today visitors are welcome to wander its steep lanes and enjoy the views, though the shrine itself remains for Muslims. It pairs naturally with Volubilis, a ten-minute drive away, and adds a very different flavour — living pilgrimage town beside ancient ruin. 
+
+ Meknes: the fourth imperial city 
+ Meknes is the least-visited of Morocco's four imperial cities and the better for it: a grand 17th-century capital of monumental gates, vast granaries and stables, and a walkable medina without the crowds of Fez or Marrakech. The colossal Bab Mansour gate and the Heri es-Souani granaries are the highlights, and the whole city has an unhurried ease. Barely an hour from Fez by train or road, it makes an easy half or full day on its own or combined with Volubilis nearby. 
+
+ Combining them in a day 
+ The classic outing bundles all three — Meknes, Volubilis and Moulay Idriss — into one full day from Fez, since they cluster together to the west, and this is how most organised tours and private drivers structure it. It is an efficient, varied day: an imperial city, a Roman ruin and a sacred hilltown, all within an hour or so of each other. If you would rather go deeper on fewer sites, Meknes alone or Volubilis-plus-Moulay-Idriss each make a relaxed half-day. 
+
+ What to bring and when to go 
+ Volubilis, Meknes and Moulay Idriss are largely open-air sites, so bring sun protection, water and comfortable shoes — Volubilis in particular has little shade among its ruins, and the midday sun is fierce in the warmer months. Spring and autumn are ideal; summer rewards an early start before the heat builds. Dress modestly for Moulay Idriss as an active religious town, and allow enough time at Volubilis to walk the site properly rather than rushing the mosaics. 
+ A quieter alternative to the desert day 
+ For travellers who cannot fit the long desert trip, or who want a gentler pace, this cluster of sites is an excellent substitute: it delivers Roman history, a sacred town and an imperial city in a single comfortable day, all close to Fez and without the hours of driving the Sahara demands. It is one of the best-value days in the north, and a reminder that Morocco's depth is not only in the south. 
+
+ How to go 
+ You can reach Meknes independently by train in about an hour, but Volubilis and Moulay Idriss have no rail link, so the practical options are an organised day tour from Fez or a hired private driver, either of which handles the whole cluster comfortably. A driver gives you flexibility over timing and how long you linger at each; a group tour is cheaper and social. For the three-site day, a driver or tour is far easier than piecing it together yourself. 
+
+ 
+
+ Slotting a day trip from Fez into a trip, against the desert and the second city, is one more sequencing choice in a loop built from them. How Fez and its surroundings fit the whole is worked out in  the complete Morocco trip guide . 
+
+ For the city you're based in, see our  Fez guide ; for reaching the sites, the  private driver guide  covers the options. 
+
+ 
+   Day trips from Fez: FAQ 
+    What are the best day trips from Fez?   Volubilis (Roman ruins), Moulay Idriss (sacred hilltown) and Meknes (imperial city) — often combined into one full day to the west of Fez.   
+    What is Volubilis?   Morocco's best-preserved Roman site — a UNESCO-listed city of columns, arches and intact mosaics, about an hour from Fez.   
+    Can I visit Meknes by train?   Yes, about an hour from Fez by rail. Volubilis and Moulay Idriss have no train, so those need a tour or private driver.   
+    Can I see all three in a day?   Yes — they cluster together, and most tours and drivers bundle Meknes, Volubilis and Moulay Idriss into one full day.   
+    How do I get to them?   An organised day tour from Fez or a hired private driver handles the cluster easily. Meknes alone is reachable by train.   
+ 

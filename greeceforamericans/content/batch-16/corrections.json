@@ -1,0 +1,15 @@
+{
+  "_README": "Accumulated local ground truth for greeceforamericans. Every entry OVERRIDES facts.json and any AI output, permanently. Stage 3 loads this alongside facts.json before writing any batch. Append whenever the user corrects a fact, recommendation, or recurring style mistake — future articles inherit the fix automatically.",
+  "schema_version": 3,
+  "project": "greeceforamericans",
+  "corrections": [
+    {
+      "id": 1,
+      "date": "2026-06-18",
+      "scope": "fact",
+      "wrong": "Phrasing like 'fly home from Santorini' / 'fly home from the last island', implying direct US flights exist from Cycladic islands.",
+      "right": "There are NO direct US flights from the islands. Athens (ATH) is the only US gateway. The final island->Athens leg is a DOMESTIC connection. Always phrase as 'fly back to Athens to connect home' or 'the short flight back to Athens', never 'fly home from <island>'.",
+      "applies_to": "all itinerary/island-hopping/segment articles ending on an island"
+    }
+  ]
+}

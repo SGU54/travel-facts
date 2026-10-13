@@ -1,0 +1,205 @@
+You are filling a FACT SHEET for a travel guide aimed at AMERICAN travellers going to JAPAN.
+
+AUDIENCE: US passport holders, flying from US hubs, thinking in USD. Frame entry rules for
+THEIR passports and money in THEIR terms — but keep Japanese prices in YEN as the native
+figure; the site converts.
+
+RETURN JSON ONLY. No preamble, no commentary, no markdown fences. Return exactly the
+structure below with every "value", "source_url" and "status" filled in.
+
+RULES — these matter more than completeness:
+
+1. NEVER invent a source_url. If you did not use a specific official page, put null.
+   A plausible-looking URL that 404s is worse than null.
+2. "status" must be one of:
+     "verified"           — ONLY if source_url is an official page whose content you are
+                            genuinely relying on. Do not use this for things you recall.
+     "agreed_stable"      — structural, unchanged for years (e.g. holiday dates fixed in law)
+     "verify_recommended" — correct as far as you know, but volatile or checkable
+     "serve_live"         — changes too often to state at all (e.g. exchange rates)
+   When unsure, use "verify_recommended". Over-claiming here corrupts a paid product.
+3. If you do not know a figure, put null in "value" and say why in "status": "unknown".
+   A null is useful. A confident wrong number is not.
+4. Japanese rail pricing CHANGED SHARPLY in October 2023 and IC-card availability has moved
+   repeatedly since 2023. Much of what is written online about both is stale. Where your
+   information may predate that, say so rather than repeating it.
+5. Give ranges where the truth is a range (bloom dates, rainy season). Do not average
+   disagreeing sources into a false single number.
+
+THE HIGHEST-VALUE FIELDS, if you answer nothing else carefully, answer these:
+  - rail_passes.national_pass_variants and national_pass_price_change (the 2023 increase)
+  - ic_cards.mobile_topup_us_cards (which US card networks can top up a mobile Suica in
+    Apple Wallet, and which are refused — this is where American travellers actually fail)
+  - ic_cards.physical_card_availability (are unregistered physical cards sold right now?)
+  - seasonal.new_year_closures (the late-Dec/early-Jan shutdown Americans walk into unaware)
+
+STRUCTURE TO RETURN:
+
+{
+  "rail_passes": {
+    "national_pass_variants": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "national_pass_price_change": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "nozomi_mizuho_rule": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "tokyo_kyoto_one_way_cost": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "tokyo_osaka_one_way_cost": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "break_even_trips": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "regional_passes_core": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "where_to_buy": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "eligibility": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    }
+  },
+  "ic_cards": {
+    "card_types_and_interop": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "physical_card_availability": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "welcome_suica": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "mobile_suica_ios": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "mobile_topup_us_cards": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "android_limitation": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "balance_limits_and_refund": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "day_passes_tokyo": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "day_passes_kyoto": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "when_ic_beats_pass": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    }
+  },
+  "seasonal": {
+    "sakura_peak_windows": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "sakura_booking_lead": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "koyo_peak_windows": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "golden_week_dates": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "golden_week_effects": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "obon_dates_and_effects": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "new_year_closures": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "public_holidays_list": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "tsuyu_rainy_season": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "typhoon_season": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "summer_heat": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "winter_snow_regions": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    },
+    "winter_low_season": {
+      "value": null,
+      "source_url": null,
+      "status": null
+    }
+  }
+}

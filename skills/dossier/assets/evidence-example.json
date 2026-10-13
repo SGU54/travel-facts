@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "project": "SYNTHETIC TEST ONLY — Example Bay, fictional currency XCU",
+  "release_date": "2026-04-15",
+  "sources": [
+    {
+      "id": "s-fares",
+      "kind": "primary",
+      "url": "https://example.invalid/operator/fares",
+      "locator": "SYNTHETIC fixture: adult single fare and one-day pass table; these are not real fares or researched evidence",
+      "checked_at": "2026-04-15",
+      "scope": "Fictional Example Bay operator, adult urban journeys"
+    }
+  ],
+  "claims": [
+    {
+      "id": "c-single",
+      "text": "SYNTHETIC: an adult single journey costs XCU 3.25.",
+      "authority": "official",
+      "volatility": "changeable",
+      "topic": "fare",
+      "status": "verified",
+      "sources": ["s-fares"],
+      "as_of": "2026-04-15",
+      "valid_from": "2026-04-01",
+      "valid_until": "2026-06-30",
+      "recheck_by": "2026-05-15",
+      "scope": "Adult; one urban journey; fictional example only",
+      "critical": true,
+      "value": {"amount": "3.25", "unit": "XCU/journey"},
+      "display": {
+        "book": "Compare the single fare with the day pass for the number of journeys you will actually take.",
+        "sheet": "SYNTHETIC single fare: XCU 3.25 per adult journey."
+      }
+    },
+    {
+      "id": "c-pass",
+      "text": "SYNTHETIC: the adult day pass costs XCU 9.50 for one day.",
+      "authority": "official",
+      "volatility": "changeable",
+      "topic": "fare",
+      "status": "verified",
+      "sources": ["s-fares"],
+      "as_of": "2026-04-15",
+      "valid_from": "2026-04-01",
+      "valid_until": "2026-06-30",
+      "recheck_by": "2026-05-15",
+      "scope": "Adult; one day of urban journeys; fictional example only",
+      "critical": true,
+      "value": {"amount": "9.50", "unit": "XCU/day"},
+      "display": {
+        "book": "For our four-journey day, the pass costs less at the fares checked for this edition; recheck the sheet before buying.",
+        "sheet": "SYNTHETIC day pass: XCU 9.50 per adult day."
+      }
+    },
+    {
+      "id": "c-four-total",
+      "text": "SYNTHETIC: four single journeys cost XCU 13.00 for one adult.",
+      "authority": "inference",
+      "volatility": "changeable",
+      "topic": "other",
+      "status": "verified",
+      "sources": ["s-fares"],
+      "as_of": "2026-04-15",
+      "recheck_by": "2026-05-15",
+      "scope": "One adult, four urban journeys on one day, no existing ticket",
+      "critical": true,
+      "assumptions": ["Four journeys are taken by one adult.", "The same urban network is covered by both options.", "No additional card or purchase fee exists in this fictional example."],
+      "calculation_id": "calc-four-singles",
+      "value": {"amount": "13.00", "unit": "XCU"},
+      "display": {
+        "sheet": "SYNTHETIC four-journey case: 4 × XCU 3.25 = XCU 13.00, versus XCU 9.50 for one day pass."
+      }
+    }
+  ],
+  "decisions": [
+    {
+      "id": "d-day-ticket",
+      "question": "Which ticket should an adult buy for the example day?",
+      "when": "Four urban journeys in one day, at the fares checked for this edition, with no existing pass",
+      "action": "Buy the day pass after checking that the current fares still support this comparison.",
+      "claim_ids": ["c-single", "c-pass", "c-four-total"],
+      "exceptions": [
+        {
+          "condition": "Only two single journeys will be taken that day",
+          "action": "Buy two single tickets instead; at the example fares they cost less than the pass.",
+          "claim_ids": ["c-single", "c-pass"]
+        }
+      ],
+      "comparison": {
+        "basis": "One adult, one day, same urban network, no existing pass; fictional fares exclude no additional mandatory costs",
+        "options": [
+          {"label": "Four single journeys", "calculation_id": "calc-four-singles"},
+          {"label": "One day pass", "calculation_id": "calc-one-pass"}
+        ]
+      }
+    }
+  ],
+  "calculations": [
+    {
+      "id": "calc-four-singles",
+      "operation": "sum",
+      "inputs": [
+        {"claim_id": "c-single", "quantity": {"amount": "4", "unit": "journey"}}
+      ],
+      "result": {"amount": "13.00", "unit": "XCU"}
+    },
+    {
+      "id": "calc-one-pass",
+      "operation": "sum",
+      "inputs": [
+        {"claim_id": "c-pass", "quantity": {"amount": "1", "unit": "day"}}
+      ],
+      "result": {"amount": "9.50", "unit": "XCU"}
+    }
+  ],
+  "field_sheet": {
+    "checked_at": "2026-04-15",
+    "claim_ids": ["c-single", "c-pass", "c-four-total"]
+  },
+  "conflicts": []
+}

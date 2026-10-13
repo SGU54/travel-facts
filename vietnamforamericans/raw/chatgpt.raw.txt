@@ -1,0 +1,581 @@
+{
+  "_README": "CANDIDATE RESEARCH — Vietnam for American travelers. All template sections are retained. Verified means the stated claim was supported by an opened official source; it does not mean publication approval. Null or empty values represent unresolved research, not negative findings. Evidence metadata is recorded as strings in _open_questions.value to preserve the template's exact field structure. Recommendations are editorial judgments, not independently verified rankings. All serve_live values remain null.",
+  "_meta": {
+    "schema_version": 3,
+    "project": "vietnamforamericans",
+    "country": "Vietnam",
+    "country_iso": "VN",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": ["JFK", "EWR", "LAX", "SFO", "SEA", "ORD", "IAD", "DFW"],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "express costs in USD with Vietnamese dong (VND) equivalents"
+    },
+    "ai_source": "chatgpt",
+    "produced_at": "2026-10-12"
+  },
+  "_fact_field_shape": "FACTS retain the supplied {value, source_url, status, notes where provided} structure. Evidence entries in _open_questions.value supply source_kind, checked_at, review_after, scope and precise support for the named records. Dates use Europe/Paris. Review dates are editorial research deadlines, not legal expiration dates. No unsupported fact is populated through model confidence.",
+  "identity": {
+    "name_local": {
+      "value": "Nước Cộng hòa xã hội chủ nghĩa Việt Nam",
+      "source_url": "https://vnembassy-jp.org/vi/th%C3%B4ng-tin-c%C6%A1-b%E1%BA%A3n",
+      "status": "verified"
+    },
+    "capital": {
+      "value": "Hà Nội",
+      "source_url": "https://vnembassy-jp.org/vi/th%C3%B4ng-tin-c%C6%A1-b%E1%BA%A3n",
+      "status": "verified"
+    },
+    "official_languages": {
+      "value": ["Vietnamese"],
+      "source_url": "https://vnembassy-jp.org/vi/th%C3%B4ng-tin-c%C6%A1-b%E1%BA%A3n",
+      "status": "verified"
+    },
+    "currency_code": {
+      "value": "VND",
+      "source_url": "https://vnembassy-jp.org/vi/th%C3%B4ng-tin-c%C6%A1-b%E1%BA%A3n",
+      "status": "verified"
+    },
+    "currency_name": {
+      "value": "Vietnamese đồng",
+      "source_url": "https://vnembassy-jp.org/vi/th%C3%B4ng-tin-c%C6%A1-b%E1%BA%A3n",
+      "status": "verified"
+    },
+    "timezones": {
+      "value": ["Indochina Time; no daylight saving time"],
+      "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+      "status": "verified"
+    },
+    "calling_code": {
+      "value": null,
+      "source_url": null,
+      "status": "verify_recommended"
+    },
+    "power_plug_voltage": {
+      "value": null,
+      "source_url": null,
+      "status": "verify_recommended"
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "Scope: ordinary, full-validity U.S. passports, tourism, applicants outside Vietnam, and entry through an authorized checkpoint. Special exemptions, emergency passports, employment and residence require separate verification. The maximum visa duration does not guarantee that every applicant receives that duration.",
+      "by_nationality": [
+        {
+          "passport": "United States ordinary passport; tourism; no separately established exemption",
+          "type": {
+            "value": "e_visa",
+            "source_url": "https://vnembassy-jp.org/vi/visa-dien-tu",
+            "status": "verified",
+            "notes": "E-visa eligibility extends to citizens of all countries under Resolution 127/NQ-CP, effective 2023-08-15. This is a visa category, not a visa waiver. U.S. State Department guidance separately confirms that American tourists generally need a visa before travel."
+          },
+          "max_stay_days": {
+            "value": 90,
+            "source_url": "https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt",
+            "status": "verified"
+          },
+          "fee": {
+            "value": null,
+            "source_url": null,
+            "status": "verify_recommended"
+          },
+          "processing_time": {
+            "value": "Usually 3–5 working days after complete application and payment; not guaranteed.",
+            "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+            "status": "verified"
+          },
+          "online_authorization_required": {
+            "value": null,
+            "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+            "status": "verify_recommended",
+            "notes": "An e-visa is distinct from an arrival declaration. State Department guidance says non-Vietnamese passport holders arriving by air must submit a declaration within three days before arrival. https://prearrival.immigration.gov.vn/ opened without substantive instructions. Independent confirmation of implementation and exceptions remains unresolved; a blanket authorization boolean would be misleading."
+          },
+          "official_application_url": {
+            "value": "https://evisa.gov.vn/",
+            "source_url": "https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt"
+          }
+        }
+      ],
+      "scam_sites_to_avoid": {
+        "value": [],
+        "source_url": null,
+        "status": "verify_recommended"
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "Six months beyond arrival.",
+        "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+        "status": "verified"
+      },
+      "onward_ticket_required": {
+        "value": null,
+        "source_url": null,
+        "status": "verify_recommended"
+      },
+      "notes": {
+        "value": "State Department guidance conflicts internally: one blank page per stamp versus two blank pages. It says e-visas cannot be extended domestically. Immigration separately describes possible sponsored new visas; that is not an e-visa extension. Sources: https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html and https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt. Special passport and exemption cases remain unresolved."
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "VND",
+        "source_url": "https://vietnam.travel/things-to-do/currency-and-payments-vietnam",
+        "status": "verified"
+      },
+      "approx_rate_note": {
+        "value": null,
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "No current USD/VND conversion was retrieved. Do not reuse the tourism page's historical conversion examples."
+      },
+      "cash_vs_card": {
+        "value": "Carry dong for street vendors and small purchases. Many hotels, restaurants and tour businesses accept international cards; acceptance is not universal.",
+        "source_url": "https://vietnam.travel/things-to-do/currency-and-payments-vietnam",
+        "status": "verified"
+      },
+      "atm_availability": {
+        "value": "ATMs accepting international cards are available at major airports and in cities. Arrange cash before visiting remote destinations.",
+        "source_url": "https://vietnam.travel/things-to-do/currency-and-payments-vietnam",
+        "status": "verified"
+      },
+      "currency_import_export_limit": {
+        "value": "Declare cash exceeding USD 5,000 equivalent in foreign currency or VND 15,000,000 on entry or exit; these are declaration thresholds.",
+        "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+        "status": "verified"
+      },
+      "tipping_norm": {
+        "value": "No fixed national tipping rule. Restaurant and cafe tips are generally optional; tipping is more common for private guides and spa services.",
+        "source_url": "https://vietnam.travel/things-to-do/currency-and-payments-vietnam",
+        "status": "verified"
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": [
+          "Noi Bai International Airport — HAN — Hanoi",
+          "Tan Son Nhat International Airport — SGN — Ho Chi Minh City",
+          "Da Nang International Airport — DAD — Da Nang"
+        ],
+        "source_url": "https://www.vietnamairlines.com/en-vn/flights-to-republic-singapore",
+        "status": "verified",
+        "notes": "Airport names, city associations and IATA codes are supported in section 3.1. This is a scoped list of the three gateways requested in the airport article, not an exhaustive airport inventory or verification of current terminal assignments."
+      },
+      "national_carrier": {
+        "value": "Vietnam Airlines",
+        "source_url": "https://vietnam.travel/plan-your-trip/transport-within-vietnam",
+        "status": "verified"
+      },
+      "flight_from_audience_origins": {
+        "value": null,
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "Schedules, fares, operating carriers and connection requirements from JFK, EWR, LAX, SFO, SEA, ORD, IAD and DFW remain unverified. No nonstop service is inferred."
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "North–south passenger rail connects Hanoi and Ho Chi Minh City via destinations including Hue, Da Nang and Nha Trang. Reunification Express describes services on this corridor rather than one unique train. Sleeper accommodation is available.",
+        "source_url": "https://vietnam.travel/plan-your-trip/transport-within-vietnam",
+        "status": "verified"
+      },
+      "buses": {
+        "value": "Intercity tourist buses include sleeper and reclining-seat vehicles. The tourism authority describes connections among Hanoi, Hue, Hoi An, Nha Trang, Da Lat, Mui Ne and Ho Chi Minh City.",
+        "source_url": "https://vietnam.travel/plan-your-trip/transport-within-vietnam",
+        "status": "verified"
+      },
+      "domestic_flights": {
+        "value": "Domestic air travel is available between major destinations. Date-specific routes, operating airlines, baggage allowances and airport terminals require airline verification.",
+        "source_url": "https://vietnam.travel/plan-your-trip/transport-within-vietnam",
+        "status": "verified"
+      },
+      "ride_sharing": {
+        "value": "Grab operates in Vietnam; match the driver and vehicle to the booking.",
+        "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+        "status": "verified"
+      },
+      "car_rental_and_driving": {
+        "value": null,
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "No complete, current legal determination was verified for an ordinary U.S. license, U.S.-issued IDP, Vietnamese license conversion, motorcycle category, engine or power exemptions, insurance coverage or alcohol limit. Rental availability must not be presented as permission to drive."
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Hanoi: cool or cold and misty December–March; hot, humid and rainy June–August. Hue: wetter September–February. Hoi An: wetter September–January. Ho Chi Minh City and Mekong Delta: rainy May–November, generally drier December–April. These are seasonal patterns, not forecasts.",
+        "source_url": "https://vietnam.travel/things-to-do/weather-and-climate-vietnam",
+        "status": "verified"
+      },
+      "best_months": {
+        "value": ["March", "April"],
+        "rank": "core",
+        "notes": "Editorial compromise for a first trip spanning several regions, prioritizing broader sightseeing conditions. Source: https://vietnam.travel/things-to-do/weather-and-climate-vietnam; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-04-12. Alternatives: autumn for a northern focus; December–April for a southern focus. Heat tolerance and exact destinations can change the choice."
+      },
+      "avoid_periods": {
+        "value": [
+          "Consider alternatives to September–November for a flood-sensitive Hue/Hoi An itinerary.",
+          "Avoid relying on normal business availability during Tet without checking individual operators."
+        ],
+        "rank": "core",
+        "notes": "Conditional recommendations, not nationwide travel bans. Weather premise: https://vietnam.travel/things-to-do/weather-and-climate-vietnam. Tet closure premise: https://vietnam.travel/faqs. Both source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12. Exact upcoming festival dates, official holiday days and closure windows remain unverified."
+      }
+    },
+    "safety_health": {
+      "_note": "Official advisory and medical recommendations are dated evidence, not guarantees of safety or individualized medical advice. Review before publication and again before travel.",
+      "advisory_level": {
+        "value": "Level 1 — Exercise normal precautions.",
+        "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+        "status": "verified",
+        "notes": "Advisory issued 2026-06-24; checked 2026-10-12."
+      },
+      "main_risk": {
+        "value": "Petty theft; unexploded ordnance in affected areas.",
+        "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+        "status": "verified"
+      },
+      "vaccines": {
+        "value": "CDC recommends keeping routine vaccinations current, hepatitis A for eligible unvaccinated travelers and hepatitis B for unvaccinated travelers of all ages. Japanese encephalitis vaccination depends on duration, rural exposure and activities. Malaria prevention is itinerary-specific: CDC lists no transmission in Hanoi, Ho Chi Minh City, Da Nang, Hai Phong, Nha Trang or Quy Nhon, but identifies rural risk areas. Arrange a travel-health assessment at least a month before departure when possible. These are health recommendations, not visa requirements.",
+        "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam",
+        "status": "verified"
+      },
+      "tap_water_safe": {
+        "value": false,
+        "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+        "status": "verified"
+      },
+      "emergency_numbers": {
+        "value": {
+          "police": "113",
+          "ambulance": "115",
+          "fire": "114"
+        },
+        "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+        "status": "verified"
+      },
+      "common_scams": {
+        "value": ["Taxi scams"],
+        "source_url": "https://vietnam.travel/faqs",
+        "status": "verified"
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": null,
+        "source_url": null,
+        "status": "verify_recommended"
+      },
+      "coverage": {
+        "value": null,
+        "source_url": null,
+        "status": "verify_recommended"
+      }
+    },
+    "costs": {
+      "_note": "No dated, reproducible budget scenario was verified. Prices and USD/VND conversions remain null. Any later scenario must identify dates, per-person units, occupancy, nights, inclusions and exclusions.",
+      "daily_budget_low": {
+        "value": null,
+        "status": "serve_live"
+      },
+      "daily_budget_mid": {
+        "value": null,
+        "status": "serve_live"
+      },
+      "daily_budget_high": {
+        "value": null,
+        "status": "serve_live"
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "Dress modestly at religious sites. Cover shoulders and knees; remove hats when entering temples or pagodas. Keep swimwear to beaches and resorts.",
+        "source_url": "https://vietnam.travel/faqs",
+        "status": "verified"
+      },
+      "dos_and_donts": {
+        "value": [
+          "Ask permission before photographing people.",
+          "Remove shoes before entering a private home.",
+          "Avoid public shouting or humiliating someone during a disagreement.",
+          "Offer or receive items with the right hand or both hands.",
+          "Xin chào means hello; cảm ơn means thank you."
+        ],
+        "source_url": "https://vietnam.travel/things-to-do/vietnamese-etiquette-travellers",
+        "status": "verified"
+      }
+    }
+  },
+  "cities": [
+    {
+      "name": "Hanoi",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Arrive through Noi Bai International Airport or by rail on the north–south corridor.",
+          "source_url": "https://vietnam.travel/places-to-go/red-river-delta/ha-noi",
+          "status": "verified"
+        },
+        "local_transport": {
+          "value": "Airport buses, taxis and ride-hailing are available.",
+          "source_url": "https://vietnam.travel/places-to-go/red-river-delta/ha-noi",
+          "status": "verified"
+        },
+        "airport": {
+          "value": "Noi Bai International Airport — HAN",
+          "source_url": "https://www.vietnamairlines.com/en-vn/flights-to-republic-singapore",
+          "status": "verified"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Old Quarter",
+              "why": "For first-time visitors prioritizing street life and food."
+            },
+            {
+              "name": "Hoan Kiem Lake",
+              "why": "An alternative for a gentler outdoor introduction."
+            },
+            {
+              "name": "Vietnam Fine Arts Museum",
+              "why": "For travelers who prefer an art-focused visit."
+            }
+          ],
+          "rank": "core",
+          "notes": "Editorial selections; existence and activities supported by https://vietnam.travel/places-to-go/red-river-delta/ha-noi. source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12. Admission and opening hours unverified."
+        },
+        "where_to_stay": {
+          "value": [],
+          "rank": "core",
+          "notes": "Accommodation areas were not sufficiently compared for noise, accessibility, walking routes and transfer tradeoffs."
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Old Quarter pho and bun cha kitchens",
+              "why": "For travelers interested in the dishes highlighted by the tourism authority; no individual vendor or hygiene rating is endorsed."
+            }
+          ],
+          "rank": "core",
+          "notes": "Source: https://vietnam.travel/places-to-go/red-river-delta/ha-noi; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12. Alternative: a seated restaurant selected for dietary communication and comfort; specific venues remain unverified."
+        },
+        "day_trips": {
+          "value": [],
+          "rank": "core",
+          "notes": "Ninh Binh, Ha Long Bay, Cat Ba and Sapa transfer logistics and operators remain unverified."
+        }
+      }
+    },
+    {
+      "name": "Da Nang",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Accessible by air, train and bus.",
+          "source_url": "https://vietnam.travel/places-to-go/south-central-coast-central-highlands/da-nang",
+          "status": "verified"
+        },
+        "local_transport": {
+          "value": "Taxis, buses and ride-hailing are available.",
+          "source_url": "https://vietnam.travel/places-to-go/south-central-coast-central-highlands/da-nang",
+          "status": "verified"
+        },
+        "airport": {
+          "value": "Da Nang International Airport — DAD",
+          "source_url": "https://www.vietnamairlines.com/en-vn/flights-to-republic-singapore",
+          "status": "verified"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Marble Mountains",
+              "why": "For travelers seeking caves, pagodas and viewpoints who are comfortable with uneven terrain."
+            },
+            {
+              "name": "My Khe Beach",
+              "why": "An alternative for travelers prioritizing a relaxed coastal outing; swimming remains conditional on local conditions."
+            }
+          ],
+          "rank": "core",
+          "notes": "Source: https://vietnam.travel/places-to-go/south-central-coast-central-highlands/da-nang; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12. Prices, opening hours, lift operation and beach warnings remain unverified."
+        },
+        "where_to_stay": {
+          "value": [],
+          "rank": "core",
+          "notes": "The Hoi An Ancient Town versus An Bang versus Da Nang accommodation comparison remains unresolved."
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Mi Quang noodle restaurants",
+              "why": "For visitors seeking a regional dish identified by the tourism authority."
+            }
+          ],
+          "rank": "core",
+          "notes": "Source: https://vietnam.travel/places-to-go/south-central-coast-central-highlands/da-nang; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12. Alternative: seafood dining for travelers who prefer it. Specific restaurants and allergy controls remain unverified."
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Hai Van Pass",
+              "why": "Consider a car excursion for coastal scenery without requiring the visitor to ride a motorcycle.",
+              "rough_time": null
+            }
+          ],
+          "rank": "core",
+          "notes": "Source verifies the scenic road between Da Nang and Hue: https://vietnam.travel/places-to-go/south-central-coast-central-highlands/da-nang. source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2026-11-12. Driver credentials, route conditions and duration unverified. Alternative: remain in Da Nang if visibility or road conditions are poor."
+        }
+      }
+    },
+    {
+      "name": "Ho Chi Minh City",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Tan Son Nhat International Airport serves the city.",
+          "source_url": "https://vietnam.travel/places-to-go/southeastern-vietnam/ho-chi-minh-city",
+          "status": "verified"
+        },
+        "local_transport": {
+          "value": "Taxis, ride-hailing and city buses are available.",
+          "source_url": "https://vietnam.travel/places-to-go/southeastern-vietnam/ho-chi-minh-city",
+          "status": "verified"
+        },
+        "airport": {
+          "value": "Tan Son Nhat International Airport — SGN",
+          "source_url": "https://www.vietnamairlines.com/en-vn/flights-to-republic-singapore",
+          "status": "verified"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Central Post Office and Dong Khoi area",
+              "why": "For a first introduction focused on central landmarks."
+            },
+            {
+              "name": "Ben Thanh Market",
+              "why": "For visitors interested in a market experience."
+            },
+            {
+              "name": "Cho Lon and Thien Hau Pagoda",
+              "why": "An alternative for travelers prioritizing Chinese-Vietnamese heritage."
+            }
+          ],
+          "rank": "core",
+          "notes": "Source: https://vietnam.travel/places-to-go/southeastern-vietnam/ho-chi-minh-city; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12. Access, opening hours and current works unverified."
+        },
+        "where_to_stay": {
+          "value": [],
+          "rank": "core",
+          "notes": "No accommodation district or property comparison was sufficiently verified."
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Banh xeo or com tam restaurants",
+              "why": "For travelers interested in southern dishes highlighted by the tourism authority."
+            }
+          ],
+          "rank": "core",
+          "notes": "Source: https://vietnam.travel/places-to-go/southeastern-vietnam/ho-chi-minh-city; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12. Banh mi is another supported food option. No specific vendor, dietary suitability or hygiene standard was verified."
+        },
+        "day_trips": {
+          "value": [],
+          "rank": "core",
+          "notes": "Mekong Delta, Can Tho, Chau Doc and war-history excursions require operator, access and journey-time verification."
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "Vietnam in one week",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": {
+        "value": [],
+        "notes": "No complete itinerary is asserted: date-specific transport and the principal excursion options were not sufficiently verified."
+      },
+      "assumptions": {
+        "value": "Before constructing the plan, establish whether seven days excludes international travel, arrival and departure airports, season, mobility, pace and priorities. Compare a single-region trip with a two-base trip."
+      }
+    },
+    {
+      "title": "Vietnam in two weeks",
+      "days": 14,
+      "scope": "multi-city",
+      "plan": {
+        "value": [],
+        "notes": "No complete itinerary is asserted: north–south routing, central-region access and excursion logistics require additional verification."
+      },
+      "assumptions": {
+        "value": "Before constructing the plan, establish fourteen days on the ground versus total vacation days, travel dates, open-jaw flight availability, willingness to fly domestically, overnight-train tolerance and beach versus cultural priorities."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "value": [
+        {
+          "name": "Old Quarter and Hoan Kiem Lake",
+          "where": "Hanoi",
+          "why": "A candidate combination for visitors prioritizing urban culture; compare with Ho Chi Minh City if southern routing is more practical."
+        },
+        {
+          "name": "Marble Mountains",
+          "where": "Da Nang",
+          "why": "A candidate for travelers interested in religious landscapes and viewpoints; My Khe Beach offers a less strenuous alternative."
+        }
+      ],
+      "rank": "core",
+      "notes": "Partial editorial shortlist, not a researched national ranking. Premises verified at https://vietnam.travel/places-to-go/red-river-delta/ha-noi and https://vietnam.travel/places-to-go/south-central-coast-central-highlands/da-nang; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12."
+    }
+  },
+  "_open_questions": {
+    "_note": "Evidence metadata and unresolved research are retained here because the fixed template has no dedicated evidence-ledger fields. This candidate does not establish publication readiness for the full article scope.",
+    "value": [
+      "EVIDENCE — identity.name_local, capital, official_languages, currency_code and currency_name: source_url=https://vnembassy-jp.org/vi/th%C3%B4ng-tin-c%C6%A1-b%E1%BA%A3n; source_kind=official_Vietnamese_embassy; checked_at=2026-10-12; review_after=2027-10-12; scope=Vietnam national identity. Support: the general-information list explicitly states each populated identity value. Page dated October 2024; its demographic and administrative statistics were not adopted.",
+      "EVIDENCE — country_facts.visa.by_nationality[0].type: source_url=https://vnembassy-jp.org/vi/visa-dien-tu; source_kind=official_Vietnamese_embassy; checked_at=2026-10-12; review_after=2026-11-12; scope=foreign ordinary-passport applicants, including U.S. citizens. Support: electronic-visa section describes eligibility for all countries under Resolution 127/NQ-CP effective 2023-08-15.",
+      "EVIDENCE — country_facts.visa.by_nationality[0].max_stay_days and official_application_url: source_url=https://evisa.xuatnhapcanh.gov.vn/trang-chu-ttdt; source_kind=official_immigration_authority; checked_at=2026-10-12; review_after=2026-11-12; scope=e-visa applicants outside Vietnam. Support: General section gives a maximum 90-day validity with single or multiple entry; migration notice names evisa.gov.vn and thithucdientu.gov.vn as replacement domains from 2024-11-11. Individual visa dates govern permitted travel.",
+      "EVIDENCE — identity.timezones; country_facts.visa.by_nationality[0].processing_time; documents.passport_validity_required; money.currency_import_export_limit; getting_around.ride_sharing; safety_health.advisory_level, main_risk, tap_water_safe and emergency_numbers: source_url=https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html; source_kind=official_US_consular_guidance; checked_at=2026-10-12; review_after=2026-10-19; scope=U.S. travelers to Vietnam. Support: corresponding About Vietnam, travel requirements, e-visas, crime, health and emergency-number sections. Advisory and travel-guidance issue dates differ: 2026-06-24 and 2026-09-15 respectively.",
+      "EVIDENCE — country_facts.money.currency_code, cash_vs_card, atm_availability and tipping_norm: source_url=https://vietnam.travel/things-to-do/currency-and-payments-vietnam; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12; scope=visitor payment practices. Support: currency, cash withdrawal, card payments and tipping sections. Numeric prices, ATM limits and exchange-rate examples were not adopted.",
+      "EVIDENCE — country_facts.getting_there.main_international_airports and cities[*].facts.airport: source_url=https://www.vietnamairlines.com/en-vn/flights-to-republic-singapore; source_kind=official_airline_operator; checked_at=2026-10-12; review_after=2027-01-12; scope=HAN, SGN and DAD identity only. Support: section 3.1 directly pairs the airport names, codes and cities. Singapore entry guidance, fares and timetable claims are outside this evidence scope.",
+      "EVIDENCE — country_facts.getting_there.national_carrier and getting_around.intercity_rail, buses and domestic_flights: source_url=https://vietnam.travel/plan-your-trip/transport-within-vietnam; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2026-11-12; scope=general transport modes and named corridor. Support: Flights, Trains, Reunification Express and Buses sections. Specific timetables, journey times, fares, child rules and current airline inventories are not verified.",
+      "EVIDENCE — country_facts.when_to_go.climate_by_season: source_url=https://vietnam.travel/things-to-do/weather-and-climate-vietnam; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-04-12; scope=typical seasonal patterns in the named destinations. Support: Hanoi, Hue, Hoi An and HCMC/Mekong sections. No current weather forecast or statistical monthly averages were retrieved.",
+      "EVIDENCE — country_facts.safety_health.vaccines: source_url=https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam; source_kind=official_US_public_health_authority; checked_at=2026-10-12; review_after=2026-11-12; scope=travel-health preparation for Vietnam. Support: routine, hepatitis A, hepatitis B, Japanese encephalitis and malaria rows. Personalized contraindications, rabies decisions and complete vaccine schedules require further review.",
+      "EVIDENCE — country_facts.safety_health.common_scams and culture_etiquette.dress_norms: source_url=https://vietnam.travel/faqs; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-01-12; scope=taxi-scam warning and religious-site clothing guidance. Swimwear guidance is additionally supported by https://vietnam.travel/things-to-do/vietnamese-etiquette-travellers. The FAQ contains outdated visa information and is not accepted as current immigration evidence.",
+      "EVIDENCE — country_facts.culture_etiquette.dos_and_donts: source_url=https://vietnam.travel/things-to-do/vietnamese-etiquette-travellers; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2027-10-12; scope=general visitor etiquette and two basic phrases. Support: photography, homes, saving face, hands and greeting sections. These are broad etiquette guidelines, not universal descriptions of every individual.",
+      "EVIDENCE — Hanoi facts.how_to_get_there and local_transport: source_url=https://vietnam.travel/places-to-go/red-river-delta/ha-noi; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2026-11-12; scope=Hanoi access modes. Support: How to get there section. Exact routes, fares and operating times unverified.",
+      "EVIDENCE — Da Nang facts.how_to_get_there and local_transport: source_url=https://vietnam.travel/places-to-go/south-central-coast-central-highlands/da-nang; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2026-11-12; scope=Da Nang access modes. Support: How to get there section. Exact routes, fares and operating times unverified.",
+      "EVIDENCE — Ho Chi Minh City facts.how_to_get_there and local_transport: source_url=https://vietnam.travel/places-to-go/southeastern-vietnam/ho-chi-minh-city; source_kind=official_national_tourism_authority; checked_at=2026-10-12; review_after=2026-11-12; scope=city airport and surface access modes. Support: How to get there section. Terminal assignments and metro details unverified.",
+      "UNRESOLVED — E-visa fees and complete application workflow: evisa.gov.vn, its /faq and /instruction pages, and thithucdientu.gov.vn could not be substantively opened. Search snippets are not accepted as verification. The legacy FAQ redirected to login. Fee remains null; current photo specifications, form fields, payment charges and correction procedures require direct confirmation.",
+      "UNRESOLVED — Arrival declaration: implementing date, checkpoint coverage, transit exceptions, submission requirements and enforcement were not independently confirmed from readable Vietnamese immigration instructions. Do not equate the declaration with an ETA, an e-visa or optional consular registration.",
+      "UNRESOLVED — Immigration exceptions: Phu Quoc-only entry and transit conditions, overseas-Vietnamese exemption documentation, dual nationality, emergency passports, onward tickets and sponsored replacement-visa eligibility require case-specific verification.",
+      "SOURCE DIFFERENCE — https://vietnam.travel/faqs still describes 30-day e-visas for 46 countries. The immigration portal and embassy material support the later 90-day framework and all-country eligibility. The FAQ's old eligibility and duration statements were rejected.",
+      "SOURCE DIFFERENCE — https://vietnam.travel/plan-your-trip/official-vietnam-evisa-application retains an older application link and a checkpoint list associated with the 2023 framework. Do not treat that list as exhaustive for travel in 2026 or later; confirm the intended land, river, sea or air checkpoint directly with immigration.",
+      "SOURCE DIFFERENCE — The Da Nang destination page recommends some September–October travel, while the broader climate guide warns of autumn storm and flooding exposure in nearby central destinations. Different destination scopes and editorial simplification prevent a blanket central-Vietnam weather conclusion.",
+      "SOURCE LIMITATION — The tourism transport page gives differing end-to-end train-duration descriptions. No precise rail duration or timetable was adopted. Operator schedules and station-to-station routing are required before itinerary publication.",
+      "UNRESOLVED — Customs and duty-free: passenger alcohol and tobacco allowances, age thresholds, personal-goods limits, medicines, drones, electronic cigarettes, satellite devices and declaration procedures were not established from current customs rules. Currency thresholds alone do not complete the customs article.",
+      "UNRESOLVED — U.S. return customs: admissibility and declaration of coffee, spices, packaged foods, seeds, fresh produce and animal ingredients require CBP, USDA and, where relevant, FDA sources. No cooking souvenir is declared admissible.",
+      "UNRESOLVED — Driving: obtain current Vietnamese legal sources covering U.S. licenses and IDPs, vehicle classes, license conversion, alcohol limits, rental obligations and insurance. Also verify hired-driver credentials and seat-belt availability. No self-drive recommendation is made.",
+      "UNRESOLVED — Connectivity: carrier-issued tourist SIM/eSIM availability, passport registration, activation, device unlocking and compatibility, local-number inclusion, tethering, fair-use limits, expiration and destination-specific coverage require operator sources.",
+      "UNRESOLVED — Identity and packing: country calling code, electrical frequency, plug configurations and voltage were not confirmed from a substantively opened supporting page. Search snippets alone were insufficient. Packing guidance also needs itinerary-specific climate and activity assumptions.",
+      "UNRESOLVED — Tet and other festivals: upcoming lunar dates, official holiday periods, transport sales windows, operator closures and regional event programs were not verified. No dated festival calendar is populated.",
+      "UNRESOLVED — Safety and health: a complete road-safety assessment, solo-female-specific guidance, pedestrian practices, cruise safety, trekking rescue access, rabies and animal exposure, food hygiene, medication import legality and accessibility remain to be researched. The populated main_risk field is not an exhaustive ranking.",
+      "UNRESOLVED — Hanoi: water-puppet theater operators, booking rules, Train Street restrictions, museum schedules, attraction fees, public-transport routes and accommodation-area comparisons require current local or operator sources.",
+      "UNRESOLVED — Northern excursions: Ha Long cruise operators and comparative quality, day-trip versus overnight logistics, weather cancellation terms, Ninh Binh boat routes, Trang An/Tam Coc tickets, Cat Ba ferries, Sapa trek operators, homestays and Hanoi–Sapa connections remain unverified.",
+      "UNRESOLVED — Ho Chi Minh City and Mekong: nightlife venues, Ben Thanh opening practices, metro operations, Mekong homestay operators, Cai Rang market timing, Can Tho transfers and Chau Doc river connections remain unverified.",
+      "UNRESOLVED — Central Vietnam: Hoi An access, An Bang accommodation, tailoring providers and turnaround times, My Son, Hue Imperial City, DMZ/Vinh Moc tours and Hue–Hoi An transfer options require additional primary sources. The attempted older Hoi An tourism URL redirected to Da Nang and did not verify a Hoi An guide.",
+      "UNRESOLVED — Islands and coast: Phu Quoc, Nha Trang, Con Dao and Mui Ne access, seasonal sea conditions, protected-area rules, hotels and activity providers remain unverified.",
+      "UNRESOLVED — Food and culture scope: egg coffee, ca phe sua da, bia hoi, che, vegetarian/vegan ingredient risks, regional dish comparisons, extended traveler phrases and war-history interpretation require additional sources. No restaurant is ranked or presented as personally visited.",
+      "UNRESOLVED — Financial and itinerary inputs: no live exchange rate, accommodation scenario, current fare inventory or date-specific transport chain was obtained. Seven-day and fourteen-day plans remain empty rather than implying verified logistics.",
+      "REVIEW STATUS — This is a partially populated candidate evidence file. Unknown fields and unresolved article topics must be researched and reviewed before the corresponding articles are treated as fact-checked."
+    ]
+  }
+}

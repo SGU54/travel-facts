@@ -1,0 +1,414 @@
+You are a fact-and-consistency checker for travel articles. Below are articles plus the facts file they were written from. Find ONLY IN-CONTEXT ERRORS: a claim stated two different ways; a recommendation contradicting the facts file; an out-of-scope place; an internal contradiction; a claim factually wrong for Thailand.
+RULES: (1) Do NOT flag serve_live items (exchange rates, prices, visa day-count) for being hedged — that is correct. (2) Flight DURATIONS and stable facts are fine. (3) Only genuine errors; if an article is clean, say "clean". (4) Short list per slug.
+
+=== FACTS FILE ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_aro
+
+=== ARTICLES ===
+
+
+----- SLUG: getting-around-bangkok -----
+TITLE: Getting Around Bangkok: BTS, MRT, Taxis, and Grab
+CATEGORY: city-transport
+
+<p>Bangkok's traffic is legendary, and the single biggest factor in enjoying the city is knowing how to move around it. The good news: Bangkok has excellent elevated and underground trains, river boats, and ride-hailing that let you skip the gridlock entirely. Here's how each option works and when to use it.</p>
+
+<!-- IMAGE_SLOT_1: The BTS Skytrain gliding above Bangkok traffic -->
+
+<h2>The BTS Skytrain and MRT metro — your main tools</h2>
+<p>The <strong>BTS Skytrain</strong> (elevated) and <strong>MRT</strong> (underground) are the backbone of getting around modern Bangkok: clean, fast, cheap, air-conditioned, and — crucially — they fly over or under the traffic. Between them they cover most areas a visitor needs: Sukhumvit, Silom, the river, Chatuchak, and major malls. Buy a stored-value card or single-journey tickets at the stations. Staying near a BTS or MRT station is the best transport decision you can make in Bangkok.</p>
+
+<h2>River boats — scenic and traffic-free</h2>
+<p>The <strong>Chao Phraya Express Boat</strong> and cross-river ferries are the smart way to reach the historic temple area (the Grand Palace, Wat Pho, Wat Arun), which the trains don't directly serve. They're cheap, frequent, and a lovely way to see the city from the water. A tourist boat with a day pass stops at the main riverside sights. Connect from the BTS at Saphan Taksin pier.</p>
+
+<!-- IMAGE_SLOT_2: A Chao Phraya river express boat passing a temple -->
+
+<h2>Grab — the easy door-to-door option</h2>
+<p><strong>Grab</strong> (Southeast Asia's Uber) is the most stress-free way to get door-to-door, especially for places off the train lines or when you're tired or loaded with shopping. You see the price upfront, pay through the app, and avoid any haggling or meter disputes. It's widely used and reliable. Bolt and inDrive are alternatives. For most visitors, Grab plus the trains covers everything.</p>
+
+<h2>Taxis and tuk-tuks</h2>
+<p>Metered <strong>taxis</strong> are plentiful and cheap if the driver uses the meter — insist on "meter" and avoid any who quote a flat fare. <strong>Tuk-tuks</strong> (the three-wheeled open-air icons) are fun for a short ride and a photo, but they're not cheaper than a metered taxi or Grab, you have to negotiate hard, and some drivers run gem-shop scam detours. Treat tuk-tuks as an occasional novelty rather than your main transport.</p>
+
+<h2>Buses, boats, and motorbike taxis</h2>
+<p>Bangkok's <strong>public buses</strong> are very cheap but slow, hot, and hard to navigate without local knowledge — most visitors skip them. <strong>Canal boats</strong> (on Khlong Saen Saep) are a fast, local way to cut across the city center, if a bit chaotic. <strong>Motorbike taxis</strong> (riders in colored vests) zip through traffic for short hops and are great for beating a jam, if you're comfortable on the back of a bike for a few minutes.</p>
+
+<h2>How to beat the traffic</h2>
+<p>The strategy is simple: <strong>plan your day around the trains and river boats</strong>, use Grab to bridge the gaps, and avoid being in a car on the roads during rush hours (roughly 7–9am and 4–7pm), when Bangkok gridlocks. If you must cross town by road at peak time, allow far more time than the distance suggests. Stay near a Skytrain station and you'll rarely need a car at all. Fares are low across the board; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What's the best way to get around Bangkok?</summary><div><p>The BTS Skytrain and MRT metro for most trips (they skip the traffic), river boats for the temple area, and Grab for door-to-door rides. Stay near a station to make it effortless.</p></div></details>
+  <details><summary>Is Grab better than taxis in Bangkok?</summary><div><p>For most visitors, yes — Grab shows the price upfront, you pay in the app, and there's no haggling or meter disputes. Metered taxis are fine and cheap if the driver uses the meter.</p></div></details>
+  <details><summary>Should I take tuk-tuks in Bangkok?</summary><div><p>For the experience, once — but they're not cheaper than a metered taxi or Grab, require hard negotiation, and some run gem-shop scam detours. Use them as a novelty, not your main transport.</p></div></details>
+  <details><summary>How do I avoid Bangkok's traffic?</summary><div><p>Use the Skytrain, metro, and river boats, fill gaps with Grab, and avoid road travel during rush hours (about 7–9am and 4–7pm). Staying near a BTS station means you rarely need a car.</p></div></details>
+</section>
+
+
+----- SLUG: grab-in-thailand-guide -----
+TITLE: Is Grab Safe and Worth It in Thailand?
+CATEGORY: city-transport
+
+<p>Grab is the Uber of Southeast Asia, and in Thailand it's one of the most useful apps a traveler can have. It handles rides, food delivery, and more, all with upfront pricing and cashless payment. But it doesn't work equally well everywhere in the country, and there are a few things worth knowing before you rely on it. Here's the full picture.</p>
+
+<!-- IMAGE_SLOT_1: A smartphone showing a ride-hailing map in a Thai city -->
+
+<h2>What is Grab and how does it work?</h2>
+<p><strong>Grab</strong> is a super-app: you use it to book cars, taxis, and motorbike taxis, order food, and even send packages. For getting around, you enter your destination, see the price and the driver before you book, and pay either in cash or by a card linked to the app. It works just like Uber or Lyft, which makes it instantly familiar to American travelers. Download it and set it up before your trip while you're still on home Wi-Fi.</p>
+
+<h2>Is Grab safe?</h2>
+<p>Yes — Grab is generally very safe and is the option many travelers feel <em>most</em> comfortable with, precisely because everything is tracked and transparent. You can see the driver's name, vehicle, and rating, the route is logged in the app, the fare is fixed in advance so there's no meter scam, and you can share your trip with someone. For solo travelers and anyone wary of negotiating with taxis or tuk-tuks, Grab removes most of the friction and uncertainty.</p>
+
+<h2>Is it worth it?</h2>
+<p>For convenience and peace of mind, absolutely. The upfront pricing alone is worth it — you avoid the haggling and the inflated "tourist" fares that come with flagging down tuk-tuks or non-metered taxis. It's especially valuable when you're tired, loaded with luggage, going somewhere off the train lines, or out late. In Bangkok, a metered taxi can occasionally be cheaper, but the certainty and ease of Grab usually win.</p>
+
+<!-- IMAGE_SLOT_2: A Grab car or driver in a Thai street setting -->
+
+<h2>Where Grab works well — and where it doesn't</h2>
+<p>Grab works <strong>excellently in Bangkok, Chiang Mai, and most cities</strong>. Coverage is more <strong>limited on some islands and in resort areas</strong>, where local taxi cartels have resisted ride-hailing — <strong>Phuket</strong> is the notorious example, with limited Grab availability and sometimes tension around it, and parts of <strong>Krabi and Samui</strong> can be patchy too. In these places you may wait longer, pay more, or need to use local taxis and songthaews instead. Don't assume Grab will be instantly available everywhere the way it is in Bangkok.</p>
+
+<h2>Tips for using Grab in Thailand</h2>
+<p><strong>Set it up before you travel</strong> and add a payment card if you'd rather not use cash. <strong>Choose your pickup point carefully</strong> — a clear landmark or hotel entrance avoids confusion, since not all drivers speak English. <strong>Use the in-app chat's translation</strong> if needed. <strong>Have cash as backup</strong> for cash trips and for places where Grab is thin. And <strong>check the car type</strong> — GrabCar for comfort, GrabTaxi to hail a metered taxi through the app, or a motorbike option for quick solo hops through traffic. Fares are low overall; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is Grab safe to use in Thailand?</summary><div><p>Yes — it's one of the safest ways to get around. The driver, vehicle, route, and fixed fare are all shown in the app, with no meter scams or haggling, which many travelers find reassuring.</p></div></details>
+  <details><summary>Is Grab cheaper than taxis in Thailand?</summary><div><p>Often comparable, and the upfront fixed price means no inflated tourist fares. In Bangkok a metered taxi can occasionally be cheaper, but Grab's certainty and ease usually make it worth it.</p></div></details>
+  <details><summary>Does Grab work everywhere in Thailand?</summary><div><p>It works great in Bangkok, Chiang Mai, and most cities, but is limited on some islands and resort areas — Phuket especially, where local taxis have resisted it. Have local taxis or songthaews as backup there.</p></div></details>
+  <details><summary>Do I need cash if I use Grab?</summary><div><p>You can link a card and pay cashless, but carry cash as backup — for cash-fare trips and for islands or areas where Grab availability is thin and you'll need local transport.</p></div></details>
+</section>
+
+
+----- SLUG: staying-connected-thailand -----
+TITLE: Staying Connected in Thailand: WiFi, Data, and Apps to Download
+CATEGORY: connectivity
+
+<p>Staying connected in Thailand is easy and cheap, which matters more than you might think — you'll want data for maps, ride-hailing, translation, and booking on the go. Here's how to stay online, what WiFi is like, and the essential apps to set up before you leave home.</p>
+
+<!-- IMAGE_SLOT_1: A traveler using a phone in a Thai café or street setting -->
+
+<h2>Mobile data: your main connection</h2>
+<p>The most reliable way to stay connected is your own mobile data, via either a local SIM or an eSIM. An <strong>eSIM</strong> (from providers like Airalo or Holafly) is the most convenient — you set it up before you fly and it activates on arrival, with no counter visit. A <strong>local SIM</strong> from AIS, TrueMove H, or dtac, bought at the airport or a convenience store, often gives more data for the money and a Thai number. Either way, tourist data packages are inexpensive, and coverage is strong 4G/5G across cities and tourist areas.</p>
+
+<!-- AFFILIATE_SLOT: airalo — Thailand eSIM -->
+
+<h2>What WiFi is like</h2>
+<p>WiFi is widespread in Thailand — nearly every hotel, hostel, café, restaurant, mall, and even many bars offer free WiFi, and it's generally fast and reliable in cities and tourist areas. You could get by on WiFi alone for light use, but having your own mobile data is far more practical for navigation, ride-hailing, and translation while you're out and about. Don't rely on WiFi for anything time-sensitive like booking a Grab on a busy street.</p>
+
+<h2>Essential apps to download before you go</h2>
+
+<h3>Getting around</h3>
+<p><strong>Grab</strong> is the single most useful app — ride-hailing and food delivery in one. <strong>Google Maps</strong> is essential; download offline maps for your cities before you go. The <strong>BTS/MRT</strong> apps or maps help with Bangkok's trains.</p>
+
+<h3>Communication and translation</h3>
+<p><strong>Google Translate</strong> (download the Thai language pack for offline use, and try its camera mode for menus and signs) bridges the language gap. <strong>LINE</strong> is Thailand's dominant messaging app — useful if you're dealing with local businesses, tour operators, or hosts.</p>
+
+<!-- IMAGE_SLOT_2: A phone showing a maps or translation app with Thai text -->
+
+<h3>Trip logistics</h3>
+<p>Your <strong>airline and hotel apps</strong>, a <strong>currency converter</strong>, and booking apps for activities and ferries all earn their place. If you'll need the <strong>Thailand Digital Arrival Card (TDAC)</strong>, complete it on the official website before you fly — it's required for entry and free.</p>
+
+<h2>Practical connectivity tips</h2>
+<p>Set up your eSIM or buy your SIM right on arrival so you're connected from the airport. Download offline maps and your translation language pack while still on home WiFi. Keep a power bank handy — heavy use of maps and ride-hailing in the heat drains batteries fast. And remember coverage thins on remote islands and in the far-north mountains, so download anything important (maps, tickets, addresses) before heading somewhere remote. Data is one of the cheapest things about Thailand; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>How do I stay connected in Thailand?</summary><div><p>Use mobile data via a local SIM (AIS, TrueMove, dtac) or an eSIM (Airalo, Holafly) for the most reliable connection, backed by the widespread free WiFi in hotels and cafés.</p></div></details>
+  <details><summary>Is WiFi good in Thailand?</summary><div><p>Yes — free WiFi is widespread and generally fast in hotels, cafés, restaurants, and malls in cities and tourist areas. But your own mobile data is more practical for maps and ride-hailing on the move.</p></div></details>
+  <details><summary>What apps should I download before visiting Thailand?</summary><div><p>Grab (rides and food), Google Maps with offline maps, Google Translate with the Thai pack, LINE (the local messaging app), and your airline, hotel, and currency apps. Complete the TDAC online before flying.</p></div></details>
+  <details><summary>Will I have signal on the islands?</summary><div><p>In most tourist areas, yes, but coverage thins on remote islands and in the far-north mountains. Download maps, tickets, and key info before heading somewhere remote.</p></div></details>
+</section>
+
+
+----- SLUG: thai-food-what-to-order -----
+TITLE: Thai Food 101: What to Order as a First-Timer
+CATEGORY: dishes-what-to-order
+
+<p>Thai food is one of the great reasons to visit Thailand, and eating your way through the country is a highlight in itself. But the menus can be overwhelming and the spice levels intimidating for first-timers. This guide covers the dishes to order, how to manage the heat, and how to eat well wherever you are.</p>
+
+<!-- IMAGE_SLOT_1: A colorful spread of Thai dishes on a table -->
+
+<h2>The essential dishes to try</h2>
+<p>Start with the classics that define Thai cuisine. <strong>Pad Thai</strong> (stir-fried rice noodles) is the famous gateway dish. <strong>Tom yum goong</strong> is the iconic hot-and-sour shrimp soup; <strong>tom kha gai</strong> is its milder, coconut-based cousin. <strong>Green, red, and massaman curries</strong> range from fiery to mild and rich. <strong>Som tum</strong> (green papaya salad) is a punchy, spicy favorite, and <strong>pad krapow</strong> (stir-fried basil with minced meat over rice, often topped with a fried egg) is the beloved everyday dish Thais eat constantly. Don't leave without trying <strong>mango sticky rice</strong>, the perfect sweet ending.</p>
+
+<h2>Regional specialties worth seeking out</h2>
+<p>Thai food changes as you travel. In the <strong>north</strong> (Chiang Mai), try <strong>khao soi</strong>, a rich coconut-curry noodle soup, and <strong>sai ua</strong>, a herby northern sausage. In the <strong>northeast (Isan)</strong>, the famous trio is <strong>som tum</strong>, <strong>laab</strong> (a zesty minced-meat salad), and <strong>grilled chicken (gai yang)</strong> with sticky rice. In the <strong>south</strong>, expect richer, spicier curries and incredible fresh seafood. Eating regionally is one of the joys of traveling the country.</p>
+
+<!-- IMAGE_SLOT_2: A steaming bowl of khao soi or a plate of pad krapow -->
+
+<h2>How to handle the spice</h2>
+<p>Thai food can be genuinely fiery, but you have control. Learn the phrase <strong>"mai phet"</strong> (not spicy) or <strong>"phet nit noi"</strong> (a little spicy) to dial it down. Be aware that "a little spicy" by Thai standards can still be hot for many visitors, so start mild and work up. If a dish catches you out, <strong>rice</strong> (not water) and something sweet or dairy help most. Over a trip, most people find their tolerance grows — and the chilies are part of what makes the food sing.</p>
+
+<h2>Where and how to eat</h2>
+<p>Some of the best food in Thailand comes from humble places: <strong>street-food stalls</strong> and simple local restaurants often outshine fancy ones. Look for busy stalls with high turnover (a sign of freshness and popularity), watch your food being cooked fresh, and don't be afraid of the plastic-stool places — they're where Thais eat. A guided <strong>street-food tour</strong> early in your trip is a great way to learn what's what and discover stalls you'd never find alone.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — street food tour / cooking class -->
+
+<h2>Eating safely</h2>
+<p>Thai street food is generally safe, and a few habits keep it that way: choose <strong>busy stalls</strong> where food is cooked fresh and turns over quickly, eat things <strong>hot and freshly made</strong>, and drink <strong>bottled water</strong> (ice in established places is usually fine, made from purified water). Give your stomach a day or two to adjust to new spices and ingredients. With a little common sense, eating from stalls is one of the safest and most rewarding things you'll do. Meals are remarkably cheap; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>What Thai dishes should a first-timer order?</summary><div><p>Pad Thai, tom yum or tom kha soup, a curry (green, red, or mild massaman), som tum (papaya salad), pad krapow (basil stir-fry), and mango sticky rice for dessert.</p></div></details>
+  <details><summary>How do I order Thai food less spicy?</summary><div><p>Say "mai phet" (not spicy) or "phet nit noi" (a little spicy). Note that even "a little spicy" can be hot by Thai standards, so start mild. Rice and something sweet help if a dish is too hot.</p></div></details>
+  <details><summary>Is Thai street food safe to eat?</summary><div><p>Generally yes — choose busy stalls with high turnover, eat food hot and freshly cooked, and drink bottled water. Street food is often the best and most authentic eating in Thailand.</p></div></details>
+  <details><summary>Does Thai food vary by region?</summary><div><p>A lot. The north has khao soi and sai ua, Isan in the northeast has som tum, laab, and grilled chicken, and the south has richer curries and fresh seafood. Eating regionally is a highlight.</p></div></details>
+</section>
+
+
+----- SLUG: do-americans-need-visa-thailand -----
+TITLE: Do Americans Need a Visa for Thailand?
+CATEGORY: entry-and-visa
+
+<p>For most American tourists, Thailand is refreshingly easy to enter — you generally don't need to arrange a visa in advance for a normal vacation. But the rules have a few important details, and Thailand has been changing its visa-exemption terms during 2026, so it's essential to verify the current requirements for your specific travel date. Here's what you need to know.</p>
+
+<p><strong>Important:</strong> entry rules change, sometimes with little notice. Treat this as an overview and always confirm the latest requirements with official sources — the U.S. State Department's Thailand page and the Thai government's official e-Visa and immigration sites — before you travel.</p>
+
+<!-- IMAGE_SLOT_1: A passport and boarding pass, travel-document flat lay -->
+
+<h2>The short answer: usually no visa for tourism</h2>
+<p>U.S. passport holders are on Thailand's <strong>visa-exemption list</strong>, which means you can enter for tourism without arranging a visa beforehand — you receive permission to stay on arrival. This covers normal vacation trips. You will, however, need to complete the mandatory <strong>digital arrival card</strong> (see below), and there are conditions on the length of stay that have been in flux in 2026.</p>
+
+<h2>How long can you stay?</h2>
+<p>This is the part that's been changing. The permitted length of a visa-exempt tourist stay for Americans has been the subject of policy changes in 2026, with the maximum number of days under review and revision. Because the exact figure depends on the rule in force on your entry date, <strong>we deliberately don't quote a fixed number here</strong> — it could mislead you. Check the current permitted stay on the official Thai immigration or e-Visa website close to your travel date. Whatever the figure, a normal one-to-three-week vacation comfortably fits within it.</p>
+
+<h2>The mandatory digital arrival card (TDAC)</h2>
+<p>Separately from any visa question, <strong>all foreign visitors must complete the Thailand Digital Arrival Card (TDAC)</strong> online before arriving — by air, land, or sea. It replaced the old paper form, it's filed within 72 hours before arrival on the official government portal, and it's <strong>free</strong>. Beware of third-party websites that charge a fee for it; use only the official site. This is a required step regardless of your visa-exempt status.</p>
+
+<!-- IMAGE_SLOT_2: A laptop showing an online travel form being completed -->
+
+<h2>Passport and other requirements</h2>
+<p>Make sure your <strong>passport is valid for at least six months</strong> beyond your arrival date — this is commonly required and can be enforced. Airlines or immigration may also ask for <strong>proof of onward or return travel</strong> within your permitted stay, and occasionally for <strong>proof of sufficient funds</strong>. Have your return flight details and accommodation booking accessible, just in case.</p>
+
+<h2>When you might need an actual visa</h2>
+<p>You'll need to arrange a visa in advance if your trip falls <strong>outside the visa-exempt terms</strong> — for example, staying longer than the permitted exemption period, or traveling for purposes other than tourism (work, study, long-term stays). In those cases, apply through Thailand's official <strong>e-Visa</strong> system or a Thai embassy or consulate before you travel. For a standard vacation, though, the visa exemption plus the TDAC is all you need.</p>
+
+<h2>The bottom line</h2>
+<p>For a normal American vacation, you don't pre-arrange a visa — you enter under the visa exemption and complete the free TDAC online beforehand. Just confirm the current permitted length of stay and entry requirements on official sources close to your travel date, since these have been changing. Costs aren't really a factor here (the exemption and TDAC are free), but if you do need a paid visa, check a live converter for the fee:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Do Americans need a visa to visit Thailand?</summary><div><p>For tourism, generally no — U.S. passport holders enter under Thailand's visa exemption without arranging a visa in advance. You must still complete the free online TDAC, and should confirm the current permitted stay for your dates.</p></div></details>
+  <details><summary>How long can Americans stay in Thailand without a visa?</summary><div><p>The permitted visa-exempt stay has been changing in 2026, so check the official Thai immigration or e-Visa site for the current figure near your travel date. A normal one-to-three-week vacation fits within any version of the rule.</p></div></details>
+  <details><summary>What is the TDAC and do I need it?</summary><div><p>The Thailand Digital Arrival Card is a mandatory, free online form all foreign visitors must complete within 72 hours before arrival. Use only the official government site — avoid third-party sites that charge a fee.</p></div></details>
+  <details><summary>What passport validity do I need for Thailand?</summary><div><p>At least six months beyond your arrival date is commonly required and can be enforced. Also have proof of onward travel and accommodation accessible, as these are sometimes requested.</p></div></details>
+</section>

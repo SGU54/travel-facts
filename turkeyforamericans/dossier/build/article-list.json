@@ -1,0 +1,665 @@
+{
+  "schema_version": 4,
+  "project": "turkeyforamericans",
+  "_README": "Reconstructed from the 2026-07-27 export (72 published). swamps[] and the swamp/handoff tags come from the A2 mine, not from the original build — the original list was never saved.",
+  "swamps": [
+    {
+      "id": "S-transit",
+      "name": "The internal moves and the flight home",
+      "thesis": "Every inter-region move on a Turkey first trip funnels through Istanbul, most are booked as separate tickets, and the international return is fixed. Free articles cover fares and carriers; none joins the booking shape to the return.",
+      "open_because": "turkey-domestic-flights prescribes only booking habits (book ahead, compare carriers). The connection/margin call is not made in any article."
+    },
+    {
+      "id": "S-insure",
+      "name": "Medical exposure and what the policy excludes",
+      "thesis": "What a US traveler is actually exposed to in Turkey, what a standard policy pays, and the activities that void it (unlicensed scooter/quad, and the balloon).",
+      "open_because": "turkey-health-guide is 932 words and prescribes bottled water. Insurance exclusions appear nowhere."
+    },
+    {
+      "id": "S-licence",
+      "name": "The licence chain",
+      "thesis": "US licence vs IDP vs what the rental desk accepts vs what the insurer requires — four different thresholds that free articles state separately and never line up.",
+      "open_because": "renting-car-turkey makes the WHERE-to-drive call (avoid Istanbul, coast roads) but leaves the IDP/insurance chain half-stated. The chain, not the placement, is the open decision."
+    },
+    {
+      "id": "S-coast",
+      "name": "Which coast base, and the moves between",
+      "thesis": "Aegean vs Mediterranean bases have different airports, different ferry/gulet access and different onward options; picking the base decides the moves.",
+      "open_because": "2,593 dedicated words, zero call-making sentences detected."
+    },
+    {
+      "id": "S-regional-season",
+      "name": "The season that works for one region doesn't for another",
+      "thesis": "Coast swimming season, Cappadocia's winter, and the eastern window are three different calendars; a single itinerary has to satisfy all three and the free articles answer only the national question.",
+      "open_because": "1,118 words across 25 articles, ZERO call-making sentences. The national season call is dead (best-time-to-visit-turkey) but the regional collision is untouched.",
+      "confidence": "medium"
+    },
+    {
+      "id": "S-east",
+      "name": "Getting to the east, and the line you don't cross",
+      "thesis": "Eastern Turkey is flight-access, seasonal, and sits next to a Level-4 strip; access, timing and the advisory boundary are stated in separate articles and never joined.",
+      "open_because": "~1,291 words across 13 articles; the 3 detected 'calls' are false positives (a vegetarian guide mentioning the southeast).",
+      "confidence": "medium"
+    },
+    {
+      "id": "S-calendar",
+      "name": "Ramadan, Bayram and the days the country moves",
+      "thesis": "Religious holidays close sites, fill every domestic seat and empty city centres on different days; the corpus barely mentions them.",
+      "open_because": "209 words across 5 articles, ZERO calls — thinner than Thailand's D-transit was (16 sentences) when it was built from nothing.",
+      "confidence": "SPECULATIVE — confirm the stakes are real before spending a batch"
+    }
+  ],
+  "dead_decisions": [
+    {
+      "id": "D-balloon",
+      "killed_by": "turkey-itineraries-overview: 'Always give Cappadocia at least two nights (three is better) so a weather-cancelled balloon morning isn't [wasted]' — and the same call is in the free lead-magnet PDF."
+    },
+    {
+      "id": "D-money-dcc",
+      "killed_by": "money-in-turkey: 'Always pay and withdraw in lira, never the offered dollar conversion' (x2)."
+    },
+    {
+      "id": "D-taxi",
+      "killed_by": "'Always insist on the meter' in 3 articles."
+    },
+    {
+      "id": "D-season",
+      "killed_by": "best-time-to-visit-turkey: 'The short answer: spring and fall are ideal nearly everywhere' (13 prescriptive sentences)."
+    },
+    {
+      "id": "D-drive-placement",
+      "killed_by": "renting-car-turkey: 'Most travelers... avoid driving in Istanbul altogether' + 'best enjoyed on the open coast road, not in city gridlock'."
+    },
+    {
+      "id": "D-stay",
+      "killed_by": "best-cave-hotels-cappadocia + 39 articles: 'A cave hotel is one splurge in Cappadocia that's genuinely worth it' — the base call is made."
+    },
+    {
+      "id": "D-ticket",
+      "killed_by": "museum-pass-turkey states the pass arithmetic flatly; only 330 dedicated words in any case."
+    }
+  ],
+  "articles": [
+    {
+      "title": "10 Days in Turkey: Istanbul, Cappadocia & the Coast",
+      "slug": "10-days-turkey",
+      "category": "itineraries",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "14 Days in Turkey: The Grand Tour",
+      "slug": "14-days-turkey",
+      "category": "itineraries",
+      "status": "published",
+      "swamp": "S-transit",
+      "handoff": "seed"
+    },
+    {
+      "title": "2 Days in Cappadocia: The Perfect Itinerary",
+      "slug": "2-days-cappadocia",
+      "category": "cappadocia",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "3 Days in Istanbul: The Perfect Itinerary",
+      "slug": "3-days-istanbul",
+      "category": "istanbul",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "7 Days in Turkey: The Classic First-Timer Route",
+      "slug": "7-days-turkey",
+      "category": "itineraries",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "The Aegean Coast: A First-Timer's Guide",
+      "slug": "aegean-coast-guide",
+      "category": "aegean-coast",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Do Americans Need a Visa for Turkey? (2026 Guide)",
+      "slug": "americans-visa-turkey",
+      "category": "entry-visa",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Ankara Travel Guide",
+      "slug": "ankara-guide",
+      "category": "central-anatolia",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Antalya Travel Guide",
+      "slug": "antalya-guide",
+      "category": "mediterranean-coast",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Best All-Inclusive Resorts in Turkey",
+      "slug": "best-all-inclusive-turkey",
+      "category": "where-to-stay",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkey's Best Ancient Ruins & Archaeological Sites",
+      "slug": "best-ancient-ruins-turkey",
+      "category": "historic-sites",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Best Beaches in Turkey",
+      "slug": "best-beaches-turkey",
+      "category": "outdoors",
+      "status": "published",
+      "swamp": "S-coast",
+      "handoff": "turn"
+    },
+    {
+      "title": "Best Boutique Hotels in Turkey",
+      "slug": "best-boutique-hotels-turkey",
+      "category": "where-to-stay",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Best Cave Hotels in Cappadocia",
+      "slug": "best-cave-hotels-cappadocia",
+      "category": "where-to-stay",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Best Luxury Hotels in Istanbul",
+      "slug": "best-luxury-hotels-istanbul",
+      "category": "where-to-stay",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Best Time to Visit Turkey",
+      "slug": "best-time-to-visit-turkey",
+      "category": "plan-your-trip",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Blue Cruise: Gulet Sailing the Turkish Coast",
+      "slug": "blue-cruise-gulet",
+      "category": "mediterranean-coast",
+      "status": "published",
+      "swamp": "S-coast",
+      "handoff": "turn"
+    },
+    {
+      "title": "Bodrum Travel Guide: Beaches, Nightlife & History",
+      "slug": "bodrum-guide",
+      "category": "aegean-coast",
+      "status": "published",
+      "swamp": "S-coast",
+      "handoff": "seed"
+    },
+    {
+      "title": "Best Bosphorus Cruises in Istanbul",
+      "slug": "bosphorus-cruise",
+      "category": "istanbul",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "How to Buy a Turkish Rug Without Getting Scammed",
+      "slug": "buying-turkish-rug",
+      "category": "bazaars-hammams",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Cappadocia Hot Air Balloon Rides: Everything You Need to Know",
+      "slug": "cappadocia-balloon-ride",
+      "category": "cappadocia",
+      "status": "published",
+      "swamp": "S-insure",
+      "handoff": "seed"
+    },
+    {
+      "title": "Cappadocia for First-Timers: A Complete Guide",
+      "slug": "cappadocia-first-timers",
+      "category": "cappadocia",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Goreme vs Uchisar vs Urgup: Where to Base Yourself",
+      "slug": "cappadocia-towns-compared",
+      "category": "cappadocia",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Eastern Turkey: An Off-the-Beaten-Path Guide",
+      "slug": "eastern-turkey-guide",
+      "category": "eastern-turkey",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Ephesus: Complete Guide to Turkey's Greatest Ruins",
+      "slug": "ephesus-guide",
+      "category": "aegean-coast",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Fethiye & Oludeniz: Beaches & Paragliding",
+      "slug": "fethiye-oludeniz",
+      "category": "mediterranean-coast",
+      "status": "published",
+      "swamp": "S-coast",
+      "handoff": "seed"
+    },
+    {
+      "title": "Flights from the USA to Turkey: Routes & Tips",
+      "slug": "flights-usa-to-turkey",
+      "category": "entry-visa",
+      "status": "published",
+      "swamp": "S-transit",
+      "handoff": "turn"
+    },
+    {
+      "title": "Getting Around Turkey: Transport Guide",
+      "slug": "getting-around-turkey",
+      "category": "getting-around",
+      "status": "published",
+      "swamp": "S-transit",
+      "handoff": "turn"
+    },
+    {
+      "title": "Gobeklitepe & Sanliurfa: The World's Oldest Temple",
+      "slug": "gobeklitepe-sanliurfa",
+      "category": "eastern-turkey",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Hagia Sophia & Blue Mosque: What to Know Before You Go",
+      "slug": "hagia-sophia-blue-mosque",
+      "category": "istanbul",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Is Turkey Expensive? A Cost Reality Check",
+      "slug": "is-turkey-expensive",
+      "category": "money-costs",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Is Turkey Safe to Visit? (2026 Guide)",
+      "slug": "is-turkey-safe",
+      "category": "health-safety",
+      "status": "published",
+      "swamp": "S-insure",
+      "handoff": "seed"
+    },
+    {
+      "title": "Getting from Istanbul Airport (IST) to the City",
+      "slug": "istanbul-airport-to-city",
+      "category": "istanbul",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Istanbul's Grand Bazaar & Spice Bazaar: A Shopping Guide",
+      "slug": "istanbul-bazaars",
+      "category": "istanbul",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Istanbul for First-Timers: A Complete Guide",
+      "slug": "istanbul-first-timers",
+      "category": "istanbul",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Getting to Cappadocia from Istanbul",
+      "slug": "istanbul-to-cappadocia",
+      "category": "cappadocia",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Izmir Travel Guide",
+      "slug": "izmir-guide",
+      "category": "aegean-coast",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Kas & Kalkan: Turkey's Laid-Back Coast",
+      "slug": "kas-kalkan-guide",
+      "category": "mediterranean-coast",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Konya & the Whirling Dervishes",
+      "slug": "konya-dervishes",
+      "category": "central-anatolia",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Kusadasi & the Ephesus Cruise Port",
+      "slug": "kusadasi-guide",
+      "category": "aegean-coast",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Lake Salda: Turkey's \"Maldives\"",
+      "slug": "lake-salda",
+      "category": "central-anatolia",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Hiking the Lycian Way",
+      "slug": "lycian-way-hiking",
+      "category": "outdoors",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Money in Turkey: Cash, Cards & Currency Tips",
+      "slug": "money-in-turkey",
+      "category": "money-costs",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Mount Nemrut: The Giant Stone Heads",
+      "slug": "mount-nemrut",
+      "category": "eastern-turkey",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Museum Pass Turkey: Is It Worth It?",
+      "slug": "museum-pass-turkey",
+      "category": "historic-sites",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Pamukkale & Hierapolis: Visiting the Cotton Castle",
+      "slug": "pamukkale-guide",
+      "category": "aegean-coast",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Renting a Car in Turkey: What to Know",
+      "slug": "renting-car-turkey",
+      "category": "getting-around",
+      "status": "published",
+      "swamp": "S-licence",
+      "handoff": "turn"
+    },
+    {
+      "title": "Shopping in Turkey: Bazaars, Carpets & What to Buy",
+      "slug": "shopping-in-turkey",
+      "category": "bazaars-hammams",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Best Things to Do in Cappadocia",
+      "slug": "things-to-do-cappadocia",
+      "category": "cappadocia",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Top Things to Do in Istanbul",
+      "slug": "things-to-do-istanbul",
+      "category": "istanbul",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Troy: Visiting the Legendary City",
+      "slug": "troy-guide",
+      "category": "historic-sites",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkish Culture & Etiquette: A Visitor's Guide",
+      "slug": "turkey-culture-etiquette",
+      "category": "culture-etiquette",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Domestic Flights in Turkey: A Guide",
+      "slug": "turkey-domestic-flights",
+      "category": "getting-around",
+      "status": "published",
+      "swamp": "S-transit",
+      "handoff": "turn"
+    },
+    {
+      "title": "Turkey eSIM & Internet: Staying Connected",
+      "slug": "turkey-esim-internet",
+      "category": "plan-your-trip",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkey Health Guide: Water, Vaccines & Tips",
+      "slug": "turkey-health-guide",
+      "category": "health-safety",
+      "status": "published",
+      "swamp": "S-insure",
+      "handoff": "turn"
+    },
+    {
+      "title": "Best Turkey Itineraries by Trip Length",
+      "slug": "turkey-itineraries-overview",
+      "category": "itineraries",
+      "status": "published",
+      "swamp": "S-transit",
+      "handoff": "seed"
+    },
+    {
+      "title": "Turkey's Best National Parks & Natural Wonders",
+      "slug": "turkey-nature-guide",
+      "category": "outdoors",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkey in a Week: Istanbul & Cappadocia",
+      "slug": "turkey-one-week",
+      "category": "itineraries",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "How Much Does a Turkey Trip Cost?",
+      "slug": "turkey-trip-cost",
+      "category": "money-costs",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkey's UNESCO World Heritage Sites",
+      "slug": "turkey-unesco-sites",
+      "category": "historic-sites",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Is Turkey Good for Vegetarians? A Dietary Guide",
+      "slug": "turkey-vegetarian-guide",
+      "category": "food-drink",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkish Breakfast (Kahvalti): What to Expect",
+      "slug": "turkish-breakfast",
+      "category": "food-drink",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkish Tea, Coffee & Raki: A Drinks Guide",
+      "slug": "turkish-drinks-guide",
+      "category": "food-drink",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkish Food: 25 Dishes You Have to Try",
+      "slug": "turkish-food-guide",
+      "category": "food-drink",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkish Bath (Hammam): A First-Timer's Guide",
+      "slug": "turkish-hammam-guide",
+      "category": "bazaars-hammams",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Turkish Street Food Guide",
+      "slug": "turkish-street-food",
+      "category": "food-drink",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "The Turquoise Coast: A First-Timer's Guide",
+      "slug": "turquoise-coast-guide",
+      "category": "mediterranean-coast",
+      "status": "published",
+      "swamp": "S-coast",
+      "handoff": "turn"
+    },
+    {
+      "title": "What to Wear in Turkey: A Packing Guide",
+      "slug": "what-to-wear-turkey",
+      "category": "culture-etiquette",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Where to Stay on the Aegean Coast",
+      "slug": "where-to-stay-aegean",
+      "category": "aegean-coast",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Where to Stay in Cappadocia: Cave Hotels & Towns",
+      "slug": "where-to-stay-cappadocia",
+      "category": "cappadocia",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Where to Stay in Istanbul: Best Neighborhoods & Hotels",
+      "slug": "where-to-stay-istanbul",
+      "category": "istanbul",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    },
+    {
+      "title": "Where to Stay on the Turkish Riviera",
+      "slug": "where-to-stay-mediterranean",
+      "category": "mediterranean-coast",
+      "status": "published",
+      "swamp": null,
+      "handoff": "none"
+    }
+  ],
+  "_page_target": {
+    "requested_by_user": "more than 40 pages",
+    "arithmetic": "Thailand: 5 decisions / ~5,500 book words / 23 pages ≈ 239 words per page. 40 pages ≈ 9,600 words ≈ 8-9 decisions.",
+    "plan": "7 swamps carried to depth, +2 more only if the corpus earns them. Padding to a page count is the failure mode the model warns about."
+  }
+}

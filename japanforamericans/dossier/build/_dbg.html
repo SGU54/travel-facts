@@ -1,0 +1,667 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Japan, Worked Out.</title><style>
+@import url('fonts/local-fonts.css');
+
+:root{
+  --paper:#F5EFE1;  --ink:#242A33;    --accent:#1B3670;  --gilt:#B89547;
+  --muted:#5C6068;  --soft:#8A8E97;   --line:#E1D7C2;    --line-soft:#EBE3D3;
+  --panel:#EAE2D0;  --panel-edge:#E4DAC6; --deep:#16305F; --sakura:#C87F94;
+  --water:#CBD6E0;
+  --display:'Zen Old Mincho','Hiragino Mincho ProN',serif;
+  --body:'Spectral','Hiragino Mincho ProN',Georgia,serif;
+  --mono:'IBM Plex Mono','Hiragino Sans',monospace;
+}
+
+/* ── the paged page model (page-spec.md) ──────────────────────────────────── */
+@page{
+  size:8.5in 11in;
+  margin:92px 82px 72px 82px;
+  @top-left{ content:"Japan, Worked Out." }
+  @top-right{ content:string(rh, last) }
+  @bottom-left{ content:string(pos, last) }
+  @bottom-center{ content:"\25c6" }
+  @bottom-right{ content:counter(page) }
+}
+@page cover{ margin:0;
+  @top-left{content:none} @top-right{content:none}
+  @bottom-left{content:none} @bottom-center{content:none} @bottom-right{content:none} }
+@page annex{ margin:92px 82px 76px 82px; }
+.coverpage{ page:cover; }  .fs{ page:annex; }
+
+html,body{ background:var(--paper); -webkit-print-color-adjust:exact;
+  print-color-adjust:exact; margin:0; }
+.pagedjs_sheet{ background:var(--paper); }
+
+/* ONE selector per named string — two shadow each other (bug log #35) */
+.rh-src{ string-set: rh content(text);
+  display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+.pos-src{ string-set: pos content(text);
+  display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+
+.pagedjs_margin-top-left .pagedjs_margin-content,
+.pagedjs_margin-top-right .pagedjs_margin-content,
+.pagedjs_margin-bottom-left .pagedjs_margin-content,
+.pagedjs_margin-bottom-right .pagedjs_margin-content,
+.pagedjs_margin-bottom-center .pagedjs_margin-content{
+  font-family:var(--mono); font-size:8.5px; letter-spacing:.14em;
+  color:var(--soft); text-transform:uppercase; }
+.pagedjs_margin-bottom-center .pagedjs_margin-content{ color:var(--gilt); letter-spacing:0; }
+/* openers suppress their running head — handler sets this class */
+.pagedjs_page.opener-page .pagedjs_margin-top-right .pagedjs_margin-content,
+.pagedjs_page.opener-page .pagedjs_margin-top-left .pagedjs_margin-content{ content:"" !important; }
+
+/* ── body typography ──────────────────────────────────────────────────────── */
+body{ font-family:var(--body); font-size:13.4px; line-height:1.68; color:var(--ink);
+  font-variant-numeric:tabular-nums; }
+p{ margin:0 0 9.5px; text-align:justify; hyphens:auto; orphans:3; widows:3; }
+em{ font-style:italic; }
+strong{ font-weight:600; }
+
+/* ── FLOW: the argument is the unit, not the page (layout.md) ─────────────── */
+.flow{ column-count:1; }
+.flow .chap{ break-before:page; }
+.flow .chap:first-child{ break-before:avoid; }
+
+/* fragmentation rules, set ONCE (layout.md step 2) */
+h1,h2,.dnum,.standfirst{ break-after:avoid; }
+.ledger,.verdict,.forks,figure,.plate,.note{ break-inside:avoid; }
+.verdict,.forks,.ledger{ break-before:avoid; }
+
+/* ── ROLE: opener — a chapter begins, an event not a heading ──────────────── */
+.opener{ break-inside:avoid; break-after:avoid; overflow:hidden; margin:0 0 15px; }
+.opener .onum{ font-family:var(--display); font-size:58px; line-height:.78;
+  color:var(--panel-edge); float:right; margin:-4px 0 0 16px; font-weight:600; }
+.opener .okind{ font-family:var(--mono); font-size:8px; letter-spacing:.30em;
+  text-transform:uppercase; color:var(--gilt); margin:0 0 8px; }
+.opener h1{ font-family:var(--display); font-size:31px; line-height:1.06; margin:0;
+  font-weight:600; }
+.opener .orule{ height:2px; background:var(--gilt); margin:13px 0 0; }
+.standfirst{ font-family:var(--display); font-style:italic; font-size:16px;
+  line-height:1.5; color:var(--muted); margin:11px 0 13px; text-align:left; }
+
+/* H2 is a LABEL, never a small headline (page-spec.md type hierarchy) */
+h2{ font-family:var(--mono); font-size:9px; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--accent); margin:16px 0 7px; font-weight:600; }
+
+/* drop cap — first paragraph of a chapter only */
+.chap > p.lede:first-of-type::first-letter{
+  font-family:var(--display); float:left; font-size:44px; line-height:.86;
+  padding:3px 7px 0 0; color:var(--accent); font-weight:600; }
+
+/* ── ROLE: ledger — an instrument, not a table ────────────────────────────── */
+.ledger{ break-inside:avoid; background:var(--panel); border-top:2.5px solid var(--accent);
+  margin:13px 0; }
+.ledger .lcap{ font-family:var(--mono); font-size:8px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); padding:9px 14px 0; }
+.ledger table{ width:100%; border-collapse:collapse; margin:5px 0 0; }
+.ledger th{ font-family:var(--mono); font-size:8px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--muted); text-align:left; padding:4px 14px 6px;
+  border-bottom:1px solid var(--line); font-weight:500; }
+.ledger td{ vertical-align:top; padding:8px 14px; line-height:1.46; font-size:12.4px;
+  border-bottom:1px solid var(--line-soft); }
+.ledger tr:last-child td{ border-bottom:none; }
+.ledger td:last-child{ text-align:right; font-family:var(--mono); font-size:11.4px;
+  color:var(--deep); white-space:nowrap; }
+
+/* ── ROLE: verdict — the payoff, must outweigh the prose ──────────────────── */
+.verdict{ break-inside:avoid; padding:2px 0 2px 15px; border-left:3px solid var(--gilt);
+  margin:14px 0; }
+.verdict .vlab{ font-family:var(--mono); font-size:8.5px; letter-spacing:.24em;
+  text-transform:uppercase; color:var(--gilt); display:block; margin:0 0 5px; }
+.verdict p{ font-family:var(--display); font-size:13.6px; line-height:1.54;
+  text-align:left; margin:0; }
+.verdict p strong{ font-weight:600; color:var(--deep); }
+
+/* ── ROLE: forks — labelled by MEANING, not for/against ───────────────────── */
+.forks{ display:flex; gap:18px; break-inside:avoid; margin:13px 0; }
+.fork{ flex:1; border-top:1px solid var(--line); padding-top:8px; }
+.fork b{ font-family:var(--mono); font-size:8px; letter-spacing:.18em; text-transform:uppercase;
+  display:block; margin:0 0 6px; font-weight:600; }
+.fork.f b{ color:var(--accent); }
+.fork.a b{ color:var(--gilt); }
+.fork ul{ margin:0; padding:0; list-style:none; }
+.fork li{ font-size:11.8px; line-height:1.48; margin:0 0 5px; text-align:left;
+  color:var(--muted); }
+
+/* ── ROLE: figure — the evidence anchor ───────────────────────────────────── */
+figure{ margin:15px 0; break-inside:avoid; }
+figure svg{ width:100%; height:auto; display:block; }
+figure img{ width:100%; height:auto; display:block; }
+figcaption{ font-family:var(--mono); font-size:8.5px; letter-spacing:.1em; color:var(--muted);
+  margin:7px 0 0; text-transform:uppercase; }
+figcaption .fnum{ color:var(--gilt); font-weight:600; }
+.plate figcaption{ text-transform:none; letter-spacing:0; font-family:var(--body);
+  font-size:10.6px; font-style:italic; }
+
+/* ── the note strip (provenance / Field Sheet pointer) ────────────────────── */
+.note{ font-size:10.8px; line-height:1.5; color:var(--muted); border-top:1px solid var(--line);
+  padding:8px 0 0; margin:13px 0 0; text-align:left; }
+
+/* ── provenance marks — seasoning, never mid-sentence (writing-code.md) ───── */
+.mk{ font-size:8.5px; vertical-align:2px; margin:0 0 0 3px; }
+.mk.est{ color:var(--accent); } .mk.off{ color:var(--deep); }
+.mk.sur{ color:var(--gilt); }   .mk.vol{ color:var(--sakura); }
+
+/* ── endmark so a partial tail reads closed, not empty ────────────────────── */
+.endmark{ text-align:center; color:var(--gilt); font-size:10px; margin:16px 0 0; }
+
+/* ── cover ────────────────────────────────────────────────────────────────── */
+.coverpage{ width:816px; height:1056px; position:relative; overflow:hidden;
+  background:var(--paper); }
+.coverpage svg{ position:absolute; inset:0; width:816px; height:1056px; }
+
+/* ── TOC ──────────────────────────────────────────────────────────────────── */
+.toc h1{ font-family:var(--display); font-size:28px; margin:0 0 4px; font-weight:600; }
+.toc ol{ list-style:none; margin:18px 0 0; padding:0; }
+.toc li{ display:flex; align-items:baseline; gap:8px; margin:0 0 9px; font-size:12.6px; }
+.toc .tnum{ font-family:var(--mono); font-size:9px; color:var(--gilt); width:22px; }
+.toc .tdot{ flex:1; border-bottom:1px dotted var(--line); transform:translateY(-3px); }
+.toc a{ color:var(--ink); text-decoration:none; }
+.toc .tpg a{ text-decoration:none; }
+.toc .tpg a::after{ content:target-counter(attr(href), page); font-family:var(--mono);
+  font-size:10px; color:var(--muted); }
+
+/* ── Field Sheet (annex) — dense reference grid ───────────────────────────── */
+.fs table{ width:100%; border-collapse:collapse; font-size:11.4px; }
+.fs th{ font-family:var(--mono); font-size:8px; letter-spacing:.14em; text-transform:uppercase;
+  text-align:left; color:var(--muted); border-bottom:1.5px solid var(--accent);
+  padding:0 10px 6px 0; font-weight:500; }
+.fs td{ padding:7px 10px 7px 0; border-bottom:1px solid var(--line-soft); vertical-align:top;
+  line-height:1.44; }
+.fs td:last-child{ font-family:var(--mono); font-size:10.8px; color:var(--deep);
+  text-align:right; white-space:nowrap; }
+
+/* ── refusals / back matter ───────────────────────────────────────────────── */
+.refuse li{ margin:0 0 9px; font-size:12.4px; line-height:1.55; }
+.refuse b{ font-family:var(--display); color:var(--deep); }
+</style><script>window.PagedConfig={auto:false};</script><script>window.__openerHandler=function(P){class O extends P.Handler{afterPageLayout(el){if(!el||typeof el.querySelector!=='function')return;if(el.querySelector('.pagedjs_page_content h1')){el.querySelectorAll('.pagedjs_margin-top-left,.pagedjs_margin-top-right').forEach(function(m){m.style.visibility='hidden'});}}}P.registerHandlers(O);};</script><script src="paged.polyfill.js"></script><script>window.__openerHandler(window.Paged);</script><script>(function(){function go(){document.fonts.ready.then(function(){return Promise.all(Array.from(document.images).map(function(i){return i.decode().catch(function(){})}));}).then(function(){window.PagedPolyfill.preview().then(function(f){window.__pagedDone=f.total;}).catch(function(e){window.__pagedErr=(e&&e.stack)?e.stack:String(e);});});}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',go);}else{go();}})();</script></head><body><div class="flow"><div class="coverpage"><svg viewBox="0 0 816 1056" xmlns="http://www.w3.org/2000/svg"><rect width="816" height="1056" fill="#16305F"/><circle cx="408" cy="410" r="210" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.100"/><circle cx="408" cy="410" r="256" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.094"/><circle cx="408" cy="410" r="302" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.088"/><circle cx="408" cy="410" r="348" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.082"/><circle cx="408" cy="410" r="394" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.076"/><circle cx="408" cy="410" r="440" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.070"/><circle cx="408" cy="410" r="486" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.064"/><circle cx="408" cy="410" r="532" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.058"/><circle cx="408" cy="410" r="578" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.052"/><circle cx="408" cy="410" r="624" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.046"/><circle cx="408" cy="410" r="670" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.040"/><circle cx="408" cy="410" r="716" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.034"/><circle cx="408" cy="410" r="762" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.028"/><circle cx="408" cy="410" r="808" fill="none" stroke="#7E93B8" stroke-width="0.7" opacity="0.022"/><line x1="584.1" y1="412.0" x2="578.0" y2="300.0" stroke="#7E93B8" stroke-width="1" stroke-dasharray="3 4" opacity=".55"/><circle cx="578.0" cy="300.0" r="2.6" fill="#7E93B8" opacity=".8"/><line x1="584.1" y1="412.0" x2="526.1" y2="460.4" stroke="#7E93B8" stroke-width="1" stroke-dasharray="3 4" opacity=".55"/><circle cx="526.1" cy="460.4" r="2.6" fill="#7E93B8" opacity=".8"/><line x1="584.1" y1="412.0" x2="564.7" y2="451.0" stroke="#7E93B8" stroke-width="1" stroke-dasharray="3 4" opacity=".55"/><circle cx="564.7" cy="451.0" r="2.6" fill="#7E93B8" opacity=".8"/><line x1="231.9" y1="487.0" x2="237.1" y2="520.0" stroke="#7E93B8" stroke-width="1" stroke-dasharray="3 4" opacity=".55"/><circle cx="237.1" cy="520.0" r="2.6" fill="#7E93B8" opacity=".8"/><line x1="584.1" y1="412.0" x2="231.9" y2="487.0" stroke="#B89547" stroke-width="3.4" stroke-linecap="round"/><line x1="231.9" y1="487.0" x2="13.6" y2="533.5" stroke="#B89547" stroke-width="2" stroke-dasharray="2 7" opacity="0.38"/><circle cx="13.6" cy="533.5" r="3.2" fill="none" stroke="#B89547" stroke-width="1.2" opacity="0.4"/><line x1="13.6" y1="533.5" x2="-204.8" y2="580.0" stroke="#B89547" stroke-width="2" stroke-dasharray="2 7" opacity="0.38"/><circle cx="-204.8" cy="580.0" r="3.2" fill="none" stroke="#B89547" stroke-width="1.2" opacity="0.4"/><circle cx="584.1" cy="412.0" r="7.5" fill="#F5EFE1"/><circle cx="584.1" cy="412.0" r="14" fill="none" stroke="#F5EFE1" stroke-width="1" opacity=".38"/><text x="584.1" y="388.0" font-size="15" fill="#F5EFE1" text-anchor="middle" font-family="'Zen Old Mincho',serif" letter-spacing="1.5">Tokyo</text><circle cx="231.9" cy="487.0" r="7.5" fill="#F5EFE1"/><circle cx="231.9" cy="487.0" r="14" fill="none" stroke="#F5EFE1" stroke-width="1" opacity=".38"/><text x="231.9" y="463.0" font-size="15" fill="#F5EFE1" text-anchor="middle" font-family="'Zen Old Mincho',serif" letter-spacing="1.5">Kyoto</text><text x="408.0" y="435.5" font-size="10" fill="#B89547" text-anchor="middle" font-family="'IBM Plex Mono',monospace" letter-spacing="2">ONE LEG &#183; &#165;13,850</text><line x1="96" y1="742" x2="720" y2="742" stroke="#B89547" stroke-width="1.4" opacity=".8"/><text x="96" y="726" font-size="10.5" fill="#7E93B8" font-family="'IBM Plex Mono',monospace" letter-spacing="4.5">A DECISION MANUAL &#183; FIRST TRIP</text><text x="96" y="826" font-size="72" fill="#F5EFE1" font-family="'Zen Old Mincho',serif" letter-spacing="-0.5">Japan,</text><text x="96" y="906" font-size="72" fill="#B89547" font-family="'Zen Old Mincho',serif" letter-spacing="-0.5">Worked Out.</text><text x="96" y="952" font-size="13.5" fill="#7E93B8" font-family="'Spectral',serif" font-style="italic">Your trip has two long train journeys in it.</text><text x="96" y="973" font-size="13.5" fill="#7E93B8" font-family="'Spectral',serif" font-style="italic">The rail pass needs four.</text><line x1="96" y1="1004" x2="720" y2="1004" stroke="#7E93B8" stroke-width="0.8" opacity=".45"/><text x="96" y="1026" font-size="9" fill="#7E93B8" font-family="'IBM Plex Mono',monospace" letter-spacing="2.6">JAPAN FOR AMERICANS</text><text x="720" y="1026" font-size="9" fill="#7E93B8" text-anchor="end" font-family="'IBM Plex Mono',monospace" letter-spacing="2.6">FIRST EDITION</text></svg></div><section class="chap" id="what-this-book-is-for"><div class="opener"><div class="okind">The contract</div><h1>What this book is for</h1><div class="orule"></div></div><span class="rh-src">What this book is for</span><span class="pos-src">The contract</span><p class="standfirst">A first trip to Japan is not hard. It is over-decided — and the decisions are made in the wrong order.</p><p class="lede">Japan is among the easiest countries an American can travel in. You need no
+visa for a short visit, the trains run to the second, the crime rate is low enough that the
+question barely arises, and the food is excellent at nearly every price. Almost nothing about
+the trip is difficult. What it is, instead, is over-decided: a dozen choices that each look
+small, presented in isolation by a hundred articles, and connected to each other in ways that
+only become visible after you have already committed to three of them.</p>
+
+<p>This book exists because those connections are where the money and the days go. The season
+you pick sets the booking deadline. The booking deadline decides how many cities you can
+commit to. The number of cities decides whether a rail pass pays. Whether the pass pays
+decides whether you spend two hundred dollars you did not need to — and, worse, whether you
+then bend the route to justify the purchase. None of that is difficult. It is simply not
+answerable one article at a time, which is exactly how it is usually answered.</p>
+
+<h2>What we do and do not claim</h2>
+
+<p>Every call in here is argued in the open, with the arithmetic on the page, so that you can
+disagree with us and still come out ahead. That is the contract. Where we say buy, we show the
+sum that says buy; where the sum is close, we say it is close. A recommendation you cannot
+audit is worth nothing to someone spending four thousand dollars, and the number of places
+where a confident voice is simply repeating a decade-old blog post is higher in Japan than
+almost anywhere. <span class='mk est'>●</span></p>
+
+<p>We do not tell you which hotel to book or which restaurant to eat at. Those are the two
+things every guide leads with and the two that age fastest — a list of names is wrong within a
+season, while the rule that generated the list keeps working. The back of this book says
+plainly what it refuses to do, and why.</p><div class="endmark">&#9670;</div></section><section class="chap" id="marks-and-the-two-documents"><div class="opener"><div class="okind">How to read it</div><h1>Marks, and the two documents</h1><div class="orule"></div></div><span class="rh-src">Marks, and the two documents</span><span class="pos-src">How to read it</span><p class="standfirst">Every claim in this book carries a mark that tells you how much weight it will still bear next year.</p><p class="lede">Travel writing rarely distinguishes between a fact that has been true for
+forty years and a price that was checked once in spring. This book marks the difference on
+every claim, because the two age at completely different rates and you are entitled to know
+which one you are being handed.</p>
+
+<div class="ledger">
+  <div class="lcap">The four marks</div>
+  <table>
+    <tr><th>Mark</th><th>Means</th></tr>
+    <tr><td><span class='mk est'>●</span> <b>ESTABLISHED</b> — structural, true for years</td><td>the book</td></tr>
+    <tr><td><span class='mk off'>◇</span> <b>OFFICIAL</b> — a published fare or a rule in law</td><td>the book</td></tr>
+    <tr><td><span class='mk sur'>▲</span> <b>SURVEYED</b> — our own dated observation</td><td>the book, dated</td></tr>
+    <tr><td><span class='mk vol'>◆</span> <b>VOLATILE</b> — a price, an hour, a window</td><td>the Field Sheet</td></tr>
+  </table>
+</div>
+
+<p>Anything carrying no mark is opinion, and we have tried to leave none of it in. The rule
+we hold ourselves to is simple: if a sentence cannot carry a mark, it is not a claim, it is a
+flourish, and it should be cut.</p>
+
+<h2>Why there are two documents</h2>
+
+<p>The book you are reading is built to stay true for about two years. It contains no live
+prices, because a price printed in a book is a lie with a long shelf life. Every volatile
+figure lives instead in the <b>Field Sheet</b> — a short dated annex, re-issued quarterly, that
+carries the numbers and nothing else. When the two disagree, the Sheet is right and the book
+is old.</p>
+
+<p>Read the book once before you book anything. Carry the Sheet on the trip.</p><div class="endmark">&#9670;</div></section><section class="chap toc" id="contents"><div class="opener"><div class="okind">Contents</div><h1>What is in this book</h1><div class="orule"></div></div><span class="rh-src">Contents</span><span class="pos-src">Contents</span><ol><li><span class="tnum">THE</span><a href="#what-this-book-is-for">What this book is for</a><span class="tdot"></span><span class="tpg"><a href="#what-this-book-is-for"></a></span></li><li><span class="tnum">HOW</span><a href="#marks-and-the-two-documents">Marks, and the two documents</a><span class="tdot"></span><span class="tpg"><a href="#marks-and-the-two-documents"></a></span></li><li><span class="tnum">THE</span><a href="#two-legs-and-a-pass-that-needs-four">Two legs, and a pass that needs four</a><span class="tdot"></span><span class="tpg"><a href="#two-legs-and-a-pass-that-needs-four"></a></span></li><li><span class="tnum">BEF</span><a href="#the-four-things-with-deadlines">The four things with deadlines</a><span class="tdot"></span><span class="tpg"><a href="#the-four-things-with-deadlines"></a></span></li><li><span class="tnum">DAY</span><a href="#the-first-six-hours">The first six hours</a><span class="tdot"></span><span class="tpg"><a href="#the-first-six-hours"></a></span></li><li><span class="tnum">THE</span><a href="#how-a-week-in-japan-runs">How a week in Japan runs</a><span class="tdot"></span><span class="tpg"><a href="#how-a-week-in-japan-runs"></a></span></li><li><span class="tnum">THE</span><a href="#the-three-operations-everyone-runs">The three operations everyone runs</a><span class="tdot"></span><span class="tpg"><a href="#the-three-operations-everyone-runs"></a></span></li><li><span class="tnum">WHE</span><a href="#four-kinds-of-room-scored-the-same-way">Four kinds of room, scored the same way</a><span class="tdot"></span><span class="tpg"><a href="#four-kinds-of-room-scored-the-same-way"></a></span></li><li><span class="tnum">THE</span><a href="#the-days-as-operations">The days, as operations</a><span class="tdot"></span><span class="tpg"><a href="#the-days-as-operations"></a></span></li><li><span class="tnum">THE</span><a href="#how-far-ahead-each-thing-must-be-decided">How far ahead each thing must be decided</a><span class="tdot"></span><span class="tpg"><a href="#how-far-ahead-each-thing-must-be-decided"></a></span></li><li><span class="tnum">THE</span><a href="#the-wallet-card">The wallet card</a><span class="tdot"></span><span class="tpg"><a href="#the-wallet-card"></a></span></li><li><span class="tnum">EAT</span><a href="#the-rule-that-outlives-the-list">The rule that outlives the list</a><span class="tdot"></span><span class="tpg"><a href="#the-rule-that-outlives-the-list"></a></span></li><li><span class="tnum">MON</span><a href="#where-it-leaks">Where it leaks</a><span class="tdot"></span><span class="tpg"><a href="#where-it-leaks"></a></span></li><li><span class="tnum">01</span><a href="#dec-01">What does a day trip cost you?</a><span class="tdot"></span><span class="tpg"><a href="#dec-01"></a></span></li><li><span class="tnum">02</span><a href="#dec-02">Does the national rail pass pay for itself?</a><span class="tdot"></span><span class="tpg"><a href="#dec-02"></a></span></li><li><span class="tnum">03</span><a href="#dec-03">Which card will load on an American phone?</a><span class="tdot"></span><span class="tpg"><a href="#dec-03"></a></span></li><li><span class="tnum">04</span><a href="#dec-04">When should you come, and what does the date cost?</a><span class="tdot"></span><span class="tpg"><a href="#dec-04"></a></span></li><li><span class="tnum">05</span><a href="#dec-05">Which station should you sleep next to?</a><span class="tdot"></span><span class="tpg"><a href="#dec-05"></a></span></li><li><span class="tnum">06</span><a href="#dec-06">Is the ryokan worth it, and where should it be?</a><span class="tdot"></span><span class="tpg"><a href="#dec-06"></a></span></li><li><span class="tnum">07</span><a href="#dec-07">How do you eat well without a reservation system you can use?</a><span class="tdot"></span><span class="tpg"><a href="#dec-07"></a></span></li><li><span class="tnum">08</span><a href="#dec-08">Which airport, and what happens in the first six hours?</a><span class="tdot"></span><span class="tpg"><a href="#dec-08"></a></span></li><li><span class="tnum">FAI</span><a href="#what-goes-wrong-by-what-it-costs">What goes wrong, by what it costs</a><span class="tdot"></span><span class="tpg"><a href="#what-goes-wrong-by-what-it-costs"></a></span></li><li><span class="tnum">BAC</span><a href="#what-this-book-will-not-tell-you">What this book will not tell you</a><span class="tdot"></span><span class="tpg"><a href="#what-this-book-will-not-tell-you"></a></span></li><li><span class="tnum">CLO</span><a href="#the-country-not-the-plan">The country, not the plan</a><span class="tdot"></span><span class="tpg"><a href="#the-country-not-the-plan"></a></span></li><li><span class="tnum">FS</span><a href="#field-sheet">Field Sheet</a><span class="tdot"></span><span class="tpg"><a href="#field-sheet"></a></span></li></ol><div class="endmark">&#9670;</div></section><section class="chap" id="two-legs-and-a-pass-that-needs-four"><div class="opener"><div class="okind">The ground</div><h1>Two legs, and a pass that needs four</h1><div class="orule"></div></div><span class="rh-src">Two legs, and a pass that needs four</span><span class="pos-src">The ground</span><p class="standfirst">One number reorganises a first trip to Japan, and almost nobody arrives knowing it.</p><p class="lede">The trip that nearly every first-timer takes has a shape so consistent it can
+be described in a sentence: fly into Tokyo, spend several days, take one Shinkansen to Kyoto,
+spend several more, fly home. Some variant of that is what the itinerary articles converge on,
+what the week allows, and what people come back having enjoyed. It contains exactly two long
+train journeys. <span class='mk est'>●</span></p>
+
+<p>The Japan Rail Pass needs about four to pay for itself. <span class='mk est'>●</span></p><figure id="fig-corridor"><svg viewBox="0 0 652 330" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace"><rect width="652" height="330" fill="#F5EFE1"/><line x1="299.8" y1="215.8" x2="590.0" y2="154.1" stroke="#1B3670" stroke-width="3"/><rect x="392.9" y="176.0" width="104" height="18" fill="#F5EFE1"/><text x="444.9" y="188.0" font-size="8.5" fill="#1B3670" text-anchor="middle" letter-spacing="1.1">2H15 &#183; &#165;13,850</text><line x1="590.0" y1="154.1" x2="585.0" y2="62.0" stroke="#8A8E97" stroke-width="1.2" stroke-dasharray="4 3"/><circle cx="585.0" cy="62.0" r="3.4" fill="#F5EFE1" stroke="#5C6068" stroke-width="1.4"/><text x="585.0" y="53.0" font-size="9" fill="#5C6068" text-anchor="middle">Nikko <tspan fill="#8A8E97">2h</tspan></text><line x1="590.0" y1="154.1" x2="542.2" y2="193.9" stroke="#8A8E97" stroke-width="1.2" stroke-dasharray="4 3"/><circle cx="542.2" cy="193.9" r="3.4" fill="#F5EFE1" stroke="#5C6068" stroke-width="1.4"/><text x="542.2" y="208.9" font-size="9" fill="#5C6068" text-anchor="middle">Hakone <tspan fill="#8A8E97">1h30</tspan></text><line x1="590.0" y1="154.1" x2="574.0" y2="186.2" stroke="#8A8E97" stroke-width="1.2" stroke-dasharray="4 3"/><circle cx="574.0" cy="186.2" r="3.4" fill="#F5EFE1" stroke="#5C6068" stroke-width="1.4"/><text x="574.0" y="201.2" font-size="9" fill="#5C6068" text-anchor="middle">Kamakura <tspan fill="#8A8E97">1h</tspan></text><line x1="299.8" y1="215.8" x2="304.0" y2="243.0" stroke="#8A8E97" stroke-width="1.2" stroke-dasharray="4 3"/><circle cx="304.0" cy="243.0" r="3.4" fill="#F5EFE1" stroke="#5C6068" stroke-width="1.4"/><text x="304.0" y="258.0" font-size="9" fill="#5C6068" text-anchor="middle">Nara <tspan fill="#8A8E97">45m</tspan></text><circle cx="590.0" cy="154.1" r="8" fill="#16305F"/><circle cx="590.0" cy="154.1" r="13" fill="none" stroke="#16305F" stroke-width="1" opacity=".45"/><text x="590.0" y="134.1" font-size="12" fill="#242A33" text-anchor="middle" font-family="'Zen Old Mincho',serif">Tokyo</text><circle cx="299.8" cy="215.8" r="8" fill="#16305F"/><circle cx="299.8" cy="215.8" r="13" fill="none" stroke="#16305F" stroke-width="1" opacity=".45"/><text x="299.8" y="195.8" font-size="12" fill="#242A33" text-anchor="middle" font-family="'Zen Old Mincho',serif">Kyoto</text><text x="14" y="316" font-size="8" fill="#8A8E97" letter-spacing="1.6">SOLID: THE ONE LONG LEG &#183; DASHED: DAY TRIPS, ON LOCAL LINES</text></svg><figcaption><span class="fnum">FIG.1</span> &nbsp;The corridor a first trip travels.</figcaption></figure>
+
+<p>That collision is the single most useful thing to know before you plan anything else,
+because it is counter-intuitive in a specific and expensive way. For twenty years the pass was
+the correct reflex, and the entire English-language internet learned to recommend it. Then in
+October 2023 the seven-day ordinary pass rose from roughly ¥29,650 to ¥50,000 — about seventy
+per cent in a single step — and the advice did not move. <span class='mk off'>◇</span></p>
+
+<h2>Why the sum is the interesting part</h2>
+
+<p>Divide the pass price by the fare it is meant to save you and the answer falls out. A
+reserved seat from Tokyo to Kyoto is about ¥13,850, so the pass needs a little under four
+journeys of that length before it breaks even — roughly two round trips inside a seven-day
+window. A trip with two long legs in it is not close to the line. It is at half. <span class='mk off'>◇</span></p>
+
+<p>The second-order cost is the one that does the real damage, and no price comparison
+catches it. A pass already paid for is an argument in your pocket for using it, and routes
+quietly bend to justify the purchase: a day trip added because it is free, a city inserted
+because the train is covered, a fortnight that was going to be two calm bases turning into
+five hotels and a lot of luggage on platforms. The purchase should follow the route. It
+usually leads it.</p>
+
+<h2>What the corridor looks like</h2>
+
+<p>Japan for a first-timer is not the archipelago of the map. It is a corridor — Tokyo and
+Kyoto, a little over two hours apart on the fastest services the pass does not cover, with
+everything else reached as a day trip from one end or the other. Nara is forty-five minutes
+from Kyoto. Hakone, Nikko and Kamakura are inside two hours of Tokyo. <span class='mk est'>●</span> Those spokes run on
+local and rapid lines at a fraction of bullet-train prices, which means the pass does not help
+with them either.</p>
+
+<p>Once the corridor is the mental model rather than the country, most of the remaining
+decisions in this book get easier, and several of them stop being decisions at all.</p><div class="endmark">&#9670;</div></section><section class="chap" id="the-four-things-with-deadlines"><div class="opener"><div class="okind">Before you fly</div><h1>The four things with deadlines</h1><div class="orule"></div></div><span class="rh-src">The four things with deadlines</span><span class="pos-src">Before you fly</span><p class="standfirst">Most of the preparation is optional. These four are not, and each has a date attached.</p><p class="lede">Japan asks very little of an American traveller in advance — no visa, no
+vaccination paperwork, no entry fee. <span class='mk off'>◇</span> What it does have is a small set of tasks whose cost
+rises sharply the later you do them, and which are easy to leave until the week before because
+nothing forces them earlier.</p>
+
+<div class="ledger">
+  <div class="lcap">What has a deadline · counted back from departure</div>
+  <table>
+    <tr><th>Task</th><th>When</th></tr>
+    <tr><td>Rooms, if you are travelling in bloom season <span class='mk est'>●</span></td><td>~6 months</td></tr>
+    <tr><td>Rooms, late November foliage <span class='mk est'>●</span></td><td>2–3 months</td></tr>
+    <tr><td>A ryokan you actually want <span class='mk est'>●</span></td><td>2–3 months</td></tr>
+    <tr><td>Transit card created and topped up <span class='mk sur'>▲</span></td><td>before you board</td></tr>
+  </table>
+</div>
+
+<p>The transit card is the one that looks trivial and is not. Creating a Suica in Apple Wallet
+takes four minutes at home and can fail in a way that takes an afternoon to solve in Tokyo,
+because a US-issued Visa is refused for top-ups while Mastercard and American Express are
+accepted. <span class='mk sur'>▲</span> The failure produces an unhelpful error rather than an explanation, and the
+place people discover it is a ticket gate with a queue behind them. Do it on the sofa.</p>
+
+<h2>What does not need doing</h2>
+
+<p>You do not need cash in advance at an airport exchange desk, you do not need a pocket
+wi-fi device booked from abroad in most cases, and you do not need a rail pass ordered before
+you have counted your legs. Each of these is sold hard to people planning a first trip and
+each is, for the corridor-shaped trip most people take, either unnecessary or actively worse
+than the alternative available on arrival.</p><div class="endmark">&#9670;</div></section><section class="chap" id="the-first-six-hours"><div class="opener"><div class="okind">Day zero</div><h1>The first six hours</h1><div class="orule"></div></div><span class="rh-src">The first six hours</span><span class="pos-src">Day zero</span><p class="standfirst">Nobody writes the arrival day, which is the one where a plan is most easily lost.</p><p class="lede">You land after eleven hours in the air, somewhere between mid-afternoon and
+late evening, and what happens next is decided almost entirely by two things you chose months
+earlier: which airport you fly into, and what time the wheels touch. Neither feels like an
+itinerary decision at the time of booking. Both are.</p>
+
+<p>Haneda sits close to central Tokyo and is reached in roughly thirty minutes. <span class='mk est'>●</span> Narita
+is a genuine distance out, and the transfer runs sixty to ninety minutes depending on which
+service you take. <span class='mk est'>●</span> On a normal day that difference is an hour. On the day you have not
+slept properly, are carrying everything you brought, and are trying to work out a ticket
+machine in a language you do not read, it is the difference between an evening and a
+lie-down.</p>
+
+<h2>The order that works</h2>
+
+<p>Clear immigration, ignore the exchange desks, and go straight to the train — assuming the
+transit card on your phone already works, which is why it is the one task on the pre-departure
+list with a hard deadline. If it does not, buy a physical card from a station machine and feed
+it cash: the machines take notes, carry an English interface, and sidestep the entire card-
+network problem in one step. <span class='mk est'>●</span></p>
+
+<p>Then do nothing ambitious. The first evening is for a short walk, a convenience-store meal
+that will be better than it has any right to be, and an early night against the jet lag.
+Japan is thirteen or fourteen hours ahead of the American east coast, and the trip is long
+enough that one surrendered evening costs nothing while one badly-handled first night costs
+two days.</p><div class="endmark">&#9670;</div></section><section class="chap" id="how-a-week-in-japan-runs"><div class="opener"><div class="okind">The rhythm</div><h1>How a week in Japan runs</h1><div class="orule"></div></div><span class="rh-src">How a week in Japan runs</span><span class="pos-src">The rhythm</span><p class="standfirst">The day has a shape here, and fighting it costs you the two hours that matter most.</p><p class="lede">Japanese sights open early and empty out late, and the gap between eight in
+the morning and ten in the morning is the difference between a temple you will remember and a
+queue you will photograph. This is the most reliably useful habit a first-timer can adopt, and
+it costs nothing but a decision made the night before. <span class='mk est'>●</span></p>
+
+<p>The reason is structural rather than cultural. Tour groups, school trips and day-trippers
+from the other city all arrive on the same rough schedule, which means the famous sites load
+from mid-morning and stay loaded until late afternoon. Arrive at opening and you have perhaps
+ninety minutes of something close to solitude at places that are unusable by eleven.</p><figure id="fig-season-grid"><svg viewBox="0 0 652 214" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace"><rect width="652" height="214" fill="#F5EFE1"/><line x1="18.0" y1="36" x2="18.0" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="43.7" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">JAN</text><line x1="69.3" y1="36" x2="69.3" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="95.0" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">FEB</text><line x1="120.7" y1="36" x2="120.7" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="146.3" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">MAR</text><line x1="172.0" y1="36" x2="172.0" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="197.7" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">APR</text><line x1="223.3" y1="36" x2="223.3" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="249.0" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">MAY</text><line x1="274.7" y1="36" x2="274.7" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="300.3" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">JUN</text><line x1="326.0" y1="36" x2="326.0" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="351.7" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">JUL</text><line x1="377.3" y1="36" x2="377.3" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="403.0" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">AUG</text><line x1="428.7" y1="36" x2="428.7" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="454.3" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">SEP</text><line x1="480.0" y1="36" x2="480.0" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="505.7" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">OCT</text><line x1="531.3" y1="36" x2="531.3" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="557.0" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">NOV</text><line x1="582.7" y1="36" x2="582.7" y2="188" stroke="#E1D7C2" stroke-width="1"/><text x="608.3" y="30" font-size="8.5" fill="#5C6068" text-anchor="middle">DEC</text><line x1="634.0" y1="36" x2="634.0" y2="188" stroke="#E1D7C2"/><rect x="151.5" y="46.0" width="51.3" height="17" fill="#C87F94" opacity="0.92" rx="1.5"/><text x="209.8" y="58.5" font-size="8.5" fill="#242A33" text-anchor="start">BLOOM &#183; book ~6 months out</text><rect x="218.2" y="76.0" width="18.0" height="17" fill="#B89547" opacity="0.92" rx="1.5"/><text x="243.2" y="88.5" font-size="8.5" fill="#242A33" text-anchor="start">GOLDEN WEEK &#183; do not move cities</text><rect x="274.7" y="106.0" width="77.0" height="17" fill="#CBD6E0" opacity="0.92" rx="1.5"/><text x="358.7" y="118.5" font-size="8.5" fill="#242A33" text-anchor="start">RAINY SEASON</text><rect x="397.9" y="76.0" width="12.8" height="17" fill="#B89547" opacity="0.92" rx="1.5"/><text x="417.7" y="88.5" font-size="8.5" fill="#242A33" text-anchor="start">OBON &#183; do not move cities</text><rect x="551.9" y="46.0" width="41.1" height="17" fill="#1B3670" opacity="0.92" rx="1.5"/><text x="544.9" y="58.5" font-size="8.5" fill="#242A33" text-anchor="end">FOLIAGE &#183; book 2&#8211;3 months out</text><rect x="18.0" y="136.0" width="102.7" height="17" fill="#16305F" opacity="0.92" rx="1.5"/><text x="127.7" y="148.5" font-size="8.5" fill="#242A33" text-anchor="start">LOW SEASON &#183; cheapest, clearest</text><text x="18" y="206" font-size="8" fill="#8A8E97" letter-spacing="1.5">BLOOM DATES SHIFT WITH THE WINTER &#8212; TREAT EVERY BAND AS A WINDOW, NOT A DATE</text></svg><figcaption><span class="fnum">FIG.2</span> &nbsp;The year, and what each window asks of you.</figcaption></figure>
+
+<h2>What closes, and when</h2>
+
+<div class="ledger">
+  <div class="lcap">The closures that catch people</div>
+  <table>
+    <tr><th>What</th><th>When</th></tr>
+    <tr><td>Museums, very widely <span class='mk est'>●</span></td><td>Mondays</td></tr>
+    <tr><td>Small and family-run restaurants during Obon <span class='mk est'>●</span></td><td>mid-August</td></tr>
+    <tr><td>Independent shops, offices, some museums <span class='mk est'>●</span></td><td>29 Dec &#8211; 3 Jan</td></tr>
+    <tr><td>Temple and shrine grounds (most) <span class='mk est'>●</span></td><td>rarely close at all</td></tr>
+  </table>
+</div>
+
+<p>The New Year window is the one Americans walk into unaware, because late December reads as
+an ordinary travel period from the United States and nothing on the calendar warns you. <span class='mk est'>●</span>
+Shrines are extraordinarily busy with the first-visit tradition, department stores shut on the
+first, and a great deal of the small, good, independent layer of the country simply stops for
+several days.</p>
+
+<h2>The two hours worth protecting</h2>
+
+<p>Build the day around one early anchor and let the rest be loose. A first-timer&#8217;s
+instinct is to schedule four sights and move between them efficiently; the better structure is
+one thing at opening, a long unhurried middle, and an evening that is allowed to be
+unremarkable. Japan rewards the loose afternoon more than most countries, because the density
+of small good things &#8212; a shop, a shrine, a counter with six seats &#8212; means walking
+produces finds that planning cannot.</p><div class="endmark">&#9670;</div></section><section class="chap" id="the-three-operations-everyone-runs"><div class="opener"><div class="okind">The set pieces</div><h1>The three operations everyone runs</h1><div class="orule"></div></div><span class="rh-src">The three operations everyone runs</span><span class="pos-src">The set pieces</span><p class="standfirst">Three experiences appear on essentially every first itinerary. Each has an order of operations, and each is commonly run backwards.</p><p class="lede">A first trip converges on a small number of unavoidable set pieces. They are
+unavoidable for good reasons &#8212; they are genuinely extraordinary &#8212; but each one has
+a way of being done that works and a way that produces the photograph everyone else has and
+very little else.</p>
+
+<h2>The shrine at Fushimi</h2>
+
+<p>The vermillion gate tunnels above Fushimi Inari are the most photographed thing in Kyoto
+and, for most of the day, the most crowded. The operation that works is to go at or before
+opening &#8212; the grounds are open continuously rather than gated by hours <span class='mk est'>●</span> &#8212; and
+to keep climbing. Crowd density falls off sharply with altitude, and the intersection partway
+up is where most visitors turn back. <span class='mk est'>●</span> Above it the tunnels are quiet, and the inscriptions
+on the gates, which are donations with dates and names on them, become legible as a record
+rather than a backdrop.</p>
+
+<h2>The bullet train itself</h2>
+
+<p>The Shinkansen is a set piece rather than merely transport, and it is worth treating as
+one on the leg that matters. Reserve a seat rather than taking the non-reserved car; on the
+Tokyo&#8211;Kyoto run, a right-hand seat gives you the Mount Fuji side on a clear day, and the
+ride is rated by a great many travellers as a highlight in its own right. <span class='mk est'>●</span> It is also the
+one part of the trip where being early is pointless: the train leaves at the second it says it
+will, and the platform is organised so that queueing for ten minutes buys you nothing.</p>
+
+<h2>The bath</h2>
+
+<p>An onsen is the set piece most Americans approach with the most apprehension and describe
+afterwards with the most enthusiasm. The procedure is fixed and simple: wash thoroughly, at a
+seated station, before entering the water; bathe with no swimwear; keep the small towel out of
+the bath. <span class='mk est'>●</span> The only genuine obstacle is tattoos, which are still commonly refused at
+public baths &#8212; the practical answer is a tattoo-friendly establishment or a private
+bath, arranged before you arrive rather than discovered at the door. <span class='mk est'>●</span></p><div class="endmark">&#9670;</div></section><section class="chap" id="four-kinds-of-room-scored-the-same-way"><div class="opener"><div class="okind">Where to stay</div><h1>Four kinds of room, scored the same way</h1><div class="orule"></div></div><span class="rh-src">Four kinds of room, scored the same way</span><span class="pos-src">Where to stay</span><p class="standfirst">Japanese accommodation is not a price ladder. The categories differ in kind, and the cheapest is often the right answer.</p><p class="lede">The room categories here do not map onto American expectations. A business
+hotel is not a budget compromise, a capsule is not a hostel, and a ryokan is not a boutique
+hotel with tatami. Judged on the criteria that matter on a trip &#8212; what the
+location buys you, what is included, and what it costs in daily friction &#8212; they sort
+differently than the nightly rate suggests.</p>
+
+<div class="ledger">
+  <div class="lcap">The four categories, on identical criteria</div>
+  <table>
+    <tr><th>Category</th><th>What you are buying</th></tr>
+    <tr><td>Business hotel <span class='mk est'>●</span></td><td>a small, spotless, well-located room</td></tr>
+    <tr><td>Western chain hotel <span class='mk est'>●</span></td><td>space and familiarity, further out</td></tr>
+    <tr><td>Ryokan, half board <span class='mk est'>●</span></td><td>the whole evening, not the room</td></tr>
+    <tr><td>Capsule <span class='mk est'>●</span></td><td>a night, cheaply, in the centre</td></tr>
+  </table>
+</div>
+
+<p>The business hotel is the workhorse and the right default for most of a first trip. The
+rooms are small by American standards and immaculately maintained, they sit next to stations
+because that is who they were built for, and for a traveller who is out from eight until nine
+they are excellent value. <span class='mk est'>●</span> Choosing a larger room further out is the most common way a
+first-timer spends more money to have a worse trip.</p><figure id="fig-tokyo-lines"><svg viewBox="0 0 652 340" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace"><rect width="652" height="340" fill="#F5EFE1"/><polygon points="367.6,166.0 376.5,134.7 382.8,106.1 284.4,78.0 269.2,150.7 270.7,208.3 325.6,262.0 354.6,192.8" fill="#1B3670" opacity="0.05"/><polygon points="367.6,166.0 376.5,134.7 382.8,106.1 284.4,78.0 269.2,150.7 270.7,208.3 325.6,262.0 354.6,192.8" fill="none" stroke="#1B3670" stroke-width="2.6" stroke-linejoin="round"/><circle cx="367.6" cy="166.0" r="4.6" fill="#F5EFE1" stroke="#16305F" stroke-width="2"/><text x="389.5" y="171.1" font-size="9.5" fill="#242A33" text-anchor="start">Tokyo</text><circle cx="376.5" cy="134.7" r="4.6" fill="#F5EFE1" stroke="#16305F" stroke-width="2"/><text x="395.5" y="126.6" font-size="9.5" fill="#242A33" text-anchor="start">Akihabara</text><circle cx="382.8" cy="106.1" r="4.6" fill="#F5EFE1" stroke="#16305F" stroke-width="2"/><text x="398.0" y="93.2" font-size="9.5" fill="#242A33" text-anchor="start">Ueno</text><circle cx="284.4" cy="78.0" r="4.6" fill="#F5EFE1" stroke="#16305F" stroke-width="2"/><text x="274.2" y="61.5" font-size="9.5" fill="#242A33" text-anchor="end">Ikebukuro</text><circle cx="269.2" cy="150.7" r="4.6" fill="#F5EFE1" stroke="#16305F" stroke-width="2"/><text x="247.6" y="149.5" font-size="9.5" fill="#242A33" text-anchor="end">Shinjuku</text><circle cx="270.7" cy="208.3" r="4.6" fill="#F5EFE1" stroke="#16305F" stroke-width="2"/><text x="253.4" y="224.9" font-size="9.5" fill="#242A33" text-anchor="end">Shibuya</text><circle cx="325.6" cy="262.0" r="4.6" fill="#F5EFE1" stroke="#16305F" stroke-width="2"/><text x="324.8" y="287.0" font-size="9.5" fill="#242A33" text-anchor="middle">Shinagawa</text><circle cx="354.6" cy="192.8" r="4.6" fill="#F5EFE1" stroke="#16305F" stroke-width="2"/><text x="368.7" y="212.6" font-size="9.5" fill="#242A33" text-anchor="start">Shimbashi</text><text x="328.9" y="156.3" font-size="11" fill="#5C6068" text-anchor="middle" font-family="'Zen Old Mincho',serif">the Yamanote loop</text><text x="328.9" y="173.3" font-size="8.5" fill="#8A8E97" text-anchor="middle" letter-spacing="1.2">SLEEP ON IT</text><text x="14" y="328" font-size="8" fill="#8A8E97" letter-spacing="1.5">DRAWN FROM STATION COORDINATES &#183; SPACING IS GEOGRAPHIC, NOT SCHEMATIC</text></svg><figcaption><span class="fnum">FIG.3</span> &nbsp;The Yamanote loop, from station coordinates.</figcaption></figure>
+
+<h2>The decision, in order</h2>
+
+<p>Pick the station first, the category second, the room last. In Tokyo that means somewhere
+on or one stop from the Yamanote loop; in Kyoto it means a major bus corridor rather than a
+subway stop, because the subway does not go where the temples are. <span class='mk est'>●</span> Then choose the
+category from the list above, and only then compare rooms. Doing it in the other order &#8212;
+finding an appealing room and then discovering what it is connected to &#8212; is how people
+end up with three transfers before breakfast.</p><div class="endmark">&#9670;</div></section><section class="chap" id="the-days-as-operations"><div class="opener"><div class="okind">The plan</div><h1>The days, as operations</h1><div class="orule"></div></div><span class="rh-src">The days, as operations</span><span class="pos-src">The plan</span><p class="standfirst">Not an itinerary. Four shapes a day can take, and what each one costs.</p><p class="lede">An itinerary tells you where to be at eleven o&#8217;clock. An operation tells
+you what kind of day you are running, which is more useful, because the specific temple
+matters far less than whether the day has one anchor or four. These are the four shapes that
+work, and the failure each one avoids.</p>
+
+<div class="ledger">
+  <div class="lcap">Four day-shapes</div>
+  <table>
+    <tr><th>Shape</th><th>What it is for</th></tr>
+    <tr><td>One anchor, loose afternoon <span class='mk est'>●</span></td><td>the default; most days should be this</td></tr>
+    <tr><td>Neighbourhood day, no trains <span class='mk est'>●</span></td><td>jet lag, rain, the day after a long leg</td></tr>
+    <tr><td>Day trip, committed <span class='mk est'>●</span></td><td>only on trips of ten days or more</td></tr>
+    <tr><td>Transfer day <span class='mk est'>●</span></td><td>the long leg, plus one easy thing at the far end</td></tr>
+  </table>
+</div>
+
+<p>The transfer day is the one most often mis-planned. A Tokyo&#8211;Kyoto leg is a little
+over two hours on the train and most of a morning once you count the station, the luggage and
+the check-in at the other end. Treating it as a half-day with one gentle thing scheduled after
+it produces a good day; treating it as a travel morning followed by a full afternoon of sights
+produces a bad one, and it is the same number of hours either way.</p>
+
+<h2>Jet lag, honestly</h2>
+
+<p>Japan is thirteen or fourteen hours ahead of the American east coast, which is close to
+maximal, and the first two days are compromised whatever you do. Plan them as
+neighbourhood days with nothing that cannot be abandoned, get outside in daylight, and do not
+schedule the thing you most want to see on day one. <span class='mk est'>●</span> A first trip that front-loads its
+highlights spends them on a version of itself that is not fully present.</p><div class="endmark">&#9670;</div></section><section class="chap" id="how-far-ahead-each-thing-must-be-decided"><div class="opener"><div class="okind">The horizons</div><h1>How far ahead each thing must be decided</h1><div class="orule"></div></div><span class="rh-src">How far ahead each thing must be decided</span><span class="pos-src">The horizons</span><p class="standfirst">The booking calendar, counted backwards from departure. Stable horizons only — the prices live on the Field Sheet.</p><p class="lede">Almost nothing about Japan needs to be booked a year out, and a few things
+genuinely do. The trouble is that the two sets are not intuitive, and the items with the
+longest horizons are the ones that look most like details.</p>
+
+<div class="ledger">
+  <div class="lcap">Counted back from departure</div>
+  <table>
+    <tr><th>What</th><th>Horizon</th></tr>
+    <tr><td>Rooms, bloom season, Kyoto and central Tokyo <span class='mk est'>●</span></td><td>~6 months</td></tr>
+    <tr><td>A specific well-regarded ryokan <span class='mk est'>●</span></td><td>3&#8211;6 months</td></tr>
+    <tr><td>Rooms, late-November foliage <span class='mk est'>●</span></td><td>2&#8211;3 months</td></tr>
+    <tr><td>Flights, for a reasonable fare <span class='mk est'>●</span></td><td>2&#8211;4 months</td></tr>
+    <tr><td>Reserved Shinkansen seats <span class='mk est'>●</span></td><td>weeks, or the day itself</td></tr>
+    <tr><td>Almost everything else <span class='mk est'>●</span></td><td>on the ground</td></tr>
+  </table>
+</div>
+
+<p>The asymmetry is the point. Rooms in the two peak windows are the only scarce
+thing in the plan, which is why the season decision (Decision 04) has to be made first
+and everything else can wait. Reserved train seats, which feel urgent, are available close in
+outside the holiday clusters &#8212; and are free to change if you hold a pass. <span class='mk est'>●</span></p>
+
+<p>A trip that books rooms early and leaves the rest open is running the horizons correctly.
+A trip that books eleven experiences from abroad four months out has converted a fortnight into
+a schedule, and the schedule will be wrong within a day of landing.</p><div class="endmark">&#9670;</div></section><section class="chap" id="the-wallet-card"><div class="opener"><div class="okind">The kit</div><h1>The wallet card</h1><div class="orule"></div></div><span class="rh-src">The wallet card</span><span class="pos-src">The kit</span><p class="standfirst">Everything worth carrying on one page. Print it, or photograph it.</p><p class="lede">The rest of this book is for before you go. This page is for the trip itself
+&#8212; the handful of things worth having in front of you when a decision arrives and you
+have thirty seconds and one bar of signal.</p>
+
+<div class="ledger">
+  <div class="lcap">At the gate</div>
+  <table>
+    <tr><th>Situation</th><th>Do this</th></tr>
+    <tr><td>Gate closes, buzzer sounds <span class='mk est'>●</span></td><td>fare adjustment machine, platform side</td></tr>
+    <tr><td>Card will not read at all <span class='mk est'>●</span></td><td>take it out of the wallet, tap alone</td></tr>
+    <tr><td>Top-up refused in the app <span class='mk sur'>▲</span></td><td>not your fault if before 04:00 &#8212; or use cash</td></tr>
+    <tr><td>Machine will not resolve it <span class='mk est'>●</span></td><td>staffed window beside the gates</td></tr>
+  </table>
+</div>
+
+<div class="ledger">
+  <div class="lcap">At the bath</div>
+  <table>
+    <tr><th>Situation</th><th>Do this</th></tr>
+    <tr><td>Before entering the water <span class='mk est'>●</span></td><td>wash fully, seated, at a station</td></tr>
+    <tr><td>The small towel <span class='mk est'>●</span></td><td>never in the water</td></tr>
+    <tr><td>Tattoos <span class='mk est'>●</span></td><td>private bath, arranged beforehand</td></tr>
+  </table>
+</div>
+
+<div class="ledger">
+  <div class="lcap">At the table</div>
+  <table>
+    <tr><th>Situation</th><th>Do this</th></tr>
+    <tr><td>Tipping <span class='mk est'>●</span></td><td>never, anywhere &#8212; it is not a kindness</td></tr>
+    <tr><td>Paying <span class='mk est'>●</span></td><td>the small tray, not into the hand</td></tr>
+    <tr><td>A counter with no English <span class='mk est'>●</span></td><td>point, and order what the person beside you has</td></tr>
+    <tr><td>You are hungry and it is late <span class='mk est'>●</span></td><td>konbini &#8212; very good, about &#165;500</td></tr>
+  </table>
+</div><div class="endmark">&#9670;</div></section><section class="chap" id="the-rule-that-outlives-the-list"><div class="opener"><div class="okind">Eating</div><h1>The rule that outlives the list</h1><div class="orule"></div></div><span class="rh-src">The rule that outlives the list</span><span class="pos-src">Eating</span><p class="standfirst">Japan is the hardest country in the world to eat badly in, and the easiest to eat mediocrely in — by trying too hard.</p><p class="lede">Every guide to Japan opens its food chapter with names. The names are the part
+that expires: the chef moves, the queue arrives, the lease ends, and a list assembled in one
+spring is quietly wrong by the next. What does not expire is the structure of eating here
+&#8212; which kinds of places exist, what each is for, and how you get into them &#8212; and
+that structure is unusually legible once someone draws it for you.</p>
+
+<h2>The four layers</h2>
+
+<p>Japanese eating stacks into four layers that operate on completely different rules, and
+most first-timers only know about the top one.</p>
+
+<div class="ledger">
+  <div class="lcap">What each layer is for</div>
+  <table>
+    <tr><th>Layer</th><th>How you get in</th></tr>
+    <tr><td>The destination restaurant <span class='mk est'>●</span></td><td>booked, often months, sometimes impossible</td></tr>
+    <tr><td>The counter &#8212; ramen, sushi, tempura <span class='mk est'>●</span></td><td>walk in, often a ticket machine</td></tr>
+    <tr><td>The izakaya <span class='mk est'>●</span></td><td>walk in, small plates, drinking</td></tr>
+    <tr><td>Depachika and konbini <span class='mk est'>●</span></td><td>no booking, no language, no wait</td></tr>
+  </table>
+</div>
+
+<p>The counter layer is where a first trip&#8217;s best meals almost always happen, and it is
+the one the planning instinct skips because it cannot be booked from Ohio in February. A ramen
+shop with a vending machine at the door is not a downgrade from a restaurant &#8212; it is the
+form the cuisine takes at its most serious, and the machine exists because the cook would
+rather be cooking than taking your order. <span class='mk est'>●</span></p>
+
+<h2>Ordering when you cannot read the menu</h2>
+
+<p>This is the anxiety that keeps people in hotel restaurants, and it dissolves faster than
+anyone expects. Ticket machines have photographs, and increasingly an English button. Plastic
+food models in the window are a genuine ordering system, not a curiosity &#8212; you may point
+at one. Many counters serve one thing, so sitting down is most of the order. And the reliable
+fallback everywhere is to look at what the person beside you is eating and indicate that you
+would like the same. <span class='mk est'>●</span></p>
+
+<p>Slurping noodles is normal and faintly encouraged. Tipping is not done anywhere in the
+country, and leaving money on a table causes confusion rather than pleasure. <span class='mk est'>●</span> Payment
+usually goes onto a small tray at the register rather than into a hand.</p>
+
+<h2>What to book</h2>
+
+<p>Two meals for a fortnight is the right order of magnitude &#8212; the one or two evenings
+you would be genuinely sorry to miss, and nothing else. A kaiseki dinner, a specific sushi
+counter, the ryokan meal that comes with the room: those are worth the calendar. Everything
+else is better found than scheduled, because the upside is concentrated in exactly the places
+that do not take a reservation from abroad, and a restaurant that eagerly accepts foreign
+bookings months out is telling you something about who its customers are. <span class='mk est'>●</span></p>
+
+<p>The failure mode here is not hunger. It is spending an extraordinary food country executing
+a spreadsheet, and arriving home having eaten well but never once walked into somewhere
+because it smelled good.</p><div class="endmark">&#9670;</div></section><section class="chap" id="where-it-leaks"><div class="opener"><div class="okind">Money</div><h1>Where it leaks</h1><div class="orule"></div></div><span class="rh-src">Where it leaks</span><span class="pos-src">Money</span><p class="standfirst">Japan is not an extractive destination. What it has instead is a handful of small, avoidable leaks.</p><p class="lede">It is worth saying plainly, because it contradicts the reflex an American
+brings from other famous destinations: nobody in Japan is trying to take your money. There is
+no tipping, no haggling, no dual-pricing, no menu with a different number for you, and the
+scams that organise a trip to certain other capitals essentially do not feature. <span class='mk est'>●</span> The
+corpus behind this book contains almost no warnings of that kind, which is itself the finding.</p>
+
+<p>What exists instead is leakage: money that goes nowhere useful because of a decision made
+early and never revisited.</p>
+
+<div class="ledger">
+  <div class="lcap">The four leaks, largest first</div>
+  <table>
+    <tr><th>Leak</th><th>Where it is dealt with</th></tr>
+    <tr><td>A rail pass on a route that does not need one <span class='mk off'>◇</span></td><td>Decision 02</td></tr>
+    <tr><td>Peak-season rooms bought for a probability <span class='mk est'>●</span></td><td>Decision 04</td></tr>
+    <tr><td>A ryokan judged on its rate rather than its inclusions <span class='mk est'>●</span></td><td>Decision 06</td></tr>
+    <tr><td>A bigger room further out, paid for in daily transfers <span class='mk est'>●</span></td><td>Where to stay</td></tr>
+  </table>
+</div>
+
+<h2>Cash, still</h2>
+
+<p>Cards are widely accepted in the places a first trip spends most of its money, and the
+country has moved a long way toward contactless. The exceptions are specific and worth
+knowing: smaller and older restaurants, market stalls, temple and shrine entry fees and
+charms, and rural businesses are still commonly cash-only. <span class='mk est'>●</span> Carrying a modest amount of
+cash removes the problem entirely, and the stored balance on a transit card covers a
+surprising share of the small purchases besides.</p>
+
+<h2>One administrative note</h2>
+
+<p>Tax-free shopping registration through the government&#8217;s pre-arrival web service has
+been changing, and the separate registration step it used to offer is being retired. <span class='mk off'>◇</span>
+This is exactly the class of fact that belongs on the Field Sheet rather than in a book: check
+the current process close to departure rather than trusting any printed description of it,
+including this one.</p><div class="endmark">&#9670;</div></section><section class="chap dec" id="dec-01"><div class="opener"><div class="onum">01</div><div class="okind">Route</div><h1>What does a day trip cost you?</h1><div class="orule"></div></div><span class="rh-src">Route — What does a day trip cost you?</span><span class="pos-src">Decision 01 of 08</span><p class="lede">Nobody plans a trip to Japan by deciding how many days <em>not</em> to spend in Tokyo. Yet that is the decision a day trip makes, and it is made by accretion — Hakone because of the Fuji view, Nara because of the deer, Nikko because it was on a list — until a five-day trip built around two cities has barely two days left standing in either of them.</p><figure id="fig-days-ledger"><svg viewBox="0 0 652 224" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace"><rect width="652" height="224" fill="#F5EFE1"/><text x="172" y="18" font-size="8" fill="#1B3670" letter-spacing="1.6">DAYS IN THE CITIES YOU FLEW FOR</text><text x="630" y="18" font-size="8" fill="#8A8E97" letter-spacing="1.6" text-anchor="end">DAYS SPENT TRAVELLING OUT</text><text x="0" y="50.0" font-size="10" fill="#242A33">5 days, no day trips</text><rect x="172" y="34.0" width="183.2" height="20" fill="#1B3670" opacity="0.86"/><rect x="355.2" y="34.0" width="0.0" height="20" fill="#C87F94" opacity="0.8"/><text x="349.2" y="48.0" font-size="9.5" fill="#F5EFE1" text-anchor="end">4</text><text x="0" y="90.0" font-size="10" fill="#242A33">5 days, one day trip</text><rect x="172" y="74.0" width="137.4" height="20" fill="#1B3670" opacity="0.86"/><rect x="309.4" y="74.0" width="45.8" height="20" fill="#C87F94" opacity="0.8"/><text x="303.4" y="88.0" font-size="9.5" fill="#F5EFE1" text-anchor="end">3</text><text x="349.2" y="88.0" font-size="9.5" fill="#F5EFE1" text-anchor="end">1</text><text x="0" y="130.0" font-size="10" fill="#242A33">5 days, three day trips</text><rect x="172" y="114.0" width="91.6" height="20" fill="#1B3670" opacity="0.86"/><rect x="263.6" y="114.0" width="137.4" height="20" fill="#C87F94" opacity="0.8"/><text x="257.6" y="128.0" font-size="9.5" fill="#F5EFE1" text-anchor="end">2</text><text x="395.0" y="128.0" font-size="9.5" fill="#F5EFE1" text-anchor="end">3</text><text x="0" y="170.0" font-size="10" fill="#242A33">10 days, two day trips</text><rect x="172" y="154.0" width="320.6" height="20" fill="#1B3670" opacity="0.86"/><rect x="492.6" y="154.0" width="91.6" height="20" fill="#C87F94" opacity="0.8"/><text x="486.6" y="168.0" font-size="9.5" fill="#F5EFE1" text-anchor="end">7</text><text x="578.2" y="168.0" font-size="9.5" fill="#F5EFE1" text-anchor="end">2</text></svg><figcaption><span class="fnum">FIG.4</span> &nbsp;What a day trip subtracts from the cities you flew for.</figcaption></figure><div class="ledger"><div class="lcap">Where the days go · five-day Tokyo + Kyoto trip</div><table><tr><th>DAYS OUT</th><th style="text-align:right">DAYS LEFT IN THE CITY</th></tr><tr><td>5 days, no day trips <span class='mk est'>●</span></td><td>4 full days in the two cities</td></tr><tr><td>5 days, one day trip <span class='mk est'>●</span></td><td>3 full days in the two cities</td></tr><tr><td>5 days, three day trips <span class='mk est'>●</span></td><td>barely 2 days in the two cities</td></tr><tr><td>10 days, two day trips <span class='mk est'>●</span></td><td>6–7 full days in the two cities</td></tr></table></div><div class="verdict"><span class="vlab">The call</span><p><strong>Under a week, take none. At ten days, take two.</strong> A day trip is not an addition to the trip, it is a substitution: the Shinkansen to Hakone and back is three hours of daylight before you have looked at anything. The test is not whether the destination is worth seeing — they all are — but whether you would rather spend that day somewhere new or spend it getting better at the city you already chose. First-timers reliably answer that question wrong in the planning and right in hindsight.</p></div><div class="forks"><div class="fork f"><b>When the other call is right</b><ul><li>then take it → ten days or more, and the second city already has its three full days</li><li>then take it → the day trip <em>is</em> the thing you came for (Fuji, the deer, Miyajima)</li><li>then take it → your base is Kyoto and the trip is Nara, which is forty minutes</li></ul></div><div class="fork a"><b>When ours is wrong for you</b><ul><li>then skip it → five days or fewer, whatever the blogs stack into them</li><li>then skip it → it is your first two days and you are still jet-lagged</li><li>then skip it → you are moving hotels the next morning anyway</li></ul></div></div><div class="note"><span class='mk est'>●</span> Nara from Kyoto is the one day trip that survives a short trip, because the round trip is under ninety minutes of travel and it runs on local lines you are already paying for.</div><div class="endmark">&#9670;</div></section><section class="chap dec" id="dec-02"><div class="opener"><div class="onum">02</div><div class="okind">Rail</div><h1>Does the national rail pass pay for itself?</h1><div class="orule"></div></div><span class="rh-src">Rail — Does the national rail pass pay for itself?</span><span class="pos-src">Decision 02 of 08</span><p class="lede">For twenty years the Japan Rail Pass was the first thing an American bought and the advice was sound. In October 2023 the seven-day ordinary pass went from about ¥29,650 to ¥50,000 — a rise of roughly seventy per cent in one step — and a great deal of the English-language internet has never been revised. The pass did not merely get more expensive. It stopped being the default answer.</p><figure id="fig-breakeven"><svg viewBox="0 0 652 300" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace"><rect width="652" height="300" fill="#F5EFE1"/><line x1="58" y1="254.0" x2="630" y2="254.0" stroke="#E1D7C2" stroke-width="1"/><text x="50" y="257.0" font-size="8.5" fill="#5C6068" text-anchor="end">&#165;0k</text><line x1="58" y1="215.7" x2="630" y2="215.7" stroke="#E1D7C2" stroke-width="1"/><text x="50" y="218.7" font-size="8.5" fill="#5C6068" text-anchor="end">&#165;15k</text><line x1="58" y1="177.3" x2="630" y2="177.3" stroke="#E1D7C2" stroke-width="1"/><text x="50" y="180.3" font-size="8.5" fill="#5C6068" text-anchor="end">&#165;30k</text><line x1="58" y1="139.0" x2="630" y2="139.0" stroke="#E1D7C2" stroke-width="1"/><text x="50" y="142.0" font-size="8.5" fill="#5C6068" text-anchor="end">&#165;45k</text><line x1="58" y1="100.7" x2="630" y2="100.7" stroke="#E1D7C2" stroke-width="1"/><text x="50" y="103.7" font-size="8.5" fill="#5C6068" text-anchor="end">&#165;60k</text><line x1="58" y1="62.3" x2="630" y2="62.3" stroke="#E1D7C2" stroke-width="1"/><text x="50" y="65.3" font-size="8.5" fill="#5C6068" text-anchor="end">&#165;75k</text><line x1="58" y1="24.0" x2="630" y2="24.0" stroke="#E1D7C2" stroke-width="1"/><text x="50" y="27.0" font-size="8.5" fill="#5C6068" text-anchor="end">&#165;90k</text><text x="58.0" y="270" font-size="8.5" fill="#5C6068" text-anchor="middle">0</text><text x="153.3" y="270" font-size="8.5" fill="#5C6068" text-anchor="middle">1</text><text x="248.7" y="270" font-size="8.5" fill="#5C6068" text-anchor="middle">2</text><text x="344.0" y="270" font-size="8.5" fill="#5C6068" text-anchor="middle">3</text><text x="439.3" y="270" font-size="8.5" fill="#5C6068" text-anchor="middle">4</text><text x="534.7" y="270" font-size="8.5" fill="#5C6068" text-anchor="middle">5</text><text x="630.0" y="270" font-size="8.5" fill="#5C6068" text-anchor="middle">6</text><text x="344.0" y="287" font-size="8" fill="#8A8E97" text-anchor="middle" letter-spacing="1.6">LONG JOURNEYS IN A SEVEN-DAY WINDOW</text><line x1="58" y1="126.2" x2="630" y2="126.2" stroke="#B89547" stroke-width="2.2"/><text x="626" y="119.2" font-size="8.5" fill="#B89547" text-anchor="end" letter-spacing="1.2">THE PASS &#8212; &#165;50,000 FLAT</text><polyline points="58.0,254.0 153.3,218.6 248.7,183.2 344.0,147.8 439.3,112.4 534.7,77.0 630.0,41.6" fill="none" stroke="#1B3670" stroke-width="2.2"/><circle cx="58.0" cy="254.0" r="2.6" fill="#1B3670"/><circle cx="153.3" cy="218.6" r="2.6" fill="#1B3670"/><circle cx="248.7" cy="183.2" r="2.6" fill="#1B3670"/><circle cx="344.0" cy="147.8" r="2.6" fill="#1B3670"/><circle cx="439.3" cy="112.4" r="2.6" fill="#1B3670"/><circle cx="534.7" cy="77.0" r="2.6" fill="#1B3670"/><circle cx="630.0" cy="41.6" r="2.6" fill="#1B3670"/><text x="549.0" y="68.0" font-size="8.5" fill="#1B3670" letter-spacing="1.2">PAY PER JOURNEY</text><line x1="402.2" y1="24" x2="402.2" y2="254" stroke="#242A33" stroke-width="1" stroke-dasharray="3 3"/><circle cx="402.2" cy="126.2" r="4.4" fill="#F5EFE1" stroke="#242A33" stroke-width="1.6"/><text x="409.2" y="37" font-size="9" fill="#242A33" letter-spacing="1.2">BREAK-EVEN &#8776; 3.6</text><rect x="58.0" y="24" width="190.7" height="230" fill="#1B3670" opacity="0.055"/><text x="153.3" y="245" font-size="8.5" fill="#1B3670" text-anchor="middle" letter-spacing="1.2">THE CLASSIC FIRST TRIP</text></svg><figcaption><span class="fnum">FIG.5</span> &nbsp;The break-even, drawn. Pay-as-you-go against the flat pass price.</figcaption></figure><div class="ledger"><div class="lcap">The break-even, in legs · seven-day ordinary pass</div><table><tr><th>LONG LEGS</th><th style="text-align:right">WHAT YOU PAY</th></tr><tr><td>one long leg — Tokyo → Kyoto, then fly home <span class='mk off'>◇</span></td><td>about ¥13,850</td></tr><tr><td>two long legs — the classic first trip <span class='mk off'>◇</span></td><td>about ¥27,700</td></tr><tr><td>four long legs — what the pass needs <span class='mk est'>●</span></td><td>about ¥55,400</td></tr><tr><td>the seven-day ordinary pass <span class='mk off'>◇</span></td><td>¥50,000</td></tr></table></div><div class="verdict"><span class="vlab">The call</span><p><strong>Count your long journeys before you buy, not after.</strong> Divide the pass price by a Tokyo–Kyoto fare and it needs roughly four legs of that distance to break even — about two round trips inside seven days. The classic first trip makes two. The deeper cost is not the ¥50,000: it is that a pass already paid for quietly argues for more legs, and the route bends to justify the purchase instead of the purchase following the route.</p></div><div class="forks"><div class="fork f"><b>When the other call is right</b><ul><li>then buy it → the route reaches Hiroshima or returns north through the mountains</li><li>then buy it → four or more long legs inside a single seven-day window</li><li>then buy it → you want unlimited spontaneity more than you want ¥20,000</li></ul></div><div class="fork a"><b>When ours is wrong for you</b><ul><li>then skip it → Tokyo, Kyoto, home (the shape most first trips take)</li><li>then skip it → your long legs are spread across twelve days, not seven</li><li>then skip it → a regional pass covers the one area you move around in</li></ul></div></div><div class="note"><span class='mk vol'>◆</span> Field Sheet. Pass prices, the Tokyo–Kyoto fare, and the 1 October 2026 rise that hits overseas-agency purchases but not the official site. Re-run the division; the method outlives every number in it.</div><div class="endmark">&#9670;</div></section><section class="chap dec" id="dec-03"><div class="opener"><div class="onum">03</div><div class="okind">Transit</div><h1>Which card will load on an American phone?</h1><div class="orule"></div></div><span class="rh-src">Transit — Which card will load on an American phone?</span><span class="pos-src">Decision 03 of 08</span><p class="lede">Japanese city transit offers three ways to pay and most visitors default to whichever one they read about first. That is a survivable mistake. The unsurvivable one is arriving with a phone that cannot top itself up, discovering it at a Shinjuku gate at nine in the morning, and losing the first afternoon to a problem that takes four minutes to solve on your own sofa.</p><div class="ledger"><div class="lcap">Topping up a mobile Suica in Apple Wallet · US-issued cards</div><table><tr><th>CARD</th><th style="text-align:right">WILL IT LOAD</th></tr><tr><td>US-issued Visa <span class='mk sur'>▲</span></td><td>refused — the common failure</td></tr><tr><td>US-issued Mastercard <span class='mk sur'>▲</span></td><td>works for Suica, not for Pasmo</td></tr><tr><td>US-issued American Express <span class='mk sur'>▲</span></td><td>works</td></tr><tr><td>cash, at any station machine <span class='mk est'>●</span></td><td>always works</td></tr></table></div><div class="verdict"><span class="vlab">The call</span><p><strong>Create the card at home, load it with the card you intend to use, and watch the top-up complete before you fly.</strong> A US Visa is refused inside Apple Wallet while Mastercard and Amex go through, which is not documented anywhere official and produces a meaningless error rather than an explanation. If every card you own is Visa, the answer is not to keep retrying it at the gate: it is a physical card from a station machine, fed cash, which sidesteps the card networks entirely.</p></div><div class="forks"><div class="fork f"><b>When the other call is right</b><ul><li>then use the phone → you hold a Mastercard or Amex and set it up before departure</li><li>then use the phone → Express Mode means you tap without unlocking, even on a flat battery</li></ul></div><div class="fork a"><b>When ours is wrong for you</b><ul><li>then carry plastic → Visa-only, or an Android handset bought outside Japan</li><li>then carry plastic → you would rather feed a machine ¥3,000 than debug a wallet</li></ul></div></div><div class="note"><span class='mk vol'>◆</span> Field Sheet. Which networks load, the nightly maintenance window that fails every card until about 04:00, and the physical-card deposit. The Visa behaviour rests on user reports, not an official statement — date it and re-check.</div><div class="endmark">&#9670;</div></section><section class="chap dec" id="dec-04"><div class="opener"><div class="onum">04</div><div class="okind">Season</div><h1>When should you come, and what does the date cost?</h1><div class="orule"></div></div><span class="rh-src">Season — When should you come, and what does the date cost?</span><span class="pos-src">Decision 04 of 08</span><p class="lede">Cherry blossom is the reason most people first think about Japan and the worst single week to build a plan around. The bloom holds for roughly a week in any one city, the forecast that predicts it does not exist until February, and the rooms you would need were gone in October. You are asked to commit six months before anyone can tell you whether the thing you are committing to will be there.</p><div class="ledger"><div class="lcap">The four windows · what each one demands</div><table><tr><th>WINDOW</th><th style="text-align:right">WHAT IT ASKS OF YOU</th></tr><tr><td>late March – early April, bloom <span class='mk est'>●</span></td><td>book ~6 months out, on faith</td></tr><tr><td>late April – early May, Golden Week <span class='mk off'>◇</span></td><td>avoid moving cities entirely</td></tr><tr><td>second half of November, foliage <span class='mk est'>●</span></td><td>book 2–3 months out, colour holds weeks</td></tr><tr><td>January – February, low season <span class='mk est'>●</span></td><td>book weeks out, sites near-empty</td></tr></table></div><div class="verdict"><span class="vlab">The call</span><p><strong>If the dates are yours to choose, take late November.</strong> Autumn colour lasts weeks rather than days, the weather is settled, the booking lead is a third of spring's, and you are not paying peak prices for a probability. Cherry blossom is worth the gamble on a second trip, when the cities themselves are no longer new and losing the flowers costs you an image rather than the trip. Choose the season deliberately; it decides the booking deadline, which decides everything downstream of it.</p></div><div class="forks"><div class="fork f"><b>When the other call is right</b><ul><li>then come in spring → the blossom <em>is</em> the trip and you accept the odds</li><li>then come in spring → you can book cancellable and move within a fortnight</li></ul></div><div class="fork a"><b>When ours is wrong for you</b><ul><li>then move the dates → Golden Week or mid-August Obon, if the plan involves moving cities</li><li>then move the dates → you want the famous gardens without the compressed crowds</li></ul></div></div><div class="note"><span class='mk off'>◇</span> Golden Week is built from four fixed holidays between 29 April and 5 May, but the substitute-holiday rule changes the length of the run every year. Never freeze one year's dates into a plan — check the calendar for yours.</div><div class="endmark">&#9670;</div></section><section class="chap dec" id="dec-05"><div class="opener"><div class="onum">05</div><div class="okind">Base</div><h1>Which station should you sleep next to?</h1><div class="orule"></div></div><span class="rh-src">Base — Which station should you sleep next to?</span><span class="pos-src">Decision 05 of 08</span><p class="lede">In a compact European capital the question is which neighbourhood you want to walk out into. Tokyo does not work like that. It is a transit graph before it is a set of neighbourhoods, and the practical question is not which district charms you on a map but which line you will be standing on at eight in the morning and eleven at night.</p><div class="ledger"><div class="lcap">Tokyo bases · what each one is for</div><table><tr><th>AREA</th><th style="text-align:right">WHAT THE LOCATION BUYS</th></tr><tr><td>Shinjuku <span class='mk est'>●</span></td><td>most connections, least calm</td></tr><tr><td>Tokyo Station / Marunouchi <span class='mk est'>●</span></td><td>Shinkansen at the door, quiet at night</td></tr><tr><td>Shibuya <span class='mk est'>●</span></td><td>nightlife and the Yamanote line</td></tr><tr><td>Asakusa <span class='mk est'>●</span></td><td>cheapest, oldest, furthest from the rest</td></tr></table></div><div class="verdict"><span class="vlab">The call</span><p><strong>Sleep on the Yamanote loop, and in Kyoto ignore the subway entirely.</strong> Almost everything a first trip does in Tokyo touches the Yamanote line, so a room within a few minutes of any of its stations removes a daily tax you would otherwise pay in transfers. Kyoto inverts the logic: it is a bus city with two subway lines that do not go where the temples are, so proximity to a major bus corridor beats proximity to a station.</p></div><div class="forks"><div class="fork f"><b>When the other call is right</b><ul><li>then take Shinjuku → you want one station to solve every journey and do not mind the scale</li><li>then take Marunouchi → you are taking the Shinkansen and value a quiet evening</li></ul></div><div class="fork a"><b>When ours is wrong for you</b><ul><li>then look again → the room is cheap because it is three transfers from the loop</li><li>then look again → you picked a Kyoto hotel by subway access and will be taking buses</li></ul></div></div><div class="note"><span class='mk est'>●</span> In Kyoto the practical unit is the bus corridor, not the station; a hotel near Shijo or Kawaramachi reaches the eastern temples without a transfer.</div><div class="endmark">&#9670;</div></section><section class="chap dec" id="dec-06"><div class="opener"><div class="onum">06</div><div class="okind">Sleep</div><h1>Is the ryokan worth it, and where should it be?</h1><div class="orule"></div></div><span class="rh-src">Sleep — Is the ryokan worth it, and where should it be?</span><span class="pos-src">Decision 06 of 08</span><p class="lede">The ryokan is the one night of a Japan trip people describe years later, and it is also the one most often booked in the wrong city, on the wrong night, at a price the traveller never quite compares to anything. It is not a hotel with tatami. It is dinner, breakfast, a bath and a room sold as a single evening, which makes the nightly rate the wrong number to judge it by.</p><div class="ledger"><div class="lcap">What the rate covers</div><table><tr><th>NIGHT</th><th style="text-align:right">WHAT IS INCLUDED</th></tr><tr><td>business hotel, city centre <span class='mk est'>●</span></td><td>room only</td></tr><tr><td>ryokan, half board <span class='mk est'>●</span></td><td>room + kaiseki dinner + breakfast + bath</td></tr><tr><td>the comparison people make <span class='mk est'>●</span></td><td>rate vs rate — wrong</td></tr><tr><td>the comparison to make <span class='mk est'>●</span></td><td>rate vs room + two meals out</td></tr></table></div><div class="verdict"><span class="vlab">The call</span><p><strong>One night, in an onsen town, not in Kyoto.</strong> A ryokan works when the building and the bath <em>are</em> the evening — which means arriving by mid-afternoon and going nowhere afterwards. That is a poor fit for Kyoto, where the evening is the city itself, and an excellent fit for Hakone, Kinosaki or the Japan Sea side. Price it against a hotel room plus two restaurant meals and the premium shrinks to something defensible.</p></div><div class="forks"><div class="fork f"><b>When the other call is right</b><ul><li>then book it → you can arrive by 15:00 and have nothing else scheduled that evening</li><li>then book it → winter, when the outdoor bath is the entire argument</li></ul></div><div class="fork a"><b>When ours is wrong for you</b><ul><li>then skip it → it is your Kyoto night and you wanted to eat in Gion</li><li>then skip it → you have visible tattoos and have not checked that specific bath's rule</li></ul></div></div><div class="note"><span class='mk est'>●</span> Tattoo policy is set per property and is still commonly enforced at public baths. Many ryokan solve it with a private or in-room bath — ask before booking, not on arrival.</div><div class="endmark">&#9670;</div></section><section class="chap dec" id="dec-07"><div class="opener"><div class="onum">07</div><div class="okind">Eating</div><h1>How do you eat well without a reservation system you can use?</h1><div class="orule"></div></div><span class="rh-src">Eating — How do you eat well without a reservation system you can use?</span><span class="pos-src">Decision 07 of 08</span><p class="lede">First-timers over-plan meals the way they over-plan sights, researching a specific restaurant for every slot on the itinerary — and in Japan that effort converts badly. The best places are small, often unlisted, frequently unbookable from abroad, and the ones that <em>are</em> bookable from abroad are disproportionately the ones that market to foreigners. Planning harder makes the food worse.</p><div class="ledger"><div class="lcap">Four ways to eat, and what each delivers</div><table><tr><th>APPROACH</th><th style="text-align:right">WHAT IT COSTS YOU</th></tr><tr><td>researched restaurant, booked from the US <span class='mk est'>●</span></td><td>high effort, uneven result</td></tr><tr><td>depachika food hall, ground floor <span class='mk est'>●</span></td><td>no booking, excellent, cheap</td></tr><tr><td>counter seat, walk in at opening <span class='mk est'>●</span></td><td>no booking, the real thing</td></tr><tr><td>konbini, between meals <span class='mk est'>●</span></td><td>very good, ¥500</td></tr></table></div><div class="verdict"><span class="vlab">The call</span><p><strong>Book two meals for the whole trip and let the rest happen.</strong> Reserve the one or two dinners you would be sad to miss and leave every other slot open, because the upside in Japan sits at counters you cannot book and department-store basements no guide sends you to. The failure mode here is not eating badly — it is hard to eat badly — it is spending the trip executing a spreadsheet through a country that rewards walking in.</p></div><div class="forks"><div class="fork f"><b>When the other call is right</b><ul><li>then book ahead → a specific sushi counter or kaiseki room is a reason you came</li><li>then book ahead → a birthday, an anniversary, anything that cannot be improvised</li></ul></div><div class="fork a"><b>When ours is wrong for you</b><ul><li>then leave it open → you are filling slots because they are empty</li><li>then leave it open → the restaurant takes foreign bookings easily (ask why)</li></ul></div></div><div class="note"><span class='mk est'>●</span> Department-store basements — the depachika — take no booking, cost nothing to walk into, and carry prepared food of a standard that would be a destination restaurant elsewhere. It is the most reliable good meal in any Japanese city and almost no first-timer is sent there.</div><div class="endmark">&#9670;</div></section><section class="chap dec" id="dec-08"><div class="opener"><div class="onum">08</div><div class="okind">Arrival</div><h1>Which airport, and what happens in the first six hours?</h1><div class="orule"></div></div><span class="rh-src">Arrival — Which airport, and what happens in the first six hours?</span><span class="pos-src">Decision 08 of 08</span><p class="lede">The airport looks like a price decision and behaves like an itinerary decision. Narita and Haneda are both fine airports with good transfers; the difference is what each one does to the evening you land, and a first evening lost to a ninety-minute train after eleven hours in the air is a real cost that never appears in the fare comparison.</p><figure id="fig-arrival"><svg viewBox="0 0 652 226" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Mono',monospace"><rect width="652" height="226" fill="#F5EFE1"/><line x1="140.9" y1="32" x2="140.9" y2="186" stroke="#E1D7C2"/><text x="140.9" y="26" font-size="8.5" fill="#5C6068" text-anchor="middle">13:00</text><line x1="287.6" y1="32" x2="287.6" y2="186" stroke="#E1D7C2"/><text x="287.6" y="26" font-size="8.5" fill="#5C6068" text-anchor="middle">16:00</text><line x1="434.4" y1="32" x2="434.4" y2="186" stroke="#E1D7C2"/><text x="434.4" y="26" font-size="8.5" fill="#5C6068" text-anchor="middle">19:00</text><line x1="581.1" y1="32" x2="581.1" y2="186" stroke="#E1D7C2"/><text x="581.1" y="26" font-size="8.5" fill="#5C6068" text-anchor="middle">22:00</text><text x="0" y="79.0" font-size="10" fill="#242A33">HANEDA</text><text x="0" y="92.0" font-size="8" fill="#8A8E97">~30 min in</text><rect x="120.9" y="64.0" width="40.1" height="20.0" fill="#1B3670" opacity="0.8"/><rect x="169.8" y="66.5" width="40.1" height="17.5" fill="#1B3670" opacity="0.8"/><rect x="218.7" y="69.0" width="40.1" height="15.0" fill="#1B3670" opacity="0.8"/><rect x="267.6" y="71.5" width="40.1" height="12.5" fill="#1B3670" opacity="0.8"/><rect x="316.5" y="74.0" width="40.1" height="10.0" fill="#1B3670" opacity="0.8"/><rect x="365.4" y="76.5" width="40.1" height="7.5" fill="#1B3670" opacity="0.8"/><rect x="414.3" y="79.0" width="40.1" height="5.0" fill="#1B3670" opacity="0.8"/><rect x="463.2" y="81.5" width="40.1" height="2.5" fill="#1B3670" opacity="0.8"/><text x="0" y="131.0" font-size="10" fill="#242A33">NARITA</text><text x="0" y="144.0" font-size="8" fill="#8A8E97">~60&#8211;90 min in</text><rect x="120.9" y="117.5" width="40.1" height="18.5" fill="#B89547" opacity="0.8"/><rect x="169.8" y="120.0" width="40.1" height="16.0" fill="#B89547" opacity="0.8"/><rect x="218.7" y="122.5" width="40.1" height="13.5" fill="#B89547" opacity="0.8"/><rect x="267.6" y="125.0" width="40.1" height="11.0" fill="#B89547" opacity="0.8"/><rect x="316.5" y="127.5" width="40.1" height="8.5" fill="#B89547" opacity="0.8"/><rect x="365.4" y="130.0" width="40.1" height="6.0" fill="#B89547" opacity="0.8"/><rect x="414.3" y="132.5" width="40.1" height="3.5" fill="#B89547" opacity="0.8"/><rect x="463.2" y="135.0" width="40.1" height="1.0" fill="#B89547" opacity="0.8"/><text x="0" y="212" font-size="8" fill="#8A8E97" letter-spacing="1.5">BAR HEIGHT = USABLE EVENING LEFT AFTER THE TRANSFER &#183; LANDING TIME OUTRANKS AIRPORT</text></svg><figcaption><span class="fnum">FIG.6</span> &nbsp;Usable evening remaining, by airport and landing time.</figcaption></figure><div class="ledger"><div class="lcap">Getting into central Tokyo</div><table><tr><th>AIRPORT</th><th style="text-align:right">INTO THE CITY</th></tr><tr><td>Haneda <span class='mk est'>●</span></td><td>~30 min, close to the centre</td></tr><tr><td>Narita <span class='mk est'>●</span></td><td>~60–90 min depending on the service</td></tr><tr><td>either, after a 13:00 landing <span class='mk est'>●</span></td><td>you get an evening</td></tr><tr><td>either, after a 20:00 landing <span class='mk est'>●</span></td><td>you get a hotel bed</td></tr></table></div><div class="verdict"><span class="vlab">The call</span><p><strong>Pay a modest premium for Haneda, and pay more attention to the landing time.</strong> Haneda is meaningfully closer and worth a small fare difference, but the variable that decides your first day is when the wheels touch — an early afternoon landing at Narita beats a late-evening landing at Haneda every time. Set the transit card up before you fly and the first hour on the ground is a train, not a queue at a machine you are too tired to read.</p></div><div class="forks"><div class="fork f"><b>When the other call is right</b><ul><li>then take Haneda → the fares are within a couple of hundred dollars</li><li>then take Haneda → you land late and want the shortest possible transfer</li></ul></div><div class="fork a"><b>When ours is wrong for you</b><ul><li>then take Narita → the saving is real and you land before mid-afternoon</li><li>then take Narita → the schedule fits the rest of the route better</li></ul></div></div><div class="note"><span class='mk vol'>◆</span> Field Sheet. Airport transfer fares and the limousine-bus timetables. The rule — landing time outranks airport choice — does not move.</div><div class="endmark">&#9670;</div></section><section class="chap" id="what-goes-wrong-by-what-it-costs"><div class="opener"><div class="okind">Failure modes</div><h1>What goes wrong, by what it costs</h1><div class="orule"></div></div><span class="rh-src">What goes wrong, by what it costs</span><span class="pos-src">Failure modes</span><p class="standfirst">Organised by consequence rather than by topic — which is the one thing a website of separate articles cannot do.</p><p class="lede">These are the failures that recur, sorted by what they take from you. A
+website answers them one at a time, in the article where each happens to belong. Seeing them
+ranked by cost is a different and more useful thing, because it tells you where to spend your
+limited planning attention.</p>
+
+<h2>Costs you a day</h2>
+
+<div class="ledger">
+  <div class="lcap">The expensive ones</div>
+  <table>
+    <tr><th>What happens</th><th>Where it is answered</th></tr>
+    <tr><td>Transit card cannot be topped up; the morning goes on it <span class='mk sur'>▲</span></td><td>Decision 03</td></tr>
+    <tr><td>Three day trips in a five-day trip; the cities disappear <span class='mk est'>●</span></td><td>Decision 01</td></tr>
+    <tr><td>Moving cities during Golden Week or Obon <span class='mk off'>◇</span></td><td>Decision 04</td></tr>
+    <tr><td>Late-evening landing treated as a usable evening <span class='mk est'>●</span></td><td>Decision 08</td></tr>
+  </table>
+</div>
+
+<h2>Costs you money</h2>
+
+<div class="ledger">
+  <div class="lcap">The avoidable ones</div>
+  <table>
+    <tr><th>What happens</th><th>Where it is answered</th></tr>
+    <tr><td>Rail pass bought on a two-leg route <span class='mk off'>◇</span></td><td>Decision 02</td></tr>
+    <tr><td>Green Car upgrade priced per week, not per journey <span class='mk off'>◇</span></td><td>Decision 02</td></tr>
+    <tr><td>Ryokan rate compared against a room rate <span class='mk est'>●</span></td><td>Decision 06</td></tr>
+    <tr><td>Bloom-season rooms booked at peak for a probability <span class='mk est'>●</span></td><td>Decision 04</td></tr>
+  </table>
+</div>
+
+<h2>Costs you the thing you came for</h2>
+
+<p>The quietest failure has no line item. It is arriving in a country you will probably visit
+once, with a plan assembled from forty open tabs, and spending the fortnight executing it
+rather than being there. Every over-planned meal, every day trip added because it was on a
+list, every hour spent extracting value from a pass is a small subtraction from the trip you
+imagined when you booked. The book is mostly arithmetic because the arithmetic is what buys
+back the attention.</p><div class="endmark">&#9670;</div></section><section class="chap" id="what-this-book-will-not-tell-you"><div class="opener"><div class="okind">Back matter</div><h1>What this book will not tell you</h1><div class="orule"></div></div><span class="rh-src">What this book will not tell you</span><span class="pos-src">Back matter</span><p class="standfirst">The refusals are the product. They are what keeps the rest of it true.</p><p class="lede">Four things this book deliberately does not do. Each is a thing most guides
+lead with, and each is a thing we would have to get wrong in order to include.</p>
+
+<ul class="refuse">
+<li><b>It does not name hotels.</b> We have not slept in them. An assessment of a room we have
+not been in is a repackaged booking-site listing with a confident voice on top, and you can
+read those for free. What the book does instead is tell you which station to sleep near and
+why, which is the part that survives a change of ownership.</li>
+
+<li><b>It does not name restaurants.</b> A list of restaurants is wrong within a season — the
+chef moves, the queue finds it, the lease ends. The rule that generated the list is still
+right in five years, so the book gives you the rule. Decision 07 is that argument in full.</li>
+
+<li><b>It does not print current prices.</b> Prices belong in the Field Sheet, which is dated
+and re-issued. A price set in a book is a claim that stops being true quietly, and the reader
+has no way to tell when it did.</li>
+
+<li><b>It does not republish anyone's ratings.</b> Aggregate scores from the booking platforms
+are contractually and editorially radioactive, and reprinting them would add nothing you
+cannot see for yourself.</li>
+</ul>
+
+<p>There is a fifth refusal that belongs here too, because it shaped this edition: where the
+corpus behind this book was thin on a subject, we left the subject out rather than writing
+around the gap. A chapter assembled to fill a page is detectable, and it devalues the chapters
+that were earned.</p><div class="endmark">&#9670;</div></section><section class="chap" id="the-country-not-the-plan"><div class="opener"><div class="okind">Closing</div><h1>The country, not the plan</h1><div class="orule"></div></div><span class="rh-src">The country, not the plan</span><span class="pos-src">Closing</span><p class="lede">There is a moment, usually on the second or third morning, when the planning
+stops mattering. It tends to arrive somewhere ordinary — a station platform at seven in the
+morning, everyone moving in the same direction without hurry, a vending machine humming, the
+train arriving at the second it said it would. Nothing about it is a sight. It is just a
+country working, at a level of consideration that is difficult to explain to someone who has
+not stood in it.</p>
+
+<p>That is the thing the arithmetic is protecting. Every decision in this book exists to
+subtract a small anxiety from the fortnight so that more of it is available for the parts
+that are not decidable in advance: the walk you took because the light was good, the counter
+with six seats you went into because it was raining, the temple you had entirely to yourself
+at eight in the morning because you were awake and nobody else was.</p>
+
+<p>Work the sums out before you go. Then put the book down and stop optimising — the country
+is better than any plan you can make of it.</p><div class="endmark">&#9670;</div></section><section class="chap fs" id="field-sheet"><div class="opener"><div class="okind">The annex</div><h1>Field Sheet</h1><div class="orule"></div></div><span class="rh-src">Field Sheet</span><span class="pos-src">Field Sheet</span><p class="standfirst">Every volatile figure in one place, dated. When this disagrees with the book, this is right and the book is old.</p><p>Checked September 2026. Rail prices are official and were confirmed against the operator&#8217;s own price page; the 1 October 2026 rise applies to overseas-agency purchases only and not to the official booking site. Re-check before you buy &#8212; the method in Decision 02 outlives every number in this table.</p><table><tr><th>Figure</th><th>Value</th></tr><tr><td>Japan Rail Pass — 7-day ordinary</td><td>&#165;50,000</td></tr><tr><td>Japan Rail Pass — 7-day Green</td><td>&#165;70,000</td></tr><tr><td>Overseas-agency price from 1 Oct 2026 — ordinary</td><td>&#165;53,000</td></tr><tr><td>Overseas-agency price from 1 Oct 2026 — Green</td><td>&#165;74,000</td></tr><tr><td>Tokyo &#8594; Kyoto, reserved ordinary (Hikari)</td><td>about &#165;13,850</td></tr><tr><td>Nozomi supplement, Tokyo &#8594; Kyoto</td><td>about &#165;4,960</td></tr><tr><td>IC card maximum stored balance</td><td>&#165;20,000</td></tr><tr><td>IC card deposit (unregistered, refundable)</td><td>&#165;500</td></tr><tr><td>Tokyo Subway Ticket — 24 / 48 / 72h</td><td>&#165;1,000 / 1,500 / 2,000</td></tr><tr><td>Kyoto Subway &amp; Bus One-Day Pass</td><td>about &#165;1,100</td></tr><tr><td>Welcome Suica validity</td><td>28 days</td></tr></table><div class="endmark">&#9670;</div></section></div></body></html>

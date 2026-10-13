@@ -1,0 +1,220 @@
+{
+ "_README": "Batch 20 facts (D-transit) — reconciled 2026-07-24 from deepseek+grok, rulings in disputes-batch20.md. Merge into thailandforamericans/facts.json.",
+ "_reconciled_from": [
+  "deepseek",
+  "grok",
+  "claude-web-verify"
+ ],
+ "_produced_at": "2026-07-24",
+ "_PANEL_NOTE": "The hardened status warning WORKED. Batch 19: deepseek marked 24/40 verified with only 2 official sources. Batch 20: 9/30 verified, all 9 citing airport authorities (airportthai.co.th), airline pages or .go.th sites. Naming the prior failure numerically in the prompt changed behaviour. Keep that pattern.",
+ "bangkok_airports": {
+  "_note": "Two airports, routinely booked as if they were one place.",
+  "which_carriers_use_which": {
+   "value": "Suvarnabhumi (BKK) handles full-service and most international carriers; Don Mueang (DMK) handles primarily low-cost carriers including much of the domestic network",
+   "source_url": "https://donmueang.airportthai.co.th/service/airport-guide/detail/Airline_Information_DMK",
+   "status": "verified",
+   "notes": "Both agree; DS cited the Don Mueang airport authority."
+  },
+  "distance_km": {
+   "value": "Roughly 50 km by road",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "DS gave 56 km driving / 30 km straight-line; GK gave 38-52. The straight-line figure explains the spread — road distance is what matters and is around 50."
+  },
+  "transfer_time_offpeak": {
+   "value": "45-60 minutes",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree EXACTLY. AOT's own target for the shuttle is about 50 minutes."
+  },
+  "transfer_time_peak": {
+   "value": "90 minutes to 2.5 hours in Bangkok traffic",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "DS 1.5-2.5h, GK 60-90+. Took the wider band — understating this is the failure mode that costs a flight."
+  },
+  "free_shuttle": {
+   "value": "Airports of Thailand runs a free shuttle between the two airports, roughly 05:00 to midnight, taking about 50 minutes in normal traffic and longer in heavy traffic",
+   "source_url": "https://suvarnabhumi.airportthai.co.th/service/airport-guide/detail/Transportation_BKK",
+   "status": "verified",
+   "notes": "Confirmed against the Suvarnabhumi airport authority page."
+  },
+  "shuttle_eligibility": {
+   "value": "The shuttle is exclusively for passengers transferring between the two airports. A boarding pass or e-ticket for an onward flight and a passport must be shown; the general public and non-connecting passengers are not eligible",
+   "source_url": "https://www.thailand.go.th/issue-focus-detail/001_01_090",
+   "status": "verified",
+   "notes": "CRITICAL AND NEITHER MODEL STATED IT PLAINLY. DS said 'requires a same-day flight ticket', GK said only 'for connecting passengers'. The airport authority is explicit that non-connecting passengers cannot use it — so someone overnighting in the city between legs is not eligible."
+  },
+  "shuttle_boarding_points": {
+   "value": "At Suvarnabhumi, Level 2 (arrivals) Gate 3; at Don Mueang, the shuttle counter is inside the terminal near exit 6 and must be checked in at before going out to the stop",
+   "source_url": "https://suvarnabhumi.airportthai.co.th/service/airport-guide/detail/Transportation_BKK",
+   "status": "verified"
+  },
+  "rail_link": {
+   "value": "No direct rail line connects the two airports. The Airport Rail Link serves Suvarnabhumi and the city, not Don Mueang",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "minimum_connection": {
+   "value": "No official minimum is published for connecting between the two airports",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "RULED. DS explicitly says no official minimum exists and offers industry guidance of 4-5 hours; GK gave '3-4 hours recommended' unsourced. The ABSENCE of an official figure is the honest fact — the guidance numbers are NOT written into prose as if authoritative."
+  },
+  "international_to_domestic_steps": {
+   "value": "An arriving international passenger clears immigration, reclaims checked baggage, exits to landside, travels to the other airport, then checks in again from scratch",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. The point is that none of it is airside — it is a full re-entry into the system."
+  }
+ },
+ "domestic_flights": {
+  "main_carriers": {
+   "value": "Thai Airways, Bangkok Airways, Thai AirAsia, Nok Air and Thai Lion Air operate domestic routes",
+   "source_url": "https://donmueang.airportthai.co.th/service/airport-guide/detail/Airline_Information_DMK",
+   "status": "verified",
+   "notes": "Both agree on the list."
+  },
+  "bangkok_to_southern_airports": {
+   "value": "Phuket (HKT), Krabi (KBV), Koh Samui (USM) and Surat Thani (URT) are served from Bangkok",
+   "source_url": "https://donmueang.airportthai.co.th/service/airport-guide/detail/Airline_Information_DMK",
+   "status": "verified",
+   "notes": "Both agree."
+  },
+  "flight_durations": {
+   "value": "Bangkok to Phuket about 1h15; to Koh Samui about 1h; to Chiang Mai about 1h",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "samui_airport": {
+   "value": "Koh Samui airport is privately owned and operated by Bangkok Airways, which limits which carriers serve it",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. Structurally interesting: the island with an air escape has the most constrained air access."
+  },
+  "baggage_allowance_shape": {
+   "value": "Full-service carriers typically include 20-30 kg checked baggage; low-cost carriers commonly sell carry-on-only fares with checked baggage as a paid add-on",
+   "source_url": "https://www.thaiairways.com/en-th/content/baggage/checked-baggage/",
+   "status": "verified",
+   "notes": "Both agree; both cited the carrier's own policy page."
+  },
+  "change_and_cancel": {
+   "value": "Change and cancellation fees vary by fare class and how close to departure the change is made; the cheapest fares are commonly non-refundable",
+   "source_url": "https://content.nokair.com",
+   "status": "verify_recommended",
+   "notes": "DS cited a carrier page but the shape is generic — kept at verify_recommended rather than promoted."
+  },
+  "separately_booked_protection": {
+   "value": "None. A domestic leg booked separately from the international ticket carries no obligation on either airline to rebook or compensate if a delay causes the connection to be missed",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree, emphatically. Already established in batch 17's ferry article — this is the same fact reaching the same conclusion from the air side."
+  },
+  "through_checked_baggage": {
+   "value": "Baggage is through-checked on a single ticket or between codeshare partners; it is not through-checked across separately booked tickets",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. This is the mechanical reason the previous fact bites — bags must be reclaimed and re-checked."
+  },
+  "fare_shape": {
+   "value": null,
+   "source_url": null,
+   "status": "serve_live",
+   "notes": "VOLATILE. Both described hundreds to low thousands of baht one-way. Not frozen."
+  }
+ },
+ "overnight_train": {
+  "routes": {
+   "value": "Overnight sleepers run Bangkok to Chiang Mai in the north and Bangkok toward Surat Thani in the south",
+   "source_url": "https://qa.thailand.go.th",
+   "status": "verified",
+   "notes": "Both agree."
+  },
+  "bangkok_chiang_mai_duration": {
+   "value": "About 12.5 to 13 hours overnight",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "DS gave specific service times (18:40-07:15 and 20:05-08:45); GK gave 12-14h. Converged on the narrower band DS's schedule detail supports."
+  },
+  "bangkok_south_duration": {
+   "value": "About 11 to 13 hours to Surat Thani",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "arrival_times": {
+   "value": "Overnight services typically arrive early in the morning",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. Decision-relevant: it determines whether the following day starts at the destination or is spent recovering."
+  },
+  "class_options": {
+   "value": "First and second class air-conditioned sleepers, with upper and lower berths; fan-cooled options exist on some services",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "booking_lead_time": {
+   "value": "Popular sleeper berths need booking weeks ahead",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree."
+  },
+  "bangkok_station": {
+   "value": "Krung Thep Aphiwat Central Terminal is now the main long-distance station for all directions; Hua Lamphong is no longer the primary long-distance terminus",
+   "source_url": "https://qa.thailand.go.th",
+   "status": "verified",
+   "notes": "DS supplied the Hua Lamphong change, which GK did not. HIGH VALUE — most older guides still name Hua Lamphong, so this is a live staleness trap for anyone planning from an outdated source."
+  },
+  "fare_shape": {
+   "value": null,
+   "source_url": null,
+   "status": "serve_live",
+   "notes": "VOLATILE."
+  }
+ },
+ "southern_airports": {
+  "airports_and_islands": {
+   "value": "Phuket (HKT) and Koh Samui (USM) serve their own islands directly; Krabi (KBV) serves the Krabi and Ao Nang mainland; Surat Thani (URT) is the mainland gateway for the Gulf islands",
+   "source_url": "https://corporatestrategy.airportthai.co.th",
+   "status": "verified",
+   "notes": "Both agree."
+  },
+  "islands_without_airports": {
+   "value": "Koh Phangan, Koh Tao, Koh Lanta and Koh Chang have no airport — all are reached by boat",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. Consistent with batch 17's ferry article and batch 19's evacuation article, which reached the same list from different directions."
+  },
+  "airport_to_pier": {
+   "value": "Reaching the boat-only islands means an onward road transfer from the airport to the relevant pier, then a crossing",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree. The multi-leg structure is the point."
+  },
+  "seasonal_variation": {
+   "value": "Domestic schedules to the southern airports thin out outside high season",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Both agree in shape."
+  },
+  "evening_service": {
+   "value": null,
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "UNSOURCED. Both described it vaguely and neither could confirm last-departure times. NOT written into prose — this is precisely the fact that would determine whether a same-day connection works, and neither model could source it."
+  }
+ },
+ "_open_questions": {
+  "_note": "Carried from both panel members plus verification.",
+  "items": [
+   "Last departure times from the southern airports — decision-relevant and unsourced by both",
+   "Whether any airport or airline publishes an official minimum connection time between BKK and DMK (DS says none exists)",
+   "Current shuttle frequency — sources range from hourly to every 12-30 minutes",
+   "Whether the shuttle accepts a next-day onward ticket or same-day only — sources differ",
+   "Precise Samui airport carrier restrictions"
+  ]
+ }
+}

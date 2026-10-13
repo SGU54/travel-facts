@@ -1,0 +1,23 @@
+# Batch 8 — image manifest (moroccoforamericans)
+
+**15 images: 5 heroes + 10 in-body.** Landscape, ≥1600px, no faces, no brand signage.
+Folder `moroccoforamericans/articles/`, key = filename, no extension.
+URL: `.../cdn-cgi/image/format=auto,width=1200/moroccoforamericans/articles/<key>` (width=1200 REQUIRED).
+
+| # | article | slot | object key | shows | search |
+|---|---|---|---|---|---|
+| 1 | morocco-taxi-fares | hero | `morocco-taxi-fares-hero` | Petit and Grand Taxi Fares in Morocco: What's Actually Fair | [Unsplash](https://unsplash.com/s/photos/petit-taxi-marrakech-street) · [Pexels](https://www.pexels.com/search/petit%20taxi%20marrakech%20street/) |
+| 2 | morocco-taxi-fares | body 1 | `morocco-taxi-fares-1` | A small petit taxi on a Marrakech street, no clear faces, no | [Unsplash](https://unsplash.com/s/photos/petit-taxi-morocco-city) · [Pexels](https://www.pexels.com/search/petit%20taxi%20morocco%20city/) |
+| 3 | morocco-taxi-fares | body 2 | `morocco-taxi-fares-2` | A shared grand taxi (older Mercedes sedan) at a taxi rank, n | [Unsplash](https://unsplash.com/s/photos/grand-taxi-mercedes-morocco-rank) · [Pexels](https://www.pexels.com/search/grand%20taxi%20mercedes%20morocco%20rank/) |
+| 4 | marrakech-airport-to-medina | hero | `marrakech-airport-to-medina-hero` | From Marrakech Airport to the Medina: Every Option Priced | [Unsplash](https://unsplash.com/s/photos/marrakech-menara-airport-taxis) · [Pexels](https://www.pexels.com/search/marrakech%20menara%20airport%20taxis/) |
+| 5 | marrakech-airport-to-medina | body 1 | `marrakech-airport-to-medina-1` | The exterior of Marrakech Menara airport with taxis waiting, | [Unsplash](https://unsplash.com/s/photos/marrakech-airport-exterior-taxis) · [Pexels](https://www.pexels.com/search/marrakech%20airport%20exterior%20taxis/) |
+| 6 | marrakech-airport-to-medina | body 2 | `marrakech-airport-to-medina-2` | A taxi driving toward the Marrakech medina walls, no clear f | [Unsplash](https://unsplash.com/s/photos/taxi-marrakech-medina-walls) · [Pexels](https://www.pexels.com/search/taxi%20marrakech%20medina%20walls/) |
+| 7 | morocco-souk-price-guide | hero | `morocco-souk-price-guide-hero` | What Things Cost in the Souks: A First-Timer's Price Sheet | [Unsplash](https://unsplash.com/s/photos/marrakech-souk-stall-lanterns) · [Pexels](https://www.pexels.com/search/marrakech%20souk%20stall%20lanterns/) |
+| 8 | morocco-souk-price-guide | body 1 | `morocco-souk-price-guide-1` | A colorful Moroccan souk stall with lanterns, textiles and g | [Unsplash](https://unsplash.com/s/photos/moroccan-souk-stall-goods) · [Pexels](https://www.pexels.com/search/moroccan%20souk%20stall%20goods/) |
+| 9 | morocco-souk-price-guide | body 2 | `morocco-souk-price-guide-2` | Moroccan lamps, ceramics and crafts displayed in a souk, no  | [Unsplash](https://unsplash.com/s/photos/moroccan-lamps-ceramics-souk) · [Pexels](https://www.pexels.com/search/moroccan%20lamps%20ceramics%20souk/) |
+| 10 | morocco-trains-oncf | hero | `morocco-trains-oncf-hero` | Trains in Morocco: ONCF Routes, Classes, and Booking | [Unsplash](https://unsplash.com/s/photos/oncf-train-morocco-station) · [Pexels](https://www.pexels.com/search/oncf%20train%20morocco%20station/) |
+| 11 | morocco-trains-oncf | body 1 | `morocco-trains-oncf-1` | A modern ONCF train at a Moroccan station platform, no clear | [Unsplash](https://unsplash.com/s/photos/morocco-train-platform-station) · [Pexels](https://www.pexels.com/search/morocco%20train%20platform%20station/) |
+| 12 | morocco-trains-oncf | body 2 | `morocco-trains-oncf-2` | A train window view of the Moroccan countryside, no faces | [Unsplash](https://unsplash.com/s/photos/morocco-countryside-train-window) · [Pexels](https://www.pexels.com/search/morocco%20countryside%20train%20window/) |
+| 13 | morocco-during-ramadan | hero | `morocco-during-ramadan-hero` | Traveling in Morocco During Ramadan | [Unsplash](https://unsplash.com/s/photos/morocco-ramadan-lanterns-dusk-street) · [Pexels](https://www.pexels.com/search/morocco%20ramadan%20lanterns%20dusk%20street/) |
+| 14 | morocco-during-ramadan | body 1 | `morocco-during-ramadan-1` | A Moroccan street at dusk during Ramadan with lanterns and g | [Unsplash](https://unsplash.com/s/photos/morocco-street-ramadan-evening) · [Pexels](https://www.pexels.com/search/morocco%20street%20ramadan%20evening/) |
+| 15 | morocco-during-ramadan | body 2 | `morocco-during-ramadan-2` | A festive iftar table with Moroccan food and dates at sunset | [Unsplash](https://unsplash.com/s/photos/iftar-table-moroccan-food-dates) · [Pexels](https://www.pexels.com/search/iftar%20table%20moroccan%20food%20dates/) |

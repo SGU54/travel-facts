@@ -1,0 +1,26 @@
+Second gate — batch 19 (barcelonaforamericans)
+Reader: DeepSeek (designated, corrections #5/#6)
+Date: 2026-09-08
+
+STEP 0 — SLUGS SEEN: bringing-spanish-purchases-into-the-us, e-scooters-in-barcelona-rules,
+if-you-have-an-accident-in-spain, spain-insurance-exclusions-activities,
+renting-a-car-in-spain-law-vs-desk
+Canary: PASS (exact match, order matches batch).
+
+DeepSeek worked through several candidate issues in its reasoning and self-retracted all but
+one ("no error", "that matches facts.json", "no finding"). The one it kept:
+
+1. REJECTED — bringing-spanish-purchases-into-the-us / "The one you can't bring home: cured
+   ham" heading vs. the FAQ later naming chorizo and lomo as also restricted. Read as a claim
+   that exactly one grocery item is restricted, contradicted by naming more later.
+   Audit: the heading is a rhetorical framing (ham as the flagship/most iconic example of the
+   restricted category), not a literal "only one item exists" claim. More importantly, the
+   chorizo/lomo generalization is NOT a late surprise sprung only in the FAQ — it's already in
+   the article's body, in the "What this means in practice" bullet list: "Other cured meats
+   follow the same logic — chorizo, lomo and similar pork products from the same restricted
+   region carry the same personal-import limitation." The FAQ merely repeats information
+   already established earlier in the same piece. No factual contradiction; DeepSeek's own
+   rule-6 instruction (check the full article before flagging) should have caught this but
+   didn't this time.
+
+RESULT: 0 real findings. Batch 19 content is clean; no fixes needed.

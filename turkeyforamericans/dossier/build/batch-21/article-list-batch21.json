@@ -1,0 +1,91 @@
+{
+  "schema_version": 4,
+  "project": "turkeyforamericans",
+  "batch": 21,
+  "swamp": "S-money2",
+  "_DOCTRINE": "Report mechanics, never make the call. check-noconnect exit 0 before import. A null fact DELETES its sentence. No drift-prone value in a title, heading or excerpt.",
+  "_WHY": "The DCC call is already spent in the corpus ('Always pay and withdraw in lira, never the offered dollar conversion') and so is the check-current-rates advice, twice. What is untouched is the ARITHMETIC: only 5 sentences in 72 articles touch ATM fee structure, card networks or repricing, and none states a figure or a mechanism.",
+  "_NEW_SWAMP": "Built from scratch, not found in the corpus. Gate it the way S-calendar was gated: if it turns out to be a warning with one right answer rather than a decision with defensible alternatives, it dies and the book runs shorter.",
+  "articles": [
+    {
+      "title": "What a Turkish ATM Withdrawal Actually Costs",
+      "slug": "turkey-atm-withdrawal-real-cost",
+      "category": "money-costs",
+      "swamp": "S-money2",
+      "handoff": "turn",
+      "reports": [
+        "the Turkish bank's own charge for a foreign card withdrawal, and whether it varies by bank",
+        "whether the charge differs by card network on the same machine",
+        "the home bank's foreign ATM fee and how it stacks on top",
+        "the foreign exchange margin as a separate cost from both",
+        "per-withdrawal and per-day limits, and how they interact with the fixed charges"
+      ],
+      "must_not_say": "any version of 'withdraw larger amounts less often' — that is the call, and writing it into a free article is exactly how the Thailand equivalent was destroyed",
+      "images": 2
+    },
+    {
+      "title": "Where Cards Work in Turkey and Where They Don't",
+      "slug": "turkey-card-acceptance-and-cash",
+      "category": "money-costs",
+      "swamp": "S-money2",
+      "handoff": "turn",
+      "reports": [
+        "sectors and settings that are reliably card-accepting",
+        "the cash-only contexts a visitor actually meets",
+        "regional variation between cities, resorts and smaller towns",
+        "contactless and mobile payment availability",
+        "what a card decline typically means in Turkey"
+      ],
+      "must_not_say": "how much cash to carry",
+      "images": 2
+    },
+    {
+      "title": "Turkish Lira, Inflation and Prices That Move",
+      "slug": "turkish-lira-inflation-and-prices",
+      "category": "money-costs",
+      "swamp": "S-money2",
+      "handoff": "turn",
+      "reports": [
+        "how quickly consumer prices reprice in practice",
+        "which prices are quoted in foreign currency and which in lira, and where that is lawful",
+        "menu and listed prices versus the price at payment",
+        "what the exchange rate has done over a stated recent period",
+        "why a figure in an older guide is unreliable in a way that a figure in a stable currency is not"
+      ],
+      "must_not_say": "advice to check current rates — the corpus already says that twice, and repeating it re-makes a call that is already spent",
+      "images": 1
+    },
+    {
+      "title": "Getting Cash Without an ATM",
+      "slug": "turkey-exchange-offices-and-banks",
+      "category": "money-costs",
+      "swamp": "S-money2",
+      "handoff": "turn",
+      "reports": [
+        "exchange offices, what they charge and how the spread is presented",
+        "bank counters and what they require",
+        "airport exchange versus city exchange as a structural difference",
+        "bringing US dollars in and the declaration position",
+        "what is done with leftover lira on departure"
+      ],
+      "must_not_say": "where to change money",
+      "images": 1
+    },
+    {
+      "title": "Telling Your Bank, and What Freezes a Card",
+      "slug": "turkey-card-freezes-and-bank-notice",
+      "category": "money-costs",
+      "swamp": "S-money2",
+      "handoff": "seed",
+      "reports": [
+        "what triggers a fraud hold on a foreign card in Turkey",
+        "how notice to the bank is given and whether it still matters",
+        "what happens to a held card and how it is released",
+        "backup card practicalities as a mechanism",
+        "the interaction between a card hold and a cash-only situation"
+      ],
+      "must_not_say": "carry two cards on different networks — that is a call",
+      "images": 1
+    }
+  ]
+}

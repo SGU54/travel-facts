@@ -1,0 +1,1429 @@
+# SECOND-GATE REVIEW — moroccoforamericans batch 1
+
+TASK: You are a fact-consistency checker. Below are 5 articles and the facts.json they must match. Report ONLY in-context errors: a fact stated two different ways, a number that contradicts a later sentence, a claim that drifts from facts.json, or a recommendation naming an out-of-scope place. Do NOT rewrite for style. Do NOT flag web-current facts as wrong just because they differ from your training. List each issue with the article slug and the exact text.
+
+======================================================================
+FACTS.JSON:
+======================================================================
+{
+ "_README": "moroccoforamericans facts.json (schema_version 3) — RECONCILED across 4 sources (claude, gemini, deepseek, grok) via reconcile.mjs + manual dispute resolution. Agreed facts → agreed_stable. Material disputes on YMYL/safety fields (emergency numbers, currency export rule) were resolved against OFFICIAL sources and marked 'verified' with source_url — NOT by vote-counting (the majority was wrong on both). serve_live fields (exchange rate, flight prices, daily budgets) carry ranges as notes but value stays null — serve live, never frozen. Content stages read THIS file only.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "moroccoforamericans",
+  "country": "Morocco",
+  "country_iso": "MA",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "EWR",
+    "BOS",
+    "IAD",
+    "ATL",
+    "ORD",
+    "MIA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "Express costs in USD with MAD (dirham) equivalents. Dirham is a CLOSED currency — cannot be obtained before arrival; withdraw at ATMs on arrival or exchange USD locally."
+  },
+  "ai_source": "reconciled",
+  "produced_at": "2026-07-06",
+  "reconciled": true,
+  "panel": [
+   "claude",
+   "gemini",
+   "deepseek",
+   "grok"
+  ]
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }",
+ "identity": {
+  "name_local": {
+   "value": "al-Mamlaka al-Maghribiya (المملكة المغربية) — 'the Kingdom of Morocco'; commonly al-Maghrib (المغرب)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Rabat",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "Rabat is the capital; Casablanca is the largest city and main air gateway."
+  },
+  "official_languages": {
+   "value": [
+    "Arabic",
+    "Tamazight (Amazigh/Berber)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "French widely used in business/tourism though not official."
+  },
+  "currency_code": {
+   "value": "MAD",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Moroccan dirham",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "UTC+1 (permanent, since 2018)"
+   ],
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Morocco stays on UTC+1 year-round BUT reverts to UTC+0 during Ramadan, then back. Confirm offset for travel dates if they overlap Ramadan."
+  },
+  "calling_code": {
+   "value": "+212",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz, plug types C and E (European two-round-pin)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "US 120V devices need a converter unless dual-voltage; all need a plug adapter."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + change-prone. Flagged verify_recommended pending official-source check.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+      "status": "verify_recommended",
+      "notes": "All 4 panel sources agree US citizens are visa-free for tourism. Still YMYL — confirm before travel."
+     },
+     "max_stay_days": {
+      "value": 90,
+      "source_url": null,
+      "status": "verify_recommended",
+      "notes": "90 days; overstay incurs fines/exit delays."
+     },
+     "fee": {
+      "value": "None for visa-free entry",
+      "source_url": null,
+      "status": "verify_recommended"
+     },
+     "processing_time": {
+      "value": "N/A (visa-free)",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": false,
+      "source_url": null,
+      "status": "verify_recommended",
+      "notes": "No ETA/eVisa required for US tourists across all sources as of mid-2026 — Morocco has discussed an electronic authorization; VERIFY before travel."
+     },
+     "official_application_url": {
+      "value": null,
+      "source_url": null
+     }
+    }
+   ],
+   "scam_sites_to_avoid": {
+    "value": [
+     "Third-party 'Morocco visa' sites charging fees for a visa-free entry"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "Passport valid at least 6 months beyond entry (recommended); at least one blank page for the entry stamp.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "All sources converge on 6 months + blank page."
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel may be requested at check-in or entry.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "notes": {
+    "value": "Carry a passport copy; a blank page is needed for the entry stamp; proof of sufficient funds may occasionally be requested. Police checkpoints exist, especially near the Sahara."
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "MAD",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — serve live USD↔MAD. Roughly 1 USD ≈ 10 MAD historically but MUST be served live, never frozen."
+   },
+   "cash_vs_card": {
+    "value": "Cash-heavy economy. Cards accepted at hotels, upscale restaurants, and modern city shops; souks, taxis, small cafes, and rural/desert areas are cash-only.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs widespread in cities, towns, and at CMN/RAK airports — withdraw dirham on arrival (major banks: Attijariwafa, BMCE/Bank of Africa, Banque Populaire, CIH). Sparse in the deep Sahara; carry cash for desert legs.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "currency_import_export_limit": {
+    "value": "MAD is a CLOSED currency: you cannot obtain it before arrival and cannot take more than 2,000 MAD out of the country (exceeding this is illegal, not just declarable). Foreign currency: no import limit, but amounts over the equivalent of 100,000 MAD must be declared to customs on arrival (form J7). Keep exchange receipts to reconvert leftover dirham to USD/EUR before departure.",
+    "source_url": "https://www.iatatravelcentre.com/MA-Morocco-customs-currency-airport-tax-regulations-details.htm",
+    "status": "verified",
+    "notes": "RESOLVED against IATA + Moroccan customs + Wise. Panel disagreed (1,000 vs 100,000 vs 'prohibited') — majority conflated the 2,000 MAD export cap with the 100,000 MAD foreign-currency declaration threshold. Both figures are real but apply to different things."
+   },
+   "tipping_norm": {
+    "value": "Tipping expected but modest: ~10% in restaurants if no service charge, round up taxis, small tips (5–20 MAD) for guides, porters, and hammam staff.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Casablanca Mohammed V (CMN) — main US gateway",
+     "Marrakech Menara (RAK) — main tourist entry",
+     "Fez–Saïss (FEZ)",
+     "Tangier Ibn Battouta (TNG)",
+     "Agadir Al Massira (AGA)",
+     "Rabat–Salé (RBA)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "national_carrier": {
+    "value": "Royal Air Maroc (RAM)",
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "oneworld member; nonstop JFK/IAD–CMN."
+   },
+   "flight_from_audience_origins": {
+    "value": [
+     {
+      "from": "JFK",
+      "nonstop": "Royal Air Maroc to CMN, ~7h",
+      "note": "prices serve_live"
+     },
+     {
+      "from": "IAD",
+      "nonstop": "Royal Air Maroc to CMN, ~7.5h",
+      "note": "prices serve_live"
+     },
+     {
+      "from": "Most US cities",
+      "nonstop": "1-stop via Europe (Paris, Madrid, Lisbon) or via CMN",
+      "note": "prices serve_live"
+     }
+    ],
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Durations roughly stable; PRICES serve_live."
+   }
+  },
+  "getting_around": {
+   "intercity_rail": {
+    "value": "ONCF trains connect Casablanca, Rabat, Fez, Marrakech, Tangier; comfortable and punctual. Al Boraq high-speed line runs Tangier–Casablanca. Book first class for reserved seats. Note: NO train to Chefchaouen, Essaouira, or the Sahara.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "buses": {
+    "value": "CTM and Supratours are the reliable intercity coach companies — used to reach Chefchaouen, Essaouira, and Sahara gateways not on the rail network. Book ahead in high season.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "domestic_flights": {
+    "value": "Royal Air Maroc and low-cost carriers link major cities; usually unnecessary for the compact first-timer loop.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "ride_sharing": {
+    "value": "Petit taxis (metered, in-city) and grand taxis (shared, intercity) are standard — insist on the meter or agree fare first. Ride-hail apps (Careem, Heetch, inDrive) operate in some larger cities.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "car_rental_and_driving": {
+    "value": "Drive on the RIGHT. US license accepted for short stays (IDP recommended). Cities are chaotic and parking is hard; many first-timers hire a driver instead. Toll motorways connect major cities. Police checkpoints common; keep documents handy.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Driving side right; BAC limit low (~0.02%) — verify. Avoid night driving in rural/mountain areas."
+   }
+  },
+  "when_to_go": {
+   "climate_by_season": {
+    "value": "Spring (Mar–May) and fall (Sep–Nov) are ideal: warm days, cool nights. Summer (Jun–Aug) is very hot inland (Marrakech, Fez, Sahara can exceed 100°F/38°C); coast (Essaouira) stays mild. Winter (Dec–Feb) is cool, Atlas gets snow, desert nights are cold.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "best_months": {
+    "value": [
+     "April",
+     "May",
+     "October",
+     "November"
+    ],
+    "rank": "core",
+    "notes": "RECOMMENDATION — shoulder seasons balance heat, crowds, and desert comfort."
+   },
+   "avoid_periods": {
+    "value": [
+     "Peak summer heat inland (July–August)",
+     "Ramadan for first-timers if you want full restaurant/cafe rhythm (dates shift ~11 days earlier yearly — verify)"
+    ],
+    "rank": "core",
+    "notes": "RECOMMENDATION + dated (Ramadan moves yearly)."
+   }
+  },
+  "safety_health": {
+   "_note": "YMYL. Advisory level change-prone → verify_recommended.",
+   "advisory_level": {
+    "value": "US State Dept Level 2: Exercise Increased Caution (terrorism) — reported as of early-mid 2026. VERIFY current level + date before travel.",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Morocco.html",
+    "status": "verify_recommended"
+   },
+   "main_risk": {
+    "value": "Petty crime (pickpocketing, aggressive touts/faux guides, medina scams) and traffic — violent crime against tourists is rare. Morocco is generally considered safe, including for solo travelers, with normal precautions.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "vaccines": {
+    "value": "No mandatory vaccines for US travelers arriving from the US. Routine vaccinations current; Hepatitis A and typhoid commonly recommended (food/water); consult a travel clinic or CDC.",
+    "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/morocco",
+    "status": "verify_recommended"
+   },
+   "tap_water_safe": {
+    "value": "Officially chlorinated in cities but commonly causes stomach upset for visitors — stick to bottled/filtered water; avoid ice from unknown sources.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "emergency_numbers": {
+    "value": {
+     "universal_mobile": "112",
+     "police_city": "19",
+     "police_rural_gendarmerie": "177",
+     "ambulance_SAMU": "15",
+     "fire_civil_protection": "15 or 150"
+    },
+    "source_url": "https://app.moroccocloser.com/",
+    "status": "verified",
+    "notes": "RESOLVED against multiple 2026 sources. Primary: 112 (universal from mobile) and 19 (police in cities); 177 Gendarmerie (rural/highway); 15 ambulance (SAMU); fire is 15 or 150 (civil protection). NOTE: 3 of 4 panel models said police='190' — that is a secondary/older listing; 19 and 112 are the current primary numbers. Vote-counting would have picked the wrong value."
+   },
+   "common_scams": {
+    "value": [
+     "Faux guides insisting you're going the wrong way / offering to lead you",
+     "'This street/tannery is closed, follow me'",
+     "Inflated 'friendship' prices in souks",
+     "Henna women grabbing hands then demanding payment",
+     "Taxi meter 'broken' — agree fare first",
+     "Overpriced camel/desert add-ons booked on the street"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "connectivity": {
+   "sim_esim": {
+    "value": "Local SIMs (Maroc Telecom, Orange, Inwi) cheap with data-heavy tourist packages, sold at airports/shops (passport needed). eSIMs (Airalo etc.) let you land connected — good since the dirham is closed and you may want maps/rideshare immediately on arrival.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "coverage": {
+    "value": "Strong 4G/5G in cities and along main routes; patchy to none in the deep Sahara and remote Atlas — download offline maps before desert legs.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "costs": {
+   "_note": "Approximate USD/day per person excluding international flights; serve_live-ish.",
+   "daily_budget_low": {
+    "value": "$40–70/day (riad dorms/budget guesthouses, street food, shared transport)",
+    "status": "serve_live"
+   },
+   "daily_budget_mid": {
+    "value": "$90–160/day (mid-range riad, mix of restaurants, some private transport/tours)",
+    "status": "serve_live"
+   },
+   "daily_budget_high": {
+    "value": "$250+/day (luxury riads, private guide/driver, fine dining)",
+    "status": "serve_live"
+   }
+  },
+  "culture_etiquette": {
+   "dress_norms": {
+    "value": "Morocco is a Muslim country; dress modestly especially outside tourist zones — shoulders and knees covered is respectful. Women aren't required to cover hair (except inside some religious sites, most of which are closed to non-Muslims). Cities like Marrakech are used to tourists; rural areas are more conservative. Lightweight, covering clothing also helps with sun and heat.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "dos_and_donts": {
+    "value": [
+     "Do use your right hand for eating and greeting",
+     "Do ask before photographing people (especially women and vendors)",
+     "Don't enter mosques unless signed open to non-Muslims (most aren't)",
+     "Do remove shoes when entering homes/riads where indicated",
+     "Don't show public displays of affection",
+     "Do accept mint tea when offered — it's hospitality",
+     "Be discreet with alcohol — legal for tourists but not consumed publicly"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  }
+ },
+ "cities": [
+  {
+   "name": "Marrakech",
+   "facts": {
+    "how_to_get_there": {
+     "value": "Fly into Marrakech Menara (RAK) directly, or ONCF train from Casablanca (~3h) / Tangier. Main entry point for the classic loop.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "local_transport": {
+     "value": "Walk the medina (cars can't enter most of it); petit taxis for longer hops; agree fare or insist on meter.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "airport": {
+     "value": "Marrakech Menara (RAK), ~15 min from the medina",
+     "source_url": null,
+     "status": "agreed_stable"
+    }
+   },
+   "recommendations": {
+    "top_sights": {
+     "value": [
+      {
+       "name": "Jemaa el-Fnaa",
+       "why": "The legendary main square — food stalls, performers, energy at dusk"
+      },
+      {
+       "name": "Bahia Palace",
+       "why": "Ornate 19th-c. palace and gardens"
+      },
+      {
+       "name": "Majorelle Garden & YSL",
+       "why": "Cobalt-blue garden, botanical calm"
+      },
+      {
+       "name": "Koutoubia Mosque",
+       "why": "Iconic minaret (exterior; non-Muslims can't enter)"
+      },
+      {
+       "name": "Souks of the medina",
+       "why": "Labyrinth of craft markets"
+      },
+      {
+       "name": "Saadian Tombs / Ben Youssef Madrasa",
+       "why": "Stunning zellij and stucco"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_stay": {
+     "value": [
+      {
+       "area": "Medina",
+       "who_for": "First-timers wanting to stay in a riad steps from the action"
+      },
+      {
+       "area": "Gueliz (Ville Nouvelle)",
+       "who_for": "Modern hotels, restaurants, easier logistics"
+      },
+      {
+       "area": "Hivernage",
+       "who_for": "Upscale hotels, quieter, near nightlife"
+      },
+      {
+       "area": "Palmeraie",
+       "who_for": "Resort-style stays outside the center"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_eat": {
+     "value": [
+      {
+       "name_or_type": "Jemaa el-Fnaa food stalls",
+       "why": "Iconic but choose busy stalls"
+      },
+      {
+       "name_or_type": "Rooftop riad restaurants",
+       "why": "Tagine with a view over the medina"
+      },
+      {
+       "name_or_type": "Gueliz modern Moroccan",
+       "why": "For a calmer sit-down meal"
+      }
+     ],
+     "rank": "core"
+    },
+    "day_trips": {
+     "value": [
+      {
+       "place": "Ourika Valley / Atlas foothills",
+       "why": "Greenery, Berber villages, waterfalls",
+       "rough_time": "Half/full day"
+      },
+      {
+       "place": "Essaouira",
+       "why": "Coastal escape",
+       "rough_time": "Full day"
+      },
+      {
+       "place": "Agafay Desert",
+       "why": "Stone desert close to the city, sunset camps",
+       "rough_time": "Half day"
+      },
+      {
+       "place": "Sahara (Merzouga)",
+       "why": "Overnight desert trip",
+       "rough_time": "3 days / 2 nights"
+      }
+     ],
+     "rank": "core"
+    }
+   }
+  },
+  {
+   "name": "Fez",
+   "facts": {
+    "how_to_get_there": {
+     "value": "ONCF train from Casablanca/Rabat/Marrakech, or fly into Fez–Saïss (FEZ). Common pairing with Chefchaouen (bus, ~4h).",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "local_transport": {
+     "value": "Fès el-Bali medina is pedestrian-only and famously maze-like — a local guide for the first day is worth it. Petit taxis outside the medina.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "airport": {
+     "value": "Fez–Saïss (FEZ), ~15 min from the city",
+     "source_url": null,
+     "status": "agreed_stable"
+    }
+   },
+   "recommendations": {
+    "top_sights": {
+     "value": [
+      {
+       "name": "Fès el-Bali medina",
+       "why": "World's largest car-free urban area, a living medieval city"
+      },
+      {
+       "name": "Chouara Tannery",
+       "why": "Iconic dye pits viewed from surrounding terraces"
+      },
+      {
+       "name": "Al-Qarawiyyin",
+       "why": "One of the world's oldest universities"
+      },
+      {
+       "name": "Bou Inania & Al-Attarine Madrasas",
+       "why": "Exquisite Marinid craftsmanship"
+      },
+      {
+       "name": "Blue Gate (Bab Bou Jeloud)",
+       "why": "Grand tiled medina gateway"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_stay": {
+     "value": [
+      {
+       "area": "Fès el-Bali (old medina)",
+       "who_for": "Riad immersion in the historic core"
+      },
+      {
+       "area": "Fès el-Jdid / Ville Nouvelle",
+       "who_for": "Modern hotels and easier access"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_eat": {
+     "value": [
+      {
+       "name_or_type": "Riad rooftop dining",
+       "why": "Traditional Fassi cuisine"
+      },
+      {
+       "name_or_type": "Pastilla specialists",
+       "why": "Fez is the home of the sweet-savory pigeon/chicken pie"
+      }
+     ],
+     "rank": "core"
+    },
+    "day_trips": {
+     "value": [
+      {
+       "place": "Meknes & Volubilis",
+       "why": "Imperial city + Roman ruins",
+       "rough_time": "Full day"
+      },
+      {
+       "place": "Chefchaouen",
+       "why": "The blue city (often an overnight, not a day trip)",
+       "rough_time": "Overnight"
+      }
+     ],
+     "rank": "core"
+    }
+   }
+  },
+  {
+   "name": "Chefchaouen",
+   "facts": {
+    "how_to_get_there": {
+     "value": "No airport or train — reach by CTM/Supratours bus or grand taxi from Fez (~4h) or Tangier (~2h). Often combined with a Fez or northern leg.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "local_transport": {
+     "value": "Small and walkable; the blue medina is explored on foot.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "airport": {
+     "value": "None — nearest are Fez (FEZ) or Tangier (TNG)",
+     "source_url": null,
+     "status": "agreed_stable"
+    }
+   },
+   "recommendations": {
+    "top_sights": {
+     "value": [
+      {
+       "name": "The blue medina",
+       "why": "Photogenic blue-washed lanes"
+      },
+      {
+       "name": "Plaza Uta el-Hammam & Kasbah",
+       "why": "Central square and museum"
+      },
+      {
+       "name": "Spanish Mosque viewpoint",
+       "why": "Sunset panorama over the town"
+      },
+      {
+       "name": "Ras el-Maa waterfall",
+       "why": "Where locals gather at the medina edge"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_stay": {
+     "value": [
+      {
+       "area": "Medina",
+       "who_for": "Blue-lane charm, small guesthouses"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_eat": {
+     "value": [
+      {
+       "name_or_type": "Rooftop cafes",
+       "why": "Views over the blue rooftops"
+      },
+      {
+       "name_or_type": "Local tagine spots on the square",
+       "why": "Simple, cheap, good"
+      }
+     ],
+     "rank": "core"
+    },
+    "day_trips": {
+     "value": [
+      {
+       "place": "Akchour waterfalls / God's Bridge",
+       "why": "Rif Mountains hiking",
+       "rough_time": "Full day"
+      }
+     ],
+     "rank": "core"
+    }
+   }
+  },
+  {
+   "name": "Sahara (Merzouga / Zagora)",
+   "facts": {
+    "how_to_get_there": {
+     "value": "No airport/train to the dunes. Reached by multi-day tour or drive from Marrakech (Merzouga ~9-10h, usually a 3-day trip) or Fez. Zagora is closer/faster (smaller dunes); Merzouga (Erg Chebbi) has the classic tall dunes.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "local_transport": {
+     "value": "4x4 and camel; organized through desert camps/tours. Self-driving possible to the dune edge but most first-timers take a tour with driver.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "airport": {
+     "value": "Errachidia (ERH) is nearest to Merzouga but rarely used by tourists; most arrive overland.",
+     "source_url": null,
+     "status": "agreed_stable"
+    }
+   },
+   "recommendations": {
+    "top_sights": {
+     "value": [
+      {
+       "name": "Erg Chebbi dunes (Merzouga)",
+       "why": "The postcard Sahara — tall golden dunes"
+      },
+      {
+       "name": "Overnight desert camp",
+       "why": "Sunset camel ride, dinner, stargazing, sunrise"
+      },
+      {
+       "name": "Todra Gorge (en route)",
+       "why": "Dramatic canyon on the Marrakech road"
+      },
+      {
+       "name": "Aït Benhaddou (en route)",
+       "why": "UNESCO kasbah, film-famous"
+      },
+      {
+       "name": "Dades Valley / Valley of Roses",
+       "why": "Scenic drive stops"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_stay": {
+     "value": [
+      {
+       "area": "Desert camp (Erg Chebbi)",
+       "who_for": "The signature night in the dunes — standard or luxury camps"
+      },
+      {
+       "area": "Merzouga village kasbahs",
+       "who_for": "Comfort base at the dune edge"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_eat": {
+     "value": [
+      {
+       "name_or_type": "Camp dinners (tagine, communal)",
+       "why": "Included in most desert packages"
+      }
+     ],
+     "rank": "core"
+    },
+    "day_trips": {
+     "value": [
+      {
+       "place": "Khamlia (Gnaoua music village)",
+       "why": "Local music culture",
+       "rough_time": "Couple hours"
+      },
+      {
+       "place": "Dune sunrise 4x4",
+       "why": "Photography",
+       "rough_time": "Morning"
+      }
+     ],
+     "rank": "core"
+    }
+   }
+  },
+  {
+   "name": "Essaouira",
+   "facts": {
+    "how_to_get_there": {
+     "value": "~2.5-3h by Supratours/CTM bus from Marrakech (the usual approach); small airport (ESU) with limited flights. Popular as a coastal break or day trip.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "local_transport": {
+     "value": "Compact, walkable walled medina; everything is on foot.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "airport": {
+     "value": "Essaouira–Mogador (ESU), limited service",
+     "source_url": null,
+     "status": "agreed_stable"
+    }
+   },
+   "recommendations": {
+    "top_sights": {
+     "value": [
+      {
+       "name": "Skala de la Ville ramparts",
+       "why": "Sea walls and cannons over the Atlantic"
+      },
+      {
+       "name": "The port & fish market",
+       "why": "Blue boats, fresh grilled seafood"
+      },
+      {
+       "name": "Medina (UNESCO)",
+       "why": "Relaxed, less hassle than Marrakech"
+      },
+      {
+       "name": "Beach & windsurfing",
+       "why": "Windy Atlantic bay, kite/windsurf hub"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_stay": {
+     "value": [
+      {
+       "area": "Medina",
+       "who_for": "Riads inside the walls"
+      },
+      {
+       "area": "Beachfront",
+       "who_for": "Surf/relax stays"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_eat": {
+     "value": [
+      {
+       "name_or_type": "Port grilled-fish stalls",
+       "why": "Pick your catch, grilled fresh"
+      },
+      {
+       "name_or_type": "Medina cafes",
+       "why": "Argan-oil specialties, relaxed"
+      }
+     ],
+     "rank": "core"
+    },
+    "day_trips": {
+     "value": [
+      {
+       "place": "Argan cooperatives (road to Marrakech)",
+       "why": "See argan-oil production",
+       "rough_time": "En route"
+      }
+     ],
+     "rank": "core"
+    }
+   }
+  },
+  {
+   "name": "Atlas Mountains",
+   "facts": {
+    "how_to_get_there": {
+     "value": "High Atlas foothills are ~1-1.5h from Marrakech (Imlil, Ourika). Reached by grand taxi, private driver, or organized trek/day tour.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "local_transport": {
+     "value": "Mule and foot for trekking; 4x4/driver to trailheads.",
+     "source_url": null,
+     "status": "agreed_stable"
+    },
+    "airport": {
+     "value": "None — access via Marrakech (RAK)",
+     "source_url": null,
+     "status": "agreed_stable"
+    }
+   },
+   "recommendations": {
+    "top_sights": {
+     "value": [
+      {
+       "name": "Imlil & Toubkal base",
+       "why": "Gateway to North Africa's highest peak"
+      },
+      {
+       "name": "Ourika Valley",
+       "why": "Waterfalls, Berber villages, easy day trip"
+      },
+      {
+       "name": "Berber village visits",
+       "why": "Tea, terraced fields, mountain life"
+      },
+      {
+       "name": "Setti Fatma waterfalls",
+       "why": "Popular hiking spot"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_stay": {
+     "value": [
+      {
+       "area": "Imlil",
+       "who_for": "Trekkers and mountain lodges"
+      },
+      {
+       "area": "Ouirgane / Kasbah stays",
+       "who_for": "Scenic overnight, relaxation"
+      }
+     ],
+     "rank": "core"
+    },
+    "where_to_eat": {
+     "value": [
+      {
+       "name_or_type": "Mountain lodge / guesthouse meals",
+       "why": "Home-style tagine after a hike"
+      }
+     ],
+     "rank": "core"
+    },
+    "day_trips": {
+     "value": [
+      {
+       "place": "Three Valleys tour from Marrakech",
+       "why": "Ourika + Asni + Oukaimeden sampler",
+       "rough_time": "Full day"
+      }
+     ],
+     "rank": "core"
+    }
+   }
+  }
+ ],
+ "itineraries": [
+  {
+   "title": "7-Day Morocco: Imperial Cities + Desert Taste",
+   "days": 7,
+   "scope": "multi-city",
+   "plan": {
+    "value": [
+     {
+      "day": 1,
+      "morning": "Arrive Marrakech (RAK), riad check-in",
+      "afternoon": "Ease into the medina",
+      "evening": "Jemaa el-Fnaa at dusk"
+     },
+     {
+      "day": 2,
+      "morning": "Marrakech sights (Bahia, Majorelle)",
+      "afternoon": "Souks",
+      "evening": "Rooftop dinner"
+     },
+     {
+      "day": 3,
+      "morning": "Depart on 3-day Sahara tour (Todra/Dades)",
+      "afternoon": "Aït Benhaddou, Ouarzazate",
+      "evening": "Overnight en route (Dades)"
+     },
+     {
+      "day": 4,
+      "morning": "Drive to Merzouga",
+      "afternoon": "Camel ride into Erg Chebbi",
+      "evening": "Desert camp, stargazing"
+     },
+     {
+      "day": 5,
+      "morning": "Dune sunrise, drive back toward Marrakech or on to Fez",
+      "afternoon": "Long transfer day",
+      "evening": "Arrive Fez"
+     },
+     {
+      "day": 6,
+      "morning": "Fez medina with a guide",
+      "afternoon": "Tanneries, madrasas",
+      "evening": "Fassi dinner"
+     },
+     {
+      "day": 7,
+      "morning": "Last medina wander",
+      "afternoon": "Depart (FEZ or transfer to CMN)",
+      "evening": "Fly home"
+     }
+    ],
+    "notes": "RECOMMENDATION — fast-paced; the desert eats 3 days. Fly out of Fez to save backtracking."
+   },
+   "assumptions": {
+    "value": "One international arrival (RAK) and departure (FEZ); books the standard shared/private desert tour."
+   }
+  },
+  {
+   "title": "10-Day Morocco: The Classic First-Timer Loop",
+   "days": 10,
+   "scope": "whole-country",
+   "plan": {
+    "value": [
+     {
+      "day": 1,
+      "morning": "Arrive Marrakech",
+      "afternoon": "Riad settle-in",
+      "evening": "Jemaa el-Fnaa"
+     },
+     {
+      "day": 2,
+      "morning": "Marrakech highlights",
+      "afternoon": "Souks + gardens",
+      "evening": "Rooftop dinner"
+     },
+     {
+      "day": 3,
+      "morning": "Atlas day trip (Ourika/Imlil)",
+      "afternoon": "Berber village + waterfall",
+      "evening": "Back in Marrakech"
+     },
+     {
+      "day": 4,
+      "morning": "Begin 3-day desert tour",
+      "afternoon": "Aït Benhaddou, Dades",
+      "evening": "Overnight Dades/Todra"
+     },
+     {
+      "day": 5,
+      "morning": "Todra Gorge",
+      "afternoon": "Drive to Merzouga, camel ride",
+      "evening": "Sahara camp"
+     },
+     {
+      "day": 6,
+      "morning": "Dune sunrise, drive to Fez",
+      "afternoon": "Long scenic transfer",
+      "evening": "Arrive Fez"
+     },
+     {
+      "day": 7,
+      "morning": "Fez medina guided",
+      "afternoon": "Tanneries + madrasas",
+      "evening": "Fassi dinner"
+     },
+     {
+      "day": 8,
+      "morning": "Bus/taxi to Chefchaouen",
+      "afternoon": "Blue medina wander",
+      "evening": "Sunset at Spanish Mosque"
+     },
+     {
+      "day": 9,
+      "morning": "Chefchaouen morning",
+      "afternoon": "Return toward Fez/Casablanca",
+      "evening": "Overnight transit city"
+     },
+     {
+      "day": 10,
+      "morning": "Transfer to airport",
+      "afternoon": "Depart (CMN)",
+      "evening": "Fly home"
+     }
+    ],
+    "notes": "RECOMMENDATION — the balanced classic; add Essaouira by dropping Chefchaouen if you prefer coast to blue city."
+   },
+   "assumptions": {
+    "value": "Arrive RAK, depart CMN; mix of tour + train/bus; moderate pace."
+   }
+  },
+  {
+   "title": "14-Day Morocco: The Complete First-Timer Grand Tour",
+   "days": 14,
+   "scope": "whole-country",
+   "plan": {
+    "value": [
+     {
+      "day": 1,
+      "morning": "Arrive Marrakech",
+      "afternoon": "Riad",
+      "evening": "Jemaa el-Fnaa"
+     },
+     {
+      "day": 2,
+      "morning": "Marrakech sights",
+      "afternoon": "Souks",
+      "evening": "Dinner"
+     },
+     {
+      "day": 3,
+      "morning": "Atlas / Ourika day trip",
+      "afternoon": "Villages",
+      "evening": "Marrakech"
+     },
+     {
+      "day": 4,
+      "morning": "Bus to Essaouira",
+      "afternoon": "Ramparts + port",
+      "evening": "Seafood by the sea"
+     },
+     {
+      "day": 5,
+      "morning": "Essaouira beach/medina",
+      "afternoon": "Return to Marrakech",
+      "evening": "Overnight Marrakech"
+     },
+     {
+      "day": 6,
+      "morning": "Start 3-day desert tour",
+      "afternoon": "Aït Benhaddou",
+      "evening": "Dades"
+     },
+     {
+      "day": 7,
+      "morning": "Todra Gorge",
+      "afternoon": "To Merzouga, camel ride",
+      "evening": "Desert camp"
+     },
+     {
+      "day": 8,
+      "morning": "Sunrise, drive to Fez",
+      "afternoon": "Transfer",
+      "evening": "Fez"
+     },
+     {
+      "day": 9,
+      "morning": "Fez medina guided",
+      "afternoon": "Tanneries",
+      "evening": "Dinner"
+     },
+     {
+      "day": 10,
+      "morning": "Meknes + Volubilis day trip",
+      "afternoon": "Roman ruins",
+      "evening": "Back in Fez"
+     },
+     {
+      "day": 11,
+      "morning": "To Chefchaouen",
+      "afternoon": "Blue medina",
+      "evening": "Sunset viewpoint"
+     },
+     {
+      "day": 12,
+      "morning": "Akchour waterfalls hike",
+      "afternoon": "Rif nature",
+      "evening": "Chefchaouen"
+     },
+     {
+      "day": 13,
+      "morning": "Travel to Casablanca/Rabat",
+      "afternoon": "Hassan II Mosque (Casa) or Rabat sights",
+      "evening": "Farewell dinner"
+     },
+     {
+      "day": 14,
+      "morning": "Depart CMN",
+      "afternoon": "Fly home",
+      "evening": "—"
+     }
+    ],
+    "notes": "RECOMMENDATION — adds Essaouira, Meknes/Volubilis, Rif hiking, and a Casa/Rabat finish."
+   },
+   "assumptions": {
+    "value": "Arrive RAK, depart CMN; relaxed pace with coastal + northern add-ons."
+   }
+  }
+ ],
+ "national_recommendations": {
+  "must_see_overall": {
+   "value": [
+    {
+     "name": "Jemaa el-Fnaa & Marrakech medina",
+     "where": "Marrakech",
+     "why": "The sensory heart of Morocco"
+    },
+    {
+     "name": "A night in the Sahara (Erg Chebbi)",
+     "where": "Merzouga",
+     "why": "The bucket-list desert experience"
+    },
+    {
+     "name": "Fès el-Bali medina",
+     "where": "Fez",
+     "why": "The world's most intact medieval city"
+    },
+    {
+     "name": "The blue city",
+     "where": "Chefchaouen",
+     "why": "Unmistakable and photogenic"
+    },
+    {
+     "name": "Aït Benhaddou",
+     "where": "En route to the desert",
+     "why": "UNESCO earthen kasbah"
+    },
+    {
+     "name": "Atlas Berber villages",
+     "where": "High Atlas",
+     "why": "Mountain culture a short hop from Marrakech"
+    },
+    {
+     "name": "Essaouira ramparts & coast",
+     "where": "Essaouira",
+     "why": "Windswept Atlantic counterpoint to the cities"
+    }
+   ],
+   "rank": "core"
+  }
+ },
+ "_open_questions": {
+  "_note": "Items still needing official-source confirmation before their specific articles publish. Emergency numbers and the currency export rule were RESOLVED this pass (now 'verified'); these remain open.",
+  "value": [
+   "VISA/ENTRY: All 4 sources agree US = visa-free 90 days, but confirm against official Moroccan consular source AND whether any electronic travel authorization (AEVM/ETA) has been activated — highest-stakes fact for the visa article.",
+   "SAFETY ADVISORY: Confirm the CURRENT US State Dept advisory level + date for Morocco at publish time (was Level 2).",
+   "TIMEZONE: Confirm UTC+1 permanent-DST logic and the Ramadan UTC+0 reversion for any travel dates referenced.",
+   "DRIVING: Confirm whether an IDP is REQUIRED (vs. recommended) for US license holders and the current BAC limit (panel split 0.0 vs low-limit)."
+  ]
+ }
+}
+
+======================================================================
+ARTICLES:
+======================================================================
+
+
+----- morocco-first-time-guide -----
+TITLE: Morocco for First-Timers: Everything You Need to Know Before You Go
+
+<p>Morocco is one of those places that feels impossibly far from home and then, three hours after landing, feels like somewhere you've always wanted to be. For a first-time American traveler, it's an easy introduction to North Africa and the Arab world: it's set up for tourism, the distances are manageable, and you can pack sweeping desert, medieval cities, and Atlantic beaches into a single trip. This guide covers the things first-timers actually worry about, so you can plan with confidence rather than guesswork.</p>
+
+<!-- IMAGE_SLOT_1: Aerial view of Marrakech medina rooftops with the Atlas Mountains behind -->
+
+<h2>Do Americans need a visa for Morocco?</h2>
+<p>No. U.S. citizens can enter Morocco visa-free for tourism and stay up to 90 days. You'll get a stamp on arrival; there's no fee and no online application to fill out beforehand. That said, entry rules are the one thing worth double-checking close to your trip, since governments change them without much notice. Make sure your passport is valid for at least six months beyond your entry date and has a blank page for the stamp. We cover the details in our <a href="/article/morocco-visa-for-americans">Morocco visa guide for Americans</a>.</p>
+
+<h2>Is Morocco safe?</h2>
+<p>For the vast majority of visitors, yes. Violent crime against tourists is rare, and Morocco is generally considered one of the safer countries in the region — millions of travelers, including solo women, visit every year without incident. What you'll actually deal with is petty stuff: pickpocketing in crowds, aggressive touts, and medina scams like a stranger insisting a street is "closed" so they can lead you somewhere. None of it is dangerous, but it's worth knowing about so it doesn't rattle you. Our <a href="/article/is-morocco-safe">honest safety guide</a> walks through it, and the <a href="/article/morocco-scams-to-avoid">common scams</a> are easy to sidestep once you know the playbook.</p>
+
+<h2>Money: the dirham is a closed currency</h2>
+<p>Here's the single most useful money fact for a first-timer: you cannot get Moroccan dirham before you arrive. It's a "closed" currency, which means you can't buy it at your bank at home the way you might grab euros or pounds. Instead, you withdraw dirham from an ATM once you land (there are ATMs right in the Casablanca and Marrakech arrival halls) or exchange dollars at a licensed bureau. Morocco runs heavily on cash — souks, taxis, and small cafes are cash-only — while hotels and nicer restaurants take cards. Read our <a href="/article/moroccan-dirham-money-guide">dirham and money guide</a> before you go, and our <a href="/article/morocco-trip-cost">cost breakdown</a> to build a budget in dollars.</p>
+
+<h2>When should you visit?</h2>
+<p>Spring (March to May) and fall (September to November) are the sweet spots: warm days, cool nights, and comfortable conditions for both the cities and the desert. Summer gets brutally hot inland — Marrakech, Fez, and the Sahara can push past 100&deg;F — though the coast at Essaouira stays mild. Winter is cool and pleasant in the cities, cold at night in the desert, and snowy in the Atlas Mountains. If your dates overlap Ramadan, the rhythm of daily life changes; it's a fascinating time to visit but worth understanding first. See our <a href="/article/best-time-to-visit-morocco">month-by-month guide</a>.</p>
+
+<!-- IMAGE_SLOT_2: Traveler walking through a narrow, lantern-lined souk alley -->
+
+<h2>Where to go on a first trip</h2>
+<p>The classic first-timer loop covers a handful of standout places, each completely different from the last:</p>
+<h3>Marrakech</h3>
+<p>The sensory heart of Morocco and the usual starting point, with the famous Jemaa el-Fnaa square, endless souks, and gorgeous gardens. See our <a href="/article/marrakech-first-time-guide">Marrakech guide</a>.</p>
+<h3>Fez</h3>
+<p>Home to the world's largest car-free medieval city — a genuine maze where a local guide for the first day pays for itself.</p>
+<h3>Chefchaouen</h3>
+<p>The blue-washed mountain town, small, relaxed, and endlessly photogenic.</p>
+<h3>The Sahara</h3>
+<p>A night in a desert camp among the dunes of Erg Chebbi is the bucket-list experience — camel ride at sunset, dinner under the stars, sunrise over the sand.</p>
+<h3>Essaouira and the Atlas Mountains</h3>
+<p>A windswept Atlantic beach town and the Berber villages of the High Atlas round out the trip if you have time.</p>
+
+<h2>Getting around</h2>
+<p>Morocco is easier to navigate than you'd expect. Comfortable ONCF trains connect Casablanca, Rabat, Fez, and Marrakech, with a high-speed line up north. For places off the rail network — Chefchaouen, Essaouira, and the desert gateways — CTM and Supratours coaches are the reliable options. In cities, small metered "petit taxis" handle short hops (insist on the meter or agree the fare first). The Sahara is almost always done as a multi-day tour with a driver. More in our <a href="/article/getting-around-morocco-transport">transport guide</a>.</p>
+
+<h2>Language: will you get by?</h2>
+<p>Yes. Arabic and Tamazight (Berber) are the official languages, and French is widely spoken in business, government, and tourism — a legacy you'll notice on signs and menus. In the places tourists spend time, English is common: hotel and riad staff, guides, and popular restaurants will usually handle English fine. Away from the tourist track, a few words of French go further than English, and any attempt at Arabic — a simple "salam" (hello) or "shukran" (thank you) — is warmly received. You don't need to speak the language to travel here comfortably, but a handful of phrases makes every interaction friendlier.</p>
+
+<h2>What a first trip actually feels like</h2>
+<p>Set your expectations for contrast, because that's the Morocco experience. One hour you're haggling for a lantern in a chaotic souk with a dozen smells competing for your attention; the next you're sipping tea in silent riad courtyard. The cities are intense and can be tiring — the constant sensory input and the occasional tout wear on you — so build in downtime and don't try to cram every day full. The desert and mountains, by contrast, are serene. A well-paced first trip alternates the two, and most people leave already planning a return.</p>
+
+<h2>Practical first-timer tips</h2>
+<p>A few things that smooth out a first trip: dress modestly, especially outside tourist zones — covering shoulders and knees is respectful and also helps with sun and heat. Get an <a href="/article/morocco-esim-sim-wifi">eSIM</a> so you land connected, which is handy when you need maps or a ride the moment you arrive and don't have dirham yet. Accept the mint tea when it's offered; it's hospitality, not a sales trap. And decide early whether you want a <a href="/article/morocco-guided-vs-independent">guided tour or independent travel</a> — both work well here, and it shapes how you book everything else.</p>
+
+<section class="feature-faq">
+  <h2>Morocco first-timer FAQ</h2>
+  <details><summary>How many days do you need for a first trip to Morocco?</summary><div><p>Seven days covers a solid taste (two cities plus a desert night); ten days is the comfortable classic loop; two weeks lets you add the coast and mountains without rushing.</p></div></details>
+  <details><summary>Can you drink alcohol in Morocco?</summary><div><p>Yes — it's legal for tourists and served in many hotels, licensed restaurants, and bars, though it's not consumed openly in public. It's simply less visible than at home.</p></div></details>
+  <details><summary>Do people speak English in Morocco?</summary><div><p>Arabic and Tamazight are official, and French is widely used. English is common in tourist areas — hotels, guides, and popular restaurants — though a few French or Arabic phrases go a long way elsewhere.</p></div></details>
+  <details><summary>Is Morocco good for a first international trip?</summary><div><p>It's a great step beyond Europe: exotic and different, but well set up for tourists, with short distances and plenty of infrastructure. A little preparation goes a long way.</p></div></details>
+</section>
+
+
+----- morocco-visa-for-americans -----
+TITLE: Do Americans Need a Visa for Morocco? Entry Rules Explained
+
+<p>If you're a U.S. citizen planning a trip to Morocco, the entry situation is refreshingly simple: <strong>you do not need a visa for tourism.</strong> Americans can enter Morocco visa-free and stay for up to 90 days. There's no application to fill out in advance, no fee to pay, and no online authorization to arrange. You show up, hand over your passport, get a stamp, and you're in. Still, a few details are worth getting right before you fly, because the border is not the place to discover a problem.</p>
+
+<!-- IMAGE_SLOT_1: A U.S. passport being stamped at a Moroccan airport immigration desk -->
+
+<h2>What U.S. citizens need to enter Morocco</h2>
+<p>For a standard tourist visit, you need surprisingly little:</p>
+<h3>A valid passport</h3>
+<p>Your passport should be valid for at least six months beyond your date of entry. This is the standard recommendation, and while enforcement varies, you don't want to gamble on it — airlines sometimes deny boarding over passport validity before you even reach Morocco. Make sure there's at least one blank page for the entry stamp.</p>
+<h3>Proof of onward or return travel</h3>
+<p>Immigration or your airline at check-in may ask to see a return or onward ticket showing you plan to leave within the 90-day window. In practice this is usually your return flight. It's rarely a hard checkpoint, but have it ready.</p>
+<h3>Nothing else, in most cases</h3>
+<p>There's no requirement to show hotel bookings or cash for a normal tourist stay, though proof of sufficient funds and an address can occasionally be requested. Filling in the arrival card fully and having your first night's accommodation written down keeps things smooth.</p>
+
+<h2>How long can you stay?</h2>
+<p>The visa-free tourist stay is up to <strong>90 days</strong>. If you overstay, you can face fines and delays when you try to leave, so keep an eye on the date stamped in your passport. If you want to stay longer, you'd need to look into an extension through the local authorities or a proper visa — but for the overwhelming majority of trips, 90 days is far more than enough.</p>
+
+<h2>Do you need an eVisa or travel authorization?</h2>
+<p>As things stand, no. Unlike some countries that have rolled out an electronic travel authorization (the kind of pre-registration you may have done for other destinations), Morocco does not require U.S. tourists to register online before arrival. This is exactly the kind of rule that can change, though, so it's the one thing we'd flag to verify close to your travel date. Watch out for third-party websites that charge a fee for a "Morocco visa" or "travel authorization" for Americans — since none is required, these are best avoided. Rely on official Moroccan government or U.S. State Department information rather than a site that found you through an ad.</p>
+
+<h2>Entry by land or sea</h2>
+<p>The same visa-free rules apply whether you fly in or arrive overland — for example, crossing from the Spanish enclaves of Ceuta or Melilla, or by ferry from Spain across the Strait of Gibraltar. You'll clear passport control and get the same stamp. If you're doing a multi-country trip, just remember each exit and re-entry starts a fresh interaction with immigration, so keep your documents accessible and expect the officer to stamp you both out and in.</p>
+<p>One practical note that trips up some travelers: the 90-day clock is generous, but tracking it is your responsibility, not the border's — there's no automatic reminder. If your itinerary loops through Morocco more than once, which is common on a broader North Africa or southern Europe trip, keep a rough count of your in-country days so a later re-entry doesn't accidentally push you toward the limit. For a normal one-and-done vacation this is a non-issue, but it's worth a moment's thought on a longer journey.</p>
+
+<h2>Check your stamp at the border</h2>
+<p>It sounds obvious, but take ten seconds at immigration to confirm you actually received an entry stamp and that the date is legible. On busy arrival days, a rushed officer occasionally forgets, and a missing entry stamp can create a headache when you try to leave — you may have to explain when and where you entered. If you cross overland or at a smaller point of entry, this is even more worth a glance. It's a small habit that saves a rare but annoying problem.</p>
+
+<h2>A note on customs</h2>
+<p>Entry rules aren't just about your passport. Morocco has strict customs rules worth knowing: drones are effectively banned without a hard-to-get license and will be confiscated at the airport, and the local currency can't be brought in or taken out freely (the dirham is a closed currency). We cover the money side in detail in our <a href="/article/moroccan-dirham-money-guide">dirham guide</a>. For most travelers, customs is a non-event, but leave the drone at home.</p>
+
+<h2>Bottom line for first-timers</h2>
+<p>Morocco is one of the easier countries for Americans to enter: no visa, no fee, no paperwork, 90 days. Bring a passport valid six months out with a blank page, have your return ticket handy, skip any site trying to sell you a visa you don't need, and give the entry requirements a quick re-check in the weeks before you fly. With that done, the only thing left is the fun part — planning where to go, which our <a href="/article/morocco-first-time-guide">first-timer's guide</a> lays out.</p>
+
+<section class="feature-faq">
+  <h2>Morocco visa FAQ for Americans</h2>
+  <details><summary>Do U.S. citizens need a visa to visit Morocco?</summary><div><p>No. Americans can enter visa-free for tourism and stay up to 90 days, with no advance application or fee.</p></div></details>
+  <details><summary>How long can Americans stay in Morocco without a visa?</summary><div><p>Up to 90 days. Overstaying can lead to fines and exit delays, so track the date stamped in your passport.</p></div></details>
+  <details><summary>Does Morocco require an eVisa or online travel authorization for Americans?</summary><div><p>Not currently. No pre-arrival online registration is required for U.S. tourists — but entry rules can change, so verify close to your travel date and ignore third-party sites selling a "visa" you don't need.</p></div></details>
+  <details><summary>What passport validity do I need for Morocco?</summary><div><p>At least six months beyond your entry date is the standard recommendation, plus a blank page for the entry stamp.</p></div></details>
+</section>
+
+
+----- moroccan-dirham-money-guide -----
+TITLE: The Moroccan Dirham: Why You Can't Get It Before You Arrive (and What to Do)
+
+<p>Money is where first-time visitors to Morocco most often get tripped up, and it starts before you even leave home. The Moroccan dirham (MAD) is a <strong>closed currency</strong> — you cannot buy it at your bank in the U.S. the way you'd pick up euros or pounds before a trip. That surprises a lot of travelers, so here's exactly how money works in Morocco and how to arrive prepared.</p>
+
+<!-- IMAGE_SLOT_1: Colorful Moroccan dirham banknotes and coins fanned out on a table -->
+
+<h2>What "closed currency" actually means</h2>
+<p>A closed currency is one the government restricts from leaving or entering the country. For you, that has two practical consequences. First, you can't get dirham before you arrive — no ordering it from your bank, no exchange desk at your home airport. Second, you can't take much of it home: the export limit is 2,000 MAD, and exceeding that is actually against the rules, not just something to declare. So the game is simple — get dirham when you land, and spend it down before you leave.</p>
+
+<h2>How to get dirham when you arrive</h2>
+<h3>ATMs are your best bet</h3>
+<p>The easiest way to get cash is an ATM, and there are ATMs right in the arrival halls at Casablanca (CMN) and Marrakech (RAK) airports. Withdraw from machines attached to major banks — Attijariwafa, Bank of Africa (BMCE), Banque Populaire, or CIH — and you'll get the official rate automatically. Tell your bank you're traveling so your card isn't frozen, and expect a per-withdrawal cap that can feel low, so you may make more than one withdrawal over a trip.</p>
+<h3>Exchange bureaus</h3>
+<p>You can also exchange U.S. dollars (bring clean, untorn bills) at licensed bureaux de change — look for the official Bank Al-Maghrib certification. Keep your exchange receipts: you'll need them to convert leftover dirham back to dollars at the airport when you leave.</p>
+
+<h2>What's the exchange rate?</h2>
+<p>Exchange rates move daily, so we don't print a fixed number here — check the live rate before you go:</p>
+<div class="feature-converter" data-from="USD" data-to="MAD">100 USD &asymp; &hellip; MAD (enable JavaScript for the live rate)</div>
+<p>As a rough mental model, a mid-range restaurant main might run you around <span class="feature-price" data-amount="90" data-currency="MAD">90 MAD</span>, and a short petit-taxi ride in the city something like <span class="feature-price" data-amount="25" data-currency="MAD">25 MAD</span>. The site shows today's dollar equivalent next to each so you always know what you're actually spending.</p>
+
+<h2>Cash vs. card in Morocco</h2>
+<p>Morocco runs heavily on cash. Souks, taxis, small cafes, and anything in rural areas or the desert are cash-only, full stop. Cards (Visa and Mastercard) are accepted at hotels, upscale restaurants, and modern city shops — but the moment you step into a medina, you'll want dirham in hand. Carry a mix of small notes and coins; vendors rarely have change for big bills, and small change is essential for tips and taxis. For a full budget breakdown in dollars, see our <a href="/article/morocco-trip-cost">Morocco trip cost guide</a>.</p>
+
+<h2>Avoiding the money traps</h2>
+<p>A few small habits keep more of your dollars in your pocket. When an ATM or card machine asks whether to charge you in dollars or dirham, always choose dirham — the "pay in USD" option (called dynamic currency conversion) bakes in a worse rate. Skip the exchange counters at your home airport entirely, since you can't get dirham there anyway, and avoid changing money on the street, which is both illegal and a common way to get shortchanged or handed old notes. Stick to bank ATMs and certified bureaux. And bring a backup card stored separately from your main one; if a machine eats a card or your bank flags a withdrawal, you don't want to be cardless in a cash country.</p>
+
+<h2>Tipping in Morocco</h2>
+<p>Tipping is expected but modest. In restaurants, around 10% is normal if a service charge isn't already added. For taxis, round up. Small tips of roughly 5 to 20 dirham are appreciated for guides, porters, and hammam attendants. It adds up to very little and smooths countless small interactions.</p>
+<p>The practical upshot is to keep a stash of small notes and coins on you at all times — 5, 10, and 20 dirham denominations especially. ATMs tend to dispense larger bills, and a common frustration is standing in front of a parking attendant or a stall holder with only a 200-dirham note and no way to break it. Early in your trip, break big bills whenever you get the chance: buy something small at a supermarket or cafe that takes cards but pay cash, and bank the change. A pocket of small notes is the quiet secret to smooth days in Morocco.</p>
+
+<h2>Before you fly home: spend it down</h2>
+<p>Because you can't take dirham out (beyond that 2,000 MAD limit) and it's hard to exchange abroad, aim to spend your remaining cash before departure — the airport duty-free is a fine place to offload coins. If you have a larger amount left and kept your exchange receipts, you can reconvert dirham to dollars or euros at the airport bureau before you go through passport control.</p>
+
+<h2>One tip that saves the arrival scramble</h2>
+<p>Because you'll land without any local cash, it helps to arrive already connected. An <a href="/article/morocco-esim-sim-wifi">eSIM</a> activated before you fly means you have maps and can arrange a ride the moment you touch down, before you've even hit the ATM. It removes the one genuinely awkward moment of a Morocco arrival — needing to get somewhere before you have a single dirham in your pocket.</p>
+
+<section class="feature-faq">
+  <h2>Morocco money FAQ</h2>
+  <details><summary>Can I get Moroccan dirham before I travel?</summary><div><p>No. The dirham is a closed currency and isn't sold outside Morocco. Withdraw it from an ATM on arrival or exchange dollars at a licensed bureau once you're there.</p></div></details>
+  <details><summary>Should I bring cash or rely on cards in Morocco?</summary><div><p>Bring a card for ATMs and hotels, but plan to use cash for most day-to-day spending — souks, taxis, and small cafes are cash-only.</p></div></details>
+  <details><summary>Can I take dirham home as a souvenir?</summary><div><p>Only up to 2,000 MAD, and it's hard to exchange abroad, so it's best to spend your dirham before leaving or reconvert it at the airport.</p></div></details>
+  <details><summary>Are U.S. dollars accepted in Morocco?</summary><div><p>Not really for everyday spending — a few upscale, tourist-facing places may take them at a poor rate. Exchange dollars for dirham and pay in local currency.</p></div></details>
+</section>
+
+
+----- is-morocco-safe -----
+TITLE: Is Morocco Safe for American Tourists? An Honest Guide
+
+<p>"Is Morocco safe?" is the question first-time visitors ask more than any other, and the honest answer is: yes, for the vast majority of travelers, Morocco is safe — including for solo travelers and solo women who take normal precautions. Millions of Americans and other tourists visit every year without any serious problem. But "safe" doesn't mean "hassle-free," and knowing the difference is what keeps a first trip relaxed instead of tense.</p>
+
+<!-- IMAGE_SLOT_1: Busy but relaxed evening scene in Marrakech's Jemaa el-Fnaa square -->
+
+<h2>The honest risk picture</h2>
+<p>Violent crime against tourists in Morocco is rare. What you'll actually encounter is petty crime and persistent hustling: pickpocketing in crowded medinas and markets, aggressive touts, overcharging, and the occasional scam. Traffic is a genuine hazard too — roads can be chaotic, and crossing streets in a busy city takes attention. None of this is unusual for a popular travel destination, and none of it should scare you off. It's the background noise of travel here, not a reason to stay home.</p>
+<p>For context, the U.S. State Department has placed Morocco at Level 2, "Exercise Increased Caution," primarily citing terrorism — the same level as many popular European countries. Advisory levels change, so check the current one before you travel, but Level 2 is a routine caution, not a warning to avoid the country.</p>
+
+<h2>The scams you'll actually meet</h2>
+<p>Most "safety" issues in Morocco are really scams aimed at your wallet, and they follow predictable scripts. Once you know them, they lose their power:</p>
+<h3>The "helpful" stranger</h3>
+<p>Someone tells you the street ahead is closed, or that the tannery or square you're heading to is shut, and offers to guide you a better way — then demands payment or leads you to a shop where they get a commission. A polite but firm "no thank you" ("la shukran") and walking on handles it.</p>
+<h3>Faux guides</h3>
+<p>Unofficial guides latch on in the maze-like medinas of Fez and Marrakech, then expect payment. If you want a guide, arrange one through your riad or a reputable tour operator instead.</p>
+<h3>The broken taxi meter</h3>
+<p>A driver claims the meter is broken to charge a flat, inflated fare. Insist on the meter, or agree the price before you get in.</p>
+<h3>Photo demands and henna</h3>
+<p>Performers in Jemaa el-Fnaa and henna artists may engage you and then demand money. Agree a price before any photo, and keep your hands to yourself around henna sellers.</p>
+
+<!-- IMAGE_SLOT_2: A friendly Moroccan shopkeeper pouring mint tea for visitors -->
+
+<h2>Simple habits that keep you safe</h2>
+<p>The precautions here are the same common-sense ones you'd use in any big city, tuned slightly for Morocco:</p>
+<p>Keep valuables secure and out of sight in crowds — a money belt or a zipped inner pocket beats a back pocket. Use ATMs inside banks and shield your PIN. Stick to bottled water to avoid an upset stomach. Dress modestly, which draws less attention and shows respect. Learn a couple of Arabic or French phrases; a confident "la shukran" ends most unwanted approaches. And trust your instincts — if a situation feels off, step into a shop or cafe and reset.</p>
+
+<h2>Staying healthy</h2>
+<p>The most common thing to actually go wrong on a Morocco trip isn't crime — it's an upset stomach. Stick to bottled or filtered water, including for brushing your teeth if you're sensitive, and be a little cautious with ice and raw salads from unknown kitchens early in your trip. Busy food stalls with high turnover are generally a safer bet than a quiet one where food sits. No vaccines are required to enter from the U.S., though a travel clinic may suggest routine shots plus Hepatitis A and typhoid for food-and-water exposure — worth a conversation before you go. Pack any prescription meds in their original containers, and bring a small kit for the predictable traveler's stomach.</p>
+
+<h2>Getting lost in the medina</h2>
+<p>Every first-timer gets turned around in the medinas of Fez and Marrakech — the lanes twist, dead-end, and aren't signed in any way that helps. This is normal and rarely unsafe, just disorienting. Download an offline map before you go, note a couple of major landmarks or gates near your riad, and don't panic if your phone's blue dot spins uselessly between tall walls. If you're truly stuck, a shopkeeper will usually point you the right way; a child may offer to lead you out for a small tip. It's part of the experience, not a danger.</p>
+
+<h2>Is Morocco safe for solo female travelers?</h2>
+<p>Yes, with awareness. Solo women travel in Morocco all the time and have wonderful trips, but street harassment — comments, unwanted attention — is more common than in the U.S. and can wear on you. Dressing modestly, walking with purpose, sticking to daytime for medina wandering, and staying in well-reviewed riads all help. Many solo travelers also find that a guided desert tour or a day with a local guide makes the busier cities more comfortable. Our guide on <a href="/article/solo-female-travel-morocco">solo female travel in Morocco</a> goes deeper.</p>
+
+<h2>Emergency numbers to save</h2>
+<p>Before you go, save these in your phone. From a mobile, <strong>112</strong> is the universal emergency number. For police in cities, dial <strong>19</strong>; in rural areas, the Gendarmerie is <strong>177</strong>. For an ambulance, call <strong>15</strong>. Major cities also have dedicated tourist police who often speak some English and French.</p>
+
+<h2>The bottom line</h2>
+<p>Morocco is a safe, welcoming country that happens to come with a layer of hustle in its tourist hotspots. Go in expecting warm hospitality punctuated by the occasional tout, keep your wits about you the way you would anywhere, and you'll almost certainly come home with nothing worse than a few funny stories about the guy who swore the souk was closed. For the specific scam playbook, see <a href="/article/morocco-scams-to-avoid">common Morocco scams and how to avoid them</a>.</p>
+
+<section class="feature-faq">
+  <h2>Morocco safety FAQ</h2>
+  <details><summary>Is Morocco safe for American tourists?</summary><div><p>Yes. Violent crime against tourists is rare; the real issues are petty theft and scams, which are easy to avoid with normal precautions.</p></div></details>
+  <details><summary>Is Morocco safe for solo female travelers?</summary><div><p>Generally yes, though street harassment is more common than in the U.S. Dressing modestly, staying in reputable riads, and daytime medina walks all help.</p></div></details>
+  <details><summary>What are the main dangers in Morocco?</summary><div><p>Petty theft in crowds, scams and aggressive touts in tourist areas, and chaotic traffic. Serious crime against visitors is uncommon.</p></div></details>
+  <details><summary>What's the emergency number in Morocco?</summary><div><p>From a mobile, 112 is universal. Police is 19 in cities and 177 (Gendarmerie) in rural areas; ambulance is 15.</p></div></details>
+</section>
+
+
+----- morocco-riads-explained -----
+TITLE: Riads Explained: Where to Stay in Morocco and Why
+
+<p>Ask anyone who's been to Morocco where you should stay, and the answer comes back fast: a riad. For a first-timer it's one of the easiest ways to make a trip feel special — but "riad" is a word most Americans arrive not quite understanding. Here's what a riad actually is, why it's worth it, and how to pick one that fits your trip.</p>
+
+<!-- IMAGE_SLOT_1: Interior courtyard of a traditional Moroccan riad with a central fountain and zellij tilework -->
+
+<h2>What is a riad?</h2>
+<p>A riad is a traditional Moroccan house or palace built inward around a central courtyard or garden, often with a fountain at its heart and rooms opening onto the open-air middle. The design turns its back on the busy street outside — thick walls, few exterior windows — and opens up internally into a calm, tiled, plant-filled sanctuary. Many have been lovingly restored and converted into small guesthouses, typically with just a handful of rooms, a rooftop terrace, and a level of personal attention closer to a bed-and-breakfast than a hotel.</p>
+<p>The magic is the contrast: you step off a chaotic medina lane through an unremarkable door and into a hushed courtyard with a trickling fountain, intricate zellij tilework, and carved cedar. It's a genuinely Moroccan experience you can't really get anywhere else.</p>
+
+<h2>Why stay in a riad?</h2>
+<h3>Location inside the medina</h3>
+<p>Most riads sit inside the old medina, which puts you steps from the souks, squares, and sights — exactly where you want to be, and where cars can't go anyway.</p>
+<h3>Atmosphere and hospitality</h3>
+<p>Small size means personal service: staff who help you plan days, arrange a trusted taxi, or serve mint tea when you arrive. Breakfast on a sunny rooftop terrace overlooking the medina is a standard riad pleasure.</p>
+<h3>A calm base in an intense city</h3>
+<p>Marrakech and Fez can be gloriously overwhelming. Retreating to the quiet of a riad courtyard at the end of the day is what makes the intensity sustainable.</p>
+
+<!-- IMAGE_SLOT_2: Rooftop terrace of a riad set for breakfast overlooking a medina -->
+
+<h2>What to know before you book</h2>
+<p>Riads are wonderful, but a few realities are worth setting expectations around:</p>
+<p>Because they're tucked into the medina maze, riads can be genuinely hard to find on arrival — good ones will arrange to meet you at a car-accessible point and walk you in, so message ahead. Rooms in historic buildings vary; some are small or dark by design, so read recent reviews and look at actual room photos. Not every riad has an elevator or easy luggage access, which matters if stairs are a concern. And while many riads take cards, some smaller ones prefer cash — check when you book.</p>
+
+<h2>What's usually included</h2>
+<p>Most riads include breakfast — often a generous spread of Moroccan breads, pancakes (msemen and beghrir), olives, fresh juice, and mint tea, served on the terrace or in the courtyard. Beyond that, the standout riad extra is service you won't find at a big hotel: staff will book a reliable airport transfer, arrange a trusted local guide, call ahead to a hammam, or even cook a traditional dinner on request with a little notice. Many riads also offer this home-cooked dinner as an option, which is a lovely, low-key first night when you don't want to head back out into the medina. Ask what's on offer when you book — the personal touches are the whole point.</p>
+
+<h2>How much do riads cost?</h2>
+<p>Riads span the full range. A simple, well-run guesthouse in the medina can be genuinely affordable, mid-range riads offer beautiful rooms and rooftop terraces for a comfortable nightly rate, and restored-palace riads climb into luxury territory with plunge pools and spa services. Because the best-reviewed small riads have only a few rooms, they book up — reserve early for peak spring and fall dates. For dollar figures across accommodation tiers, see our <a href="/article/morocco-trip-cost">Morocco trip cost guide</a>.</p>
+
+<h2>Riad or hotel?</h2>
+<p>You don't have to choose one for the whole trip. A common first-timer approach is to stay in riads in the atmospheric cities — Marrakech, Fez, Chefchaouen — where the experience shines, and opt for a modern hotel where it makes more sense, such as near the airport on a travel day, or in Casablanca. Out in the desert, the equivalent experience is a night in a <a href="/article/sahara-desert-camps">Sahara desert camp</a>, and in the mountains it's a kasbah or guesthouse. Matching your lodging to each place is part of the fun.</p>
+
+<h2>How to book a riad</h2>
+<p>Riads across Marrakech, Fez, and beyond are listed on the major booking platforms, which makes it easy to compare courtyards, rooftop terraces, locations, and recent guest reviews in one place. <!-- AFFILIATE_SLOT: hotels (Booking) — natural CTA point: comparing/booking riads --> Filter by medina location and read the latest reviews closely — for riads more than most stays, the recent guest experience tells you what you're really getting. Once you've found one you love, message the property before arrival to arrange the medina meet-up, and you'll start your trip the right way: stepping out of the noise and into your own tiled courtyard.</p>
+
+<h2>Choosing where in the medina</h2>
+<p>Not all medina locations are equal, and it's worth a moment's thought. A riad deep in the heart of the old city is the most atmospheric but the hardest to reach with luggage; one nearer a main gate (a "bab") or a car-accessible edge is easier to get in and out of, especially on arrival and departure days. Light sleepers should check whether a riad sits near a mosque — the pre-dawn call to prayer carries — or above a busy lane. None of this should scare you off a medina stay; it just helps to read reviews with an eye for the practical, not only the pretty. The best riads strike a balance: immersive enough to feel special, reachable enough that day one doesn't start with a suitcase-dragging odyssey.</p>
+<p>For where to base yourself specifically, see our guides to <a href="/article/where-to-stay-marrakech">where to stay in Marrakech</a> and <a href="/article/best-riads-marrakech">the best riads in Marrakech for first-timers</a>.</p>
+
+<section class="feature-faq">
+  <h2>Riad FAQ</h2>
+  <details><summary>What exactly is a riad?</summary><div><p>A traditional Moroccan house built around an interior courtyard or garden, often restored into a small, characterful guesthouse with a rooftop terrace.</p></div></details>
+  <details><summary>Are riads worth it for first-timers?</summary><div><p>Very much so. They put you inside the medina near the sights, offer personal service, and provide a calm retreat from busy cities — a highlight of most first trips.</p></div></details>
+  <details><summary>Are riads expensive?</summary><div><p>They span budgets, from simple guesthouses to lavish restored palaces, so you can find a riad experience at most price points. Book early for the best-reviewed ones.</p></div></details>
+  <details><summary>Is it hard to find a riad in the medina?</summary><div><p>It can be — the medina is a maze. Good riads arrange to meet you at a car-accessible point and walk you in, so message the property before you arrive.</p></div></details>
+</section>

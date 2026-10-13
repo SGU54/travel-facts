@@ -1,0 +1,14 @@
+interface:
+  display_name: Dossier
+  short_description: Guides de voyage vérifiés, utiles et soignés
+  default_prompt: Utilise $dossier pour créer ou améliorer un manuel de voyage payant
+    et sa fiche pratique, avec sources vérifiées et contrôle du PDF.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  allow_implicit_invocation: false
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas

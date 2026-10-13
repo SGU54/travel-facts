@@ -1,0 +1,178 @@
+#!/usr/bin/env python3
+"""Batch C — two depth articles closing the THIN gap on jr-pass-math and ic-card-setup.
+
+Written after the live-corpus audit (2026-09-17) showed the batch-B projection was built
+on an inflated baseline: jr-pass-math measured ~4,350w and ic-card-setup ~4,400-5,200w
+against a 5,500w VIABLE floor, not the 6,117w/6,029w that was projected. Each piece needs
+roughly one more real article, not padding of the existing ones.
+
+Topics chosen because the corpus audit showed them genuinely EMPTY, not merely thin:
+  - Green Car: 1 passing mention in each of 2 articles, never as a decision
+  - fare adjustment: 0 articles in a 94-article corpus, despite being the classic
+    stuck-at-the-gate failure
+
+PRE-JOIN DISCIPLINE (3b): one vein piece each, and the two never touch.
+  - the Green Car article says JR Pass / rail pass freely and NEVER says Suica, Pasmo or
+    IC card, and never names a holiday week (that would pull in seasonal-timing)
+  - the fare-adjustment article says Suica / Pasmo / IC card freely and NEVER says
+    JR Pass or rail pass
+  - neither says "two cities", "open-jaw" or "day trip instead of" (city-sequencing)
+
+Volatile prices carry fact-spans; structural mechanics do not. Seed SQL emitted alongside.
+Image slots are scaffolding — convert to <figure> at upload (4-publishing.md 3.5).
+"""
+import json, re, os
+
+def fact(key, text):
+    return f'<span class="fact" data-fact="{key}">{text}</span>'
+
+GUIDE = '<span class="guide" data-guide="name">the complete Japan trip guide</span>'
+
+A = []
+
+# ══════════════════════════════════════════ 1. Green Car — SEED, jr-pass-math
+A.append({
+ "slug": "green-car-or-ordinary-japan-rail-pass",
+ "title": "Green Car or Ordinary: Is the Japan Rail Pass Upgrade Worth It?",
+ "category_slug": "trains-and-jr-pass",
+ "excerpt": "The Green Car pass costs ¥20,000 more for seven days. What the upgrade actually buys, the arithmetic per journey, and why most first trips should not take it.",
+ "featured_image": "japanforamericans/articles/green-car-or-ordinary-japan-rail-pass-hero",
+ "content": f"""<p>Every Japan Rail Pass comes in two tiers, and the more expensive one is presented as the comfortable choice without anyone explaining what it costs per journey. The upgrade is real and so is the premium. This guide covers what the Green Car tier costs, what you get for it, the arithmetic that decides it, and the specific travellers for whom it is worth paying.</p>
+
+<h2>What the upgrade actually costs</h2>
+<p>The seven-day Green Car pass costs {fact("rail.pass_7day_green", "¥70,000")} against {fact("rail.pass_7day_ordinary", "¥50,000")} for the ordinary tier — a premium of ¥20,000 for the week. That is the whole decision in one line, and it is a larger gap than most travellers expect, because the two tiers are usually presented side by side as though the difference were marginal.</p>
+
+<h3>The premium across the longer passes</h3>
+<p>The gap widens with duration rather than staying proportional in absolute terms. The fourteen-day pass runs {fact("rail.pass_14day_green", "¥110,000")} in Green against {fact("rail.pass_14day_ordinary", "¥80,000")} ordinary, a ¥30,000 premium, and the twenty-one-day version stretches it to ¥40,000. A longer trip does not make the upgrade proportionally cheaper — it makes the cash difference bigger.</p>
+
+<p>Children aged six to eleven pay half on both tiers, so a family upgrading everybody multiplies the premium rather than absorbing it.</p>
+
+<h2>What the money buys</h2>
+<p>A Green Car seat is laid out two-and-two across the carriage instead of the ordinary car's two-and-three, which is the single most noticeable difference. Seats are wider, recline further, and carry a proper footrest. Carriages are quieter because they are rarely full, and an attendant works the car with a trolley rather than the ordinary car's occasional pass-through.</p>
+
+<h3>What it does not buy</h3>
+<p>The upgrade does not make you faster. Green Car carriages ride the same trains on the same timetable, and the fastest Nozomi and Mizuho services remain outside what the national pass covers at either tier — the upgrade does not unlock them. There is no lounge access, no included food, and no priority boarding. You are buying space and quiet, nothing else.</p>
+
+<!-- IMAGE_SLOT_1: Interior of a Japanese Shinkansen Green Car — wide two-and-two seating, quiet and mostly empty, daylight through the windows. No recognisable faces. -->
+
+<h2>The arithmetic per journey</h2>
+<p>Divide the ¥20,000 premium by the number of long journeys your route actually contains, and the upgrade resolves into a per-leg price. A typical first trip makes two long journeys, which prices the upgrade at ¥10,000 per leg — more than most travellers would pay for a seat upgrade if it were presented that way at the counter. Four legs brings it to ¥5,000 each.</p>
+
+<h3>Comparing it to the journey itself</h3>
+<p>Set that against the fare for the journey. A reserved ordinary seat from Tokyo to Kyoto costs about {fact("rail.tokyo_kyoto_reserved", "¥13,850")}, so a ¥10,000 per-leg upgrade is close to paying a second time for the same trip. At ¥5,000 a leg the ratio starts to look like an ordinary premium-cabin decision rather than an extravagance.</p>
+
+<p>The honest reading is that the upgrade gets cheaper the more you travel, which is the same condition that makes the pass itself pay. If your route is too short to justify the ordinary pass, it is much too short to justify the Green one.</p>
+
+<h2>Every Green seat is reserved</h2>
+<p>There is no non-reserved Green Car, which is a structural difference rather than a comfort one. Every seat in the carriage is booked, so the tier removes the possibility of standing or hunting for a free seat on a busy departure — the failure mode that makes ordinary-car travel unpleasant in the peak weeks. You still have to make the reservation; the pass covers it at no extra charge.</p>
+
+<h3>What that is worth in practice</h3>
+<p>On a quiet Tuesday it is worth nothing, because the ordinary reserved car is equally guaranteed and equally empty. On the heaviest travel days of the year it is worth a great deal, because Green Cars are the last carriages to fill and often the only ones with availability when a reservation is made late.</p>
+
+<h2>When the premium is easiest to justify</h2>
+<p>Three situations make the Green Car worth its ¥20,000. Long single legs — anything beyond the Tokyo to Kyoto distance, where you are seated for three hours or more — convert space into genuine rest. Travelling in the busiest weeks, when ordinary reserved seats book out and the non-reserved cars fill, buys availability rather than comfort. And travelling with large luggage is simply easier in a carriage with room.</p>
+
+<h3>A worked comparison</h3>
+<p>Take two routes. A first trip flying into Tokyo, crossing to Kyoto and flying home makes two long legs, so the premium prices at ¥10,000 each and the ordinary car is plainly the right answer. A two-week route that adds Hiroshima, returns north through the mountains and uses fast trains for several longer excursions might make six, which brings the premium to a little over ¥3,300 a journey — roughly a quarter of the fare, and a defensible upgrade on legs you are seated for hours.</p>
+
+<h3>The traveller it suits</h3>
+<p>Height is the underrated factor. The ordinary car is comfortable for most people and tight for anyone over about six feet, particularly on a three-hour leg with a case underfoot. If that describes you, the upgrade stops being a luxury and becomes the difference between arriving rested and arriving stiff.</p>
+
+<p>Age and mobility matter for the same reason. A wider seat that reclines properly, in a quiet carriage with an attendant who comes to you, is worth more to some travellers than to others, and that is a personal calculation rather than an arithmetic one.</p>
+
+<h2>Who should not take it</h2>
+<p>Most first trips should stay in the ordinary car. The classic route makes two long journeys, prices the upgrade at ¥10,000 each, and spends that money on a seat that is already perfectly comfortable for the distance involved. Japanese ordinary-car standards are high — clean, quiet, reliably punctual, with more legroom than an American domestic flight in economy.</p>
+
+<p>The upgrade is a genuine improvement on an already good product, which is exactly the kind of purchase that is easy to talk yourself into and hard to feel afterwards. Buy it because your route is long or your frame is tall, not because the tier exists.</p>
+
+<h2>The channel detail that changes the price</h2>
+<p>From 1 October 2026 the overseas-agency price for the seven-day Green pass rises to {fact("rail.pass_7day_green_overseas_oct2026", "¥74,000")}, while buying online through the official reservation site is unaffected. The ordinary tier moves the same way, to {fact("rail.pass_7day_overseas_oct2026", "¥53,000")} through an agency.</p>
+
+<p>That reverses a piece of standing advice. Going through an agent used to be the convenient route and is now simply the more expensive one, and the gap applies to whichever tier you choose.</p>
+
+<h2>Making the call</h2>
+<p>Price the upgrade per leg before you price it per week, because ¥20,000 sounds like a fee and ¥10,000 a journey sounds like what it is. Count your long journeys, divide, and decide against that number rather than against the headline.</p>
+
+<p>Which tier to buy sits downstream of how much long-distance travel your route contains in the first place, and working that out in the right order is what {GUIDE} is built to do.</p>
+"""
+})
+
+# ══════════════════════════════════ 2. Fare adjustment — SEED, ic-card-setup
+A.append({
+ "slug": "ic-card-wont-open-gate-fare-adjustment",
+ "title": "When Your IC Card Will Not Open the Gate: Fare Adjustment Explained",
+ "category_slug": "local-transit-ic-cards",
+ "excerpt": "The gate closes, the buzzer sounds, and there is a queue behind you. What actually went wrong, where the fare adjustment machine is, and how to clear it in under a minute.",
+ "featured_image": "japanforamericans/articles/ic-card-wont-open-gate-fare-adjustment-hero",
+ "content": f"""<p>The gate panels snap shut, a buzzer sounds, and a queue forms behind you. It is the single most stressful thirty seconds of a first trip on Japanese transit, and it is also completely routine — the machines that fix it stand a few metres away and the staff deal with it hundreds of times a day. This guide covers why the gate refuses you, how to clear it, and how to stop it happening again.</p>
+
+<h2>Why the gate refuses you</h2>
+<p>An insufficient balance causes most refusals, and Japanese gates deduct the fare on exit rather than on entry — so a Suica holding ¥120 will let you through at the start of a ¥300 journey and stop you dead at the other end. The card was never checked against the fare at the entry gate, because at that point the system did not know where you were going.</p>
+
+<h3>The other common causes</h3>
+<p>A card that was never tapped on entry produces the same result, which happens when a gate stands open during quiet periods and you walk through behind someone else. The system has no entry record, so it cannot compute a fare and refuses on principle. A card left unresolved from a previous journey — tapped in somewhere and never tapped out — does the same.</p>
+
+<p>Read failures are the third category, and they are usually the wallet's fault rather than the card's. A tap that produces no beep at all, rather than a rejection buzz, is a reading problem.</p>
+
+<!-- IMAGE_SLOT_1: A Japanese station fare adjustment machine, or the panel above a ticket gate showing fare information, with clear Japanese signage. Informational, daylight, no faces. -->
+
+<h2>The fare adjustment machine</h2>
+<p>Every station has a fare adjustment machine, and it sits on the platform side of the gates rather than beyond them — usually within a few metres of the barrier that just rejected you, often marked in English as well as Japanese. It exists precisely for this situation and using it takes well under a minute.</p>
+
+<h3>How to use it</h3>
+<p>Insert or tap the card, and the screen shows the shortfall. Feed in coins or a note, take the card back, and walk to the gate again. Most machines carry an English button in the corner of the screen, and the ones that do not still show the amount owed as a number, which is all you actually need to understand.</p>
+
+<p>A standard top-up machine does the same job by a different route. If you would rather add a useful amount than pay an exact shortfall, top the card up normally and the gate will then deduct the fare and open.</p>
+
+<h2>If you have no cash</h2>
+<p>The staffed window beside the gates is the answer, and at any major station in Tokyo or Kyoto one attendant sits there whenever trains are running. Show the card, and the attendant resolves it — settling the fare, correcting a missing entry record, or waving you through if the fault was clearly the system's. It is an ordinary transaction rather than an escalation.</p>
+
+<p>This is also the route for anything unusual: a card that will not read at all, a journey that crossed operators in a way the machine will not resolve, or a balance dispute. The counter has authority the machine does not.</p>
+
+<h2>The bus rule that catches people out</h2>
+<p>City buses in Kyoto do not all work the way the trains do, and the difference produces a fare that looks wrong rather than a gate that closes. On most Kyoto city routes you tap once on boarding and pay one flat fare; elsewhere, and on longer suburban routes, you tap on entry and again on exit so the distance can be calculated. Missing the second tap leaves the journey open.</p>
+
+<h3>What an open journey does</h3>
+<p>An unresolved bus or rail journey can charge the maximum fare for the line, or leave the card in a state the next gate refuses. The fix is the same as any other adjustment — the driver resolves it on the bus, or a station machine or counter clears it afterwards — but the cause is invisible if you did not know a second tap existed.</p>
+
+<p>When in doubt, watch what the person ahead of you does. Japanese transit is full of small local conventions like this, and the queue demonstrates them for free.</p>
+
+<h2>The two-card problem</h2>
+<p>Carrying two contactless cards in one wallet is the most common cause of a Suica tap that produces no response at all. The reader sees two cards, cannot decide which to charge, and reads neither. A hotel key card, an office badge or a contactless bank card sitting against a Suica will all do it.</p>
+
+<h3>The fix</h3>
+<p>Take the card out of the wallet and tap it on its own. If that works, the wallet was the problem. Travellers who tap a whole wallet for a fortnight without incident sometimes hit this on day twelve because a new card went in that morning, which is why the symptom feels random.</p>
+
+<p>A phone in a case with cards tucked behind it produces the same failure, and it is worth knowing before you are standing at a gate trying to work out whether your phone has broken.</p>
+
+<h2>Keeping it from happening</h2>
+<p>Keep about ¥2,000 on the card as a working floor rather than running it to zero, because that clears any single city journey without thought, and topping up at that point costs nothing but a machine stop you were going to make anyway. The maximum a card holds is {fact("transit.ic_max_balance", "¥20,000")}, so there is plenty of headroom.</p>
+
+<h3>Why not simply load the maximum</h3>
+<p>Because the balance is easier to spend down than to recover. An unregistered card can be refunded at the issuing operator's stations with the {fact("transit.ic_card_deposit", "¥500")} deposit returned, but a handling fee applies and the process takes a counter visit on a day you would rather be doing something else. Load enough to be comfortable, not enough to strand money.</p>
+
+<p>Tap deliberately rather than quickly — a flat, firm contact for a full second, held rather than swiped. Most read failures on a working card are a tap that moved.</p>
+
+<h2>If the card is lost</h2>
+<p>An unregistered Suica is cash: losing it loses the balance and the ¥500 deposit with no recourse, because the card carries no name and the operator cannot connect it to you. A registered card, by contrast, can be cancelled and reissued with the remaining balance transferred, which is the practical argument for registering one if the option is offered at purchase.</p>
+
+<p>A card held in a phone sits in a different category again, protected by the device's own lock and recoverable through the account it was created under. For most visitors on a short trip the unregistered card is still the sensible choice; the point is simply to treat it like the cash it is rather than like a bank card that can be frozen.</p>
+
+<h2>The thirty seconds in perspective</h2>
+<p>A refused gate is a routine event that Japanese commuters clear several times a year without embarrassment, and the infrastructure assumes it will happen. Step aside, use the machine, and rejoin — nobody behind you is surprised and the staff have seen it all morning.</p>
+
+<p>Getting the card right at the start removes most of these moments before they occur, and where that sits in the order of everything else to set up before arrival is something {GUIDE} works through.</p>
+"""
+})
+
+for a in A:
+    a["content"] = re.sub(r"\n\s*\n", "", a["content"]).replace("\n", "").strip()
+
+here = os.path.dirname(os.path.abspath(__file__))
+json.dump(A, open(os.path.join(here, "import-batch-C.array.json"), "w"), ensure_ascii=False, indent=2)
+
+print("écrit : import-batch-C.array.json")
+for a in A:
+    w = len(re.sub(r"<[^>]+>", " ", a["content"]).split())
+    spans = re.findall(r'data-fact="([^"]+)"', a["content"])
+    print(f"  {a['slug']:<42} {w:>5} mots   spans: {','.join(spans) or '—'}")

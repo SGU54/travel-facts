@@ -1,0 +1,42 @@
+{
+  "project": "japanforamericans",
+  "title": "Japan, Worked Out.",
+  "brand_name": "Washi Crest",
+  "note": "Print palette derived 2026-09-17 from the site's «Washi Crest» identity (aizome indigo + antique gold + sakura on warm washi). NOT lifted verbatim: the site's --indigo #1e3a78 is a screen blue and goes flat as ink at small sizes, so the book's accent is deepened and very slightly warmed. Fonts differ from the site by design — the book runs Zen Old Mincho for display because it carries BOTH Latin and Japanese glyphs in one design, which matters in a book that prints 出口 and ¥ alongside English. Japanese fallback is Hiragino Mincho ProN (macOS system).",
+  "palette": {
+    "paper": "#F5EFE1",
+    "ink": "#242A33",
+    "accent": "#1B3670",
+    "gilt": "#B89547",
+    "muted": "#5C6068",
+    "soft": "#8A8E97",
+    "line": "#E1D7C2",
+    "line_soft": "#EBE3D3",
+    "zone": "#EAE2D0",
+    "stone": "#E4DAC6",
+    "deep": "#16305F",
+    "sakura": "#C87F94",
+    "water": "#CBD6E0"
+  },
+  "derivation": {
+    "paper": "site --washi #f4eee2 → #F5EFE1 · warmed a touch; washi stock reads warmer on paper than on a backlit screen",
+    "ink": "site --ink #23262d → #242A33 · lifted and cooled slightly; a near-black that dark closes up in ink on a cream sheet",
+    "accent": "site --indigo #1e3a78 → #1B3670 · deepened; aizome indigo is the identity and a screen-weight blue dies at small sizes and low coverage",
+    "gilt": "site --gold #be9a43 → #B89547 · softened; screen gold is harsh on a cream stock",
+    "sakura": "site --sakura #d98aa0 → #C87F94 · desaturated; used ONLY as the seasonal accent, never as a second brand colour",
+    "line": "site --line #e3d9c4 → #E1D7C2 · near-identical, warm hairlines already work in print",
+    "muted": "site --ink-soft #5a5e68 → #5C6068 · unchanged in character; caption and label grey"
+  },
+  "fonts": {
+    "display": "Zen Old Mincho",
+    "display_note": "carries Latin AND Japanese in one design — chosen so 出口 beside English does not shift register",
+    "body": "Spectral",
+    "body_note": "low-contrast Latin book face; prints cleanly at 13px on warm stock",
+    "mono": "IBM Plex Mono",
+    "jp_fallback": "Hiragino Mincho ProN",
+    "local": "all Latin faces are local woff2 under build/fonts/ with local-fonts.css — never base64 (bug log #34)"
+  },
+  "page": { "size": "8.5x11in", "margin": "0.85in", "viewport": "816x1056" },
+  "audience": "first-time American visitors",
+  "price_band": "USD 29-39"
+}

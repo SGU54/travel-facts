@@ -1,0 +1,6 @@
+{
+  "_README": "Accumulated local ground truth for turkeyforamericans. Every entry OVERRIDES facts.json and any AI output, permanently (hard rule 8). Stage 3 MUST load this alongside facts.json before writing any batch.",
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "corrections": []
+}

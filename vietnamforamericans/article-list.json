@@ -1,0 +1,1164 @@
+{
+  "schema_version": 4,
+  "project": "vietnamforamericans",
+  "swamps": [
+    {
+      "id": "north-south-routing",
+      "name": "Flight, train, or a mix for Hanoi-to-HCMC, and in which order",
+      "one_liner": "The country is 1,650km long and nobody has time to see it all; the wrong direction or mode burns a full travel day."
+    },
+    {
+      "id": "halong-bay-cruise-choice",
+      "name": "Day trip vs. overnight cruise, and which operator",
+      "one_liner": "The boat you pick is also a safety decision, not just a budget one — real incidents have happened on the cheapest operators."
+    },
+    {
+      "id": "visa-choice",
+      "name": "E-visa, visa exemption, or visa-on-arrival, and for how many days",
+      "one_liner": "Getting this wrong can mean being turned away at the gate, not just a paperwork headache."
+    },
+    {
+      "id": "motorbike-or-driver",
+      "name": "Rent and ride yourself, hire a driver, or skip it",
+      "one_liner": "Vietnam's roads are genuinely dangerous for a first-timer, but also central to the classic trip (the Hai Van Pass, the countryside)."
+    },
+    {
+      "id": "long-leg-transport",
+      "name": "Sleeper train, sleeper bus, or a short flight for the long legs",
+      "one_liner": "Comfort, cost, and real scam/quality risk on the cheapest sleeper buses."
+    },
+    {
+      "id": "mekong-day-vs-overnight",
+      "name": "A rushed day trip from Saigon vs. a multi-day homestay",
+      "one_liner": "The Mekong Delta is one of the most commonly regretted bookings in the country when done as a rushed day trip."
+    },
+    {
+      "id": "cash-vs-card",
+      "name": "How much cash to carry, and where cards quietly stop working",
+      "one_liner": "Still a cash-heavy country outside the big cities; the wrong assumption leaves you stuck."
+    },
+    {
+      "id": "hoian-base-choice",
+      "name": "Hoi An Ancient Town, An Bang Beach, or Da Nang city",
+      "one_liner": "Three completely different trips wearing the same 'Hoi An/Da Nang' label."
+    },
+    {
+      "id": "sapa-trek-choice",
+      "name": "Independent trekking vs. a guided homestay tour in Sapa",
+      "one_liner": "A real ethical and financial layer: unlicensed guides, high-pressure sales, and treks that oversell the experience."
+    },
+    {
+      "id": "tet-timing",
+      "name": "Traveling during Tet (Lunar New Year) vs. timing around it",
+      "one_liner": "Much of the country closes for up to a week and prices spike; not knowing this can wreck a trip's logistics."
+    }
+  ],
+  "articles": [
+    {
+      "title": "Do Americans Need a Visa for Vietnam?",
+      "slug": "do-americans-need-a-visa-for-vietnam",
+      "category_slug": "entry-and-visa",
+      "swamp": "visa-choice",
+      "handoff": "turn",
+      "role": "entry",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Spine role: entry. Mandatory regardless of SERP outcome."
+      }
+    },
+    {
+      "title": "Vietnam E-Visa: How to Apply Step by Step",
+      "slug": "vietnam-evisa-how-to-apply",
+      "category_slug": "entry-and-visa",
+      "swamp": "visa-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Supports the entry spine page; mandatory mechanics the audience needs before booking."
+      }
+    },
+    {
+      "title": "Vietnam Visa Extension Guide",
+      "slug": "vietnam-visa-extension-guide",
+      "category_slug": "entry-and-visa",
+      "swamp": "visa-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Niche but necessary completeness for the entry/visa cluster; low priority, written late."
+      }
+    },
+    {
+      "title": "Vietnam Customs and Duty-Free Rules",
+      "slug": "vietnam-customs-and-duty-free-rules",
+      "category_slug": "entry-and-visa",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Time to Visit Vietnam",
+      "slug": "best-time-to-visit-vietnam",
+      "category_slug": "best-time-to-visit",
+      "swamp": "none",
+      "handoff": "none",
+      "role": "season",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Spine role: season. Mandatory."
+      }
+    },
+    {
+      "title": "Vietnam Weather by Region and Month",
+      "slug": "vietnam-weather-by-region-and-month",
+      "category_slug": "best-time-to-visit",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Traveling Vietnam During Tet (Lunar New Year)",
+      "slug": "traveling-vietnam-during-tet",
+      "category_slug": "best-time-to-visit",
+      "swamp": "tet-timing",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnam Festivals Calendar Beyond Tet",
+      "slug": "vietnam-festivals-calendar",
+      "category_slug": "best-time-to-visit",
+      "swamp": "tet-timing",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "What to Pack for Vietnam",
+      "slug": "what-to-pack-for-vietnam",
+      "category_slug": "best-time-to-visit",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnam Money and Costs for Americans",
+      "slug": "vietnam-money-and-costs",
+      "category_slug": "money-and-costs",
+      "swamp": "cash-vs-card",
+      "handoff": "turn",
+      "role": "money",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Tipping in Vietnam: A Practical Guide",
+      "slug": "tipping-in-vietnam",
+      "category_slug": "money-and-costs",
+      "swamp": "cash-vs-card",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Is Vietnam Safe for Americans?",
+      "slug": "is-vietnam-safe-for-americans",
+      "category_slug": "safety-and-health",
+      "swamp": "motorbike-or-driver",
+      "handoff": "seed",
+      "role": "safety",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Spine role: safety. Mandatory."
+      }
+    },
+    {
+      "title": "Vietnam for Solo Female Travelers",
+      "slug": "vietnam-for-solo-female-travelers",
+      "category_slug": "safety-and-health",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnam Health and Vaccines for Travelers",
+      "slug": "vietnam-health-and-vaccines",
+      "category_slug": "safety-and-health",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "eSIM and Connectivity in Vietnam",
+      "slug": "esim-and-connectivity-vietnam",
+      "category_slug": "connectivity",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnam Etiquette for Americans",
+      "slug": "vietnam-etiquette-for-americans",
+      "category_slug": "etiquette-and-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnamese Language: Useful Phrases for Travelers",
+      "slug": "vietnamese-language-useful-phrases",
+      "category_slug": "etiquette-and-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Getting to Vietnam: Flights from the US",
+      "slug": "flights-to-vietnam-from-us",
+      "category_slug": "flights-trains",
+      "swamp": "north-south-routing",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnam Airport Guide: Hanoi, Saigon, Da Nang",
+      "slug": "vietnam-airport-guide",
+      "category_slug": "flights-trains",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "How to Ride the Reunification Express Train",
+      "slug": "reunification-express-train-guide",
+      "category_slug": "flights-trains",
+      "swamp": "north-south-routing",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Domestic Flights in Vietnam: Routes and Airlines",
+      "slug": "domestic-flights-vietnam",
+      "category_slug": "flights-trains",
+      "swamp": "north-south-routing",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Sleeper Bus vs Sleeper Train in Vietnam",
+      "slug": "sleeper-bus-vs-sleeper-train-vietnam",
+      "category_slug": "buses-sleeper-buses",
+      "swamp": "long-leg-transport",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Renting a Motorbike in Vietnam: What to Know",
+      "slug": "renting-a-motorbike-in-vietnam",
+      "category_slug": "motorbikes-scooters",
+      "swamp": "motorbike-or-driver",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Hiring a Driver vs Riding Yourself in Vietnam",
+      "slug": "hiring-a-driver-vs-self-drive-vietnam",
+      "category_slug": "motorbikes-scooters",
+      "swamp": "motorbike-or-driver",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Grab App in Vietnam: How It Works",
+      "slug": "grab-app-vietnam-guide",
+      "category_slug": "grab-taxis",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "R3: Grab's own app/site is the obvious canonical source for how the app works. Likely survives if angled as 'what Grab doesn't tell you' (payment methods, surge pricing, airport pickup points) rather than duplicating the app's own FAQ."
+      }
+    },
+    {
+      "title": "Crossing the Street in Vietnam (Hanoi/HCMC Traffic)",
+      "slug": "crossing-the-street-in-vietnam",
+      "category_slug": "grab-taxis",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Overland Border Crossings: Vietnam to Cambodia and Laos",
+      "slug": "overland-border-crossings-vietnam",
+      "category_slug": "flights-trains",
+      "swamp": "north-south-routing",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnam Itinerary: One Week",
+      "slug": "vietnam-itinerary-7-days",
+      "category_slug": "one-week",
+      "swamp": "north-south-routing",
+      "handoff": "turn",
+      "role": "route",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Spine role: route. The flagship conversion page; mandatory despite the R1 pattern."
+      }
+    },
+    {
+      "title": "Vietnam Itinerary for First-Timers",
+      "slug": "vietnam-itinerary-first-timers",
+      "category_slug": "one-week",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "Duplicate intent with vietnam-itinerary-7-days (the flagship route article); R1 itinerary-flagged with no distinct angle. Merge into the 7-day guide instead."
+      }
+    },
+    {
+      "title": "Vietnam Itinerary: 10 Days",
+      "slug": "vietnam-itinerary-10-days",
+      "category_slug": "two-weeks-plus",
+      "swamp": "north-south-routing",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 itinerary-flagged; redundant third itinerary-length variant alongside the 7-day (route) and 14-day structural pages — tripling down on a rule-flagged pattern adds no distinct value."
+      }
+    },
+    {
+      "title": "Vietnam Itinerary: Two Weeks",
+      "slug": "vietnam-itinerary-14-days",
+      "category_slug": "two-weeks-plus",
+      "swamp": "north-south-routing",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Second most-searched real trip length for this audience (per competitor nav review); kept as the one additional itinerary length, the other variants cut."
+      }
+    },
+    {
+      "title": "Vietnam Itinerary: Three Weeks",
+      "slug": "vietnam-itinerary-3-weeks",
+      "category_slug": "two-weeks-plus",
+      "swamp": "north-south-routing",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 itinerary-flagged; redundant itinerary-length variant, same reasoning as the 10-day cut."
+      }
+    },
+    {
+      "title": "North to South or South to North: Which Way to Travel Vietnam",
+      "slug": "north-to-south-or-south-to-north-vietnam",
+      "category_slug": "north-south-route",
+      "swamp": "north-south-routing",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnam and Cambodia: A Combined Itinerary",
+      "slug": "vietnam-and-cambodia-combined-itinerary",
+      "category_slug": "north-south-route",
+      "swamp": "north-south-routing",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Distinct cross-border intent, likely lower competition than a pure Vietnam itinerary, but unmeasured — one SERP look before committing writing time."
+      }
+    },
+    {
+      "title": "Vietnam Itinerary for Families",
+      "slug": "vietnam-itinerary-for-families",
+      "category_slug": "north-south-route",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Distinct audience angle (pacing, kid-friendly stops) but still R1 itinerary-shaped — check actual family-travel-Vietnam SERP before committing."
+      }
+    },
+    {
+      "title": "Hanoi Travel Guide for First-Timers",
+      "slug": "hanoi-travel-guide-first-timers",
+      "category_slug": "hanoi",
+      "swamp": "none",
+      "handoff": "none",
+      "role": "anchor",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Spine role: anchor. Mandatory gateway-city guide."
+      }
+    },
+    {
+      "title": "Best Things to Do in Hanoi",
+      "slug": "best-things-to-do-in-hanoi",
+      "category_slug": "hanoi",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Core per-region overview; needed for site completeness regardless of ranking."
+      }
+    },
+    {
+      "title": "Where to Stay in Hanoi",
+      "slug": "where-to-stay-in-hanoi",
+      "category_slug": "stay-hanoi",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Core first-timer need per region; cannot be skipped even if it won't rank."
+      }
+    },
+    {
+      "title": "Hanoi Old Quarter Guide",
+      "slug": "hanoi-old-quarter-guide",
+      "category_slug": "hanoi",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Getting Around Hanoi",
+      "slug": "getting-around-hanoi",
+      "category_slug": "hanoi",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Day Trips from Hanoi",
+      "slug": "day-trips-from-hanoi",
+      "category_slug": "hanoi",
+      "swamp": "halong-bay-cruise-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Hanoi Water Puppet Show Guide",
+      "slug": "hanoi-water-puppet-show-guide",
+      "category_slug": "hanoi",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Train Street Hanoi: What to Know Before You Go",
+      "slug": "train-street-hanoi-guide",
+      "category_slug": "hanoi",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Ha Long Bay Day Trip vs Overnight Cruise",
+      "slug": "halong-bay-day-trip-vs-overnight-cruise",
+      "category_slug": "halong-bay-sapa",
+      "swamp": "halong-bay-cruise-choice",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Ha Long Bay Cruise Operators",
+      "slug": "best-halong-bay-cruise-operators",
+      "category_slug": "halong-bay-sapa",
+      "swamp": "halong-bay-cruise-choice",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Turn handoff on halong-bay-cruise-choice — a real safety-and-money swamp; written regardless of SERP odds."
+      }
+    },
+    {
+      "title": "Ninh Binh Day Trip from Hanoi (Tam Coc and Trang An)",
+      "slug": "ninh-binh-day-trip-from-hanoi",
+      "category_slug": "halong-bay-sapa",
+      "swamp": "halong-bay-cruise-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Cat Ba Island Guide",
+      "slug": "cat-ba-island-guide",
+      "category_slug": "halong-bay-sapa",
+      "swamp": "halong-bay-cruise-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Sapa Trekking Guide",
+      "slug": "sapa-trekking-guide",
+      "category_slug": "nature-trekking",
+      "swamp": "sapa-trek-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Sapa Homestay vs Day Trek",
+      "slug": "sapa-homestay-vs-day-trek",
+      "category_slug": "nature-trekking",
+      "swamp": "sapa-trek-choice",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Where to Stay in Sapa",
+      "slug": "where-to-stay-in-sapa",
+      "category_slug": "nature-trekking",
+      "swamp": "sapa-trek-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Core first-timer need; also seeds the sapa-trek-choice swamp."
+      }
+    },
+    {
+      "title": "Getting from Hanoi to Sapa",
+      "slug": "getting-from-hanoi-to-sapa",
+      "category_slug": "halong-bay-sapa",
+      "swamp": "long-leg-transport",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Time to Trek in Sapa",
+      "slug": "best-time-to-trek-in-sapa",
+      "category_slug": "nature-trekking",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Overlaps best-time-to-visit-vietnam at a sub-level; genuinely distinct trekking-season question but R1-flagged ('best') — check before committing."
+      }
+    },
+    {
+      "title": "Ho Chi Minh City Travel Guide for First-Timers",
+      "slug": "ho-chi-minh-city-travel-guide",
+      "category_slug": "ho-chi-minh-city",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "The other major gateway city; mandatory first-timer guide."
+      }
+    },
+    {
+      "title": "Best Things to Do in Ho Chi Minh City",
+      "slug": "best-things-to-do-in-hcmc",
+      "category_slug": "ho-chi-minh-city",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Core per-region overview."
+      }
+    },
+    {
+      "title": "Where to Stay in Ho Chi Minh City",
+      "slug": "where-to-stay-in-hcmc",
+      "category_slug": "stay-hcmc",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Core first-timer need per region."
+      }
+    },
+    {
+      "title": "War Remnants Museum and Cu Chi Tunnels Guide",
+      "slug": "war-remnants-museum-cu-chi-tunnels",
+      "category_slug": "temples-history-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Narrow/specific despite the 'museum' trigger (like Japan's tattoos-and-onsen precedent — narrow was refused too). Check before assuming narrow survives here."
+      }
+    },
+    {
+      "title": "Getting Around Ho Chi Minh City",
+      "slug": "getting-around-ho-chi-minh-city",
+      "category_slug": "ho-chi-minh-city",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Ben Thanh Market Guide",
+      "slug": "ben-thanh-market-guide",
+      "category_slug": "ho-chi-minh-city",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Ho Chi Minh City Nightlife Guide",
+      "slug": "ho-chi-minh-city-nightlife-guide",
+      "category_slug": "ho-chi-minh-city",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Rooftop Bars in Ho Chi Minh City",
+      "slug": "best-rooftop-bars-in-ho-chi-minh-city",
+      "category_slug": "ho-chi-minh-city",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 commodity noun (rooftop/bars) — TimeOut/TripAdvisor-owned SERP, no structural need."
+      }
+    },
+    {
+      "title": "Mekong Delta Day Trip vs Multi-Day Tour",
+      "slug": "mekong-delta-day-trip-vs-multi-day-tour",
+      "category_slug": "mekong-delta",
+      "swamp": "mekong-day-vs-overnight",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Mekong Delta Homestay Tours",
+      "slug": "best-mekong-delta-homestay-tours",
+      "category_slug": "mekong-delta",
+      "swamp": "mekong-day-vs-overnight",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Turn handoff on mekong-day-vs-overnight — a real, commonly-regretted-decision swamp."
+      }
+    },
+    {
+      "title": "Can Tho Floating Market Guide",
+      "slug": "can-tho-floating-market-guide",
+      "category_slug": "mekong-delta",
+      "swamp": "mekong-day-vs-overnight",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Chau Doc and the Cambodia Border Crossing",
+      "slug": "chau-doc-cambodia-border-crossing",
+      "category_slug": "mekong-delta",
+      "swamp": "north-south-routing",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Hoi An Ancient Town vs An Bang Beach vs Da Nang: Where to Base Yourself",
+      "slug": "hoian-vs-anbang-vs-danang-where-to-base",
+      "category_slug": "hoi-an-da-nang",
+      "swamp": "hoian-base-choice",
+      "handoff": "turn",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "R2 flags this as place-vs-place (structurally a losing shape), but it answers the hoian-base-choice swamp directly — written and marked structural rather than dropped."
+      }
+    },
+    {
+      "title": "Hoi An Travel Guide",
+      "slug": "hoi-an-travel-guide",
+      "category_slug": "hoi-an-da-nang",
+      "swamp": "hoian-base-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Da Nang Travel Guide",
+      "slug": "da-nang-travel-guide",
+      "category_slug": "hoi-an-da-nang",
+      "swamp": "hoian-base-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Where to Stay in Hoi An and Da Nang",
+      "slug": "where-to-stay-hoian-danang",
+      "category_slug": "stay-hoian-danang",
+      "swamp": "hoian-base-choice",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Core first-timer need per region; also seeds the hoian-base-choice swamp."
+      }
+    },
+    {
+      "title": "Hoi An Tailors: How to Order Custom Clothes",
+      "slug": "hoi-an-tailors-how-to-order",
+      "category_slug": "hoi-an-da-nang",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Hai Van Pass Guide",
+      "slug": "hai-van-pass-guide",
+      "category_slug": "hoi-an-da-nang",
+      "swamp": "motorbike-or-driver",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Ba Na Hills Golden Bridge Guide",
+      "slug": "ba-na-hills-golden-bridge-guide",
+      "category_slug": "hoi-an-da-nang",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "R3: Sun World (the attraction operator) owns its own ticketing/info SERP. Check whether it actually answers the traveler's planning question or only sells the ticket."
+      }
+    },
+    {
+      "title": "Marble Mountains Guide",
+      "slug": "marble-mountains-guide",
+      "category_slug": "hoi-an-da-nang",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "My Son Sanctuary Guide",
+      "slug": "my-son-sanctuary-guide",
+      "category_slug": "temples-history-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Hue Travel Guide",
+      "slug": "hue-travel-guide",
+      "category_slug": "hue",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Hue Imperial City Guide",
+      "slug": "hue-imperial-city-guide",
+      "category_slug": "temples-history-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Hue to Hoi An: Train, Car, or the Hai Van Pass",
+      "slug": "hue-to-hoian-how-to-travel",
+      "category_slug": "hue",
+      "swamp": "long-leg-transport",
+      "handoff": "seed",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "DMZ and Vinh Moc Tunnels Tour from Hue",
+      "slug": "dmz-vinh-moc-tunnels-tour-from-hue",
+      "category_slug": "hue",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Phu Quoc Travel Guide",
+      "slug": "phu-quoc-travel-guide",
+      "category_slug": "nha-trang-phu-quoc",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Nha Trang Travel Guide",
+      "slug": "nha-trang-travel-guide",
+      "category_slug": "nha-trang-phu-quoc",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Beach Resorts in Phu Quoc",
+      "slug": "best-beach-resorts-in-phu-quoc",
+      "category_slug": "beach-resorts",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 commodity noun (resort) — Booking/TripAdvisor-owned SERP."
+      }
+    },
+    {
+      "title": "Phu Quoc vs Nha Trang: Which Beach to Choose",
+      "slug": "phu-quoc-vs-nha-trang-which-beach",
+      "category_slug": "nha-trang-phu-quoc",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R2 place-vs-place comparison — matches the santorini-vs-mykonos losing shape exactly."
+      }
+    },
+    {
+      "title": "Con Dao Islands Guide",
+      "slug": "con-dao-islands-guide",
+      "category_slug": "nha-trang-phu-quoc",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Mui Ne Guide: Sand Dunes and Kitesurfing",
+      "slug": "mui-ne-guide",
+      "category_slug": "nha-trang-phu-quoc",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnamese Food Guide for First-Timers",
+      "slug": "vietnamese-food-guide-first-timers",
+      "category_slug": "dishes-what-to-order",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "STRUCTURAL",
+        "reason": "Core plan-your-trip completeness; broad/competitive but necessary site furniture."
+      }
+    },
+    {
+      "title": "Pho vs Bun Cha vs Banh Mi: What to Order",
+      "slug": "pho-bun-cha-banh-mi-what-to-order",
+      "category_slug": "dishes-what-to-order",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Street Food Safety in Vietnam",
+      "slug": "street-food-safety-vietnam",
+      "category_slug": "street-food-markets",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Street Food Tours in Hanoi and Saigon",
+      "slug": "best-street-food-tours-hanoi-saigon",
+      "category_slug": "street-food-markets",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 commodity noun (best...tours) — Viator/GetYourGuide-owned SERP; redirect this intent into an affiliate tour slot, not a ranking page."
+      }
+    },
+    {
+      "title": "Vietnamese Coffee Guide: Egg Coffee and Ca Phe Sua Da",
+      "slug": "vietnamese-coffee-guide",
+      "category_slug": "coffee-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Bia Hoi Guide: Vietnam's Street Beer",
+      "slug": "bia-hoi-guide-vietnam",
+      "category_slug": "coffee-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vegetarian and Vegan Food in Vietnam",
+      "slug": "vegetarian-vegan-food-vietnam",
+      "category_slug": "vegetarian-dietary-needs",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnamese Dessert Guide (Che and More)",
+      "slug": "vietnamese-dessert-guide",
+      "category_slug": "dishes-what-to-order",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Vietnamese Cooking Ingredients to Bring Home",
+      "slug": "vietnamese-cooking-ingredients-to-bring-home",
+      "category_slug": "dishes-what-to-order",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Beaches and Islands in Vietnam",
+      "slug": "best-beaches-islands-vietnam",
+      "category_slug": "beaches-islands",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 commodity noun (beaches) — generic superlative, TripAdvisor-owned."
+      }
+    },
+    {
+      "title": "Vietnam Temples and Pagodas Guide",
+      "slug": "vietnam-temples-pagodas-guide",
+      "category_slug": "temples-history-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Cooking Classes in Vietnam",
+      "slug": "best-cooking-classes-vietnam",
+      "category_slug": "food-tours-cooking-classes",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 commodity noun (best...classes) — Viator-owned SERP."
+      }
+    },
+    {
+      "title": "Best National Parks and Treks in Vietnam",
+      "slug": "best-national-parks-treks-vietnam",
+      "category_slug": "nature-trekking",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 commodity noun (best) — generic superlative, Lonely-Planet-owned."
+      }
+    },
+    {
+      "title": "Vietnam War History Sites Guide",
+      "slug": "vietnam-war-history-sites-guide",
+      "category_slug": "temples-history-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    },
+    {
+      "title": "Best Markets in Vietnam",
+      "slug": "best-markets-in-vietnam",
+      "category_slug": "street-food-markets",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 commodity noun (markets, best) — generic superlative, no structural need (named markets covered individually instead)."
+      }
+    },
+    {
+      "title": "Best Photography Spots in Vietnam",
+      "slug": "best-photography-spots-in-vietnam",
+      "category_slug": "beaches-islands",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R1 commodity noun (best) — generic superlative, low structural and commercial value."
+      }
+    },
+    {
+      "title": "SIM Card vs eSIM in Vietnam: Which to Choose",
+      "slug": "sim-card-vs-esim-vietnam",
+      "category_slug": "connectivity",
+      "swamp": "none",
+      "handoff": "none",
+      "opportunity": {
+        "verdict": "PRODUCE",
+        "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
+      }
+    }
+  ]
+}

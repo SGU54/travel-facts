@@ -1,0 +1,303 @@
+SECOND GATE — Japan travel articles for an AMERICAN audience. Two separate jobs below.
+Answer BOTH, clearly separated. Be blunt; this is a paid product and flattery costs money.
+
+=========================================================================
+JOB 1 — IN-CONTEXT ERRORS ONLY
+=========================================================================
+Hunt ONLY for internal contradictions and drift:
+  - a date or range that contradicts a later sentence in the same or another article
+  - a figure stated two different ways across the two articles
+  - a claim that reads wrong inside its own paragraph
+  - a recommendation that drifts from the FACT SHEET below
+
+Do NOT rewrite for style. Do NOT suggest additions. Do NOT flag something as wrong merely
+because it is absent from the fact sheet — absence is not contradiction.
+
+IMPORTANT: the fact sheet may itself be stale. If an article states something you believe is
+CURRENT and the sheet disagrees, say so explicitly and say which you think is out of date.
+Do not simply tell me to revert to the sheet.
+
+=========================================================================
+JOB 2 — PULL x TRUST SCORING
+=========================================================================
+Score each article's handoff to a paid guide. 0-100 on each axis, WITH the failing reason.
+
+PULL — does the article make the reader SEE the swamp?
+  - a genuine turn exists (not a tacked-on call to action)
+  - a real stake is named (something that actually goes wrong)
+  - a CONNECTION TO OTHER DECISIONS is revealed (not a restatement of the article)
+  - the handoff points at the guide's SYSTEM, not "the answer is inside"
+
+TRUST — is it honest and proportional?
+  - the reader's original question is FULLY answered BEFORE any handoff
+    (a withheld answer is an automatic 0)
+  - the swamp is real — an expert would nod — not manufactured or inflated
+  - intensity matches the tag (a heavy turn on a light page fails here)
+  - no fear-words, no false urgency
+  - the guide is mentioned once, twice at most, never a drumbeat
+
+Articles tagged `turn` get BOTH axes. Articles tagged `seed` get TRUST ONLY — a seed is a
+single sentence with no turn to score, so Pull structurally does not apply.
+
+=========================================================================
+JOB 2b — CALIBRATION (do this FIRST, before scoring the real articles)
+=========================================================================
+Score these four deliberately-shaped samples. They exist to test whether your scoring is
+calibrated. Expected verdicts are stated; tell me if you disagree with any of them.
+
+SAMPLE 1 — a proper turn. Expected: PASS both axes.
+  "[Full answer to the article's question given first.] Notice what happened across all of
+   this. The bloom window sets your booking deadline, which fixes how far ahead you commit to
+   rooms, which constrains which cities you can base yourself in. Chasing the blossom decides
+   four or five other things about the trip, six months before you travel. Working out how
+   those fit together is what the complete Japan trip guide is built to do."
+
+SAMPLE 2 — the same article with urgency cranked and the answer teased.
+  Expected: high PULL, TRUST FAIL.
+  "Most travellers get cherry blossom season catastrophically wrong and waste thousands. The
+   real bloom dates are not what the forecasts tell you. Do NOT book anything until you have
+   read the complete Japan trip guide — the answer is inside, and without it your trip is a
+   coin flip."
+
+SAMPLE 3 — the raw article with no handoff at all. Expected: high TRUST, PULL FAIL.
+  "[Full answer to the article's question given first.] Late April, once the petals have gone
+   from the main cities, is one of the most pleasant stretches of the Japanese year and
+   noticeably cheaper."
+
+SAMPLE 4 — a heavy turn bolted onto a broad top-of-funnel page.
+  Expected: proportionality TRUST FAIL.
+  "[A general 'what is Obon' explainer.] But Obon is only one node in a web of connected
+   decisions that will make or break your trip. Every choice you make cascades. The complete
+   Japan trip guide maps the whole system, and without it you are planning blind."
+
+If SAMPLE 2 clears TRUST 80, your scoring is miscalibrated — tell me so rather than scoring
+the real articles.
+
+
+=========================================================================
+FACT SHEET (the only permitted source of facts)
+=========================================================================
+
+{
+ "depth_facts.rail_passes": {
+  "national_pass_variants": {
+   "value": "Ordinary: 7-day ¥50,000 / 14-day ¥80,000 / 21-day ¥100,000. Green: 7-day ¥70,000 / 14-day ¥110,000 / 21-day ¥140,000. Child (6-11) half price.",
+   "source_url": "https://japanrailpass.net/en/purchase/price/",
+   "status": "verified",
+   "notes": "Fetched from the official price page 2026-09-16 and confirmed exactly, including child fares at half price. These are the prices valid through 30 September 2026."
+  },
+  "national_pass_price_change_2026": {
+   "value": "From 1 October 2026 the OVERSEAS-AGENCY prices rise: 7-day ordinary ¥53,000, 14-day ¥84,000, 21-day ¥105,000; Green ¥74,000 / ¥116,000 / ¥147,000. Buying online through the official reservation site is NOT affected and stays at the current prices.",
+   "source_url": "https://japanrailpass.net/en/purchase/price/",
+   "status": "verified",
+   "notes": "CONFIRMED on the official page 2026-09-16, two weeks before it takes effect. deepseek had the ¥53,000 figure, grok had the overseas-agency scope — each was right about half. The channel distinction is the story: from 1 October, buying online is cheaper than buying through an agent, which reverses the old advice."
+  },
+  "nozomi_mizuho_rule": {
+   "value": "Nozomi and Mizuho, the fastest Tokaido/Sanyo services, are not covered by the national pass. Holders may ride them by buying a separate supplement ticket (reported around ¥4,960 Tokyo-Kyoto). The slower Hikari, Sakura and Kodama services on the same lines are fully covered.",
+   "source_url": "https://japanrailpass.net/",
+   "status": "verify_recommended",
+   "notes": "All three agree on the rule. The supplement figure comes from deepseek alone — verify separately."
+  },
+  "tokyo_kyoto_one_way_cost": {
+   "value": "Ordinary car, one way Tokyo to Kyoto: non-reserved about ¥13,320; reserved on Hikari/Kodama about ¥13,850; reserved on Nozomi about ¥14,170. Varies slightly by season.",
+   "source_url": "https://global.jr-central.co.jp/",
+   "status": "verify_recommended",
+   "notes": "grok's breakdown, consistent with claude's ~¥14,000 estimate. Use the Hikari reserved figure for pass comparisons, since Nozomi is not covered."
+  }
+ },
+ "depth_facts.ic_cards": {
+  "card_types_and_interop": {
+   "value": "Suica (JR East), Pasmo (Tokyo private rail and bus) and Icoca (JR West) are the main cards, mutually interoperable nationwide since 2013. A Suica bought in Tokyo works on Kyoto and Osaka transit. Some smaller regional operators and buses remain outside the scheme.",
+   "source_url": "https://www.jreast.co.jp/multi/en/",
+   "status": "agreed_stable",
+   "notes": "All three sources agree."
+  },
+  "physical_card_availability": {
+   "value": "Unregistered physical Suica and PASMO cards returned to sale on 1 March 2025, after being suspended in June 2023 during the semiconductor shortage. They are sold from station ticket machines across eastern Japan in ¥1,000 to ¥10,000 denominations, with a ¥500 deposit included and no personal details required.",
+   "source_url": "https://www.jreast.co.jp/multi/en/",
+   "status": "verify_recommended",
+   "notes": "RULED 2026-09-16. grok correct; deepseek wrong (it claimed still-suspended and had marked that 'verified' against a non-official source). Corroborated across multiple independent reports of the 1 March 2025 resumption; JR East's own page not fetched directly, hence verify_recommended not verified."
+  },
+  "balance_limits_and_refund": {
+   "value": "Maximum stored balance is ¥20,000. Unregistered physical cards can be refunded at the issuing operator's stations, less a handling fee, with the deposit returned. Welcome Suica balances are not refundable. Mobile cards follow a separate in-app process.",
+   "source_url": "https://www.jreast.co.jp/multi/en/",
+   "status": "verify_recommended",
+   "notes": "All three agree on the ¥20,000 ceiling. The refund mechanics differ by card type, which matters on the last day of a trip."
+  },
+  "mobile_suica_ios": {
+   "value": "Suica and Pasmo can be added to Apple Wallet on a US-bought iPhone (iPhone 8 or later, Apple Watch Series 3 or later) without a Japanese Apple ID and without changing App Store region. Added via Wallet > Transit Card, it works with Express Mode and can be set up before arrival.",
+   "source_url": "https://support.apple.com/en-us/HT207155",
+   "status": "agreed_stable",
+   "notes": "All three agree. The 'you need a Japanese Apple ID' claim is a widespread American misconception and is wrong — worth stating explicitly."
+  }
+ }
+}
+
+=========================================================================
+THE TWO ARTICLES
+=========================================================================
+
+
+---------------------------------------------------------------
+SLUG: green-car-or-ordinary-japan-rail-pass
+TITLE: Green Car or Ordinary: Is the Japan Rail Pass Upgrade Worth It?
+SWAMP: jr-pass-economics   HANDOFF TAG: seed   VEIN PIECE: jr-pass-math
+---------------------------------------------------------------
+
+Every Japan Rail Pass comes in two tiers, and the more expensive one is presented as the comfortable choice without anyone explaining what it costs per journey. The upgrade is real and so is the premium. This guide covers what the Green Car tier costs, what you get for it, the arithmetic that decides it, and the specific travellers for whom it is worth paying.
+
+
+## What the upgrade actually costs
+The seven-day Green Car pass costs ¥70,000 against ¥50,000 for the ordinary tier — a premium of ¥20,000 for the week. That is the whole decision in one line, and it is a larger gap than most travellers expect, because the two tiers are usually presented side by side as though the difference were marginal.
+
+
+### The premium across the longer passes
+The gap widens with duration rather than staying proportional in absolute terms. The fourteen-day pass runs ¥110,000 in Green against ¥80,000 ordinary, a ¥30,000 premium, and the twenty-one-day version stretches it to ¥40,000. A longer trip does not make the upgrade proportionally cheaper — it makes the cash difference bigger.
+
+Children aged six to eleven pay half on both tiers, so a family upgrading everybody multiplies the premium rather than absorbing it.
+
+
+## What the money buys
+A Green Car seat is laid out two-and-two across the carriage instead of the ordinary car's two-and-three, which is the single most noticeable difference. Seats are wider, recline further, and carry a proper footrest. Carriages are quieter because they are rarely full, and an attendant works the car with a trolley rather than the ordinary car's occasional pass-through.
+
+
+### What it does not buy
+The upgrade does not make you faster. Green Car carriages ride the same trains on the same timetable, and the fastest Nozomi and Mizuho services remain outside what the national pass covers at either tier — the upgrade does not unlock them. There is no lounge access, no included food, and no priority boarding. You are buying space and quiet, nothing else.
+
+
+## The arithmetic per journey
+Divide the ¥20,000 premium by the number of long journeys your route actually contains, and the upgrade resolves into a per-leg price. A typical first trip makes two long journeys, which prices the upgrade at ¥10,000 per leg — more than most travellers would pay for a seat upgrade if it were presented that way at the counter. Four legs brings it to ¥5,000 each.
+
+
+### Comparing it to the journey itself
+Set that against the fare for the journey. A reserved ordinary seat from Tokyo to Kyoto costs about ¥13,850, so a ¥10,000 per-leg upgrade is close to paying a second time for the same trip. At ¥5,000 a leg the ratio starts to look like an ordinary premium-cabin decision rather than an extravagance.
+
+The honest reading is that the upgrade gets cheaper the more you travel, which is the same condition that makes the pass itself pay. If your route is too short to justify the ordinary pass, it is much too short to justify the Green one.
+
+
+## Every Green seat is reserved
+There is no non-reserved Green Car, which is a structural difference rather than a comfort one. Every seat in the carriage is booked, so the tier removes the possibility of standing or hunting for a free seat on a busy departure — the failure mode that makes ordinary-car travel unpleasant in the peak weeks. You still have to make the reservation; the pass covers it at no extra charge.
+
+
+### What that is worth in practice
+On a quiet Tuesday it is worth nothing, because the ordinary reserved car is equally guaranteed and equally empty. On the heaviest travel days of the year it is worth a great deal, because Green Cars are the last carriages to fill and often the only ones with availability when a reservation is made late.
+
+
+## When the premium is easiest to justify
+Three situations make the Green Car worth its ¥20,000. Long single legs — anything beyond the Tokyo to Kyoto distance, where you are seated for three hours or more — convert space into genuine rest. Travelling in the busiest weeks, when ordinary reserved seats book out and the non-reserved cars fill, buys availability rather than comfort. And travelling with large luggage is simply easier in a carriage with room.
+
+
+### A worked comparison
+Take two routes. A first trip flying into Tokyo, crossing to Kyoto and flying home makes two long legs, so the premium prices at ¥10,000 each and the ordinary car is plainly the right answer. A two-week route that adds Hiroshima, returns north through the mountains and uses fast trains for several longer excursions might make six, which brings the premium to a little over ¥3,300 a journey — roughly a quarter of the fare, and a defensible upgrade on legs you are seated for hours.
+
+
+### The traveller it suits
+Height is the underrated factor. The ordinary car is comfortable for most people and tight for anyone over about six feet, particularly on a three-hour leg with a case underfoot. If that describes you, the upgrade stops being a luxury and becomes the difference between arriving rested and arriving stiff.
+
+Age and mobility matter for the same reason. A wider seat that reclines properly, in a quiet carriage with an attendant who comes to you, is worth more to some travellers than to others, and that is a personal calculation rather than an arithmetic one.
+
+
+## Who should not take it
+Most first trips should stay in the ordinary car. The classic route makes two long journeys, prices the upgrade at ¥10,000 each, and spends that money on a seat that is already perfectly comfortable for the distance involved. Japanese ordinary-car standards are high — clean, quiet, reliably punctual, with more legroom than an American domestic flight in economy.
+
+The upgrade is a genuine improvement on an already good product, which is exactly the kind of purchase that is easy to talk yourself into and hard to feel afterwards. Buy it because your route is long or your frame is tall, not because the tier exists.
+
+
+## The channel detail that changes the price
+From 1 October 2026 the overseas-agency price for the seven-day Green pass rises to ¥74,000, while buying online through the official reservation site is unaffected. The ordinary tier moves the same way, to ¥53,000 through an agency.
+
+That reverses a piece of standing advice. Going through an agent used to be the convenient route and is now simply the more expensive one, and the gap applies to whichever tier you choose.
+
+
+## Making the call
+Price the upgrade per leg before you price it per week, because ¥20,000 sounds like a fee and ¥10,000 a journey sounds like what it is. Count your long journeys, divide, and decide against that number rather than against the headline.
+
+Which tier to buy sits downstream of how much long-distance travel your route contains in the first place, and working that out in the right order is what the complete Japan trip guide is built to do.
+
+
+---------------------------------------------------------------
+SLUG: ic-card-wont-open-gate-fare-adjustment
+TITLE: When Your IC Card Will Not Open the Gate: Fare Adjustment Explained
+SWAMP: ic-card-transit   HANDOFF TAG: seed   VEIN PIECE: ic-card-setup
+---------------------------------------------------------------
+
+The gate panels snap shut, a buzzer sounds, and a queue forms behind you. It is the single most stressful thirty seconds of a first trip on Japanese transit, and it is also completely routine — the machines that fix it stand a few metres away and the staff deal with it hundreds of times a day. This guide covers why the gate refuses you, how to clear it, and how to stop it happening again.
+
+
+## Why the gate refuses you
+An insufficient balance causes most refusals, and Japanese gates deduct the fare on exit rather than on entry — so a Suica holding ¥120 will let you through at the start of a ¥300 journey and stop you dead at the other end. The card was never checked against the fare at the entry gate, because at that point the system did not know where you were going.
+
+
+### The other common causes
+A card that was never tapped on entry produces the same result, which happens when a gate stands open during quiet periods and you walk through behind someone else. The system has no entry record, so it cannot compute a fare and refuses on principle. A card left unresolved from a previous journey — tapped in somewhere and never tapped out — does the same.
+
+Read failures are the third category, and they are usually the wallet's fault rather than the card's. A tap that produces no beep at all, rather than a rejection buzz, is a reading problem.
+
+
+## The fare adjustment machine
+Every station has a fare adjustment machine, and it sits on the platform side of the gates rather than beyond them — usually within a few metres of the barrier that just rejected you, often marked in English as well as Japanese. It exists precisely for this situation and using it takes well under a minute.
+
+
+### How to use it
+Insert or tap the card, and the screen shows the shortfall. Feed in coins or a note, take the card back, and walk to the gate again. Most machines carry an English button in the corner of the screen, and the ones that do not still show the amount owed as a number, which is all you actually need to understand.
+
+A standard top-up machine does the same job by a different route. If you would rather add a useful amount than pay an exact shortfall, top the card up normally and the gate will then deduct the fare and open.
+
+
+## If you have no cash
+The staffed window beside the gates is the answer, and at any major station in Tokyo or Kyoto one attendant sits there whenever trains are running. Show the card, and the attendant resolves it — settling the fare, correcting a missing entry record, or waving you through if the fault was clearly the system's. It is an ordinary transaction rather than an escalation.
+
+This is also the route for anything unusual: a card that will not read at all, a journey that crossed operators in a way the machine will not resolve, or a balance dispute. The counter has authority the machine does not.
+
+
+## The bus rule that catches people out
+City buses in Kyoto do not all work the way the trains do, and the difference produces a fare that looks wrong rather than a gate that closes. On most Kyoto city routes you tap once on boarding and pay one flat fare; elsewhere, and on longer suburban routes, you tap on entry and again on exit so the distance can be calculated. Missing the second tap leaves the journey open.
+
+
+### What an open journey does
+An unresolved bus or rail journey can charge the maximum fare for the line, or leave the card in a state the next gate refuses. The fix is the same as any other adjustment — the driver resolves it on the bus, or a station machine or counter clears it afterwards — but the cause is invisible if you did not know a second tap existed.
+
+When in doubt, watch what the person ahead of you does. Japanese transit is full of small local conventions like this, and the queue demonstrates them for free.
+
+
+## The two-card problem
+Carrying two contactless cards in one wallet is the most common cause of a Suica tap that produces no response at all. The reader sees two cards, cannot decide which to charge, and reads neither. A hotel key card, an office badge or a contactless bank card sitting against a Suica will all do it.
+
+
+### The fix
+Take the card out of the wallet and tap it on its own. If that works, the wallet was the problem. Travellers who tap a whole wallet for a fortnight without incident sometimes hit this on day twelve because a new card went in that morning, which is why the symptom feels random.
+
+A phone in a case with cards tucked behind it produces the same failure, and it is worth knowing before you are standing at a gate trying to work out whether your phone has broken.
+
+
+## Keeping it from happening
+Keep about ¥2,000 on the card as a working floor rather than running it to zero, because that clears any single city journey without thought, and topping up at that point costs nothing but a machine stop you were going to make anyway. The maximum a card holds is ¥20,000, so there is plenty of headroom.
+
+
+### Why not simply load the maximum
+Because the balance is easier to spend down than to recover. An unregistered card can be refunded at the issuing operator's stations with the ¥500 deposit returned, but a handling fee applies and the process takes a counter visit on a day you would rather be doing something else. Load enough to be comfortable, not enough to strand money.
+
+Tap deliberately rather than quickly — a flat, firm contact for a full second, held rather than swiped. Most read failures on a working card are a tap that moved.
+
+
+## If the card is lost
+An unregistered Suica is cash: losing it loses the balance and the ¥500 deposit with no recourse, because the card carries no name and the operator cannot connect it to you. A registered card, by contrast, can be cancelled and reissued with the remaining balance transferred, which is the practical argument for registering one if the option is offered at purchase.
+
+A card held in a phone sits in a different category again, protected by the device's own lock and recoverable through the account it was created under. For most visitors on a short trip the unregistered card is still the sensible choice; the point is simply to treat it like the cash it is rather than like a bank card that can be frozen.
+
+
+## The thirty seconds in perspective
+A refused gate is a routine event that Japanese commuters clear several times a year without embarrassment, and the infrastructure assumes it will happen. Step aside, use the machine, and rejoin — nobody behind you is surprised and the staff have seen it all morning.
+
+Getting the card right at the start removes most of these moments before they occur, and where that sits in the order of everything else to set up before arrival is something the complete Japan trip guide works through.
+
+
+=========================================================================
+RETURN FORMAT
+=========================================================================
+CALIBRATION: the four samples, your scores, and whether you agree with the expected verdicts.
+ERRORS: a list. For each — the article, the exact quoted text, what contradicts it, and
+        whether you think the article or the fact sheet is the stale one. Say "none" if none.
+SCORES: one line per article — slug, PULL (turn only), TRUST, and the failing reason for any
+        axis under its threshold. Thresholds: turn needs PULL >= 60 AND TRUST >= 80;
+        seed needs TRUST >= 80.

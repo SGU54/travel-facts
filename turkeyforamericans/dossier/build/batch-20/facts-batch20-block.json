@@ -1,0 +1,140 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 20,
+  "swamp": "S-customs",
+  "facts": {
+    "customs.protected_categories": {
+      "value": "Taşınır and taşınmaz kültür varlıkları (movable and immovable cultural property) and tabiat varlıkları (natural property). Cultural property covers all movable and immovable objects of scientific, cultural, religious or fine-arts value from prehistoric or historic periods, or that reflect the social life of those periods and possess original scientific or cultural value, whether above ground, underground or underwater. Natural property covers geological, prehistoric or historic objects of rare occurrence or special beauty.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Law No 2863 on the Conservation of Cultural and Natural Property, Articles 3 and 23."
+    },
+    "customs.export_offence": {
+      "value": "Unauthorised export of protected movable cultural or natural property is a criminal offence. Penalty: imprisonment from five to twelve years and a judicial fine of up to five thousand days.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Law 2863 Article 68 (as amended). | THE HEADLINE FACT: five to twelve years' imprisonment plus a judicial fine of up to five thousand days. deepseek said only 'imprisonment and fines' with no range and no source. This is a criminal statute, not a customs formality."
+    },
+    "customs.export_permit_authority": {
+      "value": "Export of protected cultural property is prohibited in principle (Article 32). Temporary export for exhibition abroad may be authorised by presidential decision after guarantees and insurance. Permanent commercial export of objects classified outside museum-worthy status requires Ministry of Culture and Tourism permission.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Articles 32 and 27 of Law 2863."
+    },
+    "customs.coins": {
+      "value": "Ancient or historic coins that meet the criteria of Articles 3 and 23 are protected movable cultural property and may not be exported without authorisation; unauthorised export is an offence under Article 68.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Coins of archaeological or historic value fall within the general definition of taşınır kültür varlıkları."
+    },
+    "customs.fossils_stones": {
+      "value": "Fossils and natural specimens that qualify as tabiat varlıkları (rare or of special scientific/geological value) are protected and subject to the same export prohibition.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Article 3(2) and Article 23 of Law 2863."
+    },
+    "customs.site_pickup": {
+      "value": "Any cultural or natural property found on land or underwater must be reported within three days (Article 4). Unreported removal from an archaeological site constitutes an offence; the object is State property (Article 5).",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Articles 4 and 5 of Law 2863."
+    },
+    "customs.religious_objects": {
+      "value": "Icons and religious objects that meet the prehistoric/historic and cultural-value criteria are protected cultural property and subject to the export prohibition of Article 32.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Article 3 explicitly includes objects related to religion."
+    },
+    "customs.unrestricted_goods": {
+      "value": "Objects that fall outside the definitions of Articles 3 and 23 (ordinary modern commercial goods, newly manufactured souvenirs without historic or scientific cultural value) are not subject to the cultural-property export prohibition.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Negative implication of the protection criteria in Law 2863."
+    },
+    "customs.rug_legal_threshold": {
+      "value": "Carpets and kilims fall under the same criteria as other movable cultural property: protection attaches if they meet the prehistoric/historic and scientific/cultural-value tests of Article 3/23, regardless of trade age-band terminology.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Articles 3 and 23 of Law 2863 contain no special carve-out for textiles."
+    },
+    "customs.age_threshold": {
+      "value": "No fixed numerical age or cut-off date is stated for movable cultural property. Protection attaches to objects of prehistoric or historic periods that possess the scientific/cultural criteria in Article 3. For immovable property a reference point of the end of the 19th century appears in Article 6.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "MAJOR CORRECTION. deepseek stated 'items over 100 years old are generally considered antiquities' and applied the same 100-year line to carpets. grok read Law 2863 and found NO fixed numerical age threshold for movable cultural property — protection attaches by the scientific/cultural criteria of Article 3, not by a date. The 100-year rule is TRADE FOLKLORE with no statutory basis. Printing it would tell a buyer a 90-year-old object is automatically safe, which the law does not say."
+    },
+    "customs.rug_age_bands": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "deepseek gave new 0-30 / semi-antique 30-100 / antique 100+ as though legal. grok correctly returned null: these are COMMERCIAL CONVENTIONS with no standing in Law 2863. Report them as trade vocabulary if at all, and never as a legal test."
+    },
+    "customs.museum_expertise_report": {
+      "value": "State museums perform classification and registration of movable cultural property (Article 25). In practice an expertise (ekspertiz) report issued by a museum or authorised commission is used to determine whether an object falls inside or outside the protected category for export purposes; the owner or exporter requests it.",
+      "status": "verify_recommended",
+      "source_url": "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2863.htm",
+      "notes": "Article 25 establishes museum classification; detailed procedural rules for tourist-export ekspertiz reports appear in secondary ministry circulars rather than the primary law text opened. | Both panels agree the ekspertiz report is the operative instrument and that the exporter requests it. Article 25 establishes museum classification; the tourist-export procedure sits in ministry circulars neither model opened."
+    },
+    "customs.seller_certificate_standing": {
+      "value": "A vendor-issued certificate of authenticity or age has no independent legal force in the export decision; only the official museum classification or ministry determination binds the authorities.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH PANELS AGREE and neither found an explicit statutory statement. The conclusion follows from the exclusive role of state museums and the Ministry under Law 2863: a vendor certificate has no independent legal force. Report it as what the law's structure implies, not as a quoted rule."
+    },
+    "customs.receipt_role": {
+      "value": "A purchase receipt establishes commercial ownership and price but does not itself authorise export of a protected object under Turkish law. For US import purposes a receipt supports valuation and declaration.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "No official Turkish text equating a receipt with an export permit was found."
+    },
+    "customs.airport_departure_control": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH NULL on an official basis (deepseek's answer was explicitly 'general travel advice and anecdotal reports'). No published description of departure inspection procedure for cultural objects. Do not describe the checkpoint."
+    },
+    "customs.shipping_vs_carrying": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "grok null: no official distinction located in the primary law. deepseek's answer was unsourced. Report that the law attaches to the OBJECT rather than the route, and that neither route is documented as an exception."
+    },
+    "us.personal_exemption": {
+      "value": "Returning US residents may bring back goods acquired abroad for personal or household use up to an aggregate fair retail value of $800 duty-free, provided the goods accompany the traveller, the stay abroad was at least 48 hours, and the exemption has not been used within the preceding 30 days.",
+      "status": "verified",
+      "source_url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/shopping-abroad-duty-free-gifts-household-items",
+      "notes": "CBP official guidance; also reflected in 19 CFR 148.33."
+    },
+    "us.declaration_requirement": {
+      "value": "All articles acquired abroad must be declared. Failure to declare items that should be declared risks forfeiture. The $800 exemption applies only to declared accompanying goods that meet the statutory conditions.",
+      "status": "verified",
+      "source_url": "https://www.cbp.gov/travel/us-citizens/know-before-you-go/shopping-abroad-duty-free-gifts-household-items",
+      "notes": "CBP official Know Before You Go guidance."
+    },
+    "us.cultural_property_restriction": {
+      "value": "Yes. The United States maintains import restrictions on designated categories of archaeological material (approximately 1.2 million B.C. to A.D. 1770) and ethnological material (1st century A.D. to 1923) of Türkiye under a bilateral Memorandum of Understanding implementing the 1970 UNESCO Convention. The restrictions were extended through 24 March 2031.",
+      "status": "verified",
+      "source_url": "https://public-inspection.federalregister.gov/2026-09575.pdf",
+      "notes": "CBP final rule extending the import restrictions; original Designated List published in 2021 Federal Register. | BOTH panels found the MoU; grok additionally opened the current CBP final rule EXTENDING the restrictions through 24 March 2031. Use the extension date, not the 2021 original."
+    },
+    "us.rug_import_treatment": {
+      "value": "A personal-use rug or carpet acquired in Turkey is treated as an ordinary commercial good for duty purposes and may be included in the $800 personal exemption if it qualifies; it is not automatically subject to the cultural-property Designated List unless it falls within the restricted archaeological or ethnological categories.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "No specific CBP ruling on Turkish carpets as a class was opened; treatment follows general personal-exemption and Designated-List rules. | deepseek's version cited a rug dealer's own website. grok's is the general CBP framework with the gap named. Neither is a CBP ruling specific to Turkish carpets."
+    },
+    "us.food_textile_rules": {
+      "value": "Most commercially packaged food products and textiles for personal use are admissible subject to ordinary agricultural and textile rules; certain meats, plants and soil are prohibited or restricted. Textiles may be subject to quota or labelling requirements if commercial quantities are involved.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "General CBP agricultural and textile rules apply; no Turkey-specific official text opened. | deepseek's version cited a rug dealer's own website. grok's is the general CBP framework with the gap named. Neither is a CBP ruling specific to Turkish carpets."
+    },
+    "us.high_value_documentation": {
+      "value": "For high-value personal imports CBP expects a sales receipt or invoice showing description, purchase price and date, and, where cultural-property restrictions may apply, proof that the object is not on the Designated List or was exported lawfully from Türkiye.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Standard CBP documentation practice for valuation and restricted merchandise; no single official checklist specific to Turkish souvenirs was opened. | deepseek's version cited a rug dealer's own website. grok's is the general CBP framework with the gap named. Neither is a CBP ruling specific to Turkish carpets."
+    }
+  }
+}

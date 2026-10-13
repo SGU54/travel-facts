@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch FIRST before any work. Assistant outputs updated copy at each step boundary; USER pushes to travel-facts/moroccoforamericans/. Trust this file + the DB, not the chat scroll.",
+  "schema_version": 3,
+  "project": "moroccoforamericans",
+  "stage": "writing",
+  "batch": 4,
+  "batches_total": 4,
+  "batch_status": "cleaned",
+  "published_slugs": [],
+  "updated_at": "2026-07-06",
+  "notes": "ALL 4 BATCHES WRITTEN + BOTH GATES PASSED + IMPORTS BUILT. This completes the 4-batch/20-article plan (exhausts tier-1 exactly). Batch1: first-time-guide, visa, dirham, is-safe, riads. Batch2: trip-cost, flights, 10-day+7-day itineraries, guided-vs-independent. Batch3: marrakech-guide, things-to-do-marrakech, fez-guide, sahara-guide, sahara-tours. Batch4: chefchaouen, best-time, transport, food-dishes, haggling. All 1000-1200w, links FK-valid (incl forward-links to unwritten tier2/3), serve_live held, scope clean, maps parse, correction #1 held across all batches (no 'almost everyone' overstatements). SECOND GATE: b1 fixed 1 (deepseek), b2 fixed 1 (deepseek prevalence->corrections#1), b3+b4 BOTH CLEAN (grok+deepseek). import-batch-01..04.json all built: 0 IMAGE_SLOT survivors, maps+converter+affiliate slots preserved, cloud=dsrkwieur. Image manifests batch-01..04-images.md (13+12+15+15=55 images). corrections.json has #1 (prevalence register). ADMIN: bulk-publish built+skill-gated. PENDING (all 4 batches): source images->upload-batch.mjs->import as drafts->bulk-publish->inject-links->affiliates. Then Stage 5 DESIGN + next site. Facts reconciled (4-source). Plan locked (70). NEXT MILESTONE: publish + design pass."
+}

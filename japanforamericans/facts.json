@@ -1,0 +1,728 @@
+{
+  "_README": "facts.json — pipeline-standard copy of FINAL.json (japanforamericans predates the facts.json naming convention; FINAL.json stays in place, untouched, as the historical reconciliation record). THIS is the file Stage 3+ writing reads. Sources: claude, gemini, chatgpt, grok, deepseek (5). STATUS: verified = confirmed against an official source (URL+date); agreed_stable = stable, sources agree, no flag; serve_live = volatile, never frozen; disputed = sources differed (resolved + dissent noted). Recommendations: core = named by most/all, optional = fewer. Copied into pipeline-standard form 2026-09-10 — content unchanged from the 2026-05-30 reconciliation; NOT re-verified against official sources at copy time. Before drafting batch-01 (visa + money articles), re-check _human_checklist items 1-2 against vjw.digital.go.jp / mofa.go.jp per 3-writing.md's YMYL rule (facts.json panel consensus is not itself an official-source verification).",
+  "_meta": {
+    "country": "Japan",
+    "country_iso": "JP",
+    "project": "japanforamericans",
+    "site": "japanforamericans.com",
+    "audience": "American travelers (US passport)",
+    "sources_reconciled": [
+      "claude",
+      "gemini",
+      "chatgpt",
+      "grok",
+      "deepseek"
+    ],
+    "reconciled_at": "2026-05-30",
+    "template_version": "2.0",
+    "copied_to_facts_json_at": "2026-09-10"
+  },
+  "_reconciliation_summary": {
+    "result": "Strong 5-source convergence, ZERO factual conflicts. All change-prone facts agree: US visa-free 90 days, no fee, no mandatory ETA, Visit Japan Web OPTIONAL (all 5 correct this run), advisory Level 1, tap water safe. Recommendation consensus strong (Kinkaku-ji 5/5; Shibuya Crossing, Senso-ji, teamLab, Arashiyama, Kiyomizu top of pool).",
+    "source_quality": {
+      "claude": "complete, on-template, change-prone facts source-verified",
+      "gemini": "complete but OFF-TEMPLATE (renamed sections: visa_entry/money_finance/etc) — content mapped back by hand",
+      "chatgpt": "complete; file used smart/curly quotes (repaired to valid JSON)",
+      "grok": "complete, on-template, valid; got Visit Japan Web right this run",
+      "deepseek": "complete, on-template, valid; was mislabeled ai_source=claude (corrected)"
+    }
+  },
+  "identity": {
+    "name_local": {
+      "value": "日本 (Nihon / Nippon)",
+      "status": "agreed_stable",
+      "agreed_by": 5
+    },
+    "capital": {
+      "value": "Tokyo",
+      "status": "agreed_stable",
+      "agreed_by": 5
+    },
+    "official_languages": {
+      "value": [
+        "Japanese"
+      ],
+      "status": "agreed_stable",
+      "agreed_by": 5
+    },
+    "currency_code": {
+      "value": "JPY",
+      "status": "agreed_stable",
+      "agreed_by": 5
+    },
+    "currency_name": {
+      "value": "Japanese yen (¥)",
+      "status": "agreed_stable",
+      "agreed_by": 5
+    },
+    "timezones": {
+      "value": [
+        "JST (UTC+9)"
+      ],
+      "status": "agreed_stable",
+      "agreed_by": 5
+    },
+    "calling_code": {
+      "value": "+81",
+      "status": "agreed_stable",
+      "agreed_by": 5
+    },
+    "power_plug_voltage": {
+      "value": "100V, 50/60Hz, Type A/B",
+      "status": "agreed_stable",
+      "agreed_by": 5
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "by_nationality": [
+        {
+          "passport": "US",
+          "type": {
+            "value": "visa_free (Temporary Visitor)",
+            "status": "verified",
+            "source_url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html",
+            "agreed_by": 5,
+            "checked": "2026-05-30"
+          },
+          "max_stay_days": {
+            "value": 90,
+            "status": "verified",
+            "source_url": "https://www.mofa.go.jp/j_info/visit/visa/short/novisa.html",
+            "agreed_by": 5
+          },
+          "fee": {
+            "value": "none (visa-free)",
+            "status": "verified",
+            "source_url": "https://www.us.emb-japan.go.jp/itpr_en/travel_and_visa.html",
+            "agreed_by": 5
+          },
+          "online_authorization_required": {
+            "value": "No mandatory ETA for US visa-free entry as of 2026. Visit Japan Web (vjw.digital.go.jp) is OPTIONAL pre-registration for immigration+customs (one 2D QR code; 2026 Joint Kiosks at HND/NRT/KIX). A digital travel authorization for visa-exempt travelers is reportedly planned for 2028 — NOT active yet.",
+            "status": "verified",
+            "source_url": "https://vjw.digital.go.jp",
+            "agreed_by": 5,
+            "checked": "2026-05-30",
+            "note": "All 5 sources agreed optional this run."
+          },
+          "official_application_url": {
+            "value": "n/a (visa-free)"
+          }
+        }
+      ],
+      "scam_sites_to_avoid": {
+        "value": [
+          "unofficial visa/eVisa sites charging fees for free visa-free entry",
+          "third-party sites charging for the free Visit Japan Web QR"
+        ],
+        "status": "agreed_stable",
+        "agreed_by": 3
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "Valid for duration of stay (no 6-month rule for US visa-free visitors) — confirm",
+        "status": "verify_recommended",
+        "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Japan.html",
+        "agreed_by": 3
+      },
+      "onward_ticket_required": {
+        "value": "Return/onward ticket may be requested at entry",
+        "status": "agreed_stable",
+        "agreed_by": 3
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "JPY (¥)",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "approx_rate_note": {
+        "value": "~150-160 JPY per 1 USD (approx, May 2026)",
+        "status": "serve_live",
+        "note": "VOLATILE — serve live, never freeze"
+      },
+      "cash_vs_card": {
+        "value": "Cards accepted in cities/tourist spots; cash still important for small shops, temples, rural. IC cards (Suica/Pasmo) essential for transit.",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "atm_availability": {
+        "value": "7-Eleven and Japan Post ATMs reliably take foreign cards",
+        "status": "agreed_stable",
+        "agreed_by": 4
+      },
+      "currency_import_export_limit": {
+        "value": "Declare amounts over ¥1,000,000 (or equivalent)",
+        "status": "verify_recommended",
+        "source_url": "https://www.customs.go.jp/english/",
+        "agreed_by": 3
+      },
+      "tipping_norm": {
+        "value": "No tipping — not customary, service included",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "tax_free_shopping_change": {
+        "value": "Through Oct 31 2026: tax-free at register or store refund counter, min ¥5,000 pre-tax same store/day. From Nov 1 2026: pay tax-inclusive at checkout, claim refund at the airport before departure within 90 days of purchase. Since Apr 2025, internationally shipped tax-free purchases no longer qualify — must be carried out personally.",
+        "status": "verified",
+        "source_url": "https://www.japan.travel/en/ca/news/changes-are-coming-to-tax-free-shopping-in-japan/",
+        "checked": "2026-09-10",
+        "note": "Resolves _human_checklist item 3 (was 'IF RELEVANT') — confirmed during batch-01 retrofit, now used in money-in-japan-cash-cards-ic."
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": [
+          "Tokyo Haneda (HND)",
+          "Tokyo Narita (NRT)",
+          "Osaka Kansai (KIX)"
+        ],
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "national_carrier": {
+        "value": "Japan Airlines (JAL) and ANA",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "flight_from_us": {
+        "value": "Nonstop from LAX/SFO/SEA/ORD/JFK-EWR/DFW/IAD; West Coast ~11-12h, East Coast ~13-14h. Prices serve-live.",
+        "status": "serve_live",
+        "agreed_by": 5
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "JR Shinkansen (bullet train); Japan Rail Pass cost-effective for tourists; Tokyo↔Kyoto ~2h15-2h30",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "buses": {
+        "value": "Reliable long-distance + local buses; cheaper than rail, slower",
+        "status": "agreed_stable",
+        "agreed_by": 4
+      },
+      "domestic_flights": {
+        "value": "Efficient for long distances; LCCs (Peach, Jetstar Japan) available",
+        "status": "agreed_stable",
+        "agreed_by": 4
+      },
+      "ride_sharing": {
+        "value": "Uber available in big cities but mostly hails taxis; limited vs US; taxis safe but expensive",
+        "status": "agreed_stable",
+        "agreed_by": 4
+      },
+      "car_rental_and_driving": {
+        "value": "Rarely needed (rail-centric). Drives on LEFT; International Driving Permit required with US license; strict 0.03% BAC; city parking expensive",
+        "status": "verify_recommended",
+        "source_url": "https://www.npa.go.jp/english/",
+        "agreed_by": 4
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Spring (Mar-May) mild + cherry blossoms; summer (Jun-Aug) hot/humid + rainy season/typhoon; fall (Sep-Nov) mild + autumn colors; winter (Dec-Feb) cold, snow in north",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "best_months": {
+        "value": [
+          "late March-April (cherry blossom)",
+          "October-November (autumn foliage)"
+        ],
+        "rank": "core",
+        "agreed_by": 5
+      },
+      "avoid_periods": {
+        "value": [
+          "June-July rainy season",
+          "August typhoon + heat",
+          "Golden Week (late Apr-early May)",
+          "Obon (mid-Aug)",
+          "New Year"
+        ],
+        "rank": "core",
+        "agreed_by": 5
+      }
+    },
+    "safety_health": {
+      "advisory_level": {
+        "value": "US State Dept Level 1 — Exercise Normal Precautions",
+        "status": "verified",
+        "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/japan-travel-advisory.html",
+        "agreed_by": 5,
+        "checked": "2026-05-30"
+      },
+      "main_risk": {
+        "value": "Environmental (earthquakes, typhoons), NOT crime. Very low-crime country.",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "vaccines": {
+        "value": "No mandatory vaccines for entry; routine recommended (MMR, Hep A/B, flu)",
+        "status": "agreed_stable",
+        "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/japan",
+        "agreed_by": 4
+      },
+      "tap_water_safe": {
+        "value": true,
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "emergency_numbers": {
+        "value": {
+          "police": "110",
+          "ambulance": "119",
+          "fire": "119",
+          "us_embassy_tokyo": "+81-3-3224-5000"
+        },
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "common_scams": {
+        "value": [
+          "rare overall; bar/taxi overcharging in nightlife districts (Kabukicho/Roppongi); fake tour guides near stations"
+        ],
+        "status": "agreed_stable",
+        "agreed_by": 4
+      },
+      "medication_restrictions": {
+        "value": "Stimulant ADHD medications (Adderall, Vyvanse, Dexedrine) are banned outright with no exceptions and no import certificate available, even with a valid US prescription. Pseudoephedrine-containing cold/allergy meds (Sudafed, some NyQuil/Advil Cold & Sinus) are allowed only in small quantities/low concentration for personal use. Other prescription meds beyond a ~1-month personal supply need a Yakkan Shoumei (Yunyu Kakunin-sho) import certificate arranged in advance.",
+        "status": "verify_recommended",
+        "source_url": "https://jp.usembassy.gov/services/importing-medication/",
+        "added": "2026-09-10",
+        "note": "Added during batch-01 retrofit — not in the original 5-source panel; verified via US Embassy Japan + current 2026 guidance at write time, not part of the May 2026 reconciliation."
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": "eSIM easy (Airalo/Ubigi); tourist SIM (Docomo/SoftBank) and pocket WiFi at airports",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "coverage": {
+        "value": "Excellent nationwide 5G/4G incl. rural + rail",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      }
+    },
+    "costs": {
+      "daily_budget_low": {
+        "value": "~¥8,000-12,000 ($50-75)",
+        "status": "serve_live"
+      },
+      "daily_budget_mid": {
+        "value": "~¥15,000-25,000 ($95-160)",
+        "status": "serve_live"
+      },
+      "daily_budget_high": {
+        "value": "¥40,000+ ($250+)",
+        "status": "serve_live"
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "No strict code; conservative at temples/shrines; remove shoes indoors/ryokan",
+        "status": "agreed_stable",
+        "agreed_by": 5
+      },
+      "dos_and_donts": {
+        "value": [
+          "don't eat while walking",
+          "don't tip",
+          "be quiet on transit",
+          "queue properly",
+          "bow slightly when greeting",
+          "use both hands for cards/money",
+          "carry your trash"
+        ],
+        "status": "agreed_stable",
+        "agreed_by": 5
+      }
+    }
+  },
+  "cities": [
+    {
+      "name": "Tokyo",
+      "facts": {
+        "getting_there": {
+          "value": "Narita (NRT) ~60-90min to center via N'EX/Skyliner; Haneda (HND) ~30min via monorail/Keikyu (closer)",
+          "status": "agreed_stable",
+          "agreed_by": 5
+        },
+        "local_transport": {
+          "value": "JR Yamanote loop + Tokyo Metro; Suica/Pasmo IC card",
+          "status": "agreed_stable",
+          "agreed_by": 5
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "core": [
+            "Senso-ji (Asakusa)",
+            "Shibuya Crossing",
+            "teamLab",
+            "Meiji Shrine",
+            "Tokyo Skytree"
+          ],
+          "optional": [
+            "Harajuku",
+            "Akihabara",
+            "Shinjuku (Omoide Yokocho/Gyoen)",
+            "Tsukiji Outer Market",
+            "Imperial Palace",
+            "Ginza"
+          ],
+          "note": "Senso-ji, Shibuya, teamLab top the 5-source pool"
+        },
+        "where_to_stay": {
+          "core": [
+            "Shinjuku",
+            "Asakusa",
+            "Shibuya"
+          ],
+          "optional": [
+            "Ginza"
+          ]
+        },
+        "where_to_eat": {
+          "pool": [
+            "Tsukiji Outer Market",
+            "izakaya",
+            "ramen shops",
+            "Ichiran"
+          ]
+        },
+        "day_trips": {
+          "core": [
+            "Hakone/Mt Fuji (onsen + views)",
+            "Nikko (UNESCO shrines)",
+            "Kamakura (Great Buddha)"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kyoto",
+      "facts": {
+        "getting_there": {
+          "value": "Shinkansen from Tokyo ~2h15-2h30; from Osaka/KIX ~75-90min",
+          "status": "agreed_stable",
+          "agreed_by": 5
+        },
+        "local_transport": {
+          "value": "buses + subway + walking in central areas; IC card works",
+          "status": "agreed_stable",
+          "agreed_by": 5
+        },
+        "nearest_airport": {
+          "value": "Osaka Kansai (KIX) or Itami (ITM); no own major airport",
+          "status": "agreed_stable",
+          "agreed_by": 5
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "core": [
+            "Kinkaku-ji (Golden Pavilion)",
+            "Arashiyama Bamboo Grove",
+            "Kiyomizu-dera",
+            "Fushimi Inari Taisha",
+            "Gion district"
+          ],
+          "optional": [
+            "Ryoan-ji",
+            "Nijo Castle",
+            "Nishiki Market",
+            "Philosopher's Path"
+          ],
+          "note": "Kinkaku-ji 5/5; Arashiyama + Kiyomizu 4/5 — safest includes"
+        },
+        "where_to_stay": {
+          "core": [
+            "Gion/Higashiyama",
+            "Kyoto Station area",
+            "Downtown Kyoto"
+          ],
+          "optional": [
+            "Arashiyama"
+          ]
+        },
+        "where_to_eat": {
+          "pool": [
+            "Nishiki Market",
+            "kaiseki (Kikunoi)",
+            "Pontocho Alley",
+            "matcha cafes",
+            "yudofu (tofu)"
+          ]
+        },
+        "day_trips": {
+          "core": [
+            "Nara (deer + Todai-ji)"
+          ],
+          "optional": [
+            "Osaka",
+            "Himeji Castle"
+          ]
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "Japan in 7 days (first-timer, Tokyo + Kyoto)",
+      "days": 7,
+      "scope": "multi-city",
+      "common_spine": {
+        "note": "Structure all 5 sources converged on — high-confidence core.",
+        "value": [
+          "Days 1-3: Tokyo (arrival + Shibuya/Shinjuku; Asakusa/Senso-ji + Akihabara/Skytree; teamLab; a day trip — Hakone or Nikko)",
+          "Day 4: Shinkansen Tokyo→Kyoto, evening Gion",
+          "Days 5-6: Kyoto (Fushimi Inari, Kiyomizu/Higashiyama; Arashiyama + Kinkaku-ji)",
+          "Day 7: Nara day trip or final Kyoto sights, depart via Kansai (KIX)"
+        ]
+      },
+      "variations_offered": [
+        "Day-3 Tokyo: Hakone vs Nikko vs city day",
+        "Kyoto: add Nijo Castle / Imperial Palace / Philosopher's Path",
+        "Nara as Kyoto day trip"
+      ],
+      "assumptions": "moderate pace, spring/autumn, first-time US visitor, rail-based (JR Pass for the Tokyo↔Kyoto leg)"
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "core": [
+        "Tokyo",
+        "Kyoto",
+        "Mt Fuji/Hakone",
+        "Nara"
+      ],
+      "optional": [
+        "Osaka",
+        "Hiroshima + Miyajima",
+        "Shinkansen ride as an experience"
+      ]
+    }
+  },
+  "_human_checklist": {
+    "_rule": "Max 5, ranked, no padding. Everything else is settled (verified or agreed_stable across 5 sources).",
+    "items": [
+      "1. (LOW URGENCY) Visit Japan Web — re-confirm OPTIONAL (not required) at publish time; the entry detail most likely to change. Source: vjw.digital.go.jp.",
+      "2. (WATCH) 2028 planned digital travel authorization — confirm NOT live early before publishing entry articles.",
+      "3. (IF RELEVANT) Tax-free shopping shift to refund-at-departure (~Nov 2026) — only matters if an article covers shopping.",
+      "4. (IF RELEVANT) Driving article only: confirm IDP requirement + current BAC.",
+      "5. (NONE beyond above) — visa, advisory, currency, emergency numbers, tap water all 5-source agreed + source-verified."
+    ]
+  },
+  "depth_facts": {
+    "_README": "Scoped extension merged 2026-09-16 from a 3-member panel (claude/deepseek/grok) against facts-extension-spec.json. Added because the standard facts template has no fields at this granularity, which is why the jr-pass-math / ic-card-setup / seasonal-timing vein pieces measured THIN. Disputed fields are null on purpose — see disputes-extension.md. EVERY PRICE HERE IS VOLATILE: a further JR Pass rise is reported for 1 Oct 2026. Write prices as fact-spans, never frozen prose.",
+    "rail_passes": {
+      "national_pass_variants": {
+        "value": "Ordinary: 7-day ¥50,000 / 14-day ¥80,000 / 21-day ¥100,000. Green: 7-day ¥70,000 / 14-day ¥110,000 / 21-day ¥140,000. Child (6-11) half price.",
+        "source_url": "https://japanrailpass.net/en/purchase/price/",
+        "status": "verified",
+        "notes": "Fetched from the official price page 2026-09-16 and confirmed exactly, including child fares at half price. These are the prices valid through 30 September 2026."
+      },
+      "national_pass_price_change": {
+        "value": "On 1 October 2023 the 7-day ordinary pass rose from ¥29,650 to ¥50,000, an increase of roughly 65-70%. Green fares rose comparably.",
+        "source_url": "https://www.jreast.co.jp/e/pdf/press_japanrailpass_e.pdf",
+        "status": "verify_recommended",
+        "notes": "All three sources agree on event, date and magnitude. This is the fact the whole break-even argument rests on."
+      },
+      "national_pass_price_change_2026": {
+        "value": "From 1 October 2026 the OVERSEAS-AGENCY prices rise: 7-day ordinary ¥53,000, 14-day ¥84,000, 21-day ¥105,000; Green ¥74,000 / ¥116,000 / ¥147,000. Buying online through the official reservation site is NOT affected and stays at the current prices.",
+        "source_url": "https://japanrailpass.net/en/purchase/price/",
+        "status": "verified",
+        "notes": "CONFIRMED on the official page 2026-09-16, two weeks before it takes effect. deepseek had the ¥53,000 figure, grok had the overseas-agency scope — each was right about half. The channel distinction is the story: from 1 October, buying online is cheaper than buying through an agent, which reverses the old advice."
+      },
+      "nozomi_mizuho_rule": {
+        "value": "Nozomi and Mizuho, the fastest Tokaido/Sanyo services, are not covered by the national pass. Holders may ride them by buying a separate supplement ticket (reported around ¥4,960 Tokyo-Kyoto). The slower Hikari, Sakura and Kodama services on the same lines are fully covered.",
+        "source_url": "https://japanrailpass.net/",
+        "status": "verify_recommended",
+        "notes": "All three agree on the rule. The supplement figure comes from deepseek alone — verify separately."
+      },
+      "tokyo_kyoto_one_way_cost": {
+        "value": "Ordinary car, one way Tokyo to Kyoto: non-reserved about ¥13,320; reserved on Hikari/Kodama about ¥13,850; reserved on Nozomi about ¥14,170. Varies slightly by season.",
+        "source_url": "https://global.jr-central.co.jp/",
+        "status": "verify_recommended",
+        "notes": "grok's breakdown, consistent with claude's ~¥14,000 estimate. Use the Hikari reserved figure for pass comparisons, since Nozomi is not covered."
+      },
+      "tokyo_osaka_one_way_cost": {
+        "value": "Ordinary car, one way Tokyo to Shin-Osaka: non-reserved about ¥13,870; reserved on Hikari/Kodama about ¥14,400; reserved on Nozomi about ¥14,720.",
+        "source_url": "https://global.jr-central.co.jp/",
+        "status": "verify_recommended",
+        "notes": "Same basis as the Kyoto figure; verify both together so the comparison stays internally consistent."
+      },
+      "break_even_trips": {
+        "value": "A 7-day ordinary pass at ¥50,000 needs roughly four long Shinkansen legs — about two Tokyo-Kyoto round trips — to pay for itself (¥50,000 ÷ ¥13,850 = 3.6 legs). Slightly fewer in practice, because the pass also covers local JR lines and the Narita Express. A single Tokyo-Kyoto round trip does not come close.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "COMPUTED, not polled — the panel disagreed (claude 3-4 legs, grok 2-3 round trips) because this is arithmetic, not a fact. Recompute if any price changes, including the reported 1 Oct 2026 rise. RECHECKED 2026-09-16: the 1 Oct 2026 rise hits agency purchases only, so the ¥50,000 online arithmetic stands. For an agency buyer at ¥53,000 it becomes 3.83 legs — still about two round trips, so the conclusion survives."
+      },
+      "regional_passes_core": {
+        "value": "The regional passes that matter on a first-timer's Tokyo/Kyoto/Osaka route: JR East Tokyo Wide Pass (3 days, Tokyo region incl. Nikko and Karuizawa); JR West Kansai Area Pass (1-4 days, Osaka/Kyoto/Nara/Kobe, local and rapid only, no Shinkansen); JR West Kansai-Hiroshima Area Pass (5 days, adds Sanyo Shinkansen to Hiroshima); JR Central Takayama-Hokuriku Area Pass (5 days, Nagoya/Takayama/Kanazawa).",
+        "source_url": "https://www.westjr.co.jp/global/en/ticket/pass/",
+        "status": "verify_recommended",
+        "notes": "Names and coverage stable across sources; every PRICE still needs checking on each issuer's own page."
+      },
+      "where_to_buy": {
+        "value": "The pass is bought online through the official reservation site, or as an Exchange Order from a JR-designated travel agency abroad. In-person PURCHASE at stations inside Japan was discontinued on 1 October 2023. An Exchange Order bought abroad is still EXCHANGED for the pass at a ticket office in Japan, within three months, on presentation of a passport carrying the Temporary Visitor stamp — exchanging is not the same as buying.",
+        "source_url": "https://japanrailpass.net/en/purchase/",
+        "status": "verify_recommended",
+        "notes": "RULED 2026-09-16. deepseek correct on the discontinuation date; grok and claude were describing the EXCHANGE step and mistook it for purchase. The official purchase page lists only two channels — online and overseas agency — and never mentions in-Japan purchase. That distinction is trip-breaking if a reader plans to buy on arrival."
+      },
+      "eligibility": {
+        "value": "The national pass is for foreign visitors entering under 'Temporary Visitor' status. The passport showing that landing stamp is checked at exchange or activation.",
+        "source_url": "https://japanrailpass.net/",
+        "status": "agreed_stable",
+        "notes": "Structural rule, stable for years. Still the rule that turns a visitor away at the counter, so worth one official confirmation."
+      }
+    },
+    "ic_cards": {
+      "card_types_and_interop": {
+        "value": "Suica (JR East), Pasmo (Tokyo private rail and bus) and Icoca (JR West) are the main cards, mutually interoperable nationwide since 2013. A Suica bought in Tokyo works on Kyoto and Osaka transit. Some smaller regional operators and buses remain outside the scheme.",
+        "source_url": "https://www.jreast.co.jp/multi/en/",
+        "status": "agreed_stable",
+        "notes": "All three sources agree."
+      },
+      "physical_card_availability": {
+        "value": "Unregistered physical Suica and PASMO cards returned to sale on 1 March 2025, after being suspended in June 2023 during the semiconductor shortage. They are sold from station ticket machines across eastern Japan in ¥1,000 to ¥10,000 denominations, with a ¥500 deposit included and no personal details required.",
+        "source_url": "https://www.jreast.co.jp/multi/en/",
+        "status": "verify_recommended",
+        "notes": "RULED 2026-09-16. grok correct; deepseek wrong (it claimed still-suspended and had marked that 'verified' against a non-official source). Corroborated across multiple independent reports of the 1 March 2025 resumption; JR East's own page not fetched directly, hence verify_recommended not verified."
+      },
+      "welcome_suica": {
+        "value": "A tourist card sold at Narita and Haneda and at major Tokyo JR stations. No deposit, sold pre-loaded, valid 28 days from purchase, and the remaining balance is not refundable. It cannot be transferred to a phone.",
+        "source_url": "https://www.jreast.co.jp/multi/en/pass/welcomesuica.html",
+        "status": "verify_recommended",
+        "notes": "All three agree on the 28-day validity and the non-refundable balance — both decision-relevant on a two-week trip."
+      },
+      "mobile_suica_ios": {
+        "value": "Suica and Pasmo can be added to Apple Wallet on a US-bought iPhone (iPhone 8 or later, Apple Watch Series 3 or later) without a Japanese Apple ID and without changing App Store region. Added via Wallet > Transit Card, it works with Express Mode and can be set up before arrival.",
+        "source_url": "https://support.apple.com/en-us/HT207155",
+        "status": "agreed_stable",
+        "notes": "All three agree. The 'you need a Japanese Apple ID' claim is a widespread American misconception and is wrong — worth stating explicitly."
+      },
+      "mobile_topup_us_cards": {
+        "value": "Topping up a mobile Suica inside Apple Wallet will not accept a US-issued Visa card. US-issued Mastercard and American Express do work. A US Mastercard works for Suica but not for PASMO. Where Wallet refuses a card, the separate Suica app sometimes accepts it. Top-ups also fail for everyone during the nightly maintenance window, roughly until 04:00 Japan time — a failure that looks like a card problem and is not.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "RULED 2026-09-16. claude and grok correct on Visa; deepseek wrong and had marked it 'verified' citing a credit-card blog. Evidence is user reports on Apple's own support forums, not an official statement — status stays verify_recommended and the article should date the claim. The Suica-but-not-PASMO split and the maintenance window are new, and are exactly the details that strand someone at a gate."
+      },
+      "android_limitation": {
+        "value": "Mobile Suica on Android requires Osaifu-Keitai, the FeliCa stack fitted to Japanese-market handsets. Virtually all Android phones sold outside Japan lack it and cannot add Suica or Pasmo, regardless of which app is installed. The practical answer for those users is a physical card.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "All three agree. deepseek adds that Samsung support is planned for 2027 — unverified, do not state as fact."
+      },
+      "balance_limits_and_refund": {
+        "value": "Maximum stored balance is ¥20,000. Unregistered physical cards can be refunded at the issuing operator's stations, less a handling fee, with the deposit returned. Welcome Suica balances are not refundable. Mobile cards follow a separate in-app process.",
+        "source_url": "https://www.jreast.co.jp/multi/en/",
+        "status": "verify_recommended",
+        "notes": "All three agree on the ¥20,000 ceiling. The refund mechanics differ by card type, which matters on the last day of a trip."
+      },
+      "day_passes_tokyo": {
+        "value": "The Tokyo Subway Ticket, sold to visitors, costs ¥1,000 for 24 hours, ¥1,500 for 48 hours and ¥2,000 for 72 hours, with children 6-11 at half price and under-6s free. It covers all nine Tokyo Metro lines AND all four Toei Subway lines. The clock starts at the first gate and runs a full 24, 48 or 72 hours — not until midnight.",
+        "source_url": "https://www.tokyometro.jp/en/ticket/travel/index.html",
+        "status": "verify_recommended",
+        "notes": "RULED 2026-09-16. NOBODY in the panel was right: claude said ¥800/1,200/1,500 and wrongly claimed Toei needed a separate ticket; grok guessed a ¥900-1,600 range. Watch the name collision — the tourist 'Tokyo Subway Ticket' (Metro+Toei) is a different product from the plain 'Tokyo Metro 24-hour ticket' (Metro only). tokyometro.jp returns 403 to automated fetches, so this rests on corroborated secondary sources."
+      },
+      "day_passes_kyoto": {
+        "value": "The Kyoto Subway & Bus One-Day Pass costs about ¥1,100 for an adult (¥550 child) and covers all subway lines and major city buses. The long-standing bus-only one-day pass has been discontinued.",
+        "source_url": "https://www.city.kyoto.lg.jp/",
+        "status": "verify_recommended",
+        "notes": "claude and deepseek agree precisely; grok gives a consistent range. Many English guides still recommend the withdrawn bus-only pass — getting this right is a genuine differentiator."
+      },
+      "when_ic_beats_pass": {
+        "value": "Pay-as-you-go on an IC card usually suits a first-timer in Tokyo: individual Metro rides run roughly ¥180-330 and a typical sightseeing day involves three or four. A day pass starts to win at about five rides in a day.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Rule of thumb derived from the fare range and pass prices; recompute once day_passes_tokyo is ruled."
+      }
+    },
+    "seasonal": {
+      "sakura_peak_windows": {
+        "value": "Somei Yoshino full bloom typically falls in Kyushu in late March; Tokyo, Kyoto and Osaka from late March into the first days of April, often around 28 March to 5 April; Tohoku mid-to-late April; Hokkaido late April into early May. The window from opening to full bloom is roughly a week, and petals fall quickly after.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "All three agree on the ranges. Dates shift yearly with winter temperatures and must never be stated as fixed. Note the JMA stopped issuing the official bloom forecast in 2010; private forecasters publish it now."
+      },
+      "sakura_booking_lead": {
+        "value": "Accommodation in Kyoto and central Tokyo for the bloom window is commonly booked around six months ahead, and well-regarded ryokan earlier still.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Judgment figure rather than a published fact; treat as guidance, not a number to defend."
+      },
+      "koyo_peak_windows": {
+        "value": "Autumn colour peaks in Hokkaido and the Japanese Alps in October, in Kyoto in the second half of November, and in Tokyo from late November into early December. It moves north to south and from high ground down.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "More stable year to year than the cherry blossom, but still a range."
+      },
+      "golden_week_dates": {
+        "value": "Golden Week is built from Showa Day on 29 April, Constitution Memorial Day on 3 May, Greenery Day on 4 May and Children's Day on 5 May. The length of the run depends on where those dates fall in the week; when a holiday falls on a Sunday the following Monday becomes a substitute holiday.",
+        "source_url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "status": "agreed_stable",
+        "notes": "Dates fixed in law. Do NOT freeze a specific year's run into prose — the substitute-holiday rule shifts it."
+      },
+      "golden_week_effects": {
+        "value": "Reserved Shinkansen seats sell out well in advance, domestic flights fill and accommodation prices rise sharply. Major attractions stay open and are extremely crowded; many smaller and family-run businesses close for part of the run.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "All three agree. The article's value is separating what genuinely closes from what is merely crowded."
+      },
+      "obon_dates_and_effects": {
+        "value": "Obon is observed around 13-16 August in most of Japan, with some regions keeping it in July. It is not a public holiday, yet it is one of the heaviest domestic travel periods of the year: rail and domestic flights fill and many family-run businesses close for several days.",
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "All three agree. The 'not a public holiday but everything is full' distinction is what an American reader will not expect."
+      },
+      "new_year_closures": {
+        "value": "Roughly 29 December to 3 or 4 January is Japan's most significant closure window, peaking 31 December to 3 January. Many independent restaurants, small shops, museums and government offices close for several consecutive days; department stores typically close on 1 January; convenience stores stay open. Shrines are exceptionally busy with the first-visit tradition.",
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "All three agree closely. This is the closure Americans most often walk into unaware, because late December reads as an ordinary travel window from the US."
+      },
+      "public_holidays_list": {
+        "value": "Sixteen national holidays. Fixed dates: New Year's Day 1 Jan; Foundation Day 11 Feb; Emperor's Birthday 23 Feb; Showa Day 29 Apr; Constitution Day 3 May; Greenery Day 4 May; Children's Day 5 May; Mountain Day 11 Aug; Culture Day 3 Nov; Labour Thanksgiving 23 Nov. Movable: Coming of Age Day 2nd Monday of January; Vernal Equinox around 20-21 Mar; Marine Day 3rd Monday of July; Respect for the Aged Day 3rd Monday of September; Autumnal Equinox around 22-24 Sep; Sports Day 2nd Monday of October. When a holiday falls on a Sunday the next non-holiday weekday becomes a substitute holiday, and a single weekday sandwiched between two holidays also becomes one.",
+        "source_url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+        "status": "verified",
+        "notes": "Fetched from the Cabinet Office page 2026-09-16. The substitute rule is what makes Golden Week's length vary — never freeze one year's run into prose."
+      },
+      "tsuyu_rainy_season": {
+        "value": "The rainy season moves south to north: Okinawa from early May to late June; Kyushu and Shikoku from late May or early June to mid-July; Kanto and Kansai from about early June to mid or late July; Tohoku later still. Hokkaido is generally considered not to have one. In practice it means humidity and heavy bursts rather than continuous all-day rain.",
+        "source_url": "https://www.jma.go.jp/",
+        "status": "agreed_stable",
+        "notes": "All three agree; grok supplied the regional gradient. The 'bursts, not constant rain' characterisation is what decides whether a reader cancels a June trip."
+      },
+      "typhoon_season": {
+        "value": "Typhoons are possible from roughly May through October, peaking in August and September. Okinawa, Kyushu and Shikoku are most exposed; direct hits on Tokyo and Kyoto are less common, though disruption to rail and flights is not.",
+        "source_url": "https://www.jma.go.jp/",
+        "status": "verify_recommended",
+        "notes": "Worth capturing that Japanese rail announces pre-emptive suspensions in advance — genuinely useful and unlike US practice."
+      },
+      "summer_heat": {
+        "value": "August highs in Tokyo and Kyoto sit around 33-35C with high humidity, and Kyoto's basin geography makes it feel worse. Heat is a real constraint on how much walking an itinerary can carry.",
+        "source_url": "https://www.jma.go.jp/",
+        "status": "verify_recommended",
+        "notes": "Keep Celsius as the native figure; the site converts for a US audience."
+      },
+      "winter_snow_regions": {
+        "value": "Reliable snow is in Hokkaido, Tohoku and along the Japan Sea side — Niigata, Toyama, Nagano — broadly December through March. Tokyo and Kyoto get little; Kyoto snow is an occasional event, not a season.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Readers routinely expect snow in Kyoto in January. Correcting that expectation is much of the winter article."
+      },
+      "winter_low_season": {
+        "value": "Outside the New Year period and the ski regions, winter is the quietest and cheapest time to visit the main cities, with clear skies and short queues at sites that are impossible in spring.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Panel did not contradict it, but no source proved accommodation prices actually fall. Treat as a pattern, not a promise."
+      }
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 19,
+  "swamp": "S-licence",
+  "_INSTRUCTIONS": "Return ONE JSON object with exactly these keys. For each: {value, status, source_url, notes}. status is one of verified | verify_recommended | serve_live | agreed_stable. DEFAULT TO verify_recommended. Mark verified ONLY if source_url is an OFFICIAL source you actually opened — mevzuat.gov.tr, resmigazete.gov.tr, a .gov.tr ministry or directorate (Karayollari Genel Mudurlugu, Emniyet Genel Mudurlugu, Ulastirma Bakanligi), the UN treaty database for convention status, or AAA/AATA for US IDP issuance. A car-rental company's marketing page, a comparison site, a travel blog or an insurance broker is NOT official. If you cannot source a value, return null and list the key in _open_questions. Do NOT estimate. Do NOT average two sources.",
+  "_CALIBRATION": "Track record on this project: batch 16 returned 1/1 and 4/5 verified-with-official-source; batch 17 returned 3/3 and 3/3; batch 18 returned 6/6 and 7/7, both models locating the actual regulation PDF. That last one is the standard. Before these prompts were hardened, a Thailand panel marked 24 of 40 verified with only 2 officially sourced.",
+  "_WHY_THIS_LOOKS_ODD": "This asks for COMPONENTS and no recommendations on purpose. The articles report mechanics; the paid guide makes the calls. Do not add advice, rankings or 'you should' framing to any notes field. In particular do NOT advise whether a traveller should obtain an IDP — the whole point is that four different thresholds (Turkish law, the rental desk, the insurer, the IDP's own legal nature) disagree, and reporting each accurately is the task.",
+  "_open_questions": [],
+  "facts": {
+    "licence.idp_legal_nature": {
+      "_want": "What an International Driving Permit legally is — a certified translation of a domestic licence under the 1949/1968 road traffic conventions, not a standalone driving entitlement.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "licence.idp_us_issuers": {
+      "_want": "Which bodies are authorised to issue an IDP in the United States, and the fee.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "licence.idp_validity": {
+      "_want": "How long a US-issued IDP is valid, and whether it can be obtained from outside the US.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "licence.idp_must_accompany": {
+      "_want": "Whether the IDP must be carried together with the home licence to be valid.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "licence.turkey_convention_status": {
+      "_want": "Which road traffic convention(s) Turkey is party to, and what that means for recognition of foreign licences.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "licence.foreign_licence_period": {
+      "_want": "How long a visitor may drive in Turkey on a foreign licence before a Turkish licence is required.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "licence.turkey_requires_idp": {
+      "_want": "Whether Turkish law requires an IDP from a US licence holder, or merely permits one. Cite the rule, not travel advice.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "licence.categories_by_engine": {
+      "_want": "Turkish licence categories for motorcycles, scooters and mopeds by engine size, and what each permits.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "licence.car_licence_covers_scooter": {
+      "_want": "Whether a car licence (Turkish class B, or a US equivalent) permits riding a scooter or moped in Turkey, and up to what engine size.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "licence.atv_quad_status": {
+      "_want": "How ATVs and quads are classified in Turkish law, and what licence they require on public roads.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "rental.minimum_age": {
+      "_want": "Minimum driver age for car rental in Turkey and any young-driver surcharge threshold.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "rental.licence_held_duration": {
+      "_want": "How long a driver must have held their licence to rent a car in Turkey.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "rental.credit_card_requirement": {
+      "_want": "Whether a credit card in the driver's name is required, and the typical deposit or pre-authorisation held.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "rental.documents_inspected": {
+      "_want": "Which documents a Turkish rental desk inspects at the counter.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "rental.cross_border_restrictions": {
+      "_want": "Restrictions on taking a Turkish rental car across a border, and one-way rules.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.compulsory_third_party": {
+      "_want": "Turkey's compulsory motor third-party liability insurance — what it covers and what it does not.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.cdw_and_excess": {
+      "_want": "How collision damage waiver and the excess work on Turkish rentals, and what a super-CDW buys down.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.standard_exclusions": {
+      "_want": "The standard exclusion list on Turkish rental insurance: tyres, glass, undercarriage, mirrors, interior, and any others.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "insurance.deposit_vs_excess": {
+      "_want": "How the held deposit relates to the excess in practice.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "driving.speed_limits": {
+      "_want": "Turkish speed limits by road type for a passenger car.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "driving.alcohol_limit": {
+      "_want": "The blood alcohol limit for drivers in Turkey, including any lower limit for drivers towing or professional drivers.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "driving.seatbelt_phone_childseat": {
+      "_want": "Seatbelt, mobile phone and child restraint rules.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "driving.helmet_law": {
+      "_want": "Helmet law for motorcycle and scooter riders and passengers.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "tolls.hgs_system": {
+      "_want": "The HGS electronic toll system — how it works, and how rental cars are normally equipped.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "tolls.unpaid_penalty": {
+      "_want": "What happens when a toll goes unpaid: the grace period, the surcharge, and how it is collected from a rental customer.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "fines.how_they_reach_renter": {
+      "_want": "How a traffic or parking fine incurred in a rental car reaches a foreign renter, and what administrative fee rental companies typically add.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "accident.legal_requirements": {
+      "_want": "What Turkish law requires at the scene of a road accident — reporting, moving vehicles, the accident report form.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    }
+  }
+}

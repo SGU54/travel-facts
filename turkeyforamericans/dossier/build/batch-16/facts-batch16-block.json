@@ -1,0 +1,158 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 16,
+  "swamp": "S-insure",
+  "facts": {
+    "health.er_visit_cost_private_try": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS RETURNED NULL and both listed it in _open_questions. No official or named-hospital self-pay tariff for a foreign patient exists publicly. DO NOT WRITE A NUMBER. Any sentence depending on this is DELETED, not softened."
+    },
+    "health.fracture_treatment_cost_private_try": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS RETURNED NULL and both listed it in _open_questions. No official or named-hospital self-pay tariff for a foreign patient exists publicly. DO NOT WRITE A NUMBER. Any sentence depending on this is DELETED, not softened."
+    },
+    "health.inpatient_night_cost_private_try": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS RETURNED NULL and both listed it in _open_questions. No official or named-hospital self-pay tariff for a foreign patient exists publicly. DO NOT WRITE A NUMBER. Any sentence depending on this is DELETED, not softened."
+    },
+    "pharmacy.walkin_clinic_cost_try": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS RETURNED NULL and both listed it in _open_questions. No official or named-hospital self-pay tariff for a foreign patient exists publicly. DO NOT WRITE A NUMBER. Any sentence depending on this is DELETED, not softened."
+    },
+    "pharmacy.nobetci_rota": {
+      "value": "Every district maintains a rotating nöbetçi (duty) pharmacy open 24 hours. The rota changes daily. Closed pharmacies are required by law to display the name and address of the current duty pharmacy. Duty pharmacies can also be located via the official e-Devlet / TİTCK nöbetçi eczane query, local pharmacist-chamber lists, Google Maps search for “nöbetçi eczane”, or dedicated apps.",
+      "status": "verified",
+      "source_url": "https://www.turkiye.gov.tr/saglik-titck-nobetci-eczane-sorgulama?nobetci=Eczaneler",
+      "notes": "Official TİTCK / e-Devlet service for querying duty pharmacies by province and district."
+    },
+    "medication.restricted_categories": {
+      "value": "Medications for personal treatment listed in the relevant customs annex are permitted in reasonable quantities when accompanied by supporting documentation. Certain controlled substances, narcotics and specific restricted pharmaceuticals may be prohibited or require prior authorisation; food supplements and sports foods face additional restrictions when imported by post/cargo.",
+      "status": "verified",
+      "source_url": "https://www.mfa.gov.tr/turkiye_ye-ait-gumruk-bilgileri.en.mfa",
+      "notes": "Official Ministry of Foreign Affairs customs information (mirroring Ministry of Trade passenger rules)."
+    },
+    "medication.quantity_limit": {
+      "value": "Reasonable quantity for personal treatment, determined by the duration of stay in Turkey.",
+      "status": "verified",
+      "source_url": "https://www.mfa.gov.tr/turkiye_ye-ait-gumruk-bilgileri.en.mfa",
+      "notes": "Official MFA/Ministry of Trade wording: “reasonable amounts, considering the time the passengers will spend in our country”."
+    },
+    "medication.doctor_letter_requirements": {
+      "value": "A document (report from a healthcare organisation, doctor’s report or prescription, etc.) stating that the passenger must use the medication during the travel/stay must be presented to customs.",
+      "status": "verified",
+      "source_url": "https://www.mfa.gov.tr/turkiye_ye-ait-gumruk-bilgileri.en.mfa",
+      "notes": "Official MFA customs FAQ text."
+    },
+    "health.state_emergency_obligation_foreigners": {
+      "value": "Admission of foreign patients seeking emergency health care is obligatory; necessary medical intervention must be performed unconditionally and without delay. Collection of service charges occurs after emergency response and care is provided. Emergency medical services and emergency patient transport are charged (except 112 ambulance services free for certain Turkish citizens abroad). Post-stabilisation continuing care falls outside the free-emergency obligation and is chargeable.",
+      "status": "verify_recommended",
+      "source_url": "https://www.mfa.gov.tr/turkiye_ye-ait-gumruk-bilgileri.en.mfa",
+      "notes": "Value CORROBORATED: three independent legal publishers quote identical text from Regulation on International Health Tourism and Tourist Health, Official Gazette No. 32882, 26 April 2025 — 'Admission of foreign patients who apply to a health care facility in order to receive emergency health care services and unconditional response to medical emergencies are obligatory. Transactions related to the collection of service charges are made after the emergency response and care is provided.' Downgraded from grok's 'verified' because the cited URL was a private legal-publishing site, not resmigazete.gov.tr, and I did not open the Gazette itself."
+    },
+    "health.ministry_sets_health_tourism_prices": {
+      "value": "Pricing of healthcare services provided under international health tourism and tourist health is set by the Ministry of Health, and facilities must itemise the services provided on the invoice or sales receipt.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "NOT RETURNED BY EITHER MODEL — found while verifying the emergency-obligation fact. Same instrument (Regulation on International Health Tourism and Tourist Health, Official Gazette No. 32882, 26 April 2025). This is the mechanic that explains why no public self-pay tariff turns up: pricing sits in a ministry framework, not a published hospital price list. Load-bearing for the cost article now that all four price figures are null."
+    },
+    "health.two_regimes_tourist_vs_medical_tourism": {
+      "value": "The same 2025 regulation covers two different populations: 'international health tourism' (someone who travels TO Turkey for treatment) and 'tourist health' (a visitor who falls ill or is injured while there). Obligations that attach to health-tourism providers — authorisation certificates, complication insurance for surgical/invasive procedures — do not describe what happens to a tourist who breaks an ankle.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "NOT RETURNED BY EITHER MODEL. The distinction matters because search results conflate them constantly; an article that borrows medical-tourism rules to describe an injured holidaymaker would be wrong. Reported, not resolved."
+    },
+    "health.air_ambulance_repatriation_usd": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "DISPUTE NOT RESOLVED: deepseek USD 60,000-80,000 (Indian embassy page, Turkey-to-elsewhere), grok USD 100,000-250,000 (an air-ambulance operator's own marketing page). Non-overlapping ranges, neither official, and grok's own note cites a third band (US State Dept 20,000-200,000). Three sources, three ranges. NOT AVERAGED, NOT PRINTED — the article says repatriation is separately and enormously costly and that the figure is quoted per case."
+    },
+    "medication.common_us_restricted": {
+      "value": "Common US prescriptions that may be restricted, controlled, or unavailable in Turkey include: narcotic pain medications (e.g., oxycodone, hydrocodone, morphine); ADHD medications (e.g., Adderall, Ritalin—these are strictly controlled psychostimulants); benzodiazepines (e.g., Xanax, Valium); and any medication containing controlled substances. Travelers should check with the Turkish Ministry of Health or nearest Turkish Consulate before traveling with these medications. Some medications available over-the-counter in the US may require a prescription in Turkey, and vice versa.",
+      "status": "verify_recommended",
+      "source_url": "https://losangeles-cg.mfa.gov.tr",
+      "notes": "SINGLE SOURCE (grok returned null and flagged it open). deepseek's categories — narcotic analgesics, ADHD stimulants, benzodiazepines — are the standard controlled families and internally consistent with the MFA customs rule. Usable as CATEGORIES ONLY. Do not name a brand as banned without a TITCK listing."
+    },
+    "insurance.balloon_classification": {
+      "value": "Hot-air ballooning is frequently treated as an aviation activity or adventure sport. Many standard travel policies exclude it under aviation or adventure-sports clauses unless the policy explicitly lists commercial hot-air ballooning as covered or an adventure-activity add-on is purchased. Operator liability insurance (mandatory under Turkish SHGM rules) covers passenger injury during the flight itself but does not replace the passenger’s own travel-policy cover for medical costs, evacuation or trip interruption.",
+      "status": "verify_recommended",
+      "source_url": "https://epicturkeytravel.com/cappadocia-balloon-safety/",
+      "notes": "SHGM-mandated operator liability exists; standard travel-policy treatment of the activity itself is insurer-specific and often requires confirmation or an add-on."
+    },
+    "insurance.exclusion_motorcycle": {
+      "value": "Standard travel policies commonly exclude or restrict motorbike/scooter/quad use; coverage, when available, is typically conditional on holding a valid home-country licence for the vehicle class, compliance with local law, and wearing a helmet. Some policies require an optional motorcycle/scooter pack or exclude higher-cc machines or off-road use outright.",
+      "status": "verify_recommended",
+      "source_url": "https://www.worldnomads.com/row/help/insurance/buying-travel-insurance/riding-a-motorbike-or-scooter",
+      "notes": "Representative policy wording from major travel insurers; exact terms vary by insurer and plan."
+    },
+    "insurance.exclusion_licence_condition": {
+      "value": "Where two-wheeler cover is granted, policies typically require the rider to hold a valid licence issued in the home country that authorises the class/engine size of the vehicle being ridden, plus compliance with local licensing rules (often including an International Driving Permit where required by the destination).",
+      "status": "verify_recommended",
+      "source_url": "https://www.worldnomads.com/row/help/insurance/buying-travel-insurance/riding-a-motorbike-or-scooter",
+      "notes": "Common condition across multiple travel-insurer wordings."
+    },
+    "insurance.exclusion_alcohol": {
+      "value": "Standard travel-policy wordings exclude or limit cover for injury or illness sustained while under the influence of alcohol or drugs when the influence causes or contributes to the loss, or when blood-alcohol concentration exceeds the legal limit while operating a vehicle.",
+      "status": "verify_recommended",
+      "source_url": "https://www.aussietravelcover.com.au/sales-gw/documentation/ATT/AT98/documents/PDS",
+      "notes": "Representative general-exclusion language found in multiple travel-policy documents."
+    },
+    "insurance.exclusion_watersports": {
+      "value": "Scuba diving and paragliding (including Ölüdeniz tandem paragliding) are commonly classified as adventure or hazardous activities. Standard policies often exclude them or cover them only under an optional adventure-sports extension, subject to depth/height limits, licensed-operator requirements and other conditions.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Consistent pattern across travel-insurer activity schedules; exact wording is policy-specific."
+    },
+    "insurance.operator_liability_turkey": {
+      "value": "Licensed Turkish activity operators (including SHGM-licensed balloon operators) must carry passenger liability insurance covering death or bodily injury occurring during the activity. This covers the operator’s legal liability to the passenger. It does not cover the passenger’s own medical, evacuation, trip-cancellation or personal-belongings costs, which remain the responsibility of the passenger’s travel policy (subject to that policy’s terms and exclusions).",
+      "status": "verify_recommended",
+      "source_url": "https://epicturkeytravel.com/cappadocia-balloon-safety/",
+      "notes": "SHGM regulatory requirement for balloon operators; analogous operator liability applies to other licensed adventure operators."
+    },
+    "insurance.claim_documents": {
+      "value": "Typical documents required for a Turkish medical claim include: original itemised hospital invoices/receipts, medical reports/discharge summary, diagnostic results, proof of payment, passport/ID copy, insurance policy details, and any police report if an accident was involved. Documents should be obtained at the time of treatment.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Standard claim-requirement list across travel insurers; exact checklist is policy-specific."
+    },
+    "insurance.primary_vs_secondary": {
+      "value": "Travel medical cover is frequently written as secondary to any other valid health plan (including a US domestic plan). When secondary, the travel insurer pays only after the primary plan has responded (or after proof that the primary plan will not respond). Coordination-of-benefits rules and documentation requirements change; the claimant may need to submit first to the US plan and then residual amounts to the travel insurer.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Common primary/secondary distinction in travel-policy wordings; exact hierarchy is policy-specific."
+    },
+    "health.hospital_types": {
+      "value": "Public (Devlet/Ministry of Health) hospitals, private (Özel) hospitals, and university hospitals. All three types treat foreign visitors. Public and university hospitals bill foreigners as self-pay patients according to SGK tariffs or institutional rates when no SGK coverage applies; private hospitals set their own tariffs and bill self-pay foreigners directly (or via insurance arrangements).",
+      "status": "verify_recommended",
+      "source_url": "https://en.wikipedia.org/wiki/Health_care_in_Turkey",
+      "notes": "Commonwealth Fund profile and multiple secondary sources describe the three categories; no single official tariff schedule for foreigners opened."
+    },
+    "health.payment_before_treatment": {
+      "value": "Private hospitals commonly issue a treatment estimate/quote and may require a deposit, partial or full prepayment, or payment on arrival/admission for non-emergency care; exact timing varies by hospital and procedure. Emergency stabilisation is provided first, with billing afterwards.",
+      "status": "verify_recommended",
+      "source_url": "https://acibademinternational.com/patient-guides/deposit-prepayment-or-pay-on-arrival-how-hospital-billing-usually-works-in-turkey/",
+      "notes": "Hospital-group patient guide describes the practice; not a regulator text."
+    },
+    "health.direct_billing_hospitals": {
+      "value": "Some major private hospital groups maintain direct-billing arrangements with selected international insurers when pre-approved; otherwise the patient pays the hospital and claims reimbursement from the insurer.",
+      "status": "verify_recommended",
+      "source_url": "https://acibademinternational.com/patient-guides/deposit-prepayment-or-pay-on-arrival-how-hospital-billing-usually-works-in-turkey/",
+      "notes": "Hospital-group guidance; practice is insurer- and hospital-specific."
+    },
+    "pharmacy.eczane_scope": {
+      "value": "Turkish pharmacists may dispense and advise on over-the-counter medicines and many non-controlled products without a doctor’s prescription. Antibiotics and controlled or prescription-only medicines require a valid Turkish physician’s prescription; foreign prescriptions are not legally recognised for dispensing.",
+      "status": "verify_recommended",
+      "source_url": "https://istanbulmedicalcenter.com/en/servisler/run-out-of-medication-turkey/",
+      "notes": "Consistent description across pharmacy and medical-tourism guides; controlled by TİTCK rules."
+    }
+  }
+}

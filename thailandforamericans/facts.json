@@ -79,7 +79,7 @@
   },
   "country_facts": {
     "visa": {
-      "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+      "_note": "YMYL. The 2026 rollback is now IN FORCE (15 Sep 2026). Keep the day-count in the DB, never frozen in prose — that is what the fact-span mechanism is for, and it is why the 60→30 change cost no article rewrite.",
       "by_nationality": [
         {
           "passport": "United States",
@@ -90,10 +90,10 @@
             "notes": "Americans are on the visa-exemption list — no visa for short tourism."
           },
           "max_stay_days": {
-            "value": null,
+            "value": 30,
             "source_url": "https://www.thaievisa.go.th/",
-            "status": "serve_live",
-            "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+            "status": "verify_recommended",
+            "notes": "IN FORCE since 15 Sep 2026: the 60-day exemption introduced in 2024 was rolled back to 30 days for most nationalities including the US. Cabinet approved 19 May 2026; Ministry of Interior notices published in the Royal Gazette 31 Aug 2026; effective 15 Sep 2026. Officers apply the rule in force on the ENTRY date, and the 'admitted until' stamp is what governs."
           },
           "fee": {
             "value": "No fee for visa-exempt entry",
@@ -110,6 +110,18 @@
             "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
             "source_url": null,
             "status": "agreed_stable"
+          },
+          "extension_on_exemption": {
+            "value": "One extension of up to 30 days, applied for in Thailand at an immigration office before the current permission expires; approval is at immigration's discretion. Fee commonly cited ~1,900 THB. Gives roughly 60 days maximum per entry.",
+            "source_url": "https://www.immigration.go.th/",
+            "status": "verify_recommended",
+            "notes": "Matters more since 15 Sep 2026: with 30 days on arrival, a trip longer than a month now needs this, where a 60-day entry did not."
+          },
+          "land_border_entry_limit": {
+            "value": "Two visa-exempt entries per calendar year by LAND border. Arrivals by air or sea are not limited.",
+            "source_url": "https://www.immigration.go.th/",
+            "status": "verify_recommended",
+            "notes": "New with the 15 Sep 2026 rules. Does not affect a normal fly-in holiday; it targets repeated border runs."
           }
         }
       ],
@@ -117,7 +129,7 @@
         "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
         "source_url": null,
         "status": "verify_recommended",
-        "notes": "Fee change-prone — verify, don't freeze."
+        "notes": "Fee change-prone — verify, don't freeze. Superseded in detail by by_nationality[].extension_on_exemption; kept for non-US readers."
       },
       "scam_sites_to_avoid": {
         "value": [
@@ -170,10 +182,10 @@
         "status": "agreed_stable"
       },
       "atm_availability": {
-        "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+        "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a flat per-withdrawal foreign-card fee that varies by card network on top of your home bank's fee — see money.atm_fee. Because it is flat, withdraw larger amounts less often. Always choose to be billed in baht, never in dollars.",
         "source_url": null,
         "status": "verify_recommended",
-        "notes": "~220 THB ATM fee change-prone — verify."
+        "notes": "Fee figure moved out to money.atm_fee so one key serves the spans rather than two records drifting apart. Previously asserted ~220 THB, which is stale."
       },
       "currency_import_export_limit": {
         "value": null,
@@ -185,6 +197,12 @@
         "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
         "source_url": null,
         "status": "agreed_stable"
+      },
+      "atm_fee": {
+        "value": "Thai ATMs charge a flat per-withdrawal fee on foreign cards, and it is no longer one number: commonly ~250 THB on Visa and up to ~350 THB on Mastercard at the same machine, some banks still at 220, and AEON (inside Big C and Lotus's) noticeably cheaper at roughly 150. The fee is shown on screen before you confirm.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Referenced by data-fact=\"money.atm_fee\" in atm-fees-thailand-real-cost and money-in-thailand-guide. The key did not exist until 19 Sep 2026, so those spans had only ever rendered their fallback text of 220 THB — a figure the site's own ATM article explains at length is stale. Flat, not a percentage: it is the NUMBER of withdrawals that costs, not the amount."
       }
     },
     "getting_there": {
@@ -332,24 +350,24 @@
       }
     },
     "costs": {
-      "_note": "RECOMMENDATION-ish, approximate, dated; serve_live so never frozen as fact. Thailand is inexpensive by US standards.",
+      "_note": "RECOMMENDATION-ish, approximate, dated; serve_live so never frozen as fact. Thailand is inexpensive by US standards. Values mirror common.facts money.cost_tiers (verified July 2026); that row, not this file, is what renders.",
       "daily_budget_low": {
-        "value": null,
-        "source_url": null,
-        "status": "serve_live",
-        "notes": "Backpacker/budget: very roughly USD 30–50/day. Indicative only — verify live."
+        "value": "$25–45/day (hostels, street food, buses and trains)",
+        "source_url": "common.facts:money.cost_tiers",
+        "status": "verified",
+        "notes": "Backpacker/budget: very roughly USD 30–50/day. Indicative only — verify live. CORRECTED 2026-09-18: an earlier edit that day promoted blog-sourced figures ($30–50 low) into these fields on the assumption the site had no data. It does — common.facts `money.cost_tiers` carries these bands, verified July 2026, and the site has been rendering them all along. Aligned to the DB, which is the live source."
       },
       "daily_budget_mid": {
-        "value": null,
-        "source_url": null,
-        "status": "serve_live",
-        "notes": "Mid-range: very roughly USD 75–150/day. Indicative only."
+        "value": "$80–150/day (nice hotels, mixed dining, domestic flights, some tours)",
+        "source_url": "common.facts:money.cost_tiers",
+        "status": "verified",
+        "notes": "Mid-range: very roughly USD 75–150/day. Indicative only. CORRECTED 2026-09-18: an earlier edit that day promoted blog-sourced figures ($30–50 low) into these fields on the assumption the site had no data. It does — common.facts `money.cost_tiers` carries these bands, verified July 2026, and the site has been rendering them all along. Aligned to the DB, which is the live source."
       },
       "daily_budget_high": {
-        "value": null,
-        "source_url": null,
-        "status": "serve_live",
-        "notes": "Luxury: USD 250+/day. Indicative only."
+        "value": "$250+/day (resorts, private villas, fine dining, private guides)",
+        "source_url": "common.facts:money.cost_tiers",
+        "status": "verified",
+        "notes": "Luxury: USD 250+/day. Indicative only. CORRECTED 2026-09-18: an earlier edit that day promoted blog-sourced figures ($30–50 low) into these fields on the assumption the site had no data. It does — common.facts `money.cost_tiers` carries these bands, verified July 2026, and the site has been rendering them all along. Aligned to the DB, which is the live source."
       }
     },
     "culture_etiquette": {

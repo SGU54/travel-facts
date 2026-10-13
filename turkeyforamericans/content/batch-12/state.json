@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "stage": "publishing",
+  "batch": 12,
+  "batches_total": 15,
+  "batch_status": "cleaned",
+  "published_slugs": [],
+  "updated_at": "2026-06-23",
+  "notes": "Batch 12 (food finish + entry start: turkish-breakfast, turkish-drinks-guide, turkey-vegetarian-guide, americans-visa-turkey, flights-usa-to-turkey) written+validated (804-880w). HIGH-STAKES YMYL: visa article = visa-free/90-in-180/150-day passport/old $50 e-visa framed as past/evisa.gov.tr verify nudge prominent — all conform to facts verify_recommended. Flights = no frozen prices, serve_live respected. SECOND GATE: grok + deepseek BOTH clean. Stage 4 next: images, upload, import (DRAFT), links, affiliates, publish. REMAINING: batches 13-15 plan-your-trip practicals (money, getting-around, safety, culture)."
+}

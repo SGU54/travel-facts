@@ -1,0 +1,464 @@
+SECOND GATE — Japan travel articles for an AMERICAN audience. Two separate jobs below.
+Answer BOTH, clearly separated. Be blunt; this is a paid product and flattery costs money.
+
+=========================================================================
+JOB 1 — IN-CONTEXT ERRORS ONLY
+=========================================================================
+Hunt ONLY for internal contradictions and drift:
+  - a date or range that contradicts a later sentence in the same or another article
+  - a figure stated two different ways across the five articles
+  - a claim that reads wrong inside its own paragraph
+  - a recommendation that drifts from the FACT SHEET below
+
+Do NOT rewrite for style. Do NOT suggest additions. Do NOT flag something as wrong merely
+because it is absent from the fact sheet — absence is not contradiction.
+
+IMPORTANT: the fact sheet may itself be stale. If an article states something you believe is
+CURRENT and the sheet disagrees, say so explicitly and say which you think is out of date.
+Do not simply tell me to revert to the sheet.
+
+=========================================================================
+JOB 2 — PULL x TRUST SCORING
+=========================================================================
+Score each article's handoff to a paid guide. 0-100 on each axis, WITH the failing reason.
+
+PULL — does the article make the reader SEE the swamp?
+  - a genuine turn exists (not a tacked-on call to action)
+  - a real stake is named (something that actually goes wrong)
+  - a CONNECTION TO OTHER DECISIONS is revealed (not a restatement of the article)
+  - the handoff points at the guide's SYSTEM, not "the answer is inside"
+
+TRUST — is it honest and proportional?
+  - the reader's original question is FULLY answered BEFORE any handoff
+    (a withheld answer is an automatic 0)
+  - the swamp is real — an expert would nod — not manufactured or inflated
+  - intensity matches the tag (a heavy turn on a light page fails here)
+  - no fear-words, no false urgency
+  - the guide is mentioned once, twice at most, never a drumbeat
+
+Articles tagged `turn` get BOTH axes. Articles tagged `seed` get TRUST ONLY — a seed is a
+single sentence with no turn to score, so Pull structurally does not apply.
+
+=========================================================================
+JOB 2b — CALIBRATION (do this FIRST, before scoring the real articles)
+=========================================================================
+Score these four deliberately-shaped samples. They exist to test whether your scoring is
+calibrated. Expected verdicts are stated; tell me if you disagree with any of them.
+
+SAMPLE 1 — a proper turn. Expected: PASS both axes.
+  "[Full answer to the article's question given first.] Notice what happened across all of
+   this. The bloom window sets your booking deadline, which fixes how far ahead you commit to
+   rooms, which constrains which cities you can base yourself in. Chasing the blossom decides
+   four or five other things about the trip, six months before you travel. Working out how
+   those fit together is what the complete Japan trip guide is built to do."
+
+SAMPLE 2 — the same article with urgency cranked and the answer teased.
+  Expected: high PULL, TRUST FAIL.
+  "Most travellers get cherry blossom season catastrophically wrong and waste thousands. The
+   real bloom dates are not what the forecasts tell you. Do NOT book anything until you have
+   read the complete Japan trip guide — the answer is inside, and without it your trip is a
+   coin flip."
+
+SAMPLE 3 — the raw article with no handoff at all. Expected: high TRUST, PULL FAIL.
+  "[Full answer to the article's question given first.] Late April, once the petals have gone
+   from the main cities, is one of the most pleasant stretches of the Japanese year and
+   noticeably cheaper."
+
+SAMPLE 4 — a heavy turn bolted onto a broad top-of-funnel page.
+  Expected: proportionality TRUST FAIL.
+  "[A general 'what is Obon' explainer.] But Obon is only one node in a web of connected
+   decisions that will make or break your trip. Every choice you make cascades. The complete
+   Japan trip guide maps the whole system, and without it you are planning blind."
+
+If SAMPLE 2 clears TRUST 80, your scoring is miscalibrated — tell me so rather than scoring
+the real articles.
+
+=========================================================================
+FACT SHEET (the only permitted source of facts)
+=========================================================================
+{
+ "country_facts.when_to_go": {
+  "climate_by_season": {
+   "value": "Spring (Mar-May) mild + cherry blossoms; summer (Jun-Aug) hot/humid + rainy season/typhoon; fall (Sep-Nov) mild + autumn colors; winter (Dec-Feb) cold, snow in north",
+   "status": "agreed_stable",
+   "agreed_by": 5
+  },
+  "best_months": {
+   "value": [
+    "late March-April (cherry blossom)",
+    "October-November (autumn foliage)"
+   ],
+   "rank": "core",
+   "agreed_by": 5
+  },
+  "avoid_periods": {
+   "value": [
+    "June-July rainy season",
+    "August typhoon + heat",
+    "Golden Week (late Apr-early May)",
+    "Obon (mid-Aug)",
+    "New Year"
+   ],
+   "rank": "core",
+   "agreed_by": 5
+  }
+ },
+ "depth_facts.seasonal": {
+  "sakura_peak_windows": {
+   "value": "Somei Yoshino full bloom typically falls in Kyushu in late March; Tokyo, Kyoto and Osaka from late March into the first days of April, often around 28 March to 5 April; Tohoku mid-to-late April; Hokkaido late April into early May. The window from opening to full bloom is roughly a week, and petals fall quickly after.",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "All three agree on the ranges. Dates shift yearly with winter temperatures and must never be stated as fixed. Note the JMA stopped issuing the official bloom forecast in 2010; private forecasters publish it now."
+  },
+  "sakura_booking_lead": {
+   "value": "Accommodation in Kyoto and central Tokyo for the bloom window is commonly booked around six months ahead, and well-regarded ryokan earlier still.",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Judgment figure rather than a published fact; treat as guidance, not a number to defend."
+  },
+  "koyo_peak_windows": {
+   "value": "Autumn colour peaks in Hokkaido and the Japanese Alps in October, in Kyoto in the second half of November, and in Tokyo from late November into early December. It moves north to south and from high ground down.",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "More stable year to year than the cherry blossom, but still a range."
+  },
+  "golden_week_dates": {
+   "value": "Golden Week is built from Showa Day on 29 April, Constitution Memorial Day on 3 May, Greenery Day on 4 May and Children's Day on 5 May. The length of the run depends on where those dates fall in the week; when a holiday falls on a Sunday the following Monday becomes a substitute holiday.",
+   "source_url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+   "status": "agreed_stable",
+   "notes": "Dates fixed in law. Do NOT freeze a specific year's run into prose — the substitute-holiday rule shifts it."
+  },
+  "golden_week_effects": {
+   "value": "Reserved Shinkansen seats sell out well in advance, domestic flights fill and accommodation prices rise sharply. Major attractions stay open and are extremely crowded; many smaller and family-run businesses close for part of the run.",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "All three agree. The article's value is separating what genuinely closes from what is merely crowded."
+  },
+  "obon_dates_and_effects": {
+   "value": "Obon is observed around 13-16 August in most of Japan, with some regions keeping it in July. It is not a public holiday, yet it is one of the heaviest domestic travel periods of the year: rail and domestic flights fill and many family-run businesses close for several days.",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All three agree. The 'not a public holiday but everything is full' distinction is what an American reader will not expect."
+  },
+  "new_year_closures": {
+   "value": "Roughly 29 December to 3 or 4 January is Japan's most significant closure window, peaking 31 December to 3 January. Many independent restaurants, small shops, museums and government offices close for several consecutive days; department stores typically close on 1 January; convenience stores stay open. Shrines are exceptionally busy with the first-visit tradition.",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All three agree closely. This is the closure Americans most often walk into unaware, because late December reads as an ordinary travel window from the US."
+  },
+  "public_holidays_list": {
+   "value": "Sixteen national holidays. Fixed dates: New Year's Day 1 Jan; Foundation Day 11 Feb; Emperor's Birthday 23 Feb; Showa Day 29 Apr; Constitution Day 3 May; Greenery Day 4 May; Children's Day 5 May; Mountain Day 11 Aug; Culture Day 3 Nov; Labour Thanksgiving 23 Nov. Movable: Coming of Age Day 2nd Monday of January; Vernal Equinox around 20-21 Mar; Marine Day 3rd Monday of July; Respect for the Aged Day 3rd Monday of September; Autumnal Equinox around 22-24 Sep; Sports Day 2nd Monday of October. When a holiday falls on a Sunday the next non-holiday weekday becomes a substitute holiday, and a single weekday sandwiched between two holidays also becomes one.",
+   "source_url": "https://www8.cao.go.jp/chosei/shukujitsu/gaiyou.html",
+   "status": "verified",
+   "notes": "Fetched from the Cabinet Office page 2026-09-16. The substitute rule is what makes Golden Week's length vary — never freeze one year's run into prose."
+  },
+  "tsuyu_rainy_season": {
+   "value": "The rainy season moves south to north: Okinawa from early May to late June; Kyushu and Shikoku from late May or early June to mid-July; Kanto and Kansai from about early June to mid or late July; Tohoku later still. Hokkaido is generally considered not to have one. In practice it means humidity and heavy bursts rather than continuous all-day rain.",
+   "source_url": "https://www.jma.go.jp/",
+   "status": "agreed_stable",
+   "notes": "All three agree; grok supplied the regional gradient. The 'bursts, not constant rain' characterisation is what decides whether a reader cancels a June trip."
+  },
+  "typhoon_season": {
+   "value": "Typhoons are possible from roughly May through October, peaking in August and September. Okinawa, Kyushu and Shikoku are most exposed; direct hits on Tokyo and Kyoto are less common, though disruption to rail and flights is not.",
+   "source_url": "https://www.jma.go.jp/",
+   "status": "verify_recommended",
+   "notes": "Worth capturing that Japanese rail announces pre-emptive suspensions in advance — genuinely useful and unlike US practice."
+  },
+  "summer_heat": {
+   "value": "August highs in Tokyo and Kyoto sit around 33-35C with high humidity, and Kyoto's basin geography makes it feel worse. Heat is a real constraint on how much walking an itinerary can carry.",
+   "source_url": "https://www.jma.go.jp/",
+   "status": "verify_recommended",
+   "notes": "Keep Celsius as the native figure; the site converts for a US audience."
+  },
+  "winter_snow_regions": {
+   "value": "Reliable snow is in Hokkaido, Tohoku and along the Japan Sea side — Niigata, Toyama, Nagano — broadly December through March. Tokyo and Kyoto get little; Kyoto snow is an occasional event, not a season.",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Readers routinely expect snow in Kyoto in January. Correcting that expectation is much of the winter article."
+  },
+  "winter_low_season": {
+   "value": "Outside the New Year period and the ski regions, winter is the quietest and cheapest time to visit the main cities, with clear skies and short queues at sites that are impossible in spring.",
+   "source_url": null,
+   "status": "verify_recommended",
+   "notes": "Panel did not contradict it, but no source proved accommodation prices actually fall. Treat as a pattern, not a promise."
+  }
+ }
+}
+
+=========================================================================
+THE FIVE ARTICLES
+=========================================================================
+
+---------------------------------------------------------------
+SLUG: cherry-blossom-season-japan
+TITLE: Cherry Blossom Season in Japan: When to Go and What It Costs
+SWAMP: seasonal-timing   HANDOFF TAG: turn   VEIN PIECE: seasonal-timing
+---------------------------------------------------------------
+
+Cherry blossom season is the single most requested time to visit Japan, and also the hardest to plan, because the thing you are travelling for does not keep a schedule. The bloom moves north across the country over several weeks, but in any one city it lasts about a week. This guide covers where the blossom lands and when, what the season does to what you pay, and how to book around a date that nobody can guarantee.
+
+## When the blossom actually arrives
+Cherry blossom reaches full bloom in Kyushu in late March, in Tokyo, Kyoto and Osaka from late March into the first days of April — most often somewhere around 28 March to 5 April — in Tohoku in mid to late April, and in Hokkaido from late April into early May. The pattern moves south to north and from low ground upward.
+
+### The rough regional timetable
+Working from that gradient, a first trip usually targets the Tokyo–Kyoto corridor in the first days of April. Both cities sit in the same broad window, and they are close enough that a week spanning the turn of the month gives you a real chance in at least one of them. Travelling further north buys you a second attempt: if Tokyo has already dropped its petals, Tohoku is often still a fortnight away from opening.
+
+### Why nobody can promise you a date
+Bloom timing depends on the winter that preceded it, and a warm February can pull the opening forward by a week. The Japan Meteorological Agency stopped issuing the official forecast in 2010, and private forecasters now publish the projections quoted everywhere. Those forecasts are useful from February onward — long after you needed to book flights and rooms. You are booking a window, not an event.
+
+## What the season does to what you pay
+Bloom season is Japan's most expensive domestic travel period outside the New Year holiday. Accommodation in central Kyoto and Tokyo rises sharply for the same rooms, reserved seats on the fast trains fill early, and the better-regarded inns stop taking new bookings months out. The airfare from the US rises too, though less dramatically than the lodging.
+
+### How far ahead to book
+Rooms in Kyoto and central Tokyo for the bloom window are commonly booked around six months ahead, and the well-regarded traditional inns go earlier still. That is the uncomfortable part of the timing problem: the booking deadline falls months before any forecast exists. Most people resolve it by choosing the first week of April, accepting the odds, and booking something cancellable.
+
+If your dates are fixed by work or school, plan a trip you would enjoy regardless and treat the blossom as a bonus. A first trip built entirely around one week of flowers disappoints when the flowers run early.
+
+## Where the crowds actually are
+Crowding in Tokyo and Kyoto during the roughly one-week bloom window concentrates in a small number of famous places rather than spreading evenly. The named parks, the photogenic riverside paths and the temple gardens that appear in every forecast article absorb enormous numbers of people, while ordinary neighbourhood streets a few minutes away carry the same trees with a fraction of the crowd.
+
+Japan treats blossom viewing as a social occasion rather than a spectator sport, which is why the busiest spots stay busy from morning until well after dark. Early morning is the reliable answer at the famous sites — as is simply walking, since residential streets, campuses and canal banks carry the same trees and attract almost nobody.
+
+## The three ways people actually play it
+Given a booking deadline roughly six months out and a bloom forecast that does not appear until February, travellers to Japan converge on three strategies: book the first days of April and accept the odds, travel south to north and take two chances, or book April for the season and treat the flowers as luck. It is worth choosing between them deliberately rather than drifting into one.
+
+### Book the first week of April and accept the odds
+The most common approach: the Tokyo-Kyoto corridor most often reaches full bloom around the turn of the month, so a week straddling it has a genuine chance. The cost is peak-season prices paid for a probability, and a warm February leaves you late with nothing but green.
+
+### Aim north and follow it
+Because the bloom climbs the country over several weeks, a trip that starts in the south and moves north converts a single window into several. Arriving in Kyoto in early April and reaching Tohoku a fortnight later means two separate chances rather than one. The trade-off is that you are committing to a lot of ground, which is a real constraint on a first trip where the cities themselves deserve time.
+
+### Go for the season, not the flower
+The third option is to book April for the weather and the long daylight, and treat any blossom as luck. Late April is one of the most pleasant stretches of the Japanese year and noticeably cheaper — until the holiday cluster at the end of the month, which is a different problem entirely.
+
+## What "full bloom" actually means
+Full bloom, the stage Japanese forecasts call mankai, is a specific point rather than a general condition, and the gap between the first flowers opening and the trees being fully out is usually several days. Forecasts quote both the opening date and the full-bloom date for each city, and the second is the one worth planning around — a tree at thirty per cent is a tree with some flowers on it, not the thing people travel for.
+
+The end is quicker than the beginning. Once full bloom passes, a single day of rain or wind can strip a street, which is why advice to build in slack at the front of the window is better than assuming you can catch up at the back.
+
+## The alternative nobody mentions
+Autumn, which peaks in Kyoto through the second half of November, is Japan's other great season and for a first trip arguably the easier one. Colour holds for weeks rather than days, the weather is more settled, and while it is busy it does not carry bloom season's compressed desperation. If you want Japan at its most beautiful and your dates are flexible, the case for choosing a season deliberately is worth reading before you commit to spring.
+
+Late April is also worth knowing about, once the blossom has passed the main cities. The weather is excellent, prices ease, and the country is green rather than pink — right up until the holiday cluster at the end of the month, which is a different problem entirely.
+
+## What the blossom decision is really attached to
+Notice what the bloom window has quietly done. A one-week target in Tokyo and Kyoto sets a booking deadline six months out, which fixes how far ahead you commit to rooms, which constrains which cities you can base yourself in, which changes how much of the country you can reach. Chasing the blossom is not a standalone preference — it decides four or five other things, six months before you travel.
+
+That chain is where first trips come apart, usually not because any single decision was wrong but because they were each made separately. Working out how the timing, the bases and the routing between them fit together is what the complete Japan trip guide is built to do.
+
+---------------------------------------------------------------
+SLUG: golden-week-japan-what-closes
+TITLE: Golden Week in Japan: What Closes and What It Costs
+SWAMP: seasonal-timing   HANDOFF TAG: turn   VEIN PIECE: seasonal-timing
+---------------------------------------------------------------
+
+Golden Week is the cluster of public holidays at the turn of April into May, and it is the period most often flagged as one to avoid. That advice is broadly right but rarely explained, which leaves travellers either cancelling a workable trip or walking into a week they were not prepared for. Here is what actually closes, what is simply full, and what to do if your dates are fixed.
+
+## Which days Golden Week actually covers
+Golden Week is built from four national holidays: Showa Day on 29 April, Constitution Day on 3 May, Greenery Day on 4 May and Children's Day on 5 May. Those four dates are fixed in law. How long the resulting run of days lasts is not fixed — it depends entirely on which weekdays those dates land on in a given year.
+
+### Why the length changes every year
+Japan applies a substitute holiday rule: when a national holiday falls on a Sunday, the next weekday that is not already a holiday becomes a holiday instead. A single working day sandwiched between two holidays also becomes one. In some years those rules knit the whole stretch from 29 April into a continuous break; in others the run is broken by two ordinary working days in the middle.
+
+The practical instruction is to check the actual dates for your year rather than trusting any article that quotes a fixed span. The holidays are stable; the shape of the week is not.
+
+## What genuinely closes
+Closures during Golden Week are narrower than most travellers expect. Major museums, big temples and shrines, department stores, and the large restaurant groups stay open and are extremely busy. What closes is the smaller layer: family-run restaurants, independent shops, small workshops and some local businesses, which take the break precisely because everyone else is off.
+
+Government offices and banks close on the holidays themselves. That matters less than it once did, but it is worth not scheduling anything administrative into the week.
+
+## What it does to prices and seats
+Golden Week moves the entire country at once, and the effect on transport and lodging is the real reason to plan around it. Reserved seats on the fast trains sell out well in advance on the main corridors, domestic flights fill, and accommodation prices in the popular cities rise sharply for the same rooms you could have had cheaply a fortnight earlier.
+
+### The part that surprises Americans
+This is domestic travel, not international tourism. The crowds are Japanese families going home or taking their one reliable block of annual leave, which means the pressure lands hardest on routes and towns that are otherwise quiet. A rural hot-spring town can be harder to book than Tokyo.
+
+It also means the crowding is front-loaded and back-loaded: the heaviest movement is at the start and end of the run, and the middle days are calmer in transit even while the sights stay packed.
+
+## Which days inside the run are worst
+Pressure during Golden Week is not evenly spread across the days. The heaviest movement falls at the two ends — the outbound surge as the run begins and the return surge as it closes — because that is when the entire working population is travelling in the same direction at the same time.
+
+The middle days behave differently. Transport eases because most people have already arrived where they are going, while the sights themselves stay packed. For a visitor who has to be in Japan during the run, that asymmetry is the single most useful thing to know: move at the middle, sit still at the ends.
+
+### The administrative detail
+Banks and government offices close on the holidays themselves, and anything requiring a counter and a human becomes difficult across the run. It matters less than it used to, but it is worth handling anything administrative before the week begins rather than assuming a quiet Tuesday will be available.
+
+## What the week is like if you stay
+Golden Week in Tokyo or Kyoto is not a write-off, and travellers who have been through it often report it as one of the more memorable stretches of a trip. Parks fill with families, temporary food stalls appear, and the ordinary rhythm of the cities gives way to something closer to a national festival. The crowds are good-natured rather than fraught, and the atmosphere is genuinely different from any other week of the year.
+
+## If your dates cannot move
+A Golden Week trip is entirely workable if you accept two constraints. Book everything early — rooms and any reserved long-distance seats, months ahead rather than weeks. And stay put: this is the wrong week to be relocating between cities every second day, because the moving is where the pain concentrates.
+
+Pick one base, use it properly, and take the pressure off by going out early. A city like Tokyo absorbs crowds far better than a small temple town does, simply because there is more of it. The same logic applies to choosing sights: the enormous, famous ones cope; the small, perfect ones do not.
+
+## What the timing decision is attached to
+Golden Week, built on four fixed holidays between 29 April and 5 May, does not just make Japan busy — it changes what kind of trip is possible. It pushes you toward fewer bases, earlier commitment, bigger cities and larger sights, and it does that whether or not you planned for any of it. The same is true of the August holiday period and, in a different way, of blossom season.
+
+Each of those is usually treated as a separate warning in a separate article. They are really one decision about when to come, which then reshapes the routing, the bases and the booking order underneath it. Working out that chain in advance, rather than discovering it in sequence, is what the complete Japan trip guide sets out to do.
+
+---------------------------------------------------------------
+SLUG: autumn-foliage-japan-timing
+TITLE: Autumn Foliage in Japan: Timing Your Trip
+SWAMP: seasonal-timing   HANDOFF TAG: seed   VEIN PIECE: seasonal-timing
+---------------------------------------------------------------
+
+Autumn is Japan's other great season, and for a first trip it is the more forgiving one. The colour lasts weeks rather than days, the weather is settled, and the timing is far more predictable than spring. This guide covers when the colour peaks where, how to plan around it, and where to see it without standing in the worst of the crowds.
+
+## When the colour peaks, region by region
+Autumn colour peaks in Hokkaido and the Japanese Alps during October, in Kyoto through the second half of November, and in Tokyo from late November into the first days of December. The colour moves in the opposite direction to the cherry blossom — north to south, and from high ground down into the valleys and cities.
+
+### Reading the direction of travel
+That north-to-south, high-to-low movement is genuinely useful for planning. If you are in Japan in late October, the mountains are already turning while Kyoto is still green. Arrive in the third week of November and the cities are at their best while the high country is bare. A trip that moves from the mountains toward the cities over a fortnight can effectively follow the colour down.
+
+## Why autumn is easier to plan than spring
+Autumn foliage in Kyoto or Tokyo holds for several weeks in a given place, where cherry blossom holds for roughly one. That difference changes everything about the booking problem. A spring trip is a bet on a seven-day window that nobody can forecast until February; an autumn trip aimed at the back half of November is very likely to land on good colour regardless of how the year has gone.
+
+The weather helps as well. Late autumn in Japan is reliably clear and cool, with far less rain than early summer and none of the heat that makes August walking difficult. For a trip built around being outdoors, it is the most comfortable stretch of the year.
+
+## Where the crowds actually are
+Autumn crowding in Kyoto during the last ten days of November behaves much like spring crowding: it concentrates in a small number of celebrated places rather than spreading out. Kyoto's most famous temple gardens in the last ten days of November are genuinely difficult, with queues at the gate and paths moving at a shuffle. Fifteen minutes away, less-photographed temples carry the same maples and a tenth of the people.
+
+Two things reliably help. Go early, because the famous gardens open before the tour groups reach them. And go up — hillside temples and walking routes thin out quickly, because most visitors will not climb for a view they can photograph from the flat.
+
+### The evening illuminations
+Many temples run special evening openings during the colour season, lighting the maples after dark. They are beautiful and they are extremely popular, so treat them as their own outing rather than something you append to a full day of sightseeing. If you plan to do one, it is worth building the day around it.
+
+## Colour beyond the famous gardens
+Autumn colour in Japan is not confined to the temple gardens that appear in every photograph. City parks, riverbanks, university campuses and the approach roads to ordinary shrines carry the same maples, and the mountains around Kyoto and Tokyo are within reach of a half-day walk. A trip that treats the celebrated gardens as one item among several, rather than the whole point, tends to see more colour and stand in fewer queues.
+
+## What to book, and when
+Autumn does not demand spring's six-month lead, but the back half of November in Kyoto is one of the busiest lodging periods of the year and behaves accordingly. Rooms in central Kyoto get expensive and scarce; reserved seats on the fast trains fill on the main corridors at weekends. Two to three months ahead is usually comfortable, and earlier if you want a specific traditional inn.
+
+Booking pressure is one of several ways the calendar quietly shapes a first trip — how many bases you can use, which cities work at which times, and how much of the route you can commit to before you know the weather. The complete Japan trip guide works through how those pieces interact.
+
+## Autumn against spring, as a decision
+Put Japan's two peak seasons side by side — a one-week bloom window in late March and early April against several weeks of colour from October to early December — and the choice becomes clearer than the marketing suggests. Spring offers a shorter, more dramatic spectacle on a window nobody can forecast in time to book. Autumn offers a longer, steadier one on a window you can plan around months ahead.
+
+Spring wins on the strength of the image and on the atmosphere — the whole country is out under the trees, and there is nothing else quite like it. Autumn wins on almost everything practical: settled weather, a forgiving timetable, a shorter booking lead, and prices that, while high in Kyoto, do not reach spring's peaks across the board.
+
+For a first trip where the cities and the routing are themselves new, the season that does not also demand a gamble is the easier one to build a plan on. For a return trip with a specific image in mind, spring's risk is worth taking.
+
+## Combining colour with the rest of a trip
+Autumn's several-week span in Kyoto and Tokyo, against cherry blossom's single week, is what makes November easy to combine with everything else. Because you are not chasing a seven-day window, you can plan a normal route through the country and let the colour meet you along the way. A standard first week through Tokyo and Kyoto needs no adjustment at all in mid-November beyond booking earlier than you otherwise would.
+
+The one date to keep an eye on is the very end of November in Kyoto, when the city is at its absolute peak and at its most crowded. If you would rather have the gardens than the photograph, aim a week either side.
+
+---------------------------------------------------------------
+SLUG: obon-japan-mid-august
+TITLE: Obon in Japan: What Changes in Mid-August
+SWAMP: seasonal-timing   HANDOFF TAG: seed   VEIN PIECE: seasonal-timing
+---------------------------------------------------------------
+
+Obon is the mid-August observance when families return to their home towns to honour their ancestors, and it produces one of the heaviest domestic travel weeks of the Japanese year. What catches American visitors out is that it is not a public holiday at all — the calendar shows ordinary working days while the country moves. Here is what changes, and what to do about it.
+
+## When Obon falls
+Obon is observed around 13 to 16 August across most of Japan, though the observance is not a national holiday and the dates are not fixed by law. Some regions, including parts of Tokyo, keep it in mid-July instead, following the older calendar. For a visitor, the mid-August window is the one that matters, because that is when the bulk of the country travels.
+
+### Why a non-holiday empties the cities
+Most Japanese companies close for several days around Obon even though the state does not require it, which produces the effect of a national holiday without one appearing on any calendar. Because the tradition is about returning to a family home, the movement runs out of the big cities and into the provinces — the opposite direction to a tourist week.
+
+## What actually closes
+Closures during Obon fall on the small and family-run layer of Japanese business: independent restaurants, neighbourhood shops, small workshops, and family-owned inns whose owners are themselves observing. Larger museums, department stores, chain restaurants and the major temples and shrines generally stay open.
+
+The pattern is inconsistent enough that it is worth checking specific places rather than assuming. A restaurant you were looking forward to may simply be shut for four days with a handwritten note on the door, and that is normal rather than a sign of anything going wrong.
+
+## What it does to travel
+Obon, across roughly 13 to 16 August, puts enormous pressure on long-distance transport in both directions: out of the cities at the start, back into them at the end. Reserved seats on the fast trains sell out on the main corridors, domestic flights fill, and expressways congest badly. Accommodation tightens most in the provincial towns and hot-spring resorts that are quiet the rest of the year.
+
+### Where the pressure is lighter
+Central Tokyo and central Kyoto are, unusually, somewhat calmer during Obon than in the weeks either side, because a substantial share of their residents has left. The cities do not empty — inbound visitors are still there — but the domestic layer thins out. If you are staying put in a big city, Obon is more manageable than its reputation suggests.
+
+The difficulty lands on anyone moving between places in the two or three days at each end of the observance. That is the window to avoid for long journeys, rather than the whole period.
+
+## What you can see during the observance
+Obon is a religious and family occasion rather than a spectacle staged for visitors, and most of it happens privately — graves tended, household altars prepared, relatives gathered. What is public are the neighbourhood dances held on summer evenings across the country, open to anyone who wants to join the circle, and the lanterns set out to guide ancestors home and away again. Encountering one is a matter of being in a neighbourhood at the right hour rather than buying a ticket.
+
+## The other August problem
+Obon sits inside Japan's hardest month for weather. August highs in Tokyo and Kyoto run around 33 to 35C with high humidity, and Kyoto's basin geography makes it feel worse than the number suggests. Heat is a genuine constraint on how much walking an itinerary can carry, not merely a comfort note — a plan that works in April will not survive August unmodified.
+
+August is also the peak of the typhoon season, which can remove a travel day at short notice. Neither is a reason to cancel a trip that has to happen in August, but both are reasons to build a lighter plan with indoor options, early starts and long afternoon breaks.
+
+## The July observance, and why it confuses people
+Parts of Japan, including some Tokyo districts, observe Obon in mid-July rather than mid-August, following the older lunar reckoning. The result is that a visitor can encounter Obon decorations and observances in July in one neighbourhood and find nothing unusual a few train stops away.
+
+The July observance does not produce the national travel surge, which is what makes the August window the one that matters for planning. If you are in Tokyo in mid-July and notice lanterns going up, that is the local calendar rather than a sign that the country is about to move.
+
+## Reading the direction of the crowd
+Obon travel runs out of Tokyo, Osaka and the other major cities and into the provinces, which is the reverse of almost every other busy period and the reason the usual advice does not apply cleanly. A tourist week concentrates people in Tokyo and Kyoto; Obon disperses residents from them toward home towns, hot-spring resorts and rural districts.
+
+For a visitor, that inversion is worth using rather than fighting. A city-based few days across the observance can be easier than the weeks either side, while a plan built around small provincial towns runs straight into the heaviest demand of the year for exactly the kind of accommodation those towns have least of.
+
+## Travelling through it deliberately
+Obon, in the middle four days of August, is workable if you treat it as a fixed feature of the map rather than a surprise. Book long-distance travel and rooms well ahead, avoid moving cities in the peak days at either end, and expect small restaurants to be closed.
+
+Choosing when to come is one of the decisions that quietly reshapes everything else about a first trip, which the complete Japan trip guide works through in order.
+
+If your dates are flexible and August is not fixed, the first half of the month is easier than the second, and September is easier than both once the worst of the heat begins to break.
+
+---------------------------------------------------------------
+SLUG: japan-rainy-season-typhoons
+TITLE: Japan's Rainy Season and Typhoons: What They Mean for Your Trip
+SWAMP: seasonal-timing   HANDOFF TAG: seed   VEIN PIECE: seasonal-timing
+---------------------------------------------------------------
+
+Two weather patterns get Japan's early summer written off in travel advice: the rainy season and the typhoon season. Both are real, and both are routinely described in a way that makes them sound worse than they are. This guide covers when each actually happens, what they do to a trip in practice, and when they are genuinely worth rearranging plans around.
+
+## When the rainy season runs
+Japan's rainy season runs from roughly early June to mid or late July in the Tokyo and Kyoto regions, and it moves south to north across the country. Okinawa runs from early May to late June; Kyushu and Shikoku from late May or early June into mid-July; the Tokyo and Kyoto regions from roughly early June to mid or late July; and Tohoku later still. Hokkaido is generally considered not to have one at all.
+
+### What it actually feels like
+The most useful thing to know is that the rainy season is not weeks of continuous rain. In practice it means high humidity with heavy bursts — a downpour that soaks a street and stops, followed by grey warmth or sudden sun. Whole days are lost to rain much less often than the name implies.
+
+What it does reliably deliver is humidity, which matters more for comfort than the rain does. Temples and gardens look extraordinary in wet weather, the moss is at its best, and the famous places are noticeably less crowded. For a traveller willing to carry an umbrella, June is one of the better-value months of the year.
+
+## When typhoon season matters
+Typhoons are possible in Japan from roughly May through October, with the peak in August and September. Okinawa, Kyushu and Shikoku are the most exposed; direct hits on Tokyo and Kyoto are less common, though disruption to transport from a storm passing nearby is not.
+
+### How disruption actually works
+Japanese rail operators announce planned suspensions in advance rather than cancelling services as a storm arrives. That practice is unfamiliar to most American travellers and is genuinely reassuring: you usually know the day before that a line will stop running, which gives you time to move a plan rather than being stranded by it.
+
+A typhoon that affects your trip will most likely cost you one day, not a week. The sensible response is to keep a flexible day in the plan and avoid scheduling anything unmissable — a long-distance journey, or the flight home — for the tail end of a trip in early September.
+
+## Should you avoid the summer entirely?
+Summer in Japan is worth taking on its own terms rather than avoiding outright, and its real problem is heat rather than either weather pattern. August highs in Tokyo and Kyoto run around 33 to 35C with high humidity, and Kyoto's basin geography makes it feel hotter still. That is a genuine constraint on how much walking a day can hold, and it is the reason August itineraries need to be lighter than spring ones.
+
+Set against that, summer carries the festival calendar, long daylight, and the mountains and northern regions at their most pleasant — Hokkaido in August is excellent. Summer is not a season to avoid so much as one to plan differently.
+
+### If your dates are fixed in early summer
+June and early July are genuinely good months to travel in Japan provided you plan for the humidity: early starts, indoor anchors in the middle of the day, and no assumption that every afternoon will be dry. Prices sit below both peak seasons and the major sights are calmer than at any other point between March and November.
+
+## Early summer, month by month
+June, July and September differ enough from one another that treating early summer as a single block is misleading. June carries the rainy season and the lowest crowds of the warm half of the year; July turns hot once the rains lift in the middle of the month; September sits at the typhoon peak while the heat finally begins to ease. Each asks for a different kind of itinerary.
+
+### June
+June carries the rainy season across most of the main island and is, for that reason, one of the quietest and best-value months in the calendar. Gardens are at their most saturated, the famous sites are noticeably calmer, and the temperature is warm rather than punishing. The cost is humidity and an umbrella in the bag every day.
+
+### July
+July begins wet and ends hot, with the rainy season lifting somewhere in the middle and the serious heat arriving behind it. The second half of the month starts to demand the lighter, slower kind of itinerary that August requires outright.
+
+### September
+September sits at the peak of the typhoon season while the heat begins to ease, which makes it a month of trade-offs rather than a straightforward improvement on August. The back half is generally more comfortable than the front, and the crowds are lighter than either peak season.
+
+## Building a plan that survives a lost day
+A Japan trip in August or September should be built to absorb one lost day, because that is the realistic cost of a typhoon passing near Tokyo or Kyoto rather than the week-long disruption travellers fear. Building that slack in costs very little.
+
+The practical version is to avoid scheduling a long-distance journey or anything unmissable on the final days, and to keep one flexible afternoon in reserve rather than filling every slot.
+
+Because suspensions are announced ahead rather than sprung on passengers, the warning usually arrives with enough time to reorder a plan. What it cannot do is create space in an itinerary that had none, which is the real argument for planning early summer more loosely than spring.
+
+## Choosing a season on purpose
+Weather is only one input into when to visit Japan, and rarely the decisive one — the rainy season's six weeks and the typhoon peak in August and September matter less to most itineraries than the holiday clusters do.
+
+Weather interacts with those clusters, with lodging prices, and with how much ground an itinerary can cover — a choice that cascades into how many bases you use and how far ahead you commit. Comparing the seasons against each other is a more useful exercise than ruling any single month out.
+
+How that timing decision then reshapes the route, the bases and the booking order underneath it is what the complete Japan trip guide is built to work through.
+
+=========================================================================
+RETURN FORMAT
+=========================================================================
+CALIBRATION: the four samples, your scores, and whether you agree with the expected verdicts.
+ERRORS: a list. For each — the article, the exact quoted text, what contradicts it, and
+        whether you think the article or the fact sheet is the stale one. Say "none" if none.
+SCORES: one line per article — slug, PULL (turn only), TRUST, and the failing reason for any
+        axis under its threshold. Thresholds: turn needs PULL >= 60 AND TRUST >= 80;
+        seed needs TRUST >= 80.

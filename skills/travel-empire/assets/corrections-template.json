@@ -1,0 +1,15 @@
+{
+  "_README": "Accumulated local ground truth for this project. Every entry OVERRIDES facts.json and any AI output, permanently (hard rule 8). Stage 3 MUST load this alongside facts.json before writing any batch. Append a record whenever the user corrects a fact, a recommendation, or a recurring style/voice mistake — future articles inherit the fix automatically.",
+  "schema_version": 3,
+  "project": "FILL",
+  "corrections": [
+    {
+      "id": 1,
+      "date": "YYYY-MM-DD",
+      "scope": "fact | recommendation | style",
+      "wrong": "what the AI said / did",
+      "right": "the corrected truth or rule",
+      "applies_to": "topic, slug, or 'all'"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+# -*- coding: utf-8 -*-
+"""render_paged.py — the paginated render (replaces render_rome.py / render3.js).
+
+Architecture: Paged.js slices the .flow into REAL page divs before printing.
+Each printed sheet is a DOM element that paints the paper itself, carries the
+@page margins INSIDE its box, and renders the running head + folio as margin
+boxes on EVERY page — chapter starts and continuations alike. This is the only
+architecture that survives this Chromium: header/footer templates clip their
+backgrounds (white bands), @page margins are unpainted, and position:fixed
+does not repeat across printed pages. All three were tried and shipped bugs.
+
+It also runs the FEATHERING pass — the compositor's card. After pagination it
+measures every chapter's tail page; a chapter that spills only a few orphan
+lines is re-set one notch tighter (.tight, ~2 lines/page of give) so the tail
+pulls back onto the page. Measured every build, never hand-listed.
+
+Ship this INTO each build directory next to dossier3.html, together with
+assets/paged.polyfill.js. It is destination-agnostic: everything project-specific
+(paper colour, furniture strings, named pages) lives in the build's CSS.
+
+Usage: python3 render_paged.py [build-dir]     (default: the script's own directory)
+"""
+import glob, os, re, sys
+from playwright.sync_api import sync_playwright
+from pypdf import PdfReader
+
+BUILD = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
+
+INJECT = (
+    "<script>window.PagedConfig={auto:false};</script>"
+    # Book convention: a chapter opener announces itself, so its running head is
+    # suppressed (folio stays). H1s exist only at page tops (chapters break-before).
+    "<script>window.__openerHandler=function(P){"
+    "class O extends P.Handler{afterPageLayout(el){"
+    "if(el.querySelector('.pagedjs_page_content h1')){"
+    "el.querySelectorAll('.pagedjs_margin-top-left,.pagedjs_margin-top-right')"
+    ".forEach(function(m){m.style.visibility='hidden'});}}}"
+    "P.registerHandlers(O);};</script>"
+    "<script src=\"paged.polyfill.js\"></script>"
+    "<script>window.__openerHandler(window.Paged);</script>"
+    "<script>document.fonts.ready.then(function(){"
+    "return Promise.all(Array.from(document.images).map("
+    "function(i){return i.decode().catch(function(){})}));}).then(function(){"
+    "window.PagedPolyfill.preview().then(function(f){window.__pagedDone=f.total;})"
+    ".catch(function(e){window.__pagedErr=String(e);});});</script>"
+)
+
+# what a .tight chapter gives back, per preceding page and per photo plate it holds
+GIVE_PER_PAGE = 48.0     # px: 0.5px x ~34 lines + 1px x paragraphs + block margins
+GIVE_TALL_PLATE = 90.0   # px: a 3.3in plate resets to 2.3in under .tight
+GIVE_PLATE = 22.0        # px: a 2.55in plate resets to 2.3in
+FEED_MAX_TAIL = 420.0    # px: a tail this size or less, with a plate available, gets fed
+CONTENT_H = 892.0        # px: the body column, 92 -> 984
+
+MEASURE_JS = """
+() => {
+  const secs = {};
+  document.querySelectorAll('.pagedjs_page').forEach((pg, pi) => {
+    pg.querySelectorAll('.pagedjs_page_content section.dec').forEach(s => {
+      const ref = s.getAttribute('data-ref');
+      const id = s.id || (secs[ref] && secs[ref].id) || null;
+      const h = s.getBoundingClientRect().height;
+      const imgs = s.querySelectorAll('figure.photo img');
+      let tall = 0, small = 0;
+      imgs.forEach(i => { if ((i.style.height||'').indexOf('3.3') >= 0) tall++; else small++; });
+      if (!secs[ref]) secs[ref] = { id: id, pages: [], tall: 0, small: 0, tailPhotos: 0 };
+      if (id && !secs[ref].id) secs[ref].id = id;
+      secs[ref].pages.push({ page: pi + 1, h: h });
+      secs[ref].tall += tall; secs[ref].small += small;
+      secs[ref].tailPhotos = imgs.length;   // overwritten by each fragment; last wins = tail
+    });
+  });
+  return Object.values(secs);
+}
+"""
+
+_PHOTO_RE = r'<figure class="photo">.*?</figure>'
+
+def _feed_tail(h, sid):
+    """Move the section's photo plate to the chapter's end, right before the endmark,
+    so it lands on (and fills) the tail page."""
+    start = h.index(f'id="{sid}"')
+    end = h.index("</section>", start)
+    seg = h[start:end]
+    m = re.search(_PHOTO_RE, seg, flags=re.S)
+    if not m:
+        return h
+    plate = m.group(0)
+    seg2 = seg.replace(plate, "", 1)
+    # a fed plate becomes the chapter's CLOSING plate: tall, image-dominant
+    plate = plate.replace('<figure class="photo">', '<figure class="photo closing">', 1)
+    if '<div class="endmark">' in seg2:
+        seg2 = seg2.replace('<div class="endmark">', plate + '<div class="endmark">', 1)
+    else:
+        seg2 = seg2 + plate
+    return h[:start] + seg2 + h[end:]
+
+def _paginate(pg, path, timeout_ms):
+    pg.goto(f"file://{path}", wait_until="load")
+    pg.wait_for_function(
+        "window.__pagedDone !== undefined || window.__pagedErr !== undefined",
+        timeout=timeout_ms)
+    err = pg.evaluate("window.__pagedErr")
+    assert not err, f"paginator failed: {err}"
+    return pg.evaluate("window.__pagedDone")
+
+def render(html_name="dossier3.html", pdf_name="dossier.pdf", timeout_ms=600_000):
+    html = open(os.path.join(BUILD, html_name), encoding="utf-8").read()
+    assert "</head>" in html
+    render_path = os.path.join(BUILD, "_render.html")
+
+    exes = (glob.glob("/opt/pw-browsers/chromium-*/chrome-linux/chrome")
+            + glob.glob("/opt/pw-browsers/chromium_headless_shell-*/chrome-linux/headless_shell"))
+    if not exes:
+        sys.exit("no chromium in /opt/pw-browsers — run `playwright install chromium`")
+
+    with sync_playwright() as p:
+        b = p.chromium.launch(executable_path=sorted(exes)[0],
+                              args=["--no-sandbox", "--font-render-hinting=none"])
+        pg = b.new_page(viewport={"width": 816, "height": 1056}, device_scale_factor=2)
+
+        tight, fed, loose = set(), set(), set()
+        n_dom = 0
+        for attempt in range(4):
+            h = html
+            for sid in fed:
+                h = _feed_tail(h, sid)
+            for sid in loose:
+                h = h.replace(f'class="dec chap" id="{sid}"', f'class="dec chap loose" id="{sid}"')
+            for sid in tight:
+                marked = h.replace(f'id="{sid}">', f'id="{sid}" data-t="1">')
+                marked = re.sub(r'class="([^"]*)" id="%s" data-t="1"' % sid,
+                                r'class="\1 tight" id="%s"' % sid, marked)
+                assert f'class="dec chap tight" id="{sid}"' in marked or "tight" in marked, sid
+                h = marked
+            open(render_path, "w", encoding="utf-8").write(
+                h.replace("</head>", INJECT + "</head>"))
+            n_dom = _paginate(pg, render_path, timeout_ms)
+
+            # FEATHER: (a) a small spill gets pulled back (.tight); (b) a tail too big
+            # to pull back, in a chapter that holds a photo plate, gets FED the plate
+            # (doctrine: chapter-break slack is where plates go), so the tail reads as
+            # a designed closing-image page instead of a stranded fragment.
+            secs = pg.evaluate(MEASURE_JS)
+            new_tight, new_feed, new_loose = set(), set(), set()
+            for s in secs:
+                if not s["id"] or len(s["pages"]) < 2:
+                    continue
+                tail = s["pages"][-1]["h"]
+                give = (GIVE_PER_PAGE * (len(s["pages"]) - 1)
+                        + GIVE_TALL_PLATE * s["tall"] + GIVE_PLATE * s["small"])
+                if s["id"] in fed:
+                    continue
+                if s["id"] in tight:
+                    # tighten didn't clear the tail — escalate to feeding it the plate
+                    if (s["tall"] + s["small"]) > 0 and s["tailPhotos"] == 0:
+                        new_feed.add(s["id"]); tight.discard(s["id"])
+                    continue
+                if s["id"] in loose:
+                    continue
+                if tail <= give:
+                    new_tight.add(s["id"])
+                elif tail <= FEED_MAX_TAIL and (s["tall"] + s["small"]) > 0 and s["tailPhotos"] == 0:
+                    new_feed.add(s["id"])
+                elif tail < 0.42 * CONTENT_H:
+                    # thin tail, nothing to pull it back or feed it — set the chapter
+                    # a notch more open so the tail page receives enough lines
+                    new_loose.add(s["id"])
+            if not new_tight and not new_feed and not new_loose:
+                break
+            tight |= new_tight; fed |= new_feed; loose |= new_loose
+            if new_tight: print(f"feather pass {attempt+1}: tightening {sorted(new_tight)}")
+            if new_feed:  print(f"feather pass {attempt+1}: feeding tail a plate {sorted(new_feed)}")
+            if new_loose: print(f"feather pass {attempt+1}: loosening {sorted(new_loose)}")
+
+        if tight: print(f"feathered: {sorted(tight)}")
+        if fed:   print(f"tail-fed:  {sorted(fed)}")
+        if loose: print(f"loosened:  {sorted(loose)}")
+        pg.pdf(path=os.path.join(BUILD, pdf_name),
+               print_background=True, prefer_css_page_size=True,
+               display_header_footer=False,
+               margin={"top": "0", "bottom": "0", "left": "0", "right": "0"})
+        b.close()
+
+    n_pdf = len(PdfReader(os.path.join(BUILD, pdf_name)).pages)
+    print(f"paginated: {n_dom} pages in DOM -> {n_pdf} pages in {pdf_name}")
+    assert n_dom == n_pdf, "DOM page count != PDF page count — a page split or vanished in print"
+    return n_pdf
+
+if __name__ == "__main__":
+    render()

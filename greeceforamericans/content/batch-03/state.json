@@ -1,0 +1,25 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "greeceforamericans",
+  "stage": "writing",
+  "batch": 3,
+  "batches_total": 16,
+  "batch_status": "written",
+  "published_slugs": [
+    "10-day-greece-itinerary-first-timers",
+    "greek-island-hopping-guide",
+    "where-to-stay-in-santorini",
+    "greece-for-couples-honeymoon",
+    "how-greek-ferries-work"
+  ],
+  "updated_at": "2026-06-18",
+  "notes": "Batches 1 (published) + 2 (gated). Batch 3 WRITTEN: where-to-stay Mykonos/Crete/Naxos-Paros (completes the lodging pillar), which-greek-islands-to-combine, how-many-greek-islands-one-trip (the two core planning decision guides). 962-1046 words. cloud=dsrkwieur, correction #1 applied, affiliate slots+disclosure, 9-field shape, 15 images. AWAITING second gate (second-gate-prompt.txt). NOTE for skill patch: first drafts consistently land ~850-900w (10-15% light) — target ~1100 on first pass to avoid the top-up step. 13 batches remain after this.",
+  "parked_ideas": [
+    {
+      "idea": "Short video (Instagram Reels) for richer 'what it's like there' proof",
+      "decision": "DEFERRED until all sites built + live. Do NOT embed live IG Reels in article bodies (kills Core Web Vitals / SEO, GDPR cookies, content rot). Preferred path when revisited: self-host short clips on Cloudinary (owned, fast, no cookies) — check Cloudinary video quota/pricing first; OR click-to-load facade for one curated Reel per pillar; OR own-brand Reels linked from footer/author bio only.",
+      "revisit_when": "post-launch, using real traffic data to target which pages get video"
+    }
+  ]
+}

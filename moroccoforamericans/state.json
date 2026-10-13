@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch FIRST before any work. Assistant outputs updated copy at each step boundary; USER pushes to travel-facts/moroccoforamericans/. Trust this file + the DB, not the chat scroll.",
+  "schema_version": 3,
+  "project": "moroccoforamericans",
+  "stage": "writing",
+  "batch": 1,
+  "batches_total": 4,
+  "batch_status": "ready",
+  "published_slugs": [],
+  "updated_at": "2026-07-06",
+  "notes": "STAGE 1 (architecture) COMPLETE + verified: site scaffolds, admin works, DB-driven nav renders on real deploy, logo-lockup template bug fixed. RLS: anon-read policies added (categories: all; articles: published-only) and folded into RUN-IN-SUPABASE.sql for future sites. STAGE 2 (facts) COMPLETE + RECONCILED across 4 sources (claude, gemini, deepseek, grok) via reconcile.mjs + manual dispute pass. Two YMYL disputes RESOLVED against official sources and marked 'verified': (1) emergency numbers — correct is 112/19/177/15, NOT the '190' that 3 of 4 models voted for; (2) dirham currency rule — closed currency, 2,000 MAD export cap (illegal to exceed) vs 100,000 MAD foreign-currency declaration threshold, which the panel conflated. Wording-variant 'differs' collapsed to clean agreed values. 4 _open_questions remain (visa/ETA, current advisory level+date, timezone Ramadan reversion, IDP-required-vs-recommended) — confirm vs official before those specific articles publish. ARTICLE PLAN LOCKED: 70 articles, all slugs unique, every category_slug FK-valid, tier 22/28/20. DECISION: writing only 4 batches (20 articles, tier-1 first) then pivoting to DESIGN, then moving to next site — remaining 50 are facts-ready but unwritten (resume later). Scope hard-constraint: Marrakech, Fez, Chefchaouen, Sahara, Essaouira, Atlas Mountains (Casablanca=arrival only). NEXT: write batch 1 (5 tier-1 articles), publish 4, then Stage 5 design."
+}

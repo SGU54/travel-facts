@@ -1,0 +1,166 @@
+/* LAYOUT INTELLIGENCE LAYER — every block has a ROLE and a fixed visual weight.
+   opener(heaviest) · ledger(instrument) · verdict(payoff) · forks · figure · reasoning · reference */
+:root{
+  --paper:#f5efe2; --ink:#241a12; --muted:#8a7a5f; --line:#d8cbb0;
+  --green:#16614f; --indigo:#191231; --brass:#9c6b3f; --saffron:#c8912f;
+  --panel:#eee6d4; --panel-edge:#e1d6bd;
+  --display:'Fraunces',Georgia,serif; --body:'Newsreader',Georgia,serif; --mono:'IBM Plex Mono',monospace;
+}
+@page{ size:8.5in 11in; margin:104px 76px 70px 76px;
+  @top-left{ content:"Morocco, Without the Traps." }
+  @top-right{ content:string(rh, last) }
+  @bottom-left{ content:string(pos, last) }
+  /* NOT \25c6 (◆): that is the VOLATILE mark in the provenance key, and printing
+     it on every page made the mark unreadable. A glyph may not mean two things. */
+  @bottom-center{ content:"\00b7" }
+  @bottom-right{ content:counter(page) } }
+@page cover{ margin:0; @top-left{content:none} @top-right{content:none}
+  @bottom-left{content:none} @bottom-center{content:none} @bottom-right{content:none} }
+@page annex{ margin:104px 76px 74px 76px; }
+.coverpage{ page:cover; } .fs{ page:annex; }
+html,body{ background:var(--paper); -webkit-print-color-adjust:exact; margin:0; color:var(--ink); }
+.pagedjs_sheet{ background:var(--paper); }
+.rh-src{ string-set: rh content(text); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+.pos-src{ string-set: pos content(text); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+.pagedjs_margin-top-left .pagedjs_margin-content,.pagedjs_margin-top-right .pagedjs_margin-content,
+.pagedjs_margin-bottom-left .pagedjs_margin-content,.pagedjs_margin-bottom-center .pagedjs_margin-content,
+.pagedjs_margin-bottom-right .pagedjs_margin-content{
+  font-family:var(--mono); font-size:8.5px; letter-spacing:.15em; color:var(--muted); text-transform:uppercase; }
+body{ font-family:var(--body); font-size:12.8px; line-height:1.62; }
+
+/* ROLE opener */ .openpack{ break-inside:avoid;
+  /* break-after lives on .opener, but .opener is WRAPPED by .openpack —
+     the avoid never reached the break decision, so a chapter head could
+     land alone at the foot of a page (c19 did, after the new diagrams
+     shifted the reflow). The wrapper needs it too. */
+  break-after:avoid; }
+.opener{ break-inside:avoid; break-after:avoid; margin:0 0 16px; overflow:hidden; }
+.opener .onum{ font-family:var(--display); font-size:58px; line-height:.78; color:var(--panel-edge);
+  float:right; margin:-4px 0 0 16px; font-weight:600; }
+.opener .okind{ font-family:var(--mono); font-size:8px; letter-spacing:.30em; text-transform:uppercase; color:var(--brass); margin:0 0 8px; }
+.opener h1{ font-family:var(--display); font-size:31px; line-height:1.06; font-weight:600; margin:0; color:var(--ink); max-width:5.3in; }
+.opener .orule{ height:2px; background:var(--brass); margin:13px 0 0; }
+.opener.essayop h1{ font-size:26px; } .opener.essayop .onum{ display:none; }
+.opener.essayop .orule{ height:1px; background:var(--line); }
+
+/* ROLE reasoning */
+p{ margin:0 0 9px; text-align:justify; hyphens:auto; }
+p.lead{ min-height:2.4em; }
+p.lead::first-letter{ font-family:var(--display); font-size:39px; line-height:31px; float:left; padding:3px 7px 0 0; color:var(--brass); font-weight:600; }
+h2{ font-family:var(--mono); font-size:9px; letter-spacing:.20em; text-transform:uppercase; color:var(--green); margin:17px 0 7px; font-weight:600; break-after:avoid; }
+
+/* ROLE ledger */
+.ledger{ break-inside:avoid; break-before:avoid; margin:15px 0 17px; background:var(--panel); border-top:2.5px solid var(--green); }
+.ledger .lcap{ font-family:var(--mono); font-size:8px; letter-spacing:.22em; text-transform:uppercase; color:var(--green); padding:9px 14px 0; margin:0; }
+.ledger table{ width:100%; border-collapse:collapse; font-size:11.4px; margin:5px 0 0; }
+.ledger th{ font-family:var(--mono); font-size:8px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted);
+  text-align:left; padding:4px 14px 6px; border-bottom:1px solid var(--panel-edge); }
+.ledger td{ vertical-align:top; padding:9px 14px; border-bottom:1px solid rgba(0,0,0,.05); line-height:1.46; }
+.ledger tr:last-child td{ border-bottom:none; padding-bottom:12px; }
+
+/* ROLE verdict */
+.verdict{ break-inside:avoid; break-before:avoid; margin:17px 0; padding:1px 0 1px 15px; border-left:3px solid var(--brass); }
+.verdict .vlab{ font-family:var(--mono); font-size:8.5px; letter-spacing:.24em; text-transform:uppercase; color:var(--brass); margin:0 0 6px; }
+.verdict p{ font-family:var(--display); font-size:13.4px; line-height:1.52; text-align:left; margin:0 0 8px; }
+
+/* ROLE forks */
+.forks{ display:flex; gap:18px; break-inside:avoid; break-before:avoid; margin:13px 0 11px; }
+.fork{ flex:1; border-top:1px solid var(--line); padding-top:8px; }
+.fork b{ display:block; font-family:var(--mono); font-size:8px; letter-spacing:.18em; text-transform:uppercase; margin:0 0 5px; }
+.fork.f b{ color:var(--green); } .fork.a b{ color:var(--brass); }
+.fork p{ font-size:11.5px; line-height:1.5; text-align:left; margin:0; }
+
+/* ROLE figure */
+figure{ margin:14px 0; break-inside:avoid; }
+figure img{ width:100%; display:block; }
+figure.photo img{ height:2.2in; object-fit:cover; }
+figure.photo.tall img{ height:3.2in; }
+figure.map img{ /* Every diagram is authored at viewBox 0 0 1300 640 (figs.py),
+     so height follows width at exactly 6.92/2.031 = 3.41in. The old
+     max-height:3.5in cap bit on all eight and object-fit:contain then
+     scaled them to five different sizes inside a full-width border. */
+  height:auto; border:1px solid var(--panel-edge); }
+
+/* SNUG — the one sanctioned exception to the fixed diagram size. A diagram that
+   would open a page of its own, when the page before it has ALMOST enough room,
+   is scaled down to fit there instead. "Almost" is >= 85% of the standard 4.00in
+   block; below that the shrink would be too visible and the diagram keeps its
+   own page. Both dimensions scale together, so the border stays flush on the
+   drawing — this is a smaller diagram, never a distorted or letterboxed one. */
+figure.map.snug img{ height:var(--snug); width:auto;
+  margin-left:auto; margin-right:auto; }
+figcaption{ font-family:var(--mono); font-size:8.5px; color:var(--muted); margin-top:5px; line-height:1.5; }
+
+/* ROLE sidenote / misc */
+.note{ break-before:avoid; font-family:var(--mono); font-size:8.5px; color:var(--muted); border-top:1px solid var(--line); padding-top:6px; margin:11px 0 0; line-height:1.55; }
+.aside{ font-family:var(--display); font-style:italic; font-size:12.4px; color:var(--green); border-left:2px solid var(--saffron); padding-left:11px; margin:13px 0; text-align:left; }
+.bullet{ font-size:11.8px; margin:0 0 4px; padding-left:13px; text-indent:-13px; text-align:left; }
+.fmhead{ font-family:var(--mono); font-size:8.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--green); margin:15px 0 6px; font-weight:600; break-after:avoid; }
+
+/* ROLE reference */
+.fsrow{ font-size:11.8px; margin:0 0 4px; text-align:left; }
+.srcreg table,table{ width:100%; border-collapse:collapse; font-size:11px; margin:12px 0; }
+.srcreg th,th{ font-family:var(--mono); font-size:7.8px; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); text-align:left; border-bottom:1.5px solid var(--brass); padding:0 9px 5px 0; }
+.srcreg td,td{ vertical-align:top; padding:7px 9px 7px 0; border-bottom:.5px solid var(--line); line-height:1.45; }
+
+/* chapter flow */
+.dec.chap{ break-before:auto; margin-top:24px; padding-top:0; border-top:none;
+  box-decoration-break:slice; -webkit-box-decoration-break:slice; }
+/* EVERY chapter starts a fresh page. This reverses the earlier rule, which
+   broke only the decisions because breaking all 24 left 18 of 45 pages half
+   empty. That measurement was taken when eleven chapters carried no figure at
+   all. Each chapter now opens with a photo and carries a diagram, which is
+   ~6.7in of furniture before a word is set, so a chapter fills its own sheet
+   instead of leaving one. */
+.flow .dec.chap{ break-before:page; }
+.flow .dec.chap.decision:first-child{ break-before:avoid; }
+
+/* The hairline marked where one chapter gave way to the next IN THE FLOW.
+   Nothing flows into anything now — every chapter starts its own page — so the
+   rule would just be a stray line under the running head. */
+.dec.chap::before{ content:none; }
+.dec.chap.decision::before{ height:0; background:none; margin:0; }
+.dec.chap.decision{ margin-top:30px; }
+.dec.chap:first-of-type{ margin-top:0; }
+.dec.chap:first-of-type::before{ display:none; }
+.dec.tight p{ margin-bottom:7px; line-height:1.55; }
+.dec.loose p{ margin-bottom:12px; line-height:1.70; }
+
+/* part dividers */
+/* ============ CONTENTS ============
+   Morocco shipped 45 pages with no contents page, no PDF bookmarks and no link
+   annotations — three ways of saying a reference book you cannot navigate. The
+   page numbers are resolved by Paged.js, so they cannot drift out of date.
+   NB the counter hangs off the <a>: attr(href) resolves against the element the
+   rule matches, and Greece printed 0 twenty-two times by putting it on the td. */
+.toc{ width:100%; border-collapse:collapse; margin:14px 0 0 0; }
+.toc td{ padding:3.4px 0; font-size:11.3px; line-height:1.3;
+  border-bottom:1px solid var(--line); vertical-align:baseline; }
+.toc td.n{ font-family:var(--mono); font-size:8.5px; color:var(--brass); width:28px; }
+.toc td.pg{ text-align:right; font-family:var(--mono); font-size:9.5px;
+  color:var(--muted); width:34px; }
+.toc td.pg a::after{ content:target-counter(attr(href), page); }
+.toc .part td{ font-family:var(--mono); font-size:7.6px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--green); padding-top:11px;
+  padding-bottom:2px; border-bottom:none; }
+.toc a{ color:var(--ink); text-decoration:none; }
+
+.partdiv{ break-before:page; break-after:page; break-inside:avoid; padding-top:.5in; text-align:left; }
+.partdiv .pnum{ font-family:var(--mono); font-size:9px; letter-spacing:.30em; text-transform:uppercase; color:var(--brass); margin:0 0 16px; }
+.partdiv .ptitle{ font-family:var(--display); font-size:44px; line-height:1.02; margin:0 0 14px; color:var(--green); }
+.partdiv .psub{ font-family:var(--display); font-style:italic; font-size:16px; color:var(--muted); margin:0; max-width:4.6in; }
+.ptocwrap{ margin-top:30px; border-top:1px solid var(--line); padding-top:16px; max-width:5.4in; break-inside:avoid; }
+.ptoc{ margin:0 0 9px; text-align:left; break-inside:avoid; }
+.ptoc b{ display:block; font-family:var(--display); font-size:13.5px; font-weight:600; color:var(--ink); border-top:1px solid var(--line); padding-top:8px; }
+.pfoot{ margin-top:26px; border-top:1px solid var(--line); padding-top:12px; font-family:var(--display); font-style:italic; font-size:12.5px; color:var(--muted); max-width:5.4in; }
+.ptoc span{ display:block; font-family:var(--body); font-size:11.5px; color:var(--muted); margin-top:2px; }
+
+/* cover */
+.coverpage{ position:relative; width:8.5in; height:11in; overflow:hidden; color:#f5efe2; }
+.coverpage img.bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.coverpage .scrim{ position:absolute; inset:0; background:linear-gradient(180deg,rgba(25,18,49,.28),rgba(25,18,49,.62) 62%,rgba(25,18,49,.82)); }
+.coverpage .ct{ position:absolute; left:64px; right:64px; bottom:120px; }
+.coverpage .kick{ font-family:var(--mono); font-size:11px; letter-spacing:.28em; text-transform:uppercase; color:var(--saffron); margin:0 0 18px; }
+.coverpage h1.cover{ font-family:var(--display); font-size:66px; line-height:.98; font-weight:600; margin:0; color:#f7f1e4; }
+.coverpage .sub{ font-family:var(--display); font-style:italic; font-size:22px; margin:14px 0 0; color:#e9dcc2; }
+.coverpage .foot{ position:absolute; left:64px; right:64px; bottom:54px; font-family:var(--mono); font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:#cbb890; border-top:1px solid rgba(203,184,144,.4); padding-top:14px; }

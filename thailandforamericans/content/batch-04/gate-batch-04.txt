@@ -1,0 +1,448 @@
+You are a fact-and-consistency checker for travel articles. Below are articles plus the facts file they were written from. Find ONLY IN-CONTEXT ERRORS: a claim stated two different ways; a recommendation contradicting the facts file; an out-of-scope place; an internal contradiction; a claim factually wrong for Thailand.
+RULES: (1) Do NOT flag serve_live items (exchange rates, prices, visa day-count) for being hedged — that is correct. (2) Flight DURATIONS and stable facts are fine. (3) Only genuine errors; if an article is clean, say "clean". (4) Short list per slug.
+
+=== FACTS FILE ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_aro
+
+=== ARTICLES ===
+
+
+----- SLUG: krabi-vs-phuket -----
+TITLE: Krabi vs. Phuket: Which Should You Pick?
+CATEGORY: islands-beaches
+
+<p>Krabi and Phuket sit across the same bay on Thailand's Andaman coast, reach the same famous islands, and share the same turquoise-water-and-limestone-cliff scenery. Yet they feel completely different to travel in, and choosing between them is one of the most common decisions first-timers face. The short version: <strong>Phuket</strong> is the bigger, busier, more convenient resort island; <strong>Krabi</strong> is the calmer, more scenic mainland province with a mellower pace. Here's how to decide.</p>
+
+<!-- IMAGE_SLOT_1: Side-by-side feel — a busy Phuket beach and a quiet Krabi karst bay -->
+
+<h2>The quick answer</h2>
+<p>Choose <strong>Phuket</strong> if you want maximum convenience, the widest range of hotels and resorts, lively nightlife, and an international airport with direct flights. Choose <strong>Krabi</strong> if you want dramatic limestone scenery, a calmer and more affordable scene, and don't mind trading some convenience for beauty. Many travelers with enough time do <em>both</em> — they're close enough to combine.</p>
+
+<h2>Getting there and around</h2>
+<p>Both have their own airport with flights from Bangkok (about 1h25 each). <strong>Phuket</strong> is a large island connected to the mainland by road, with more international flights and a bigger, more developed transport network — though local taxis are notoriously pricey and resistant to ride-hailing apps. <strong>Krabi</strong> is mainland province; its hub, Ao Nang, is compact and walkable, and you reach Railay and the islands by longtail boat. Neither has great public transport, so budget for taxis, songthaews, and boats.</p>
+
+<h2>The vibe and the beaches</h2>
+<p><strong>Phuket</strong> ranges from the loud party energy of Patong to the calmer family beaches of Kata and Karon and the upscale resorts of Bang Tao and Surin — there's a beach for every style, but the island is busy and built-up. <strong>Krabi</strong> feels more low-key and scenic: Ao Nang is a pleasant beach town, Railay is a stunning cliff-ringed peninsula reachable only by boat, and Koh Lanta offers quiet, family-friendly sand. For sheer drama and calm, Krabi edges it; for variety and buzz, Phuket.</p>
+
+<!-- IMAGE_SLOT_2: Railay's longtail boats and cliffs vs a lively Phuket beach scene -->
+
+<h2>Nightlife and dining</h2>
+<p>This is where Phuket pulls clearly ahead. <strong>Phuket</strong> has Thailand's most famous beach nightlife (Patong's Bangla Road), a huge range of restaurants, and the characterful Old Town with the island's best food. <strong>Krabi</strong>'s nightlife is mellow by comparison — beach bars and relaxed restaurants in Ao Nang rather than clubs. If a buzzing night scene matters, Phuket; if you want quiet dinners and early boats, Krabi.</p>
+
+<h2>Day trips and islands</h2>
+<p>Here they're nearly even, because they share the same waters. From <strong>both</strong> you can boat to the <strong>Phi Phi Islands</strong>, <strong>Phang Nga Bay</strong>, and the <strong>Hong Islands</strong>. Krabi has a slight edge for the Hong Islands and Railay's climbing; Phuket for Phang Nga Bay and the Similan Islands (seasonal). Whichever base you choose, the headline boat trips are within reach.</p>
+
+<h2>Cost</h2>
+<p>Krabi generally runs a little cheaper than Phuket across accommodation and dining, though both span budget to luxury and prices swing hard by season (peak is roughly November–April on the Andaman coast). Rather than trust any fixed figure, compare current rates and convert with a live tool:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<h2>So which should you pick?</h2>
+<p>For a <strong>first trip focused on scenery and calm</strong>, Krabi — base in Ao Nang or Railay. For <strong>convenience, nightlife, and resort choice</strong>, Phuket. For <strong>families</strong>, both work (Kata/Karon on Phuket, Ao Nang or Koh Lanta on Krabi). And if you have a week or more on the Andaman coast, do both: a few nights in Krabi for the cliffs, a few in Phuket for the resorts and food, linked by a short ferry or drive.</p>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is Krabi or Phuket better for first-timers?</summary><div><p>Krabi for scenery and a calmer pace; Phuket for convenience, nightlife, and the widest resort range. Both reach the same famous islands by boat.</p></div></details>
+  <details><summary>Which is cheaper, Krabi or Phuket?</summary><div><p>Krabi is generally a bit cheaper across accommodation and dining, though both span budget to luxury and prices vary sharply by season.</p></div></details>
+  <details><summary>Can I visit both Krabi and Phuket in one trip?</summary><div><p>Yes — they're close, linked by ferry or road, and share the same island day trips. A few nights in each is a popular Andaman-coast combination.</p></div></details>
+  <details><summary>Which has better nightlife?</summary><div><p>Phuket, clearly — Patong's Bangla Road is Thailand's most famous beach nightlife. Krabi's scene is mellow beach bars and relaxed restaurants.</p></div></details>
+</section>
+
+
+----- SLUG: thailand-honeymoon-itinerary -----
+TITLE: Thailand for Honeymooners: The Romantic Itinerary
+CATEGORY: itineraries-by-interest
+
+<p>Thailand is one of the world's great honeymoon destinations: it pairs genuine culture and adventure with some of the most beautiful — and surprisingly affordable — luxury resorts anywhere. The ideal honeymoon here isn't a non-stop sightseeing march; it's a blend of a little city and culture up front, then a slow, indulgent stretch on the islands. Here's how to build it.</p>
+
+<!-- IMAGE_SLOT_1: A romantic beachfront villa or infinity pool at sunset in Thailand -->
+
+<h2>The shape of a great Thailand honeymoon</h2>
+<p>For a 10-to-14-day honeymoon, the winning structure is roughly: <strong>two or three days in Bangkok</strong> to land and soak up the energy, <strong>two or three days in the north</strong> around Chiang Mai for culture and a shared adventure, then <strong>five-plus days on the islands</strong> to unwind in a beautiful resort. The cities are the appetizer; the islands are the main course. If you only have a week, cut the north and do Bangkok plus a longer island stay.</p>
+
+<h2>Days 1–3: Bangkok, in style</h2>
+<p>Base in a riverside hotel for romance and views, see the headline temples — the <strong>Grand Palace</strong>, <strong>Wat Pho</strong>, <strong>Wat Arun</strong> at sunset — and have a special dinner at a rooftop bar overlooking the skyline or a fine-dining room. Keep it to a couple of days; Bangkok is thrilling but intense, and you'll want energy for what's next.</p>
+
+<!-- AFFILIATE_SLOT: booking — Bangkok riverside hotels -->
+
+<h2>Days 4–6: the north, for a shared adventure</h2>
+<p>Fly to <strong>Chiang Mai</strong> for a change of pace. Wander the old-city temples, take a <strong>couples' cooking class</strong>, visit the mountain temple <strong>Doi Suthep</strong>, and — the honeymoon highlight for many — spend a day at an <strong>ethical elephant sanctuary</strong> (observation-only, no riding). It's the kind of shared experience you'll both remember long after the beach.</p>
+
+<!-- IMAGE_SLOT_2: A couple-friendly scene — elephants in a green sanctuary or a misty northern temple -->
+
+<!-- AFFILIATE_SLOT: getyourguide — Chiang Mai elephant sanctuary / cooking class -->
+
+<h2>Days 7–12: island luxury</h2>
+<p>This is where the honeymoon truly begins. Fly south and settle into a standout resort for five nights or more. For <strong>romance and boutique charm</strong>, look at Bophut and its Fisherman's Village on Koh Samui, or a boutique property on Krabi's Railay peninsula. For <strong>dramatic scenery</strong>, a cliffside or beachfront villa on Krabi. For <strong>pure resort polish with easy logistics</strong>, Phuket's quieter northwest beaches (Bang Tao, Surin).</p>
+<p>Match the coast to your season: the Andaman islands (Phuket, Krabi) are best roughly November–April; Koh Samui and the Gulf shine mid-year. A private pool villa is the classic honeymoon splurge, and in Thailand it costs a fraction of what the equivalent would run in the Maldives or Caribbean.</p>
+
+<!-- AFFILIATE_SLOT: booking — island honeymoon resorts / pool villas -->
+
+<h2>Romantic touches worth booking</h2>
+<p>A private longtail-boat sunset cruise, a couples' spa day (Thai massage is world-class and inexpensive), a private beach dinner, and an island-hopping day to a quiet lagoon all elevate the trip without much planning. Many resorts arrange honeymoon extras — flag that you're celebrating when you book.</p>
+
+<h2>Budgeting the splurge</h2>
+<p>The beauty of a Thailand honeymoon is that luxury here stretches further than almost anywhere. Still, resort and villa prices swing hugely by island, season, and property, so compare current rates rather than any fixed number and convert with a live tool:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>How long should a Thailand honeymoon be?</summary><div><p>Ten to fourteen days is ideal: a few days in Bangkok, a few in the north, and five or more on an island. A week works for Bangkok plus a longer island stay.</p></div></details>
+  <details><summary>Which island is most romantic for a honeymoon?</summary><div><p>Bophut on Koh Samui for boutique charm, or a boutique/villa stay on Krabi's Railay for cliff-and-sea drama. Phuket's quiet northwest beaches suit polished resort honeymoons.</p></div></details>
+  <details><summary>Is a Thailand honeymoon expensive?</summary><div><p>It can be as lavish or as moderate as you like — Thailand's luxury resorts and private pool villas cost far less than equivalent stays in the Maldives or Caribbean, which is a big part of the appeal.</p></div></details>
+  <details><summary>When is the best time for a honeymoon in Thailand?</summary><div><p>Match the coast to your dates: the Andaman islands (Phuket, Krabi) are best November–April; Koh Samui and the Gulf are best mid-year. The cool, dry season is peak nationwide.</p></div></details>
+</section>
+
+
+----- SLUG: 7-days-bangkok-and-beaches -----
+TITLE: 7 Days in Thailand: Bangkok and the Beaches
+CATEGORY: one-week
+
+<p>If you have a week and want the quintessential first-timer Thailand experience, this is it: a few days in the buzzing capital, then straight to the beaches. It's the most popular one-week route because it's easy to organize, delivers two completely different sides of Thailand, and ends on a relaxing high. Here's the day-by-day.</p>
+
+<p>Before booking, confirm your entry rules — Thailand's visa-free stay for Americans has been changing in 2026, though a week falls well within any version of it. File the free Thailand Digital Arrival Card (TDAC) online before you fly.</p>
+
+<!-- IMAGE_SLOT_1: A split-feel hero of a Bangkok temple and an island beach -->
+
+<h2>Days 1–3: Bangkok</h2>
+<p>Land, recover (you're 11–12 hours ahead of the U.S. East Coast), and base near the BTS Skytrain in <strong>Sukhumvit</strong> for ease, or the <strong>Riverside / Old Town</strong> for atmosphere.</p>
+<p><strong>Day 1:</strong> arrival and a gentle first evening — a street-food dinner in <strong>Chinatown</strong>. <strong>Day 2:</strong> the temple core — <strong>Grand Palace</strong> and <strong>Wat Pho</strong> in the morning (dress modestly), <strong>Wat Arun</strong> at sunset, a rooftop bar to finish. <strong>Day 3:</strong> a market (Chatuchak on weekends) or the Jim Thompson House, plus a cooking class or canal boat ride before you fly south.</p>
+
+<div class="feature-map" data-points='[
+  {"name":"Grand Palace","lat":13.7500,"lng":100.4915,"note":"Early; strict dress code"},
+  {"name":"Wat Pho","lat":13.7466,"lng":100.4929,"note":"Reclining Buddha"},
+  {"name":"Wat Arun","lat":13.7437,"lng":100.4889,"note":"Sunset"},
+  {"name":"Chinatown (Yaowarat)","lat":13.7400,"lng":100.5100,"note":"Street food"}
+]'></div>
+
+<!-- AFFILIATE_SLOT: getyourguide — Bangkok temple tour / cooking class -->
+
+<h2>Day 4: fly to the islands</h2>
+<p>Take a morning <strong>domestic flight</strong> south — Phuket (HKT) or Krabi (KBV), both about 1h25 from Bangkok. <strong>Krabi</strong> is the calmer, more scenic choice; <strong>Phuket</strong> offers more resorts and nightlife. Check in and spend the afternoon on the beach or by the pool.</p>
+
+<!-- AFFILIATE_SLOT: skyscanner — Bangkok to Phuket/Krabi flight -->
+
+<h2>Days 5–6: beach and boats</h2>
+<p><strong>Day 5</strong> is your island-hopping day: a longtail or speedboat trip to the <strong>Phi Phi Islands</strong>, <strong>Phang Nga Bay</strong>, or the <strong>Hong Islands</strong> — go early to beat the crowds. <strong>Day 6</strong> is unstructured: a quiet beach, snorkeling, a massage, a sunset longtail. This is the part of the trip you'll daydream about later, so don't over-schedule it.</p>
+
+<!-- IMAGE_SLOT_2: A longtail boat anchored off limestone karsts in clear water -->
+
+<!-- AFFILIATE_SLOT: getyourguide — island-hopping boat trip -->
+
+<h2>Day 7: home</h2>
+<p>Most long-haul flights leave Bangkok late at night, so you'll fly back from the island in the afternoon and connect. If your schedule allows a few hours in Bangkok, squeeze in last-minute shopping and one more great meal before the airport.</p>
+
+<h2>Tips to make a week work</h2>
+<p>Fly, don't drive, between Bangkok and the coast — the time saved is the whole point. Pick your island for the season (Andaman coast November–April; Gulf islands mid-year). Pack light and carry cash for street food and boats. And resist adding a second island in seven days — you'll spend the trip in transit. Costs day-to-day are low; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is one week enough for Bangkok and the beaches?</summary><div><p>Yes — three days in Bangkok and four on one southern island is a comfortable, popular week. Just don't try to add a second island or the north in seven days.</p></div></details>
+  <details><summary>Which island should I choose for a one-week trip?</summary><div><p>Krabi for calm and scenery, Phuket for resorts and nightlife — both are about 1h25 from Bangkok and reach the same famous islands by boat. Match the coast to your season.</p></div></details>
+  <details><summary>How do I get from Bangkok to the beaches?</summary><div><p>Fly. Phuket and Krabi are about 1h25 from Bangkok with frequent cheap flights — far better than the long overland routes on a short trip.</p></div></details>
+  <details><summary>Do I need a visa for a 7-day trip?</summary><div><p>U.S. tourists enter visa-free, and a week is within any version of the visa-exempt stay. Confirm the current rule for your travel date and file the free TDAC online before flying.</p></div></details>
+</section>
+
+
+----- SLUG: 7-days-northern-thailand -----
+TITLE: 7 Days in Northern Thailand
+CATEGORY: one-week
+
+<p>Not everyone comes to Thailand for beaches. If you're drawn to temples, cooler mountain air, Thai cooking, and ethical elephant experiences, a week in the north is a richer, more cultural trip than the standard beach run. This route pairs a taste of Bangkok with the highlands around Chiang Mai. Here's how to spend seven days up north.</p>
+
+<p>As always, confirm your entry requirements before booking — Thailand's visa-free rules for Americans have been changing in 2026, though a week is within any version. File the free Thailand Digital Arrival Card (TDAC) online before you fly.</p>
+
+<!-- IMAGE_SLOT_1: A misty northern Thailand mountain temple or Doi Suthep's golden chedi -->
+
+<h2>Days 1–2: Bangkok</h2>
+<p>Land in the capital and give it two days. Cover the essentials — the <strong>Grand Palace</strong>, <strong>Wat Pho</strong>, and <strong>Wat Arun</strong> at sunset — plus a <strong>Chinatown</strong> street-food crawl. Base near the BTS Skytrain in Sukhumvit, or by the river for atmosphere. Two days is enough to feel the city before you head for calmer ground.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Bangkok temple tour -->
+
+<h2>Days 3–5: Chiang Mai</h2>
+<p>Fly to <strong>Chiang Mai</strong> (about 1h15) — or take the atmospheric overnight sleeper train if you'd rather trade a night for the scenery. The northern capital is walkable, relaxed, and packed with character.</p>
+<p><strong>Day 3:</strong> explore the <strong>Old City temples</strong> (Wat Chedi Luang, Wat Phra Singh) and a night market. <strong>Day 4:</strong> the mountain temple <strong>Doi Suthep</strong> for sweeping city views, plus a <strong>Thai cooking class</strong> in the afternoon. <strong>Day 5:</strong> a full day at an <strong>ethical elephant sanctuary</strong> — the observation-only kind — which is the highlight of the north for many visitors.</p>
+
+<!-- IMAGE_SLOT_2: Elephants in a green sanctuary, or Chiang Mai's old-city temples -->
+
+<!-- AFFILIATE_SLOT: getyourguide — elephant sanctuary / cooking class -->
+
+<h2>Day 6: deeper into the north</h2>
+<p>Use Day 6 for a side trip. <strong>Chiang Rai</strong> (about three hours each way, or as an overnight) has the surreal White Temple and Blue Temple. The laid-back mountain town of <strong>Pai</strong> is a scenic option for those who want to slow right down. Or stay local for <strong>Doi Inthanon National Park</strong>, home to Thailand's highest peak and beautiful waterfalls.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Chiang Rai day trip -->
+
+<h2>Day 7: back to Bangkok and home</h2>
+<p>Fly back to Bangkok for your departure. With a late-night long-haul flight, you may have a few bonus hours for last-minute shopping or a final meal in the capital.</p>
+
+<h2>Why choose the north?</h2>
+<p>The north trades beaches for mountains, but it delivers things the islands can't: genuine Lanna culture, the country's best cooking classes, cooler weather (a relief if you dislike tropical heat), and meaningful wildlife experiences. It's also generally cheaper than the islands. One season note: the north has a <strong>burning season</strong> roughly February–April when air quality drops sharply, so the cool months of November–January are the sweet spot. Day-to-day costs are low; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is northern Thailand worth a week?</summary><div><p>Absolutely, if you prefer culture, mountains, and elephants to beaches. A week covers a taste of Bangkok plus Chiang Mai and a northern side trip like Chiang Rai or Pai.</p></div></details>
+  <details><summary>When is the best time to visit the north?</summary><div><p>November to January — cool, dry, and clear. Avoid the burning season (roughly February–April), when air quality in and around Chiang Mai drops significantly.</p></div></details>
+  <details><summary>How do I get to Chiang Mai from Bangkok?</summary><div><p>Fly (about 1h15) for speed, or take the atmospheric overnight sleeper train if you'd rather see the scenery and save a hotel night.</p></div></details>
+  <details><summary>What's the highlight of northern Thailand?</summary><div><p>For many visitors, a day at an ethical elephant sanctuary, alongside the old-city temples, Doi Suthep, and a Thai cooking class.</p></div></details>
+</section>
+
+
+----- SLUG: best-rooftop-hotels-bangkok -----
+TITLE: The Best Rooftop Hotels in Bangkok
+CATEGORY: stay-bangkok
+
+<p>Bangkok does rooftops better than almost any city on earth — the skyline is dramatic, the warm evenings are made for it, and a sunset drink high above the traffic is one of the city's signature experiences. Staying in a hotel with its own rooftop (or near the famous ones) turns Bangkok's intensity into something magical. Here's where to look and how to choose a rooftop base.</p>
+
+<!-- IMAGE_SLOT_1: A Bangkok rooftop bar or infinity pool overlooking the glittering skyline at dusk -->
+
+<h2>Why a rooftop hotel is worth it in Bangkok</h2>
+<p>Bangkok at street level is hot, loud, and frenetic. From a rooftop, it transforms: the chaos becomes a glittering carpet of lights, the temperature drops with the breeze, and the Chao Phraya River winds through it all. A hotel with a rooftop pool or bar gives you that view on demand — a place to decompress after a day of temples and markets. Even if your room doesn't have the view, staying near the landmark sky bars makes sunset drinks effortless.</p>
+
+<h2>Best areas for rooftop hotels</h2>
+
+<h3>Silom and Sathorn — the rooftop heartland</h3>
+<p>This business district is home to some of Bangkok's most famous sky bars and the hotels that house them. It's well connected (on both the BTS and MRT), making it an excellent base generally, and the concentration of high-rise hotels means the best skyline views. If rooftops are your priority, start here.</p>
+
+<!-- AFFILIATE_SLOT: booking — Silom / Sathorn rooftop hotels -->
+
+<h3>Sukhumvit — rooftops plus convenience</h3>
+<p>Bangkok's modern dining-and-nightlife spine also has plenty of rooftop hotels, especially around Asok and Thonglor. You get skyline views <em>and</em> the easy access to restaurants, malls, and the Skytrain that makes Sukhumvit the easiest first-timer base.</p>
+
+<!-- AFFILIATE_SLOT: booking — Sukhumvit rooftop hotels -->
+
+<h3>Riverside — views of the river, not just the skyline</h3>
+<p>The riverside luxury hotels offer a different kind of rooftop experience — sweeping views over the Chao Phraya and the temples along it, rather than the corporate skyline. It's the most romantic option, and the riverside properties are among the most celebrated hotels in Asia, though the area is less connected to the metro.</p>
+
+<!-- IMAGE_SLOT_2: A riverside Bangkok hotel pool overlooking the Chao Phraya River and temples -->
+
+<!-- AFFILIATE_SLOT: booking — Riverside hotels -->
+
+<h2>How to choose a rooftop hotel</h2>
+<p>Decide what view you want — <strong>skyline</strong> (Silom/Sathorn or Sukhumvit) or <strong>river</strong> (Riverside). Confirm the rooftop is actually accessible to guests (some famous sky bars are separate venues, and some hotel rooftops have dress codes or minimum spends). And don't sacrifice location for the view alone: a rooftop hotel that's a long taxi from the Skytrain will cost you time daily. The best choice pairs a great view with a walkable transit connection.</p>
+
+<p>Rooftop and luxury hotels sit at the higher end of Bangkok's wide price range, and rates climb in peak season (November–February). Compare current prices rather than any fixed figure, and convert with a live tool:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Where are the best rooftop hotels in Bangkok?</summary><div><p>The Silom/Sathorn business district has the highest concentration of famous sky bars and high-rise hotels, with Sukhumvit close behind for rooftops plus convenience, and the Riverside for river views.</p></div></details>
+  <details><summary>Should I choose a skyline or river view?</summary><div><p>Skyline views (Silom/Sathorn, Sukhumvit) are dramatic and central; river views (Riverside) are more romantic, overlooking the Chao Phraya and its temples, but less connected to the metro.</p></div></details>
+  <details><summary>Are rooftop hotels in Bangkok expensive?</summary><div><p>They sit at the higher end of Bangkok's range, but the city is affordable overall, so a rooftop stay costs far less than the equivalent in many Western cities. Prices rise in peak season.</p></div></details>
+  <details><summary>Do I need to stay in a rooftop hotel to enjoy the sky bars?</summary><div><p>No — many famous sky bars welcome non-guests (sometimes with a dress code or minimum spend). But staying near them makes sunset drinks effortless.</p></div></details>
+</section>

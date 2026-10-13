@@ -1,0 +1,166 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 20,
+  "swamp": "S-customs",
+  "_INSTRUCTIONS": "Return ONE JSON object with exactly these keys. For each: {value, status, source_url, notes}. status is one of verified | verify_recommended | serve_live | agreed_stable. DEFAULT TO verify_recommended. Mark verified ONLY if source_url is an OFFICIAL source you actually opened. If you cannot source a value, return null and list the key in _open_questions. Do NOT estimate. Do NOT average two sources. For Turkish cultural property law prefer mevzuat.gov.tr, resmigazete.gov.tr or the Ministry of Culture and Tourism; for the US side prefer cbp.gov, the Federal Register, or the State Department's cultural property pages. An auction house, a dealer, a law-firm blog or a travel site is NOT official.",
+  "_CALIBRATION": "Track record on this project: batch 16 returned 1/1 and 4/5 verified-with-official-source; batch 17 3/3 and 3/3; batch 18 6/6 and 7/7 with both models locating the governing regulation itself; batch 19 3/3 and 8/8. That is the standard. Before these prompts were hardened, a Thailand panel marked 24 of 40 verified with only 2 officially sourced and all 22 others were downgraded.",
+  "_WHY_THIS_LOOKS_ODD": "This asks for COMPONENTS and no recommendations on purpose. The articles report mechanics; the paid guide makes the calls. Do not add advice, rankings or 'you should' framing to any notes field.",
+  "_open_questions": [],
+  "facts": {
+    "customs.protected_categories": {
+      "_want": "Which categories of object Turkish cultural and natural property law protects, and the criteria (age, type, origin) that bring an object inside the definition.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.age_threshold": {
+      "_want": "Whether Turkish law uses a date or age threshold for protected cultural property, and what it is.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.export_offence": {
+      "_want": "Whether unauthorised export of protected cultural property is a criminal offence in Turkey, and the penalty range stated in law.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.export_permit_authority": {
+      "_want": "Which body may authorise the export of a cultural object from Turkey, and the process.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.museum_expertise_report": {
+      "_want": "Whether a state museum expertise report exists as an instrument, who can request one, and what it determines.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.airport_departure_control": {
+      "_want": "What is inspected at departure control in relation to cultural objects, and by whom.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.seller_certificate_standing": {
+      "_want": "What legal standing, if any, a vendor-issued certificate of authenticity or age has in a Turkish export decision.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.receipt_role": {
+      "_want": "What a purchase receipt establishes for Turkish export purposes and for US import purposes.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.rug_age_bands": {
+      "_want": "The age bands used in the Turkish rug trade (new, semi-old, old, antique) and roughly what each means.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.rug_legal_threshold": {
+      "_want": "Where the legal protection threshold sits relative to those trade age bands for carpets and kilims.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.shipping_vs_carrying": {
+      "_want": "Documentation differences between a seller shipping an item abroad and a buyer carrying it in luggage.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.coins": {
+      "_want": "How ancient or old coins are treated under Turkish law, including coins offered for sale to tourists.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.fossils_stones": {
+      "_want": "How fossils, natural specimens and stones taken from sites or beaches are treated.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.site_pickup": {
+      "_want": "Whether picking up a fragment at an archaeological site is treated differently from buying one in a shop.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.religious_objects": {
+      "_want": "How icons and religious objects are treated.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "customs.unrestricted_goods": {
+      "_want": "Which common tourist purchases are genuinely unrestricted for export.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "us.personal_exemption": {
+      "_want": "The US personal duty exemption for returning residents and how it applies to goods bought in Turkey.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "us.declaration_requirement": {
+      "_want": "What US returning residents must declare, and the threshold at which declaration matters.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "us.cultural_property_restriction": {
+      "_want": "Whether the United States applies an import restriction on Turkish archaeological or ethnological material, and under what instrument.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "us.rug_import_treatment": {
+      "_want": "How US customs treats a personal rug or carpet import, including duty.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "us.food_textile_rules": {
+      "_want": "US import rules for food items and textiles bought abroad as souvenirs.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    },
+    "us.high_value_documentation": {
+      "_want": "What documentation US customs expects for a high-value personal import.",
+      "value": null,
+      "status": null,
+      "source_url": null,
+      "notes": null
+    }
+  }
+}

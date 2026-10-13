@@ -1,0 +1,100 @@
+{
+  "_README": "TOPICAL TEMPLATE — Stage 2 scoped fact-build for 3 domains ABSENT from the standard facts-template.json (health/pharmacy/hospital billing, Balearic ferries, public holidays/closures). Same contract as the standard template: do NOT change field NAMES or STRUCTURE, fill VALUES only, keep every key (null if you can't fill it). Frame everything for the audience in _meta. STATUS MODEL: 'verified' = confirmed against an OFFICIAL source (URL in source_url); 'agreed_stable' = confident, no source opened; 'verify_recommended' = change-prone or high-stakes, flag it; 'serve_live' = volatile, must NOT be frozen (prices, exchange-driven costs). Return ONLY valid JSON in EXACTLY this structure. Fill EVERY section.",
+  "_meta": {
+    "schema_version": 1,
+    "project": "barcelonaforamericans",
+    "country": "Spain",
+    "country_iso": "ES",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": ["JFK", "EWR", "ORD", "MIA", "LAX"],
+      "home_currency": "USD"
+    },
+    "locale": { "site_language": "en-US", "units": "imperial", "money_framing": "USD" },
+    "ai_source": "deepseek",
+    "produced_at": "2026-09-05"
+  },
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status (verified|agreed_stable|verify_recommended|serve_live), notes }. For 'verified' the source_url MUST be the official page you checked. Never invent a source.",
+  "health_care": {
+    "_note": "Covers: Bringing Medication into Spain / Getting Treated in Barcelona: Pharmacy, Clinic or ER / What to Expect When a Spanish Hospital Bills You. YMYL — be conservative, prefer verify_recommended over agreed_stable.",
+    "medication_import": {
+      "prescription_medication_rules": { "value": "Personal-use quantity for the duration of the trip (up to 90 days typically), in original packaging, with a doctor's letter or prescription in Spanish or English.", "source_url": null, "status": "verify_recommended", "notes": "quantity limits (e.g. ~personal supply for trip length), need for original packaging / doctor's letter or prescription copy" },
+      "controlled_substances_note": { "value": "Narcotics/psychotropics require a Schengen Certificate (or equivalent) issued by the traveler's home country; otherwise may be seized.", "source_url": null, "status": "verify_recommended", "notes": "narcotics/psychotropics — Schengen certificate requirement for travelers carrying controlled meds across borders" },
+      "customs_declaration_threshold": { "value": null, "source_url": null, "status": "verify_recommended" },
+      "official_source_url": { "value": "https://www.aemps.gob.es" }
+    },
+    "pharmacy_system": {
+      "farmacia_identification": { "value": "Green cross sign (often lit or neon); may say 'Farmacia'.", "source_url": null, "status": "agreed_stable", "notes": "the green cross sign" },
+      "farmacia_de_guardia": { "value": "24-hour rotating duty pharmacy; posted on all pharmacy doors or online at https://www.farmaciasdeguardia.com (or local city website).", "source_url": null, "status": "agreed_stable", "notes": "24h rotating duty-pharmacy system — how a tourist finds the open one" },
+      "otc_vs_prescription_differences": { "value": "Many antihistamines, ibuprofen (up to 600 mg), and some topical antifungals are OTC; antibiotics and codeine products are Rx-only.", "source_url": null, "status": "verify_recommended", "notes": "things OTC in Spain but Rx-only in the US or vice versa" },
+      "pharmacist_role": { "value": "Pharmacists can diagnose and treat minor ailments (e.g., sore throat, mild infections, travel diarrhea) and may dispense certain stronger meds without a prescription under their discretion.", "source_url": null, "status": "agreed_stable", "notes": "Spanish pharmacists routinely advise/treat minor ailments directly" }
+    },
+    "clinic_vs_er": {
+      "private_clinic_access": { "value": "Walk-in private clinics (e.g., Creu Blanca, Quirónsalud) available; typical self-pay visit ~€80–€200 ($90–$220) plus tests.", "source_url": null, "status": "verify_recommended", "notes": "walk-in private clinics for tourists — typical cost range" },
+      "public_hospital_er_access": { "value": "Public ER ('urgencias') treats anyone regardless of residency; you may be asked for insurance/passport but cannot be denied emergency care. Non-residents may receive a bill later.", "source_url": null, "status": "verify_recommended", "notes": "urgencias access for non-residents, triage-based, whether insurance card is asked for AT the door" },
+      "when_to_choose_which": { "value": "RECOMMENDATION — For minor issues (e.g., fever, rash, cut) go to a pharmacy first or private clinic; for severe pain, difficulty breathing, chest pain, or major trauma call 112 or go directly to a public ER.", "notes": "RECOMMENDATION — minor issue vs true emergency (112) decision guide" }
+    },
+    "hospital_billing": {
+      "billing_model_public": { "value": "Public hospitals generally bill non-EU tourists after treatment, often via mail to the patient's home address, or a bill can be requested at the hospital's administrative office. Payment may be required before discharge for non-emergency services.", "source_url": null, "status": "verify_recommended", "notes": "does a public hospital bill a non-EU tourist directly, and when — at discharge or by mail" },
+      "billing_model_private": { "value": "Private clinics typically ask for credit card guarantee or upfront payment (partial or full) before treatment, especially for non-emergencies.", "source_url": null, "status": "verify_recommended", "notes": "upfront payment / card guarantee expectations" },
+      "typical_costs": { "value": null, "status": "serve_live", "notes": "rough ranges only: ER visit, ambulance ride, one overnight stay — never frozen as durable prices" },
+      "travel_insurance_necessity": { "value": "RECOMMENDATION — Strongly recommended; without it, a serious incident can cost tens of thousands of dollars. Many US health plans do not cover foreign treatment, and Medicare does not.", "notes": "RECOMMENDATION — is it a hard requirement in practice for this audience" },
+      "what_to_keep_for_reimbursement": { "value": "Itemized invoice ('factura'), medical report ('informe médico'), and payment receipts; request them in Spanish (and ask for a translation or English version if possible).", "source_url": null, "status": "agreed_stable", "notes": "itemized invoice / informe médico / payment receipts for a US insurer claim" }
+    }
+  },
+  "ferries_balearics": {
+    "_note": "Covers: Ferries from Barcelona to the Balearics: Fast vs Slow / When a Balearic Ferry Cancels, and What You're Owed.",
+    "operators": { "value": ["Baleària", "Trasmediterránea"], "source_url": null, "status": "agreed_stable", "notes": "e.g. Trasmediterránea, Baleària — who actually runs Barcelona-Balearics" },
+    "port_terminal": { "value": "Moll de Sant Bertran or Moll de Barcelona (Terminal Baleària and Trasmediterránea respectively). Accessible by Metro L2 (Drassanes) or bus 120.", "source_url": null, "status": "agreed_stable", "notes": "which Port de Barcelona terminal, how to get there from the center" },
+    "routes_and_durations": {
+      "to_palma_mallorca": { "value": "Fast ferry ~2.5–3 hours; slow ferry ~6–8 hours (overnight or day). Rough price range: fast ~€80–150 ($90–170), slow ~€40–80 ($45–90) one-way, depending on season.", "status": "serve_live", "notes": "fast vs slow ferry duration + rough price range" },
+      "to_ibiza": { "value": "Fast ferry ~4 hours; slow ferry ~8–10 hours. Rough price range: fast ~€100–180 ($110–200), slow ~€60–100 ($70–110).", "status": "serve_live" },
+      "to_menorca": { "value": "Most ferries are via Mallorca (routing) or seasonal direct; direct slow ferry from Barcelona ~8–10 hours, fast ~4.5 hours. Rough price range: fast ~€100–160, slow ~€50–90; seasonal (summer only for some direct).", "status": "serve_live", "notes": "note if it's direct or routed via Mallorca/Valencia, and seasonality" }
+    },
+    "fast_vs_slow_tradeoffs": { "value": "RECOMMENDATION — Choose fast if time-limited or prone to seasickness; choose slow if you want an overnight cabin to save a hotel night, or are bringing a car. Families may prefer the slower boat for more space and onboard amenities.", "notes": "RECOMMENDATION — price/time/overnight-cabin tradeoff, who should pick which" },
+    "booking_advice": { "value": "Book at least 2–3 weeks in advance for summer (July–August); walk-on tickets can sell out. Car spaces sell out weeks ahead. Buy directly from operator sites (Baleària or Trasmediterránea) to avoid third-party change fees.", "source_url": null, "status": "agreed_stable", "notes": "how far ahead in summer, walk-on vs car ferry, aggregator vs operator site" },
+    "cancellation_policy": {
+      "typical_causes": { "value": "Wind speeds above ~40–50 knots, sea state (wave height) exceeding safety limits, port closures, or mechanical issues.", "source_url": null, "status": "agreed_stable", "notes": "e.g. wind/sea state thresholds" },
+      "passenger_rights": { "value": "Under EU Regulation 1177/2010, passengers have rights to re-routing, reimbursement, or assistance (meals, accommodation if overnight delay) depending on cancellation timing. Cash compensation only if cancellation is within operator's control; weather cancellations typically do not trigger cash compensation but do require re-routing or refund.", "source_url": null, "status": "verify_recommended", "notes": "EU ferry passenger rights regulation — compensation, rerouting, care obligations" },
+      "operator_rebooking_practice": { "value": "Operators generally rebook on next available sailing (usually the next day) or offer a full refund; often can be done online or at the port ticket office.", "source_url": null, "status": "verify_recommended" },
+      "travel_insurance_interaction": { "value": "Standard travel insurance may cover missed connections (e.g., flight) or extra accommodation if the cancellation is due to weather or mechanical failure, but check your policy — many exclude 'acts of nature' unless you bought 'cancel for any reason' or severe weather coverage.", "notes": "does standard travel insurance cover a missed connection from a cancelled ferry" }
+    }
+  },
+  "public_holidays_closures": {
+    "_note": "Covers: What Closes on a Spanish Public Holiday (and feeds the existing barcelona-august-shutdown article as a targeted addition). Dates are change-prone per year — flag accordingly.",
+    "national_holidays": { "value": [
+      {"name": "Año Nuevo (New Year's Day)", "typical_date": "January 1"},
+      {"name": "Epifanía del Señor (Epiphany)", "typical_date": "January 6"},
+      {"name": "Viernes Santo (Good Friday)", "typical_date": "March/April (variable)"},
+      {"name": "Día del Trabajo (Labor Day)", "typical_date": "May 1"},
+      {"name": "Asunción de la Virgen (Assumption)", "typical_date": "August 15"},
+      {"name": "Día de la Hispanidad (National Day)", "typical_date": "October 12"},
+      {"name": "Todos los Santos (All Saints' Day)", "typical_date": "November 1"},
+      {"name": "Día de la Constitución (Constitution Day)", "typical_date": "December 6"},
+      {"name": "Inmaculada Concepción (Immaculate Conception)", "typical_date": "December 8"},
+      {"name": "Natividad del Señor (Christmas Day)", "typical_date": "December 25"}
+    ], "source_url": null, "status": "verify_recommended", "notes": "[{name, typical_date}] — Spain-wide fixed public holidays" },
+    "catalonia_regional_holidays": { "value": [
+      {"name": "Sant Jordi (Diada de Sant Jordi)", "typical_date": "April 23"},
+      {"name": "Diada de Cataluña (National Day of Catalonia)", "typical_date": "September 11"},
+      {"name": "Sant Esteve (St. Stephen's Day)", "typical_date": "December 26"}
+    ], "source_url": null, "status": "verify_recommended", "notes": "[{name, typical_date}] — Catalonia-specific (e.g. Sant Esteve, Diada)" },
+    "barcelona_local_holidays": { "value": [
+      {"name": "La Mercè (feast of Our Lady of Mercy)", "typical_date": "September 24"},
+      {"name": "Santa Eulàlia (feast of co-patron saint)", "typical_date": "February 12"}
+    ], "source_url": null, "status": "verify_recommended", "notes": "[{name, typical_date}] — city-specific (e.g. La Mercè, Santa Eulàlia)" },
+    "what_typically_closes": { "value": "Most small shops, banks, and post offices close; large shopping malls and supermarkets in tourist areas often stay open (though with reduced hours). Many museums close, some remain open with holiday hours. Restaurants: many close, but tourist-area restaurants often remain open. Public transit runs on a 'festivo' schedule (reduced frequency).", "source_url": null, "status": "agreed_stable", "notes": "shops (small vs chain), restaurants, banks, museums, transit schedule ('horario festivo')" },
+    "august_shutdown_specifics": { "value": "In Barcelona, many non-tourist local businesses and restaurants close for at least 1–2 weeks, often around August 15 (Assumption) and the following week. Most tourist-facing establishments (Gothic Quarter, El Born, Eixample tourist strips) and malls remain open. Museums often remain open, but check individual schedules.", "status": "verify_recommended", "notes": "how widespread, typical closure window, what stays open (malls, tourist-facing restaurants, museums) — feeds barcelona-august-shutdown" },
+    "advance_planning_note": { "value": "RECOMMENDATION — For national/regional holidays, book restaurant reservations 3–7 days ahead; check attraction websites for holiday hours. For August, be prepared for some favorite local spots to be closed, and book ferries and hotels well in advance.", "notes": "RECOMMENDATION — booking restaurants/checking attraction hours around these dates" }
+  },
+  "_open_questions": {
+    "_note": "Anything genuinely unsure / conflicting / needing a real source. Be honest.",
+    "value": [
+      "Customs declaration threshold for medication (e.g., euro value or quantity) — not clearly stated on AEMPS site.",
+      "Public hospital ER costs for non-residents — exact billing rates or average range not confirmed; need reliable cost data.",
+      "Ferry cancellation compensation specifics for weather vs mechanical — EU regulation text confirmed but operator practice varies; need to verify Baleària/Trasmediterránea actual policies.",
+      "Exact dates for 2027 Spanish national/Catalan/Barcelona holidays — need annual BOE publication.",
+      "Whether the Schengen Certificate for controlled substances is issued by US DEA or Spanish consulate — process unclear."
+    ]
+  }
+}

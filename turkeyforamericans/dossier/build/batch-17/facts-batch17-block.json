@@ -1,0 +1,182 @@
+{
+  "schema_version": 3,
+  "project": "turkeyforamericans",
+  "batch": 17,
+  "swamp": "S-calendar",
+  "facts": {
+    "calendar.national_holidays_list": {
+      "value": "1 January Yılbaşı; 23 April Ulusal Egemenlik ve Çocuk Bayramı; 1 May Emek ve Dayanışma Günü; 19 May Atatürk’ü Anma, Gençlik ve Spor Bayramı; 15 July Demokrasi ve Millî Birlik Günü; 30 August Zafer Bayramı; 28 October (from 13:00) + 29 October Cumhuriyet Bayramı.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2429&MevzuatTur=1&MevzuatTertip=5",
+      "notes": "Fixed dates and names set by Law 2429 on National Holidays and General Holidays. AGREED by both panels, both citing Law 2429 on National and General Holidays."
+    },
+    "calendar.arife_half_day": {
+      "value": "Arefe (eve) of Ramazan Bayramı and Kurban Bayramı is a half-day public holiday beginning at 13:00; official institutions and many workplaces close from that hour.",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2429&MevzuatTur=1&MevzuatTertip=5",
+      "notes": "Explicitly stated in Law 2429 for both religious Bayrams. AGREED by both panels, both citing Law 2429 on National and General Holidays."
+    },
+    "closures.banks_government": {
+      "value": "Banks, government offices and official institutions are closed on all national public holidays and on the full days of Ramazan and Kurban Bayramı (plus the Arefe half-day from 13:00).",
+      "status": "verified",
+      "source_url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2429&MevzuatTur=1&MevzuatTertip=5",
+      "notes": "Law 2429 requires official daire and kuruluşlar to be closed on the listed general holiday days. AGREED by both panels, both citing Law 2429 on National and General Holidays."
+    },
+    "calendar.ramadan_dates_next": {
+      "value": "2026: 19 February 2026 to 19 March 2026 (Bayram begins 20 March); 2027: 8 February 2027 to 8 March 2027 (Bayram begins 9 March)",
+      "status": "verify_recommended",
+      "source_url": "https://kurul.diyanet.gov.tr/duyurular/2026-ramazan/019c7121-78c4-775c-964e-e581a8efa2c8",
+      "notes": "AGREED with deepseek on 2027 (8 Feb - 8 Mar). grok anchors 2026 to a Diyanet announcement; 2027 is Diyanet-derived secondary. Religious dates remain subject to moon sighting — say so, never present as fixed. | STRUCTURAL: holds both years for the checker. NOT spanned inline — use the *_next keys instead."
+    },
+    "calendar.ramazan_bayram_dates_next": {
+      "value": "2026: 20–22 March 2026 (official public holiday: Arefe from 13:00 on 19 March + 3 full days); 2027: 9–11 March 2027 (Arefe from 13:00 on 8 March + 3 full days)",
+      "status": "verify_recommended",
+      "source_url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2429&MevzuatTur=1&MevzuatTertip=5",
+      "notes": "AGREED on dates AND on duration: Law 2429 fixes arife from 13:00 + 3 full days. deepseek expresses it as 3.5 days; same rule. | STRUCTURAL: holds both years for the checker. NOT spanned inline — use the *_next keys instead."
+    },
+    "calendar.kurban_bayram_dates_next": {
+      "value": "2026: 27–30 May 2026 (official public holiday: Arefe from 13:00 on 26 May + 4 full days); 2027: 16–19 May 2027 (Arefe from 13:00 on 15 May + 4 full days)",
+      "status": "verify_recommended",
+      "source_url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2429&MevzuatTur=1&MevzuatTertip=5",
+      "notes": "AGREED on dates AND duration: arife from 13:00 + 4 full days (deepseek: 4.5 days). Same rule. | STRUCTURAL: holds both years for the checker. NOT spanned inline — use the *_next keys instead."
+    },
+    "calendar.ramadan_annual_shift": {
+      "value": "Approximately 10–11 days earlier each Gregorian year because the Islamic lunar calendar is about 11 days shorter than the solar Gregorian year.",
+      "status": "agreed_stable",
+      "source_url": null,
+      "notes": "Standard astronomical property of the lunar Hijri calendar."
+    },
+    "calendar.bridge_days_practice": {
+      "value": "Turkey does not automatically extend Bayram holidays with fixed bridge days. Additional idari izin (administrative leave) days for public-sector employees may be announced by the Presidency or Cabinet on a year-by-year basis and published when decided.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "AGREED by both: no automatic bridge days; extra administrative leave is decided and announced year by year. The ad-hoc nature IS the fact."
+    },
+    "calendar.bayram_gap": {
+      "value": "About two lunar months separate the two Bayrams; in 2026 and 2027 the interval works out around 66-70 days.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "DISPUTE: deepseek computed ~66 days from the dates; grok said ~70 as a fixed Hijri interval (1 Sevval to 10 Zilhicce). Both are defensible and they measure slightly different endpoints. Stated as a range, not averaged."
+    },
+    "closures.grand_bazaar": {
+      "value": "Kapalıçarşı (Grand Bazaar) is closed on Sundays and on the first day of religious Bayrams; open Monday–Saturday outside those days.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "SINGLE SOURCE (deepseek returned null). Secondary sources only; no bazaar-management page opened. The corpus already states the Sunday/public-holiday closure in istanbul-bazaars, so this is consistent with what the site says."
+    },
+    "ramadan.daytime_dining": {
+      "value": "During Ramadan, many restaurants and cafes close during daylight hours, especially outside tourist areas. In major cities and coastal resorts, some establishments remain open for non‑Muslim tourists, but this is discretionary and varies. In smaller inland towns, daytime dining options are very limited.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Based on observed practice; no official regulation found. | SINGLE SOURCE by value, but grok's null carries the SAME finding in its notes: no official regulation exists and practice is discretionary and regional. Write it as observed practice that varies, never as a rule."
+    },
+    "ramadan.alcohol_service": {
+      "value": "Alcohol service may be restricted during Ramadan, but this is not a legal requirement. Some establishments voluntarily cease alcohol service; others continue, particularly in tourist zones. The decision is discretionary.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "No national law mandates alcohol restrictions during Ramadan; practice varies. | SINGLE SOURCE by value, but grok's null carries the SAME finding in its notes: no official regulation exists and practice is discretionary and regional. Write it as observed practice that varies, never as a rule."
+    },
+    "ramadan.working_hours": {
+      "value": "Public‑sector working hours may be shortened during Ramadan, but this is not uniform. Some offices adopt reduced summer hours; private sector may adjust schedules informally.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "No official working‑hour regulation for Ramadan found. | SINGLE SOURCE by value, but grok's null carries the SAME finding in its notes: no official regulation exists and practice is discretionary and regional. Write it as observed practice that varies, never as a rule."
+    },
+    "ramadan.etiquette_expectation": {
+      "value": "Non‑Muslim visitors are generally expected to refrain from eating, drinking, and smoking in public during daylight hours out of respect. This expectation is stronger in conservative neighbourhoods and smaller towns, less so in tourist-heavy areas. It is not legally enforced but is culturally appreciated.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Based on common travel advice; no official etiquette code found. | SINGLE SOURCE by value, but grok's null carries the SAME finding in its notes: no official regulation exists and practice is discretionary and regional. Write it as observed practice that varies, never as a rule."
+    },
+    "ramadan.iftar_restaurant_practice": {
+      "value": "Restaurants offering iftar typically serve set menus (often buffet or fixed multi‑course) at the exact maghrib time. Many require advance booking, especially in larger cities. Service begins precisely at the call to prayer.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Based on observed practice; no official regulation found. | SINGLE SOURCE by value, but grok's null carries the SAME finding in its notes: no official regulation exists and practice is discretionary and regional. Write it as observed practice that varies, never as a rule."
+    },
+    "ramadan.sahur_availability": {
+      "value": "Sahur (pre‑dawn meal) is typically eaten at home, but some hotels and 24‑hour restaurants offer sahur menus. Availability is highest in major cities and tourist hotels; smaller towns may have limited options.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "Based on observed practice; no official source found. | SINGLE SOURCE by value, but grok's null carries the SAME finding in its notes: no official regulation exists and practice is discretionary and regional. Write it as observed practice that varies, never as a rule."
+    },
+    "ramadan.iftar_timing": {
+      "value": "Iftar begins at the local Maghrib (sunset) prayer time published daily by Diyanet for each location; times advance by several minutes each day as the month progresses.",
+      "status": "agreed_stable",
+      "source_url": "https://ramazan.diyanet.gov.tr/",
+      "notes": "AGREED: sunset/Maghrib, published daily by Diyanet in the local imsakiye."
+    },
+    "ramadan.seasonal_foods": {
+      "value": "Ramazan pidesi (special flatbread) and güllaç appear seasonally and are sold by bakeries and pastry shops throughout the month.",
+      "status": "agreed_stable",
+      "source_url": null,
+      "notes": "AGREED: Ramazan pidesi and gullac."
+    },
+    "closures.museums_sites": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS NULL and both listed it open. No official data published. DELETE any sentence depending on it. Do not substitute folk knowledge."
+    },
+    "closures.shops_restaurants_bayram": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS NULL and both listed it open. No official data published. DELETE any sentence depending on it. Do not substitute folk knowledge."
+    },
+    "transport.bayram_demand_surge": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS NULL and both listed it open. No official data published. DELETE any sentence depending on it. Do not substitute folk knowledge."
+    },
+    "transport.bayram_booking_leadtime": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS NULL and both listed it open. No official data published. DELETE any sentence depending on it. Do not substitute folk knowledge."
+    },
+    "transport.bus_rail_bayram": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS NULL and both listed it open. No official data published. DELETE any sentence depending on it. Do not substitute folk knowledge."
+    },
+    "transport.ferry_coastal_bayram": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS NULL and both listed it open. No official data published. DELETE any sentence depending on it. Do not substitute folk knowledge."
+    },
+    "transport.fare_behaviour_bayram": {
+      "value": null,
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS NULL and both listed it open. No official data published. DELETE any sentence depending on it. Do not substitute folk knowledge."
+    },
+    "transport.toll_roads_bayram": {
+      "value": "Toll-free passage over Bayram is not automatic: it is granted by a presidential decree published in the Official Gazette for that year's holiday window. When granted it covers bridges and motorways operated by the General Directorate of Highways and free municipal public transport, and it EXCLUDES build-operate-transfer crossings such as the Yavuz Sultan Selim Bridge.",
+      "status": "verify_recommended",
+      "source_url": null,
+      "notes": "BOTH MODELS RETURNED NULL; recovered by my own search. The MECHANISM is the durable fact (decree, per year, KGM roads only, BOT excluded); the dates and whether it happens at all are decided annually and must NOT be stated in advance."
+    },
+    "calendar.ramadan_next": {
+      "value": "8 February to 8 March 2027",
+      "status": "verify_recommended",
+      "source_url": "https://kurul.diyanet.gov.tr/duyurular/2026-ramazan/019c7121-78c4-775c-964e-e581a8efa2c8",
+      "notes": "NEXT occurrence as of 2026-07-27 (2026's Ramadan, 19 Feb - 19 Mar, has passed). Both panels agree on 8 Feb - 8 Mar 2027. Diyanet-derived; provisional pending moon sighting. Split from calendar.ramadan_dates_next so it substitutes inline."
+    },
+    "calendar.ramazan_bayram_next": {
+      "value": "9-11 March 2027, preceded by a half-day from 13:00 on 8 March",
+      "status": "verify_recommended",
+      "source_url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2429&MevzuatTur=1&MevzuatTertip=5",
+      "notes": "NEXT occurrence. Duration fixed by Law 2429: arife from 13:00 + 3 full days. Split for inline use."
+    },
+    "calendar.kurban_bayram_next": {
+      "value": "16-19 May 2027, preceded by a half-day from 13:00 on 15 May",
+      "status": "verify_recommended",
+      "source_url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=2429&MevzuatTur=1&MevzuatTertip=5",
+      "notes": "NEXT occurrence. Law 2429: arife from 13:00 + 4 full days. THIS IS THE COLLISION FACT — mid-May sits inside the Apr-Oct window the site recommends. Split for inline use."
+    }
+  }
+}

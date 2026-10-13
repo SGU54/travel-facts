@@ -1,0 +1,1377 @@
+{
+  "_README": "BLANK TEMPLATE v3 — the contract every AI fills for ONE PROJECT (destination + audience, e.g. romeforamericans). Do NOT change field NAMES or STRUCTURE; fill VALUES only. Keep every key (use null if you can't fill it). Frame everything for the audience in _meta (their passports for visa rules, their hubs for flights, their currency for money). TWO data types, reconciled differently: (1) FACTS — objective checkable values. (2) RECOMMENDATIONS — judgments with no single right answer. STATUS MODEL (set 'status' honestly per fact): 'verified' = confirmed against an OFFICIAL source (put the URL in source_url); 'agreed_stable' = a stable fact you're confident on but didn't open a source for (capital, currency code, emergency numbers); 'verify_recommended' = change-prone or high-stakes (visa rules/fees, advisories, entry rules) — flag it; 'serve_live' = volatile, must NOT be stored as a fact (exchange rate, flight prices). For RECOMMENDATIONS use rank 'core' (your strong picks) — no status needed. Return ONLY valid JSON in EXACTLY this structure. Fill EVERY section — do not skip any.",
+  "_meta": {
+    "schema_version": 3,
+    "project": "greeceforamericans",
+    "country": "Greece",
+    "country_iso": "GR",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": ["JFK", "EWR", "ORD", "ATL", "IAD", "BOS", "LAX", "PHL"],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "express costs in home_currency with local equivalents"
+    },
+    "ai_source": "deepseek",
+    "produced_at": "2026-06-18"
+  },
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status (verified|agreed_stable|verify_recommended|serve_live), notes }. For 'verified' the source_url MUST be the official page you checked. Never invent a source.",
+  "identity": {
+    "name_local": {
+      "value": "Ελλάδα",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "capital": {
+      "value": "Athens",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "official_languages": {
+      "value": ["Greek"],
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_code": {
+      "value": "EUR",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_name": {
+      "value": "Euro",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "timezones": {
+      "value": ["UTC+2 (EET)", "UTC+3 (EEST daylight)"],
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "calling_code": {
+      "value": "+30",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "power_plug_voltage": {
+      "value": "230V / 50Hz, Type C and F plugs",
+      "source_url": null,
+      "status": "agreed_stable"
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL + change-prone. Try to set 'verified' against the official consular/eVisa site; otherwise 'verify_recommended'.",
+      "by_nationality": [
+        {
+          "passport": "American",
+          "type": {
+            "value": "visa_free",
+            "source_url": "https://www.mfa.gr/en/visas/visas-for-foreigners-traveling-to-greece/",
+            "status": "verify_recommended",
+            "notes": "US citizens do not need a visa for stays up to 90 days in any 180-day period under Schengen rules."
+          },
+          "max_stay_days": {
+            "value": 90,
+            "source_url": "https://www.mfa.gr/en/visas/visas-for-foreigners-traveling-to-greece/",
+            "status": "verify_recommended",
+            "notes": "90 days within any 180-day period."
+          },
+          "fee": {
+            "value": 0,
+            "source_url": null,
+            "status": "verify_recommended",
+            "notes": "No visa fee for visa-free entry."
+          },
+          "processing_time": {
+            "value": null,
+            "source_url": null,
+            "status": "verify_recommended",
+            "notes": "Not applicable for visa-free entry."
+          },
+          "online_authorization_required": {
+            "value": "ETIAS expected Q4 2026",
+            "source_url": "https://travel-europe.europa.eu/etias_en",
+            "status": "verify_recommended",
+            "notes": "ETIAS is not yet required; expected to launch in the last quarter of 2026. Once active, US citizens will need to obtain ETIAS authorization before travel."
+          },
+          "official_application_url": {
+            "value": "https://travel-europe.europa.eu/etias_en",
+            "source_url": null
+          }
+        }
+      ],
+      "scam_sites_to_avoid": {
+        "value": ["Any site charging a fee for ETIAS before it is officially launched", "Third-party visa services that are not the official EU or Greek consular sites"],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "At least three months beyond intended departure date from the Schengen Area, and issued within the last 10 years.",
+        "source_url": "https://www.mfa.gr/en/visas/visas-for-foreigners-traveling-to-greece/",
+        "status": "verify_recommended"
+      },
+      "onward_ticket_required": {
+        "value": "Not officially required for US citizens, but airlines may ask for proof of onward/return travel.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "notes": {
+        "value": "Ensure passport has at least two blank pages for entry stamps. ETIAS will become mandatory once implemented."
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "EUR",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "approx_rate_note": {
+        "value": "As of mid-June 2026, approximately 1 EUR = 1.16 USD (USD 1 ≈ €0.86).",
+        "source_url": "https://www.businessnews.gr",
+        "status": "serve_live",
+        "notes": "VOLATILE — never freeze; serve live. Check current rate before publishing."
+      },
+      "cash_vs_card": {
+        "value": "Cards widely accepted in cities and tourist areas, but cash is still preferred in smaller islands, tavernas, and for taxis. Always carry some euros.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "atm_availability": {
+        "value": "ATMs widely available in cities, towns, and tourist hubs. Some islands have limited ATMs; get cash in advance.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "currency_import_export_limit": {
+        "value": "Declare amounts over €10,000 (or equivalent) when entering or leaving the EU.",
+        "source_url": null,
+        "status": "verify_recommended"
+      },
+      "tipping_norm": {
+        "value": "Not mandatory; 5–10% rounding up is appreciated for good service in restaurants. Check if service charge is already included.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": ["Athens International Airport 'Eleftherios Venizelos' (ATH)", "Thessaloniki Airport 'Makedonia' (SKG)"],
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "Athens is the primary gateway for US flights."
+      },
+      "national_carrier": {
+        "value": "Aegean Airlines",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "flight_from_audience_origins": {
+        "value": [
+          "JFK → ATH: Nonstop, ~9–10 hours, served by Delta, American, Norse Atlantic, Emirates.",
+          "EWR → ATH: Nonstop, ~9–10 hours, served by United, Norse Atlantic.",
+          "ORD → ATH: Nonstop, ~10–11 hours, served by American, United (seasonal).",
+          "ATL → ATH: Nonstop, ~10–11 hours, served by Delta (seasonal).",
+          "IAD → ATH: Nonstop, ~9.5–10.5 hours, served by United (seasonal).",
+          "BOS → ATH: Nonstop, ~9–10 hours, served by Delta, American (seasonal).",
+          "LAX → ATH: Nonstop, ~12–13 hours, served by Aegean (seasonal).",
+          "PHL → ATH: Nonstop, ~9.5–10.5 hours, served by American (seasonal)."
+        ],
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "Flight durations are stable; PRICES are serve_live. Expect $900–$1,400+ round-trip in peak summer."
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "Limited; main line connects Athens to Thessaloniki and other northern cities. Not a primary option for island travel.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "buses": {
+        "value": "KTEL bus network covers mainland and some regional routes; reliable and affordable.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "domestic_flights": {
+        "value": "Available from Athens to many islands (Santorini, Mykonos, Crete, Rhodes, etc.) and Thessaloniki. Operated by Aegean, Olympic Air, Sky Express.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "ride_sharing": {
+        "value": "Limited; Uber operates in Athens (Uber Taxi and Uber X with licensed taxis), but not widely available on islands.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "car_rental_and_driving": {
+        "value": "Drive on the right. Americans need a valid US driver's license AND an International Driving Permit (IDP) to rent and drive legally. The IDP translates your license and is required by Greek law for non-EU drivers. Legal blood alcohol limit is 0.05%.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "driving side, license/IDP, BAC limit"
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Mediterranean: hot, dry summers (June–August); mild, wet winters (December–February); spring and fall are pleasant with moderate temperatures.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "best_months": {
+        "value": ["May", "June", "September", "October"],
+        "rank": "core",
+        "notes": "RECOMMENDATION: Shoulder seasons offer good weather, fewer crowds, and lower prices than peak July–August."
+      },
+      "avoid_periods": {
+        "value": ["Mid-July to mid-August", "August 15 (Assumption of Mary - major holiday, ferries and accommodations book up)"],
+        "rank": "core",
+        "notes": "RECOMMENDATION + dated festivals (verify dates yearly). Peak summer is hot, crowded, and expensive."
+      }
+    },
+    "safety_health": {
+      "_note": "YMYL. Advisory level is change-prone → verify_recommended. Stable items (emergency numbers) → agreed_stable.",
+      "advisory_level": {
+        "value": "Level 1: Exercise Normal Precautions (as of October 2025 advisory, per State Department).",
+        "source_url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/greece-travel-advisory.html",
+        "status": "verify_recommended",
+        "notes": "e.g. US State Dept level + date. Check for updates before travel."
+      },
+      "main_risk": {
+        "value": "Petty theft and pickpocketing in crowded tourist areas, especially Athens and islands. Scams targeting tourists.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "vaccines": {
+        "value": "No special vaccines required; routine vaccines (MMR, DPT, etc.) should be up to date.",
+        "source_url": null,
+        "status": "verify_recommended"
+      },
+      "tap_water_safe": {
+        "value": "Generally safe in cities and tourist centers; some islands use desalinated water which is safe but may taste different. Bottled water is widely available.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "emergency_numbers": {
+        "value": {
+          "police": "100",
+          "ambulance": "166",
+          "fire": "199"
+        },
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "common_scams": {
+        "value": [
+          "Overpriced taxi rides (insist on meter or agree on fare beforehand)",
+          "Fake ticket sellers at tourist sites",
+          "Restaurant menu scams (check prices before ordering)",
+          "Street vendors offering 'free' gifts then demanding payment",
+          "Distraction theft (someone spills something on you, etc.)",
+          "Fake booking/hijacking scams (verify reservations directly with hotels)"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": "eSIMs available from providers like Airalo, Holafly; local SIMs from Cosmote, Vodafone, and Wind with tourist plans (e.g., €13–€15 for data + calls).",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "coverage": {
+        "value": "Good 4G/5G coverage in cities and tourist areas; may be spotty on remote islands and mountainous regions.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "costs": {
+      "_note": "RECOMMENDATION-ish ranges; approximate + dated.",
+      "daily_budget_low": {
+        "value": "$80–$120 USD per person (hostel/hotel budget, street food, public transport, some sightseeing)",
+        "status": "serve_live"
+      },
+      "daily_budget_mid": {
+        "value": "$150–$250 USD per person (3-star hotel, taverna meals, ferry tickets, car rental share, museum entries)",
+        "status": "serve_live"
+      },
+      "daily_budget_high": {
+        "value": "$300–$600+ USD per person (luxury hotels, fine dining, private transfers, exclusive tours)",
+        "status": "serve_live"
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "Casual and modest clothing is acceptable. For churches and monasteries, cover shoulders and knees. Beachwear is for beaches only.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "dos_and_donts": [
+        {
+          "do": "Greet with a friendly 'Yassas' (hello) and 'Efharisto' (thank you)."
+        },
+        {
+          "do": "Nodding your head up and down means 'yes'; tilting your head slightly back and up means 'no' (or a subtle upward nod)."
+        },
+        {
+          "do": "Enjoy long, relaxed meals; taverna dining is a social experience."
+        },
+        {
+          "dont": "Don't rush service or ask for the bill immediately; it's considered rude."
+        },
+        {
+          "dont": "Don't point with your index finger at someone; use your whole hand."
+        },
+        {
+          "dont": "Don't litter; fines are enforced."
+        }
+      ],
+      "source_url": null,
+      "status": "agreed_stable"
+    }
+  },
+  "cities": [
+    {
+      "name": "Athens",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly into Athens International Airport (ATH) from US hubs. Then take Metro (Line 3), suburban rail, bus (X95), or taxi into the city. For islands, take ferry from Piraeus port (Metro Line 1) or fly domestically.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Metro (Lines 1, 2, 3), buses, trams, and taxis. Metro is efficient for major sights. Buy tickets at stations or via the 'Ath.ena' app.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Athens International Airport 'Eleftherios Venizelos' (ATH)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Acropolis & Parthenon",
+              "why": "The iconic ancient citadel; the defining sight of Athens."
+            },
+            {
+              "name": "Acropolis Museum",
+              "why": "Modern museum housing the Acropolis artifacts; excellent views of the site."
+            },
+            {
+              "name": "Ancient Agora",
+              "why": "The heart of ancient Athenian public life; includes the Temple of Hephaestus."
+            },
+            {
+              "name": "Plaka",
+              "why": "Charming old neighborhood with narrow streets, neoclassical architecture, and souvenir shops."
+            },
+            {
+              "name": "Monastiraki Flea Market",
+              "why": "Lively market with antiques, crafts, and a great vibe."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Plaka",
+              "who_for": "First-timers who want to be in the heart of the historic district, close to the Acropolis."
+            },
+            {
+              "area": "Monastiraki",
+              "who_for": "Travelers who want vibrant nightlife, markets, and easy metro access."
+            },
+            {
+              "area": "Koukaki",
+              "who_for": "Locals-feel neighborhood just south of the Acropolis, with good restaurants and quieter streets."
+            },
+            {
+              "area": "Syntagma",
+              "who_for": "Central, upscale, and convenient for public transport and shopping."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Taverna in Plaka",
+              "why": "Classic Greek taverna experience with moussaka, souvlaki, and live music."
+            },
+            {
+              "name_or_type": "Street food in Monastiraki",
+              "why": "Try gyros and souvlaki from local vendors for a quick, delicious meal."
+            },
+            {
+              "name_or_type": "Modern Greek in Koukaki",
+              "why": "Innovative takes on Greek classics in a trendy setting."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Delphi",
+              "why": "UNESCO site with the Temple of Apollo and ancient oracle; ~2.5 hours drive.",
+              "rough_time": "Full day"
+            },
+            {
+              "place": "Cape Sounion",
+              "why": "Temple of Poseidon with stunning sunset views over the Aegean; ~1.5 hours drive.",
+              "rough_time": "Half day to full day"
+            },
+            {
+              "place": "Hydra or Aegina",
+              "why": "Close islands reachable by ferry from Piraeus; car-free Hydra is especially charming.",
+              "rough_time": "Full day"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    },
+    {
+      "name": "Santorini",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Ferry from Piraeus (5–8 hours) or Rafina (4–5 hours); high-speed ferries available. Also domestic flights from Athens (45–50 minutes).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Buses connect Fira to Oia, beaches, and the port. Taxis and ATVs/cars are available; roads can be narrow and steep.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Santorini (Thira) National Airport (JTR)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Oia Sunset",
+              "why": "World-famous sunset views from the caldera; best viewed from the castle ruins or a clifftop bar."
+            },
+            {
+              "name": "Fira",
+              "why": "The bustling capital with caldera views, shops, and restaurants."
+            },
+            {
+              "name": "Ancient Akrotiri",
+              "why": "Minoan Bronze Age settlement preserved in volcanic ash, like a Greek Pompeii."
+            },
+            {
+              "name": "Red Beach",
+              "why": "Distinctive red volcanic sand and cliffs."
+            },
+            {
+              "name": "Wine tasting",
+              "why": "Santorini's Assyrtiko wine is world-class; visit a winery with caldera views."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Oia",
+              "who_for": "Honeymooners and luxury travelers seeking the iconic caldera views and sunset."
+            },
+            {
+              "area": "Fira",
+              "who_for": "First-timers who want central location, nightlife, and easy access to transport."
+            },
+            {
+              "area": "Imerovigli",
+              "who_for": "Quieter alternative to Oia and Fira, with stunning caldera views and a more relaxed vibe."
+            },
+            {
+              "area": "Kamari or Perissa",
+              "who_for": "Beach lovers on a budget; black sand beaches and more affordable accommodations."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Cliffside restaurant in Oia or Fira",
+              "why": "Dine with a caldera view; seafood and Greek classics."
+            },
+            {
+              "name_or_type": "Taverna in Pyrgos",
+              "why": "Traditional village setting, away from the crowds, with excellent local dishes."
+            },
+            {
+              "name_or_type": "Wine bar",
+              "why": "Sample Assyrtiko and other local wines with small plates."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Nea Kameni (volcano)",
+              "why": "Boat trip to the active volcanic island; hike to the crater.",
+              "rough_time": "Half day"
+            },
+            {
+              "place": "Thirasia",
+              "why": "Smaller, quieter island across the caldera; a step back in time.",
+              "rough_time": "Half day"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    },
+    {
+      "name": "Mykonos",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Ferry from Piraeus (2.5–5 hours) or Rafina; high-speed options. Domestic flights from Athens (40 minutes).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Buses connect the town to beaches. ATVs, scooters, and cars are popular; roads are narrow. Water taxis serve some beaches.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Mykonos Island National Airport (JMK)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Mykonos Town (Chora)",
+              "why": "Whitewashed alleys, boutique shops, windmills, and the iconic Little Venice."
+            },
+            {
+              "name": "Windmills of Kato Mili",
+              "why": "Landmark windmills overlooking the town; great photo spot."
+            },
+            {
+              "name": "Paradise Beach",
+              "why": "Famous party beach with beach bars and music."
+            },
+            {
+              "name": "Super Paradise Beach",
+              "why": "Similar to Paradise but slightly more upscale and LGBTQ+ friendly."
+            },
+            {
+              "name": "Delos",
+              "why": "UNESCO archaeological island, birthplace of Apollo; reachable by boat."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Mykonos Town",
+              "who_for": "Those who want nightlife, dining, and shopping at their doorstep."
+            },
+            {
+              "area": "Ornos",
+              "who_for": "Beach proximity with a more family-friendly vibe and good restaurants."
+            },
+            {
+              "area": "Psarou",
+              "who_for": "Upscale beach area with luxury hotels and beach clubs."
+            },
+            {
+              "area": "Platys Gialos",
+              "who_for": "Good for families and beach lovers, with a sandy beach and water sports."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Seafood taverna in Little Venice",
+              "why": "Fresh seafood with views of the sea and windmills."
+            },
+            {
+              "name_or_type": "Beach club restaurant",
+              "why": "Trendy spots with Mediterranean cuisine and a lively atmosphere."
+            },
+            {
+              "name_or_type": "Traditional bakery",
+              "why": "Try local pastries like amygdalota (almond cookies)."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Delos",
+              "why": "Ancient archaeological site, a short boat ride away.",
+              "rough_time": "Half day"
+            },
+            {
+              "place": "Rhenia",
+              "why": "Uninhabited island with pristine beaches, often included in boat tours.",
+              "rough_time": "Half day"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    },
+    {
+      "name": "Crete",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Ferry from Piraeus (8–9 hours to Heraklion, overnight options); domestic flights from Athens (50 minutes) to Heraklion (HER) or Chania (CHQ).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Buses connect major cities and sights. Renting a car is highly recommended to explore the island's diverse regions.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Heraklion International Airport 'Nikos Kazantzakis' (HER), Chania International Airport 'Ioannis Daskalogiannis' (CHQ)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Palace of Knossos",
+              "why": "Minoan palace complex, the heart of the ancient civilization."
+            },
+            {
+              "name": "Old Town of Chania",
+              "why": "Venetian harbor, narrow streets, and Ottoman architecture."
+            },
+            {
+              "name": "Samaria Gorge",
+              "why": "Stunning hike through Europe's longest gorge (16 km), ending at the Libyan Sea."
+            },
+            {
+              "name": "Elafonisi Beach",
+              "why": "Pink sand beach, one of the most beautiful in Greece."
+            },
+            {
+              "name": "Rethymnon Old Town",
+              "why": "Well-preserved Venetian and Ottoman buildings, with a fortress."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Heraklion",
+              "who_for": "Base for exploring Knossos and eastern Crete; good transport hub."
+            },
+            {
+              "area": "Chania",
+              "who_for": "Most picturesque town; great for nightlife, dining, and western Crete beaches."
+            },
+            {
+              "area": "Rethymnon",
+              "who_for": "Smaller, charming town with a mix of Venetian and Ottoman history; good middle ground."
+            },
+            {
+              "area": "Agios Nikolaos",
+              "who_for": "Eastern Crete, known for its lake and relaxed vibe."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Taverna in Chania's Old Town",
+              "why": "Fresh seafood and Cretan specialties like dakos and snails."
+            },
+            {
+              "name_or_type": "Mountain village taverna",
+              "why": "Experience authentic Cretan hospitality and local produce."
+            },
+            {
+              "name_or_type": "Heraklion market",
+              "why": "Try local cheeses, olives, and pastries."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Spinalonga Island",
+              "why": "Former leper colony with a fascinating history, near Elounda.",
+              "rough_time": "Half day"
+            },
+            {
+              "place": "Matala Beach",
+              "why": "Hippie hangout with caves; south coast.",
+              "rough_time": "Full day"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    },
+    {
+      "name": "Naxos",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Ferry from Piraeus (4–6 hours) or from other Cyclades islands; high-speed options. Domestic flights from Athens (40 minutes).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Buses connect the port town to beaches and mountain villages. Car or ATV rental is recommended for exploring.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Naxos Island National Airport (JNX)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Portara (Temple of Apollo)",
+              "why": "Iconic marble gate at the harbor; great sunset spot."
+            },
+            {
+              "name": "Naxos Old Town (Kastro)",
+              "why": "Venetian castle and winding alleys with shops and cafes."
+            },
+            {
+              "name": "Agios Prokopios Beach",
+              "why": "One of Greece's best beaches with golden sand and crystal water."
+            },
+            {
+              "name": "Mountain villages (e.g., Halki, Filoti)",
+              "why": "Traditional villages with citrus groves, olive presses, and local life."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Naxos Town (Chora)",
+              "who_for": "Convenient for ferry access, dining, and shopping."
+            },
+            {
+              "area": "Agios Prokopios / Agia Anna",
+              "who_for": "Beach lovers who want to be steps from the sand."
+            },
+            {
+              "area": "Mountain villages",
+              "who_for": "For a quiet, authentic experience away from the coast."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Port taverna",
+              "why": "Fresh seafood with views of the harbor and Portara."
+            },
+            {
+              "name_or_type": "Mountain village restaurant",
+              "why": "Try local specialties like kitron (citrus liqueur) and roasted meats."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Small Cyclades (Koufonisia, Donousa)",
+              "why": "A short ferry to pristine, lesser-known islands with incredible beaches.",
+              "rough_time": "Full day"
+            },
+            {
+              "place": "Mount Zas",
+              "why": "Hike to the highest peak in the Cyclades; panoramic views.",
+              "rough_time": "Half day"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    },
+    {
+      "name": "Paros",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Ferry from Piraeus (3–5 hours) or from other Cyclades; high-speed options. Domestic flights from Athens (40 minutes).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Buses connect Parikia to Naoussa and beaches. Car/ATV rental is popular.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Paros National Airport (PAS)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Parikia (Old Town)",
+              "why": "Whitewashed alleys, the Church of 100 Doors (Panagia Ekatontapiliani), and a Venetian castle."
+            },
+            {
+              "name": "Naoussa",
+              "why": "Picturesque fishing village with a vibrant nightlife and waterfront dining."
+            },
+            {
+              "name": "Kolymbithres Beach",
+              "why": "Unique granite rock formations and clear turquoise water."
+            },
+            {
+              "name": "Lefkes",
+              "why": "Charming mountain village with cobblestone streets and great views."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Parikia",
+              "who_for": "First-timers; ferry access, historical sites, and good restaurants."
+            },
+            {
+              "area": "Naoussa",
+              "who_for": "Those seeking nightlife, boutique hotels, and a more cosmopolitan vibe."
+            },
+            {
+              "area": "Golden Beach (Chryssi Akti)",
+              "who_for": "Wind- and kite-surfers; laid-back beach atmosphere."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Waterfront taverna in Naoussa",
+              "why": "Fresh seafood and romantic sunset views."
+            },
+            {
+              "name_or_type": "Traditional bakery in Parikia",
+              "why": "Try local pastries and bread."
+            }
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Antiparos",
+              "why": "Small island just a 5-minute ferry from Paros; known for its cave and laid-back vibe.",
+              "rough_time": "Half day to full day"
+            }
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "The Perfect 10-Day Greece Itinerary for First-Timers",
+      "days": "10",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Athens, settle in.",
+            "afternoon": "Explore Plaka and Monastiraki.",
+            "evening": "Dinner with Acropolis view."
+          },
+          {
+            "day": 2,
+            "morning": "Acropolis & Parthenon.",
+            "afternoon": "Acropolis Museum.",
+            "evening": "Ancient Agora and sunset from Areopagus Hill."
+          },
+          {
+            "day": 3,
+            "morning": "Day trip to Delphi or Cape Sounion.",
+            "afternoon": "Return to Athens.",
+            "evening": "Dinner in Koukaki."
+          },
+          {
+            "day": 4,
+            "morning": "Ferry to Santorini (early morning).",
+            "afternoon": "Check in, explore Fira.",
+            "evening": "Sunset in Oia."
+          },
+          {
+            "day": 5,
+            "morning": "Ancient Akrotiri.",
+            "afternoon": "Red Beach and wine tasting.",
+            "evening": "Dinner with caldera view."
+          },
+          {
+            "day": 6,
+            "morning": "Boat tour to Nea Kameni and hot springs.",
+            "afternoon": "Relax in Oia or Fira.",
+            "evening": "Sunset from Oia castle."
+          },
+          {
+            "day": 7,
+            "morning": "Ferry to Mykonos.",
+            "afternoon": "Explore Mykonos Town (windmills, Little Venice).",
+            "evening": "Dinner in Little Venice."
+          },
+          {
+            "day": 8,
+            "morning": "Day trip to Delos.",
+            "afternoon": "Beach time at Paradise or Super Paradise.",
+            "evening": "Mykonos nightlife."
+          },
+          {
+            "day": 9,
+            "morning": "Relax or explore more beaches.",
+            "afternoon": "Ferry back to Athens.",
+            "evening": "Last dinner in Plaka."
+          },
+          {
+            "day": 10,
+            "morning": "Last-minute shopping or sightseeing.",
+            "afternoon": "Transfer to airport.",
+            "evening": "Departure flight."
+          }
+        ],
+        "notes": "RECOMMENDATION"
+      },
+      "assumptions": {
+        "value": "Assumes flying into and out of Athens (ATH). Uses ferries for island hops. Peak season crowds and heat; shoulder season recommended."
+      }
+    },
+    {
+      "title": "7 Days in Greece: Athens and Two Islands",
+      "days": "7",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Athens.",
+            "afternoon": "Plaka and Acropolis Museum.",
+            "evening": "Dinner in Monastiraki."
+          },
+          {
+            "day": 2,
+            "morning": "Acropolis & Parthenon.",
+            "afternoon": "Ancient Agora.",
+            "evening": "Syntagma and Ermou Street."
+          },
+          {
+            "day": 3,
+            "morning": "Ferry to Santorini.",
+            "afternoon": "Fira and caldera walk.",
+            "evening": "Sunset in Oia."
+          },
+          {
+            "day": 4,
+            "morning": "Ancient Akrotiri.",
+            "afternoon": "Beach or wine tasting.",
+            "evening": "Cliffside dinner."
+          },
+          {
+            "day": 5,
+            "morning": "Ferry to Mykonos.",
+            "afternoon": "Mykonos Town.",
+            "evening": "Little Venice."
+          },
+          {
+            "day": 6,
+            "morning": "Delos day trip.",
+            "afternoon": "Beach time.",
+            "evening": "Nightlife."
+          },
+          {
+            "day": 7,
+            "morning": "Fly or ferry back to Athens.",
+            "afternoon": "Transfer to airport.",
+            "evening": "Depart."
+          }
+        ],
+        "notes": "RECOMMENDATION"
+      },
+      "assumptions": {
+        "value": "Fast-paced but covers Athens, Santorini, and Mykonos. Best for first-timers with limited time."
+      }
+    },
+    {
+      "title": "14 Days in Greece: The Unhurried First Trip",
+      "days": "14",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Athens.",
+            "afternoon": "Plaka and Monastiraki.",
+            "evening": "Welcome dinner."
+          },
+          {
+            "day": 2,
+            "morning": "Acropolis & Parthenon.",
+            "afternoon": "Acropolis Museum.",
+            "evening": "Ancient Agora."
+          },
+          {
+            "day": 3,
+            "morning": "Day trip to Delphi.",
+            "afternoon": "Return to Athens.",
+            "evening": "Koukaki dining."
+          },
+          {
+            "day": 4,
+            "morning": "National Archaeological Museum or more ancient sites.",
+            "afternoon": "Relax in a cafe.",
+            "evening": "Plaka stroll."
+          },
+          {
+            "day": 5,
+            "morning": "Ferry to Naxos.",
+            "afternoon": "Explore Naxos Town and Portara.",
+            "evening": "Seafood dinner."
+          },
+          {
+            "day": 6,
+            "morning": "Agios Prokopios Beach.",
+            "afternoon": "Mountain village tour (Halki).",
+            "evening": "Local taverna."
+          },
+          {
+            "day": 7,
+            "morning": "Ferry to Paros.",
+            "afternoon": "Parikia Old Town.",
+            "evening": "Naoussa dinner."
+          },
+          {
+            "day": 8,
+            "morning": "Kolymbithres Beach.",
+            "afternoon": "Lefkes village.",
+            "evening": "Naoussa nightlife."
+          },
+          {
+            "day": 9,
+            "morning": "Ferry to Santorini.",
+            "afternoon": "Fira and caldera.",
+            "evening": "Sunset in Oia."
+          },
+          {
+            "day": 10,
+            "morning": "Ancient Akrotiri.",
+            "afternoon": "Wine tasting.",
+            "evening": "Cliffside dinner."
+          },
+          {
+            "day": 11,
+            "morning": "Boat tour to volcano.",
+            "afternoon": "Relax in Oia.",
+            "evening": "Sunset from castle."
+          },
+          {
+            "day": 12,
+            "morning": "Ferry to Mykonos.",
+            "afternoon": "Mykonos Town.",
+            "evening": "Little Venice."
+          },
+          {
+            "day": 13,
+            "morning": "Delos day trip.",
+            "afternoon": "Beach time.",
+            "evening": "Farewell dinner."
+          },
+          {
+            "day": 14,
+            "morning": "Fly or ferry back to Athens.",
+            "afternoon": "Transfer to airport.",
+            "evening": "Depart."
+          }
+        ],
+        "notes": "RECOMMENDATION"
+      },
+      "assumptions": {
+        "value": "More relaxed pace, includes Naxos and Paros in addition to Santorini and Mykonos. Ideal for those wanting a deeper experience."
+      }
+    },
+    {
+      "title": "5 Days in Greece: A Short First Trip That Works",
+      "days": "5",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Athens.",
+            "afternoon": "Acropolis & Parthenon.",
+            "evening": "Plaka dinner."
+          },
+          {
+            "day": 2,
+            "morning": "Acropolis Museum.",
+            "afternoon": "Ancient Agora.",
+            "evening": "Monastiraki."
+          },
+          {
+            "day": 3,
+            "morning": "Fly to Santorini.",
+            "afternoon": "Fira and Oia.",
+            "evening": "Sunset in Oia."
+          },
+          {
+            "day": 4,
+            "morning": "Ancient Akrotiri.",
+            "afternoon": "Beach or wine tasting.",
+            "evening": "Cliffside dinner."
+          },
+          {
+            "day": 5,
+            "morning": "Fly back to Athens.",
+            "afternoon": "Transfer to airport.",
+            "evening": "Depart."
+          }
+        ],
+        "notes": "RECOMMENDATION"
+      },
+      "assumptions": {
+        "value": "Very short but hits the highlights: Athens and Santorini. Use flights to save time."
+      }
+    },
+    {
+      "title": "Athens and Santorini in One Week",
+      "days": "7",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Athens.",
+            "afternoon": "Plaka and Acropolis Museum.",
+            "evening": "Dinner with view."
+          },
+          {
+            "day": 2,
+            "morning": "Acropolis & Parthenon.",
+            "afternoon": "Ancient Agora.",
+            "evening": "Monastiraki."
+          },
+          {
+            "day": 3,
+            "morning": "Day trip to Cape Sounion.",
+            "afternoon": "Return to Athens.",
+            "evening": "Koukaki."
+          },
+          {
+            "day": 4,
+            "morning": "Fly to Santorini.",
+            "afternoon": "Fira and Oia.",
+            "evening": "Sunset in Oia."
+          },
+          {
+            "day": 5,
+            "morning": "Ancient Akrotiri.",
+            "afternoon": "Red Beach and wine.",
+            "evening": "Cliffside dinner."
+          },
+          {
+            "day": 6,
+            "morning": "Boat tour to volcano.",
+            "afternoon": "Relax in Oia.",
+            "evening": "Sunset from castle."
+          },
+          {
+            "day": 7,
+            "morning": "Fly back to Athens.",
+            "afternoon": "Transfer to airport.",
+            "evening": "Depart."
+          }
+        ],
+        "notes": "RECOMMENDATION"
+      },
+      "assumptions": {
+        "value": "Focuses solely on Athens and Santorini; a classic and romantic combo."
+      }
+    },
+    {
+      "title": "The Classic Cyclades Island-Hopping Itinerary",
+      "days": "10",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Athens.",
+            "afternoon": "Acropolis & Parthenon.",
+            "evening": "Plaka."
+          },
+          {
+            "day": 2,
+            "morning": "Acropolis Museum.",
+            "afternoon": "Ferry to Mykonos.",
+            "evening": "Mykonos Town."
+          },
+          {
+            "day": 3,
+            "morning": "Delos day trip.",
+            "afternoon": "Beach time.",
+            "evening": "Little Venice."
+          },
+          {
+            "day": 4,
+            "morning": "Ferry to Naxos.",
+            "afternoon": "Naxos Town and Portara.",
+            "evening": "Seafood dinner."
+          },
+          {
+            "day": 5,
+            "morning": "Agios Prokopios Beach.",
+            "afternoon": "Mountain village tour.",
+            "evening": "Local taverna."
+          },
+          {
+            "day": 6,
+            "morning": "Ferry to Paros.",
+            "afternoon": "Parikia Old Town.",
+            "evening": "Naoussa."
+          },
+          {
+            "day": 7,
+            "morning": "Kolymbithres Beach.",
+            "afternoon": "Lefkes village.",
+            "evening": "Naoussa nightlife."
+          },
+          {
+            "day": 8,
+            "morning": "Ferry to Santorini.",
+            "afternoon": "Fira and Oia.",
+            "evening": "Sunset in Oia."
+          },
+          {
+            "day": 9,
+            "morning": "Ancient Akrotiri.",
+            "afternoon": "Wine tasting.",
+            "evening": "Cliffside dinner."
+          },
+          {
+            "day": 10,
+            "morning": "Fly or ferry back to Athens.",
+            "afternoon": "Transfer to airport.",
+            "evening": "Depart."
+          }
+        ],
+        "notes": "RECOMMENDATION"
+      },
+      "assumptions": {
+        "value": "The classic route: Athens → Mykonos → Naxos → Paros → Santorini → Athens. Covers the most popular Cyclades islands."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "value": [
+        {
+          "name": "Acropolis and Parthenon",
+          "where": "Athens",
+          "why": "The iconic symbol of ancient Greece; a must-see for any first-timer."
+        },
+        {
+          "name": "Santorini Caldera",
+          "where": "Santorini",
+          "why": "World-famous sunset views and dramatic volcanic landscape."
+        },
+        {
+          "name": "Delos",
+          "where": "Mykonos",
+          "why": "UNESCO archaeological island, the mythical birthplace of Apollo."
+        },
+        {
+          "name": "Palace of Knossos",
+          "where": "Crete",
+          "why": "The heart of the Minoan civilization; Europe's oldest city."
+        },
+        {
+          "name": "Meteora",
+          "where": "Mainland (near Kalambaka)",
+          "why": "Monasteries perched on towering rock pillars; a breathtaking spiritual site."
+        }
+      ],
+      "rank": "core",
+      "notes": "[{name, where, why}]"
+    }
+  },
+  "_open_questions": {
+    "_note": "Anything genuinely unsure / conflicting / that needs a real source. Be honest — this is more useful than false confidence.",
+    "value": [
+      "ETIAS launch date is officially 'last quarter of 2026' but has been delayed before; monitor official EU sources.",
+      "US State Department advisory level for Greece can change; verify before publishing.",
+      "Exact ferry schedules and prices vary by season and operator; serve live.",
+      "Specific opening hours and ticket prices for archaeological sites change seasonally; verify closer to travel."
+    ]
+  }
+}

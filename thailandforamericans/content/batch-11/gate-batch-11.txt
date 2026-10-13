@@ -1,0 +1,421 @@
+You are a fact-and-consistency checker for travel articles. Below are articles plus the facts file they were written from. Find ONLY IN-CONTEXT ERRORS: a claim stated two different ways; a recommendation contradicting the facts file; an out-of-scope place; an internal contradiction; a claim factually wrong for Thailand.
+RULES: (1) Do NOT flag serve_live items (exchange rates, prices, visa day-count) for being hedged — that is correct. (2) Flight DURATIONS and stable facts are fine. (3) Only genuine errors; if an article is clean, say "clean". (4) Short list per slug.
+
+=== FACTS FILE ===
+{
+ "_README": "RECONCILED facts.json for thailandforamericans — the ONLY facts file content stages read. Built from 3 AI sources (claude+gemini+deepseek) reconciled semantically per hard rule 2. serve_live fields never frozen. verify_recommended = YMYL/change-prone, confirm against official source before publishing prose. Recommendation pools: 'core' = named by >=2 sources.",
+ "_meta": {
+  "schema_version": 3,
+  "project": "thailandforamericans",
+  "country": "Thailand",
+  "country_iso": "TH",
+  "audience": {
+   "nationality": "American",
+   "home_hubs": [
+    "JFK",
+    "LAX",
+    "SFO",
+    "ORD",
+    "SEA"
+   ],
+   "home_currency": "USD"
+  },
+  "locale": {
+   "site_language": "en-US",
+   "units": "imperial",
+   "money_framing": "USD with THB equivalents"
+  },
+  "reconciled_from": [
+   "claude",
+   "gemini",
+   "deepseek"
+  ],
+  "produced_at": "2026-06-28"
+ },
+ "_fact_field_shape": "{ value, source_url, status, notes }. serve_live values are null by design.",
+ "identity": {
+  "name_local": {
+   "value": "Prathet Thai (ประเทศไทย); official: Kingdom of Thailand (Ratcha-anachak Thai)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "capital": {
+   "value": "Bangkok (Krung Thep Maha Nakhon)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "official_languages": {
+   "value": [
+    "Thai"
+   ],
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_code": {
+   "value": "THB",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "currency_name": {
+   "value": "Thai baht (฿)",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "timezones": {
+   "value": [
+    "ICT (UTC+7)"
+   ],
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "No daylight saving; ~11–12h ahead of US Eastern depending on US DST."
+  },
+  "calling_code": {
+   "value": "+66",
+   "source_url": null,
+   "status": "agreed_stable"
+  },
+  "power_plug_voltage": {
+   "value": "220V, 50Hz; plug types A/B/C (US flat 2-prong Type A/B fits common sockets; bring an adapter for round-pin/grounded plugs and a converter for non-dual-voltage devices)",
+   "source_url": null,
+   "status": "agreed_stable",
+   "notes": "All 3 sources agree 220–230V/50Hz; 220V is the nominal Thai figure."
+  }
+ },
+ "country_facts": {
+  "visa": {
+   "_note": "YMYL + actively changing in 2026. NEVER freeze the day-count in prose.",
+   "by_nationality": [
+    {
+     "passport": "United States",
+     "type": {
+      "value": "visa_free (visa exemption for tourism)",
+      "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+      "status": "verify_recommended",
+      "notes": "Americans are on the visa-exemption list — no visa for short tourism."
+     },
+     "max_stay_days": {
+      "value": null,
+      "source_url": "https://www.thaievisa.go.th/",
+      "status": "serve_live",
+      "notes": "IN FLUX: 60 days at the border currently; Cabinet approved (19 May 2026) reverting most nationalities incl. US to 30 days, NOT yet in force pending Royal Gazette publication. Officers apply the rule in force on the entry date. Serve live / tell readers to verify on their travel date — do NOT freeze a number."
+     },
+     "fee": {
+      "value": "No fee for visa-exempt entry",
+      "source_url": null,
+      "status": "agreed_stable"
+     },
+     "online_authorization_required": {
+      "value": "Yes — Thailand Digital Arrival Card (TDAC), mandatory for all foreign arrivals (air/land/sea), filed online within 72h before arrival. FREE on the official portal. Separate from a visa.",
+      "source_url": "https://tdac.immigration.go.th/",
+      "status": "verify_recommended",
+      "notes": "Replaced the paper TM6. Beware third-party sites charging a fee."
+     },
+     "official_application_url": {
+      "value": "https://tdac.immigration.go.th/ (TDAC) ; https://www.thaievisa.go.th/ (e-Visa for longer/other purposes)",
+      "source_url": null,
+      "status": "agreed_stable"
+     }
+    }
+   ],
+   "extension": {
+    "value": "Visa-exempt entry can usually be extended once by 30 days at a Thai immigration office; fee commonly cited ~1,900 THB. Apply before current permission expires.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "Fee change-prone — verify, don't freeze."
+   },
+   "scam_sites_to_avoid": {
+    "value": [
+     "Any 'TDAC' site that charges a fee (the official TDAC is free)",
+     "Unofficial 'visa-run' brokers who take your passport",
+     "Fake Thailand e-Visa / arrival-card lookalike domains"
+    ],
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "documents": {
+   "passport_validity_required": {
+    "value": "At least 6 months beyond your arrival date (recommended and can be enforced).",
+    "source_url": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Thailand.html",
+    "status": "verify_recommended"
+   },
+   "onward_ticket_required": {
+    "value": "Proof of onward/return travel within the permitted stay may be requested by airlines or immigration.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "proof_of_funds": {
+    "value": "For visa exemption / tourist visa: 20,000 THB per person or 40,000 THB per family (reinstated May 2025, applies 2026). Random checks; cash or recent bank statement. (The 10,000/20,000 figure is the separate Visa-on-Arrival tier, which does NOT apply to US passports.)",
+    "source_url": "https://www.thaievisa.go.th/",
+    "status": "verify_recommended",
+    "notes": "Sporadically enforced; change-prone. ~20,000 THB ≈ USD 600."
+   },
+   "notes": {
+    "value": "Requirements can change with little notice — verify with the Thai MFA / nearest Thai embassy on your actual travel date.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "money": {
+   "currency_code": {
+    "value": "THB",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "approx_rate_note": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "VOLATILE — USD/THB moves daily. Never freeze; serve a live rate or omit a number."
+   },
+   "cash_vs_card": {
+    "value": "Cash-dominated, especially outside Bangkok and for street food, markets, tuk-tuks, small/rural vendors. Cards accepted at hotels, malls, chain/upscale restaurants and many city venues. PromptPay QR is mainly for Thai bank accounts.",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "atm_availability": {
+    "value": "ATMs ubiquitous in cities and tourist areas and accept major US networks (Visa/Mastercard). Thai ATMs add a per-withdrawal foreign-card fee (commonly ~220 THB) on top of your home bank's fee — withdraw larger amounts less often.",
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "~220 THB ATM fee change-prone — verify."
+   },
+   "currency_import_export_limit": {
+    "value": null,
+    "source_url": null,
+    "status": "verify_recommended",
+    "notes": "DISPUTED across sources (USD 15k vs USD 20k vs 450k THB). Reality roughly: no limit on incoming foreign currency but large sums (~USD 15–20k equiv) should be declared, and there are limits on exporting THB. Verify current official thresholds before writing a number — do not freeze."
+   },
+   "tipping_norm": {
+    "value": "Not obligatory and not a strong traditional custom, but appreciated and increasingly expected in tourist areas: round up taxis, ~20–50 THB for porters, leave small change at restaurants. Many upscale venues add a 10% service charge.",
+    "source_url": null,
+    "status": "agreed_stable"
+   }
+  },
+  "getting_there": {
+   "main_international_airports": {
+    "value": [
+     "Suvarnabhumi (BKK) — Bangkok main hub",
+     "Don Mueang (DMK) — Bangkok low-cost",
+     "Phuket (HKT)",
+     "Chiang Mai (CNX)",
+     "Koh Samui (USM)",
+     "Krabi (KBV)"
+    ],
+    "source_url": null,
+    "status": "agreed_stable",
+    "notes": "name + IATA"
+   },
+   "national_carrier": {
+    "value": "Thai Airways International (TG)",
+    "source_url": null,
+    "status": "agreed_stable"
+   },
+   "flight_from_audience_origins": {
+    "value": null,
+    "source_url": null,
+    "status": "serve_live",
+    "notes": "Typically 1 stop from the US via East Asia (Tokyo/Seoul/Hong Kong/Taipei) or the Middle East (Doha/Dubai); ~20–24h total from US hubs. PRICES serve_live — never freeze. Verify current nonstop/route options."
+   }
+  },
+  "getting_aro
+
+=== ARTICLES ===
+
+
+----- SLUG: thailand-trip-cost -----
+TITLE: How Much Does a Trip to Thailand Cost?
+CATEGORY: money-and-costs
+
+<p>One of Thailand's biggest draws is value: it's an affordable destination where your dollars stretch a long way, especially once you're in the country. The big-ticket item is getting there; daily costs on the ground are low by U.S. standards. Here's a realistic breakdown of what a Thailand trip costs and how to budget, with the firm caveat that prices and exchange rates move constantly — so treat these as a framework, not fixed numbers.</p>
+
+<p><strong>Important:</strong> all figures below are indicative ranges that change with season, demand, and exchange rates. Always check current prices when booking, and use a live converter for up-to-date baht-to-dollar values.</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<!-- IMAGE_SLOT_1: Thai baht banknotes and coins, or a market money exchange -->
+
+<h2>The big cost: getting there</h2>
+<p>Your <strong>international flight</strong> from the U.S. is almost always the single largest expense and the most variable — it swings widely by season, route, how far ahead you book, and your departure city. There are no nonstop flights from the U.S., so you'll connect through Asia or the Middle East. Booking well ahead and being flexible on dates makes a real difference. Compare fares across dates and routes rather than assuming a fixed figure.</p>
+
+<h2>Daily costs on the ground</h2>
+<p>Once in Thailand, day-to-day spending is low and scales with your style:</p>
+<p><strong>Budget travelers</strong> (hostels, street food, public transport, few paid activities) can get by on a modest daily sum — Thailand is a backpacker favorite precisely because it's so cheap at this level.</p>
+<p><strong>Mid-range travelers</strong> (comfortable hotels, a mix of restaurant and street dining, some tours and domestic flights) spend more but still find it excellent value compared to Western destinations.</p>
+<p><strong>Luxury travelers</strong> (resorts, private villas, fine dining, private tours) can spend substantially — though even luxury here costs a fraction of comparable destinations like the Maldives.</p>
+
+<h2>Where your money goes</h2>
+<p><strong>Accommodation</strong> ranges from very cheap hostels to world-class resorts, and is one of your bigger controllable costs. <strong>Food</strong> is remarkably cheap if you eat like a local — street food and local restaurants cost very little, while Western and upscale dining costs more. <strong>Transport</strong> is inexpensive: domestic flights are cheap if booked ahead, and local transport (Grab, songthaews, trains) costs little. <strong>Activities</strong> — boat trips, tours, diving, elephant sanctuaries — are where discretionary spending adds up, and worth budgeting for the experiences you care about.</p>
+
+<!-- IMAGE_SLOT_2: A Thai street food meal, illustrating low daily costs -->
+
+<h2>How to budget your trip</h2>
+<p>A practical approach: <strong>book flights early</strong> and treat them as your biggest, most variable cost; <strong>choose an accommodation level</strong> and multiply by your nights; <strong>budget modestly for daily food and transport</strong>, since these are cheap; and <strong>add a separate pot for activities and domestic flights</strong>, which is where memorable (and costlier) experiences live. Build in a buffer, and remember the exchange rate moves — check it close to your trip.</p>
+
+<h2>Money-saving tips</h2>
+<p>To stretch your budget further: <strong>eat street food and local restaurants</strong> (delicious and cheap), <strong>book domestic flights and accommodation ahead</strong>, <strong>travel in shoulder season</strong> for lower prices, <strong>use the BTS, trains, and Grab</strong> rather than tourist transport, <strong>withdraw larger amounts less often</strong> to minimize ATM fees, and <strong>avoid the tourist-trap restaurants</strong> right next to major sights. Thailand rewards travelers who eat and move like locals with extraordinary value.</p>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is Thailand expensive to visit?</summary><div><p>No — it's known for being affordable, with low daily costs for food, transport, and even accommodation. The main expense is the international flight from the U.S.; once there, your money stretches a long way.</p></div></details>
+  <details><summary>What's the biggest cost of a Thailand trip?</summary><div><p>The international flight, which is the most expensive and most variable item. There are no nonstop U.S. flights, so booking ahead and being flexible on dates and routes makes a real difference.</p></div></details>
+  <details><summary>How can I save money in Thailand?</summary><div><p>Eat street food and local restaurants, book flights and hotels ahead, travel in shoulder season, use trains and Grab over tourist transport, and minimize ATM fees by withdrawing larger amounts less often.</p></div></details>
+  <details><summary>How much should I budget per day in Thailand?</summary><div><p>It depends heavily on your style — budget, mid-range, and luxury differ a lot, and prices and exchange rates change constantly. Set your accommodation level, add modest daily food and transport, and a separate pot for activities. Check current prices when booking.</p></div></details>
+</section>
+
+
+----- SLUG: money-in-thailand-guide -----
+TITLE: Money in Thailand: Cash, Cards, ATMs, and Tipping
+CATEGORY: money-and-costs
+
+<p>Handling money well in Thailand saves you fees and hassle. It's a largely cash-based society for everyday spending, with cards accepted in more upscale settings, and there are a few quirks — like ATM fees and exchange tips — worth knowing. Here's a practical guide to managing your baht.</p>
+
+<!-- IMAGE_SLOT_1: Thai baht notes and coins, or a currency exchange booth -->
+
+<h2>The currency</h2>
+<p>Thailand's currency is the <strong>Thai baht (THB)</strong>, symbol ฿. Notes come in 20, 50, 100, 500, and 1,000 baht; coins in smaller denominations. The exchange rate against the dollar moves daily, so check a current rate rather than assuming a fixed value:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+<p>Keep a mix of denominations — small notes are handy for street food, markets, taxis, and tuk-tuks, where breaking a 1,000-baht note can be a hassle.</p>
+
+<h2>Cash vs. cards</h2>
+<p>Thailand is still largely <strong>cash-based for everyday spending</strong>. You'll need cash for street food, markets, small vendors, tuk-tuks, songthaews, and most rural areas. <strong>Cards are accepted</strong> at hotels, malls, chain and upscale restaurants, and many city businesses, but don't rely on them everywhere. The local QR-payment system (PromptPay) is ubiquitous among Thais but generally requires a Thai bank account, so it's not an option for most tourists. The practical approach: carry enough cash for daily needs, and use cards for bigger payments where accepted.</p>
+
+<h2>ATMs and fees</h2>
+<p>ATMs are <strong>everywhere</strong> in cities and tourist areas and accept major international cards (Visa, Mastercard). The catch: Thai ATMs charge a <strong>foreign-card withdrawal fee</strong> per transaction, on top of whatever your home bank charges. Because this fee is per-withdrawal, the smart move is to <strong>withdraw larger amounts less frequently</strong> rather than making many small withdrawals. Check whether your home bank refunds foreign ATM fees or has partner networks, and always choose to be charged in <strong>baht, not dollars</strong>, when the machine asks (declining the "dynamic currency conversion" gets you a better rate).</p>
+
+<!-- IMAGE_SLOT_2: An ATM in a Thai street setting -->
+
+<h2>Exchanging currency</h2>
+<p>If you bring dollars to exchange, you'll generally get <strong>better rates at dedicated exchange booths</strong> (like the well-known orange Super Rich booths in Bangkok) than at airport counters or hotels, which tend to offer poor rates. Exchange a small amount at the airport if you need immediate cash, then use better-rate booths or ATMs in the city. Bring crisp, undamaged bills, as torn or marked notes are sometimes refused.</p>
+
+<h2>Tipping customs</h2>
+<p>Tipping is <strong>not a deeply ingrained obligation</strong> in Thailand the way it is in the U.S., but it's appreciated and increasingly expected in tourist areas. As a guide: <strong>round up</strong> taxi fares, leave <strong>small change or 20–50 baht</strong> at restaurants (check first whether a 10% service charge is already added, common at upscale places), tip <strong>hotel porters</strong> a small amount, and tip <strong>spa and massage therapists</strong> and <strong>tour guides</strong> if you're happy with the service. Don't feel pressured into American-style percentages — modest tips are the norm.</p>
+
+<h2>Practical money tips</h2>
+<p>To sum up: <strong>carry cash</strong> for daily spending and keep small notes handy; <strong>use cards</strong> for bigger payments where accepted; <strong>minimize ATM fees</strong> by withdrawing larger amounts and choosing baht over dollars; <strong>exchange at good-rate booths</strong>, not airports or hotels; <strong>tip modestly</strong> where appropriate; and <strong>notify your bank</strong> of travel to avoid card blocks. Keep some cash in reserve separate from your wallet, too, in case of loss or theft.</p>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Should I use cash or card in Thailand?</summary><div><p>Both — Thailand is largely cash-based for everyday spending (street food, markets, taxis, rural areas), while cards work at hotels, malls, and upscale restaurants. Carry cash for daily needs and use cards for bigger payments.</p></div></details>
+  <details><summary>Do Thai ATMs charge fees?</summary><div><p>Yes — a foreign-card fee per withdrawal, on top of your home bank's fees. Withdraw larger amounts less often to minimize it, and always choose to be charged in baht, not dollars, for a better rate.</p></div></details>
+  <details><summary>Where's the best place to exchange money in Thailand?</summary><div><p>Dedicated exchange booths (like Bangkok's Super Rich) offer better rates than airport counters or hotels. Exchange a little at the airport for immediate needs, then use better-rate booths or ATMs in the city.</p></div></details>
+  <details><summary>How much should I tip in Thailand?</summary><div><p>Modestly — it's appreciated but not obligatory. Round up taxis, leave small change or 20–50 baht at restaurants (check for an added service charge), and tip porters, therapists, and guides small amounts for good service.</p></div></details>
+</section>
+
+
+----- SLUG: thailand-on-a-budget -----
+TITLE: Thailand on a Budget: How to Save Without Missing Out
+CATEGORY: money-and-costs
+
+<p>Thailand is already one of the world's best-value destinations, and with a few smart habits you can travel it remarkably cheaply without sacrificing the experiences that make it special. The country is built for budget travel — it's where backpackers have flocked for decades — so stretching your money here is easy. Here's how to do Thailand on a budget while still doing it well.</p>
+
+<!-- IMAGE_SLOT_1: A budget traveler enjoying a Thai street food market -->
+
+<h2>Save on the biggest cost: flights</h2>
+<p>Your international flight is the largest expense, so it's where savings matter most. <strong>Book well in advance</strong>, be <strong>flexible on dates</strong> (mid-week and shoulder-season flights are cheaper), <strong>compare routes</strong> (different Asian or Middle Eastern connections vary a lot), and consider <strong>flying into Bangkok</strong> (the cheapest gateway) rather than directly to an island. Once in Thailand, <strong>domestic budget airlines</strong> are cheap if booked ahead.</p>
+
+<h2>Accommodation: comfort for little money</h2>
+<p>Thailand excels at budget accommodation. <strong>Hostels</strong> here are some of the best in the world — stylish, social, and cheap. <strong>Guesthouses and budget hotels</strong> offer private rooms for modest prices, and even <strong>mid-range hotels with pools</strong> are affordable by Western standards. Book a little ahead for the best-value places, stay slightly outside the most touristy spots, and consider fan rooms over air-con to save more. You don't have to sacrifice comfort to travel cheaply here.</p>
+
+<!-- AFFILIATE_SLOT: booking — budget hotels and hostels -->
+
+<h2>Eat like a local — it's cheaper and better</h2>
+<p>This is the easiest big saving and no sacrifice at all: <strong>eat street food and at local restaurants</strong>, where a delicious, filling meal costs a fraction of Western or tourist-restaurant prices. The best food in Thailand often comes from the cheapest places — busy stalls and simple eateries. Drink <strong>local beer</strong> and avoid imported drinks, fill up at <strong>markets</strong>, and you'll eat superbly for very little.</p>
+
+<h2>Transport: use what locals use</h2>
+<p>Skip the tourist transport. Use the <strong>BTS Skytrain, MRT, and river boats</strong> in Bangkok; <strong>songthaews</strong> (shared trucks) and <strong>Grab</strong> over negotiated tuk-tuks; <strong>buses and trains</strong> for longer overland journeys (the overnight train doubles as accommodation); and <strong>combined bus-and-ferry tickets</strong> to the islands. Walking and these local options cost a fraction of taxis and private transfers.</p>
+
+<!-- IMAGE_SLOT_2: A local Thai bus, train, or songthaew -->
+
+<h2>Free and cheap experiences</h2>
+<p>Plenty of Thailand's best experiences cost little or nothing. <strong>Temples</strong> are mostly free or charge a small fee. <strong>Beaches</strong> are free. <strong>Markets</strong> are free to wander. <strong>Hiking and nature</strong> in the national parks is cheap. Even the famous experiences — an ethical elephant sanctuary, a boat trip, a cooking class — are affordable compared to similar activities elsewhere. Budget for a few paid highlights you really want, and fill the rest with the country's abundant free pleasures.</p>
+
+<h2>Where to spend and where to save</h2>
+<p>The smart budget strategy isn't depriving yourself — it's <strong>spending on what matters and saving on what doesn't</strong>. Save relentlessly on food (eat local), transport (go local), and accommodation (book smart), since these barely affect your experience. Then <strong>spend freely on the memorable experiences</strong> — the island day trip, the elephant sanctuary, the diving course — that you'll remember long after the trip. That balance lets you travel Thailand cheaply while missing none of the magic. Use a live converter rather than a fixed figure to track your spending:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is Thailand good for budget travel?</summary><div><p>Excellent — it's one of the world's best-value destinations and a long-time backpacker favorite. Cheap food, transport, and accommodation mean you can travel well for very little once you're there.</p></div></details>
+  <details><summary>How do I save money on food in Thailand?</summary><div><p>Eat street food and at local restaurants, where delicious meals cost a fraction of tourist-restaurant prices. The best food often comes from the cheapest stalls — so this saves money with no sacrifice.</p></div></details>
+  <details><summary>What's the cheapest way to get around Thailand?</summary><div><p>Use local transport — the BTS, MRT, and river boats in Bangkok, songthaews and Grab over tuk-tuks, and buses or the overnight train for long distances. Combined bus-and-ferry tickets are cheapest to the islands.</p></div></details>
+  <details><summary>Can I travel Thailand cheaply without missing the highlights?</summary><div><p>Yes — save on food, transport, and accommodation (which barely affect your experience), then spend on the memorable experiences like island trips and elephant sanctuaries, which are affordable here anyway.</p></div></details>
+</section>
+
+
+----- SLUG: scuba-diving-snorkeling-thailand -----
+TITLE: Scuba Diving and Snorkeling in Thailand: Where to Go
+CATEGORY: nature-adventure
+
+<p>Thailand is one of the world's great and most affordable places to dive and snorkel, with warm, clear water, colorful reefs, and abundant marine life across both coasts. Whether you want to learn to dive cheaply, log world-class dives, or just snorkel off a beautiful beach, here's where to go and what to know.</p>
+
+<!-- IMAGE_SLOT_1: Colorful coral reef and tropical fish in clear Thai water -->
+
+<h2>Koh Tao — the place to learn</h2>
+<p><strong>Koh Tao</strong>, a small island on the Gulf coast, is one of the <strong>cheapest and most popular places in the world to learn to scuba dive</strong>. It has a huge concentration of dive schools, calm conditions ideal for beginners, and affordable certification courses. If getting your diving certification is a goal, Koh Tao is the obvious choice — many travelers build a few days of their trip around it. It's also great for snorkeling and experienced divers, with plenty of accessible sites.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — Koh Tao diving / snorkeling -->
+
+<h2>The Similan Islands — world-class diving</h2>
+<p>On the Andaman coast, the <strong>Similan Islands</strong> (reached from Phuket or Khao Lak) offer some of Thailand's <strong>best diving</strong> — pristine reefs, dramatic granite boulders, and the chance to see larger marine life. They're a protected national park with <strong>seasonal access</strong> (typically open in the dry season, roughly mid-October to mid-May, and closed during monsoon), so plan around that. Liveaboard trips and day trips both run; this is a bucket-list destination for serious divers.</p>
+
+<h2>Other top spots</h2>
+<p>Beyond the headliners, the <strong>Andaman coast</strong> around Phuket, Krabi, and the <strong>Phi Phi Islands</strong> has excellent diving and snorkeling among the limestone scenery, including spots like the King Cruiser wreck and Shark Point. <strong>Koh Lanta</strong> accesses the renowned Hin Daeng and Hin Muang dive sites. On the Gulf side, <strong>Koh Phangan</strong> and the waters around <strong>Koh Samui</strong> offer good diving and snorkeling, with Sail Rock a standout nearby site.</p>
+
+<!-- IMAGE_SLOT_2: A diver or snorkeler exploring a reef in turquoise water -->
+
+<h2>Snorkeling without diving</h2>
+<p>You don't need to dive to enjoy Thailand's underwater world. Excellent <strong>snorkeling</strong> is accessible on island-hopping boat trips throughout both coasts — Phi Phi, the Hong Islands, Ang Thong Marine Park, and countless reefs are reachable on day tours, with gear usually provided. For casual snorkelers, joining a boat trip is the easiest way to see colorful fish and coral without any certification or experience.</p>
+
+<h2>Seasons and conditions</h2>
+<p>Diving follows the coasts' opposite seasons. The <strong>Andaman coast</strong> (Similans, Phi Phi) is best in the dry season, roughly <strong>November to April</strong>, with the Similans closed in monsoon. The <strong>Gulf coast</strong> (Koh Tao, Koh Phangan) is divable much of the year but best avoided in its wettest months around October to December. Visibility and conditions vary, so check seasonal advice for your chosen spot.</p>
+
+<h2>Tips for diving and snorkeling</h2>
+<p><strong>Choose reputable dive operators</strong> with good safety records and certifications (it matters). <strong>Use reef-safe sunscreen</strong> and never touch or stand on coral. <strong>Check your travel insurance covers diving</strong>, which some policies exclude or require an add-on for. <strong>Don't dive and fly</strong> within the recommended window before a flight. And <strong>book ahead</strong> for popular courses and Similan trips in peak season. Costs are low by global standards; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Where is the best place to learn to dive in Thailand?</summary><div><p>Koh Tao on the Gulf coast — one of the cheapest and most popular places in the world to get certified, with many dive schools and calm, beginner-friendly conditions.</p></div></details>
+  <details><summary>Where is the best diving in Thailand?</summary><div><p>The Similan Islands on the Andaman coast offer world-class diving but have seasonal access (roughly mid-October to mid-May). Koh Tao, the Phi Phi area, and Koh Lanta's Hin Daeng are also excellent.</p></div></details>
+  <details><summary>Can I snorkel in Thailand without diving?</summary><div><p>Absolutely — great snorkeling is accessible on island-hopping boat trips on both coasts (Phi Phi, Hong Islands, Ang Thong), usually with gear provided. No certification or experience needed.</p></div></details>
+  <details><summary>When is the best time to dive in Thailand?</summary><div><p>It follows the coasts' opposite seasons: the Andaman side (Similans, Phi Phi) is best November–April; the Gulf (Koh Tao) is divable much of the year but best outside its wettest months (around October–December).</p></div></details>
+</section>
+
+
+----- SLUG: thai-street-food-guide -----
+TITLE: Thai Street Food: What to Eat and How to Order It Safely
+CATEGORY: street-food-markets
+
+<p>Street food isn't just a cheap way to eat in Thailand — it's some of the best food in the country, full stop. From sizzling woks to grills and noodle carts, the streets serve dishes that rival anything in a restaurant, for a fraction of the price. For many visitors, eating their way through the street stalls is a highlight of the whole trip. Here's what to eat, how to order, and how to do it safely.</p>
+
+<!-- IMAGE_SLOT_1: A vibrant Thai street food stall with woks and fresh ingredients -->
+
+<h2>Why Thai street food is special</h2>
+<p>In Thailand, street food is a serious culinary tradition, not an afterthought. Vendors often specialize in a single dish perfected over years or generations, and locals eat from stalls daily. The result is fresh, fast, flavorful food cooked in front of you — and it's astonishingly cheap. Bangkok's street food is world-famous, but you'll find excellent stalls all over the country, each region with its specialties.</p>
+
+<h2>The must-try street dishes</h2>
+<p>Start with the classics: <strong>pad thai</strong> (stir-fried noodles), <strong>pad krapow</strong> (basil stir-fry with minced meat and a fried egg over rice — a local staple), <strong>som tum</strong> (spicy green papaya salad), <strong>satay</strong> (grilled skewers with peanut sauce), and <strong>grilled meats and seafood</strong>. Try the noodle soups (<strong>boat noodles</strong>, <strong>khao soi</strong> in the north), <strong>mango sticky rice</strong> and other sweets, fresh <strong>fruit</strong> and fruit shakes, and regional specialties wherever you are. Half the fun is pointing at what looks good and trying something new.</p>
+
+<!-- AFFILIATE_SLOT: getyourguide — street food tour -->
+
+<h2>How to find the best stalls</h2>
+<p>The golden rule: <strong>follow the crowds</strong>. A stall busy with locals signals fresh food, fast turnover, and quality — and is also safer. Look for vendors who <strong>specialize</strong> in one or a few dishes (a sign of expertise), where you can <strong>see the food cooked fresh</strong>, and where ingredients look clean and well-handled. Markets, designated street-food streets (like Bangkok's Yaowarat in Chinatown), and areas where office workers and families eat are reliable bets. Don't be put off by humble plastic-stool setups — they're often the best.</p>
+
+<h2>How to order</h2>
+<p>Ordering is easy even without Thai. <strong>Point</strong> at what you want or at what someone else is eating, hold up fingers for quantity, and <strong>learn a few words</strong>: "mai phet" (not spicy), "phet nit noi" (a little spicy), and "aroi" (delicious — always appreciated). Many stalls have pictures or English on popular tourist streets. Have <strong>small cash notes</strong> ready, since stalls don't take cards. A smile goes a long way.</p>
+
+<!-- IMAGE_SLOT_2: A plate of fresh Thai street food being handed over -->
+
+<h2>How to eat street food safely</h2>
+<p>Thai street food is generally very safe, and these habits keep it that way: <strong>choose busy stalls</strong> with high turnover (fresh food, not sitting around); <strong>eat food cooked fresh and hot</strong> in front of you; be a little <strong>cautious with raw items, pre-cut fruit left out, and uncooked shellfish</strong>; <strong>drink bottled water</strong> (ice in established places is usually fine); and <strong>give your stomach a day or two</strong> to adjust to new ingredients and spice. Carry rehydration salts just in case. With common sense, eating from stalls is one of the safest and most rewarding things you'll do in Thailand.</p>
+
+<h2>Make the most of it</h2>
+<p>To get the best out of Thai street food: take a <strong>guided street-food tour</strong> early in your trip to learn what's what and discover stalls you'd never find alone; <strong>eat where locals eat</strong>; <strong>try regional specialties</strong> as you travel; and <strong>be adventurous</strong> — some of the best things you'll eat are dishes you can't name. It's cheap enough to sample widely; check a live converter rather than a fixed figure:</p>
+<div class="feature-converter" data-from="USD" data-to="THB">100 USD ≈ … THB (enable JavaScript for today's rate)</div>
+
+<section class="feature-faq">
+  <h2>FAQ</h2>
+  <details><summary>Is Thai street food safe to eat?</summary><div><p>Generally very safe — choose busy stalls with high turnover, eat food cooked fresh and hot, be cautious with raw items and pre-cut fruit, and drink bottled water. Street food is often the best eating in Thailand.</p></div></details>
+  <details><summary>What street food should I try in Thailand?</summary><div><p>Pad thai, pad krapow (basil stir-fry with fried egg), som tum (papaya salad), satay skewers, grilled meats and seafood, noodle soups, and mango sticky rice — plus regional specialties wherever you are.</p></div></details>
+  <details><summary>How do I order street food without speaking Thai?</summary><div><p>Point at what you want or what others are eating, hold up fingers for quantity, and learn a few words like "mai phet" (not spicy) and "aroi" (delicious). Have small cash notes ready, as stalls don't take cards.</p></div></details>
+  <details><summary>How do I find the best street food stalls?</summary><div><p>Follow the locals — a stall busy with Thai customers means fresh, high-quality food and fast turnover. Look for vendors specializing in one dish, cooking fresh in front of you. Markets and street-food streets are reliable.</p></div></details>
+</section>

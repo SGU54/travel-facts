@@ -1,0 +1,66 @@
+# travel-facts carries the TEXT layer of the fleet: facts.json, article-list.json,
+# state.json, corrections.json, the SQL seeds, the audits and the scripts. That is
+# ~33 MB across ~1,700 files and it is the part that is irreplaceable.
+#
+# The sourced photographs and the rendered books are ~6.8 GB and are NOT carried
+# here. They are reproducible (re-sourced, or re-rendered from the build sources)
+# and they would make the repo unusable on GitHub.
+#
+# Note: ignoring a pattern does NOT untrack a file already committed. The PDFs,
+# tarballs and sample PNGs uploaded to this repo through the GitHub web UI stay
+# tracked and are left alone.
+
+.DS_Store
+._*
+
+# sourced photographs and rendered plates
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.gif
+*.tif
+*.tiff
+*.psd
+*.svg.bak
+
+# video
+*.mp4
+*.mov
+*.m4v
+
+# rendered books and archives
+*.pdf
+*.tar.gz
+*.tgz
+*.zip
+dossiers-pdf/
+
+# embedded fonts
+*.ttf
+*.otf
+*.woff
+*.woff2
+
+# the damaged object store, kept on disk as a backup — not a thing to commit
+.git.broken-*/
+
+# python bytecode
+__pycache__/
+*.pyc
+
+# every tool here writes a .pre-<label> snapshot before it edits. Hundreds of
+# them, several MB each, and all reproducible by re-running the tool.
+*.pre-*
+
+# images saved without an extension (the R2 key IS the public_id, hard rule 10),
+# so no extension pattern can catch them
+**/renamed/
+
+# the single-file book renders: generated output with the photographs inlined as
+# base64, 5-15 MB each. The SOURCE that makes them (build.py, the audit gates,
+# the chapter files) is tracked; the render is not.
+**/dossier/**/_render.html
+**/dossier/**/_book.html
+**/dossier/**/_sheet.html
+**/dossier/**/dossier*.html

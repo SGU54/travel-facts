@@ -1,0 +1,1921 @@
+You are a fact-checking editor. Below are 5 travel articles for an Americans-visiting-Turkey site, plus the FACTS file they must conform to. Your ONLY job is to find IN-CONTEXT ERRORS:
+- a number/date stated one way then contradicted later
+- a price or figure given two different ways
+- a claim that contradicts the FACTS file
+- a recommendation that drifts to a place NOT in the FACTS pools
+- an internal contradiction or a sentence that reads factually wrong
+
+Do NOT rewrite for style. Do NOT suggest additions. If a figure looks current but differs from the FACTS file, NOTE it but don't assume the article is wrong. Return a short list: [slug] - issue - suggested fix. If clean, say so.
+
+===== FACTS FILE =====
+{
+  "_README": "Reconciled facts for turkeyforamericans (3-AI panel: claude+deepseek+grok). The ONLY facts file in the repo. serve_live values never frozen. verify_recommended = confirm against official source before relying. Stage 3 reads this + corrections.json.",
+  "_meta": {
+    "schema_version": 3,
+    "project": "turkeyforamericans",
+    "country": "Turkey",
+    "country_iso": "TR",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": [
+        "JFK",
+        "EWR",
+        "IAD",
+        "ORD",
+        "LAX",
+        "MIA"
+      ],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "express costs in USD with Turkish lira (TRY) equivalents"
+    },
+    "panel": [
+      "claude",
+      "deepseek",
+      "grok"
+    ],
+    "reconciled_at": "2026-06-22",
+    "notes": "4 disputes ruled by human: (1) US visa-free [verify], (2) passport 150-day [verify], (3) currency limit→null/open-q, (4) vaccines conservative [verify]."
+  },
+  "identity": {
+    "name_local": {
+      "value": "Türkiye",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "capital": {
+      "value": "Ankara",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "official_languages": {
+      "value": [
+        "Turkish"
+      ],
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "currency_code": {
+      "value": "TRY",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "currency_name": {
+      "value": "Turkish lira",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "timezones": {
+      "value": [
+        "UTC+3 (TRT, no DST)"
+      ],
+      "status": "agreed_stable",
+      "notes": "7-8h ahead of US Eastern depending on US DST."
+    },
+    "calling_code": {
+      "value": "+90",
+      "status": "agreed_stable",
+      "_from": "claude"
+    },
+    "power_plug_voltage": {
+      "value": "230V / 50Hz, Type C and Type F (European round-pin). Americans need a plug adapter; most phone/laptop chargers are dual-voltage, but 120V-only devices need a converter.",
+      "status": "agreed_stable"
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL. RULING: US ordinary-passport tourists are visa-free (2-of-3 panel; reflects the ~2020 change). grok's e-visa answer reflects pre-2020 rules. Confirm at evisa.gov.tr before relying.",
+      "by_nationality": [
+        {
+          "passport": "United States",
+          "type": {
+            "value": "visa_free",
+            "status": "verify_recommended",
+            "notes": "Visa-free for tourism since ~March 2020, reversing the prior e-visa requirement. Confirm at evisa.gov.tr."
+          },
+          "max_stay_days": {
+            "value": "90 days within any 180-day period",
+            "status": "verify_recommended"
+          },
+          "fee": {
+            "value": "None for visa-free tourist entry (prior e-visa cost ~$50)",
+            "status": "verify_recommended"
+          },
+          "processing_time": {
+            "value": "N/A (visa-free)",
+            "status": "verify_recommended"
+          },
+          "online_authorization_required": {
+            "value": false,
+            "status": "verify_recommended",
+            "notes": "No ETA-style pre-authorization for US tourists as of last knowledge; confirm."
+          },
+          "official_application_url": {
+            "value": "https://www.evisa.gov.tr",
+            "notes": "Official portal — used by nationalities that DO need an e-visa; US tourists generally do not."
+          }
+        }
+      ],
+      "scam_sites_to_avoid": {
+        "value": [
+          "Any third-party 'Turkey visa' site charging fees above the official cost",
+          "Any site that is not evisa.gov.tr for e-visas"
+        ],
+        "status": "agreed_stable"
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "Passport valid at least 150 days beyond date of entry, with a blank page",
+        "status": "verify_recommended",
+        "notes": "RULING: state Turkey's specific 150-day rule (stricter/more precise than the generic 6-month default two models gave). Following 150 days also satisfies 6 months."
+      },
+      "onward_ticket_required": {
+        "value": "Onward/return ticket may be requested at check-in or entry; not always enforced",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "notes": {
+        "value": "Carry proof of accommodation and return travel; rarely checked but officially expected."
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "TRY",
+        "status": "agreed_stable"
+      },
+      "approx_rate_note": {
+        "value": null,
+        "status": "serve_live",
+        "notes": "VOLATILE — lira depreciates persistently; never freeze a USD/TRY rate. Serve live."
+      },
+      "cash_vs_card": {
+        "value": "Cards widely accepted in cities, hotels, and tourist areas; carry some cash for markets, taxis, small towns, tips, and rural areas",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "atm_availability": {
+        "value": "ATMs plentiful in cities and tourist towns. Decline the ATM's offered conversion (choose to be charged in TRY, not USD) to avoid bad DCC rates. Watch for high fees on some bank ATMs.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "currency_import_export_limit": {
+        "value": null,
+        "status": "verify_recommended",
+        "notes": "RULING: sources disagreed ($5k vs $10k vs 25,000 TRY export) — left null pending official confirmation. See _open_questions."
+      },
+      "tipping_norm": {
+        "value": "Tipping (bahşiş) is customary but modest: ~5-10% in restaurants if service not included, round up taxis, small tips for hotel staff and hammam attendants. Less aggressive than US tipping culture.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": [
+          "Istanbul Airport (IST) — main hub, European side",
+          "Sabiha Gökçen (SAW) — Istanbul, Asian side, budget-heavy",
+          "Antalya (AYT)",
+          "Izmir Adnan Menderes (ADB)",
+          "Ankara Esenboğa (ESB)"
+        ],
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "national_carrier": {
+        "value": "Turkish Airlines (THY)",
+        "status": "agreed_stable",
+        "notes": "Star Alliance; many US nonstops to IST."
+      },
+      "flight_from_audience_origins": {
+        "value": [
+          "JFK/EWR–IST ~10-11h",
+          "IAD–IST ~10h",
+          "ORD–IST ~11h",
+          "LAX–IST ~13-14h",
+          "MIA–IST seasonal"
+        ],
+        "status": "serve_live",
+        "notes": "Durations stable; PRICES serve_live."
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "High-speed rail (YHT) connects Istanbul–Ankara–Konya and Ankara–Sivas; useful but network is limited. Most intercity travel is by plane or bus, not train.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "buses": {
+        "value": "Extensive, comfortable, and cheap intercity bus network (otobüs) — companies like Metro, Kamil Koç, Pamukkale. Long distances (e.g. Istanbul–Cappadocia ~11h overnight) make flying often preferable.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "domestic_flights": {
+        "value": "Cheap, frequent domestic flights are the backbone of multi-region trips. Turkish Airlines, AnadoluJet/AJet, Pegasus. Key routes: IST–Kayseri/Nevşehir (for Cappadocia), IST–Antalya, IST–Izmir, IST–Dalaman.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "ride_sharing": {
+        "value": "BiTaksi and iTaksi apps hail licensed taxis in Istanbul; Uber operates in Istanbul but dispatches yellow taxis. Always insist on the meter ('taksimetre'). Trams, metro, ferries, and the Istanbulkart make Istanbul easy without taxis.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "car_rental_and_driving": {
+        "value": "Drive on the RIGHT (same as US). US license accepted for short visits but an International Driving Permit (IDP) is recommended/sometimes required. Driving is aggressive in cities; renting makes sense for the coast/Cappadocia, not Istanbul. BAC limit 0.05% (0.00% if towing).",
+        "status": "verify_recommended",
+        "_from": "claude"
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Spring (Apr-May) and fall (Sep-Oct) are ideal nearly everywhere: warm, dry, fewer crowds. Summer (Jun-Aug) is hot — great for coast/beaches, brutal for sightseeing in Istanbul and harsh in the interior. Winter is cold inland (Cappadocia can snow — atmospheric for balloons) and mild but rainy on the coast. Istanbul winters are gray and chilly.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "best_months": {
+        "value": [
+          "April",
+          "May",
+          "September",
+          "October"
+        ],
+        "rank": "core",
+        "notes": "Shoulder seasons; reliable balloon mornings."
+      },
+      "avoid_periods": {
+        "value": [
+          "Peak Jul-Aug heat for interior sightseeing",
+          "Ramadan affects some dining hours (date shifts ~11 days earlier yearly)",
+          "Major Turkish holidays (Kurban/Şeker Bayramı) — domestic travel/hotels surge"
+        ],
+        "rank": "core",
+        "notes": "Verify religious-holiday dates yearly."
+      }
+    },
+    "safety_health": {
+      "_note": "YMYL. Advisory change-prone + partly regional (SE Syria border). Confirm at travel.state.gov before relying.",
+      "advisory_level": {
+        "value": "US State Dept ~Level 2 ('Exercise Increased Caution') in most areas, with higher do-not-travel warnings near the Syria border and Şırnak/Hakkari provinces",
+        "status": "verify_recommended",
+        "notes": "Tourist regions (Istanbul, Cappadocia, coast) are not the high-warning zones. Confirm current level + date."
+      },
+      "main_risk": {
+        "value": "Petty theft/pickpocketing in crowded tourist areas (Istanbul transit, bazaars), tourist-targeted scams, occasional anti-government demonstrations (avoid protests), and earthquake risk (Turkey is seismically active; major Feb 2023 quake affected the southeast, NOT the western tourist regions)",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "vaccines": {
+        "value": "No vaccines required for entry from the US. Keep routine vaccines current; CDC sometimes recommends Hepatitis A and typhoid for some travelers — check cdc.gov.",
+        "status": "verify_recommended",
+        "notes": "RULING: conservative 'none required, check CDC' framing."
+      },
+      "tap_water_safe": {
+        "value": "Tap water is chlorinated and generally considered safe in major cities but is heavily mineralized and not pleasant-tasting; nearly everyone (locals included) drinks cheap bottled water. Stick to bottled to avoid stomach upset.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "emergency_numbers": {
+        "value": {
+          "police": "155",
+          "ambulance": "112",
+          "fire": "110"
+        },
+        "status": "agreed_stable",
+        "notes": "112 is the unified emergency number (works for medical); Jandarma (rural) 156."
+      },
+      "common_scams": {
+        "value": [
+          "The 'friendly local' / shoe-shine drop scam in Istanbul",
+          "Inflated taxi fares + 'broken meter' — insist on the meter",
+          "Bar/club scams where solo male tourists are lured and hit with a huge bill",
+          "Carpet-shop high-pressure commissions via 'helpful' guides",
+          "Overpriced 'student' currency exchange / DCC at ATMs"
+        ],
+        "status": "agreed_stable",
+        "_from": "claude"
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": "eSIM is the easiest option for Americans (Airalo, Holafly, etc.) — install before arrival. Physical Turkish SIMs (Turkcell, Vodafone, Türk Telekom) require passport registration; phones used >120 days must be IMEI-registered (a tax) or get blocked, but short tourist visits are fine.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "coverage": {
+        "value": "Excellent 4G/5G in cities and tourist regions; good even in Cappadocia and along the coast. Patchy in remote eastern mountains.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      }
+    },
+    "costs": {
+      "_note": "serve_live ranges; Turkey is cheap for Americans (lira weakness) but high local inflation moves lira prices constantly.",
+      "daily_budget_low": {
+        "value": "~$40-60/day (budget guesthouses, street food, transit)",
+        "status": "serve_live"
+      },
+      "daily_budget_mid": {
+        "value": "~$100-180/day (good 3-4 star, restaurants, some tours, domestic flights)",
+        "status": "serve_live"
+      },
+      "daily_budget_high": {
+        "value": "~$300+/day (cave suites, luxury Bosphorus hotels, private guides)",
+        "status": "serve_live"
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "Turkey is secular and Western-dressed in cities and resorts — normal Western clothing is fine. For MOSQUES: women cover hair (scarf), shoulders, and knees; men wear long pants; shoes off. Carry a scarf when mosque-visiting. More conservative dress respected in rural/eastern areas.",
+        "status": "agreed_stable",
+        "_from": "claude"
+      },
+      "dos_and_donts": {
+        "value": [
+          "Remove shoes when entering homes and mosques",
+          "Accept offered tea (çay) — it's a sign of hospitality, refusing can seem cold",
+          "Don't blow your nose loudly at the table",
+          "Be respectful around Atatürk imagery/statues — insulting him is a legal offense",
+          "Avoid political discussion/criticism of the government in public",
+          "Use your right hand for giving/receiving",
+          "Bargaining is expected in bazaars, not in shops/restaurants"
+        ],
+        "status": "agreed_stable",
+        "_from": "claude"
+      }
+    }
+  },
+  "cities": [
+    {
+      "name": "Istanbul",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Primary US gateway — nonstop Turkish Airlines/United from JFK, EWR, IAD, ORD, LAX, SFO, IAH, MIA (seasonal). Arrive at Istanbul Airport (IST).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Get an Istanbulkart (rechargeable transit card) — works on metro, tram, ferries, funiculars, buses. The T1 tram serves Sultanahmet (old city). Ferries across the Bosphorus are scenic and cheap. Walkable historic core.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Istanbul Airport (IST), ~28 mi NW of city center on the European side. Havaist airport buses, M11 metro, or taxi (~45-90 min depending on traffic). Sabiha Gökçen (SAW) is on the Asian side — cheaper flights but far from Sultanahmet.",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Hagia Sophia",
+              "why": "1,500-year-old Byzantine masterpiece, now a working mosque (free entry, dress code; an upper-gallery ticket was introduced — verify)",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Blue Mosque (Sultanahmet Camii)",
+              "why": "Iconic six-minaret mosque facing Hagia Sophia; free, active mosque",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Topkapı Palace",
+              "why": "Ottoman imperial palace with treasures, harem, and courtyards.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Grand Bazaar",
+              "why": "One of the world's oldest and largest covered markets.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Basilica Cistern",
+              "why": "Underground ancient water reservoir with Medusa column bases.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Bosphorus Cruise",
+              "why": "Boat tour along the strait separating Europe and Asia.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Süleymaniye Mosque",
+              "why": "Sinan's masterwork, fewer crowds, great views",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Spice Bazaar (Mısır Çarşısı)",
+              "why": "Colorful market for spices, sweets, and Turkish delights.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Topkapi Palace",
+              "why": "Former home of Ottoman sultans",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Sultanahmet",
+              "who_for": "First-timers who want to walk to the major sights; quieter at night, touristy",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Beyoğlu / Galata / Karaköy",
+              "who_for": "Nightlife, dining, design hotels, İstiklal Street; more local-modern energy",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Beşiktaş / Nişantaşı",
+              "who_for": "Upscale, residential-chic, good base for Bosphorus",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Kadıköy (Asian side)",
+              "who_for": "Hip, foodie, local feel, fewer tourists",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Beyoğlu / Taksim",
+              "who_for": "Nightlife, dining, and shopping; more modern vibe.",
+              "rank": "core",
+              "named_by": [
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Karaköy / Galata",
+              "who_for": "Trendy neighborhood with boutique hotels and Bosphorus views.",
+              "rank": "core",
+              "named_by": [
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Beşiktaş",
+              "who_for": "Lively local area with ferry access and dining.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Balık ekmek (fish sandwich) by Galata Bridge / Eminönü",
+              "why": "Classic cheap waterfront eat",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Meyhane (Beyoğlu/Çiçek Pasajı)",
+              "why": "Meze + rakı evening, the social heart of Turkish dining",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Karaköy/Kadıköy bakeries & börek",
+              "why": "Breakfast and pastries",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Çiya Sofrası (Kadıköy)",
+              "why": "Renowned regional Anatolian home cooking",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Balıkçı (Fish restaurants) along the Bosphorus",
+              "why": "Fresh seafood with a view.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Kebapçı (Kebab restaurants) in Beyoğlu",
+              "why": "Traditional Turkish kebabs.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Street food: simit, balık ekmek, midye dolma",
+              "why": "Affordable and delicious local bites.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Traditional meyhane",
+              "why": "Shared plates and raki",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            },
+            {
+              "name_or_type": "Street food (simit, balik ekmek, döner)",
+              "why": "Authentic and affordable",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            },
+            {
+              "name_or_type": "Bosphorus waterfront restaurants",
+              "why": "Scenic seafood dinners",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Princes' Islands",
+              "why": "Car-free islands with horse-drawn carriages and beaches.",
+              "rough_time": "1 hour ferry",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "place": "Bursa",
+              "why": "Historic Ottoman city with the Green Mosque and Uludağ mountain.",
+              "rough_time": "2.5 hours by ferry + bus",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "place": "Edirne",
+              "why": "Former Ottoman capital with Selimiye Mosque.",
+              "rough_time": "2.5 hours by car/bus",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Cappadocia",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly from Istanbul to Kayseri (ASR, ~1h15) or Nevşehir (NAV); ~1h transfer to Göreme. Or overnight bus (~11h). Most US travelers fly.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Base in Göreme and walk/hike; rent a car, scooter, or ATV for valleys; guided 'Red' and 'Green' tours cover the spread-out sights. Hotel airport transfers are standard.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Kayseri (ASR) — more flights, ~1h to Göreme; Nevşehir (NAV) — closer, fewer flights",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Hot air balloon flight at sunrise",
+              "why": "The defining Cappadocia experience; book ahead, weather-dependent",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Göreme Open-Air Museum",
+              "why": "UNESCO rock-cut Byzantine churches with frescoes",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Underground cities (Derinkuyu/Kaymaklı)",
+              "why": "Multi-level ancient subterranean refuges",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "grok"
+              ]
+            },
+            {
+              "name": "Valleys (Love, Rose, Red, Pigeon, Ihlara)",
+              "why": "Hiking among fairy chimneys",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Uçhisar Castle",
+              "why": "Rock fortress with panoramic views.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "name": "Ihlara Valley",
+              "why": "Canyon hike with rock-cut churches.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Derinkuyu or Kaymaklı Underground City",
+              "why": "Ancient multi-level subterranean cities.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Paşabağ (Monks Valley)",
+              "why": "Stunning fairy chimneys with multiple caps.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Göreme",
+              "who_for": "First-timers; central, most cave hotels, walkable, balloon-launch views",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Uçhisar",
+              "who_for": "Upscale cave suites, quieter, best views",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Ürgüp",
+              "who_for": "Larger town, wineries, more restaurants/nightlife",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek",
+                "grok"
+              ]
+            },
+            {
+              "area": "Ortahisar",
+              "who_for": "Authentic village atmosphere.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Testi kebab (pottery kebab)",
+              "why": "Regional specialty cooked and cracked open in a clay pot",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Cave restaurants in Göreme/Ürgüp",
+              "why": "Atmosphere + Anatolian dishes",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Mantı (Turkish ravioli)",
+              "why": "Tiny dumplings with yogurt and garlic.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Dibek Restaurant (Göreme)",
+              "why": "Traditional stone-walled restaurant.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Cappadocia Home Cooking (Ürgüp)",
+              "why": "Home-style regional dishes.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Traditional Cappadocian pottery kebab",
+              "why": "Local specialty cooked in clay pots",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            },
+            {
+              "name_or_type": "Wine tasting in Urgup",
+              "why": "Local wines from volcanic soil",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Ihlara Valley + Selime Monastery",
+              "why": "Canyon hike, part of Green Tour",
+              "rough_time": "Half-full day",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "place": "Salt Lake (Tuz Gölü)",
+              "why": "Vast salt flat with pink hues at sunset.",
+              "rough_time": "1.5 hours",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "place": "Kayseri",
+              "why": "City with Seljuk architecture and mount Erciyes.",
+              "rough_time": "1 hour",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "place": "Ihlara Valley",
+              "why": "Beautiful canyon hike with rock churches",
+              "rough_time": "Half to full day",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            },
+            {
+              "place": "Pasabag (Monks Valley)",
+              "why": "Iconic fairy chimneys",
+              "rough_time": "Half day",
+              "rank": "optional",
+              "named_by": [
+                "grok"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Ephesus / Aegean (Selçuk-Kuşadası)",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly Istanbul–Izmir (ADB, ~1h), then ~1h drive south to Selçuk/Ephesus. Kuşadası is the cruise port nearby.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Rent a car for the Aegean coast, or use dolmuş (shared minibuses) between Selçuk, Ephesus, and Kuşadası. Ephesus has two gates ~2 mi apart.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Izmir Adnan Menderes (ADB)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Ephesus",
+              "why": "One of the best-preserved ancient cities in the Mediterranean — Library of Celsus, Great Theatre",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Terrace Houses (Ephesus, extra ticket)",
+              "why": "Remarkable Roman mosaics/frescoes, worth the add-on",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "House of the Virgin Mary",
+              "why": "Pilgrimage site near Ephesus",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Şirince village",
+              "why": "Hillside wine village near Selçuk",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Library of Celsus",
+              "why": "Iconic Roman library facade.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Great Theatre",
+              "why": "Massive 25,000-seat amphitheater with views.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Temple of Artemis",
+              "why": "One of the Seven Wonders of the Ancient World (only ruins remain).",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Basilica of St. John",
+              "why": "Ancient church believed to be the burial site of St. John.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Selçuk",
+              "who_for": "Closest town to the ruins; budget to mid-range.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "area": "Kuşadası",
+              "who_for": "Beach resort town, 20 min drive; cruise port.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "area": "Şirince",
+              "who_for": "Charming boutique stays in the hills",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Selçuk köfte/gözleme spots",
+              "why": "Local Aegean home cooking",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Selçuk local restaurants",
+              "why": "Traditional Turkish and Aegean cuisine.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Kuşadası waterfront",
+              "why": "Seafood with marina views.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Pamukkale & Hierapolis",
+              "why": "White travertine terraces + ancient spa city",
+              "rough_time": "Long day (~3h each way) — consider overnight",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "place": "Pamukkale",
+              "why": "White travertine terraces and Hierapolis ruins.",
+              "rough_time": "3 hours",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "place": "Şirince",
+              "why": "Hilltop Greek village with wine tasting.",
+              "rough_time": "30 min",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Antalya / Mediterranean (Turquoise) Coast",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly Istanbul–Antalya (AYT, ~1h15) or Istanbul–Dalaman (DLM) for the Fethiye/Ölüdeniz area. Coastal road connects resort towns.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Renting a car is ideal for the Lycian coast; intercity buses and dolmuş connect towns; Antalya has a tram in the center.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Antalya (AYT) for the east Med; Dalaman (DLM) for Fethiye/Ölüdeniz/Kaş-Kalkan",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Kaleiçi (Old Town)",
+              "why": "Charming Ottoman-era streets, harbor, and Hadrian's Gate.",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Ölüdeniz Blue Lagoon + paragliding",
+              "why": "Iconic beach and tandem flights off Babadağ",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Lycian ruins (Myra, Patara, Olympos)",
+              "why": "Coastal archaeology mixed with beaches",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Düden Waterfalls",
+              "why": "Spectacular waterfalls, both upper and lower (into the sea).",
+              "rank": "core",
+              "named_by": [
+                "claude",
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Aspendos Theatre",
+              "why": "Well-preserved Roman theater, still used for performances.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Perge Ancient City",
+              "why": "Large Roman city with stadium, baths, and colonnaded street.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name": "Lara Beach",
+              "why": "Long sandy beach with resorts.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Antalya (Kaleiçi)",
+              "who_for": "Boutique old-town charm + city base",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Belek/Side/Kemer",
+              "who_for": "All-inclusive resort holidays",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Kaş",
+              "who_for": "Laid-back, diving, boutique, less package-tourism",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Fethiye/Ölüdeniz",
+              "who_for": "Beach + paragliding + gulet cruises",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "area": "Kaleiçi",
+              "who_for": "Historic atmosphere, boutique hotels.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "area": "Lara / Konyaaltı",
+              "who_for": "Beach resorts and all-inclusive hotels.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Seafood meyhanes along the coast",
+              "why": "Fresh Mediterranean fish + meze",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name_or_type": "Kaleiçi restaurants",
+              "why": "Traditional Turkish and seafood with harbor views.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "name_or_type": "Piyaz (local bean dish)",
+              "why": "Antalya specialty.",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Saklıkent Gorge",
+              "why": "Dramatic canyon walk",
+              "rough_time": "Half day from Fethiye",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "place": "Blue Cruise (gulet)",
+              "why": "Multi-day wooden-boat sailing the coast",
+              "rough_time": "1-4 days",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "place": "Side",
+              "why": "Ancient city with a Roman temple and sandy beaches.",
+              "rough_time": "1 hour",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            },
+            {
+              "place": "Termessos",
+              "why": "Mountain-top ancient city with stunning views.",
+              "rough_time": "1 hour",
+              "rank": "optional",
+              "named_by": [
+                "deepseek"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    },
+    {
+      "name": "Pamukkale",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly Istanbul–Denizli (DNZ/Çardak) then ~1h to Pamukkale; or long day trip from Selçuk/Kuşadası/Antalya; many do it as part of an Aegean route.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Pamukkale village is small and walkable to the travertine entrance; dolmuş from Denizli.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "Denizli Çardak (DNZ)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {
+              "name": "Travertine terraces",
+              "why": "Surreal white calcium pools — walk barefoot, go early or late for light/crowds",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Hierapolis",
+              "why": "Extensive Greco-Roman ruins atop the terraces",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            },
+            {
+              "name": "Cleopatra's Antique Pool",
+              "why": "Swim among submerged Roman columns (extra fee)",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_stay": {
+          "value": [
+            {
+              "area": "Pamukkale village",
+              "who_for": "Budget guesthouses to overnight and beat day-tripper crowds",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "where_to_eat": {
+          "value": [
+            {
+              "name_or_type": "Village guesthouse restaurants",
+              "why": "Simple home-style Turkish meals",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        },
+        "day_trips": {
+          "value": [
+            {
+              "place": "Laodicea / Aphrodisias",
+              "why": "More ancient cities within reach",
+              "rough_time": "Half-full day",
+              "rank": "optional",
+              "named_by": [
+                "claude"
+              ]
+            }
+          ],
+          "rank": "core"
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "Turkey in a Week: Istanbul & Cappadocia",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {
+            "day": 1,
+            "morning": "Arrive Istanbul (IST), transfer to Sultanahmet",
+            "afternoon": "Settle in, walk Sultanahmet Square",
+            "evening": "Dinner + rooftop view of Blue Mosque"
+          },
+          {
+            "day": 2,
+            "morning": "Hagia Sophia + Blue Mosque",
+            "afternoon": "Topkapı Palace + Basilica Cistern",
+            "evening": "Meyhane dinner in Beyoğlu"
+          },
+          {
+            "day": 3,
+            "morning": "Grand Bazaar + Spice Bazaar",
+            "afternoon": "Bosphorus cruise",
+            "evening": "Kadıköy (Asian side) food crawl"
+          },
+          {
+            "day": 4,
+            "morning": "Fly to Cappadocia (Kayseri/Nevşehir), transfer to Göreme",
+            "afternoon": "Göreme Open-Air Museum",
+            "evening": "Sunset at a panorama point, cave-hotel dinner"
+          },
+          {
+            "day": 5,
+            "morning": "Sunrise hot air balloon",
+            "afternoon": "Red/Rose Valley hike",
+            "evening": "Testi kebab in Ürgüp"
+          },
+          {
+            "day": 6,
+            "morning": "Derinkuyu underground city",
+            "afternoon": "Uçhisar Castle + Pigeon Valley",
+            "evening": "Fly back to Istanbul"
+          },
+          {
+            "day": 7,
+            "morning": "Any missed Istanbul sight / shopping",
+            "afternoon": "Depart IST",
+            "evening": "—"
+          }
+        ],
+        "notes": "RECOMMENDATION — the most popular first-timer route; tight but doable."
+      },
+      "assumptions": {
+        "value": "Two internal flights; balloon weather-dependent (build a buffer morning)."
+      }
+    },
+    {
+      "title": "7 Days in Turkey: The Classic First-Timer Route",
+      "days": 7,
+      "scope": "multi-city",
+      "plan": {
+        "value": [],
+        "notes": "RECOMMENDATION — same spine as 'Turkey in a Week' (Istanbul + Cappadocia); writer differentiates angle/pacing. Cross-reference, don't duplicate the day-by-day."
+      },
+      "assumptions": {
+        "value": "Treat as the flagship 7-day plan; 'Turkey in a Week' is the Istanbul+Cappadocia-only variant."
+      }
+    },
+    {
+      "title": "10 Days in Turkey: Istanbul, Cappadocia & the Coast",
+      "days": 10,
+      "scope": "whole-country",
+      "plan": {
+        "value": [
+          {
+            "day": "1-3",
+            "morning": "Istanbul highlights (as 7-day days 1-3)",
+            "afternoon": "",
+            "evening": ""
+          },
+          {
+            "day": "4-6",
+            "morning": "Cappadocia (balloon, valleys, underground city)",
+            "afternoon": "",
+            "evening": ""
+          },
+          {
+            "day": "7",
+            "morning": "Fly to Izmir, drive to Selçuk",
+            "afternoon": "Ephesus",
+            "evening": "Şirince"
+          },
+          {
+            "day": "8",
+            "morning": "Pamukkale & Hierapolis day",
+            "afternoon": "",
+            "evening": "Back toward coast"
+          },
+          {
+            "day": "9",
+            "morning": "Antalya old town or Kaş",
+            "afternoon": "Beach/coast time",
+            "evening": "Seafood meyhane"
+          },
+          {
+            "day": "10",
+            "morning": "Fly Antalya–Istanbul",
+            "afternoon": "Depart",
+            "evening": "—"
+          }
+        ],
+        "notes": "RECOMMENDATION — adds the Aegean/Med to the classic core."
+      },
+      "assumptions": {
+        "value": "Three internal flights; car rental on the coast helps."
+      }
+    },
+    {
+      "title": "14 Days in Turkey: The Grand Tour",
+      "days": 14,
+      "scope": "whole-country",
+      "plan": {
+        "value": [],
+        "notes": "RECOMMENDATION — 10-day route plus deeper coast (Fethiye/Ölüdeniz, Blue Cruise), more Aegean ruins, optional Ankara or an Eastern Turkey extension (Nemrut/Gaziantep). Writer builds full day-by-day from the city pools."
+      },
+      "assumptions": {
+        "value": "Slower pace; one multi-day gulet cruise; room for an offbeat region."
+      }
+    },
+    {
+      "title": "Best Turkey Itineraries by Trip Length",
+      "days": "varies",
+      "scope": "whole-country",
+      "plan": {
+        "value": [],
+        "notes": "RECOMMENDATION — overview/hub article comparing 5/7/10/14-day options; links to the specific itinerary guides. No new day-by-day; it's a routing/index piece."
+      },
+      "assumptions": {
+        "value": "Acts as the itineraries category anchor."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "value": [
+        {
+          "name": "Istanbul historic peninsula",
+          "where": "Istanbul",
+          "why": "Byzantine + Ottoman monuments in one walkable core",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Cappadocia + sunrise balloon",
+          "where": "Central Anatolia",
+          "why": "Otherworldly landscape, Turkey's signature image",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Ephesus",
+          "where": "Aegean coast",
+          "why": "Premier ancient city of the eastern Mediterranean",
+          "rank": "core",
+          "named_by": [
+            "claude",
+            "deepseek",
+            "grok"
+          ]
+        },
+        {
+          "name": "Pamukkale & Hierapolis",
+          "where": "Denizli",
+          "why": "Unique natural travertines + ruins",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Turquoise Coast (Lycian)",
+          "where": "Mediterranean coast",
+          "why": "Beaches, gulet cruises, coastal ruins",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Pergamon / Troy",
+          "where": "Aegean/NW",
+          "why": "For ancient-history travelers",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Göbeklitepe",
+          "where": "Şanlıurfa (east)",
+          "why": "World's oldest known temple, ~11,000 years old — for the intrepid",
+          "rank": "optional",
+          "named_by": [
+            "claude"
+          ]
+        },
+        {
+          "name": "Hagia Sophia",
+          "where": "Istanbul",
+          "why": "One of the greatest architectural wonders",
+          "rank": "core",
+          "named_by": [
+            "deepseek",
+            "grok"
+          ]
+        },
+        {
+          "name": "Cappadocia Hot Air Balloons",
+          "where": "Cappadocia",
+          "why": "Unforgettable aerial view of fairy chimneys.",
+          "rank": "core",
+          "named_by": [
+            "deepseek",
+            "grok"
+          ]
+        },
+        {
+          "name": "Pamukkale",
+          "where": "Denizli",
+          "why": "Surreal white travertine terraces and ancient Hierapolis.",
+          "rank": "core",
+          "named_by": [
+            "deepseek",
+            "grok"
+          ]
+        },
+        {
+          "name": "Blue Mosque",
+          "where": "Istanbul",
+          "why": "Stunning Ottoman architecture with blue tiles.",
+          "rank": "optional",
+          "named_by": [
+            "deepseek"
+          ]
+        },
+        {
+          "name": "Topkapı Palace",
+          "where": "Istanbul",
+          "why": "Opulent palace of Ottoman sultans.",
+          "rank": "optional",
+          "named_by": [
+            "deepseek"
+          ]
+        },
+        {
+          "name": "Bosphorus Cruise",
+          "where": "Istanbul",
+          "why": "Scenic boat ride between Europe and Asia.",
+          "rank": "core",
+          "named_by": [
+            "deepseek",
+            "grok"
+          ]
+        }
+      ],
+      "rank": "core"
+    }
+  },
+  "_open_questions": {
+    "_note": "Honest flags, ranked by load-bearing risk. Confirm against official sources before relying (deferred official-verification phase).",
+    "value": [
+      "US VISA (highest): confirm US ordinary-passport tourists are visa-free for ≤90 days at evisa.gov.tr. Panel split (2 visa-free vs 1 e-visa); ruled visa-free as current state but kept verify_recommended.",
+      "Passport validity: confirm Turkey's 150-days-beyond-entry rule officially (panel gave 150 days vs generic 6 months).",
+      "Currency declaration limit: UNRESOLVED — sources gave $5,000 / $10,000 / 25,000 TRY export. Left null; verify before printing any number.",
+      "US State Dept advisory LEVEL + date and exact do-not-travel zones (Syria border / Şırnak / Hakkari).",
+      "Phone IMEI 120-day registration threshold for foreign devices — confirm exact day count and tourist impact."
+    ]
+  }
+}
+
+===== ARTICLES =====
+
+----- where-to-stay-cappadocia -----
+TITLE: Where to Stay in Cappadocia: Cave Hotels & Towns
+<p>In Cappadocia, where you sleep is part of the experience — most visitors stay in a <strong>cave hotel</strong>, rooms carved into the soft volcanic rock, many with terraces facing the dawn balloon launch. The bigger decision is which town to base in, because each has a distinct character. Here's how to choose, and how to land a room with the view you came for.</p>
+
+<!-- IMAGE_SLOT_1: A cave hotel terrace at sunrise with stone arches and balloons rising over the valley -->
+
+<h2>Goreme — best for first-timers</h2>
+<p><strong>Goreme</strong> is the obvious base for a first visit: central, walkable, and right in the heart of the balloon launch zone, so its cave-hotel terraces look straight out over the morning flights. It has the widest range of places to stay — from budget guesthouses to luxurious cave suites — plus the most restaurants, tour offices, and rental shops within walking distance. The trade-off is that it's the busiest and most tourist-focused town, but for convenience and that quintessential balloons-at-breakfast view, it's hard to beat.</p>
+<p><strong>Who it's for:</strong> first-timers, anyone without a car, travelers who want everything walkable and the best balloon-launch views.</p>
+
+<h2>Uchisar — best for views and upscale calm</h2>
+<p>Perched around its landmark castle at the highest point in the region, <strong>Uchisar</strong> is quieter and more refined, with some of the best panoramas and most luxurious cave suites in Cappadocia. You're a short drive from Goreme's bustle but wake to sweeping valley views and a calmer pace.</p>
+<p><strong>Who it's for:</strong> couples, travelers after upscale cave suites and the best views, anyone who values quiet over walkable nightlife.</p>
+
+<!-- IMAGE_SLOT_2: Uchisar Castle rising above cave dwellings with the valley stretching behind -->
+
+<h2>Urgup — best for dining and wineries</h2>
+<p><strong>Urgup</strong> is a larger, lived-in town with a real local life, more restaurants, a few wine houses (the region has a winemaking tradition), and some grand boutique cave hotels. It's a little farther from the prime balloon-launch viewpoints but offers more in the way of evening options and a less touristy feel.</p>
+<p><strong>Who it's for:</strong> food and wine lovers, travelers who want a town with its own rhythm beyond tourism, those happy to drive or tour to the sights.</p>
+
+<h2>Ortahisar — best for authentic quiet</h2>
+<p>Smaller and more low-key, <strong>Ortahisar</strong> clusters around its own rock fortress and offers an authentic village feel with a handful of characterful cave hotels. It's the pick for travelers who want calm and local atmosphere over convenience.</p>
+<p><strong>Who it's for:</strong> repeat visitors and travelers seeking a quiet, authentic base away from the crowds.</p>
+
+<h2>How to choose a cave hotel — and book</h2>
+<p>A few tips: request a room or, ideally, a <strong>terrace with a valley view</strong> for the sunrise balloon show — it's the difference between a good stay and an unforgettable one. Genuine cave rooms can be dim and cool (that's part of the charm), so if you want lots of light, ask. Standards range from simple to spectacular, and the best-located terraces book out early in spring and fall, so reserve ahead. For the wider trip, pair this with our <a data-internal="cappadocia-first-timers">Cappadocia first-timers guide</a> and the <a data-internal="cappadocia-balloon-ride">balloon ride guide</a>.</p>
+
+<h2>What a cave hotel is really like</h2>
+<p>It helps to know what you're booking. Genuine cave rooms are carved into the soft volcanic tuff, which means thick stone walls, arched ceilings, and a naturally cool, quiet interior — wonderful in summer heat, and cozy with good heating in winter. The trade-off is that true cave rooms can be on the dim side with smaller windows, so if you want bright morning light, ask for a room with a terrace or a "deluxe" cave that combines rock walls with a window-facing aspect. Many properties mix cave rooms with stone-built rooms, so confirm you're getting an actual cave if that's the experience you came for. Bathrooms in the better hotels are thoroughly modern despite the ancient walls.</p>
+
+<h2>Budget vs splurge</h2>
+<p>Thanks to the weak lira, Cappadocia delivers strong value across every tier. Simple cave guesthouses are remarkably affordable, mid-range boutique cave hotels offer real character without a luxury price, and the top suites — private terraces, plunge pools, sweeping valley views — cost a fraction of comparable luxury elsewhere. Decide which matters more to you: a knockout terrace view for the sunrise (worth paying up for) or saving money on a room you'll mostly use to sleep. Prices climb in spring and fall and around the balloon-heavy high season, so book early either way.</p>
+
+<!-- AFFILIATE_SLOT: hotels — Booking.com CTA for cave hotels in Goreme and Uchisar with terrace views -->
+
+<div class="feature-map" data-points="[
+{&quot;name&quot;:&quot;Goreme&quot;,&quot;lat&quot;:38.6431,&quot;lng&quot;:34.8289,&quot;note&quot;:&quot;Best first-timer base, launch-zone views&quot;},
+{&quot;name&quot;:&quot;Uchisar&quot;,&quot;lat&quot;:38.6308,&quot;lng&quot;:34.8056,&quot;note&quot;:&quot;Highest point, upscale, best panoramas&quot;},
+{&quot;name&quot;:&quot;Urgup&quot;,&quot;lat&quot;:38.6310,&quot;lng&quot;:34.9130,&quot;note&quot;:&quot;Dining, wineries, local life&quot;},
+{&quot;name&quot;:&quot;Ortahisar&quot;,&quot;lat&quot;:38.6206,&quot;lng&quot;:34.8606,&quot;note&quot;:&quot;Quiet, authentic village&quot;}
+]"></div>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>What is the best town to stay in Cappadocia?</summary><div><p>Goreme for first-timers — central, walkable, and in the balloon launch zone. Uchisar for upscale calm and the best views; Urgup for dining and wineries; Ortahisar for quiet authenticity.</p></div></details>
+<details><summary>Are cave hotels worth it?</summary><div><p>Yes — staying in a cave hotel is a signature Cappadocia experience. Request a terrace with a valley view for the sunrise balloon show.</p></div></details>
+<details><summary>Which hotels have the best balloon views?</summary><div><p>Terraced cave hotels in Goreme and Uchisar overlook the launch zone. Ask specifically for a valley-view room or rooftop terrace when booking.</p></div></details>
+<details><summary>Do I need to book Cappadocia hotels in advance?</summary><div><p>Yes, especially in spring and fall when the best-located terrace rooms sell out early.</p></div></details>
+</section>
+
+----- 2-days-cappadocia -----
+TITLE: 2 Days in Cappadocia: The Perfect Itinerary
+<p>Two full days is the practical minimum for Cappadocia — enough to fly over the valleys at dawn, explore the rock-cut churches and underground cities, and hike among the fairy chimneys, while leaving a buffer in case weather grounds your balloon. This itinerary keeps each day efficient. Base yourself in <strong>Goreme</strong> for easy access; see our <a data-internal="where-to-stay-cappadocia">where to stay guide</a> for cave-hotel picks.</p>
+
+<!-- IMAGE_SLOT_1: Sunrise over the Goreme valley with balloons aloft and fairy chimneys below -->
+
+<h2>Before you arrive: the balloon-buffer rule</h2>
+<p>Balloon flights launch only at sunrise and only in safe weather, so cancellations happen in any season. Plan your flight for the <strong>first morning</strong>; if it's scrubbed, you still have the second morning as a backup. Book ahead with a flexible fare that refunds or rebooks you. Everything about the flight is in our <a data-internal="cappadocia-balloon-ride">balloon ride guide</a>.</p>
+
+<h2>Day 1 — Balloon, museum, and the central valleys</h2>
+<p><strong>Sunrise:</strong> if conditions allow, take your <strong>hot air balloon flight</strong> — a pre-dawn pickup, about an hour aloft, and the traditional champagne toast on landing. You'll be back in time for breakfast on your hotel terrace.</p>
+<p><strong>Morning:</strong> visit the <strong>Goreme Open-Air Museum</strong>, a UNESCO site of rock-cut Byzantine churches with surviving frescoes — the historical heart of the region.</p>
+<p><strong>Afternoon:</strong> hike one of the central valleys. The <strong>Rose and Red Valleys</strong> are gorgeous in late-afternoon light, and <strong>Love Valley</strong> and <strong>Pigeon Valley</strong> are easy, scenic walks. Cap the day at <strong>Uchisar Castle</strong>, the region's highest point, for sunset over the whole landscape.</p>
+
+<!-- IMAGE_SLOT_2: Hikers on a trail through the Rose Valley among pink-tinged rock formations -->
+
+<h2>Day 2 — Underground city and the wider region</h2>
+<p><strong>Morning:</strong> descend into an <strong>underground city</strong> — either <strong>Derinkuyu</strong> or <strong>Kaymakli</strong> — the multi-level subterranean refuges carved deep into the rock, once home to thousands. It's a remarkable, slightly claustrophobic marvel of ancient engineering.</p>
+<p><strong>Afternoon:</strong> if your balloon flew on day one, use this time for the <strong>Ihlara Valley</strong>, a green canyon walk often paired with the underground city on the local "Green Tour," or explore <strong>Pasabag (Monks Valley)</strong> and Devrent's surreal rock shapes. If your balloon was cancelled on day one, this is your second sunrise window — take the flight this morning instead and shuffle the sights.</p>
+
+<h2>What to pack for the days</h2>
+<p>Cappadocia's high-desert climate swings a lot between dawn and afternoon, so layers are essential year-round. Mornings — especially for the pre-dawn balloon pickup — are cold even in summer, while midday can be hot and exposed on the valley trails. Wear sturdy closed shoes for hiking and for the balloon basket, bring sun protection, and carry water on hikes. The underground cities stay cool, so a light layer helps there too. In winter, expect genuine cold and the chance of snow dusting the fairy chimneys — magical, but pack accordingly.</p>
+
+<h2>How to get around</h2>
+<p>The sights are spread out, so most travelers take the local <strong>Red Tour</strong> (Goreme-area highlights) and <strong>Green Tour</strong> (underground city plus Ihlara), which bundle a guide and transport affordably. Independent travelers can rent a car, scooter, or ATV. Don't miss a <strong>testi kebab</strong>, the regional specialty cooked and cracked open tableside in a clay pot.</p>
+
+<!-- AFFILIATE_SLOT: tours — GetYourGuide CTA for Cappadocia Red Tour and Green Tour day trips -->
+
+<h2>Where to eat between the sights</h2>
+<p>Cappadocian food is hearty and regional. Beyond the signature <strong>testi kebab</strong>, look for <em>gözleme</em> (stuffed flatbread), slow-cooked stews, and the local pottery-baked dishes that suit the cool evenings. Goreme and Urgup have the widest choice of cave restaurants, several with terraces for a sunset dinner, and the area's small wineries near Urgup are worth a glass. Most hotels include a generous Turkish breakfast that easily fuels a morning of hiking.</p>
+
+<h2>With more time</h2>
+<p>A third day lets you slow down — more hiking, a pottery workshop in Avanos, a local winery near Urgup, or simply another terrace sunrise. Cappadocia pairs with Istanbul for the classic week in Turkey; see the <a data-internal="turkey-one-week">one-week itinerary</a>.</p>
+
+<h2>Is two days enough?</h2>
+<p>Two full days hits every headline — the balloon, the museum, an underground city, and the best valleys and viewpoints — and is what most travelers on the classic Istanbul-and-Cappadocia route allow. The one risk is the weather-dependent balloon: with only two mornings, a run of bad weather can still cost you the flight, which is the strongest argument for stretching to a third night if your schedule allows. If you're tight on time, two days works well; if the balloon is a bucket-list item, build in the extra buffer.</p>
+
+<div class="feature-map" data-points="[
+{&quot;name&quot;:&quot;Goreme Open-Air Museum&quot;,&quot;lat&quot;:38.6433,&quot;lng&quot;:34.8447,&quot;note&quot;:&quot;Day 1 morning&quot;},
+{&quot;name&quot;:&quot;Uchisar Castle&quot;,&quot;lat&quot;:38.6308,&quot;lng&quot;:34.8056,&quot;note&quot;:&quot;Day 1 sunset&quot;},
+{&quot;name&quot;:&quot;Derinkuyu Underground City&quot;,&quot;lat&quot;:38.3739,&quot;lng&quot;:34.7344,&quot;note&quot;:&quot;Day 2 morning&quot;},
+{&quot;name&quot;:&quot;Pasabag (Monks Valley)&quot;,&quot;lat&quot;:38.6650,&quot;lng&quot;:34.8430,&quot;note&quot;:&quot;Day 2&quot;},
+{&quot;name&quot;:&quot;Goreme&quot;,&quot;lat&quot;:38.6431,&quot;lng&quot;:34.8289,&quot;note&quot;:&quot;Your base&quot;}
+]"></div>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>Is 2 days enough for Cappadocia?</summary><div><p>Two full days covers the balloon flight, the Goreme Open-Air Museum, an underground city, and valley hikes, with a buffer morning for weather. Three days lets you slow down.</p></div></details>
+<details><summary>Should I book the balloon for the first or second morning?</summary><div><p>The first morning, so a weather cancellation still leaves you the second morning as a backup. Choose a flexible fare.</p></div></details>
+<details><summary>What's the difference between the Red and Green Tours?</summary><div><p>The Red Tour covers Goreme-area highlights like the Open-Air Museum and viewpoints; the Green Tour covers the farther underground city and the Ihlara Valley canyon walk.</p></div></details>
+<details><summary>Do I need a car in Cappadocia?</summary><div><p>Not necessarily — the Red and Green group tours cover the main sights with transport. A car, scooter, or ATV gives more freedom if you prefer to explore independently.</p></div></details>
+</section>
+
+----- things-to-do-cappadocia -----
+TITLE: Best Things to Do in Cappadocia
+<p>The sunrise balloon flight is Cappadocia's headline act, but this otherworldly region of fairy chimneys, cave churches, and underground cities fills two or three days easily. Here are the best things to do, from the essential sights to the experiences that round out a trip.</p>
+
+<!-- IMAGE_SLOT_1: Wide view of the Cappadocia landscape with fairy chimneys and cave dwellings -->
+
+<h2>Take a sunrise balloon flight</h2>
+<p>It's the defining experience for a reason — drifting over the valleys at dawn amid hundreds of balloons is unforgettable. Flights are weather-dependent and book out, so reserve ahead and give yourself a buffer day. Even grounded, you can watch the launch from a terrace. Full details in our <a data-internal="cappadocia-balloon-ride">balloon ride guide</a>.</p>
+
+<h2>Explore the Goreme Open-Air Museum</h2>
+<p>This UNESCO World Heritage site is a cluster of <strong>rock-cut Byzantine churches</strong> with remarkably preserved frescoes, carved into the soft tuff by early Christian communities. It's the region's historical core and a must-see — go early to beat tour groups.</p>
+
+<h2>Go underground</h2>
+<p>Cappadocia's <strong>underground cities</strong> — chiefly <strong>Derinkuyu</strong> and <strong>Kaymakli</strong> — descend many levels into the earth, complete with ventilation shafts, wells, stables, and chapels. They once sheltered thousands during invasions. Exploring the narrow passages is a genuine highlight, if a little tight for the claustrophobic.</p>
+
+<!-- IMAGE_SLOT_2: Narrow carved stone passage descending into an underground city -->
+
+<h2>Hike the valleys</h2>
+<p>The landscape is best understood on foot. The <strong>Rose and Red Valleys</strong> glow at sunset; <strong>Love Valley</strong> is famous for its towering rock pillars; <strong>Pigeon Valley</strong> links Goreme and Uchisar; and the <strong>Ihlara Valley</strong> is a lush canyon walk farther out. Trails range from gentle strolls to half-day hikes, and many are free to wander.</p>
+
+<h2>Climb Uchisar Castle</h2>
+<p>The tallest fairy chimney of all, <strong>Uchisar Castle</strong> is a honeycombed rock fortress with the best panoramic view in the region — spectacular at sunset and an easy add-on to a valley walk.</p>
+
+<h2>Visit Pasabag and Devrent</h2>
+<p><strong>Pasabag (Monks Valley)</strong> has some of the most striking multi-headed fairy chimneys, and nearby <strong>Devrent (Imagination Valley)</strong> is a surreal field of rock shapes — no churches or ruins, just nature's sculpture garden. Both are quick, rewarding stops.</p>
+
+<h2>Try pottery in Avanos</h2>
+<p>The town of <strong>Avanos</strong>, on the red Kizilirmak river, has a centuries-old pottery tradition. Watching — or trying — the wheel is a fun, hands-on break from sightseeing, and the ceramics make good souvenirs.</p>
+
+<h2>Eat a testi kebab and stay in a cave</h2>
+<p>Finally, two experiences are baked into being here: order a <strong>testi kebab</strong>, slow-cooked and dramatically cracked open in a sealed clay pot, and sleep in a <strong>cave hotel</strong> with a terrace facing the dawn launch. Both are quintessential Cappadocia. See where to base yourself in our <a data-internal="where-to-stay-cappadocia">cave hotels guide</a>.</p>
+
+<h2>When to go and how to plan your days</h2>
+<p>Spring (April–May) and fall (September–October) are the prime seasons: mild days, the most reliable balloon mornings, and comfortable hiking weather. Summer is hot and busy but still rewarding if you start early; winter brings cold and occasional snow that transforms the landscape into something out of a fairy tale, with quieter trails and lower prices. However long you stay, structure your time around the weather-dependent balloon: book it for your first morning, then fill the rest with the museum, an underground city, and valley hikes, keeping a backup morning in reserve. Two days is the practical minimum; three lets you add Avanos, a winery, or a slow second sunrise. Our <a data-internal="2-days-cappadocia">2-day itinerary</a> sequences it all.</p>
+
+<!-- AFFILIATE_SLOT: tours — GetYourGuide CTA for guided Cappadocia tours and activities -->
+
+<h2>Half-day and offbeat ideas</h2>
+<p>If you have spare time between the big sights, Cappadocia rewards slow exploration. Watch the sunset from a quiet ridge instead of a crowded viewpoint, browse the workshops of Avanos for handmade ceramics, or seek out lesser-known valleys like Love and Pigeon for near-empty trails. A handful of operators offer horseback rides through the formations — fitting, since the region's name is often translated as "land of beautiful horses." These low-key experiences are where Cappadocia feels personal rather than packaged.</p>
+
+<h2>Practical tips</h2>
+<p>A few things make the sights more enjoyable. Start early at the Open-Air Museum and the underground cities to beat tour-bus crowds. Wear layers and sturdy shoes — mornings are cold, trails are uneven, and the underground passages are cool and tight. Carry water and sun protection for the exposed valley hikes. Many viewpoints and shorter valley trails are free and uncrowded if you go independently rather than with a group. And keep some cash for village cafes, the pottery workshops in Avanos, and tipping guides. With the weak lira, all of this is excellent value for American travelers right now.</p>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>What is Cappadocia famous for?</summary><div><p>Its surreal landscape of fairy chimneys, sunrise hot air balloon flights, rock-cut cave churches, underground cities, and cave hotels.</p></div></details>
+<details><summary>What are the must-do things in Cappadocia?</summary><div><p>A sunrise balloon flight, the Goreme Open-Air Museum, an underground city, valley hikes, and the view from Uchisar Castle.</p></div></details>
+<details><summary>Can you visit Cappadocia without doing the balloon?</summary><div><p>Absolutely. The museums, underground cities, valley hikes, and viewpoints fill two or three days on their own.</p></div></details>
+<details><summary>Are the underground cities worth visiting?</summary><div><p>Yes — Derinkuyu and Kaymakli are extraordinary feats of ancient engineering, though the narrow passages can feel tight for the claustrophobic.</p></div></details>
+</section>
+
+----- cappadocia-towns-compared -----
+TITLE: Goreme vs Uchisar vs Urgup: Where to Base Yourself
+<p>Cappadocia isn't a single town but a region of villages scattered among the fairy chimneys, and choosing the right base shapes your trip. The three main contenders are <strong>Goreme</strong>, <strong>Uchisar</strong>, and <strong>Urgup</strong>. Here's how they compare so you can match a town to your travel style. For full lodging picks, see our <a data-internal="where-to-stay-cappadocia">where to stay in Cappadocia guide</a>.</p>
+
+<!-- IMAGE_SLOT_1: Side-by-side feel of three Cappadocian towns among the rock formations -->
+
+<h2>Goreme — the convenient hub</h2>
+<p>Goreme sits in the geographic center of the action, in the heart of the balloon launch zone. It's the most <strong>walkable</strong> town, with the densest concentration of cave hotels, restaurants, tour offices, and rental shops, and its terraces have the best balloon-launch views. It's also the busiest and most tourist-oriented.</p>
+<ul>
+<li><strong>Best for:</strong> first-timers, no-car travelers, and anyone who wants everything within walking distance.</li>
+<li><strong>Trade-off:</strong> the most crowds and the least local feel.</li>
+</ul>
+
+<h2>Uchisar — the view</h2>
+<p>Built around the region's highest point, Uchisar offers the best <strong>panoramas</strong> and a quieter, more upscale atmosphere, with some of the most luxurious cave suites. It's a short hop from Goreme's amenities but feels calmer and more exclusive.</p>
+<ul>
+<li><strong>Best for:</strong> couples, view-seekers, and travelers wanting upscale calm.</li>
+<li><strong>Trade-off:</strong> fewer restaurants and less nightlife; you'll drive or tour to some sights.</li>
+</ul>
+
+<!-- IMAGE_SLOT_2: The view from Uchisar over the valleys at golden hour -->
+
+<h2>Urgup — the town with a life of its own</h2>
+<p>Urgup is the largest of the three, a real working town with a local rhythm, the best range of <strong>restaurants and wine houses</strong>, and some grand boutique cave hotels. It feels less like a tourist village and more like a place people actually live.</p>
+<ul>
+<li><strong>Best for:</strong> food and wine lovers, and travelers who want evening options and a non-touristy base.</li>
+<li><strong>Trade-off:</strong> farther from the prime balloon-launch viewpoints; better with a car or tours.</li>
+</ul>
+
+<h2>Comparing on the things that matter</h2>
+<p><strong>Views:</strong> Uchisar wins on sheer panorama from its height, but Goreme's terraces have the best head-on balloon-launch views. <strong>Convenience:</strong> Goreme is the most walkable, with sights, food, and tours at your doorstep; Uchisar and Urgup involve a little more driving or touring. <strong>Dining and nightlife:</strong> Urgup leads, with the widest restaurant choice and wine houses, followed by Goreme; Uchisar is the quietest after dark. <strong>Atmosphere:</strong> Goreme is lively and tourist-focused, Uchisar refined and calm, Urgup the most authentically lived-in. <strong>Price:</strong> all three span budget to luxury, though Uchisar skews upscale. There's no wrong choice — they're minutes apart — so weight the factor that matters most to you.</p>
+
+<h2>Quick verdict</h2>
+<p>For a first trip with no car, choose <strong>Goreme</strong> — it's the easiest and has the iconic views. For a romantic or upscale stay with the best panoramas, pick <strong>Uchisar</strong>. For dining, wine, and a town with genuine local life, go for <strong>Urgup</strong>. All three are close together, so wherever you stay, the whole region is within easy reach by tour or car. If you want maximum quiet and authenticity, also consider smaller <strong>Ortahisar</strong> nearby.</p>
+
+<h2>Does it matter if you have a car?</h2>
+<p>Your transport plan can tip the decision. If you're <strong>not renting a car</strong>, Goreme is the clear winner — you can walk to restaurants and tour pickups and reach the launch viewpoints on foot. If you <strong>are driving</strong> or relying on the Red and Green group tours (which pick up from all the main towns), the calculus opens up, and quieter Uchisar or livelier Urgup become just as practical. Since the towns are only minutes apart, even a base in one puts the others within easy reach for a dinner out or a specific hotel you love.</p>
+
+<!-- AFFILIATE_SLOT: hotels — Booking.com CTA comparing cave hotels in Goreme, Uchisar, and Urgup -->
+
+<h2>What about the smaller villages?</h2>
+<p>Beyond the big three, a few smaller bases suit specific travelers. <strong>Ortahisar</strong>, clustered around its own rock castle, is the quiet, authentic pick for those who want village calm over convenience. <strong>Avanos</strong>, on the red river north of Goreme, centers on its pottery tradition and offers a different, craft-focused atmosphere. These won't suit a first-timer who wants everything at hand, but for a return visit or a slower trip they add character. For most people, though, the choice still comes down to Goreme, Uchisar, or Urgup.</p>
+
+<div class="feature-map" data-points="[
+{&quot;name&quot;:&quot;Goreme&quot;,&quot;lat&quot;:38.6431,&quot;lng&quot;:34.8289,&quot;note&quot;:&quot;Convenient, walkable hub&quot;},
+{&quot;name&quot;:&quot;Uchisar&quot;,&quot;lat&quot;:38.6308,&quot;lng&quot;:34.8056,&quot;note&quot;:&quot;Best views, upscale calm&quot;},
+{&quot;name&quot;:&quot;Urgup&quot;,&quot;lat&quot;:38.6310,&quot;lng&quot;:34.9130,&quot;note&quot;:&quot;Dining, wine, local life&quot;}
+]"></div>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>Is Goreme or Uchisar better?</summary><div><p>Goreme is more convenient, walkable, and central with the best launch-zone views — ideal for first-timers. Uchisar is quieter, more upscale, and has the best panoramas. Choose based on whether you prioritize convenience or calm.</p></div></details>
+<details><summary>Which Cappadocia town has the best balloon views?</summary><div><p>Goreme, in the heart of the launch zone, and elevated Uchisar both offer outstanding terrace views of the morning flights.</p></div></details>
+<details><summary>Where should I stay for restaurants and nightlife?</summary><div><p>Urgup has the widest range of restaurants and wine houses and the most local life of the three main towns.</p></div></details>
+<details><summary>Are the towns far apart?</summary><div><p>No — Goreme, Uchisar, and Urgup are all close together, so wherever you base, the whole region is within easy reach by car or tour.</p></div></details>
+</section>
+
+----- istanbul-to-cappadocia -----
+TITLE: Getting to Cappadocia from Istanbul
+<p>Cappadocia is in central Anatolia, a long way from Istanbul — so how you cover the distance affects how much of your trip you spend traveling. The two realistic options are flying (fast) or the overnight bus (cheap). Here's how each works and which to choose.</p>
+
+<!-- IMAGE_SLOT_1: A small regional plane on the tarmac with the Anatolian landscape behind -->
+
+<h2>Flying — the fast option</h2>
+<p>Most travelers fly, and it's the sensible choice. Cappadocia is served by <strong>two airports</strong>:</p>
+<ul>
+<li><strong>Kayseri (ASR)</strong> — more flights and connections, about an hour's drive from Goreme.</li>
+<li><strong>Nevsehir (NAV)</strong> — closer to Goreme but with fewer flights.</li>
+</ul>
+<p>The flight from Istanbul takes a little over an hour. Both Istanbul airports — IST on the European side and Sabiha Gokcen (SAW) on the Asian side — run flights to Cappadocia, with Turkish Airlines, AJet, and Pegasus among the carriers. Fares are usually very reasonable, though prices move with season and demand, so check current rates. For the wider domestic network, see our <a data-internal="turkey-domestic-flights">domestic flights guide</a>.</p>
+
+<h2>Getting from the airport to Goreme</h2>
+<p>From either Kayseri or Nevsehir, the easiest way to your hotel is a <strong>shuttle transfer</strong> — most cave hotels arrange one, or shared shuttle services meet arriving flights and drop you at your door for a modest fee. A private taxi is faster but pricier. From Kayseri it's roughly an hour to Goreme; from Nevsehir, less. Arrange the transfer when you book your hotel so someone's waiting when you land.</p>
+
+<!-- IMAGE_SLOT_2: A shuttle van on a road approaching Goreme with fairy chimneys ahead -->
+
+<h2>The overnight bus — the budget option</h2>
+<p>Turkey's intercity buses are comfortable, modern, and cheap, and an <strong>overnight coach</strong> from Istanbul to the Cappadocia region (usually to Nevsehir or Goreme directly) takes roughly 11 hours. You'll travel while you sleep and save the cost of a flight and a night's hotel, but you arrive tired and lose flexibility. Reputable companies run the route; you can usually book online or at the bus terminal (otogar).</p>
+<p><strong>Best for:</strong> budget travelers and those who don't mind sleeping on a bus to save money and a hotel night.</p>
+
+<h2>How it fits your itinerary</h2>
+<p>Think about where Cappadocia sits in your trip. The most common pattern is Istanbul first, then a short flight to Cappadocia for two or three nights, then either back to Istanbul to fly home or onward to the coast — see our <a data-internal="turkey-one-week">one-week itinerary</a> for the classic loop. Because you'll likely fly an internal leg or two, build a little buffer around connection times, and remember that the balloon's weather-dependence is the strongest argument for arriving with two nights in hand rather than one. If you're doing a longer grand tour, Cappadocia also connects by air to coastal airports like Antalya and Izmir, so you don't always have to backtrack through Istanbul.</p>
+
+<h2>A note on driving the distance</h2>
+<p>Some travelers ask about driving from Istanbul to Cappadocia themselves. It's possible — roughly 700 km — but it's a long day on the road that eats into sightseeing time, and you don't need a car in either Istanbul or Cappadocia itself. Unless you specifically want a road trip through central Anatolia with stops along the way, flying and arranging local transfers or tours is far more efficient.</p>
+
+<h2>Which should you choose?</h2>
+<p>For almost everyone, <strong>fly</strong> — spending a little over an hour in the air instead of 11 on a bus is worth it, and budget carriers keep fares low. Reserve the overnight bus only if you're traveling on a tight budget or want to save a hotel night. Either way, give Cappadocia at least <strong>two nights</strong> so weather can't rob you of the balloon flight. For the full plan, see our <a data-internal="cappadocia-first-timers">Cappadocia first-timers guide</a>.</p>
+
+<h2>Booking tips</h2>
+<p>For flights, compare both Cappadocia airports (Kayseri and Nevsehir) and both Istanbul airports (IST and Sabiha Gokcen), since a slightly less convenient combination can be noticeably cheaper. Book a few weeks ahead in spring and fall for the best fares and morning arrival times that let you start sightseeing the same day. For the bus, choose a reputable company and a proper overnight departure so you arrive in the morning. Whichever you pick, line up your airport-to-hotel transfer in advance so the last leg into Goreme is sorted before you travel.</p>
+
+<section class="feature-faq">
+<h2>FAQ</h2>
+<details><summary>How do you get from Istanbul to Cappadocia?</summary><div><p>Fly to Kayseri (ASR) or Nevsehir (NAV) in a little over an hour, then transfer about an hour to Goreme. Alternatively, take an overnight bus of roughly 11 hours.</p></div></details>
+<details><summary>Which airport is best for Cappadocia?</summary><div><p>Kayseri (ASR) has more flights and is about an hour from Goreme; Nevsehir (NAV) is closer but has fewer connections.</p></div></details>
+<details><summary>How long is the bus from Istanbul to Cappadocia?</summary><div><p>About 11 hours, usually overnight. The buses are comfortable and cheap, but flying saves significant time.</p></div></details>
+<details><summary>How do I get from the airport to my cave hotel?</summary><div><p>Most hotels arrange a shuttle transfer, or shared shuttles meet flights and drop you at your door. Book it when you reserve your hotel.</p></div></details>
+</section>

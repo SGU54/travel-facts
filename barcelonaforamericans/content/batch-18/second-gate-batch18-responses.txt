@@ -1,0 +1,15 @@
+Second gate — batch 18 (barcelonaforamericans)
+Reader: DeepSeek (designated, corrections #5/#6)
+Date: 2026-09-07
+
+STEP 0 — SLUGS SEEN: transport-strikes-in-spain, buying-ceramics-in-spain-getting-it-home,
+through-ticket-vs-separate-ticket-spain, domestic-flights-in-spain, staying-near-sants-station
+Canary: PASS (exact match, order matches batch).
+
+FINDINGS: NO FINDINGS.
+
+Clean pass — no audit needed. Added a rule 6 to this gate's prompt ("re-read the full
+article before flagging — a caveat elsewhere in the same piece counts as present, not
+missing") to address the recurring false-positive pattern from batches 16-17 where DeepSeek
+flagged information that was actually present a few sentences away. Appears to have worked:
+zero spurious findings this round.

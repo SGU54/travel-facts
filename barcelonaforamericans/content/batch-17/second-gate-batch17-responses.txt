@@ -1,0 +1,28 @@
+Second gate — batch 17 (barcelonaforamericans)
+Reader: DeepSeek (designated, corrections #5/#6)
+Date: 2026-09-06
+
+STEP 0 — SLUGS SEEN: pharmacies-clinics-er-barcelona, barcelona-august-shutdown,
+what-to-wear-barcelona-dress-code, how-early-arrive-sagrada-familia, barcelona-shoulder-season
+Canary: PASS (exact match, order matches batch).
+
+DeepSeek listed 25 numbered items but self-retracted 23 of them within its own reasoning
+("no error", "no finding", "match"). AUDITED the 2 it left standing:
+
+1. REJECTED — pharmacies-clinics-er-barcelona / "pharmacies close at normal shop hours, but
+   a rotating duty system...": DeepSeek itself called this "more a nuance issue." Not a
+   contradiction — accurately describes the real mechanism (each individual pharmacy keeps
+   normal hours; the ROTATION is what provides round-the-clock zone coverage, not that every
+   pharmacy individually stays open 24h).
+
+2. ACCEPTED — pharmacies-clinics-er-barcelona / "a bill that goes straight to your travel
+   insurer rather than through the public system": genuinely ambiguous, reads as direct
+   clinic-to-insurer billing. facts.json (health_care.hospital_billing.billing_model_private)
+   specifies the PATIENT submits the invoice to their own insurer. IDENTICAL bug to one
+   caught and fixed on batch 16 (same underlying fact field, same phrasing pattern) — saved
+   as a project memory (health_billing_phrasing.md) to stop a third recurrence.
+   FIXED: reworded to "an itemized invoice you can submit to your own travel insurer rather
+   than the slower public-system billing path."
+
+RESULT: 1 real fix applied, 1 false positive documented and rejected. Batch 17 content is
+otherwise clean per DeepSeek's own review (all other 23 items were self-confirmed matches).

@@ -1,0 +1,309 @@
+#!/usr/bin/env python3
+"""Batch B — winter + 4 transit depth articles for japanforamericans.
+
+Written against facts.json depth_facts (merged + disputes ruled 2026-09-16).
+
+Unlike batch A, EVERY PRICE HERE CARRIES A FACT-SPAN. Japanese rail pricing is
+volatile — it rose ~70% in Oct 2023 and rises again for overseas-agency purchases
+on 1 Oct 2026 — so no figure is frozen into prose. The matching seed SQL is emitted
+alongside; without it the spans sit on their fallback text forever.
+
+PRE-JOIN DISCIPLINE (3b): each article carries ONE vein piece.
+  - the two rail articles say "JR Pass" freely and never say Suica/Pasmo/IC card
+  - the two IC-card articles say Suica/Pasmo freely and never say JR Pass/rail pass
+  - the winter article stays on seasonal-timing and touches neither
+Naming three pieces inside a 2-sentence window is the failure the guide is sold against.
+
+Image slots are scaffolding — convert to <figure> at upload (4-publishing.md 3.5).
+"""
+import json, re, os
+
+def fact(key, text):
+    return f'<span class="fact" data-fact="{key}">{text}</span>'
+
+A = []
+
+# ═══════════════════════════════════════════════════ 1. winter — SEED, seasonal-timing
+A.append({
+ "slug": "winter-in-japan-snow-onsen",
+ "title": "Winter in Japan: Snow, Onsen and the Quiet Season",
+ "category_slug": "when-to-go",
+ "excerpt": "Outside the New Year week, winter is Japan's quietest and cheapest season. Where the snow actually is, why Kyoto probably will not have any, and what the cities are like empty.",
+ "featured_image": "japanforamericans/articles/winter-in-japan-snow-onsen-hero",
+ "content": """<p>Winter is the season most first-time visitors skip, and the one that rewards them most if they do not. Outside a single fortnight around the New Year, it is the quietest and cheapest stretch of the Japanese year, with clear skies and short queues at places that are impossible in spring. This guide covers where the snow actually falls, what the cities are like in the cold, and the one period to plan around.</p>
+
+<h2>Where the snow actually is</h2>
+<p>Reliable snow in Japan falls in Hokkaido, in Tohoku, and along the Japan Sea side of the main island — Niigata, Toyama and Nagano — broadly from December through March. Tokyo and Kyoto get very little. Kyoto snow is an occasional event that photographs beautifully and lasts a morning, not a season you can book.</p>
+
+<h3>The expectation worth correcting</h3>
+<p>A great many people book Kyoto in January expecting the temples under snow they have seen photographed. Those photographs are real and they are rare, taken on a handful of mornings a year. If snow is the point of the trip, the Japan Sea side and the north deliver it reliably and the old capital does not.</p>
+
+<p>What Kyoto does deliver in winter is cold, dry, bright weather and its famous sites at a fraction of their usual density — which is arguably the better prize.</p>
+
+<!-- IMAGE_SLOT_1: Snow-covered onsen town or a steaming outdoor hot-spring bath in a snowy landscape, Japan Sea side or Tohoku, daylight. Atmospheric, no recognisable faces. -->
+
+<h2>Why the onsen makes sense now</h2>
+<p>A Japanese hot spring is a year-round institution, but sitting in an outdoor bath at around 40C while snow falls on the surrounding rocks is the version everyone pictures, and winter is when it exists. Onsen towns in the snow country run through the coldest months and are the single strongest argument for a winter trip.</p>
+
+<p>Winter is also when the traditional inns are least booked outside the holiday period, which means the rooms that are impossible to get in November are available and cheaper. If a night at <a href="/article/what-is-a-ryokan">a traditional inn</a> is on the list, this is the season to do it.</p>
+
+<h2>What the cities are like</h2>
+<p>Tokyo and Kyoto in January and February are cold, dry and unusually clear — the winter air gives the best long views of the year, including the days when Mount Fuji is visible from Tokyo. Daylight is short, so plan around a 4:30 sunset rather than fighting it, and build the evening into the day deliberately.</p>
+
+<h3>The practical trade-offs</h3>
+<p>Buildings are heated unevenly by American standards, and older accommodation can be genuinely cold in the corridors even when rooms are warm. Layers matter more than a heavy coat, because you will move between icy streets and overheated trains repeatedly in a day.</p>
+
+<p>Against that: no queues worth the name, restaurants that take walk-ins, and lodging prices below every other season. For a traveller who cares more about seeing places properly than about photographing them at their most colourful, that is a strong trade.</p>
+
+<h2>The fortnight to plan around</h2>
+<p>The New Year period, roughly 29 December to 3 or 4 January, is Japan's most significant closure window and the exception to everything above. Many independent restaurants, small shops, museums and offices close for several consecutive days, department stores typically close on 1 January, and shrines are extremely busy with the first-visit tradition.</p>
+
+<p>This is the closure that catches Americans out most often, because late December reads as an ordinary travel window from the US and the calendar gives no warning. A trip either side of it is excellent. A trip through the middle of it is a different and much more restricted experience.</p>
+
+<h2>Winter against the seasons everyone books</h2>
+<p>Winter is best understood against cherry blossom season and the autumn foliage weeks, because those are what it is competing with in most people's plans. Spring and late autumn offer the spectacle; winter offers access. The same temple that takes forty minutes of queueing in November is walked into in January.</p>
+
+<p>The trade is clear once stated plainly. You give up the colour, the long evenings and the festival atmosphere. You gain the rooms, the prices, the quiet, and the clarity in the air. For a first trip where the point is to see the country rather than photograph one week of it, that trade is better than its reputation.</p>
+
+<h2>What to eat in the cold</h2>
+<p>Japanese winter food is a genuine reason to come rather than a consolation. Hot-pot cooking at the table is at its best in the coldest months, ramen is a different proposition in freezing weather, and the winter seafood season on the Japan Sea coast is the one most prized domestically. Convenience stores switch to hot counters, and the steamed buns and simmered snacks that appear are a small daily pleasure.</p>
+
+<p>Restaurants are also simply available. The places that require a month's notice in spring take walk-ins in February, which changes what a food-focused trip can realistically include.</p>
+
+<h2>Skiing, briefly</h2>
+<p>Japan's ski regions in Hokkaido and Nagano are genuinely world-class and run on their own economics — they are the one part of the country that is expensive and busy in winter. If skiing is the trip, it is a different plan from the one this article describes. If it is not, avoid the resort towns at peak weekends and the rest of the north is empty.</p>
+
+<h2>Choosing winter on purpose</h2>
+<p>Winter, running December through March, is the clearest example of a season that changes what kind of trip is possible rather than simply changing the weather. It opens the traditional inns, closes the New Year fortnight, shortens the usable day, and makes the famous cities navigable in a way they are not for eight months of the year. <span class="guide" data-guide="name">The complete Japan trip guide</span> works through how a timing choice like that reshapes the route and the booking order underneath it.</p>
+
+<p>If your dates are flexible and you have already been told to come in spring, winter is the contrarian answer worth taking seriously — provided you know exactly which fortnight to avoid.</p>
+"""
+})
+
+# ═══════════════════════════════════════════════════ 2. regional passes — TURN, jr-pass-math
+A.append({
+ "slug": "regional-jr-passes-vs-national",
+ "title": "Regional JR Passes vs the National Japan Rail Pass",
+ "category_slug": "trains-and-jr-pass",
+ "excerpt": "Since the 2023 price rise the national pass rarely pays for itself on a first trip. How the regional passes compare, and how to tell which — if either — is worth buying.",
+ "featured_image": "japanforamericans/articles/regional-jr-passes-vs-national-hero",
+ "content": f"""<p>The Japan Rail Pass used to be the automatic first purchase of any Japan trip. Since the price rise it no longer is, and a great deal of advice online has not caught up. This guide covers what the national pass costs now, the arithmetic that decides whether it pays, how the regional passes compare, and a channel change arriving on 1 October 2026 that reverses some standing advice.</p>
+
+<h2>What the national pass costs</h2>
+<p>The national Japan Rail Pass costs {fact('rail.pass_7day_ordinary','¥50,000')} for seven days in the ordinary car, with fourteen- and twenty-one-day versions and a Green car tier above it. Children aged six to eleven pay half. That seven-day figure is the one every calculation below turns on.</p>
+
+<h3>Why the advice online is stale</h3>
+<p>In October 2023 the seven-day ordinary pass rose from about ¥29,650 to its current price — an increase of roughly sixty-five to seventy per cent in a single step. A great deal of the English-language guidance that recommends buying the pass reflexively was written before that, and has never been revised. The pass did not merely get more expensive; it stopped being the default answer.</p>
+
+<h2>The arithmetic that actually decides it</h2>
+<p>A reserved seat from Tokyo to Kyoto on a Hikari service — the fastest train the national pass covers — costs {fact('rail.tokyo_kyoto_reserved','about ¥13,850')} one way. Divide the pass price by that and the pass needs roughly four long journeys of similar distance before it pays for itself, which is about two round trips inside the seven-day window.</p>
+
+<h3>What that means for a normal first trip</h3>
+<p>The classic first trip flies into Tokyo, spends several days there, takes the bullet train to Kyoto, spends several more, and flies home. That is two long journeys, not four. On its own it does not come close to justifying the national pass, and buying one out of habit is a straightforward loss.</p>
+
+<p>The picture changes if you add distance. A trip that also reaches Hiroshima, or that returns north from the Kansai region, or that uses the fast trains for several day trips, starts to accumulate the legs the pass needs. The honest test is to count your actual long journeys before you buy, not after.</p>
+
+<p>Two details sit on the credit side of the ledger. The pass also covers local JR lines in the cities and the airport express from Narita, which is real value it is easy to forget. And it covers unlimited travel, so a spontaneous extra journey costs nothing once you hold one.</p>
+
+<!-- IMAGE_SLOT_1: A Shinkansen at a platform with the nose prominent, or a JR ticket gate with the departure board visible. Clean, daylight, no recognisable faces. -->
+
+<h2>The fastest trains are not included</h2>
+<p>Nozomi and Mizuho services, the quickest on the Tokaido and Sanyo lines, are not covered by the national pass. Pass holders may ride them by buying a separate supplement, reported at {fact('rail.nozomi_supplement_tokyo_kyoto','around ¥4,960')} for Tokyo to Kyoto. The Hikari, Sakura and Kodama services on the same tracks are fully covered and take roughly twenty minutes longer.</p>
+
+<p>For most itineraries that twenty minutes is not worth paying for, but it matters if you are timing a connection or travelling at the end of a long day.</p>
+
+<h2>The regional passes</h2>
+<p>Regional passes cover one area of Japan rather than the whole country and cost a fraction of the national pass's price, which makes them the better fit for most first trips. The four that matter on a Tokyo–Kyoto–Osaka route are the JR East Tokyo Wide Pass for three days around Tokyo, the JR West Kansai Area Pass for one to four days around Osaka and Kyoto, the Kansai-Hiroshima Area Pass for five days if you are going west, and the JR Central Takayama-Hokuriku pass for the mountain route.</p>
+
+<h3>Reading them properly</h3>
+<p>The trap in the regional passes is coverage rather than price. The Kansai Area Pass, for example, covers local and rapid services but not the bullet train, which surprises people who assume any pass includes it. Check what each one excludes before buying — that is where the disappointment lives, not in the cost.</p>
+
+<p>Regional passes also stack in a way the national pass does not. A three-day pass around Tokyo and a separate one around Kansai can cost far less than a week of national coverage while matching what you actually do.</p>
+
+<h2>Where you can buy, and a date to watch</h2>
+<p>The national pass is bought online through the official reservation site or as an Exchange Order from a designated travel agency abroad. In-person purchase at stations inside Japan ended on 1 October 2023 — you can still exchange a voucher at a station, which is not the same thing and is the distinction that strands people who plan to buy on arrival.</p>
+
+<h3>The 1 October 2026 change</h3>
+<p>From 1 October 2026 the overseas-agency price rises to {fact('rail.pass_7day_overseas_oct2026','¥53,000')} for the seven-day ordinary pass, with the longer durations and the Green tier rising in proportion. Buying online through the official site is not affected.</p>
+
+<p>That inverts a piece of advice that has been repeated for years. Going through an agent used to be the convenient and sometimes cheaper route; from that date it is simply the more expensive one.</p>
+
+<h2>What the pass decision is really attached to</h2>
+<p>Notice what the arithmetic above actually depended on. Whether the pass pays is not a fact about the pass — it is a fact about how many long journeys your route contains, which depends on how many places you base yourself in, which depends on how long you have and what time of year you are coming. The pass question cannot be answered before the route question, and it is almost always asked first.</p>
+
+<p>That is why so many first trips buy the wrong thing: the purchase gets made early, from habit, and the route that would have justified it is designed afterwards. Working out the route and the passes as one problem rather than two is what <span class="guide" data-guide="name">the complete Japan trip guide</span> is built to do.</p>
+"""
+})
+
+# ═══════════════════════════════════════════════════ 3. route cost — SEED, jr-pass-math
+A.append({
+ "slug": "japan-rail-route-cost-without-pass",
+ "title": "What a Japan Rail Route Actually Costs Without a Pass",
+ "category_slug": "trains-and-jr-pass",
+ "excerpt": "Point-to-point fares for the journeys a first trip actually makes, so you can price your own route before deciding whether any pass is worth buying.",
+ "featured_image": "japanforamericans/articles/japan-rail-route-cost-without-pass-hero",
+ "content": f"""<p>Deciding whether a rail pass is worth buying requires knowing what the same journeys cost without one, and that number is surprisingly hard to find stated plainly. This guide prices the legs a first trip actually makes, explains how a Japanese fare is built, and gives you a method for costing your own route in about ten minutes.</p>
+
+<h2>What the main journeys cost</h2>
+<p>A reserved ordinary-car seat from Tokyo to Kyoto costs {fact('rail.tokyo_kyoto_reserved','about ¥13,850')} one way on a Hikari service. Tokyo to Shin-Osaka is slightly more. Travelling without a seat reservation is a few hundred yen cheaper, and the fastest Nozomi services cost a few hundred more than the Hikari.</p>
+
+<h3>How a Japanese fare is built</h3>
+<p>A Shinkansen ticket is not one price but two added together: a base fare for the distance, and a limited-express surcharge for the speed. That is why the numbers look oddly specific, and why a seat reservation is a separate small charge on top rather than part of the ticket.</p>
+
+<p>The practical consequence is that comparing headline prices between routes can mislead. A journey twice as far is not twice the price, because the base fare scales with distance while the surcharge does not scale the same way.</p>
+
+<!-- IMAGE_SLOT_1: A Japanese ticket machine or ticket-office window with fare charts visible, or a Shinkansen ticket in hand. Informational, daylight, no recognisable faces. -->
+
+<h2>Costing your own route</h2>
+<p>Pricing a Japanese rail route is straightforward once you stop thinking in days and start thinking in legs. Write down every long journey your itinerary makes — city to city, plus any day trip that uses a fast train — and price each one at roughly the Tokyo–Kyoto figure per comparable distance. The total is what your trip costs without any pass.</p>
+
+<h3>The legs a typical first trip makes</h3>
+<p>Most first itineraries contain two long journeys: into the country at one city, across to the second, and home. Some add a third if they reach further west or return by a different route. Very few first trips exceed four, which is the number that matters when any pass is being considered.</p>
+
+<p>Short day trips from Tokyo or Kyoto usually run on local and rapid services at a fraction of bullet-train prices, so they rarely change the arithmetic much. It is the long inter-city legs that carry the cost.</p>
+
+<h2>Three worked routes</h2>
+<p>Pricing three common shapes makes the method concrete. A classic first week — into Tokyo, across to Kyoto, home from Osaka — contains one long leg and costs about one Tokyo–Kyoto fare in total. Ten days adding Hiroshima contains three long legs. A two-week loop that returns north from Kansai and reaches Kanazawa or Takayama contains four or five.</p>
+
+<p>Those totals are the whole comparison. The first route cannot justify a national pass at any price; the third is exactly the shape where one starts to pay. Nothing about the decision requires more analysis than counting.</p>
+
+<h3>Day trips barely move the number</h3>
+<p>Day trips from Tokyo to Kamakura or Nikko, or from Kyoto to Nara, run largely on local and rapid services at a fraction of bullet-train prices. They matter to the day's plan and hardly at all to the ticketing arithmetic, which is worth knowing before you build an itinerary around extracting value from unlimited travel.</p>
+
+<h2>Reserved or not</h2>
+<p>Reserving a seat on a Japanese bullet train costs a few hundred yen and is worth it on almost every occasion a first-time visitor travels. Non-reserved cars exist on most services and are genuinely usable outside peak periods, but they fill on holiday weekends and at the start and end of major travel periods, which is precisely when an American visitor is most likely to be moving with luggage.</p>
+
+<p>Travelling with large suitcases adds a wrinkle: oversized baggage on the busiest lines requires a reserved space, booked with the seat. It costs nothing extra if you do it at the time of booking and is awkward to fix afterwards.</p>
+
+<h2>When the point-to-point approach wins</h2>
+<p>Paying per journey wins whenever the route is short on long legs, which describes most first trips. It also wins on flexibility, because you are not trying to compress your travel into a fixed window to extract value from something already paid for — a distortion that quietly shapes a lot of Japan itineraries.</p>
+
+<p>Buying tickets is straightforward. Machines at every major station carry English interfaces, staffed ticket offices handle anything unusual, and reservations can be made from a few weeks ahead down to minutes before departure if seats remain.</p>
+
+<h2>Comparing honestly</h2>
+<p>Once you have your route total, the comparison to any pass is a single subtraction. If your legs come to less than the pass price, the pass is a loss no matter how attractive the unlimited travel sounds; if they exceed it, the pass wins and the margin tells you by how much. <a href="/article/japan-rail-pass-worth-it">The pass side of that comparison</a> covers what the national pass includes.</p>
+
+<p>Doing the sum in the other order — buying first, planning after — is the mistake that costs most. Routing and ticketing are one decision, and <span class="guide" data-guide="name">the complete Japan trip guide</span> treats them that way.</p>
+"""
+})
+
+# ═══════════════════════════════════════════════════ 4. mobile suica — TURN, ic-card-setup
+A.append({
+ "slug": "mobile-suica-american-iphone",
+ "title": "Mobile Suica on an American iPhone: Setup and Limits",
+ "category_slug": "local-transit-ic-cards",
+ "excerpt": "You can add a Suica to a US iPhone without a Japanese Apple ID. The part that catches Americans out is which card tops it up — and one network is refused outright.",
+ "featured_image": "japanforamericans/articles/mobile-suica-american-iphone-hero",
+ "content": f"""<p>A transit card on your phone is the single most useful thing an American visitor can set up before flying to Japan, and it works better than most people expect. It also fails in one specific, poorly documented way that leaves travellers stuck at a ticket gate. This guide covers the setup, the card that will not work, and what to do instead.</p>
+
+<h2>It works on a US iPhone, with no Japanese account</h2>
+<p>Suica and Pasmo can be added to Apple Wallet on an iPhone bought in the United States, on iPhone 8 or later and Apple Watch Series 3 or later. You do not need a Japanese Apple ID, and you do not need to change your App Store region. The card is created inside Wallet, and it can be set up before you leave home.</p>
+
+<h3>The misconception worth killing</h3>
+<p>A great deal of older advice insists you need a Japanese Apple ID, a Japanese address, or the Japanese version of an app. That has not been true for years, and following it sends people down a pointless and occasionally risky detour involving second accounts. Wallet, Transit Card, Suica — that is the whole path.</p>
+
+<p>Once created, the card runs in Express Mode, which means you tap the gate without unlocking the phone or opening anything. It keeps working when the battery is low.</p>
+
+<h2>The part that actually goes wrong</h2>
+<p>Topping up a mobile Suica inside Apple Wallet will not accept a US-issued Visa card. American Express and Mastercard issued in the United States do work. This is the single most common point of failure for American visitors, and it produces a confusing error rather than an explanation.</p>
+
+<h3>Two sharper details</h3>
+<p>A US-issued Mastercard works for Suica but not for Pasmo, so if you have a choice of which card to create, Suica is the more forgiving one. And where Wallet refuses a card outright, the separate Suica app will sometimes accept the same card — an inconsistency with no official explanation, but a working escape route.</p>
+
+<p>There is also a nightly maintenance window, running until roughly four in the morning Japan time, during which top-ups fail for everybody regardless of card. A failure at two in the morning is not a card problem, and retrying after the window usually resolves it.</p>
+
+<!-- IMAGE_SLOT_1: A phone held to a Japanese ticket gate reader, or a phone screen showing a transit card in a wallet app at a station. Hands only, no faces, daylight. -->
+
+<h2>What to do before you fly</h2>
+<p>Set the Suica up at home before you leave the United States, load a modest amount, and confirm a top-up actually completes with the card you intend to use. Discovering that your only card is refused is far better done on your sofa than at a gate in Shinjuku with a queue behind you.</p>
+
+<p>The maximum balance is {fact('transit.ic_max_balance','¥20,000')}, which is more than enough for a week of city transit. Top up in small amounts rather than loading the maximum, because the balance is easier to spend down than to recover.</p>
+
+<h2>If you are on Android</h2>
+<p>Mobile Suica on Android requires Osaifu-Keitai, the hardware and software stack fitted to Japanese-market handsets. Android phones sold outside Japan almost universally lack it and cannot add a Suica or Pasmo, no matter which app is installed. This is a hardware limitation, not a settings problem.</p>
+
+<p>The answer for Android users is a physical card, which is straightforward again: unregistered Suica and Pasmo cards returned to sale in March 2025 and are bought from station machines with a {fact('transit.ic_card_deposit','¥500')} refundable deposit plus whatever you load.</p>
+
+<h2>If you are already in Japan and stuck</h2>
+<p>Arriving without a working top-up method is recoverable and common enough that stations are set up for it. A physical card bought from a machine takes cash, which sidesteps the entire card-network problem in one step, and the machines at every major station carry English interfaces.</p>
+
+<p>Cash top-ups also work on a card already in your wallet, at any station machine and at convenience-store registers. If the phone refuses your credit card, the answer is not to keep retrying it — it is to feed the card cash and move on.</p>
+
+<h3>Apple Watch is worth setting up too</h3>
+<p>A Suica on a paired Apple Watch works at gates independently of the phone, which is genuinely useful when the phone is in a bag and both hands are full. The card lives on one device at a time, so decide which before you travel rather than at a gate.</p>
+
+<h2>Where the card actually works</h2>
+<p>Suica, Pasmo and Icoca have been mutually interoperable nationwide since 2013, so a card created in Tokyo works on Kyoto and Osaka transit without any change. It also works as a payment card in convenience stores, vending machines and many small shops, which is genuinely useful in a country where cash still matters.</p>
+
+<p>A handful of smaller regional operators and rural bus routes sit outside the scheme. In the cities a first trip visits, that is not a practical constraint.</p>
+
+<h2>What the card decision connects to</h2>
+<p>Notice what this one small setup actually touched. Which card you can top up with determines whether the phone works at all, which determines whether you need a physical card, which determines whether you need cash on arrival — and that last one runs straight into how you get money in Japan at all, which is its own tangle of ATMs that reject foreign cards.</p>
+
+<p>Each of those is usually solved separately, at the airport, under time pressure, with luggage. They are one connected problem with a sensible order to solve it in, and working out that order in advance is what <span class="guide" data-guide="name">the complete Japan trip guide</span> is built for.</p>
+"""
+})
+
+# ═══════════════════════════════════════════════════ 5. IC vs day pass — SEED, ic-card-setup
+A.append({
+ "slug": "ic-card-day-pass-or-single-ticket",
+ "title": "IC Card, Day Pass or Single Ticket: What to Use",
+ "category_slug": "local-transit-ic-cards",
+ "excerpt": "Pay-as-you-go suits most first trips, but a day pass wins above roughly five rides. The prices, the coverage trap in Tokyo, and how to tell which applies to your day.",
+ "featured_image": "japanforamericans/articles/ic-card-day-pass-or-single-ticket-hero",
+ "content": f"""<p>Japanese city transit offers three ways to pay, and most visitors default to whichever one they read about first. The difference over a week is modest in money and significant in friction. This guide covers what each costs, the coverage trap that catches people in Tokyo, and the simple test for which one your day needs.</p>
+
+<h2>The default answer is the IC card</h2>
+<p>For most first-time visitors in Tokyo or Kyoto, a stored-value IC card — Suica, Pasmo or Icoca — is the right default. Individual subway rides run roughly ¥180 to ¥330 depending on distance, a typical sightseeing day involves three or four of them, and tapping through a gate removes the need to work out a fare before every journey.</p>
+
+<h3>Why fare calculation matters more than price</h3>
+<p>Buying a single ticket in Japan means knowing your destination's fare before you buy, from a chart above the machine, often in Japanese. It is entirely doable and it is a small tax on every journey. The card removes that step completely, which over a week is the real saving rather than the money.</p>
+
+<p>Cards also work in convenience stores, vending machines and many small shops, so a balance is never stranded.</p>
+
+<!-- IMAGE_SLOT_1: A Japanese station ticket gate with fare chart or a hand tapping a card on a reader. Clean, informational, daylight, no faces. -->
+
+<h2>When a day pass wins</h2>
+<p>A Tokyo or Kyoto day pass starts to beat pay-as-you-go at roughly five rides in a single day, against individual fares of ¥180 to ¥330. Below that, the card is cheaper and simpler; above it, the pass pays and keeps paying, because every additional journey is free and the temptation to walk a tiring extra kilometre to save a fare disappears.</p>
+
+<h3>Tokyo</h3>
+<p>The Tokyo Subway Ticket, sold to visitors, costs {fact('transit.tokyo_subway_ticket_24h','¥1,000')} for twenty-four hours, with forty-eight and seventy-two hour versions above it. Its clock runs from the first time you pass a gate for a full twenty-four hours, not until midnight — activate it at eleven in the morning and it lasts until eleven the next morning.</p>
+
+<p><strong>The coverage trap:</strong> the tourist Tokyo Subway Ticket covers both the Tokyo Metro lines and the Toei lines. A separate, similarly named Tokyo Metro day ticket covers Metro only. Buying the wrong one leaves you at a gate that will not open on a route you assumed was included.</p>
+
+<h3>Kyoto</h3>
+<p>Kyoto's Subway and Bus One-Day Pass costs {fact('transit.kyoto_day_pass','about ¥1,100')} and covers all subway lines and the major city buses. Kyoto is a bus city more than a subway city, so a day of temple-hopping crosses the five-ride threshold easily and the pass is usually the right call there in a way it is not in Tokyo.</p>
+
+<p>The long-standing bus-only day pass has been discontinued, which a great deal of English-language guidance still recommends. If a source tells you to buy it, that source has not been updated.</p>
+
+<h2>Two worked days</h2>
+<p>A Tokyo day spent in one district — a morning museum, lunch nearby, an afternoon walk, dinner in the same area — involves two rides. The card wins comfortably and the pass would waste most of its value.</p>
+
+<p>A Tokyo day that crosses the city — an early market, a temple in the north-east, an afternoon in a western neighbourhood, dinner somewhere else again — involves six or seven. The pass wins, and the freedom to add an unplanned stop without recalculating is worth more than the money saved.</p>
+
+<h3>Kyoto behaves differently</h3>
+<p>Kyoto's sights are scattered around the edges of the city rather than concentrated along a subway spine, and the buses do most of the work of reaching them. A normal temple day in Kyoto crosses the five-ride threshold without trying, which is why the day pass is the usual answer there and the exception in Tokyo.</p>
+
+<h2>The tourist card option</h2>
+<p>Welcome Suica is a visitor card sold at Narita and Haneda and at major Tokyo stations. It needs no deposit and is valid for {fact('transit.welcome_suica_validity','28 days')} from purchase, which suits any normal trip. The catch is that the remaining balance is not refundable and it cannot be transferred to a phone, so load it in small increments.</p>
+
+<p>An ordinary unregistered card is the better choice for anyone who might return, since the balance keeps and the deposit comes back.</p>
+
+<h2>Working out which applies to you</h2>
+<p>The test is simply how your days are shaped. Days that cluster around one neighbourhood and involve a lot of walking favour the card; days that criss-cross a city between scattered sights favour the pass. Most first trips contain both kinds, which is why the sensible approach is a card as the base and a day pass bought only on the days that earn it.</p>
+
+<p>How those days get shaped in the first place — which sights cluster, which neighbourhood to base yourself in, how much a day can realistically hold — is the layer underneath this decision, and <span class="guide" data-guide="name">the complete Japan trip guide</span> works through it.</p>
+"""
+})
+
+for a in A:
+    a["content"] = re.sub(r"\n\s*\n", "", a["content"]).replace("\n", "").strip()
+
+here = os.path.dirname(os.path.abspath(__file__))
+json.dump(A, open(os.path.join(here, "import-batch-B.array.json"), "w"), ensure_ascii=False, indent=2)
+
+print("écrit : import-batch-B.array.json")
+for a in A:
+    w = len(re.sub(r"<[^>]+>", " ", a["content"]).split())
+    spans = re.findall(r'data-fact="([^"]+)"', a["content"])
+    print(f"  {a['slug']:<38} {w:>5} mots   spans: {','.join(spans) or '—'}")

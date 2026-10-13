@@ -1,0 +1,107 @@
+{
+  "schema_version": 4,
+  "project": "turkeyforamericans",
+  "batch": 19,
+  "swamp": "S-licence",
+  "_DOCTRINE": "Report mechanics, never make the call. check-noconnect exit 0 before import. A null fact DELETES its sentence. No drift-prone value in a title, heading or excerpt.",
+  "_WHY": "The corpus hedges the licence question and never resolves it: 'a US license is generally accepted for short visits, though an IDP is recommended', 'recommended and sometimes required'. Four different thresholds exist — what Turkish law requires, what the rental desk asks, what the insurer requires, and what an IDP legally is — and no free article lines them up.",
+  "_DEPTH": "S-licence 1,778 -> ~6,750 dedicated words in this one batch, matching the pattern from batches 16 and 18.",
+  "articles": [
+    {
+      "title": "The International Driving Permit for Turkey",
+      "slug": "international-driving-permit-for-turkey",
+      "category": "getting-around",
+      "swamp": "S-licence",
+      "handoff": "turn",
+      "reports": [
+        "what an IDP legally is — a translation of a licence, not a licence in itself",
+        "which US bodies are authorised to issue one and what that costs",
+        "validity period and whether it can be obtained after leaving the US",
+        "what Turkish law requires of a foreign driver, and for how long a visitor may drive on a foreign licence",
+        "that it must be carried alongside the home licence, never instead of it"
+      ],
+      "must_not_say": "whether to get one — the four thresholds disagree and reconciling them is the book's",
+      "images": 2
+    },
+    {
+      "title": "Renting a Car in Turkey: What the Law Says and What the Desk Says",
+      "slug": "renting-a-car-in-turkey-law-vs-rental-desk",
+      "category": "getting-around",
+      "swamp": "S-licence",
+      "handoff": "turn",
+      "reports": [
+        "what Turkish law actually establishes: a foreign licence is valid for six months from entry, and no IDP is mandated inside that window",
+        "that minimum age, licence-holding period, deposit, accepted documents and cross-border rules are set by each rental company's contract, not by regulation",
+        "the one statutory insurance layer — compulsory third-party liability — and what it does not cover",
+        "that collision damage waiver, excess and the exclusion list are commercial products with no regulated form",
+        "why 'what do I need to rent a car in Turkey' has no single answer, and where the answer actually lives"
+      ],
+      "must_not_say": "a checklist presented as universal requirements, or advice on which cover to buy",
+      "_REPLACED": "Merges the old articles 2 and 3. EVERY rental-desk fact and EVERY rental-insurance fact came back null from both panels, and both stated the same reason: these are contractual, not statutory. That absence is the article.",
+      "images": 2
+    },
+    {
+      "title": "Driving in Turkey: Rules, Tolls and How Fines Reach You",
+      "slug": "driving-in-turkey-rules-fines-and-tolls",
+      "category": "getting-around",
+      "swamp": "S-licence",
+      "handoff": "turn",
+      "reports": [
+        "speed limits by road type, from the official highways table",
+        "the drink-driving limit, and the lower limit for commercial and other non-private drivers",
+        "seatbelt, phone and child-restraint rules",
+        "the HGS electronic toll system and how rental cars are equipped for it",
+        "what an unpaid pass becomes, and how it is notified to the registered owner",
+        "how a fine incurred in a rental car reaches a foreign renter"
+      ],
+      "must_not_say": "how to avoid a fine, or any figure for the toll surcharge or grace period",
+      "_NOTE": "Best-sourced article in the batch: grok opened the official KGM speed-limit table and the Emniyet alcohol page, both of which correct values deepseek gave from memory.",
+      "images": 2
+    },
+    {
+      "title": "If You Have an Accident in a Rental Car in Turkey",
+      "slug": "if-you-have-an-accident-in-turkey",
+      "category": "getting-around",
+      "swamp": "S-licence",
+      "handoff": "turn",
+      "reports": [
+        "what the law requires at the scene: stopping, securing, first aid, when police must attend",
+        "the joint accident report used for material-damage-only collisions, and when vehicles may be moved",
+        "compulsory third-party liability and where its cover stops",
+        "what the rental contract's damage terms sit on top of",
+        "the documents generated at the scene and why they matter later"
+      ],
+      "must_not_say": "whether to call the police, or whether to claim — and no insurance recommendation",
+      "note": "SECOND JOIN TO S-INSURE. Batch 16 established that a Turkish medical claim needs a police report where an accident was involved. This article reports what produces that report. Neither joins them.",
+      "images": 1
+    },
+    {
+      "title": "Scooters and ATVs in Turkey",
+      "slug": "scooters-and-atvs-in-turkey",
+      "category": "getting-around",
+      "swamp": "S-licence",
+      "handoff": "seed",
+      "reports": [
+        "what licence category Turkish law requires for a scooter or motorcycle by engine size",
+        "whether a US car licence covers any of those categories",
+        "helmet law and enforcement",
+        "what rental operators typically ask for versus what the law requires",
+        "where ATVs and quads sit legally, on and off road"
+      ],
+      "must_not_say": "whether to rent one; the insurance consequence is reported in the exclusions guide, not resolved here",
+      "note": "This is the join to S-insure. Batch 16's turkey-insurance-exclusions-activities reports the licence CONDITION inside the policy exclusion. This article reports the licence CATEGORY the law requires. Neither joins them — the book does.",
+      "images": 1
+    }
+  ],
+  "_PANEL": {
+    "run": "2026-07-27",
+    "models": [
+      "deepseek",
+      "grok"
+    ],
+    "verified_official": "deepseek 3, grok 8 — grok opened AAA, the UN Treaty Series, the KGM speed table and the Emniyet alcohol page",
+    "corrections": "grok's official sources overturned two of deepseek's unsourced values (motorway speed 120 -> 130/140 plus a 110 band; commercial alcohol limit 0.00 -> 0.20)",
+    "both_null": 10,
+    "see": "facts-batch19-block.json"
+  }
+}

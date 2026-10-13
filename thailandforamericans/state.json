@@ -1,7 +1,12 @@
 {
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
   "project": "thailandforamericans",
   "stage": "writing",
-  "batch": 16,
-  "batch_status": "written",
-  "format": "greece-aligned"
+  "batch": 1,
+  "batches_total": 16,
+  "batch_status": "none",
+  "published_slugs": [],
+  "updated_at": "2026-06-28",
+  "notes": "STAGE 2 COMPLETE. facts.json reconciled from 3 sources (claude+gemini+deepseek): 6 cities (Bangkok/Chiang Mai/Phuket/Krabi/Koh Samui/Ayutthaya) w/ cross-source 'core' recommendation pools, 4 itinerary spines, 6 serve_live fields (0 frozen), 10 verify_recommended, 5 open-questions (cap respected). Key resolutions: proof-of-funds = 20k THB/person 40k/family (visa-exempt tier, verified); currency-declaration limit left null (sources disagreed); visa day-count serve_live (60->30 mid-change, Royal Gazette pending). 34 categories in DB. NEXT: Stage 3 writing, batch 1 of 16 (5 articles each, exactly). Imports land as DRAFT. Push facts.json + this state.json; raw/compare/pools stay local."
 }

@@ -1,0 +1,12 @@
+{
+  "_README": "Per-project progress state. Fetch this FIRST before any work on the project; the assistant outputs an updated copy at every step boundary and the USER pushes it. Never trust the chat scroll — trust this file plus the DB.",
+  "schema_version": 3,
+  "project": "barcelonaforamericans",
+  "stage": "writing",
+  "batch": 3,
+  "batches_total": 15,
+  "batch_status": "published",
+  "published_slugs": ["sagrada-familia-tickets-guide", "park-guell-tickets-guide", "where-to-stay-in-barcelona", "3-days-in-barcelona", "bcn-airport-to-city", "casa-batllo-vs-casa-mila", "sagrada-familia-towers-guide", "montserrat-day-trip", "barcelona-metro-transit-guide", "airbnb-barcelona-rental-crackdown"],
+  "updated_at": "2026-06-13",
+  "notes": "BATCH 1 + BATCH 2 PUBLISHED (10 live). BATCH 3 WRITTEN + gated clean by BOTH Grok+DeepSeek, import-batch-03.json ready, USER PUBLISHING NOW (flights-to-barcelona-from-us, best-day-trips-from-barcelona, 2-days-in-barcelona, 4-5-days-in-barcelona, one-day-in-barcelona-cruise) — once live, append these 5 slugs to published_slugs (would total 15). Publishing path: admin Bulk import (browser) + image upload CLOUDINARY_FOLDER=barcelonaforamericans, preset barcelonaforamericans_articles, cloud dsrkwieur. GATE: ONE file going forward (canary must echo all 5 slugs; split only on short canary). Readers Grok+DeepSeek; Gemini banned (corrections 9). Live-verified caches by batch in git history. DEFERRED to end: internal links + affiliates whole-site pass. PENDING: finish publishing batch 3; delete orphan Cloudinary vmarokko/articles/barcelonaforamericans/; apply template-patch.zip + skill-patch.md before site #3. T1 articles remaining after batch 3: 14 of 72 total written so far is 15. NEXT: batch 4 (5 articles). facts.json _open_questions live-verify list applies each batch — batch 4 candidates likely need: hotel-roundup verification (best-hotels/beach/family/budget/luxury), flamenco venues, Girona/Costa Brava specifics, trains-from-barcelona Renfe/Ouigo/iryo, food-tours."
+}

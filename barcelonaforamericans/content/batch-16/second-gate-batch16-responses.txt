@@ -1,0 +1,52 @@
+Second gate — batch 16 (barcelonaforamericans)
+Readers: DeepSeek (designated, corrections #5/#6) + Grok (bonus second opinion)
+Date: 2026-09-06
+
+=== GROK ===
+STEP 0 — SLUGS SEEN: ["bringing-medication-into-spain", "ferries-barcelona-to-balearics", "when-ferries-cancel-balearics", "spain-hospital-billing-what-to-expect", "what-closes-spanish-public-holidays"]
+FINDINGS: NO FINDINGS.
+
+Canary: PASS (exact match, order matches batch). No quotes to verify.
+
+=== DEEPSEEK ===
+STEP 0 — SLUGS SEEN:
+1. bringing-medication-into-spain
+2. ferries-barcelona-to-balearics
+3. when-ferries-cancel-balearics
+4. spain-hospital-billing-what-to-expect
+5. what-closes-spanish-public-holidays
+
+Canary: PASS (exact match, order matches batch).
+
+5 findings reported, all quotes verified verbatim-present in the batch. AUDITED per
+3-writing.md ("second-gate findings are audited, never auto-applied") — 4 of 5 were false
+positives on inspection, 1 was a real (minor) ambiguity:
+
+1. REJECTED — ferries-barcelona-to-balearics / GNV-Menorca seasonality: claimed the article
+   fails to flag Menorca's seasonality. FALSE — the article's own "Route by route" list, two
+   sentences later, states "To Menorca (Mahón): more seasonal than the other two, running
+   mostly in summer." Info is present in the same article, just not repeated in the opening
+   paragraph.
+
+2. REJECTED — when-ferries-cancel-balearics / "narrower" compensation wording: claimed the
+   article softens a prohibition into a reduction. FALSE — the article states outright
+   "generally does NOT apply" in the same sentence as "narrower," identical in substance to
+   facts.json's own wording. "Narrower" is a synonym for "more limited," not a meaning change.
+
+3. REJECTED — when-ferries-cancel-balearics / insolvency framing: claimed "like insolvency"
+   overemphasizes insolvency vs facts.json. FALSE — facts.json's own text gives insolvency as
+   an example too ("e.g. insolvency"); "like X" and "e.g. X" are equivalent.
+
+4. ACCEPTED — spain-hospital-billing-what-to-expect / invoice submission: "designed to be
+   submitted straight to a travel insurer" was genuinely ambiguous — could be misread as the
+   clinic billing the insurer directly, when facts.json specifies the PATIENT submits it.
+   FIXED: reworded to "designed for you to submit straight to your travel insurer."
+
+5. REJECTED — what-closes-spanish-public-holidays / missing 2026-specific caveat: claimed the
+   article omits the "changes every year" warning. FALSE — that exact caveat is in the SAME
+   sentence flow immediately before the quoted sentence ("these can genuinely change from
+   year to year by council decree, so treat any specific date as tied to the current calendar
+   year rather than a fixed tradition"), and restated again immediately after.
+
+RESULT: 1 real fix applied, 4 false positives documented and rejected with reasons. Batch 16
+content is otherwise clean per both readers.
