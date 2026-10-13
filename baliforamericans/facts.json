@@ -262,6 +262,33 @@
    "risk": "high",
    "display_rule": "rupiah only",
    "caveat": "The fee table names the permit class, not 'VoA extension' in so many words; the link to VoA rests on the two office pages seen only as search snippets. Whether a visa bought at the airport counter can be extended online is still not sourced."
+  },
+  "extension_process": {
+   "fact_key": "visa.extension_process",
+   "value": "A visa on arrival, whether bought online (e-VOA) or as a sticker at the airport counter, is extended by applying and paying online at evisa.imigrasi.go.id. Since 29 May 2025 the applicant must then go to an immigration office for a photograph and an interview. Applying and paying before the visa expires means no overstay is charged while the application is processed.",
+   "status": "verified",
+   "source_url": "https://imigrasi.go.id/siaran_pers/2025/05/28/tekan-angka-pelanggaran-keimigrasian-wna-wajib-ke-kantor-imigrasi-untuk-perpanjangan-izin-tinggal",
+   "source_kind": "primary",
+   "scope": "foreign visitors extending a visa on arrival in Indonesia",
+   "support": "Directorate General of Immigration press release, 28 May 2025, read directly in Chrome: 'Mengacu pada Surat Edaran Nomor IMI-417.GR.01.01 Tahun 2025, yang akan berlaku efektif mulai 29 Mei 2025, WNA di Indonesia wajib melakukan pengambilan foto dan wawancara di kantor imigrasi saat mengajukan perpanjangan izin tinggal. Sebelum tahapan tersebut, WNA mendaftar permohonan izin tinggal dan mengunggah dokumen persyaratan secara online melalui website evisa.imigrasi.go.id. Prosedur ini juga berlaku bagi WNA pemegang visa on arrival (VoA).' Vulnerable groups (elderly, disabled, pregnant or nursing, urgent cases) may do everything walk-in. Immigration news item, 8 Nov 2024, read directly: online extension is open 'baik bagi WNA yang menggunakan VoA elektronik (e-VoA) maupun VoA berbentuk stiker yang didapatkan di konter imigrasi area kedatangan bandara'; e-VOA holders use 'Extend My Visa', airport-sticker holders use Services > 'Find Existing Stay Permit'; payment by Visa/Mastercard debit or credit card; 'WNA tidak akan dikenakan overstay apabila pengajuan dan pembayaran perpanjangan VoA ... dilakukan sebelum masa berlaku visa berakhir' (Permenkumham 11/2024 art. 97); verification is by the immigration office for the foreigner's place of stay.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "high",
+   "caveat": "Processing time is not stated by either source; never print a number of days. Which office handles a given address is not listed in the sources.",
+   "writing_rule": "Say both visa versions extend the same way: online application, then an in-person photo and interview. Do not say the e-VOA extends without a visit (true in 2023, superseded)."
+  },
+  "arrival_card_contents": {
+   "fact_key": "visa.arrival_card_contents",
+   "value": "The All Indonesia arrival card is one digital form that combines the immigration, customs and health declarations, replacing the separate customs e-CD and SATUSEHAT health forms. Each traveler, including children, needs their own. It asks for passport and contact details, flight and accommodation, and health and customs questions, and the QR code is sent by email.",
+   "status": "verified",
+   "source_url": "https://rr-asia.woah.org/app/uploads/2025/09/2025-09-All-Indonesia-Arrival-Card-Guide.pdf",
+   "source_kind": "secondary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Delegate travel guide (Sept 2025) published by the World Organisation for Animal Health for a conference in Indonesia, PDF read page by page: 'a unified digital form that combines several previous arrival/declaration forms (immigration, customs, health, etc.) into one. The form replaces ... SATUSEHAT (health declaration) and e-CD (customs declaration)'; 'Include children and infants — each person must have their own card'; lists passport details, contact info, travel details, transport and accommodation, health and customs declarations; 'does not replace your visa'. The 72-hour and free-of-charge points match the State Dept (see visa.arrival_card).",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "caveat": "Not an Indonesian government document; the official site allindonesia.imigrasi.go.id is script-only and showed no text. Use for describing the form, in attributed or general terms; no spans."
   }
  },
  "documents": {
@@ -562,6 +589,32 @@
    "risk": "high",
    "valid_from": "2026-08-07",
    "writing_rule": "A live health notice: re-open before every batch that mentions it; matters most to anyone pregnant or planning pregnancy."
+  },
+  "narcotics_law_penalties": {
+   "fact_key": "safety_health.narcotics_law_penalties",
+   "value": "Under Indonesia's Narcotics Law, cannabis and all parts and products of the plant are Class I narcotics. Unlawful possession of a Class I narcotic carries 4 to 12 years in prison and a fine of IDR 800 million to IDR 8 billion; importing one carries 5 to 15 years, and above 1 kilogram of plant material or 5 grams of other forms the penalty can be death or life imprisonment. Personal use of a Class I narcotic carries up to 4 years.",
+   "status": "verified",
+   "source_url": "https://e-pharm.kemkes.go.id/front/pdf/UU352009.pdf",
+   "source_kind": "primary",
+   "scope": "anyone in Indonesia",
+   "support": "Law 35 of 2009 on Narcotics, Health Ministry copy, text extracted and read: Pasal 111(1) and 112(1) 'pidana penjara paling singkat 4 (empat) tahun dan paling lama 12 (dua belas) tahun dan pidana denda paling sedikit Rp800.000.000,00 ... paling banyak Rp8.000.000.000,00'; Pasal 113(1) import/export 'paling singkat 5 (lima) tahun dan paling lama 15 (lima belas) tahun'; 113(2) 'melebihi 1 (satu) kilogram atau melebihi 5 (lima) batang pohon atau dalam bentuk bukan tanaman beratnya melebihi 5 (lima) gram, pelaku dipidana dengan pidana mati, pidana penjara seumur hidup, atau pidana penjara paling singkat 5 ... paling lama 20'; Pasal 127(1)(a) 'Narkotika Golongan I bagi diri sendiri dipidana dengan pidana penjara paling lama 4 (empat) tahun'; Annex, Golongan I no. 8 'Tanaman ganja, semua tanaman genus cannabis dan semua bagian dari tanaman ... termasuk damar ganja dan hasis', no. 9 Tetrahydrocannabinol.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "caveat": "Statute as enacted in 2009; later amendments or the new criminal code were not checked. State the ranges as what the Narcotics Law provides, not as what a court will impose. The law does not mention CBD by name; that comes from the State Dept."
+  },
+  "methanol_poisoning": {
+   "fact_key": "safety_health.methanol_poisoning",
+   "value": "Methanol is a toxic byproduct of alcohol production that can remain in a drink after improper distillation, and it is sometimes used to adulterate drinks in place of ethanol. It can cause dizziness, headache, nausea, permanent loss of vision, organ failure and death. Symptoms may not appear for 1 to 72 hours. The CDC advises travelers to choose reputable brands and drink in moderation.",
+   "status": "verified",
+   "source_url": "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/poisonings-envenomations-and-toxic-exposures-during-travel.html",
+   "source_kind": "primary",
+   "scope": "travelers anywhere",
+   "support": "CDC Yellow Book: 'Methanol, a toxic byproduct of ethanol production, is normally eliminated in commercial products but with improper distillation can remain (or even become more concentrated) in the final product.' 'Methanol is also sometimes used to adulterate beverages in place of ethanol.' 'Methanol consumption can lead to dizziness, headache, nausea, permanent visual loss, organ failure, and death.' 'Advise travelers about the risks of consuming alcohol abroad, to only select reputable brands, and to drink in moderation.' CDC/NIOSH methanol card: 'Colorless watery liquid'; 'may not become apparent until after an asymptomatic period of 1 to 72 hours'; early effects 'drowsiness ... confusion, headache, dizziness'; 'blurred vision ... partial to total loss of vision'; 'Fomepizole and ethanol are effective antidotes ... administered as soon as possible once the patient/victim has been admitted to a medical care facility.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "caveat": "Both pages read through a fetch summary that quoted them; neither mentions Bali. Bali-specific risk comes only from the State Dept line in safety_health.drink_safety. No source here says how to tell a safe drink by look, taste or price - never claim one can."
   }
  },
  "getting_around": {

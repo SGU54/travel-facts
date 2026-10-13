@@ -303,3 +303,29 @@ values ('bali', 'connectivity.phone_registration', '"up to 90 days"'::jsonb, 've
 on conflict (scope, key) do update set
   value = excluded.value, status = excluded.status,
   checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- Batch-04 — 2026-10-13
+
+-- visa.extension_process — extending-a-bali-visa-on-arrival
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'visa.extension_process', '"a photograph and an interview at an immigration office"'::jsonb, 'verified', now(),
+        'https://imigrasi.go.id/siaran_pers/2025/05/28/tekan-angka-pelanggaran-keimigrasian-wna-wajib-ke-kantor-imigrasi-untuk-perpanjangan-izin-tinggal')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- safety_health.narcotics_law_penalties — indonesia-drug-laws-for-travelers
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.narcotics_law_penalties', '"4 to 12 years in prison"'::jsonb, 'verified', now(),
+        'https://e-pharm.kemkes.go.id/front/pdf/UU352009.pdf')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- safety_health.methanol_poisoning — arak-and-methanol-in-bali
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.methanol_poisoning', '"1 to 72 hours"'::jsonb, 'verified', now(),
+        'https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/poisonings-envenomations-and-toxic-exposures-during-travel.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
