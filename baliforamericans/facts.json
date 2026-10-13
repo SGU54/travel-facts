@@ -1,5 +1,5 @@
 {
- "_README": "Bali fact layer, built 2026-10-13. CONTAINS ONLY PRIMARY-READ FACTS: every row's source_url was opened and read on checked_at, and 'support' quotes what the page said. Consensus-only, secondary and unsourced material deliberately did NOT make it in; it stays in raw/claude.json (_open_questions) and disputes.md. An absent fact means 'not proven', never 'not true'. serve_live values (exchange rates, prices, flight times, budgets) are intentionally absent. Rupiah amounts are regulation figures; never freeze a dollar equivalent beside them.",
+ "_README": "Bali fact layer, built 2026-10-13. Every row's source_url was opened and read on checked_at. Most rows are primary; a few are marked source_kind 'secondary' where no official page could be reached, and each of those says why in its caveat, and 'support' quotes what the page said. Consensus-only, secondary and unsourced material deliberately did NOT make it in; it stays in raw/claude.json (_open_questions) and disputes.md. An absent fact means 'not proven', never 'not true'. serve_live values (exchange rates, prices, flight times, budgets) are intentionally absent. Rupiah amounts are regulation figures; never freeze a dollar equivalent beside them.",
  "_meta": {
   "schema_version": 4,
   "project": "baliforamericans",
@@ -34,19 +34,26 @@
    "https://www.beacukai.go.id/faq-impor-registrasi-imei",
    "https://www.bi.go.id/id/fungsi-utama/sistem-pembayaran/ritel/kanal-layanan/qris/qris-antarnegara/default.aspx",
    "https://www.grab.com/global/airport-rides/i-gusti-ngurah-rai-international-airport/",
+   "https://www.imigrasi.go.id/biaya_imigrasi/index",
    "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia"
   ],
   "deliberately_excluded": [
    "any blood-alcohol limit",
    "ATM limits and fees, service-charge percentages, tipping amounts",
-   "flight durations and whether a nonstop exists",
    "ride-app pickup restrictions in Bali",
    "fast-boat harbours, cancellation practice",
    "all recommendations and itineraries (they live in the candidates file, not here)",
-   "Nyepi airport closure hours - only a news quote of the airport manager for 2026 (06:00 to 06:00, 24 hours); no airport-operator page found",
-   "Sanur harbour closures and fast-boat cancellations - news reports only",
    "seasonal rainfall figures - the weather agency publishes year-specific forecasts, not an evergreen statement",
-   "whether an international permit must itself be endorsed for motorcycles - the statute sets the licence-class rule but does not mention permits by category"
+   "whether an international permit must itself be endorsed for motorcycles - the statute sets the licence-class rule but does not mention permits by category",
+   "door-to-door flight times from US airports and which hubs connect - schedule data, serve live",
+   "fast-boat safety and Sanur harbour closures: the Transport Ministry's own post on the August 2025 fast-boat capsizing exists but its site rejected every request, and the one news report tried returned 403; only search snippets were seen (harbour closed 6 August 2025 for bad weather after the accident), so nothing was stored",
+   "fast-boat operators, harbours per operator, refund practice - seller pages only"
+  ],
+  "secondary_sources": [
+   "https://en.tempo.co/read/2092403/bali-airport-and-toll-roads-to-close-for-24-hours-during-nyepi",
+   "https://pasal.id/peraturan/perda/perda-kab-gianyar-7-2023",
+   "https://www.flightconnections.com/flights-from-denpasar-dps",
+   "https://bimashindu.kemenag.go.id/storage/files/20260918101947Surat%20Hari%20Libur%20Hindu%20Tahun%202027%20.pdf (via Google's index only)"
   ]
  },
  "_human_checklist": [
@@ -239,6 +246,20 @@
    "checked_at": "2026-10-13",
    "review_after": "2027-04-13",
    "risk": "high"
+  },
+  "extension_fee": {
+   "fact_key": "visa.extension_fee",
+   "value": "Extending the stay for another 30 days costs IDR 500,000 per application, the official fee for a visit stay permit of up to 30 days.",
+   "status": "verified",
+   "source_url": "https://www.imigrasi.go.id/biaya_imigrasi/index",
+   "source_kind": "primary",
+   "scope": "US tourists extending a 30-day visa on arrival",
+   "support": "Directorate General of Immigration fee table, read directly: 'Izin Tinggal Kunjungan Masa Berlaku Paling lama 30 Hari per Permohonan Rp 500.000,-'. Two immigration offices' own pages, seen in Google results but not opened (certificate and redirect errors), word it as a VoA extension: Singaraja (Bali) 'Perpanjangan Visa on Arrival (VoA) berlaku 30 (tiga puluh) Hari Rp. 500.000,-'; Manado 'Rp 500.000,- per permohonan'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "display_rule": "rupiah only",
+   "caveat": "The fee table names the permit class, not 'VoA extension' in so many words; the link to VoA rests on the two office pages seen only as search snippets. Whether a visa bought at the airport counter can be extended online is still not sourced."
   }
  },
  "documents": {
@@ -678,6 +699,19 @@
    "risk": "standard",
    "valid_from": "2024-01-01",
    "caveat": "A 2023 circular: the 40% entertainment rate was publicly contested after it took effect, so re-check for amendments before stating it as current. Says nothing about 'service charge', which is a business practice, not a tax; Ubud is in Gianyar regency and is not covered."
+  },
+  "bill_tax_gianyar": {
+   "fact_key": "money.bill_tax_gianyar",
+   "value": "In Gianyar regency, which includes Ubud, the local tax on restaurant food and drink and on hotel stays is 10%. Discos, karaoke venues, nightclubs, bars and steam baths/spas are taxed at 40%; traditional folk arts and entertainment at 5%.",
+   "status": "verified",
+   "source_url": "https://pasal.id/peraturan/perda/perda-kab-gianyar-7-2023",
+   "source_kind": "secondary",
+   "scope": "Gianyar regency, Bali (Ubud, Tegallalang, Sukawati)",
+   "support": "Gianyar Regional Regulation 7 of 2023 on regional taxes, text as mirrored on pasal.id, read directly. Pasal 27: '(1) Tarif PBJT ditetapkan sebesar 10% (sepuluh persen). (2) Khusus tarif PBJT atas kesenian dan hiburan rakyat/tradisional ditetapkan 5% (lima persen) (3) Khusus tarif PBJT atas jasa hiburan pada diskotek, karaoke, kelab malam, bar, dan mandi uap/spa ditetapkan 40% (empat puluh persen).' The regency's own legal database lists the regulation (enacted 5 December 2023) but serves it as a PDF that was not opened.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "standard",
+   "caveat": "Secondary because the text was read on a legal-text mirror, not the regency's own copy. Same rates as Badung. Amendments since 2023 not checked; says nothing about service charges."
   }
  },
  "connectivity": {
@@ -777,6 +811,39 @@
    "valid_until": "2027-08-21",
    "caveat": "Marked secondary because the letter itself was not opened - only Google's snippet of it. Re-open the PDF when the ministry server is back. An earlier snippet that seemed to show 14 January was the following day's entry (Umanis Galungan), not a conflict.",
    "writing_rule": "Evergreen articles: give 2027 as the worked example and explain the 210-day cycle."
+  }
+ },
+ "getting_there": {
+  "no_us_nonstop": {
+   "fact_key": "getting_there.no_us_nonstop",
+   "value": "There is no nonstop flight between the United States and Bali. The longest nonstop route from Bali's airport is to Istanbul, about 13 hours, and US cities are listed only as destinations that require a stopover.",
+   "status": "verified",
+   "source_url": "https://www.flightconnections.com/flights-from-denpasar-dps",
+   "source_kind": "secondary",
+   "scope": "scheduled passenger flights at Bali's airport (DPS) as listed in October 2026",
+   "support": "FlightConnections, page dated 2 October 2026, read directly: 'Denpasar Airport has non-stop passenger flights scheduled to 65 destinations in 19 countries.' 'The longest flight from Denpasar DPS is a 6,429 mile (10,346 km) non-stop route to Istanbul IST. This direct flight takes around 13 hours and is operated by Turkish Airlines.' Under 'popular destinations from Denpasar that require a stopover': Chicago, Dallas-Fort Worth, Atlanta, Denver, Newark.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "standard",
+   "caveat": "A schedule-data aggregator, not an airline or the airport. Schedules change; re-check before each batch that states it. Gives no door-to-door times from US airports - those stay serve-live."
+  }
+ },
+ "_held_secondary": {
+  "_note": "Not fact records. Sourced only at second hand on a high-stakes point. Never span these in an article.",
+  "when_to_go.nyepi_airport_closure": {
+   "fact_key": "when_to_go.nyepi_airport_closure",
+   "value": "On Nyepi, Bali's airport stops all regular commercial flights for 24 hours, from 6 a.m. on the day itself to 6 a.m. the next morning. In 2026 that meant 06:00 on Thursday, March 19, to 06:00 on Friday, March 20, with 440 scheduled flights not operating; medical and specially authorised flights were still handled.",
+   "status": "held_secondary",
+   "source_url": "https://en.tempo.co/read/2092403/bali-airport-and-toll-roads-to-close-for-24-hours-during-nyepi",
+   "source_kind": "secondary",
+   "scope": "I Gusti Ngurah Rai International Airport on Nyepi; hours stated for 2026",
+   "support": "Tempo (English), 13 March 2026, read directly, quoting the airport's general manager: '\"All regular commercial flight activities at the airport will be halted from Thursday, March 19, 2026, at 06:00 WITA (UTC+8) until Friday, March 20, 2026, at 06:00 WITA,\" said Nugroho Jati, General Manager of PT Angkasa Pura Indonesia (InJourney Airports) for I Gusti Ngurah Rai International Airport'. A detik report of the same announcement gives 440 flights (231 domestic, 209 international) and says the last international departure before closure was at 01:30.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-02-08",
+   "risk": "high",
+   "caveat": "Secondary: a news report of the airport operator's statement, for 2026 only. No operator page was found. The 2027 hours are not announced; describe the pattern and tell readers to confirm with their airline.",
+   "writing_rule": "Articles may describe the closure in attributed prose ('in 2026 the airport's general manager announced a 24-hour halt from 6 a.m.') but must NOT put it in a fact span, and must tell readers to confirm their own flight with the airline.",
+   "hold_reason": "High-stakes and secondary-only, so the validator refuses it as a fact. The Transport Ministry published its own statement on 15 March 2026 ('Kemenhub Sesuaikan Operasional Transportasi Jelang Hari Raya Nyepi di Bali', dephub.go.id) but the ministry's firewall rejects requests from this network in both the terminal and Chrome; a newspaper republication of it (Suara Merdeka, 16 March 2026) was opened and confirms the statement exists. Promote this record once the ministry page or an airport-operator page can be read."
   }
  }
 }
