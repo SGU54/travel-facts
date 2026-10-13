@@ -21,6 +21,7 @@
    "https://evisa.imigrasi.go.id/",
    "https://evisa.imigrasi.go.id/web/visa-selection",
    "https://id.usembassy.gov/bali/",
+   "https://jdih.kemenkeu.go.id/api/download/fulltext/2009/22TAHUN2009UU.htm",
    "https://layanan112.komdigi.go.id/tentang",
    "https://lovebali.baliprov.go.id/",
    "https://lovebali.baliprov.go.id/faq",
@@ -36,8 +37,6 @@
    "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia"
   ],
   "deliberately_excluded": [
-   "Galungan/Kuningan 2027 dates - unopened",
-   "whether a US car licence plus permit covers a scooter",
    "any blood-alcohol limit",
    "ATM limits and fees, service-charge percentages, tipping amounts",
    "flight durations and whether a nonstop exists",
@@ -46,13 +45,13 @@
    "all recommendations and itineraries (they live in the candidates file, not here)",
    "Nyepi airport closure hours - only a news quote of the airport manager for 2026 (06:00 to 06:00, 24 hours); no airport-operator page found",
    "Sanur harbour closures and fast-boat cancellations - news reports only",
-   "Galungan and Kuningan 2027 dates - the Religious Affairs Ministry's Hindu holiday letter for 2027 exists (found in Google) but its server refused every connection today; a search snippet of it reads 'Hari Raya Galungan (Libur Fakultatif) ... Kamis, 14 Januari 2027', which does not match the 13 January date on secondary sites, so nothing was stored",
-   "seasonal rainfall figures - the weather agency publishes year-specific forecasts, not an evergreen statement"
+   "seasonal rainfall figures - the weather agency publishes year-specific forecasts, not an evergreen statement",
+   "whether an international permit must itself be endorsed for motorcycles - the statute sets the licence-class rule but does not mention permits by category"
   ]
  },
  "_human_checklist": [
   "All five review items from the first draft were closed by Claude on 2026-10-13 by re-reading the pages directly (CDC, Bank Indonesia, State Dept) and by fixing wording rules into the records (writing_rule fields).",
-  "Residual, not checkable by anyone today: the traffic-law statute text behind the scooter licence class (secondary support only) and Nyepi airport closure hours (news reports only; the 2026 report fetched was internally inconsistent, so nothing was stored)."
+  "Residual: Nyepi airport closure hours (news quote only); Galungan/Kuningan 2027 held as secondary until the ministry PDF can be opened."
  ],
  "identity": {
   "timezones": {
@@ -557,8 +556,8 @@
    "also_seen_at": [
     "https://cluballiance.aaa.com/travel/idp/international-drivers-permit-countries"
    ],
-   "caveat": "Indonesia's traffic law (UU 22/2009, Pasal 77(1) and Pasal 80) is quoted consistently in Indonesian law journals as requiring a licence 'sesuai dengan jenis Kendaraan Bermotor yang dikemudikan' with SIM C for motorcycles; the statute text itself could not be opened (the parliament's copy returned 404), so that is secondary support, not part of this record's verified value.",
-   "writing_rule": "Scooter articles: state as fact only that a permit is required and that the AAA permit is honored. On the licence class, write that Indonesian law ties the licence to the vehicle type and has a separate motorcycle class, that no official page says a car-only licence is enough for a scooter, and that a rider should therefore assume it is not - both for the police and for an insurance claim. Never write that a car licence plus permit 'works'."
+   "caveat": "Does NOT by itself establish which licence class a scooter needs - see getting_around.licence_must_match_vehicle for the statute.",
+   "writing_rule": "Scooter articles: a permit is required and the AAA permit is honored (this record). The law requires a licence matching the vehicle type and has a separate motorcycle class (licence_must_match_vehicle). So tell readers plainly that a US licence without a motorcycle endorsement does not match a scooter under Indonesian law, and that insurers look at the same thing. Never write that a car licence plus permit 'works'."
   },
   "accident_and_police": {
    "fact_key": "getting_around.accident_and_police",
@@ -609,6 +608,34 @@
    "review_after": "2027-01-13",
    "risk": "standard",
    "caveat": "Read through a summarising fetch of the operator's page, not line by line. The page gives no fees, hours or domestic-terminal pickup point, and says nothing about Gojek. Corrects the secondary claim seen earlier that ride apps cannot pick up at the terminal."
+  },
+  "licence_must_match_vehicle": {
+   "fact_key": "getting_around.licence_must_match_vehicle",
+   "value": "Indonesia's traffic law requires every driver to hold a licence matching the type of vehicle driven, and it has a separate licence class for motorcycles (SIM C) distinct from the car class (SIM A). A foreign licence is valid in Indonesia where a bilateral or multilateral agreement provides for it.",
+   "status": "verified",
+   "source_url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2009/22TAHUN2009UU.htm",
+   "source_kind": "primary",
+   "scope": "anyone driving or riding a motor vehicle on Indonesian roads",
+   "support": "Law 22 of 2009, full text on the Finance Ministry's legal database, read directly. Pasal 77(1): 'Setiap orang yang mengemudikan Kendaraan Bermotor di Jalan wajib memiliki Surat Izin Mengemudi sesuai dengan jenis Kendaraan Bermotor yang dikemudikan.' Pasal 80: 'Surat Izin Mengemudi A berlaku untuk mengemudikan mobil penumpang dan barang perseorangan...; Surat Izin Mengemudi C berlaku untuk mengemudikan Sepeda Motor'. Pasal 85(4): 'Surat Izin Mengemudi yang diterbitkan oleh negara lain berlaku di Indonesia' where a bilateral or multilateral agreement exists.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "writing_rule": "This is the legal footing for the scooter articles: the law ties the licence to the vehicle type and treats motorcycles as their own class. It follows that a car-only entitlement does not match a scooter. State that reasoning as the law's logic; the statute does not mention international permits by category, so do not claim it does.",
+   "caveat": "The 2009 text as published; later amendments were not checked."
+  },
+  "traffic_penalties": {
+   "fact_key": "getting_around.traffic_penalties",
+   "value": "Under Indonesia's traffic law, driving without the required licence carries up to 4 months' detention or a fine of up to IDR 1,000,000. Being unable to show a valid licence carries up to 1 month and/or up to IDR 250,000. Riding a motorcycle without a national-standard helmet, or letting a passenger ride without one, carries up to 1 month or up to IDR 250,000.",
+   "status": "verified",
+   "source_url": "https://jdih.kemenkeu.go.id/api/download/fulltext/2009/22TAHUN2009UU.htm",
+   "source_kind": "primary",
+   "scope": "anyone driving or riding a motor vehicle on Indonesian roads",
+   "support": "Law 22 of 2009, read directly. Pasal 281: 'tidak memiliki Surat Izin Mengemudi ... pidana kurungan paling lama 4 (empat) bulan atau denda paling banyak Rp1.000.000,00'. Pasal 288(2): 'tidak dapat menunjukkan Surat Izin Mengemudi yang sah ... kurungan paling lama 1 (satu) bulan dan/atau denda paling banyak Rp250.000,00'. Pasal 291(1)-(2): helmet, 'kurungan paling lama 1 (satu) bulan atau denda paling banyak Rp250.000,00'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "display_rule": "rupiah maxima from the statute; never convert to a frozen dollar figure",
+   "caveat": "Statutory maximums from the 2009 text; amounts actually charged at a roadside stop are a different matter and are not sourced."
   }
  },
  "money": {
@@ -735,6 +762,21 @@
    "risk": "high",
    "valid_until": "2027-03-08",
    "writing_rule": "Articles are evergreen: give the 2027 date as an example and tell readers the date moves each year. Airport closure hours are NOT in this record."
+  },
+  "galungan_kuningan_2027": {
+   "fact_key": "when_to_go.galungan_kuningan_2027",
+   "value": "In 2027 Galungan falls on Wednesday, January 13, and again on August 11; Kuningan follows ten days later, on Saturday, January 23, and on August 21. The pair recurs every 210 days.",
+   "status": "verified",
+   "source_url": "https://bimashindu.kemenag.go.id/storage/files/20260918101947Surat%20Hari%20Libur%20Hindu%20Tahun%202027%20.pdf",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "The Religious Affairs Ministry's 2027 Hindu holiday letter could not be opened (its server refused connections from the terminal and from Chrome). Google's index of that PDF shows: 'Hari Penampahan Galungan (Libur Fakultatif). 3 Rabu, 13 Januari 2027 ... Hari Penampahan Kuningan (Libur Fakultatif). 6 Sabtu, 23 Januari'. The August dates (11 and 21 August 2027) come from the Kalender Bali listing and a Bali site in the same results; all sources agree.",
+   "checked_at": "2026-10-13",
+   "review_after": "2026-12-13",
+   "risk": "standard",
+   "valid_until": "2027-08-21",
+   "caveat": "Marked secondary because the letter itself was not opened - only Google's snippet of it. Re-open the PDF when the ministry server is back. An earlier snippet that seemed to show 14 January was the following day's entry (Umanis Galungan), not a conflict.",
+   "writing_rule": "Evergreen articles: give 2027 as the worked example and explain the 210-day cycle."
   }
  }
 }
