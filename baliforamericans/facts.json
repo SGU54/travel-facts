@@ -276,19 +276,6 @@
    "risk": "high",
    "caveat": "Processing time is not stated by either source; never print a number of days. Which office handles a given address is not listed in the sources.",
    "writing_rule": "Say both visa versions extend the same way: online application, then an in-person photo and interview. Do not say the e-VOA extends without a visit (true in 2023, superseded)."
-  },
-  "arrival_card_contents": {
-   "fact_key": "visa.arrival_card_contents",
-   "value": "The All Indonesia arrival card is one digital form that combines the immigration, customs and health declarations, replacing the separate customs e-CD and SATUSEHAT health forms. Each traveler, including children, needs their own. It asks for passport and contact details, flight and accommodation, and health and customs questions, and the QR code is sent by email.",
-   "status": "verified",
-   "source_url": "https://rr-asia.woah.org/app/uploads/2025/09/2025-09-All-Indonesia-Arrival-Card-Guide.pdf",
-   "source_kind": "secondary",
-   "scope": "all international passengers arriving in Indonesia",
-   "support": "Delegate travel guide (Sept 2025) published by the World Organisation for Animal Health for a conference in Indonesia, PDF read page by page: 'a unified digital form that combines several previous arrival/declaration forms (immigration, customs, health, etc.) into one. The form replaces ... SATUSEHAT (health declaration) and e-CD (customs declaration)'; 'Include children and infants — each person must have their own card'; lists passport details, contact info, travel details, transport and accommodation, health and customs declarations; 'does not replace your visa'. The 72-hour and free-of-charge points match the State Dept (see visa.arrival_card).",
-   "checked_at": "2026-10-13",
-   "review_after": "2027-04-13",
-   "risk": "standard",
-   "caveat": "Not an Indonesian government document; the official site allindonesia.imigrasi.go.id is script-only and showed no text. Use for describing the form, in attributed or general terms; no spans."
   }
  },
  "documents": {
@@ -1231,6 +1218,19 @@
    "review_after": "2027-10-13",
    "risk": "standard",
    "caveat": "Does not use the phrase 'separate tickets' and does not say what an airline does when a passenger on a separately booked onward flight misses it. Do not state airline behaviour; frame it as a question to ask."
+  },
+  "domestic_baggage": {
+   "fact_key": "getting_there.domestic_baggage",
+   "value": "Indonesian regulation sorts domestic airlines into three service groups. Under Transport Ministry Regulation PM 185 of 2015, a full-service airline includes up to 20 kg of checked baggage in an economy fare, a medium-service airline up to 15 kg, and a no-frills airline may charge for checked baggage.",
+   "status": "verified",
+   "source_url": "https://www.hukumonline.com/berita/a/maju-mundur-bagasi-berbayar-maskapai-penerbangan-lt5c52b1dccf092",
+   "source_kind": "secondary",
+   "scope": "economy passengers on scheduled domestic flights in Indonesia",
+   "support": "Search summaries of Indonesian legal and business press (Hukumonline, Kontan, Detik, Tirto) on Article 22 of PM 185/2015: three groups, 'full service', 'medium service', 'no frills'; 'recorded baggage is allowed up to a maximum of 20 kilograms' for full service, '15 kilograms' for medium service; 'no frills airlines can charge fees for recorded baggage'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "The regulation itself (jdih.dephub.go.id) could not be opened; this is press coverage read as search summaries. Later amendments not checked. Do not say which airline is in which group, and give no carry-on weights, change fees or refund rules: tell readers to read their fare's conditions."
   }
  },
  "_held_secondary": {
@@ -1261,6 +1261,76 @@
    "checked_at": "2026-10-13",
    "hold_reason": "The joint appeal's own text was not opened; only a news report of it.",
    "writing_rule": "Describe in attributed prose, no fact span."
+  },
+  "visa.arrival_card_contents": {
+   "fact_key": "visa.arrival_card_contents",
+   "value": "The All Indonesia arrival card is one digital form that combines the immigration, customs and health declarations, replacing the separate customs e-CD and SATUSEHAT health forms. Each traveler, including children, needs their own. It asks for passport and contact details, flight and accommodation, and health and customs questions, and the QR code is sent by email.",
+   "status": "verified",
+   "source_url": "https://rr-asia.woah.org/app/uploads/2025/09/2025-09-All-Indonesia-Arrival-Card-Guide.pdf",
+   "source_kind": "secondary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Delegate travel guide (Sept 2025) published by the World Organisation for Animal Health for a conference in Indonesia, PDF read page by page: 'a unified digital form that combines several previous arrival/declaration forms (immigration, customs, health, etc.) into one. The form replaces ... SATUSEHAT (health declaration) and e-CD (customs declaration)'; 'Include children and infants — each person must have their own card'; lists passport details, contact info, travel details, transport and accommodation, health and customs declarations; 'does not replace your visa'. The 72-hour and free-of-charge points match the State Dept (see visa.arrival_card).",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "caveat": "Not an Indonesian government document; the official site allindonesia.imigrasi.go.id is script-only and showed no text. Use for describing the form, in attributed or general terms; no spans.",
+   "writing_rule": "HELD SECONDARY: describe only in attributed prose (travel guides / the state news agency / delegate guidance report ...), never in a fact span."
+  },
+  "getting_around.boat_safety": {
+   "fact_key": "getting_around.boat_safety",
+   "value": "Passenger boats between Sanur and Nusa Penida come under the harbor master's office, KSOP Benoa, which issues the sailing approval each boat needs before departure and has told operators not to send boats out when the weather is poor, pointing them to the meteorological agency's wave forecasts. Indonesia's state news agency reported that in May 2023 the agency forecast waves of 2.5 to 4 meters in the Badung Strait, which the Sanur to Nusa Penida route crosses, and that waves above 2.5 meters put such boats at risk. It also reported that on 5 August 2025 a fast boat arriving from Nusa Penida with 75 passengers and 5 crew capsized in the entrance channel to Sanur harbor when it was hit by a large wave; two foreign passengers died and a crew member was missing. The harbor master attributed it to natural conditions, with forecast waves of 2 to 4 meters, and said the boat was within its certified capacity of 75.",
+   "status": "verified",
+   "source_url": "https://bali.antaranews.com/berita/384625/ksop-faktor-alam-penyebab-kapal-tenggelam-pelabuhan-sanur",
+   "source_kind": "secondary",
+   "scope": "fast boats between Bali (Sanur) and the Nusa islands",
+   "support": "ANTARA (state news agency), 6 Aug 2025, read directly in Chrome: 'Kantor Kesyahbandaran dan Otoritas Pelabuhan (KSOP) Kelas II Benoa menyatakan kapal cepat ... tenggelam di jalur masuk Pelabuhan Sanur akibat faktor alam'; 'membawa 75 penumpang dan lima awak kapal dari Pelabuhan Nusa Penida tenggelam sekitar pukul 15.15 Wita'; 'terhantam ombak ... tergulung ombak jadi kapalnya langsung terbalik'; 'berdasarkan BMKG tinggi ombak berkisar 2-4 meter'; 'jumlah penumpang yang diizinkan sesuai sertifikasi kapal adalah 75'; 80 on board, 73 foreign nationals; (via fetch) two foreign nationals dead, one crew member missing, 77 survivors. ANTARA, 12 May 2023 (via fetch): KSOP Benoa's head of maritime safety: 'Jangan memaksa memberangkatkan kapal bila cuaca kurang bagus'; checks before the sailing approval (Surat Persetujuan Berlayar) is issued; BMKG waves 2.5-4 m in the Badung Strait; risk above 2.5 m; 64 fast boats on the route.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "high",
+   "caveat": "A news agency's reports of the harbor authority's statements, not the authority's own page or a regulation (Transport Ministry site unreachable). The final casualty count of the 2025 accident was not re-checked after the first report: say 'two passengers died' as reported at the time. NEVER name the vessel or any operator. No cancellation rates, no refund rules, no claim that boats are 'safe' or 'unsafe' in general.",
+   "writing_rule": "HELD SECONDARY: describe only in attributed prose (travel guides / the state news agency / delegate guidance report ...), never in a fact span."
+  },
+  "places.nusa_islands": {
+   "fact_key": "places.nusa_islands",
+   "value": "Three islands lie off Bali's southeast coast. Nusa Penida is the largest, about 247 square km, with rough, hilly roads away from the north coast; its sights include Kelingking Beach, Angel's Billabong, Broken Beach, Crystal Bay, Atuh Beach and Diamond Beach, and Manta Point for diving. Nusa Lembongan is small, about 8 square km, with Jungutbatu village, Mushroom Bay, Dream Beach, Devil's Tear and a mangrove forest, and surfing, snorkeling and diving; a yellow suspension bridge for walkers and motorbikes links it to tiny Nusa Ceningan. Boats leave mainly from Sanur, with others from Padang Bai; guides give the Sanur crossing as roughly 30 to 45 minutes, and most Lembongan boats involve a wet landing, wading from the beach. Most visitors see Nusa Penida on a day trip, and accommodation exists along its north coast. Travel guides warn of strong rip currents at Dream Beach and of fatal falls at Devil's Tear. On Nusa Penida, travel guides describe the path to Kelingking Beach as a clifftop descent of about 400 meters, describe Peguyangan Spring as reached by about 700 stairs on a cliff edge, warn against swimming at Broken Beach at high tide because of waves, and warn of heat. Nusa Penida's arrival harbors are on the north coast (Toyapakeh, Buyuk, Sampalan), and Nusa Lembongan is about ten minutes from Nusa Penida by local boat.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Nusa_Penida",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Wikivoyage Nusa Penida and Nusa Lembongan (via fetch): Penida 'the largest of three islands', 247 km2; speedboat from Sanur about 30 minutes, slower ferry from Padang Bai; harbours Toyapakeh, Buyuk, Sampalan, Banjar Nyuh; 'Roads in Nusa Penida are rough, hilly away from the north coast'; Peguyangan 700 stairs; most visitors on day cruises, accommodation between Toyapakeh and Sampalan. Lembongan about 8 km2; Sanur primary port, also Serangan, Padang Bai; 35-45 minutes; 'wet landings, with passengers wading knee-deep or higher'; yellow suspension bridge to Ceningan; Penida about 10 minutes by local boat; 'Be very careful though about entering the water' at Dream Beach (rip currents); Devil's Tear 'many tourists have fallen to their deaths here'; no personal cars.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "caveat": "Boat crossing times are a travel wiki's figures, not an operator's or regulator's; give them as 'roughly' and tell readers to check with the operator. No boat safety or cancellation rules are sourced (Transport Ministry site unreachable). Never name a boat company.",
+   "writing_rule": "HELD SECONDARY: describe only in attributed prose (travel guides / the state news agency / delegate guidance report ...), never in a fact span."
+  },
+  "places.gili_islands": {
+   "fact_key": "places.gili_islands",
+   "value": "The Gili Islands are three small islands off northwest Lombok: Gili Trawangan, the largest and known as the party island; Gili Air, the closest to Lombok, with an established local community; and Gili Meno, the quietest. There are no cars or motorbikes on any of them. From Bali they are reached by fast boat, with Padang Bai in East Bali the main port (a crossing of roughly an hour and a half), longer crossings from the south, and a shorter sea route from Amed; or by flying to Lombok's airport, then driving to the harbor area at Bangsal and taking a boat. Travel guides warn that fast boats are small high-speed craft, that crew training and safety standards vary, that sea conditions are roughest in July and August, and that travelers with concerns about a vessel, overloading or weather should not board.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Gili_Islands",
+   "source_kind": "secondary",
+   "scope": "Bali and Lombok",
+   "support": "Wikivoyage Gili Islands (via fetch): Trawangan 340 ha 'party island', Air 188 ha, Meno 150 ha 'most laid-back'; 'There are no cars or motorbikes to disturb the peace'; Padang Bai about 1.5 hours, Serangan about 2.5 hours, Amed 'Shortest sea route'; via Lombok International Airport then taxi about 1 h 40 to 2 h to Bangsal or Teluk Nare, then boat; fast boats 'smaller high speed craft with light duty hull construction'; 'Crew training and safety standards vary considerably'; 'If you have legitimate concerns about the vessel, operator, overloading, or weather conditions then do not board'; 'Sea conditions worsen July-August with strong swells'; night crossings not recommended.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "caveat": "Volunteer travel wiki; crossing times are its figures, not an operator's or regulator's. No official boat-safety or cancellation rules are sourced. Give times as 'roughly', attribute the warnings to travel guides, name no company, and never state how often boats are cancelled.",
+   "writing_rule": "HELD SECONDARY: describe only in attributed prose (travel guides / the state news agency / delegate guidance report ...), never in a fact span."
+  },
+  "places.batur": {
+   "fact_key": "places.batur",
+   "value": "Mount Batur is an active volcano of about 1,700 meters in the Kintamani area, inside a large caldera with a crater lake, Lake Batur. Travel guides describe the sunrise climb as starting from the lakeside village of Toya Bungkah, taking about two hours to the summit, with more than half of the route through forest, and as requiring a guide from the local Association of Mount Batur Trekking Guides. The village has hot springs. Penelokan, on the caldera rim, is the main viewpoint, best early before cloud forms. Kintamani is usually much cooler than the coast, and a sweater or jacket is advised. Guides warn that touts target visitors and suggest booking the climb in advance.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Kintamani",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Wikivoyage Kintamani (via fetch): Batur 1,700 metres, 'still an active volcano'; caldera about 1,500 m; trek from Toya Bungkah 'about 2 hours', 'more than half of the climb is through pleasant shady forest'; guides mandatory, members of the Association of Mount Batur Trekking Guides, office in Toya Bungkah; hot springs; Penelokan 'spectacular views of this crater lake and Mount Batur', best early; Pura Ulun Danu Batur; 'usually about 15 degrees cooler than down on the coast'; 'a sweater or jacket advisable'; touts target visitors, pre-booking helps.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "caveat": "Volunteer wiki. It calls the climb 'very easy': do NOT repeat a difficulty rating; say 'about two hours' and that it is a pre-dawn climb on a volcano. No start times, no prices. '15 degrees cooler' has no unit stated: say 'much cooler'. Volcanic activity status is not sourced: tell readers to check before booking.",
+   "writing_rule": "HELD SECONDARY: describe only in attributed prose (travel guides / the state news agency / delegate guidance report ...), never in a fact span."
   }
  },
  "places": {
@@ -1316,19 +1386,6 @@
    "risk": "standard",
    "caveat": "Wikivoyage is a volunteer travel wiki: use for stable geography and character, in general terms ('is known for'); no prices, no superlatives stated as fact, no claims about crowds or safety beyond what is quoted."
   },
-  "nusa_islands": {
-   "fact_key": "places.nusa_islands",
-   "value": "Three islands lie off Bali's southeast coast. Nusa Penida is the largest, about 247 square km, with rough, hilly roads away from the north coast; its sights include Kelingking Beach, Angel's Billabong, Broken Beach, Crystal Bay, Atuh Beach and Diamond Beach, and Manta Point for diving. Nusa Lembongan is small, about 8 square km, with Jungutbatu village, Mushroom Bay, Dream Beach, Devil's Tear and a mangrove forest, and surfing, snorkeling and diving; a yellow suspension bridge for walkers and motorbikes links it to tiny Nusa Ceningan. Boats leave mainly from Sanur, with others from Padang Bai; guides give the Sanur crossing as roughly 30 to 45 minutes, and most Lembongan boats involve a wet landing, wading from the beach. Most visitors see Nusa Penida on a day trip, and accommodation exists along its north coast. Travel guides warn of strong rip currents at Dream Beach and of fatal falls at Devil's Tear. On Nusa Penida, travel guides describe the path to Kelingking Beach as a clifftop descent of about 400 meters, describe Peguyangan Spring as reached by about 700 stairs on a cliff edge, warn against swimming at Broken Beach at high tide because of waves, and warn of heat. Nusa Penida's arrival harbors are on the north coast (Toyapakeh, Buyuk, Sampalan), and Nusa Lembongan is about ten minutes from Nusa Penida by local boat.",
-   "status": "verified",
-   "source_url": "https://en.wikivoyage.org/wiki/Nusa_Penida",
-   "source_kind": "secondary",
-   "scope": "Bali",
-   "support": "Wikivoyage Nusa Penida and Nusa Lembongan (via fetch): Penida 'the largest of three islands', 247 km2; speedboat from Sanur about 30 minutes, slower ferry from Padang Bai; harbours Toyapakeh, Buyuk, Sampalan, Banjar Nyuh; 'Roads in Nusa Penida are rough, hilly away from the north coast'; Peguyangan 700 stairs; most visitors on day cruises, accommodation between Toyapakeh and Sampalan. Lembongan about 8 km2; Sanur primary port, also Serangan, Padang Bai; 35-45 minutes; 'wet landings, with passengers wading knee-deep or higher'; yellow suspension bridge to Ceningan; Penida about 10 minutes by local boat; 'Be very careful though about entering the water' at Dream Beach (rip currents); Devil's Tear 'many tourists have fallen to their deaths here'; no personal cars.",
-   "checked_at": "2026-10-13",
-   "review_after": "2027-10-13",
-   "risk": "high",
-   "caveat": "Boat crossing times are a travel wiki's figures, not an operator's or regulator's; give them as 'roughly' and tell readers to check with the operator. No boat safety or cancellation rules are sourced (Transport Ministry site unreachable). Never name a boat company."
-  },
   "east_and_north": {
    "fact_key": "places.east_and_north",
    "value": "East Bali in travel-guide terms: Amed is a strip of quiet fishing villages with black sand beaches, coral reefs and diving; Tulamben is known for diving the USAT Liberty shipwreck; Candidasa is a quiet coastal town; Padang Bai is a small port town where ferries to Lombok leave, with white sand coves; Sidemen is a valley of rice terraces and forested hills with easy walks; Tirta Gangga is a water palace; Pura Besakih, on the slopes of Mount Agung, is regarded by Balinese Hindus as their mother temple; Mount Agung is the island's highest mountain; Kintamani has the active volcano Mount Batur, described as about a two-hour climb. North Bali: Lovina is a string of quiet villages with black sand beaches, known for dawn boat trips to see dolphins; Singaraja is the largest town on the north coast and the former colonial capital; Sekumpul is a group of waterfalls in a jungle valley. Bedugul, in the central mountains, has lakes, a botanical garden and the Ulun Danu Bratan temple.",
@@ -1368,32 +1425,6 @@
    "risk": "standard",
    "caveat": "Volunteer travel wiki. The page's taxi time and prices are NOT to be used. Never name a boat company. Dive-site difficulty and depths are not sourced."
   },
-  "gili_islands": {
-   "fact_key": "places.gili_islands",
-   "value": "The Gili Islands are three small islands off northwest Lombok: Gili Trawangan, the largest and known as the party island; Gili Air, the closest to Lombok, with an established local community; and Gili Meno, the quietest. There are no cars or motorbikes on any of them. From Bali they are reached by fast boat, with Padang Bai in East Bali the main port (a crossing of roughly an hour and a half), longer crossings from the south, and a shorter sea route from Amed; or by flying to Lombok's airport, then driving to the harbor area at Bangsal and taking a boat. Travel guides warn that fast boats are small high-speed craft, that crew training and safety standards vary, that sea conditions are roughest in July and August, and that travelers with concerns about a vessel, overloading or weather should not board.",
-   "status": "verified",
-   "source_url": "https://en.wikivoyage.org/wiki/Gili_Islands",
-   "source_kind": "secondary",
-   "scope": "Bali and Lombok",
-   "support": "Wikivoyage Gili Islands (via fetch): Trawangan 340 ha 'party island', Air 188 ha, Meno 150 ha 'most laid-back'; 'There are no cars or motorbikes to disturb the peace'; Padang Bai about 1.5 hours, Serangan about 2.5 hours, Amed 'Shortest sea route'; via Lombok International Airport then taxi about 1 h 40 to 2 h to Bangsal or Teluk Nare, then boat; fast boats 'smaller high speed craft with light duty hull construction'; 'Crew training and safety standards vary considerably'; 'If you have legitimate concerns about the vessel, operator, overloading, or weather conditions then do not board'; 'Sea conditions worsen July-August with strong swells'; night crossings not recommended.",
-   "checked_at": "2026-10-13",
-   "review_after": "2027-10-13",
-   "risk": "high",
-   "caveat": "Volunteer travel wiki; crossing times are its figures, not an operator's or regulator's. No official boat-safety or cancellation rules are sourced. Give times as 'roughly', attribute the warnings to travel guides, name no company, and never state how often boats are cancelled."
-  },
-  "batur": {
-   "fact_key": "places.batur",
-   "value": "Mount Batur is an active volcano of about 1,700 meters in the Kintamani area, inside a large caldera with a crater lake, Lake Batur. Travel guides describe the sunrise climb as starting from the lakeside village of Toya Bungkah, taking about two hours to the summit, with more than half of the route through forest, and as requiring a guide from the local Association of Mount Batur Trekking Guides. The village has hot springs. Penelokan, on the caldera rim, is the main viewpoint, best early before cloud forms. Kintamani is usually much cooler than the coast, and a sweater or jacket is advised. Guides warn that touts target visitors and suggest booking the climb in advance.",
-   "status": "verified",
-   "source_url": "https://en.wikivoyage.org/wiki/Kintamani",
-   "source_kind": "secondary",
-   "scope": "Bali",
-   "support": "Wikivoyage Kintamani (via fetch): Batur 1,700 metres, 'still an active volcano'; caldera about 1,500 m; trek from Toya Bungkah 'about 2 hours', 'more than half of the climb is through pleasant shady forest'; guides mandatory, members of the Association of Mount Batur Trekking Guides, office in Toya Bungkah; hot springs; Penelokan 'spectacular views of this crater lake and Mount Batur', best early; Pura Ulun Danu Batur; 'usually about 15 degrees cooler than down on the coast'; 'a sweater or jacket advisable'; touts target visitors, pre-booking helps.",
-   "checked_at": "2026-10-13",
-   "review_after": "2027-10-13",
-   "risk": "high",
-   "caveat": "Volunteer wiki. It calls the climb 'very easy': do NOT repeat a difficulty rating; say 'about two hours' and that it is a pre-dawn climb on a volcano. No start times, no prices. '15 degrees cooler' has no unit stated: say 'much cooler'. Volcanic activity status is not sourced: tell readers to check before booking."
-  },
   "tanah_lot_lempuyang": {
    "fact_key": "places.tanah_lot_lempuyang",
    "value": "Tanah Lot is a sea temple on a rock just offshore on Bali's southwest coast, one of the island's important directional temples, attributed to the 15th-century priest Nirartha; travel guides describe the area as very busy in the late afternoon before sunset, with the approach lined by souvenir shops. Pura Lempuyang is a temple high in the mountains of Karangasem in East Bali, famous for the 'Gates of Heaven' photograph; travel writers report a numbered queue for the photo that can run to hours, and that the reflection seen in the famous picture is made by a photographer holding a mirror under the phone, not by water. Gunung Kawi, an 11th-century site near Ubud, is reached by climbing down 371 steps; Tirta Empul is a 10th-century spring temple used for ritual purification; Goa Gajah is an 11th-century cave with a carved demon's mouth at its entrance.",
@@ -1432,6 +1463,34 @@
    "review_after": "2027-10-13",
    "risk": "standard",
    "caveat": "Read as search summaries, not full text. No sighting odds, no season claims, no claims about sea conditions at the sites. Do not name operators."
+  }
+ },
+ "food": {
+  "balinese_dishes": {
+   "fact_key": "food.balinese_dishes",
+   "value": "Balinese cooking is built on pork, chicken, duck, seafood and vegetables, seasoned with a spice paste (base genep or basa gede) of garlic, shallots, chilies, ginger, turmeric, palm sugar and shrimp paste. Pork is central, which sets it apart from the rest of mostly Muslim Indonesia; beef is rarely eaten because of Hindu tradition. Well-known dishes: babi guling, spit-roasted suckling pig stuffed with chili, turmeric, garlic and ginger; bebek betutu and ayam betutu, duck or chicken heavily seasoned, wrapped in leaves and slow-cooked; lawar, a mix of chopped vegetables such as young jackfruit with coconut, minced meat and pork rind, of which the red version contains fresh pig's blood; sate lilit, spiced minced meat pressed around a lemongrass stick; nasi campur Bali, rice with several small portions of meat, fish, tofu, tempeh and vegetables; sambal matah, a raw relish of shallots, chili, lemongrass and lime in coconut oil; urutan, a pork sausage; jukut urab, vegetables with grated coconut; laklak, small rice-flour pancakes with coconut and palm sugar; bubuh injin, black sticky rice pudding. Peanuts appear in sauces, and coconut milk is widely used. Brem is a rice wine.",
+   "status": "verified",
+   "source_url": "https://en.wikipedia.org/wiki/Balinese_cuisine",
+   "source_kind": "secondary",
+   "scope": "Balinese food",
+   "support": "Wikipedia 'Balinese cuisine' (via fetch): babi guling 'roasted suckling pig' stuffed with chili, turmeric, garlic, ginger; betutu 'steamed or roasted poultry (chicken or duck) highly seasoned', wrapped in banana leaves; lawar with 'shredded unripe jackfruit, young banana flower', pork rind, 'can contain raw pig blood', white and red varieties; sate lilit 'spiced minced meat on a stick' on lemongrass; nasi campur Bali; basa gede 'garlic, red chilies, shallots, nutmeg, ginger, turmeric, palm sugar, cumin, shrimp paste'; sambal matah; 'beef is never or rarely consumed'; shrimp paste, coconut milk, peanuts (in sauces), chilies; urutan, jukut urab, laklak, bubuh injin, brem.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "An encyclopedia summary. Ingredients vary by cook: never tell a reader with an allergy that a dish is free of something. No restaurant names, no prices."
+  },
+  "indonesian_phrases": {
+   "fact_key": "food.indonesian_phrases",
+   "value": "Useful Indonesian for ordering food: 'Saya alergi ...' (I am allergic to ...); 'Saya tidak makan ...' (I do not eat ...); 'tanpa' (without); 'tidak pedas' (not spicy); 'kacang' (peanuts, also used for nuts and beans); 'udang' (shrimp); 'telur' (egg); 'susu' (milk); 'ikan' (fish); 'ayam' (chicken); 'babi' (pork); 'sapi' (beef); 'hasil laut' (seafood); 'Saya vegetarian' (I am vegetarian); 'air' (water); 'es' (ice); 'terima kasih' (thank you); 'minta bon' (the bill, please).",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Indonesian_phrasebook",
+   "source_kind": "secondary",
+   "scope": "Indonesian language",
+   "support": "Wikivoyage Indonesian phrasebook (via fetch): 'Saya alergi akan __'; 'Saya vegetarian'; 'Saya tidak makan babi'; 'Saya tidak makan sapi'; 'Saya tidak makan hasil laut'; kacang, udang, telur, susu, ayam, ikan, daging babi; air; es; 'Terima kasih'; 'Minta bon'; 'tidak pedas'; 'tanpa'; 'tanpa MSG'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "A phrasebook, not a medical translation. Phrases do not guarantee understanding; tell readers with serious allergies to carry a written card and their medication. 'terasi' (shrimp paste) is the common Indonesian word but was not in the page read: introduce it as 'commonly called terasi' only with that caveat or leave it out."
   }
  }
 }

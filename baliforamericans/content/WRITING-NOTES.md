@@ -31,3 +31,8 @@ articles are the ones that feed them) · liability chain 2.3 · money leak 2.3 �
 Rule for the remaining area / itinerary / stay articles is unchanged and now measured: ONE geography piece per article.
 The itinerary articles are the danger: they must give a day order, and must NOT also work out base choice + boat-day placement +
 last-night location in one place. No `vein` block is written to article-list.json: choosing the thesis is the dossier build's call.
+
+## Facts validator (2026-10-13): read the whole output, not the count
+`validate-facts.mjs facts.json` printed "verified: N" while `ok` was false for several batches: five secondary-sourced records with
+high risk (arrival-card contents, boat safety, Nusa islands, Gili islands, Batur) failed `primary-required`. They now live in
+`_held_secondary` with the Nyepi airport records: attributed prose only, no spans. Check `"ok": true` after every facts edit.
