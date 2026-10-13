@@ -14,6 +14,8 @@
    "home_currency": "USD"
   },
   "primary_sources": [
+   "https://bapenda.badungkab.go.id/storage/bapenda/file/Surat%20Edaran%20No.973.14315%20Bapenda.pdf",
+   "https://bmc.baliprov.go.id/news/11462",
    "https://cluballiance.aaa.com/travel/idp/international-drivers-permit-countries",
    "https://diskominfo.badungkab.go.id/artikel/49056-call-center-112-kabupaten-badung",
    "https://evisa.imigrasi.go.id/",
@@ -21,8 +23,10 @@
    "https://id.usembassy.gov/bali/",
    "https://layanan112.komdigi.go.id/tentang",
    "https://lovebali.baliprov.go.id/",
+   "https://lovebali.baliprov.go.id/faq",
    "https://ngurahrai.imigrasi.go.id/layanan-wna/",
    "https://sertifikasicdob.pom.go.id/wasdisobat/faq/",
+   "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2027",
    "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
    "https://www.beacukai.go.id/barang-penumpang",
    "https://www.beacukai.go.id/faq-impor-pembawaan-uang-tunai",
@@ -31,7 +35,6 @@
    "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia"
   ],
   "deliberately_excluded": [
-   "Nyepi 2027 date (8 March 2027) - secondary source only",
    "Galungan/Kuningan 2027 dates - unopened",
    "whether a US car licence plus permit covers a scooter",
    "any blood-alcohol limit",
@@ -39,7 +42,9 @@
    "flight durations and whether a nonstop exists",
    "ride-app pickup restrictions in Bali",
    "fast-boat harbours, cancellation practice",
-   "all recommendations and itineraries (they live in the candidates file, not here)"
+   "all recommendations and itineraries (they live in the candidates file, not here)",
+   "Nyepi airport closure hours - only a news quote of the airport manager for 2026 (06:00 to 06:00, 24 hours); no airport-operator page found",
+   "Sanur harbour closures and fast-boat cancellations - news reports only"
   ]
  },
  "_human_checklist": [
@@ -192,6 +197,46 @@
    "checked_at": "2026-10-13",
    "review_after": "2027-04-13",
    "risk": "standard"
+  },
+  "tourist_levy_terms": {
+   "fact_key": "visa.tourist_levy_terms",
+   "value": "The Bali tourist levy is paid once per trip, before the traveler leaves Indonesia, and only cashless: online in advance, at counters at Bali's airport and port, or through registered hotels, travel agents and attractions. Accepted: Visa, Mastercard, American Express and JCB cards, bank transfer, virtual account, UnionPay and QRIS. Proof is a voucher with a QR code sent by email. Cruise passengers pay too.",
+   "status": "verified",
+   "source_url": "https://lovebali.baliprov.go.id/faq",
+   "source_kind": "primary",
+   "scope": "foreign tourists in Bali",
+   "support": "Love Bali FAQ, read directly: 'The levy is paid only 1 (one) time while traveling in Bali, before the person leaves the territory of the Republic of Indonesia.' 'Payment must be done cashless through electronic payment facilities.' 'Yes, this tax applies to cruise passengers.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "also_seen_at": [
+    "https://lovebali.baliprov.go.id/"
+   ]
+  },
+  "tourist_levy_exemptions": {
+   "fact_key": "visa.tourist_levy_exemptions",
+   "value": "Exempt from the levy: holders of diplomatic and official visas, transport crew, holders of temporary or permanent stay permits (KITAS/KITAP), and holders of family unification, student, golden and certain other visas. Golden-visa and 'other visa' holders must apply through the Love Bali system; the rest show their card to the officer. An ordinary tourist on a visa on arrival is not exempt.",
+   "status": "verified",
+   "source_url": "https://lovebali.baliprov.go.id/faq",
+   "source_kind": "primary",
+   "scope": "foreign tourists in Bali",
+   "support": "Love Bali FAQ, read directly: 'Exemptions are granted to: (a) Holders of diplomatic and official visas; (b) Crew members on transportation vehicles; (c) Holder of Temporary Stay Permit Card (KITAS) or Permanent Stay Permit Card (KITAP); (d) Holders of Family unification visas; (e) Holders of Student visas; (f) Holders of Golden visas, and (g) Holders of other visas. Points (f) and (g) need to apply through the Love Bali system'. Legal basis listed: Law 15/2023 on Bali Province; Provincial Regulation 2/2025 amending 6/2023; Governor Regulation 25/2025; Governor Decree 699/03-L/HK/2025.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "writing_rule": "The last sentence of the value is an inference from the list (no tourist-visa category appears in it), not a quoted line."
+  },
+  "tourist_levy_enforcement": {
+   "fact_key": "visa.tourist_levy_enforcement",
+   "value": "Under the Bali governor's 2025 circular, a foreign tourist who has not paid the levy is refused service at tourist attractions.",
+   "status": "verified",
+   "source_url": "https://bmc.baliprov.go.id/news/11462",
+   "source_kind": "primary",
+   "scope": "foreign tourists in Bali",
+   "support": "Bali provincial media centre, 24 March 2025, on Circular (SE) No. 7 of 2025: 'Turis yang belum membayar Pungutan Wisatawan Asing dikenakan sanksi tidak mendapatkan pelayanan di Daya Tarik Wisata.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
   }
  },
  "documents": {
@@ -535,6 +580,19 @@
    "checked_at": "2026-10-13",
    "review_after": "2027-04-13",
    "risk": "standard"
+  },
+  "circular_driving_rules": {
+   "fact_key": "getting_around.circular_driving_rules",
+   "value": "Bali's 2025 circular requires foreign tourists who drive or ride to hold a valid international or national driving licence, obey traffic rules, wear a helmet, not carry more passengers than the vehicle allows, and not be under the influence of alcohol or drugs. It also requires them to use roadworthy four-wheeled transport that officially belongs to a rental business or association.",
+   "status": "verified",
+   "source_url": "https://bmc.baliprov.go.id/news/11462",
+   "source_kind": "primary",
+   "scope": "foreign tourists in Bali",
+   "support": "Read directly: 'memiliki Surat Izin Mengemudi Internasional atau Nasional yang masih berlaku, tertib berlalu lintas di jalan, berpakaian sopan, menggunakan helm, mengikuti rambu-rambu lalu lintas, tidak memuat penumpang melebihi kapasitas, serta tidak dalam pengaruh minuman beralkohol dan/atau obat-obatan terlarang. Wisman juga diwajibkan menggunakan alat transportasi laik pakai roda 4 yang resmi bernaung di bawah badan usaha atau asosiasi penyewaan transportasi roda 4.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "writing_rule": "This is the province's own statement of the licence rule. It still does not say which licence CLASS a scooter needs. The four-wheel wording concerns rented cars; do not stretch it into a claim that scooter rental is banned."
   }
  },
  "money": {
@@ -550,6 +608,33 @@
    "review_after": "2027-01-13",
    "risk": "standard",
    "caveat": "Says nothing about third-party tourist wallets."
+  },
+  "changers_and_rupiah": {
+   "fact_key": "money.changers_and_rupiah",
+   "value": "Bali's 2025 circular tells foreign tourists to change money only at authorised money changers, bank or non-bank, identified by a licence number and a Bank Indonesia QR-code logo, to pay with the Indonesian standard QR code, and to transact in rupiah.",
+   "status": "verified",
+   "source_url": "https://bmc.baliprov.go.id/news/11462",
+   "source_kind": "primary",
+   "scope": "foreign tourists in Bali",
+   "support": "Read directly: 'penukaran mata uang asing di penyelenggara Kegiatan Usaha Penukaran Valuta Asing (KUPVA) resmi (authorized money changer), baik Bank maupun non-Bank yang ditandai dengan adanya nomor izin dan logo QR code dari Bank Indonesia, melakukan pembayaran dengan menggunakan Kode QR Standar Indonesia dan melakukan transaksi dengan menggunakan mata uang [rupiah]'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "writing_rule": "Pair with money.qr_payments_us: the province tells visitors to pay by QR, while the central bank's cross-border scheme does not include the US. Say both."
+  },
+  "bill_tax_badung": {
+   "fact_key": "money.bill_tax_badung",
+   "value": "In Badung regency, the local tax on restaurant food and drink and on hotel stays is 10%. Entertainment at discos, karaoke venues, nightclubs, bars and steam baths/spas is taxed at 40%.",
+   "status": "verified",
+   "source_url": "https://bapenda.badungkab.go.id/storage/bapenda/file/Surat%20Edaran%20No.973.14315%20Bapenda.pdf",
+   "source_kind": "primary",
+   "scope": "Badung regency, Bali (Kuta, Legian, Seminyak, Canggu, Jimbaran, Uluwatu and Nusa Dua); other regencies set their own rates",
+   "support": "Badung revenue agency Circular 973/14315/Bapenda dated 29 December 2023, scanned PDF read page by page: 'Pajak Barang dan Jasa Tertentu: Makanan dan/atau minuman 10% ... Jasa Perhotelan 10% ... Jasa Kesenian dan Hiburan 10% - Khusus jasa hiburan pada diskotek, karaoke, kelab malam, bar, dan mandi uap/spa sebesar 40%'. Regional Regulation 7/2023, in force from 1 January 2024.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "standard",
+   "valid_from": "2024-01-01",
+   "caveat": "A 2023 circular: the 40% entertainment rate was publicly contested after it took effect, so re-check for amendments before stating it as current. Says nothing about 'service charge', which is a business practice, not a tax; Ubud is in Gianyar regency and is not covered."
   }
  },
  "connectivity": {
@@ -564,6 +649,76 @@
    "checked_at": "2026-10-13",
    "review_after": "2027-04-13",
    "risk": "standard"
+  }
+ },
+ "culture": {
+  "tourist_circular": {
+   "fact_key": "culture.tourist_circular",
+   "value": "Bali's current rulebook for visitors is Governor's Circular No. 7 of 2025, 'New Order for Foreign Tourists While in Bali'. It replaced the 2023 list. Violations are to be dealt with firmly under Indonesian law, and residents are asked to report them to a provincial WhatsApp hotline.",
+   "status": "verified",
+   "source_url": "https://bmc.baliprov.go.id/news/11462",
+   "source_kind": "primary",
+   "scope": "foreign tourists in Bali",
+   "support": "Bali provincial media centre, read directly: 'Gubernur Bali Wayan Koster mengeluarkan Surat Edaran Nomor 7 Tahun 2025 Tentang Tatanan Baru bagi Wisatawan Asing selama Berada di Bali' (Senin, 24 Maret 2025). The 2023 circular (No. 4 of 2023) is referenced in provincial documents as the earlier version.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "caveat": "Source is the province's own news release about the circular, not the circular's PDF. 'Replaced the 2023 list' is my reading of the sequence, not a quoted line."
+  },
+  "temple_access": {
+   "fact_key": "culture.temple_access",
+   "value": "Foreign tourists may not enter the inner and middle courtyards of a temple or other sanctified place unless they are there to pray, in Balinese traditional dress; the circular adds that they must not be menstruating. Climbing sacred trees, climbing on sacred structures, and posing indecently or unclothed at sacred sites are prohibited.",
+   "status": "verified",
+   "source_url": "https://bmc.baliprov.go.id/news/11462",
+   "source_kind": "primary",
+   "scope": "foreign tourists in Bali",
+   "support": "Read directly: 'larangan bagi turis asing untuk memasuki Utamaning Mandala dan Madyaning Mandala tempat suci atau tempat yang disucikan seperti Pura, Pelinggih, kecuali untuk keperluan bersembahyang dengan memakai busana Adat Bali atau persembahyangan, dan tidak sedang datang bulan (menstruasi). Wisatawan asing dilarang memanjat pohon yang disakralkan'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "writing_rule": "Report the menstruation rule as what the circular says, neutrally, without endorsing or mocking it."
+  },
+  "conduct_and_plastics": {
+   "fact_key": "culture.conduct_and_plastics",
+   "value": "The circular requires modest dress and polite conduct in sacred areas, tourist sites, restaurants, shops and on the road, and prohibits littering, single-use plastics (plastic bags, styrofoam, plastic straws, plastic-packaged drinks), abusive or aggressive behavior toward officials, locals or other tourists, spreading hate speech or hoaxes online, and working or doing business without official papers.",
+   "status": "verified",
+   "source_url": "https://bmc.baliprov.go.id/news/11462",
+   "source_kind": "primary",
+   "scope": "foreign tourists in Bali",
+   "support": "Read directly: 'dilarang menggunakan plastik sekali pakai seperti kantong plastik, polysterina (styrofoam), sedotan plastik, dan minuman kemasan plastik. ... dilarang mengucapkan kata-kata kasar, berperilaku tidak sopan, membuat keributan, serta bertindak agresif'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  }
+ },
+ "stay": {
+  "licensed_accommodation": {
+   "fact_key": "stay.licensed_accommodation",
+   "value": "Bali's 2025 circular requires foreign tourists to stay in accommodation businesses that hold a licence under the regulations.",
+   "status": "verified",
+   "source_url": "https://bmc.baliprov.go.id/news/11462",
+   "source_kind": "primary",
+   "scope": "foreign tourists in Bali",
+   "support": "Read directly: 'wisatawan asing wajib tinggal/menginap di tempat usaha akomodasi yang memiliki izin sesuai ketentuan peraturan perundang-undangan'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  }
+ },
+ "when_to_go": {
+  "nyepi_2027": {
+   "fact_key": "when_to_go.nyepi_2027",
+   "value": "Nyepi in 2027 is Monday, March 8 (Saka New Year 1949), a national holiday. Eid al-Fitr follows on Wednesday and Thursday, March 10-11, with collective leave days on March 9, 12 and 15.",
+   "status": "verified",
+   "source_url": "https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2027",
+   "source_kind": "primary",
+   "scope": "Indonesia; the day of silence itself is observed in Bali",
+   "support": "State Secretariat, read directly: 'Senin, 8 Maret 2027: Hari Suci Nyepi (Tahun Baru Saka 1949); Rabu-Kamis, 10-11 Maret 2027: Idulfitri 1448 Hijriah', from Joint Decree 'Nomor 1205 Tahun 2026, Nomor 3 Tahun 2026, dan Nomor 2 Tahun 2026 tentang Hari Libur Nasional dan Cuti Bersama Tahun 2027'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-03-09",
+   "risk": "high",
+   "valid_until": "2027-03-08",
+   "writing_rule": "Articles are evergreen: give the 2027 date as an example and tell readers the date moves each year. Airport closure hours are NOT in this record."
   }
  }
 }
