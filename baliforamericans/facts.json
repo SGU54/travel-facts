@@ -767,6 +767,19 @@
    "review_after": "2027-10-13",
    "risk": "standard",
    "caveat": "No statement on melatonin or on days-per-time-zone recovery. Do not state either."
+  },
+  "diving": {
+   "fact_key": "safety_health.diving",
+   "value": "The State Department says diving in Indonesia can be dangerous because of minimal safety regulations.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept Indonesia page, 'Adventure travel - Water sports', read directly in Chrome 2026-10-13: 'Diving can be dangerous due to minimal safety regulations.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "caveat": "One sentence only was captured; the surrounding advice was not read. Say nothing more specific than this."
   }
  },
  "getting_around": {
@@ -1293,7 +1306,7 @@
   },
   "nusa_islands": {
    "fact_key": "places.nusa_islands",
-   "value": "Three islands lie off Bali's southeast coast. Nusa Penida is the largest, about 247 square km, with rough, hilly roads away from the north coast; its sights include Kelingking Beach, Angel's Billabong, Broken Beach, Crystal Bay, Atuh Beach and Diamond Beach, and Manta Point for diving. Nusa Lembongan is small, about 8 square km, with Jungutbatu village, Mushroom Bay, Dream Beach, Devil's Tear and a mangrove forest, and surfing, snorkeling and diving; a yellow suspension bridge for walkers and motorbikes links it to tiny Nusa Ceningan. Boats leave mainly from Sanur, with others from Padang Bai; guides give the Sanur crossing as roughly 30 to 45 minutes, and most Lembongan boats involve a wet landing, wading from the beach. Most visitors see Nusa Penida on a day trip, and accommodation exists along its north coast. Travel guides warn of strong rip currents at Dream Beach and of fatal falls at Devil's Tear.",
+   "value": "Three islands lie off Bali's southeast coast. Nusa Penida is the largest, about 247 square km, with rough, hilly roads away from the north coast; its sights include Kelingking Beach, Angel's Billabong, Broken Beach, Crystal Bay, Atuh Beach and Diamond Beach, and Manta Point for diving. Nusa Lembongan is small, about 8 square km, with Jungutbatu village, Mushroom Bay, Dream Beach, Devil's Tear and a mangrove forest, and surfing, snorkeling and diving; a yellow suspension bridge for walkers and motorbikes links it to tiny Nusa Ceningan. Boats leave mainly from Sanur, with others from Padang Bai; guides give the Sanur crossing as roughly 30 to 45 minutes, and most Lembongan boats involve a wet landing, wading from the beach. Most visitors see Nusa Penida on a day trip, and accommodation exists along its north coast. Travel guides warn of strong rip currents at Dream Beach and of fatal falls at Devil's Tear. On Nusa Penida, travel guides describe the path to Kelingking Beach as a clifftop descent of about 400 meters, describe Peguyangan Spring as reached by about 700 stairs on a cliff edge, warn against swimming at Broken Beach at high tide because of waves, and warn of heat. Nusa Penida's arrival harbors are on the north coast (Toyapakeh, Buyuk, Sampalan), and Nusa Lembongan is about ten minutes from Nusa Penida by local boat.",
    "status": "verified",
    "source_url": "https://en.wikivoyage.org/wiki/Nusa_Penida",
    "source_kind": "secondary",
@@ -1319,7 +1332,7 @@
   },
   "munduk": {
    "fact_key": "places.munduk",
-   "value": "Munduk is a village in the western highlands of central Bali, in the wider Bedugul area, at over 700 meters of altitude, where the climate is distinctly cool. Travel guides describe it as known for waterfalls, coffee and clove plantations, trekking, and the nearby twin crater lakes of Buyan and Tamblingan, with the Ulun Danu Bratan temple on Lake Bratan in the same highlands. It is about 20 km from Lovina on the north coast, and suits travelers who want nature, walking and cooler air.",
+   "value": "Munduk is a village in the western highlands of central Bali, in the wider Bedugul area, at over 700 meters of altitude, where the climate is distinctly cool. Travel guides describe it as known for waterfalls, coffee and clove plantations, trekking, and the nearby twin crater lakes of Buyan and Tamblingan, with the Ulun Danu Bratan temple on Lake Bratan in the same highlands. It is about 20 km from Lovina on the north coast, and suits travelers who want nature, walking and cooler air. Travel guides call Munduk Waterfall perhaps the most impressive accessible falls on the island, powerful in the wet season.",
    "status": "verified",
    "source_url": "https://en.wikivoyage.org/wiki/Munduk",
    "source_kind": "secondary",
@@ -1355,6 +1368,58 @@
    "review_after": "2027-10-13",
    "risk": "high",
    "caveat": "Volunteer travel wiki; crossing times are its figures, not an operator's or regulator's. No official boat-safety or cancellation rules are sourced. Give times as 'roughly', attribute the warnings to travel guides, name no company, and never state how often boats are cancelled."
+  },
+  "batur": {
+   "fact_key": "places.batur",
+   "value": "Mount Batur is an active volcano of about 1,700 meters in the Kintamani area, inside a large caldera with a crater lake, Lake Batur. Travel guides describe the sunrise climb as starting from the lakeside village of Toya Bungkah, taking about two hours to the summit, with more than half of the route through forest, and as requiring a guide from the local Association of Mount Batur Trekking Guides. The village has hot springs. Penelokan, on the caldera rim, is the main viewpoint, best early before cloud forms. Kintamani is usually much cooler than the coast, and a sweater or jacket is advised. Guides warn that touts target visitors and suggest booking the climb in advance.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Kintamani",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Wikivoyage Kintamani (via fetch): Batur 1,700 metres, 'still an active volcano'; caldera about 1,500 m; trek from Toya Bungkah 'about 2 hours', 'more than half of the climb is through pleasant shady forest'; guides mandatory, members of the Association of Mount Batur Trekking Guides, office in Toya Bungkah; hot springs; Penelokan 'spectacular views of this crater lake and Mount Batur', best early; Pura Ulun Danu Batur; 'usually about 15 degrees cooler than down on the coast'; 'a sweater or jacket advisable'; touts target visitors, pre-booking helps.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "caveat": "Volunteer wiki. It calls the climb 'very easy': do NOT repeat a difficulty rating; say 'about two hours' and that it is a pre-dawn climb on a volcano. No start times, no prices. '15 degrees cooler' has no unit stated: say 'much cooler'. Volcanic activity status is not sourced: tell readers to check before booking."
+  },
+  "tanah_lot_lempuyang": {
+   "fact_key": "places.tanah_lot_lempuyang",
+   "value": "Tanah Lot is a sea temple on a rock just offshore on Bali's southwest coast, one of the island's important directional temples, attributed to the 15th-century priest Nirartha; travel guides describe the area as very busy in the late afternoon before sunset, with the approach lined by souvenir shops. Pura Lempuyang is a temple high in the mountains of Karangasem in East Bali, famous for the 'Gates of Heaven' photograph; travel writers report a numbered queue for the photo that can run to hours, and that the reflection seen in the famous picture is made by a photographer holding a mirror under the phone, not by water. Gunung Kawi, an 11th-century site near Ubud, is reached by climbing down 371 steps; Tirta Empul is a 10th-century spring temple used for ritual purification; Goa Gajah is an 11th-century cave with a carved demon's mouth at its entrance.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Tanah_Lot",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Wikivoyage Tanah Lot (via fetch): 'a coastal temple in South Bali' on an offshore rock, 'one of the important directional temples in Bali', Nirartha, 15th century; 'often very busy indeed, especially in the late afternoons, pre-sunset'; 'a maze of souvenir shops'. Lempuyang: search summaries of several travel-writer pages agreeing on a queue-ticket system called by loudspeaker, waits of 2 to 6 hours unless arriving around 5 a.m., and 'that water doesn't exist - it's a simple mirror trick used by the temple photographers'. Wikivoyage Central Bali: Gunung Kawi 'climbing down 371 steps', 11th century; Tirta Empul 10th century, ritual cleansing; Goa Gajah 11th century, 'ornately carved demon's mouth'; Ulun Danu Bratan built 1633.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Lempuyang details rest on travel blogs read as search summaries: attribute to 'travel writers report', give the wait as 'can run to hours' with no number, and no fee. No entrance fees or opening hours for any site. Whether visitors may enter Tanah Lot's temple itself is not sourced; the governor's circular (culture.temple_access) is the rule to cite."
+  },
+  "waterfalls": {
+   "fact_key": "places.waterfalls",
+   "value": "Waterfalls named by Bali travel guides include Tegenungan, near Ubud, about 30 meters high and described as easy to reach; Tibumana, east of Ubud, a short walk from its parking area; Tukad Cepung, partly hidden in a cave-like canyon and known for light beams; Kanto Lampo, where visitors wade through water for photographs; Nungnung, in a jungle ravine north of Denpasar, reached by about 500 stone steps; and, in the north, Gitgit, Banyumala twin falls near Wanagiri, Munduk Waterfall, and Sekumpul, a group of falls in a jungle valley.",
+   "status": "verified",
+   "source_url": "https://www.world-of-waterfalls.com/state-province-region/bali/",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Search-result summaries of several travel pages (World of Waterfalls, Honeycombers, Contiki and others) agreeing on: Tegenungan 'around 30m high', 'Access to Tegenungan is easy'; Tibumana '5-minute walk from the parking'; Tukad Cepung 'partially hidden within a cave-like canyon where sunlight pours through'; Kanto Lampo 'walk through waist-deep water'; Nungnung '45km north of Denpasar', '500 stone steps'; Banyumala 'twin waterfall located in Wanagiri Hills Sukasada Buleleng'; Gitgit in the north, easy to reach. Wikivoyage: Munduk Waterfall, Sekumpul 'several waterfalls cascading side by side'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Travel blogs read as search summaries. No entrance fees, no swimming-safety claims, no flow or flash-flood claims. Step counts only where quoted (Nungnung about 500)."
+  },
+  "manta_rays": {
+   "fact_key": "places.manta_rays",
+   "value": "Manta rays are seen in the waters off Nusa Penida, at sites known as Manta Point and Manta Bay, which researchers describe as shallow reefs used year-round by manta rays and frequently visited by tourism operators. Indonesia gave manta rays full legal protection in 2014 under a decree of the Ministry of Maritime Affairs and Fisheries, and Nusa Penida's waters are one of the country's designated manta sanctuaries.",
+   "status": "verified",
+   "source_url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2019.00215/pdf",
+   "source_kind": "secondary",
+   "scope": "Bali",
+   "support": "Search summaries of a 2019 Frontiers in Marine Science paper and conservation-group releases (WCS, WWF, Mongabay): 'Decree Number 4/KEPMEN-KP/2014 ... two manta ray species ... full protection throughout their entire life cycle'; 'three manta ray sanctuaries were established in Raja Ampat, West Manggarai including Komodo National Park, and Nusa Penida (200 km2)'; 'Year-round records were collected from two shallow (<20 m) reefs - Manta Bay and Manta Point - that are used frequently by tourism operators'; sites include cleaning stations and feeding areas.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Read as search summaries, not full text. No sighting odds, no season claims, no claims about sea conditions at the sites. Do not name operators."
   }
  }
 }
