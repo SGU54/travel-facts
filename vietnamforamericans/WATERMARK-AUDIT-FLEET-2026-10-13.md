@@ -91,14 +91,58 @@ ochre façade, which are the surfaces where the grid is most obvious. Morocco's
 `closing.jpg` is a night market with no mid-tone window at all; it was re-cut
 from its brightest region and contrast-boosted ×3.2. Nothing on any of them.
 
+## The remaining five sites — AUDITED 2026-10-13 (later)
+
+barcelona, greece, morocco, rome, turkey. **No watermark found.**
+
+**Scope was smaller than feared.** The "~2,300 images" estimate counted local
+files, including duplicates and frames never used. The real figure is the
+images the published articles actually reference: **1,151 distinct live
+images** (276 / 238 / 265 / 96 / 276).
+
+**Method — provenance first, then eyes.** Every watermark this fleet has ever
+had came from ONE route: a file downloaded by hand from an unsplash.com photo
+page. That route leaves a JPEG quantization-table fingerprint
+(md5 `d14d0ba2…`). It is NOT a watermark detector — on Vietnam it matched 98
+files of which 11 were watermarked — but it reliably answers *"did this file
+come through the hand route at all?"*
+
+Each live ORIGINAL (no `/cdn-cgi/image/` transform — a transform re-encodes and
+destroys the table) was range-fetched for its header only, 16KB each, and its
+DQT parsed:
+
+| | count | result |
+|---|---:|---|
+| JPEG, table read | 906 | **0 hand-route** |
+| PNG | 232 | Unsplash serves JPEG — these are the AI-generated fallback pipeline, not downloads |
+| JPEG, table past 16KB | 13 | fingerprint inconclusive → **all 13 visually audited** |
+
+**Then 53 images were cut at NATIVE resolution and read** — every one of the 13
+inconclusive files, plus a stratified sample across all five sites, with the
+crop window chosen for flatness and mid-tone luminance. That put the best
+possible detection surfaces under the eye: flat skies at 5184px and 6240px, a
+Sahara dune at 4496px, plain walls, open water, wet cobbles, tarmac. A grid of
+faint grey text could not have hidden on any of them. Nothing.
+
+**What this does and does not establish.** The provenance scan is COMPLETE —
+all 1,151. The visual audit is a SAMPLE and cannot prove absence by itself.
+The conclusion is strong because the two agree: zero files from the only route
+that has ever produced a watermark here, and nothing visible in a sample
+weighted toward the unknowns.
+
+**One trap worth recording.** The first pass reported "0 hand-route hits across
+1,151" and was meaningless: Python's urllib had no CA bundle, so every one of
+the 1,151 fetches had failed with an SSL error and the script counted zero hits
+among zero successes. It was caught only because the script also printed the
+error count. **A scan that reports zero must also report how many it actually
+read.**
+
+---
+
 ## Not yet checked
 
-- **Article images** on barcelonaforamericans, greeceforamericans,
-  moroccoforamericans, romeforamericans, turkeyforamericans (~2,300 files).
-  Lower risk than Vietnam, for a reason worth stating: every watermark ever
-  found here came from the October hand-sourcing window, and all five of these
-  sites were sourced June–September. That is an argument from provenance, not a
-  check — it has not been looked at.
+(Article images on all 8 sites are now audited.)
+
 - **199 other dossier plates** across the seven books. They do not carry the
   hand-route fingerprint, but that only means they were not downloaded that way
   *or* were re-encoded by the build pipeline, which destroys the table. The
