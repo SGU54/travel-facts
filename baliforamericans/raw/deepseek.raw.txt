@@ -1,0 +1,597 @@
+{
+  "_README": "BLANK TEMPLATE v3 — the contract every AI fills for ONE PROJECT (destination + audience, e.g. romeforamericans). Do NOT change field NAMES or STRUCTURE; fill VALUES only. Keep every key (use null if you can't fill it). Frame everything for the audience in _meta (their passports for visa rules, their hubs for flights, their currency for money). TWO data types, reconciled differently: (1) FACTS — objective checkable values. (2) RECOMMENDATIONS — judgments with no single right answer. STATUS MODEL (set 'status' honestly per fact): 'verified' = confirmed against an OFFICIAL source (put the URL in source_url); 'agreed_stable' = a stable fact you're confident on but didn't open a source for (capital, currency code, emergency numbers); 'verify_recommended' = change-prone or high-stakes (visa rules/fees, advisories, entry rules) — flag it; 'serve_live' = volatile, must NOT be stored as a fact (exchange rate, flight prices). For RECOMMENDATIONS use rank 'core' (your strong picks) — no status needed. Return ONLY valid JSON in EXACTLY this structure. Fill EVERY section — do not skip any.",
+  "_meta": {
+    "schema_version": 3,
+    "project": "baliforamericans",
+    "country": "Indonesia",
+    "country_iso": "ID",
+    "audience": {
+      "nationality": "American",
+      "home_hubs": ["LAX", "SFO", "SEA", "JFK", "EWR", "ORD", "DFW", "IAH"],
+      "home_currency": "USD"
+    },
+    "locale": {
+      "site_language": "en-US",
+      "units": "imperial",
+      "money_framing": "express costs in USD with Indonesian rupiah (IDR) equivalents"
+    },
+    "ai_source": "deepseek",
+    "produced_at": "2026-10-13"
+  },
+  "_fact_field_shape": "Every FACT uses: { value, source_url, status (verified|agreed_stable|verify_recommended|serve_live), notes }. For 'verified' the source_url MUST be the official page you checked. Never invent a source.",
+  "identity": {
+    "name_local": {
+      "value": "Indonesia",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "capital": {
+      "value": "Jakarta",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "official_languages": {
+      "value": ["Indonesian (Bahasa Indonesia)"],
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_code": {
+      "value": "IDR",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "currency_name": {
+      "value": "Indonesian rupiah",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "timezones": {
+      "value": ["WIB (UTC+7)", "WITA (UTC+8)", "WIT (UTC+9)"],
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "calling_code": {
+      "value": "+62",
+      "source_url": null,
+      "status": "agreed_stable"
+    },
+    "power_plug_voltage": {
+      "value": "230 V / 50 Hz, plug types C and F",
+      "source_url": "https://www.electricalsafetyfirst.org.uk/safety-advice/travel-advice/indonesia/",
+      "status": "verified",
+      "notes": "Type C (Europlug) and Type F (Schuko) outlets; US devices need a plug adapter, and some may need a voltage converter if not dual-voltage."
+    }
+  },
+  "country_facts": {
+    "visa": {
+      "_note": "YMYL + change-prone. Try to set 'verified' against the official consular/eVisa site; otherwise 'verify_recommended'.",
+      "by_nationality": [
+        {
+          "passport": "United States",
+          "type": {
+            "value": "visa_on_arrival",
+            "source_url": "https://manado.imigrasi.go.id/pages/visa-on-arrival-voa.html",
+            "status": "verified",
+            "notes": "US citizens are eligible for Visa on Arrival (VOA) or e-VOA. Official immigration page lists 'Amerika Serikat' (United States) among eligible countries."
+          },
+          "max_stay_days": {
+            "value": 30,
+            "source_url": "https://manado.imigrasi.go.id/pages/visa-on-arrival-voa.html",
+            "status": "verified",
+            "notes": "30 days, extendable once for an additional 30 days at a local immigration office."
+          },
+          "fee": {
+            "value": "IDR 500,000 (~USD 28)",
+            "source_url": "https://manado.imigrasi.go.id/pages/visa-on-arrival-voa.html",
+            "status": "verified",
+            "notes": "Fee paid at the bank counter at the immigration checkpoint. A proposed increase to IDR 750,000–1,000,000 was reported in August 2026 but had not been implemented as of October 2026; verify before travel."
+          },
+          "processing_time": {
+            "value": "On arrival (VOA) or online approval within a few days (e-VOA)",
+            "source_url": "https://evisa.imigrasi.go.id/",
+            "status": "verify_recommended",
+            "notes": "e-VOA applications are typically processed within 1–3 business days. VOA is issued at the airport counter."
+          },
+          "online_authorization_required": {
+            "value": true,
+            "source_url": "https://evisa.imigrasi.go.id/",
+            "status": "verified",
+            "notes": "All travelers must submit an arrival card (All Indonesia) within 3 days prior to arrival. e-VOA is an optional online pre-application for the VOA."
+          },
+          "official_application_url": {
+            "value": "https://evisa.imigrasi.go.id/",
+            "source_url": "https://evisa.imigrasi.go.id/"
+          }
+        }
+      ],
+      "scam_sites_to_avoid": {
+        "value": [
+          "Any site that is not evisa.imigrasi.go.id (for e-VOA)",
+          "Any site that is not lovebali.baliprov.go.id (for tourist levy)",
+          "Any site that is not allindonesia.imigrasi.go.id (for arrival card)"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "documents": {
+      "passport_validity_required": {
+        "value": "6 months from date of entry",
+        "source_url": "https://manado.imigrasi.go.id/pages/visa-on-arrival-voa.html",
+        "status": "verified",
+        "notes": "Passport must be valid for at least 6 months from the date of entry."
+      },
+      "onward_ticket_required": {
+        "value": true,
+        "source_url": "https://manado.imigrasi.go.id/pages/visa-on-arrival-voa.html",
+        "status": "verified",
+        "notes": "Proof of onward or return ticket is required for VOA/e-VOA."
+      },
+      "notes": {
+        "value": "All travelers must complete the All Indonesia arrival declaration (immigration, customs, health, quarantine) online within 3 days before arrival. The form is free."
+      }
+    },
+    "money": {
+      "currency_code": {
+        "value": "IDR",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "approx_rate_note": {
+        "value": "1 USD ≈ IDR 17,900 (October 2026)",
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "VOLATILE — never freeze; serve live. As of 13 October 2026, the rupiah traded around IDR 17,900 per USD."
+      },
+      "cash_vs_card": {
+        "value": "Cash is widely used for small purchases, local warungs, and markets. Cards (Visa/Mastercard) are accepted at hotels, mid-range to upscale restaurants, and larger shops. QR code payments (QRIS) are common but generally require an Indonesian bank account or e-wallet; foreign cards and apps typically cannot use QRIS directly.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "atm_availability": {
+        "value": "ATMs are widely available in tourist areas (Kuta, Seminyak, Ubud, Sanur). Withdrawal limits are typically IDR 2,500,000–3,000,000 per transaction. Foreign card fees apply. Use ATMs inside banks or major convenience stores to reduce skimming risk.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "currency_import_export_limit": {
+        "value": "IDR 100,000,000 (approximately USD 5,600) or equivalent in foreign currency must be declared. Amounts exceeding this require a customs declaration.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Confirm current threshold with Indonesian Customs (beacukai.go.id) before travel."
+      },
+      "tipping_norm": {
+        "value": "Tipping is not mandatory but appreciated. Many hotels and restaurants add a 5–10% service charge and 10% government tax. If a service charge is already included, additional tipping is optional. For private drivers, IDR 50,000–100,000 per day is customary. For spa therapists, IDR 20,000–50,000 is common.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "getting_there": {
+      "main_international_airports": {
+        "value": ["I Gusti Ngurah Rai International Airport (DPS), Denpasar, Bali", "Soekarno-Hatta International Airport (CGK), Jakarta"],
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "DPS is the primary gateway for Bali. CGK is the main hub for Indonesia overall."
+      },
+      "national_carrier": {
+        "value": "Garuda Indonesia",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "flight_from_audience_origins": {
+        "value": [
+          {"origin": "LAX", "min_duration_hours": 20, "typical_duration_hours": "22–30", "stops": "1–2"},
+          {"origin": "SFO", "min_duration_hours": 19, "typical_duration_hours": "21–28", "stops": "1–2"},
+          {"origin": "SEA", "min_duration_hours": 20, "typical_duration_hours": "22–30", "stops": "1–2"},
+          {"origin": "JFK", "min_duration_hours": 22, "typical_duration_hours": "24–32", "stops": "1–2"},
+          {"origin": "EWR", "min_duration_hours": 22, "typical_duration_hours": "24–32", "stops": "1–2"},
+          {"origin": "ORD", "min_duration_hours": 21, "typical_duration_hours": "23–30", "stops": "1–2"},
+          {"origin": "DFW", "min_duration_hours": 22, "typical_duration_hours": "24–32", "stops": "1–2"},
+          {"origin": "IAH", "min_duration_hours": 23, "typical_duration_hours": "25–33", "stops": "1–2"}
+        ],
+        "source_url": null,
+        "status": "serve_live",
+        "notes": "Durations are stable-ish but vary by routing and layover. PRICES are serve_live and must not be stored as facts. Common layover hubs: Tokyo (NRT/HND), Seoul (ICN), Singapore (SIN), Hong Kong (HKG), Taipei (TPE), Doha (DOH), Dubai (DXB)."
+      }
+    },
+    "getting_around": {
+      "intercity_rail": {
+        "value": "No intercity rail on Bali. Indonesia has limited rail on Java (Jakarta–Surabaya) but it does not connect to Bali.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "buses": {
+        "value": "Public buses (Trans Metro Dewata) exist in Denpasar and surrounding areas but are not practical for most tourist itineraries. Private shuttles and minivans (Perama, Kura-Kura) connect major tourist areas (Kuta, Ubud, Padang Bai, Amed).",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "domestic_flights": {
+        "value": "Domestic flights connect DPS to Jakarta (CGK), Surabaya (SUB), Yogyakarta (YIA), Lombok (LOP), and other Indonesian cities. Garuda Indonesia, Lion Air, Citilink, and Batik Air operate these routes. Baggage allowances are typically 20 kg checked plus 7 kg carry-on; low-cost carriers charge for checked bags.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "ride_sharing": {
+        "value": "Grab and Gojek are the dominant ride-hailing apps. They operate widely in Bali but are banned in certain areas (e.g., some traditional markets, parts of Ubud, and certain beach areas) to protect local transport cooperatives. In banned zones, you must walk to a designated pickup point or use a local taxi.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "car_rental_and_driving": {
+        "value": "Driving is on the left side of the road. A valid US driver's license alone is not sufficient for renting a car or scooter; an International Driving Permit (IDP) with the appropriate class (motorcycle endorsement for scooters) is required. Police checks are common. BAC limit is 0.0% for drivers under 21; for others, the legal limit is 0.05%.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Driving side: left. IDP requirement: must correspond to the vehicle class (car vs. motorcycle). Helmets are mandatory for scooters. BAC: 0.05% for drivers 21+; zero tolerance for under 21. Verify current enforcement and insurance requirements."
+      }
+    },
+    "when_to_go": {
+      "climate_by_season": {
+        "value": "Tropical climate with two main seasons: Dry season (April/May–October) with sunny days, lower humidity, and calmer seas. Rainy season (November–March) with frequent afternoon downpours, higher humidity, and occasional strong winds. Temperatures average 26–30°C (79–86°F) year-round.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "best_months": {
+        "value": ["May", "June", "July", "August", "September"],
+        "rank": "core",
+        "notes": "RECOMMENDATION. May–September offers the most reliable dry weather, lower humidity, and calm seas. July–August are peak season with higher prices and crowds."
+      },
+      "avoid_periods": {
+        "value": ["Late December–early January (peak holiday crowds + rainy season)", "Nyepi (Day of Silence, date varies yearly, usually March)"],
+        "rank": "core",
+        "notes": "RECOMMENDATION + dated festivals. Nyepi in 2026 falls on March 19 (verify yearly). During Nyepi, the entire island shuts down: no travel, no lights, no noise, including the airport. Islamic holidays (Eid al-Fitr) can also see domestic travel spikes."
+      }
+    },
+    "safety_health": {
+      "_note": "YMYL. Advisory level is change-prone → verify_recommended. Stable items (emergency numbers) → agreed_stable.",
+      "advisory_level": {
+        "value": "Level 2 — Exercise increased caution (issued July 7, 2026)",
+        "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+        "status": "verified",
+        "notes": "Level 2 due to natural disasters, unrest, and terrorism. Do not travel to Central Papua and Highland Papua (Level 4). Bali is not under a 'do not travel' advisory."
+      },
+      "main_risk": {
+        "value": "Natural disasters (earthquakes, volcanic eruptions, tsunamis), terrorism (low but present), demonstrations that can turn violent, and road safety (scooter accidents are a leading cause of injury for tourists).",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "vaccines": {
+        "value": "No vaccines are mandatory for US citizens arriving directly from the US. CDC recommends routine vaccines (MMR, Tdap, polio, influenza) plus hepatitis A, typhoid, and rabies (for certain travelers). Yellow fever vaccine is required only if arriving from a country with yellow fever transmission. COVID-19 vaccination is no longer required.",
+        "source_url": null,
+        "status": "verify_recommended",
+        "notes": "Consult CDC Travelers' Health page for Indonesia before travel. Rabies pre-exposure vaccination is recommended for those who may be exposed to animals (monkeys, dogs)."
+      },
+      "tap_water_safe": {
+        "value": false,
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "Tap water in Bali is not safe to drink. Use bottled or filtered water for drinking and brushing teeth. Ice in reputable establishments is typically made from purified water."
+      },
+      "emergency_numbers": {
+        "value": {
+          "police": "110",
+          "ambulance": "118 or 119",
+          "fire": "113"
+        },
+        "source_url": null,
+        "status": "agreed_stable",
+        "notes": "General emergency: 112. Bali tourist police: +62-361-759687. Bali provincial police service center (24h): +62-361-222200."
+      },
+      "common_scams": {
+        "value": [
+          "Scooter rental damage scams (inflated repair charges)",
+          "Money changers with hidden fees or short-changing",
+          "ATM skimming",
+          "Fake tourist levy payment sites (only use lovebali.baliprov.go.id)",
+          "Unofficial visa or arrival form sites charging fees (official sites are free or clearly marked)"
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "connectivity": {
+      "sim_esim": {
+        "value": "eSIMs from providers like Ubigi, Airalo, and Holafly work in Indonesia and can be purchased before travel. Local prepaid SIM cards (Telkomsel, XL, Indosat) are widely available at airports and convenience stores. Tourists must register a local SIM with their passport; no Indonesian tax ID (NPWP) is required.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "coverage": {
+        "value": "4G/LTE coverage is good in Bali's tourist areas (Kuta, Seminyak, Ubud, Sanur, Nusa Dua). 5G is available in some areas. Rural and remote areas (north Bali, Nusa Penida interior) may have weaker or spotty coverage.",
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    },
+    "costs": {
+      "_note": "RECOMMENDATION-ish ranges; approximate + dated.",
+      "daily_budget_low": {
+        "value": "USD 30–50 per person per day",
+        "status": "serve_live",
+        "notes": "Backpacker/budget: guesthouse or hostel, local warung meals, scooter rental. Does not include flights, alcohol, or tours."
+      },
+      "daily_budget_mid": {
+        "value": "USD 80–150 per person per day",
+        "status": "serve_live",
+        "notes": "Mid-range: comfortable hotel or villa, mix of local and Western restaurants, occasional private driver or tour."
+      },
+      "daily_budget_high": {
+        "value": "USD 200–500+ per person per day",
+        "status": "serve_live",
+        "notes": "Luxury: high-end resort, fine dining, private drivers, spa treatments, exclusive tours."
+      }
+    },
+    "culture_etiquette": {
+      "dress_norms": {
+        "value": "Dress modestly at temples: sarong and sash required (usually available for rent or loan at temple entrances). Shoulders and knees should be covered. Beachwear is fine at the beach but not in towns or temples.",
+        "source_url": null,
+        "status": "agreed_stable"
+      },
+      "dos_and_donts": {
+        "value": [
+          "DO: Use your right hand for giving/receiving, eating, and pointing.",
+          "DO: Remove shoes before entering a home or temple.",
+          "DON'T: Step on offerings (small palm-leaf trays on the ground).",
+          "DON'T: Touch someone's head (considered sacred).",
+          "DON'T: Point with your index finger; use your thumb or whole hand.",
+          "DON'T: Display affection publicly (holding hands is fine; kissing is not).",
+          "DON'T: Raise your voice or show anger; maintain calm and patience."
+        ],
+        "source_url": null,
+        "status": "agreed_stable"
+      }
+    }
+  },
+  "cities": [
+    {
+      "name": "Denpasar / Kuta / Seminyak / Canggu",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fly into DPS (Ngurah Rai International Airport). From DPS, Kuta is 10–20 min, Seminyak 20–40 min, Canggu 40–60 min by car (depending on traffic).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Grab/Gojek widely available. Scooter rental common (~USD 4–8/day). Private drivers for day trips (~USD 40–60/day).",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "I Gusti Ngurah Rai International Airport (DPS)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {"name": "Tanah Lot Temple", "why": "Iconic sea temple, best at sunset"},
+            {"name": "Seminyak Beach", "why": "Upscale beach clubs, sunset lounging"},
+            {"name": "Canggu's Batu Bolong Beach", "why": "Surf, cafes, laid-back vibe"},
+            {"name": "Kuta Beach", "why": "Beginner surf, lively atmosphere"}
+          ],
+          "rank": "core",
+          "notes": "[{name, why}] — your picks"
+        },
+        "where_to_stay": {
+          "value": [
+            {"area": "Seminyak", "who_for": "Couples, luxury travelers, foodies, beach club enthusiasts"},
+            {"area": "Canggu", "who_for": "Digital nomads, surfers, young travelers, cafe culture"},
+            {"area": "Kuta/Legian", "who_for": "Budget travelers, party-goers, families on a budget"},
+            {"area": "Sanur", "who_for": "Families, older travelers, calm beach and easy boat access to Nusa islands"}
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {"name_or_type": "Warung (local eatery)", "why": "Cheap, authentic Balinese food (nasi campur, babi guling)"},
+            {"name_or_type": "Beach clubs (e.g., Potato Head, Finns)", "why": "Sunset views, pools, international menu"},
+            {"name_or_type": "Canggu cafe scene", "why": "Smoothie bowls, specialty coffee, healthy options"},
+            {"name_or_type": "Jimbaran seafood grills", "why": "Fresh seafood on the beach at sunset"}
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {"place": "Uluwatu Temple", "why": "Cliffside temple with Kecak fire dance at sunset", "rough_time": "Half day"},
+            {"place": "Ubud", "why": "Rice terraces, Monkey Forest, art markets", "rough_time": "Full day"},
+            {"place": "Nusa Penida", "why": "Dramatic cliffs, Kelingking Beach, snorkeling", "rough_time": "Full day (long boat ride)"},
+            {"place": "Tanah Lot", "why": "Sea temple and sunset", "rough_time": "Half day"}
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    },
+    {
+      "name": "Ubud",
+      "facts": {
+        "how_to_get_there": {
+          "value": "From DPS airport: 1.5–2.5 hours by car depending on traffic. From Kuta/Seminyak: 1.5–2 hours.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Walking in central Ubud. Scooter rental for surrounding areas. Grab/Gojek operate in Ubud but are restricted in some central zones; you may need to walk to a pickup point.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "DPS (Ngurah Rai International Airport)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {"name": "Tegallalang Rice Terraces", "why": "Iconic Balinese landscape, photo spots, swings"},
+            {"name": "Sacred Monkey Forest Sanctuary", "why": "Temple complex, lush jungle, monkeys"},
+            {"name": "Ubud Art Market", "why": "Souvenirs, textiles, crafts"},
+            {"name": "Campuhan Ridge Walk", "why": "Easy scenic walk through rice fields"}
+          ],
+          "rank": "core",
+          "notes": "[{name, why}]"
+        },
+        "where_to_stay": {
+          "value": [
+            {"area": "Central Ubud", "who_for": "Walkable access to restaurants, markets, yoga studios"},
+            {"area": "Rice-field outskirts (e.g., Penestanan, Nyuh Kuning)", "who_for": "Quiet, scenic, retreat-like stays"}
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {"name_or_type": "Warung Biah Biah", "why": "Affordable Balinese classics"},
+            {"name_or_type": "Locavore", "why": "Fine dining, innovative Indonesian cuisine"},
+            {"name_or_type": "Clear Cafe", "why": "Healthy, international, riverside setting"},
+            {"name_or_type": "Night market (Gianyar)", "why": "Street food, local flavors"}
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {"place": "Tirta Empul Temple", "why": "Holy spring water temple for purification rituals", "rough_time": "Half day"},
+            {"place": "Mount Batur sunrise trek", "why": "Active volcano hike with sunrise views", "rough_time": "Full day (early start)"},
+            {"place": "Waterfalls (Tegenungan, Tibumana)", "why": "Swimming, jungle scenery", "rough_time": "Half day"}
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    },
+    {
+      "name": "Nusa Penida",
+      "facts": {
+        "how_to_get_there": {
+          "value": "Fast boat from Sanur, Padang Bai, or Kusamba to Toya Pakeh or Sampalan (30–45 min). Boats are frequent in the morning but can be cancelled due to rough seas.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "local_transport": {
+          "value": "Scooter rental is the main way to explore (roads are rough; only for experienced riders). Private drivers with cars are also available for hire.",
+          "source_url": null,
+          "status": "agreed_stable"
+        },
+        "airport": {
+          "value": "No airport on Nusa Penida; nearest is DPS (Bali)",
+          "source_url": null,
+          "status": "agreed_stable"
+        }
+      },
+      "recommendations": {
+        "top_sights": {
+          "value": [
+            {"name": "Kelingking Beach", "why": "Dramatic cliff viewpoint (the 'T-Rex' cliff)"},
+            {"name": "Angel's Billabong", "why": "Natural infinity pool"},
+            {"name": "Broken Beach (Pasih Uug)", "why": "Circular cove with natural arch"},
+            {"name": "Diamond Beach", "why": "White sand, limestone cliffs, swing"}
+          ],
+          "rank": "core",
+          "notes": "[{name, why}]"
+        },
+        "where_to_stay": {
+          "value": [
+            {"area": "Toya Pakeh / Sampalan", "who_for": "Convenient for boat arrivals, restaurants, and access to both coasts"},
+            {"area": "Crystal Bay", "who_for": "Snorkeling, sunset views, quieter"},
+            {"area": "Ped / Atuh", "who_for": "Near Diamond Beach, remote, basic amenities"}
+          ],
+          "rank": "core",
+          "notes": "[{area, who_for}]"
+        },
+        "where_to_eat": {
+          "value": [
+            {"name_or_type": "Local warungs near harbors", "why": "Fresh seafood, cheap eats"},
+            {"name_or_type": "Crystal Bay restaurants", "why": "Sunset dining, Western and Indonesian options"}
+          ],
+          "rank": "core",
+          "notes": "[{name_or_type, why}]"
+        },
+        "day_trips": {
+          "value": [
+            {"place": "Snorkeling at Manta Point", "why": "Swim with manta rays (seasonal, strong currents)", "rough_time": "Half day"},
+            {"place": "Nusa Lembongan & Ceningan", "why": "Yellow Bridge, Devil's Tear, mangrove tours", "rough_time": "Full day"}
+          ],
+          "rank": "core",
+          "notes": "[{place, why, rough_time}]"
+        }
+      }
+    }
+  ],
+  "itineraries": [
+    {
+      "title": "One Week in Bali: A Realistic First-Timer Route",
+      "days": "7",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {"day": 1, "morning": "Arrive at DPS. Complete immigration, collect bags, get SIM/transport.", "afternoon": "Check into hotel in Seminyak or Canggu. Rest and recover from jet lag.", "evening": "Sunset at a beach club (e.g., Potato Head or Finns). Dinner nearby."},
+          {"day": 2, "morning": "Explore Seminyak: boutique shops, cafes.", "afternoon": "Beach time at Seminyak or Double Six Beach.", "evening": "Dinner at a warung or beachfront restaurant."},
+          {"day": 3, "morning": "Day trip to Uluwatu Temple (cliff views).", "afternoon": "Visit Padang Padang or Bingin Beach.", "evening": "Kecak fire dance at Uluwatu at sunset."},
+          {"day": 4, "morning": "Transfer to Ubud (1.5–2 hours).", "afternoon": "Visit Sacred Monkey Forest and Ubud Art Market.", "evening": "Dinner in central Ubud. Optional: Balinese dance performance."},
+          {"day": 5, "morning": "Tegallalang Rice Terraces and Tirta Empul Temple.", "afternoon": "Campuhan Ridge Walk or spa treatment.", "evening": "Night market food tour."},
+          {"day": 6, "morning": "Day trip to Nusa Penida (fast boat from Sanur).", "afternoon": "Kelingking Beach and Broken Beach.", "evening": "Return to Bali. Dinner in Sanur or Ubud."},
+          {"day": 7, "morning": "Final souvenir shopping or relax at hotel.", "afternoon": "Transfer to DPS for departure (allow 3+ hours for international flights).", "evening": "Depart Bali."}
+        ],
+        "notes": "[{day, morning, afternoon, evening}] — RECOMMENDATION"
+      },
+      "assumptions": {
+        "value": "Assumes arrival and departure from DPS. Does not include Nusa islands overnight or Gili/Lombok extension. Based on typical traffic and boat schedules. Adjust for jet lag and personal pace."
+      }
+    },
+    {
+      "title": "Two Weeks in Bali: North, East and an Island Leg",
+      "days": "14",
+      "scope": "multi-city",
+      "plan": {
+        "value": [
+          {"day": 1, "morning": "Arrive DPS. Transfer to Seminyak/Canggu.", "afternoon": "Rest.", "evening": "Beach sunset."},
+          {"day": 2, "morning": "Explore Canggu: cafes, Batu Bolong Beach.", "afternoon": "Scooter or driver to Tanah Lot Temple.", "evening": "Dinner in Seminyak."},
+          {"day": 3, "morning": "Transfer to Ubud.", "afternoon": "Monkey Forest, Ubud Palace.", "evening": "Traditional dance performance."},
+          {"day": 4, "morning": "Tegallalang Rice Terraces.", "afternoon": "Tirta Empul purification.", "evening": "Ubud night market."},
+          {"day": 5, "morning": "Mount Batur sunrise trek (optional).", "afternoon": "Rest and spa.", "evening": "Dinner in Ubud."},
+          {"day": 6, "morning": "Transfer to Munduk/North Bali.", "afternoon": "Visit Munduk waterfalls and rice fields.", "evening": "Sunset at Lake Tamblingan."},
+          {"day": 7, "morning": "Explore North Bali: Lovina Beach, Banjar hot springs.", "afternoon": "Transfer to Amed.", "evening": "Sunset at Amed Beach."},
+          {"day": 8, "morning": "Snorkeling or diving in Amed (USAT Liberty wreck).", "afternoon": "Explore Jemeluk Bay.", "evening": "Fresh seafood dinner."},
+          {"day": 9, "morning": "Transfer to Sanur.", "afternoon": "Relax at Sanur Beach.", "evening": "Dinner on the beach promenade."},
+          {"day": 10, "morning": "Fast boat to Nusa Penida.", "afternoon": "Kelingking Beach and Angel's Billabong.", "evening": "Overnight in Nusa Penida."},
+          {"day": 11, "morning": "Snorkeling at Manta Point.", "afternoon": "Diamond Beach or Crystal Bay.", "evening": "Return to Sanur."},
+          {"day": 12, "morning": "Uluwatu and the Bukit Peninsula.", "afternoon": "Padang Padang Beach.", "evening": "Uluwatu sunset and Kecak dance."},
+          {"day": 13, "morning": "Relax or final shopping in Seminyak.", "afternoon": "Spa treatment.", "evening": "Farewell dinner."},
+          {"day": 14, "morning": "Transfer to DPS for departure.", "afternoon": "Depart Bali.", "evening": "—"}
+        ],
+        "notes": "[{day, morning, afternoon, evening}] — RECOMMENDATION"
+      },
+      "assumptions": {
+        "value": "Assumes 14 full days on the ground (excluding travel days from the US). Includes North Bali and East Bali (Amed). Requires private driver for transfers between regions. Nusa Penida overnight recommended to avoid rushed day trip."
+      }
+    }
+  ],
+  "national_recommendations": {
+    "must_see_overall": {
+      "value": [
+        {"name": "Uluwatu Temple", "where": "Bukit Peninsula, South Bali", "why": "Cliffside sea temple with dramatic sunset Kecak fire dance"},
+        {"name": "Tegallalang Rice Terraces", "where": "Ubud, Central Bali", "why": "Quintessential Balinese landscape and photo spot"},
+        {"name": "Tanah Lot Temple", "where": "Tabanan, West Bali", "why": "Iconic sea temple on a tidal rock"},
+        {"name": "Nusa Penida (Kelingking Beach)", "where": "Nusa Penida island", "why": "Spectacular cliff viewpoint and rugged coastline"},
+        {"name": "Mount Batur Sunrise Trek", "where": "Kintamani, Central Bali", "why": "Active volcano hike with panoramic sunrise views"},
+        {"name": "Sacred Monkey Forest Sanctuary", "where": "Ubud, Central Bali", "why": "Temple complex and jungle with resident monkeys"},
+        {"name": "Tirta Empul Temple", "where": "Tampaksiring, Central Bali", "why": "Holy spring water temple for purification rituals"},
+        {"name": "Jimbaran Seafood Grills", "where": "Jimbaran Bay, South Bali", "why": "Fresh seafood on the beach at sunset"}
+      ],
+      "rank": "core",
+      "notes": "[{name, where, why}]"
+    }
+  },
+  "_open_questions": {
+    "_note": "Anything genuinely unsure / conflicting / that needs a real source. Be honest — this is more useful than false confidence.",
+    "value": [
+      "Official Bali tourist levy website (lovebali.baliprov.go.id) was not accessible during research; levy amount (IDR 150,000) is widely reported but the official page could not be opened to verify current payment process and exemptions.",
+      "Official All Indonesia arrival declaration portal (allindonesia.imigrasi.go.id) was not accessible during research; the requirement (within 3 days before arrival) is confirmed by multiple immigration news releases but the live portal could not be checked.",
+      "VOA fee: A proposed increase to IDR 750,000–1,000,000 was reported by Indonesian immigration-linked news in August 2026. As of October 2026, the official page still lists IDR 500,000. Verify current fee before travel.",
+      "Indonesia currency import/export limit: The IDR 100,000,000 threshold is widely cited but could not be confirmed on an official customs page during research.",
+      "Current CDC vaccine recommendations for Indonesia should be checked directly on the CDC Travelers' Health page; the CDC page was not opened directly during this research.",
+      "Bali tourist levy exemptions: The exact exemption categories (diplomatic visas, KITAS/KITAP holders, etc.) are widely reported but the official Love Bali FAQ could not be opened to verify the complete list.",
+      "Flight durations from US hubs are based on search engine aggregations and should be treated as illustrative; actual durations vary significantly by routing and layover.",
+      "Some facts marked 'agreed_stable' are based on general knowledge and multiple secondary sources, not a single official source. They should be re-verified against official sources in a future review pass."
+    ]
+  }
+}

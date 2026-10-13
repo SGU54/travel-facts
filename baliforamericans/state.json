@@ -2,11 +2,17 @@
  "_README": "Per-project progress state. Read FIRST. Trust this file plus the DB, not the chat scroll.",
  "schema_version": 3,
  "project": "baliforamericans",
- "stage": "facts",
- "batch": 0,
- "batches_total": null,
- "batch_status": "none",
- "published_slugs": [],
+ "stage": "writing",
+ "batch": 1,
+ "batches_total": 15,
+ "batch_status": "published",
+ "published_slugs": [
+  "do-americans-need-a-visa-for-bali",
+  "bali-tourist-levy-explained",
+  "bringing-medication-into-bali",
+  "bali-customs-alcohol-and-vape-rules",
+  "renting-a-scooter-in-bali"
+ ],
  "updated_at": "2026-10-13",
- "notes": "Stage 1 DONE. STAGE 2 IN PROGRESS: facts.json pushed with 56 records (53 primary, 3 secondary and marked so) plus 1 held record (Nyepi airport closure hours - secondary on a high-stakes point). The user delegated verification to Claude: never hand facts back for checking; re-open the page (use Chrome when the terminal fetch fails) and fix the record. Panel files, facts.candidates.json and disputes.md are LOCAL and unpushed by rule. Run reconcile/validate scripts from their real path on /Volumes/Untitled. COULD NOT BE SOURCED after searching Google and Chrome: Transport Ministry pages (firewall rejects this network) - so fast-boat safety, Sanur harbour and the Nyepi transport statement stay unsourced; Religious Affairs Ministry server down (Galungan/Kuningan 2027 held as secondary); door-to-door US flight times (serve live); online extension for airport-bought visas. NEXT: Stage 3 batch 1 from the well-sourced Plan-your-trip set. Open infra items: GSC sitemap row recheck; geo.ts FILL markers."
+ "notes": "USER INSTRUCTION 2026-10-13: do not stop until ALL batches are written, imaged, imported and published; Claude sources and picks images itself and is the last check on facts (no human review lists). Batch 1 PUBLISHED (5 articles, 10 images, 25 fact keys seeded to common.facts, second gate passed in round 5). Per-batch pipeline and tools live in content/ (see content/WRITING-NOTES.md): build.py, make-gate.py, source-images.py, contact-sheet.py, place-images.py, finalize.py. Second gate runs in ChatGPT through Chrome. Internal-link resolver suggests junk anchors on a small corpus ('americans') - review links-map.json before --apply. facts.json: 56 records; boat/harbour facts unsourced (Transport Ministry firewall), so boat articles go in a late batch. Site validate-batch.mjs (v5.8) checks only word count and FAQ; answer-first, fact keys and guide-span counts are checked by content/build.py. Open infra: GSC sitemap row recheck; geo.ts FILL markers; FAQPage JSON-LD not emitted on articles."
 }
