@@ -277,3 +277,29 @@ values ('bali', 'safety_health.vaccines', '"hepatitis A, hepatitis B and typhoid
 on conflict (scope, key) do update set
   value = excluded.value, status = excluded.status,
   checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- Batch-03 — 2026-10-13
+
+-- money.qr_payments_us — money-in-bali-cash-cards-atms
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'money.qr_payments_us', '"Thailand, Malaysia, Singapore, Japan, South Korea and China"'::jsonb, 'verified', now(),
+        'https://www.bi.go.id/id/fungsi-utama/sistem-pembayaran/ritel/kanal-layanan/qris/qris-antarnegara/default.aspx')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- money.bill_tax_badung — money-in-bali-cash-cards-atms
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'money.bill_tax_badung', '"10%"'::jsonb, 'verified', now(),
+        'https://bapenda.badungkab.go.id/storage/bapenda/file/Surat%20Edaran%20No.973.14315%20Bapenda.pdf')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- connectivity.phone_registration — indonesia-phone-registration-for-tourists
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'connectivity.phone_registration', '"up to 90 days"'::jsonb, 'verified', now(),
+        'https://www.beacukai.go.id/faq-impor-registrasi-imei')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;

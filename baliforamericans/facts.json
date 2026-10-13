@@ -23,6 +23,7 @@
    "https://evisa.imigrasi.go.id/web/visa-selection",
    "https://id.usembassy.gov/bali/",
    "https://jdih.kemenkeu.go.id/api/download/fulltext/2009/22TAHUN2009UU.htm",
+   "https://jdih.kemnaker.go.id/berita/detail/apakah-setiap-perusahaan-wajib-memberlakukan-uang-servis-pada-usaha-hotel-dan-usaha-restoran-di-hotel--berdasarkan-permenaker-nomor-7-tahun-2016-tentang-uang-servis-pada-usaha-hotel-dan-usaha-restoran-di-hotel",
    "https://layanan112.komdigi.go.id/tentang",
    "https://lovebali.baliprov.go.id/",
    "https://lovebali.baliprov.go.id/faq",
@@ -713,6 +714,20 @@
    "review_after": "2027-01-13",
    "risk": "standard",
    "caveat": "Secondary because the text was read on a legal-text mirror, not the regency's own copy. Same rates as Badung. Amendments since 2023 not checked; says nothing about service charges."
+  },
+  "service_charge": {
+   "fact_key": "money.service_charge",
+   "value": "In Indonesia a service charge is an amount added on top of the listed price for service at hotels and hotel restaurants. Under a Manpower Ministry regulation it must be distributed to the workers, half shared equally and the rest by seniority and performance, after allowances for breakage or loss and for staff development.",
+   "status": "verified",
+   "source_url": "https://jdih.kemnaker.go.id/berita/detail/apakah-setiap-perusahaan-wajib-memberlakukan-uang-servis-pada-usaha-hotel-dan-usaha-restoran-di-hotel--berdasarkan-permenaker-nomor-7-tahun-2016-tentang-uang-servis-pada-usaha-hotel-dan-usaha-restoran-di-hotel",
+   "source_kind": "primary",
+   "scope": "hotels and restaurants in hotels in Indonesia; the regulation does not cover standalone restaurants",
+   "support": "Manpower Ministry legal-information page (29 October 2018) on Ministerial Regulation 7 of 2016, read directly: 'uang servis adalah tambahan dari tariff yang sudah ditetapkan sebelumnya dalam rangka jasa pelayanan pada usaha hotel dan usaha restoran di hotel'; 'Uang servis wajib dibagikan kepada pekerja/buruh ... 50% (lima puluh persen) dibagi sama besar dan sisanya dibagi berdasarkan senioritas dan kinerja'; used for 'Penggantian atas terjadinya resiko kehilangan atau kerusakan; Pendayagunaan peningkatan kualitas sumber daya manusia; dan Dibagikan kepada pekerja/buruh'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Sets no percentage. The rate a hotel adds is its own choice and is not sourced; never print a service-charge percentage.",
+   "writing_rule": "Distinguish clearly: the 10% is a local TAX (sourced per regency); the service charge is a separate business charge that goes to staff by regulation."
   }
  },
  "connectivity": {
