@@ -2,7 +2,7 @@
  "_README": "Per-project progress state. Read FIRST. Trust this file plus the DB, not the chat scroll.",
  "schema_version": 3,
  "project": "baliforamericans",
- "stage": "writing",
+ "stage": "design",
  "batch": 16,
  "batches_total": 15,
  "batch_status": "published",
@@ -82,7 +82,7 @@
   "bali-to-gili-fast-boat-vs-flight"
  ],
  "updated_at": "2026-10-13",
- "notes": "USER INSTRUCTION 2026-10-13: do not stop until ALL batches are written, imaged, imported and published; Claude sources and picks images itself and is the last check on facts (no human review lists; when the terminal cannot reach a page, use Chrome). Batches 1-5 done: 21 PUBLISHED. MISTAKE 2026-10-13: four REJECT rows were written and published by a wrong list filter (opportunity is a dict: use a[\"opportunity\"][\"verdict\"]); they are back to DRAFT in the DB (see drafted_off_list) awaiting the user's call. 52 approved articles remain. After ship.sh run content/links.sh (plan + deny filter + inject) and content/state-bump.py NN. Per-batch pipeline lives in content/ - READ content/WRITING-NOTES.md FIRST: write src/*.html + meta.json -> build.py -> make-gate.py NN -> review in ChatGPT via Chrome (paste with pbcopy, cmd+v, wait for the attachment to finish before Enter) -> fix -> image-queries.json -> source-images.py -> contact-sheet.py (+ crops at full size: reject faces, logos, wrong-country shots) -> picks.json -> place-images.py -> upload-batch.mjs (echo y |) -> finalize.py -> validate-batch.mjs -> articles-batch.mjs update -> ./ship.sh NN -> declare links in article-list.json -> pick-links --plan --apply -> filter with content/links-deny.json -> inject-links --apply -> commit both repos. facts.json: 57 records + 2 held-secondary (Nyepi airport hours, stay-indoors) which articles may describe only in attributed prose. Remaining 63 articles: next batches should take the money set (money-in-bali, tipping, is-bali-expensive, paying-by-qr, phone registration, esim), then arrival/flights, seasons, areas, itineraries; boat articles last (no sourced boat facts - Transport Ministry firewall). Many remaining articles need NEW fact sourcing before writing. Open infra: GSC sitemap row recheck; geo.ts FILL markers; FAQPage JSON-LD not emitted.",
+ "notes": "2026-10-13: ALL 73 approved articles (36 PRODUCE + 37 STRUCTURAL) are written, gated, imaged and PUBLISHED in 16 batches; 73 live pages verified (200, hero + body image, FAQ), sitemap lists 73. Four REJECT rows written by mistake (see drafted_off_list) sit as DRAFTS in the DB with images uploaded, awaiting the user's call: publish or delete. NEXT: Stage 5 design - ask the user for the Bali thesis first; pick no palette, fonts or logo. Open items: GSC sitemap row still read 'Impossible de recuperer' on 2026-10-13 (sitemap itself serves 200 with 73 URLs; recheck in a few days); apps/site/lib/geo.ts FILL markers; FAQPage JSON-LD not emitted. Facts: facts.json validator ok (99 records) + 7 held-secondary records used only in attributed prose; unreachable primaries: dephub.go.id (boat and baggage regulations), bimashindu.kemenag.go.id (2027 Hindu holiday letter). Pipeline and lessons: content/WRITING-NOTES.md. Vein audit at 41 articles: health chain 4.8, geography theses 3.3; re-run on the full 73 at the dossier build.",
  "drafted_off_list": [
   "extending-a-bali-visa-on-arrival",
   "passport-validity-rules-for-indonesia",
