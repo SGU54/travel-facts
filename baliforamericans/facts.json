@@ -32,6 +32,7 @@
    "https://www.beacukai.go.id/faq-impor-pembawaan-uang-tunai",
    "https://www.beacukai.go.id/faq-impor-registrasi-imei",
    "https://www.bi.go.id/id/fungsi-utama/sistem-pembayaran/ritel/kanal-layanan/qris/qris-antarnegara/default.aspx",
+   "https://www.grab.com/global/airport-rides/i-gusti-ngurah-rai-international-airport/",
    "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia"
   ],
   "deliberately_excluded": [
@@ -44,7 +45,9 @@
    "fast-boat harbours, cancellation practice",
    "all recommendations and itineraries (they live in the candidates file, not here)",
    "Nyepi airport closure hours - only a news quote of the airport manager for 2026 (06:00 to 06:00, 24 hours); no airport-operator page found",
-   "Sanur harbour closures and fast-boat cancellations - news reports only"
+   "Sanur harbour closures and fast-boat cancellations - news reports only",
+   "Galungan and Kuningan 2027 dates - the Religious Affairs Ministry's Hindu holiday letter for 2027 exists (found in Google) but its server refused every connection today; a search snippet of it reads 'Hari Raya Galungan (Libur Fakultatif) ... Kamis, 14 Januari 2027', which does not match the 13 January date on secondary sites, so nothing was stored",
+   "seasonal rainfall figures - the weather agency publishes year-specific forecasts, not an evergreen statement"
   ]
  },
  "_human_checklist": [
@@ -593,6 +596,19 @@
    "review_after": "2027-04-13",
    "risk": "high",
    "writing_rule": "This is the province's own statement of the licence rule. It still does not say which licence CLASS a scooter needs. The four-wheel wording concerns rented cars; do not stretch it into a claim that scooter rental is banned."
+  },
+  "grab_at_airport": {
+   "fact_key": "getting_around.grab_at_airport",
+   "value": "Grab operates airport pickups at Bali's airport from a GrabCar Lounge at the International Arrival Terminal; rides are booked in the app, with car, premium car, electric car, motorbike and advance-booking options.",
+   "status": "verified",
+   "source_url": "https://www.grab.com/global/airport-rides/i-gusti-ngurah-rai-international-airport/",
+   "source_kind": "primary",
+   "scope": "arriving passengers at I Gusti Ngurah Rai International Airport, international terminal",
+   "support": "Grab's own airport page: pickup point 'GrabCar Lounge International Arrival Terminal Ngurah Rai International Airport'; services listed include GrabCar Airport, GrabBike, GrabCar Premium Airport, GrabCar Electric Airport and Advance Booking.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "standard",
+   "caveat": "Read through a summarising fetch of the operator's page, not line by line. The page gives no fees, hours or domestic-terminal pickup point, and says nothing about Gojek. Corrects the secondary claim seen earlier that ride apps cannot pick up at the terminal."
   }
  },
  "money": {
