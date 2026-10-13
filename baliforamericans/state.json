@@ -79,11 +79,15 @@
   "indonesia-domestic-flights-baggage-and-changes",
   "fast-boats-to-nusa-penida-and-lembongan",
   "when-bali-fast-boats-cancel",
-  "bali-to-gili-fast-boat-vs-flight"
+  "bali-to-gili-fast-boat-vs-flight",
+  "extending-a-bali-visa-on-arrival",
+  "passport-validity-rules-for-indonesia",
+  "can-you-drink-the-water-in-bali",
+  "dengue-and-mosquitoes-in-bali"
  ],
  "updated_at": "2026-10-13",
- "notes": "2026-10-13: ALL 73 approved articles (36 PRODUCE + 37 STRUCTURAL) are written, gated, imaged and PUBLISHED in 16 batches; 73 live pages verified (200, hero + body image, FAQ), sitemap lists 73. Four REJECT rows written by mistake (see drafted_off_list) sit as DRAFTS in the DB with images uploaded, awaiting the user's call: publish or delete. NEXT: Stage 5 design - ask the user for the Bali thesis first; pick no palette, fonts or logo. Open items: GSC sitemap row still read 'Impossible de recuperer' on 2026-10-13 (sitemap itself serves 200 with 73 URLs; recheck in a few days); apps/site/lib/geo.ts FILL markers; FAQPage JSON-LD not emitted. Facts: facts.json validator ok (99 records) + 7 held-secondary records used only in attributed prose; unreachable primaries: dephub.go.id (boat and baggage regulations), bimashindu.kemenag.go.id (2027 Hindu holiday letter). Pipeline and lessons: content/WRITING-NOTES.md. Vein audit at 41 articles: health chain 4.8, geography theses 3.3; re-run on the full 73 at the dossier build.",
- "drafted_off_list": [
+ "notes": "2026-10-13: ALL 73 approved articles (36 PRODUCE + 37 STRUCTURAL) are written, gated, imaged and PUBLISHED in 16 batches; 73 live pages verified (200, hero + body image, FAQ), sitemap lists 73. Four REJECT rows written by mistake were PUBLISHED on 2026-10-14 at the user's decision (see published_off_list): 77 live articles, 73 approved + 4 with no prediction filed. NEXT: Stage 5 design - ask the user for the Bali thesis first; pick no palette, fonts or logo. Open items: GSC sitemap row still read 'Impossible de recuperer' on 2026-10-13 (sitemap itself serves 200 with 73 URLs; recheck in a few days); apps/site/lib/geo.ts FILL markers; FAQPage JSON-LD not emitted. Facts: facts.json validator ok (99 records) + 7 held-secondary records used only in attributed prose; unreachable primaries: dephub.go.id (boat and baggage regulations), bimashindu.kemenag.go.id (2027 Hindu holiday letter). Pipeline and lessons: content/WRITING-NOTES.md. Vein audit at 41 articles: health chain 4.8, geography theses 3.3; re-run on the full 73 at the dossier build.",
+ "published_off_list": [
   "extending-a-bali-visa-on-arrival",
   "passport-validity-rules-for-indonesia",
   "can-you-drink-the-water-in-bali",
