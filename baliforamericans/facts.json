@@ -704,6 +704,56 @@
    "checked_at": "2026-10-13",
    "review_after": "2027-04-13",
    "risk": "high"
+  },
+  "crime": {
+   "fact_key": "safety_health.crime",
+   "value": "The State Department says US citizens have been victims of violent crimes in Indonesia, especially in Bali, and that pickpocketing, sexual assault, vehicle theft, snatch-and-grab robberies and residential break-ins are common. Its advice: avoid isolated areas late at night, watch bags and luggage, carry only essential items, safeguard passport and bank cards, avoid traveling alone, and be mindful of phones near roadways where snatch-and-grab crimes occur.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept, read directly in Chrome 2026-10-13: 'U.S. citizens have been victims of violent crimes in Indonesia, especially in Bali. Pickpocketing, sexual assault, vehicle theft, snatch-and-grab robberies, and residential break-ins are common. Avoid isolated areas late at night. Stay aware of your surroundings, especially vehicles or individuals that might be following you... Monitor bags and luggage. Carry only essential items, safeguard your passport and bank cards, and avoid traveling alone.' 'Always carry a cell phone, but be mindful of your surroundings, such as crowded places or near roadways where snatch and grab crimes may occur.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "scams": {
+   "fact_key": "safety_health.scams",
+   "value": "The State Department says internet romance and financial scams happen in Indonesia, warns travelers to be careful of anyone asking for money, including people who claim local authorities want money, and notes that counterfeit and pirated goods are common and may have to be surrendered or may bring fines on return to the United States.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept, read directly: 'Internet romance and financial scams happen in Indonesia. Be careful of anyone asking for money, especially those who start a \"romantic\" relationship online or claim local authorities want money.' 'Counterfeit and pirated goods are common in many destinations... You may be subject to fines or have to surrender counterfeit and pirated goods to authorities if you bring them back to the United States.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "caveat": "The page lists no Bali street scams (money-changer sleight of hand, taxi meters, etc.). Those are NOT sourced; describe none of them as fact."
+  },
+  "counterfeit_medication": {
+   "fact_key": "safety_health.counterfeit_medication",
+   "value": "The State Department says pharmaceuticals in Indonesia are usually easy to buy with few controls, that counterfeit medication is common and may not work, may have the wrong strength or may contain dangerous ingredients, and that travelers should buy medication with the help of a medical professional and from trusted places.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept, read directly: 'Exercise caution when purchasing medication abroad. Pharmaceuticals are usually easy to buy with few controls. Counterfeit medication is common and may not work, have the wrong strength, or have dangerous ingredients. You should buy medication with the help of a medical professional and from trusted places.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "travelers_diarrhea": {
+   "fact_key": "safety_health.travelers_diarrhea",
+   "value": "The CDC calls travelers' diarrhea the most common travel-related illness and lists Asia, except Japan and South Korea, among the highest-risk destinations. In otherwise healthy adults it is rarely serious or life-threatening. Prevention: eat only food that is cooked and served hot, avoid buffets, drink only from factory-sealed containers, avoid ice, and wash hands often with soap and water. Treatment: drink lots of fluids, use oral rehydration solution in serious cases; over-the-counter drugs such as loperamide treat the symptoms; antibiotics from a doctor should be considered only for severe cases.",
+   "status": "verified",
+   "source_url": "https://wwwnc.cdc.gov/travel/page/travelers-diarrhea",
+   "source_kind": "primary",
+   "scope": "travelers to high-risk destinations",
+   "support": "CDC (via fetch, quoted): 'Travelers' diarrhea is the most common travel-related illness.' 'The highest-risk destinations are in Asia (except for Japan and South Korea) as well as the Middle East, Africa, Mexico, and Central and South America.' 'In otherwise healthy adults, diarrhea is rarely serious or life-threatening, but it can make a trip very unpleasant.' 'Eat only foods that are cooked and served hot. Avoid food that has been sitting on a buffet.' 'Only drink beverages from factory-sealed containers, and avoid ice because it may have been made from unclean water.' 'Wash your hands often with soap and water, especially after using the bathroom and before eating.' 'If you get diarrhea, drink lots of fluids to stay hydrated. In serious cases of travelers' diarrhea, oral rehydration solution...can be used for fluid replacements.' 'Several drugs, such as loperamide, can be bought over-the-counter to treat the symptoms of diarrhea.' 'Your doctor may give you antibiotics to treat travelers' diarrhea, but consider using them only for severe cases.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "caveat": "Not Bali-specific; gives no duration and no percentages. Do not state how long it lasts or how many travelers get it."
   }
  },
  "getting_around": {
@@ -801,6 +851,18 @@
    "risk": "high",
    "display_rule": "rupiah maxima from the statute; never convert to a frozen dollar figure",
    "caveat": "Statutory maximums from the 2009 text; amounts actually charged at a roadside stop are a different matter and are not sourced."
+  },
+  "taxi_safety": {
+   "fact_key": "getting_around.taxi_safety",
+   "value": "The State Department says licensed taxis and ride-hailing services are widely available in major Indonesian cities, that Blue Bird taxis are generally considered the most reliable, and that Grab and Gojek show driver identification, vehicle information and the fare in the app. Its advice: arrange transport through reputable taxi companies or ride-hailing apps, confirm driver and vehicle before getting in, avoid unlicensed taxis that solicit passengers directly, particularly at airports and tourist areas, check for a working meter, and share trip details through the app.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept, read directly: 'Licensed taxis and ride-hailing services are widely available in major Indonesian cities. Blue bird taxis are generally considered the most reliable and professional ride-hail service. Grab and Gojek are also available options. They provide driver identification, vehicle information, and fare transparency through mobile applications. Arrange transportation through reputable taxi companies or ride-hailing applications. Confirm driver and vehicle information before entering the vehicle. Avoid unlicensed taxis that solicit passengers directly, particularly in airports, tourist areas, and transportation hubs. Most taxi and ride-hail trips occur without issues.' 'Before fully entering the taxi, match the photo on the dashboard ID with the driver. Make sure there is a working meter.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
   }
  },
  "money": {
@@ -870,6 +932,31 @@
    "risk": "standard",
    "caveat": "Sets no percentage. The rate a hotel adds is its own choice and is not sourced; never print a service-charge percentage.",
    "writing_rule": "Distinguish clearly: the 10% is a local TAX (sourced per regency); the service charge is a separate business charge that goes to staff by regulation."
+  },
+  "card_fraud": {
+   "fact_key": "money.card_fraud",
+   "value": "The State Department says credit card fraud is common in Indonesia and that criminals skim bank cards to reach victims' accounts. Its advice: use ATMs in secure locations such as major bank branches, check machines for tampering, and monitor account statements regularly.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept, read directly: 'Credit card fraud is common in Indonesia. Criminals \"skim\" bank cards to access victims' bank accounts. Use ATMs in secure locations, such as major bank branches, and check machines for tampering. Regularly monitor your account statements.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "atm_us_cards": {
+   "fact_key": "money.atm_us_cards",
+   "value": "The State Department says Indonesia has ATMs that accept US-issued bank cards, which may charge a currency conversion or transaction fee; that most establishments accept credit cards; that travelers should check with their card issuer or bank for international transaction fees; and that carrying some cash in smaller denominations may be helpful.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US travelers in Indonesia",
+   "support": "State Dept 'Currency', read directly: 'The Indonesian rupiah is the official currency of Indonesia. Most establishments accept credit cards. Please check with your credit card or banking institution for any international transaction fees. Carrying some cash, especially in smaller denominations, may be helpful. Indonesia has ATMs that accept U.S.-issued bankcards. But they may charge a currency conversion or a transaction fee. You can also get cash through Western Union in Indonesia for a fee.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "caveat": "No amounts: withdrawal limits and fee figures remain unsourced. Never print one."
   }
  },
  "connectivity": {
