@@ -1316,6 +1316,45 @@
    "review_after": "2027-10-13",
    "risk": "standard",
    "caveat": "Wikivoyage gives Mount Agung as 3,142 m, an older figure; do not print a height. Munduk and Lempuyang are NOT described in the pages read: say only where they are (distances record) unless sourced separately. No claims about how hard a climb is beyond the quoted 'about two hours' for Batur."
+  },
+  "munduk": {
+   "fact_key": "places.munduk",
+   "value": "Munduk is a village in the western highlands of central Bali, in the wider Bedugul area, at over 700 meters of altitude, where the climate is distinctly cool. Travel guides describe it as known for waterfalls, coffee and clove plantations, trekking, and the nearby twin crater lakes of Buyan and Tamblingan, with the Ulun Danu Bratan temple on Lake Bratan in the same highlands. It is about 20 km from Lovina on the north coast, and suits travelers who want nature, walking and cooler air.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Munduk",
+   "source_kind": "secondary",
+   "scope": "Bali and Lombok",
+   "support": "Wikivoyage Munduk/Bedugul (via fetch): 'village in the mountain range of Central Bali'; elevations exceeding 700 metres, 'the tallest mountain peaking above 2,000 metres'; Munduk Waterfall 'perhaps the most impressive accessible falls on the whole island'; 'clove trees everywhere at the side of the highland roads'; twin lakes Buyan and Tamblingan; Pura Ulun Danu Bratan; about 20 km from Lovina; suits nature enthusiasts and trekkers.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Volunteer travel wiki. No temperatures, no trail lengths or difficulty, no waterfall entrance fees."
+  },
+  "amed": {
+   "fact_key": "places.amed",
+   "value": "Amed is a coastal strip in East Bali running about 14 km east from Culik through seven villages, including Jemeluk, Bunutan, Lipah and Selang. Travel guides describe it as a diving and snorkeling area with coral reefs close to shore, a shallow Japanese shipwreck, traditional salt making, black and grey sand and pebble beaches lined with outrigger fishing boats, and views of Mount Agung. The USAT Liberty wreck, a US Army transport ship torpedoed in 1942, lies at Tulamben up the coast. The Tirta Gangga water palace is a day trip. Local public transport is limited.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Amed",
+   "source_kind": "secondary",
+   "scope": "Bali and Lombok",
+   "support": "Wikivoyage Amed (via fetch): 'stretching approximately 14 km eastward from Culik', seven villages 'Amed, Jemeluk, Bunutan, Lipah, Selang, Banyuning, and Aas'; USAT Liberty 'a US Army transport ship torpedoed by a Japanese submarine in 1942' at Tulamben; Japanese wreck at Banyuning in shallow water; salt production; views of Mount Agung; 'Black pebble and grey-brown sandy beaches'; public transport limited, car with driver recommended; a fast-boat service links Amed with the Gili Islands; suits divers, snorkellers and relaxed coastal holidays.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "caveat": "Volunteer travel wiki. The page's taxi time and prices are NOT to be used. Never name a boat company. Dive-site difficulty and depths are not sourced."
+  },
+  "gili_islands": {
+   "fact_key": "places.gili_islands",
+   "value": "The Gili Islands are three small islands off northwest Lombok: Gili Trawangan, the largest and known as the party island; Gili Air, the closest to Lombok, with an established local community; and Gili Meno, the quietest. There are no cars or motorbikes on any of them. From Bali they are reached by fast boat, with Padang Bai in East Bali the main port (a crossing of roughly an hour and a half), longer crossings from the south, and a shorter sea route from Amed; or by flying to Lombok's airport, then driving to the harbor area at Bangsal and taking a boat. Travel guides warn that fast boats are small high-speed craft, that crew training and safety standards vary, that sea conditions are roughest in July and August, and that travelers with concerns about a vessel, overloading or weather should not board.",
+   "status": "verified",
+   "source_url": "https://en.wikivoyage.org/wiki/Gili_Islands",
+   "source_kind": "secondary",
+   "scope": "Bali and Lombok",
+   "support": "Wikivoyage Gili Islands (via fetch): Trawangan 340 ha 'party island', Air 188 ha, Meno 150 ha 'most laid-back'; 'There are no cars or motorbikes to disturb the peace'; Padang Bai about 1.5 hours, Serangan about 2.5 hours, Amed 'Shortest sea route'; via Lombok International Airport then taxi about 1 h 40 to 2 h to Bangsal or Teluk Nare, then boat; fast boats 'smaller high speed craft with light duty hull construction'; 'Crew training and safety standards vary considerably'; 'If you have legitimate concerns about the vessel, operator, overloading, or weather conditions then do not board'; 'Sea conditions worsen July-August with strong swells'; night crossings not recommended.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "high",
+   "caveat": "Volunteer travel wiki; crossing times are its figures, not an operator's or regulator's. No official boat-safety or cancellation rules are sourced. Give times as 'roughly', attribute the warnings to travel guides, name no company, and never state how often boats are cancelled."
   }
  }
 }
