@@ -129,6 +129,95 @@ ROWS = [
 ("private-villa-vs-hotel-in-bali","Private Villa vs. Hotel in Bali","villas-and-resorts","none","none",R,"R1 fires on 'villa' and 'hotel' (beachfront-villas-thailand 264 imp @ 51.5). It is an options comparison, so say so if you want it kept as STRUCTURAL instead.",["R1:villa","R1:hotel"],None,None),
 ("best-villas-in-seminyak","Best Villas in Seminyak","villas-and-resorts","none","none",R,"R1: 'best' + 'villas'. best-luxury-hotels-istanbul 189 imp @ 53.4.",["R1:best","R1:villa"],None,None),
 ]
+
+# ── Stage 1c INVESTIGATE pass, 2026-10-13 ───────────────────────────────────
+# One web-search look per INVESTIGATE row. The tool is a general web search, NOT
+# Google's results page: it shows who covers a query and how directly, not rank
+# order and not volume. Outcomes: PRODUCE (open: results thin, off-target, spam,
+# sellers-only, or no US angle) · STRUCTURAL (contested but the site/guide needs
+# it) · REJECT with rule "SERP-look" (contested and coverable inside another page).
+SERP = {
+"bali-visa-on-arrival-vs-e-voa":(S,"Several on-target explainers (visa agents, villa agencies, travel blogs). Contested; kept because the entry stack needs it."),
+"indonesia-arrival-declaration-form":(S,"Official portal plus many step-by-step guides. Contested; kept because the form is mandatory and first-timers miss it."),
+"extending-a-bali-visa-on-arrival":(R,"Crowded with visa-agent and blog guides; a one-to-two-week American trip rarely needs it. One paragraph in the visa page."),
+"passport-validity-rules-for-indonesia":(R,"travel.state.gov answers it directly; the rest is thin. Merge into the visa page rather than a standalone."),
+"choosing-a-layover-city-for-bali":(P,"OPEN: results were spam and scraped pages on unrelated domains; no credible US-origin comparison surfaced."),
+"through-ticket-vs-separate-tickets-to-bali":(P,"OPEN: generic connection explainers and spam; nothing Bali-specific from a US origin."),
+"bali-airport-transfers":(R,"Saturated by transfer sellers and large Bali sites. Fold the options into the arrival page."),
+"jet-lag-on-a-us-to-bali-trip":(P,"Mostly open: one on-target page written for Australians, a hospital note, and spam. The US time-zone gap is unaddressed. Volume doubtful."),
+"bali-departure-day-how-early-to-leave":(S,"Two small sites answer it directly with per-area pickup times. Contested; kept because it is the sharpest expression of the traffic swamp."),
+"bali-atm-fees-real-cost":(R,"Wise, Revolut and several blogs own it; forum results are Australian. Fold the US-card angle into the money page."),
+"bali-money-changer-short-change":(R,"Insurers and Bali sites have dedicated pages. Fold into the money page."),
+"paying-by-qr-code-in-bali":(P,"OPEN for Americans: results are news items and a villa blog; the supported-country list they cite does not include the US, and nobody says what that means for a US visitor."),
+"bali-rainy-season-what-its-like":(S,"Many dedicated pages. Contested; kept because the season swamp needs its wet half."),
+"bali-in-july-and-august":(R,"Results are 'best time' pages that already cover it. Fold into the season page."),
+"bali-public-holidays-what-closes":(P,"Fairly open: one calendar list and news items; 'what actually closes' is answered thinly. Analog turkish-public-holidays-what-closes 42 imp @ 10.2."),
+"bali-belly":(S,"Saturated by health and travel publishers. Kept as the centre of the health chain."),
+"bali-hospitals-and-clinics-billing":(P,"Fairly open: results are expat-insurance pages; the tourist billing sequence is not laid out. Analogs rank small (41 @ 8.0, 39 @ 5.2)."),
+"travel-insurance-for-bali-fine-print":(P,"OPEN for Americans: every result is an Australian or NZ insurer or news story. No US-policy treatment surfaced."),
+"vaccines-and-animal-bites-in-bali":(S,"A Bali hospital and news outlets cover the bite response well. Contested; kept for the health chain, and it absorbs the Monkey Forest page."),
+"arak-and-methanol-in-bali":(P,"Partly open: older news pieces and one venue's guide. News-driven and volatile; low confidence."),
+"indonesia-drug-laws-for-travelers":(P,"OPEN: results were cloned spam pages and a cannabis-clinic blog; no credible traveller explainer surfaced."),
+"common-scams-in-bali":(R,"Saturated listicle territory. The two scams that matter live in the money and transport pages."),
+"dengue-and-mosquitoes-in-bali":(R,"A large Bali site and news cover it. One section in the safety page."),
+"can-you-drink-the-water-in-bali":(R,"Saturated by small sites. One section in the Bali belly page."),
+"esim-vs-local-sim-in-bali":(S,"Saturated by eSIM sellers. Kept because the phones section needs one page."),
+"indonesia-phone-registration-for-tourists":(P,"Fairly open: one dedicated blog and forum threads; the short-stay answer is buried."),
+"bali-temple-dress-code-and-etiquette":(P,"Contested by small blogs only, no large publisher. Analog what-to-wear-rome-dress-code 47 imp @ 9.6."),
+"bali-rules-for-tourists":(P,"OPEN: results are 2023 news reports of the announcement; no maintained explainer surfaced."),
+"offerings-ceremonies-and-road-closures-in-bali":(R,"Open but thin and low-intent. Fold into the Galungan and public-holiday pages."),
+"hiring-a-private-driver-in-bali":(S,"Driver-booking sites and Bali blogs cover it. Contested; kept because the traffic swamp turns on it."),
+"bali-traffic-real-drive-times":(S,"One small site has per-route guides; the rest is spam. Kept as the factual core of the traffic swamp."),
+"taxis-in-bali":(R,"Covered by several Bali sites. Fold into the Grab and Gojek page."),
+"renting-a-car-in-bali":(R,"Rental sellers dominate. Fold into scooter-vs-driver."),
+"international-driving-permit-for-bali":(P,"Partly open: one large Bali site and one thin US-specific page. The American angle (who issues it, which category) is lightly served."),
+"fast-boats-to-nusa-penida-and-lembongan":(P,"OPEN on the R3 question: every result was a ticket seller. They sell the crossing; none explains ports, operators or sea state."),
+"indonesia-domestic-flights-baggage-and-changes":(P,"Fairly open: a luggage-brand blog and old news; change fees unanswered. Small analog (23 imp @ 6.3)."),
+"nusa-penida-day-trip-or-overnight":(S,"Several blogs answer it head-on. Contested; kept because the boat swamp turns on it."),
+"adding-gili-or-lombok-to-a-bali-trip":(P,"OPEN: results were sailing charters and package deals, none answering the time question."),
+"komodo-from-bali":(R,"Several on-target how-to pages; outside a first Bali trip. Parked."),
+"uluwatu-tanah-lot-besakih-lempuyang-visits":(S,"'Best temples' listicles. Kept as the one temples page; absorbs Lempuyang and the Kecak show."),
+"lempuyang-gates-of-heaven-queue":(R,"A strong dedicated blog page plus aggregators. Fold into the temples page."),
+"uluwatu-kecak-dance-tickets-and-timing":(R,"A dedicated Bali-site page plus ticket sellers. Fold into the temples page."),
+"ubud-monkey-forest-rules-and-bites":(R,"Saturated by travel blogs. The bite half moves to the vaccines-and-bites page."),
+"mount-batur-sunrise-trek":(S,"Saturated by blogs and tour sellers. Kept so the volcano section is not empty."),
+"jatiluwih-rice-terraces":(R,"Many dedicated pages. One section in the waterfalls-and-terraces page."),
+"bali-waterfalls-stairs-fees-and-drive":(S,"'Best waterfalls' listicles. Kept as the one page for the section."),
+"surfing-in-bali-by-season-and-coast":(S,"Surf camps own it. Kept because the season swamp needs the coast flip."),
+"manta-rays-at-nusa-penida":(S,"Dive operators cover it thoroughly. Kept as the one diving page."),
+"choosing-a-yoga-retreat-in-ubud":(S,"'Best retreats' listicles; the how-to-choose results are generic. Kept as the one wellness page."),
+"how-many-days-in-bali":(S,"Large guidebook publishers answer it. Kept: the US travel-time angle feeds the long-haul swamp."),
+"bali-honeymoon-how-to-split-the-nights":(S,"Hotel listicles and package sellers. Kept as a base-split page for a high-intent audience."),
+"bali-with-kids":(S,"Guidebook and hotel-site pages. Kept as the one family page."),
+"short-term-rentals-in-bali-what-to-check":(P,"Fairly open and timely: results are news stories about the licensing crackdown and one local site's verification note."),
+"eating-at-warungs-in-bali":(R,"Several small on-target pages. Fold into the food page and the Bali belly page."),
+"food-allergies-and-dietary-needs-in-bali":(P,"Partly open: one strong personal blog on peanuts only; other allergens unserved. Volume doubtful."),
+"alcohol-in-bali-prices-and-rules":(R,"Three dedicated pages from Bali sites. The safety half stays in the arak page."),
+"bali-beach-clubs-how-they-work":(P,"Fairly open: one venue's own blog dominates; no neutral explainer of minimum spends."),
+}
+# Handoffs after the pass: dry ground stays dry. Only these keep a seed; turns are capped below.
+KEEP_SEED = {"bali-tourist-levy-explained","indonesia-arrival-declaration-form","bali-visa-on-arrival-vs-e-voa","bringing-medication-into-bali",
+ "arriving-at-bali-airport","choosing-a-layover-city-for-bali","is-bali-expensive","galungan-and-kuningan-explained","grab-and-gojek-in-bali",
+ "international-driving-permit-for-bali","central-ubud-vs-the-outskirts","short-term-rentals-in-bali-what-to-check","bali-public-holidays-what-closes"}
+TURN_TO_SEED = {"through-ticket-vs-separate-tickets-to-bali","bali-rainy-season-what-its-like","bali-hospitals-and-clinics-billing","surfing-in-bali-by-season-and-coast",
+ "how-many-days-in-bali","bali-honeymoon-how-to-split-the-nights","ten-days-in-bali","two-weeks-in-bali","bali-traffic-real-drive-times","fast-boats-to-nusa-penida-and-lembongan","adding-gili-or-lombok-to-a-bali-trip"}
+NEW=[]
+for i,r in enumerate(ROWS):
+    r=list(r)
+    if r[0] in SERP:
+        assert r[5]==I, r[0]
+        v,note=SERP[r[0]]
+        r[6]="SERP look 2026-10-13: "+note+" | Before the look: "+r[6]
+        r[5]=v
+        if v==R: r[7]=list(r[7])+["SERP-look"]
+        if v==P and not r[8]: r[8]="no fleet analog; decision rests on the SERP look"
+    if r[5]==R: r[3],r[4]="none","none"
+    elif r[4]=="seed" and r[0] not in KEEP_SEED: r[4]="none"
+    elif r[0] in TURN_TO_SEED: r[4]="seed"
+    NEW.append(tuple(r))
+assert not [x for x in SERP if x not in {r[0] for r in ROWS}]
+assert not [r[0] for r in NEW if r[5]==I]
+ROWS=NEW
 slugs=[r[0] for r in ROWS]; assert len(slugs)==len(set(slugs)), "duplicate slug"
 sw={s[0] for s in SWAMPS}|{"none"}; roles=[r[9] for r in ROWS if r[9]]
 assert len(roles)==len(set(roles)); assert all(r[3] in sw for r in ROWS); assert all(r[4] in("turn","seed","none") for r in ROWS)
@@ -141,11 +230,11 @@ for slug,title,cat,swamp,hand,verd,reason,rules,analog,role in ROWS:
     arts.append(a)
     if verd==P:
         preds.append({"slug":slug,"title":title,"decided_on":TODAY,"volume_estimate":None,
-          "volume_source":"none for this domain (new site, no GSC history). Evidence is a fleet ANALOG page, not a Bali measurement: "+analog,
+          "volume_source":"none for this domain (new site, no GSC history). Evidence is not a Bali volume measurement: "+analog,
           "verdict":"PRODUCE","rules_fired":rules,
           "confidence":"unrated — prospective filing; the analog shows the shape has ranked on a sibling domain, it does not show Bali query volume",
-          "risk":"Bali volume for this query is unmeasured; a sibling's result on another destination may not transfer","reason":reason})
-out={"schema_version":4,"project":"baliforamericans","status":"DRAFT — awaiting user approval (categories + list + swamps)","drafted_on":TODAY,
+          "risk":"Bali volume for this query is unmeasured; a sibling's result on another destination may not transfer. Rows decided by the SERP look used a general web-search tool, not Google's results page","reason":reason})
+out={"schema_version":4,"project":"baliforamericans","status":"DRAFT — categories APPROVED 2026-10-13; INVESTIGATE pass done; list + swamps awaiting approval","drafted_on":TODAY,
  "_README":"Stage 1 article plan. swamps = hypothesis-grade terrain map (the dossier cold-mine may re-rank). Per article: swamp + handoff (turn|seed|none) and the Stage 1c opportunity verdict. REJECT rows are kept as a record and are NOT written. Titles are working titles: any named product, form or rule in a title is confirmed in Stage 2 before it is written.",
  "swamps":[{"id":i,"name":n,"one_liner":o} for i,n,o in SWAMPS],"articles":arts}
 json.dump(out,open("article-list.json","w"),indent=1,ensure_ascii=False)

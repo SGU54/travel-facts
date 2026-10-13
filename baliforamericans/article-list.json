@@ -1,7 +1,7 @@
 {
  "schema_version": 4,
  "project": "baliforamericans",
- "status": "DRAFT — awaiting user approval (categories + list + swamps)",
+ "status": "DRAFT — categories APPROVED 2026-10-13; INVESTIGATE pass done; list + swamps awaiting approval",
  "drafted_on": "2026-10-13",
  "_README": "Stage 1 article plan. swamps = hypothesis-grade terrain map (the dossier cold-mine may re-rank). Per article: swamp + handoff (turn|seed|none) and the Stage 1c opportunity verdict. REJECT rows are kept as a record and are NOT written. Titles are working titles: any named product, form or rule in a title is confirmed in Stage 2 before it is written.",
  "swamps": [
@@ -80,12 +80,13 @@
    "swamp": "entry-stack",
    "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Options comparison (the R2 shape that wins), but the immigration portal is the canonical owner. One SERP look: does the portal answer 'which one', or only sell it?",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Several on-target explainers (visa agents, villa agencies, travel blogs). Contested; kept because the entry stack needs it. | Before the look: Options comparison (the R2 shape that wins), but the immigration portal is the canonical owner. One SERP look: does the portal answer 'which one', or only sell it?",
     "rules_fired": [
      "R3"
     ]
-   }
+   },
+   "structural": true
   },
   {
    "title": "The Bali Tourist Levy, Explained",
@@ -106,24 +107,26 @@
    "swamp": "entry-stack",
    "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Government form = canonical owner, and the closest fleet analog LOST (thailand-digital-arrival-card-tdac 168 imp @ 56.9). Leaning STRUCTURAL unless the SERP look shows the official page does not explain the form.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Official portal plus many step-by-step guides. Contested; kept because the form is mandatory and first-timers miss it. | Before the look: Government form = canonical owner, and the closest fleet analog LOST (thailand-digital-arrival-card-tdac 168 imp @ 56.9). Leaning STRUCTURAL unless the SERP look shows the official page does not explain the form.",
     "rules_fired": [
      "R3"
     ]
-   }
+   },
+   "structural": true
   },
   {
    "title": "Extending a Bali Visa on Arrival: How It Works",
    "slug": "extending-a-bali-visa-on-arrival",
    "category_slug": "visas-and-documents",
-   "swamp": "entry-stack",
+   "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Procedure, not place; volume unknown and immigration is the canonical owner.",
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Crowded with visa-agent and blog guides; a one-to-two-week American trip rarely needs it. One paragraph in the visa page. | Before the look: Procedure, not place; volume unknown and immigration is the canonical owner.",
     "rules_fired": [
-     "R3"
+     "R3",
+     "SERP-look"
     ]
    }
   },
@@ -131,12 +134,14 @@
    "title": "Passport Validity and Blank-Page Rules for Indonesia",
    "slug": "passport-validity-rules-for-indonesia",
    "category_slug": "visas-and-documents",
-   "swamp": "entry-stack",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown. Airlines enforce this at US check-in, so the stake is real.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: travel.state.gov answers it directly; the rest is thin. Merge into the visa page rather than a standalone. | Before the look: Survives R1/R2; volume unknown. Airlines enforce this at US check-in, so the stake is real.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -182,8 +187,8 @@
    "swamp": "long-haul-arrival",
    "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Compares options for one journey (wins) but names cities (R2 risk). Volume unknown.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: OPEN: results were spam and scraped pages on unrelated domains; no credible US-origin comparison surfaced. | Before the look: Compares options for one journey (wins) but names cities (R2 risk). Volume unknown.",
     "rules_fired": []
    }
   },
@@ -192,10 +197,10 @@
    "slug": "through-ticket-vs-separate-tickets-to-bali",
    "category_slug": "flights-and-arrival",
    "swamp": "long-haul-arrival",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Shape ranks everywhere it was tried but on small queries: turkey 36 imp @ 7.6, spain 30 @ 7.2 — below the 50 floor.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: OPEN: generic connection explainers and spam; nothing Bali-specific from a US origin. | Before the look: Shape ranks everywhere it was tried but on small queries: turkey 36 imp @ 7.6, spain 30 @ 7.2 — below the 50 floor.",
     "rules_fired": []
    }
   },
@@ -215,13 +220,14 @@
    "title": "Bali Airport Transfers: Ride App, Taxi Counter or Pre-Booked Driver",
    "slug": "bali-airport-transfers",
    "category_slug": "flights-and-arrival",
-   "swamp": "traffic-time",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Options comparison, but adjacent to R1 'airport to city' (leonardo-express-fiumicino-trains 168 imp @ 52.6 lost).",
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Saturated by transfer sellers and large Bali sites. Fold the options into the arrival page. | Before the look: Options comparison, but adjacent to R1 'airport to city' (leonardo-express-fiumicino-trains 168 imp @ 52.6 lost).",
     "rules_fired": [
-     "R1-adjacent:airport to city"
+     "R1-adjacent:airport to city",
+     "SERP-look"
     ]
    }
   },
@@ -230,10 +236,10 @@
    "slug": "jet-lag-on-a-us-to-bali-trip",
    "category_slug": "flights-and-arrival",
    "swamp": "long-haul-arrival",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; no fleet analog, volume unknown.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Mostly open: one on-target page written for Australians, a hospital note, and spam. The US time-zone gap is unaddressed. Volume doubtful. | Before the look: Survives R1/R2; no fleet analog, volume unknown.",
     "rules_fired": []
    }
   },
@@ -244,10 +250,11 @@
    "swamp": "traffic-time",
    "handoff": "turn",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "'How early' shape ranked once on a small query (how-early-arrive-vatican 39 imp @ 9.1).",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Two small sites answer it directly with per-area pickup times. Contested; kept because it is the sharpest expression of the traffic swamp. | Before the look: 'How early' shape ranked once on a small query (how-early-arrive-vatican 39 imp @ 9.1).",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Money in Bali: Cash, Cards and ATMs",
@@ -267,24 +274,28 @@
    "title": "ATM Fees in Bali: What a Withdrawal Really Costs",
    "slug": "bali-atm-fees-real-cost",
    "category_slug": "money-and-costs",
-   "swamp": "money-leak",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "The gate's own split case: turkey-atm-withdrawal-real-cost ranks 8 on a small query, atm-fees-thailand-real-cost sits at 52 on a bigger one.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Wise, Revolut and several blogs own it; forum results are Australian. Fold the US-card angle into the money page. | Before the look: The gate's own split case: turkey-atm-withdrawal-real-cost ranks 8 on a small query, atm-fees-thailand-real-cost sits at 52 on a bigger one.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
    "title": "Money Changers in Bali: How the Short-Change Works",
    "slug": "bali-money-changer-short-change",
    "category_slug": "money-and-costs",
-   "swamp": "money-leak",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Insurers and Bali sites have dedicated pages. Fold into the money page. | Before the look: Survives R1/R2; volume unknown.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -318,8 +329,8 @@
    "swamp": "money-leak",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Shape ranks (morocco-mobile-payments 40 imp @ 9.5) but under the 50 floor.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: OPEN for Americans: results are news items and a villa blog; the supported-country list they cite does not include the US, and nobody says what that means for a US visitor. | Before the look: Shape ranks (morocco-mobile-payments 40 imp @ 9.5) but under the 50 floor.",
     "rules_fired": []
    }
   },
@@ -356,23 +367,26 @@
    "slug": "bali-rainy-season-what-its-like",
    "category_slug": "when-to-go",
    "swamp": "wet-dry-season",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Many dedicated pages. Contested; kept because the season swamp needs its wet half. | Before the look: Survives R1/R2; volume unknown.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Bali in July and August: Crowds, Prices and How Far Ahead to Book",
    "slug": "bali-in-july-and-august",
    "category_slug": "when-to-go",
-   "swamp": "wet-dry-season",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Results are 'best time' pages that already cover it. Fold into the season page. | Before the look: Survives R1/R2; volume unknown.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -406,8 +420,8 @@
    "swamp": "holiday-collision",
    "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Shape ranks (turkish-public-holidays-what-closes 42 imp @ 10.2) but under the 50 floor.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Fairly open: one calendar list and news items; 'what actually closes' is answered thinly. Analog turkish-public-holidays-what-closes 42 imp @ 10.2. | Before the look: Shape ranks (turkish-public-holidays-what-closes 42 imp @ 10.2) but under the 50 floor.",
     "rules_fired": []
    }
   },
@@ -434,20 +448,21 @@
    "swamp": "health-chain",
    "handoff": "turn",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Almost certainly above the 300 ceiling and contested by health publishers. Needs a SERP look; may end up STRUCTURAL.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Saturated by health and travel publishers. Kept as the centre of the health chain. | Before the look: Almost certainly above the 300 ceiling and contested by health publishers. Needs a SERP look; may end up STRUCTURAL.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Hospitals and Clinics in Bali: What to Expect and How Billing Works",
    "slug": "bali-hospitals-and-clinics-billing",
    "category_slug": "health-and-safety",
    "swamp": "health-chain",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Shape ranks in both tries but small: turkey-hospital-billing 41 imp @ 8.0, spain-hospital-billing 39 @ 5.2.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Fairly open: results are expat-insurance pages; the tourist billing sequence is not laid out. Analogs rank small (41 @ 8.0, 39 @ 5.2). | Before the look: Shape ranks in both tries but small: turkey-hospital-billing 41 imp @ 8.0, spain-hospital-billing 39 @ 5.2.",
     "rules_fired": []
    }
   },
@@ -458,8 +473,8 @@
    "swamp": "scooter-liability",
    "handoff": "turn",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Insurance SERPs are affiliate-heavy; the scooter-exclusion angle is specific. Volume unknown.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: OPEN for Americans: every result is an Australian or NZ insurer or news story. No US-policy treatment surfaced. | Before the look: Insurance SERPs are affiliate-heavy; the scooter-exclusion angle is specific. Volume unknown.",
     "rules_fired": []
    }
   },
@@ -468,14 +483,15 @@
    "slug": "vaccines-and-animal-bites-in-bali",
    "category_slug": "health-and-safety",
    "swamp": "health-chain",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "CDC is the canonical owner for vaccines; the bite-response half is not theirs.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: A Bali hospital and news outlets cover the bite response well. Contested; kept for the health chain, and it absorbs the Monkey Forest page. | Before the look: CDC is the canonical owner for vaccines; the bite-response half is not theirs.",
     "rules_fired": [
      "R3"
     ]
-   }
+   },
+   "structural": true
   },
   {
    "title": "Arak and Methanol in Bali: How to Drink Safely",
@@ -484,8 +500,8 @@
    "swamp": "health-chain",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown, news-driven.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Partly open: older news pieces and one venue's guide. News-driven and volatile; low confidence. | Before the look: Survives R1/R2; volume unknown, news-driven.",
     "rules_fired": []
    }
   },
@@ -496,8 +512,8 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: OPEN: results were cloned spam pages and a cannabis-clinic blog; no credible traveller explainer surfaced. | Before the look: Survives R1/R2; volume unknown.",
     "rules_fired": []
    }
   },
@@ -505,36 +521,42 @@
    "title": "Common Scams in Bali and How Each One Works",
    "slug": "common-scams-in-bali",
    "category_slug": "health-and-safety",
-   "swamp": "money-leak",
+   "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown, many publishers.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Saturated listicle territory. The two scams that matter live in the money and transport pages. | Before the look: Survives R1/R2; volume unknown, many publishers.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
    "title": "Dengue and Mosquitoes in Bali",
    "slug": "dengue-and-mosquitoes-in-bali",
    "category_slug": "health-and-safety",
-   "swamp": "health-chain",
+   "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: A large Bali site and news cover it. One section in the safety page. | Before the look: Survives R1/R2; volume unknown.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
    "title": "Can You Drink the Tap Water in Bali?",
    "slug": "can-you-drink-the-water-in-bali",
    "category_slug": "health-and-safety",
-   "swamp": "health-chain",
+   "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Saturated by small sites. One section in the Bali belly page. | Before the look: Survives R1/R2; volume unknown.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -544,10 +566,11 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Shape ranks (esim-phone-data-spain 31 imp @ 6.4) but small, and eSIM SERPs are affiliate-heavy.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Saturated by eSIM sellers. Kept because the phones section needs one page. | Before the look: Shape ranks (esim-phone-data-spain 31 imp @ 6.4) but small, and eSIM SERPs are affiliate-heavy.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Indonesia's Phone Registration Rule: Do Tourists Need It?",
@@ -556,8 +579,8 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Customs is the canonical owner; question is whether it answers the short-stay case.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Fairly open: one dedicated blog and forum threads; the short-stay answer is buried. | Before the look: Customs is the canonical owner; question is whether it answers the short-stay case.",
     "rules_fired": [
      "R3"
     ]
@@ -570,8 +593,8 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Shape ranks (what-to-wear-rome-dress-code 47 imp @ 9.6), just under the 50 floor.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Contested by small blogs only, no large publisher. Analog what-to-wear-rome-dress-code 47 imp @ 9.6. | Before the look: Shape ranks (what-to-wear-rome-dress-code 47 imp @ 9.6), just under the 50 floor.",
     "rules_fired": []
    }
   },
@@ -582,8 +605,8 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: OPEN: results are 2023 news reports of the announcement; no maintained explainer surfaced. | Before the look: Survives R1/R2; volume unknown.",
     "rules_fired": []
    }
   },
@@ -591,12 +614,14 @@
    "title": "Offerings, Ceremonies and Road Closures: Reading Daily Life in Bali",
    "slug": "offerings-ceremonies-and-road-closures-in-bali",
    "category_slug": "culture-and-etiquette",
-   "swamp": "holiday-collision",
+   "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Open but thin and low-intent. Fold into the Galungan and public-holiday pages. | Before the look: Survives R1/R2; volume unknown.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -631,45 +656,51 @@
    "swamp": "traffic-time",
    "handoff": "turn",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; no fleet analog, volume unknown.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Driver-booking sites and Bali blogs cover it. Contested; kept because the traffic swamp turns on it. | Before the look: Survives R1/R2; no fleet analog, volume unknown.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Bali Traffic: Real Drive Times Between the Main Areas",
    "slug": "bali-traffic-real-drive-times",
    "category_slug": "drivers-and-ride-apps",
    "swamp": "traffic-time",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown. Drive times must come from the fact pipeline as ranges, never frozen single figures.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: One small site has per-route guides; the rest is spam. Kept as the factual core of the traffic swamp. | Before the look: Survives R1/R2; volume unknown. Drive times must come from the fact pipeline as ranges, never frozen single figures.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Taxis in Bali: Metered Cabs, Local Transport Zones and Ride-App Limits",
    "slug": "taxis-in-bali",
    "category_slug": "drivers-and-ride-apps",
-   "swamp": "traffic-time",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Shape ranks small (rome-taxis-guide 24 imp @ 9.2).",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Covered by several Bali sites. Fold into the Grab and Gojek page. | Before the look: Shape ranks small (rome-taxis-guide 24 imp @ 9.2).",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
    "title": "Renting a Car in Bali: Self-Drive vs. Car with Driver",
    "slug": "renting-a-car-in-bali",
    "category_slug": "drivers-and-ride-apps",
-   "swamp": "scooter-liability",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Options comparison; volume unknown.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Rental sellers dominate. Fold into scooter-vs-driver. | Before the look: Options comparison; volume unknown.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -691,8 +722,8 @@
    "swamp": "scooter-liability",
    "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Partly open: one large Bali site and one thin US-specific page. The American angle (who issues it, which category) is lightly served. | Before the look: Survives R1/R2; volume unknown.",
     "rules_fired": []
    }
   },
@@ -713,10 +744,10 @@
    "slug": "fast-boats-to-nusa-penida-and-lembongan",
    "category_slug": "boats-and-ferries",
    "swamp": "boat-day-buffer",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Operators and booking platforms own much of this; does any of them explain the crossing rather than sell it?",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: OPEN on the R3 question: every result was a ticket seller. They sell the crossing; none explains ports, operators or sea state. | Before the look: Operators and booking platforms own much of this; does any of them explain the crossing rather than sell it?",
     "rules_fired": [
      "R3"
     ]
@@ -753,8 +784,8 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Shape ranks small (thailand-domestic-flight-baggage-and-changes 23 imp @ 6.3). Category is the nearest fit — flag if you want a 'Domestic Flights' subcategory.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Fairly open: a luggage-brand blog and old news; change fees unanswered. Small analog (23 imp @ 6.3). | Before the look: Shape ranks small (thailand-domestic-flight-baggage-and-changes 23 imp @ 6.3). Category is the nearest fit — flag if you want a 'Domestic Flights' subcategory.",
     "rules_fired": []
    }
   },
@@ -777,7 +808,7 @@
    "slug": "ubud-guide",
    "category_slug": "ubud",
    "swamp": "base-split",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
     "verdict": "STRUCTURAL",
     "reason": "Area spine. Per-place guides are where the fleet's losers come from; written for navigation and internal links.",
@@ -790,7 +821,7 @@
    "slug": "canggu-seminyak-legian-kuta-explained",
    "category_slug": "seminyak-canggu-kuta",
    "swamp": "base-split",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
     "verdict": "STRUCTURAL",
     "reason": "Area spine; replaces the rejected place-vs-place page.",
@@ -803,7 +834,7 @@
    "slug": "uluwatu-and-the-bukit-guide",
    "category_slug": "uluwatu",
    "swamp": "base-split",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
     "verdict": "STRUCTURAL",
     "reason": "Area spine.",
@@ -816,7 +847,7 @@
    "slug": "sanur-and-nusa-dua-guide",
    "category_slug": "sanur-nusa-dua",
    "swamp": "base-split",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
     "verdict": "STRUCTURAL",
     "reason": "Area spine.",
@@ -829,7 +860,7 @@
    "slug": "nusa-lembongan-and-ceningan-guide",
    "category_slug": "nusa-islands",
    "swamp": "boat-day-buffer",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
     "verdict": "STRUCTURAL",
     "reason": "Area spine.",
@@ -844,17 +875,18 @@
    "swamp": "boat-day-buffer",
    "handoff": "turn",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Two ways of doing one thing (the winning R2 shape), no measured analog.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Several blogs answer it head-on. Contested; kept because the boat swamp turns on it. | Before the look: Two ways of doing one thing (the winning R2 shape), no measured analog.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Munduk and North Bali",
    "slug": "munduk-and-north-bali-guide",
    "category_slug": "north-and-east-bali",
    "swamp": "base-split",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
     "verdict": "STRUCTURAL",
     "reason": "Area spine.",
@@ -867,7 +899,7 @@
    "slug": "sidemen-and-amed-east-bali-guide",
    "category_slug": "north-and-east-bali",
    "swamp": "base-split",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
     "verdict": "STRUCTURAL",
     "reason": "Area spine.",
@@ -880,10 +912,10 @@
    "slug": "adding-gili-or-lombok-to-a-bali-trip",
    "category_slug": "beyond-bali",
    "swamp": "boat-day-buffer",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Nearest analog ranks small (which-greek-islands-to-combine 33 imp @ 9.2); close to an R2 place comparison, so framed as a time decision.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: OPEN: results were sailing charters and package deals, none answering the time question. | Before the look: Nearest analog ranks small (which-greek-islands-to-combine 33 imp @ 9.2); close to an R2 place comparison, so framed as a time decision.",
     "rules_fired": []
    }
   },
@@ -894,9 +926,11 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown, tour operators heavy.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Several on-target how-to pages; outside a first Bali trip. Parked. | Before the look: Survives R1/R2; volume unknown, tour operators heavy.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -904,24 +938,26 @@
    "slug": "uluwatu-tanah-lot-besakih-lempuyang-visits",
    "category_slug": "temples-and-culture",
    "swamp": "traffic-time",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Avoids the R1 'best temples' title; volume unknown.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: 'Best temples' listicles. Kept as the one temples page; absorbs Lempuyang and the Kecak show. | Before the look: Avoids the R1 'best temples' title; volume unknown.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Lempuyang's Gates of Heaven: The Queue, the Photo and the Drive",
    "slug": "lempuyang-gates-of-heaven-queue",
    "category_slug": "temples-and-culture",
-   "swamp": "traffic-time",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Single-sight logistics; fleet has both a win (camp-nou-tour-guide 413 imp @ 7.8) and losses (colosseum-underground 66.6) on this shape.",
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: A strong dedicated blog page plus aggregators. Fold into the temples page. | Before the look: Single-sight logistics; fleet has both a win (camp-nou-tour-guide 413 imp @ 7.8) and losses (colosseum-underground 66.6) on this shape.",
     "rules_fired": [
-     "R3"
+     "R3",
+     "SERP-look"
     ]
    }
   },
@@ -929,13 +965,14 @@
    "title": "Uluwatu Kecak Dance: Tickets, Timing and the Sunset Traffic",
    "slug": "uluwatu-kecak-dance-tickets-and-timing",
    "category_slug": "temples-and-culture",
-   "swamp": "traffic-time",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Ticket-logistics shape ranks small (park-guell-tickets-guide 36 imp @ 9.1).",
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: A dedicated Bali-site page plus ticket sellers. Fold into the temples page. | Before the look: Ticket-logistics shape ranks small (park-guell-tickets-guide 36 imp @ 9.1).",
     "rules_fired": [
-     "R3"
+     "R3",
+     "SERP-look"
     ]
    }
   },
@@ -943,13 +980,14 @@
    "title": "Ubud's Monkey Forest: Rules, Bites and What to Leave Behind",
    "slug": "ubud-monkey-forest-rules-and-bites",
    "category_slug": "temples-and-culture",
-   "swamp": "health-chain",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "The forest's own site is the canonical owner for tickets; the bite question is open.",
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Saturated by travel blogs. The bite half moves to the vaccines-and-bites page. | Before the look: The forest's own site is the canonical owner for tickets; the bite question is open.",
     "rules_fired": [
-     "R3"
+     "R3",
+     "SERP-look"
     ]
    }
   },
@@ -958,25 +996,28 @@
    "slug": "mount-batur-sunrise-trek",
    "category_slug": "volcanoes-and-hikes",
    "swamp": "traffic-time",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Tour sellers dominate; does anyone describe the night honestly?",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Saturated by blogs and tour sellers. Kept so the volcano section is not empty. | Before the look: Tour sellers dominate; does anyone describe the night honestly?",
     "rules_fired": [
      "R3"
     ]
-   }
+   },
+   "structural": true
   },
   {
    "title": "Jatiluwih Rice Terraces: Getting There and Walking the Trails",
    "slug": "jatiluwih-rice-terraces",
    "category_slug": "waterfalls-and-rice-terraces",
-   "swamp": "traffic-time",
+   "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Replaces the rejected sight-vs-sight page; volume unknown.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Many dedicated pages. One section in the waterfalls-and-terraces page. | Before the look: Replaces the rejected sight-vs-sight page; volume unknown.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -986,34 +1027,37 @@
    "swamp": "traffic-time",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Avoids the R1 'best waterfalls' title; volume unknown.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: 'Best waterfalls' listicles. Kept as the one page for the section. | Before the look: Avoids the R1 'best waterfalls' title; volume unknown.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Surfing in Bali: Which Coast Works in Which Season",
    "slug": "surfing-in-bali-by-season-and-coast",
    "category_slug": "beaches-and-surf",
    "swamp": "wet-dry-season",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; surf publishers strong, volume unknown.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Surf camps own it. Kept because the season swamp needs the coast flip. | Before the look: Survives R1/R2; surf publishers strong, volume unknown.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Manta Rays at Nusa Penida: Season, Currents and Who Should Skip It",
    "slug": "manta-rays-at-nusa-penida",
    "category_slug": "diving-and-snorkeling",
    "swamp": "boat-day-buffer",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Dive operators cover it thoroughly. Kept as the one diving page. | Before the look: Survives R1/R2; volume unknown.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Choosing a Yoga Retreat in Ubud: What the Listings Don't Say",
@@ -1022,10 +1066,11 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown, aggregator-heavy.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: 'Best retreats' listicles; the how-to-choose results are generic. Kept as the one wellness page. | Before the look: Survives R1/R2; volume unknown, aggregator-heavy.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "One Week in Bali: A Realistic First-Timer Route",
@@ -1048,7 +1093,7 @@
    "slug": "ten-days-in-bali",
    "category_slug": "by-trip-length",
    "swamp": "boat-day-buffer",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
     "verdict": "STRUCTURAL",
     "reason": "R1 itinerary shape; needed by the planner and the Start Here path.",
@@ -1063,7 +1108,7 @@
    "slug": "two-weeks-in-bali",
    "category_slug": "by-trip-length",
    "swamp": "base-split",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
     "verdict": "STRUCTURAL",
     "reason": "R1 itinerary shape.",
@@ -1078,38 +1123,41 @@
    "slug": "how-many-days-in-bali",
    "category_slug": "by-trip-length",
    "swamp": "long-haul-arrival",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Close to R1's 'N days' but a question, not an itinerary. Volume unknown.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Large guidebook publishers answer it. Kept: the US travel-time angle feeds the long-haul swamp. | Before the look: Close to R1's 'N days' but a question, not an itinerary. Volume unknown.",
     "rules_fired": [
      "R1-adjacent:N days"
     ]
-   }
+   },
+   "structural": true
   },
   {
    "title": "Bali Honeymoon: How to Split the Nights",
    "slug": "bali-honeymoon-how-to-split-the-nights",
    "category_slug": "by-trip-type",
    "swamp": "base-split",
-   "handoff": "turn",
+   "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2 as titled; honeymoon SERPs are publisher-heavy.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Hotel listicles and package sellers. Kept as a base-split page for a high-intent audience. | Before the look: Survives R1/R2 as titled; honeymoon SERPs are publisher-heavy.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Bali with Kids: Bases, Car Seats and Pools",
    "slug": "bali-with-kids",
    "category_slug": "by-trip-type",
    "swamp": "base-split",
-   "handoff": "seed",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
+    "verdict": "STRUCTURAL",
+    "reason": "SERP look 2026-10-13: Guidebook and hotel-site pages. Kept as the one family page. | Before the look: Survives R1/R2; volume unknown.",
     "rules_fired": []
-   }
+   },
+   "structural": true
   },
   {
    "title": "Where to Stay in Bali: Choosing a Base",
@@ -1157,8 +1205,8 @@
    "swamp": "base-split",
    "handoff": "seed",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Shape ranks small (airbnb-barcelona-rental-crackdown 44 imp @ 9.1). Title deliberately avoids the R1 noun 'villa'.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Fairly open and timely: results are news stories about the licensing crackdown and one local site's verification note. | Before the look: Shape ranks small (airbnb-barcelona-rental-crackdown 44 imp @ 9.1). Title deliberately avoids the R1 noun 'villa'.",
     "rules_fired": []
    }
   },
@@ -1179,12 +1227,14 @@
    "title": "Eating at Warungs: How to Pick One",
    "slug": "eating-at-warungs-in-bali",
    "category_slug": "balinese-food",
-   "swamp": "health-chain",
-   "handoff": "seed",
+   "swamp": "none",
+   "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Several small on-target pages. Fold into the food page and the Bali belly page. | Before the look: Survives R1/R2; volume unknown.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -1194,8 +1244,8 @@
    "swamp": "health-chain",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1/R2; volume unknown.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Partly open: one strong personal blog on peanuts only; other allergens unserved. Volume doubtful. | Before the look: Survives R1/R2; volume unknown.",
     "rules_fired": []
    }
   },
@@ -1206,9 +1256,11 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Nearest analog vermouth-cava-barcelona 53 imp @ 9.9 is a drinks-culture page, not the same query.",
-    "rules_fired": []
+    "verdict": "REJECT",
+    "reason": "SERP look 2026-10-13: Three dedicated pages from Bali sites. The safety half stays in the arak page. | Before the look: Nearest analog vermouth-cava-barcelona 53 imp @ 9.9 is a drinks-culture page, not the same query.",
+    "rules_fired": [
+     "SERP-look"
+    ]
    }
   },
   {
@@ -1218,8 +1270,8 @@
    "swamp": "none",
    "handoff": "none",
    "opportunity": {
-    "verdict": "INVESTIGATE",
-    "reason": "Survives R1 as titled (not 'best beach clubs'); volume unknown.",
+    "verdict": "PRODUCE",
+    "reason": "SERP look 2026-10-13: Fairly open: one venue's own blog dominates; no neutral explainer of minimum spends. | Before the look: Survives R1 as titled (not 'best beach clubs'); volume unknown.",
     "rules_fired": []
    }
   },
