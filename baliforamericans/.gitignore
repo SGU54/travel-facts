@@ -1,0 +1,9 @@
+# Stage 2 working material stays local (2-facts.md: only facts.json is the fact layer in the repo)
+raw/
+facts.candidates.json
+reconciliation-report.json
+disputes.md
+# second-gate pastes embed the whole fact file; the report is what is kept
+content/batch-*/second-gate*.txt
+content/batch-*b/
+content/batch-*c/
