@@ -16,6 +16,7 @@
   "primary_sources": [
    "https://bapenda.badungkab.go.id/storage/bapenda/file/Surat%20Edaran%20No.973.14315%20Bapenda.pdf",
    "https://bmc.baliprov.go.id/news/11462",
+   "https://cloud-ng.baliprov.go.id/landing-baliprov/2026/03/Nomor-2-Tahun-2026-SE-Menteri-tentang-Himbauan-Untuk-Melaksanakan-Seruan-bersama-tentang-Pelaksanaan-Rangkaian-Hari-Suci-Nyepi-Tahun-Caka-1948-di-Provinsi-Bali-Tahun-2026.pdf",
    "https://cluballiance.aaa.com/travel/idp/international-drivers-permit-countries",
    "https://diskominfo.badungkab.go.id/artikel/49056-call-center-112-kabupaten-badung",
    "https://evisa.imigrasi.go.id/",
@@ -811,6 +812,20 @@
    "valid_until": "2027-08-21",
    "caveat": "Marked secondary because the letter itself was not opened - only Google's snippet of it. Re-open the PDF when the ministry server is back. An earlier snippet that seemed to show 14 January was the following day's entry (Umanis Galungan), not a conflict.",
    "writing_rule": "Evergreen articles: give 2027 as the worked example and explain the 210-day cycle."
+  },
+  "nyepi_data_shutdown": {
+   "fact_key": "when_to_go.nyepi_data_shutdown",
+   "value": "On Nyepi, mobile data and television and radio broadcasts in Bali are switched off for 24 hours, from 6 a.m. on the day to 6 a.m. the next morning. In 2026 that ran from 06:00 on Thursday, March 19, to 06:00 on Friday, March 20. Hospitals and other vital services are exempt, and operators warn customers by text message in the days before.",
+   "status": "verified",
+   "source_url": "https://cloud-ng.baliprov.go.id/landing-baliprov/2026/03/Nomor-2-Tahun-2026-SE-Menteri-tentang-Himbauan-Untuk-Melaksanakan-Seruan-bersama-tentang-Pelaksanaan-Rangkaian-Hari-Suci-Nyepi-Tahun-Caka-1948-di-Provinsi-Bali-Tahun-2026.pdf",
+   "source_kind": "primary",
+   "scope": "Bali province on Nyepi; hours stated for 2026",
+   "support": "Circular No. 2 of 2026 of the Minister of Communication and Digital Affairs, signed 12 March 2026, scanned PDF on the Bali provincial government's site, read page by page: operators are asked to 'menonaktifkan dan/atau menghentikan layanan internet melalui jaringan seluler serta distribusi dan/atau transmisi konten siaran televisi dan radio pada hari Kamis tanggal 19 Maret 2026 pukul 06.00 WITA sampai dengan hari Jumat tanggal 20 Maret 2026 pukul 06.00 WITA', keeping service at vital objects listed in Annex I (28 hospitals and more); SMS notices on 12, 16, 17 and 18 March.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-02-08",
+   "risk": "standard",
+   "caveat": "The circular is an appeal to operators (himbauan) and covers mobile data and broadcasts, not fixed-line internet; a news report says hotel Wi-Fi stayed on. Confirms Nyepi 2026 was 19 March and that the observance window runs 6 a.m. to 6 a.m.",
+   "writing_rule": "Give 2026 as the worked example; 2027 hours are not announced."
   }
  },
  "getting_there": {
@@ -844,6 +859,18 @@
    "caveat": "Secondary: a news report of the airport operator's statement, for 2026 only. No operator page was found. The 2027 hours are not announced; describe the pattern and tell readers to confirm with their airline.",
    "writing_rule": "Articles may describe the closure in attributed prose ('in 2026 the airport's general manager announced a 24-hour halt from 6 a.m.') but must NOT put it in a fact span, and must tell readers to confirm their own flight with the airline.",
    "hold_reason": "High-stakes and secondary-only, so the validator refuses it as a fact. The Transport Ministry published its own statement on 15 March 2026 ('Kemenhub Sesuaikan Operasional Transportasi Jelang Hari Raya Nyepi di Bali', dephub.go.id) but the ministry's firewall rejects requests from this network in both the terminal and Chrome; a newspaper republication of it (Suara Merdeka, 16 March 2026) was opened and confirms the statement exists. Promote this record once the ministry page or an airport-operator page can be read."
+  },
+  "when_to_go.nyepi_stay_indoors": {
+   "fact_key": "when_to_go.nyepi_stay_indoors",
+   "value": "During Nyepi, residents and tourists alike are not permitted to travel or leave their accommodation, and fireworks, loudspeakers and other noise are prohibited, under the annual joint appeal issued by Bali's interfaith forum and provincial authorities.",
+   "status": "held_secondary",
+   "source_url": "https://news.detik.com/berita/d-8402137/seruan-bersama-pelaksanaan-nyepi-2026-di-bali-isi-dan-link-unduh-pdf",
+   "source_kind": "secondary",
+   "scope": "Bali on Nyepi",
+   "support": "Google's index of a detik report of the 2026 joint appeal (Seruan Bersama): 'Seluruh masyarakat dan wisatawan tidak diperkenankan bepergian/keluar rumah serta menyalakan petasan/mercon, pengeras suara, bunyi-bunyian'. The ministerial circular read directly refers to the same joint appeal by name and date (18 February 2026).",
+   "checked_at": "2026-10-13",
+   "hold_reason": "The joint appeal's own text was not opened; only a news report of it.",
+   "writing_rule": "Describe in attributed prose, no fact span."
   }
  }
 }

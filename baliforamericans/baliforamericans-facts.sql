@@ -203,3 +203,77 @@ values ('bali', 'getting_around.traffic_penalties', '"4 months'' detention or a 
 on conflict (scope, key) do update set
   value = excluded.value, status = excluded.status,
   checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- Batch-02 — 2026-10-13
+
+-- safety_health.advisory_level — is-bali-safe
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.advisory_level', '"Level 2, Exercise increased caution"'::jsonb, 'verified', now(),
+        'https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- safety_health.zika_notice — is-bali-safe
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.zika_notice', '"Level 2 travel health notice for Zika in Bali"'::jsonb, 'verified', now(),
+        'https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- safety_health.malaria — is-bali-safe
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.malaria', '"no malaria transmission in the resort areas of Bali, in Ubud, or in the Gili Islands"'::jsonb, 'verified', now(),
+        'https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- safety_health.emergency_numbers — is-bali-safe
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.emergency_numbers', '"112 for the unified emergency line, 110 for police, 119 for an ambulance and 113 for fire"'::jsonb, 'verified', now(),
+        'https://diskominfo.badungkab.go.id/artikel/49056-call-center-112-kabupaten-badung')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- safety_health.us_consular_agency_bali — is-bali-safe
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.us_consular_agency_bali', '"+62-361-233-605"'::jsonb, 'verified', now(),
+        'https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- culture.tourist_circular — bali-rules-for-tourists
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'culture.tourist_circular', '"Governor''s Circular No. 7 of 2025"'::jsonb, 'verified', now(),
+        'https://bmc.baliprov.go.id/news/11462')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- when_to_go.nyepi_2027 — nyepi-bali-day-of-silence
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'when_to_go.nyepi_2027', '"Monday, March 8, 2027"'::jsonb, 'verified', now(),
+        'https://setneg.go.id/baca/index/inilah_skb_3_menteri_libur_nasional_dan_cuti_bersama_2027')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- when_to_go.nyepi_data_shutdown — nyepi-bali-day-of-silence
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'when_to_go.nyepi_data_shutdown', '"24 hours, from 6 a.m. to 6 a.m."'::jsonb, 'verified', now(),
+        'https://cloud-ng.baliprov.go.id/landing-baliprov/2026/03/Nomor-2-Tahun-2026-SE-Menteri-tentang-Himbauan-Untuk-Melaksanakan-Seruan-bersama-tentang-Pelaksanaan-Rangkaian-Hari-Suci-Nyepi-Tahun-Caka-1948-di-Provinsi-Bali-Tahun-2026.pdf')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- safety_health.vaccines — vaccines-and-animal-bites-in-bali
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.vaccines', '"hepatitis A, hepatitis B and typhoid"'::jsonb, 'verified', now(),
+        'https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
