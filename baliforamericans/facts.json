@@ -1,0 +1,569 @@
+{
+ "_README": "Bali fact layer, built 2026-10-13. CONTAINS ONLY PRIMARY-READ FACTS: every row's source_url was opened and read on checked_at, and 'support' quotes what the page said. Consensus-only, secondary and unsourced material deliberately did NOT make it in; it stays in raw/claude.json (_open_questions) and disputes.md. An absent fact means 'not proven', never 'not true'. serve_live values (exchange rates, prices, flight times, budgets) are intentionally absent. Rupiah amounts are regulation figures; never freeze a dollar equivalent beside them.",
+ "_meta": {
+  "schema_version": 4,
+  "project": "baliforamericans",
+  "country": "Indonesia",
+  "country_iso": "ID",
+  "destination": "Bali",
+  "built_at": "2026-10-13",
+  "review_status": "PROMOTED 2026-10-13. The user delegated verification to Claude ('if you can't find it in Google or by yourself, I can't check it too'); every record was read on its source page by Claude on checked_at.",
+  "built_from": "raw/claude.json + raw/chatgpt.json + raw/deepseek.json, reconciled; drafted by Claude from primary pages it opened itself",
+  "audience": {
+   "nationality": "American",
+   "home_currency": "USD"
+  },
+  "primary_sources": [
+   "https://cluballiance.aaa.com/travel/idp/international-drivers-permit-countries",
+   "https://diskominfo.badungkab.go.id/artikel/49056-call-center-112-kabupaten-badung",
+   "https://evisa.imigrasi.go.id/",
+   "https://evisa.imigrasi.go.id/web/visa-selection",
+   "https://id.usembassy.gov/bali/",
+   "https://layanan112.komdigi.go.id/tentang",
+   "https://lovebali.baliprov.go.id/",
+   "https://ngurahrai.imigrasi.go.id/layanan-wna/",
+   "https://sertifikasicdob.pom.go.id/wasdisobat/faq/",
+   "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "https://www.beacukai.go.id/barang-penumpang",
+   "https://www.beacukai.go.id/faq-impor-pembawaan-uang-tunai",
+   "https://www.beacukai.go.id/faq-impor-registrasi-imei",
+   "https://www.bi.go.id/id/fungsi-utama/sistem-pembayaran/ritel/kanal-layanan/qris/qris-antarnegara/default.aspx",
+   "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia"
+  ],
+  "deliberately_excluded": [
+   "Nyepi 2027 date (8 March 2027) - secondary source only",
+   "Galungan/Kuningan 2027 dates - unopened",
+   "whether a US car licence plus permit covers a scooter",
+   "any blood-alcohol limit",
+   "ATM limits and fees, service-charge percentages, tipping amounts",
+   "flight durations and whether a nonstop exists",
+   "ride-app pickup restrictions in Bali",
+   "fast-boat harbours, cancellation practice",
+   "all recommendations and itineraries (they live in the candidates file, not here)"
+  ]
+ },
+ "_human_checklist": [
+  "All five review items from the first draft were closed by Claude on 2026-10-13 by re-reading the pages directly (CDC, Bank Indonesia, State Dept) and by fixing wording rules into the records (writing_rule fields).",
+  "Residual, not checkable by anyone today: the traffic-law statute text behind the scooter licence class (secondary support only) and Nyepi airport closure hours (news reports only; the 2026 report fetched was internally inconsistent, so nothing was stored)."
+ ],
+ "identity": {
+  "timezones": {
+   "fact_key": "identity.timezones",
+   "value": "Indonesia has 3 time zones and does not observe daylight saving time. Jakarta, in the western zone, is 12 hours ahead of Washington DC during Eastern Standard Time.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "Indonesia; the page gives the gap for Jakarta, not Bali",
+   "support": "State Dept, read directly: 'There are 3 time zones, and the main time zone is Western Indonesia Time. It does not observe daylight saving time. Jakarta is 12 hours ahead of Washington D.C. during Eastern Standard Time.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-10-13",
+   "risk": "standard",
+   "writing_rule": "Bali is in the central zone, one hour ahead of Jakarta - stable geography, not stated on this page. Compute US gaps from UTC+8 at write time; because the US changes clocks and Bali does not, the gap shifts by an hour twice a year."
+  }
+ },
+ "visa": {
+  "type": {
+   "fact_key": "visa.type",
+   "value": "A visa is required. A US passport holder can get the B1 Tourist visa either online in advance (the e-VOA) or on arrival at the airport, where queues can be long.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "State Dept: 'A visa is required.' 'You can apply for a 30-day electronic visa in advance if arriving at airports in Jakarta or Bali.' 'You can purchase a visa upon arrival at the airport. You may need to wait in long lines, and the process may take longer.' Official visa finder lists 'B1 - Tourist (Visa On Arrival)' for UNITED STATES OF AMERICA.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "fee": {
+   "fact_key": "visa.fee",
+   "value": "IDR 500,000",
+   "status": "verified",
+   "source_url": "https://ngurahrai.imigrasi.go.id/layanan-wna/",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "Ngurah Rai immigration office: 'Biaya Visa Kunjungan Saat Kedatangan sebesar Rp 500.000,-' and lists Amerika Serikat among eligible countries. Official e-visa finder (US passport > Tourism > B1): 'Cost: Rp500.000'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "check_candidate": {
+    "url": "https://ngurahrai.imigrasi.go.id/layanan-wna/",
+    "pattern": "Biaya Visa Kunjungan Saat Kedatangan sebesar Rp\\s*([0-9.]+)",
+    "note": "proposal only; not a registered check config"
+   },
+   "also_seen_at": [
+    "https://evisa.imigrasi.go.id/web/visa-selection"
+   ],
+   "display_rule": "rupiah only; any dollar equivalent is serve_live"
+  },
+  "max_stay_days": {
+   "fact_key": "visa.max_stay_days",
+   "value": "30 days, extendable once for another 30 days",
+   "status": "verified",
+   "source_url": "https://evisa.imigrasi.go.id/web/visa-selection",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "Official e-visa finder, B1: 'Stay: Up to 30 days (extendable for another 30 days)'. Ngurah Rai immigration office: 30 days, 'dapat diperpanjang 1 (satu) kali pada Kantor Imigrasi'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "also_seen_at": [
+    "https://ngurahrai.imigrasi.go.id/layanan-wna/"
+   ]
+  },
+  "validity_to_enter": {
+   "fact_key": "visa.validity_to_enter",
+   "value": "The visa is valid for 90 days from issue; apply and pay within 90 days of arrival.",
+   "status": "verified",
+   "source_url": "https://evisa.imigrasi.go.id/web/visa-selection",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "Official e-visa finder, B1: 'Visa Validity: 90 day'. State Dept: 'Within 90 days of arrival: Apply and pay for an e-visa online through https://evisa.imigrasi.go.id/.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "also_seen_at": [
+    "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html"
+   ]
+  },
+  "official_application_site": {
+   "fact_key": "visa.official_application_site",
+   "value": "https://evisa.imigrasi.go.id/ is the official e-visa site (Directorate General of Immigration). Payment is by Mastercard, Visa or JCB card; one application can cover up to 5 people.",
+   "status": "verified",
+   "source_url": "https://evisa.imigrasi.go.id/",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "Homepage: 'The Official e-Visa Website for Indonesia'; 'Make Visa fee payment by SIMPONI or Mastercard, Visa or JCB credit/debit card'; 'Electronic Visa on Arrival (e-VOA) application can be done simultaneously for 5 people'. The same URL is printed on the State Dept page.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "arrival_card": {
+   "fact_key": "visa.arrival_card",
+   "value": "Separate from the visa, every traveler must submit an arrival card through the All Indonesia system. It can only be completed within 72 hours (3 days) before arrival, it is free, and it produces a QR code to show Immigration and Customs.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "State Dept: 'Complete an arrival card online or through the All Indonesia mobile app. The website will not allow you to complete the arrival card if you attempt to complete it more than 72 hours prior to your arrival. Save the QR code... This service is completely free.' E-visa homepage: 'All travellers are required to submit an arrival card within 3 (three) days prior arrival in Indonesia'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "also_seen_at": [
+    "https://evisa.imigrasi.go.id/"
+   ],
+   "writing_rule": "Tell readers to complete it during the last two days before arrival: that satisfies both the 72-hour limit (State Dept, e-visa site) and customs' two-day window, so the disagreement never reaches the reader."
+  },
+  "tourist_levy": {
+   "fact_key": "visa.tourist_levy",
+   "value": "Foreign tourists entering Bali pay a tourist levy of IDR 150,000 per person. It is separate from the visa and can be paid cashless online before travel or at counters at Bali's airport and seaport; proof is a QR voucher sent by email.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "foreign tourists entering Bali",
+   "support": "State Dept: 'Foreign tourists entering Bali must pay a tourist levy of IDR 150,000 per person. The tourist levy is separate from the e-VOA or the Visa on Arrival. Cashless payments can be made online before your travel or on arrival at designated payment counters at Bali's airport and seaport.' Provincial site lovebali.baliprov.go.id shows 'IDR 150,000' and 'Your Levy Voucher will be sent to your Email'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "also_seen_at": [
+    "https://lovebali.baliprov.go.id/"
+   ],
+   "display_rule": "rupiah only"
+  },
+  "overstay_penalty": {
+   "fact_key": "visa.overstay_penalty",
+   "value": "Overstaying, or entering on the wrong visa type, can bring a fine of IDR 1,000,000 per day, plus possible detention, deportation or a ban on returning.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "State Dept: 'If you enter Indonesia with the wrong type of visa or if you overstay your visa, you may be fined 1,000,000 rupiah per day. You may also face detention, deportation, or not be allowed to come back.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "activities_allowed": {
+   "fact_key": "visa.activities_allowed",
+   "value": "The B1 visa covers tourism and visiting friends or family, business meetings and site visits, and medical treatment. It does not allow selling goods or services or being paid by anyone in Indonesia.",
+   "status": "verified",
+   "source_url": "https://evisa.imigrasi.go.id/web/visa-selection",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "Official e-visa finder, B1: 'You are prohibited from selling goods or services. You are prohibited from receiving rewards or wages from individuals or companies in Indonesia.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  }
+ },
+ "documents": {
+  "passport_validity": {
+   "fact_key": "documents.passport_validity",
+   "value": "The passport must be valid for at least 6 months beyond the arrival date and have 2 blank pages. The endorsement page at the back does not count as blank. Travelers who do not meet this are refused entry.",
+   "status": "verified",
+   "source_url": "https://id.usembassy.gov/bali/",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "US Consular Agency Bali: 'All visitors to Bali must have passports that have at least six months of validity and have two blank passport pages. The \"endorsement\" page at the back of the passport does not count as a blank page. Balinese immigration authorities will not allow you to enter the country if you do not meet this requirement.' State Dept: 'Must have 6 months validity beyond your arrival date. 2 blank pages required for entry.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "also_seen_at": [
+    "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+    "https://evisa.imigrasi.go.id/web/visa-selection"
+   ]
+  },
+  "onward_ticket": {
+   "fact_key": "documents.onward_ticket",
+   "value": "An outbound ticket from Indonesia is one of the documents to present to the immigration officer on arrival.",
+   "status": "verified",
+   "source_url": "https://evisa.imigrasi.go.id/web/visa-selection",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "Official e-visa finder, B1, Document Requirement: 'Present the following documents to the immigration officer upon arrival for immigration inspection: Passport valid for at least 6 months. Outbound ticket from Indonesia.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "emergency_passport": {
+   "fact_key": "documents.emergency_passport",
+   "value": "A traveler on a limited-validity (emergency) passport needs a visa obtained before arrival from an Indonesian embassy or consulate; the visa on arrival is not available.",
+   "status": "verified",
+   "source_url": "https://id.usembassy.gov/bali/",
+   "source_kind": "primary",
+   "scope": "US citizens traveling on an emergency passport",
+   "support": "US Consular Agency Bali: 'If you are traveling on a limited-validity (i.e. emergency) passport, you will require a visa prior to arriving in Indonesia.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "same_passport_exit": {
+   "fact_key": "documents.same_passport_exit",
+   "value": "You must leave Indonesia on the same passport you entered with. If it is replaced during the trip, a 'special pass' from immigration is needed before departure.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "State Dept: 'You must exit Indonesia with the same passport you used to enter. If your passport is replaced, you must obtain a \"special pass\" from immigration authorities before leaving.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  }
+ },
+ "customs": {
+  "cash_declaration": {
+   "fact_key": "customs.cash_declaration",
+   "value": "Cash or other payment instruments worth IDR 100,000,000 or more, in rupiah or foreign currency, must be declared to Customs when entering or leaving. It is a declaration duty, not a cap. Failing to declare carries a penalty of 10% of the amount, capped at IDR 300,000,000.",
+   "status": "verified",
+   "source_url": "https://www.beacukai.go.id/faq-impor-pembawaan-uang-tunai",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Customs FAQ: 'Pembawaan Uang Tunai dan/atau Instrumen Pembayaran Lain dengan nilai paling sedikit Rp100.000.000,00 (seratus juta Rupiah) wajib diberitahukan kepada Pejabat Bea dan Cukai'; 'sanksi administrasi sebesar 10% dari seluruh jumlah uang tunai ... paling banyak Rp300.000.000,00' (PMK 100/PMK.04/2018).",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "caveat": "The State Dept page words this as an 'Entry maximum / Exit maximum'; Customs is the competent source.",
+   "display_rule": "rupiah only"
+  },
+  "rupiah_export_permit": {
+   "fact_key": "customs.rupiah_export_permit",
+   "value": "Taking IDR 100,000,000 or more in rupiah out of Indonesia requires a permit from Bank Indonesia. An individual may not carry foreign banknotes worth IDR 1,000,000,000 or more.",
+   "status": "verified",
+   "source_url": "https://www.beacukai.go.id/faq-impor-pembawaan-uang-tunai",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Customs FAQ: 'Pembawaan uang tunai dengan mata uang rupiah paling sedikit Rp100.000.000,00 ... keluar daerah pabean indonesia wajib mendapat izin dari Bank Indonesia'; 'Orang perseorangan dilarang melakukan pembawaan uang tunai berupa Uang Kertas Asing dengan nilai paling sedikit setara dengan Rp1.000.000.000,00'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  },
+  "duty_free_goods_value": {
+   "fact_key": "customs.duty_free_goods_value",
+   "value": "Personal goods worth up to USD 500 per person per arrival enter free of import duty and tax. The excess is charged 10% import duty plus VAT.",
+   "status": "verified",
+   "source_url": "https://www.beacukai.go.id/barang-penumpang",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Customs: 'barang pribadi Penumpang umum dengan nilai pabean paling banyak USD 500 per orang untuk setiap kedatangan, diberikan pembebasan Bea Masuk'; 'atas kelebihan tersebut dipungut bea masuk sebesar 10% dan PPN'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard",
+   "display_rule": "USD 500 is the regulation's own figure, not a conversion"
+  },
+  "alcohol_allowance": {
+   "fact_key": "customs.alcohol_allowance",
+   "value": "Up to 1 liter of alcoholic drink per adult passenger aged 21 or over.",
+   "status": "verified",
+   "source_url": "https://www.beacukai.go.id/barang-penumpang",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Customs: 'untuk minuman yang mengandung etil alkohol, diberikan paling banyak 1 (satu) liter untuk penumpang berusia 21 tahun ke atas'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  },
+  "tobacco_allowance": {
+   "fact_key": "customs.tobacco_allowance",
+   "value": "200 cigarettes, or 25 cigars, or 100 grams of sliced or other tobacco per adult passenger; mixed types are pro-rated.",
+   "status": "verified",
+   "source_url": "https://www.beacukai.go.id/barang-penumpang",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Customs: 'sigaret, diberikan paling banyak 200 (dua ratus) batang; cerutu ... 25 ... batang; tembakau iris ... 100 (seratus) gram'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  },
+  "vape_allowance": {
+   "fact_key": "customs.vape_allowance",
+   "value": "E-cigarette allowance for passengers aged 18 or over: 30 ml of open-system liquid, or 12 ml of closed-system liquid, or 140 sticks / 40 capsules of solid product.",
+   "status": "verified",
+   "source_url": "https://www.beacukai.go.id/barang-penumpang",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Customs: 'rokok elektrik padat ... 140 batang atau 40 kapsul; rokok elektrik cair sistem terbuka ... 30 mililiter; rokok elektrik cair sistem tertutup ... 12 mililiter, untuk penumpang berusia 18 tahun ke atas'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  },
+  "excess_destroyed": {
+   "fact_key": "customs.excess_destroyed",
+   "value": "Alcohol, tobacco or vape products above the allowance are destroyed on the spot by the customs officer; they are not taxed and released.",
+   "status": "verified",
+   "source_url": "https://www.beacukai.go.id/barang-penumpang",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Customs: 'atas kelebihan jumlah tersebut langsung dimusnahkan oleh Pejabat Bea dan Cukai dengan atau tanpa disaksikan Penumpang'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  },
+  "medicines_inspected": {
+   "fact_key": "customs.medicines_inspected",
+   "value": "Medicines are on the list of items that send a passenger to the red (inspection) channel, alongside animal and plant products, goods above the duty-free value, and large amounts of cash.",
+   "status": "verified",
+   "source_url": "https://www.beacukai.go.id/barang-penumpang",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "Customs, Jalur Merah list: 'narkotika, psikotropika, prekursor, obat-obatan, senjata api...'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  }
+ },
+ "safety_health": {
+  "medication_import": {
+   "fact_key": "safety_health.medication_import",
+   "value": "Medicine for personal use in a passenger's own baggage needs no agency approval, but every medicine brought from abroad must be backed by a doctor's prescription or hospital recommendation, for at most 90 days' use, with a special form and supporting documents. Over-the-counter medicines may come in without a prescription for at most 3 days' need. Psychotropic medicines are allowed for at most 60 days' need. Narcotic-class medicines and precursors may not be brought in at all. Medicine that does not comply can be seized and destroyed.",
+   "status": "verified",
+   "source_url": "https://sertifikasicdob.pom.go.id/wasdisobat/faq/",
+   "source_kind": "primary",
+   "scope": "all international passengers arriving in Indonesia",
+   "support": "BPOM FAQ: 'Obat untuk tujuan penggunaan pribadi tidak memerlukan persetujuan dari BPOM maupun Kementerian Kesehatan, pemohon hanya diminta mengisi Formulir Khusus dan melampirkan dokumen yang dipersyaratkan untuk penggunaan maksimal 90 hari (3 bulan); Seluruh jenis obat yang dibawa dari luar negeri harus berdasarkan resep dokter atau rekomendasi rumah sakit; ... Obat Bebas ... tanpa resep dokter untuk kebutuhan maksimal 3 hari; Obat golongan Narkotika dan Prekursor tidak diperkenankan dibawa dari luar negeri; dan Obat golongan Psikotropika ... maksimal 60 hari (2 bulan).'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "writing_rule": "Give the rule by class exactly as BPOM states it. Name no drug as allowed or banned, with one exception: the State Dept says ADHD medications are illegal. Tell readers to check their own medication's class and to carry the prescription; point to the BPOM contact for individual cases."
+  },
+  "drug_laws": {
+   "fact_key": "safety_health.drug_laws",
+   "value": "Marijuana, cannabis and CBD products are illegal in Indonesia. Some prescription medications, including those for ADHD, are illegal, and customs does not publish a list of prohibited drugs. Convictions can bring heavy fines and long jail sentences, and in extreme cases the death penalty.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "State Dept: 'Marijuana, cannabis, CBD products, and some prescription medications, including those for ADHD, are illegal in Indonesia. The Indonesian customs office does not share a list of prohibited drugs. Criminal convictions may result in heavy fines and long jail sentences. In extreme cases, the death penalty may apply.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "advisory_level": {
+   "fact_key": "safety_health.advisory_level",
+   "value": "US State Department Travel Advisory for Indonesia: Level 2, Exercise increased caution, citing natural disasters, unrest and terrorism. The Level 4 'Do not travel' warning applies only to Central Papua and Highland Papua, not Bali.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US citizens traveling to Indonesia",
+   "support": "State Dept: 'Level 2 - Exercise increased caution ... Date issued: July 07, 2026'; 'Do not travel to the provinces of Central Papua ... and Highland Papua ... due to civil unrest.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "high",
+   "valid_from": "2026-07-07"
+  },
+  "drink_safety": {
+   "fact_key": "safety_health.drink_safety",
+   "value": "The State Department warns of drink poisoning in Indonesia, including alcohol mixed with methanol, and reports drink spiking and sexual assault in Bali, Lombok and the Gili Islands. Its advice: watch drinks being prepared, never accept drinks from strangers, never leave a drink unattended.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US ordinary passport holders visiting Bali as tourists",
+   "support": "State Dept: 'Drink poisoning, like alcohol mixed with methanol or other deadly chemicals. Sexual assault and drink spiking have been reported in Bali, Lombok, Gili Islands, and Sumatra. Ensure drinks are prepared in your sight.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "vaccines": {
+   "fact_key": "safety_health.vaccines",
+   "value": "No vaccinations are required to enter Indonesia. The CDC recommends that travelers be current on routine vaccines and recommends hepatitis A, hepatitis B and typhoid; rabies and Japanese encephalitis vaccination depend on the trip.",
+   "status": "verified",
+   "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia",
+   "source_kind": "primary",
+   "scope": "US travelers to Indonesia",
+   "support": "State Dept: 'No vaccinations are required.' CDC page read directly in a browser: Hepatitis A 'Recommended for unvaccinated travelers one year old or older going to Indonesia.' Hepatitis B 'Recommended for unvaccinated travelers of all ages traveling to Indonesia.' Typhoid 'Recommended for most travelers.' Japanese encephalitis 'Recommended for travelers who... spend long periods of time, such as a month or more, in areas with Japanese encephalitis'. Yellow fever: 'Vaccine is not recommended.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "also_seen_at": [
+    "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html"
+   ]
+  },
+  "malaria": {
+   "fact_key": "safety_health.malaria",
+   "value": "The CDC reports no malaria transmission in the resort areas of Bali, in Ubud, or in the Gili Islands.",
+   "status": "verified",
+   "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia",
+   "source_kind": "primary",
+   "scope": "travelers staying in Bali resort areas, Ubud and the Gili Islands",
+   "support": "CDC, read directly: 'No malaria transmission in the cities of Jakarta (the capital) or Ubud'; 'No malaria transmission in the resort areas of Bali or Java, the Gili Islands, or the Thousand Islands (Pulau Seribu)'. Malaria block 'Updated April 23, 2025'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "rabies": {
+   "fact_key": "safety_health.rabies",
+   "value": "The CDC says dogs infected with rabies are commonly found in Indonesia, that rabies vaccines are typically available throughout most of the country after an exposure, and that whether to get vaccinated before travel depends on planned activities and on how quickly a traveler could reach post-exposure treatment.",
+   "status": "verified",
+   "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia",
+   "source_kind": "primary",
+   "scope": "travelers to Indonesia",
+   "support": "CDC, read directly: 'Dogs infected with rabies are commonly found in Indonesia. If rabies exposures occur while in Indonesia, rabies vaccines are typically available throughout most of the country. Rabies pre-exposure vaccination considerations include whether travelers 1) will be performing occupational or recreational activities that increase risk for exposure to potentially rabid animals and 2) might have difficulty getting prompt access to safe post-exposure prophylaxis.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "emergency_numbers": {
+   "fact_key": "safety_health.emergency_numbers",
+   "value": "Emergency numbers in Bali's Badung regency: 112 (free unified emergency line), 110 police, 119 ambulance, 113 fire, 115 search and rescue.",
+   "status": "verified",
+   "source_url": "https://diskominfo.badungkab.go.id/artikel/49056-call-center-112-kabupaten-badung",
+   "source_kind": "primary",
+   "scope": "Badung regency, Bali (Kuta, Seminyak, Canggu, Jimbaran, the Bukit); the short codes are national",
+   "support": "Badung communications office: 'Kepolisian = 110, Pemadam Kebakaran = 113, Basarnas = 115, Ambulan/Kemenkes = 119'; national 112 page: 'nomor darurat tunggal ... dapat dihubungi saat ponsel terkunci/tanpa pulsa (gratis)'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "also_seen_at": [
+    "https://layanan112.komdigi.go.id/tentang"
+   ]
+  },
+  "us_consular_agency_bali": {
+   "fact_key": "safety_health.us_consular_agency_bali",
+   "value": "U.S. Consular Agency Bali: Jimbaran Hub, Jalan Karangmas, Jimbaran, Badung, Bali 80362. Phone +62-361-233-605. After-hours emergency +62-21-5083-1000, press 0 for the operator. Email CABali@state.gov.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US citizens in Bali",
+   "support": "State Dept 'Embassies and consulates' block, verbatim address, phone and email.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "high"
+  },
+  "enforcement_campaign": {
+   "fact_key": "safety_health.enforcement_campaign",
+   "value": "The US Consular Agency in Bali reports a current enforcement campaign by Indonesian police, immigration, transport and tourism officials, with stepped-up enforcement of traffic and vehicle violations, illegal work and other visa violations, and drug possession.",
+   "status": "verified",
+   "source_url": "https://id.usembassy.gov/bali/",
+   "source_kind": "primary",
+   "scope": "foreign visitors in Bali",
+   "support": "Consular Agency page: 'U.S. citizens in Bali should be aware of a current enforcement campaign by the Indonesian authorities... resulting in increased enforcement of traffic and vehicle violations, illegal work or other visa violations, illegal drug possession and other crimes.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "high",
+   "caveat": "Undated on the page."
+  },
+  "zika_notice": {
+   "fact_key": "safety_health.zika_notice",
+   "value": "The CDC has a Level 2 (Practice Enhanced Precautions) travel health notice for Zika in Indonesia, dated August 7, 2026: cases are being reported in travelers returning from Bali, and all travelers to Bali should take steps to prevent mosquito bites and sexual transmission during and after travel.",
+   "status": "verified",
+   "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/indonesia",
+   "source_kind": "primary",
+   "scope": "travelers to Bali",
+   "support": "CDC, read directly: 'Level 2 Practice Enhanced Precautions - Zika in Indonesia - August 07, 2026 - Cases of Zika are being reported in returning travelers from Bali, Indonesia. All travelers to Bali should take steps to prevent mosquito bites and sexual transmission of Zika virus during and after travel.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2026-12-13",
+   "risk": "high",
+   "valid_from": "2026-08-07",
+   "writing_rule": "A live health notice: re-open before every batch that mentions it; matters most to anyone pregnant or planning pregnancy."
+  }
+ },
+ "getting_around": {
+  "driving_permit": {
+   "fact_key": "getting_around.driving_permit",
+   "value": "A US driver's license alone is not recognized in Indonesia; foreign drivers must carry an International Driving Permit. AAA, which issues the permit in the US, lists Indonesia as honoring it. Motorcycle helmets are required.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "US license holders driving or riding in Indonesia",
+   "support": "State Dept: 'A valid U.S. driver's license alone is not recognized for driving in Indonesia. Foreign drivers must carry an International Driving Permit.' 'Motorcycle helmets are required.' AAA country list: 'Indonesia*' - 'Not party to 1949 Convention: International Driving Permit Honored.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high",
+   "also_seen_at": [
+    "https://cluballiance.aaa.com/travel/idp/international-drivers-permit-countries"
+   ],
+   "caveat": "Indonesia's traffic law (UU 22/2009, Pasal 77(1) and Pasal 80) is quoted consistently in Indonesian law journals as requiring a licence 'sesuai dengan jenis Kendaraan Bermotor yang dikemudikan' with SIM C for motorcycles; the statute text itself could not be opened (the parliament's copy returned 404), so that is secondary support, not part of this record's verified value.",
+   "writing_rule": "Scooter articles: state as fact only that a permit is required and that the AAA permit is honored. On the licence class, write that Indonesian law ties the licence to the vehicle type and has a separate motorcycle class, that no official page says a car-only licence is enough for a scooter, and that a rider should therefore assume it is not - both for the police and for an insurance claim. Never write that a car licence plus permit 'works'."
+  },
+  "accident_and_police": {
+   "fact_key": "getting_around.accident_and_police",
+   "value": "After a traffic accident, stay at the scene and notify police. Carry ID and the vehicle registration. In car-motorcycle collisions the driver of the larger vehicle is often presumed responsible. If fined, ask for an official receipt; travelers occasionally report requests for unofficial payments.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "visitors driving or riding in Indonesia",
+   "support": "State Dept: 'Drivers involved in traffic accidents should remain at the scene and notify police.' 'In collisions involving cars and motorcycles, the driver of the larger vehicle is often presumed responsible.' 'If you are issued a fine, request an official receipt.'",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "high"
+  },
+  "ride_hailing": {
+   "fact_key": "getting_around.ride_hailing",
+   "value": "Grab and Gojek operate in Indonesia, and licensed taxis are widely available in major cities; the State Department describes Blue Bird taxis as generally the most reliable.",
+   "status": "verified",
+   "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html",
+   "source_kind": "primary",
+   "scope": "Indonesia generally; Bali-specific pickup restrictions are NOT covered",
+   "support": "State Dept: 'Licensed taxis and ride-hailing services are widely available in major Indonesian cities. Blue bird taxis are generally considered the most reliable and professional... Grab and Gojek are also av[ailable]'.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  }
+ },
+ "money": {
+  "qr_payments_us": {
+   "fact_key": "money.qr_payments_us",
+   "value": "Indonesia's cross-border QR payment scheme connects Thailand, Malaysia, Singapore, Japan, South Korea and China. The United States is not connected, so a US bank app or wallet cannot pay a QRIS code through it.",
+   "status": "verified",
+   "source_url": "https://www.bi.go.id/id/fungsi-utama/sistem-pembayaran/ritel/kanal-layanan/qris/qris-antarnegara/default.aspx",
+   "source_kind": "primary",
+   "scope": "US visitors paying merchants in Indonesia",
+   "support": "Bank Indonesia, read directly in a browser: 'Saat ini, QRIS Antarnegara telah digunakan untuk transaksi QRIS di Thailand, Malaysia, Singapura, Jepang, Korea Selatan Dan Tiongkok baik oleh wisatawan Indonesia maupun turis asing.' The page's provider table lists only those six countries; neither 'Amerika' nor 'United States' appears anywhere in the page text. Foreign users pay by opening their own payment app, scanning, entering the rupiah amount and confirming in their own currency.",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-01-13",
+   "risk": "standard",
+   "caveat": "Says nothing about third-party tourist wallets."
+  }
+ },
+ "connectivity": {
+  "phone_registration": {
+   "fact_key": "connectivity.phone_registration",
+   "value": "A short-stay visitor does not need to register a foreign phone's IMEI if the phone stays on its home SIM using roaming, or if the visitor uses an Indonesian SIM registered at a mobile operator's outlet, which gives network access for up to 90 days.",
+   "status": "verified",
+   "source_url": "https://www.beacukai.go.id/faq-impor-registrasi-imei",
+   "source_kind": "primary",
+   "scope": "foreign tourists and short business visitors",
+   "support": "Customs IMEI FAQ: 'Jika hanya tinggal sementara (ex: turis, keperluan bisnis)... Pendaftaran IMEI tidak diperlukan, jika HKT asal luar negeri yang digunakan di Indonesia: tetap menggunakan SIM card dari negara asal (roaming), atau; Perangkat HKT wisatawan asing menggunakan SIM card Indonesia dengan melakukan registrasi di gerai operator seluler untuk mendapat akses jaringan telekomunikasi paling lama 90 hari.' (Permen Kominfo 1/2020)",
+   "checked_at": "2026-10-13",
+   "review_after": "2027-04-13",
+   "risk": "standard"
+  }
+ }
+}
