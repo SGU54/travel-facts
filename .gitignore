@@ -3,8 +3,17 @@
 # ~33 MB across ~1,700 files and it is the part that is irreplaceable.
 #
 # The sourced photographs and the rendered books are ~6.8 GB and are NOT carried
-# here. They are reproducible (re-sourced, or re-rendered from the build sources)
-# and they would make the repo unusable on GitHub.
+# here. They stay on the volume, and this is a STANDING DECISION, not a default
+# to be revisited when someone notices they are single-copy:
+#
+#   GitHub suspends accounts that use repositories as a storage or backup
+#   service. That is a term of service, not a size limit, so "it fits" is not
+#   the test and Git LFS does not make it allowed. Pushing 6.8 GB of
+#   photographs here risks the account that holds the fleet's actual source.
+#
+# They are also reproducible — re-sourced, or re-rendered from the build sources
+# that ARE tracked here — so the thing worth protecting is already protected.
+# If the images ever need a second copy, it belongs on another disk, not here.
 #
 # Note: ignoring a pattern does NOT untrack a file already committed. The PDFs,
 # tarballs and sample PNGs uploaded to this repo through the GitHub web UI stay
