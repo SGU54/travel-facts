@@ -115,8 +115,8 @@
  "launched": "2026-10-12",
  "published_count": 100,
  "guide": {
-  "live": false,
-  "price": null,
+  "live": true,
+  "price": "$24",
   "name": "Vietnam, End to End.",
   "name_confirmed": true,
   "built": "2026-10-14",
@@ -132,9 +132,6 @@
   "plates": 31,
   "gates": "audit-release.py RELEASE PASS 2026-10-14 v3 (evidence, bindings, pdf, content, review, legacy, source-defects); audit-rhythm.py PASS (4.2 plates/10pp)",
   "still_open": [
-   "★ price (fleet default $24 for a country) + Stripe payment link -> site_settings.guide_checkout_url + guide_price",
-   "★ STRIPE_SECRET_KEY on the vietnamforamericans-site Vercel project (the /guide/download route needs it)",
-   "★ site_settings.guide_ads_enabled = true — the operator go-live toggle; /guide is fail-closed 404 until then",
    "quarterly Field Sheet reissue"
   ],
   "revisions": [
@@ -153,7 +150,18 @@
    "verified": "download() not list(), 2026-10-14"
   },
   "cover_public_id": "vietnamforamericans/media/vietnam-guide-cover",
-  "vercel_env": "GUIDE_PDF_BUCKET/PATH/FILENAME + GUIDE_SHEET_PATH/FILENAME set on production; STRIPE_SECRET_KEY still absent"
+  "vercel_env": "GUIDE_PDF_BUCKET/PATH/FILENAME + GUIDE_SHEET_PATH/FILENAME set on production; STRIPE_SECRET_KEY still absent",
+  "checkout_url": "https://buy.stripe.com/bJe28u6LVbJJfX91WVa7C0o",
+  "stripe": {
+   "product": "prod_VROwPU7Gmm2E8P",
+   "price": "price_1UQW8KV05YuuVuCk99J8RNH3",
+   "link": "plink_1UQW8LV05YuuVuCkM9lKUcdb",
+   "webhook_endpoint": "we_1UQW8qV05YuuVuCkILoBeW76",
+   "metadata_site": "vietnam",
+   "amount": "2400 usd",
+   "note": "a Payment Link amount cannot be edited — a price change means a new link + new URL"
+  },
+  "went_live": "2026-10-14"
  },
  "reconciled_at": "2026-10-14",
  "reconciled_by": "state-reconcile.mjs (proposal, not applied)",
