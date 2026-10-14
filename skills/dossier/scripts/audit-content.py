@@ -352,7 +352,10 @@ def generated_page_refs(doc, refs):
 
 def pdf_data(pdf, source):
     try:
-        import fitz
+        try:
+            import pymupdf as fitz
+        except ImportError:
+            import fitz
     except ImportError as exc:
         raise AuditBlocked('PyMuPDF is required: install pymupdf.') from exc
     vocabulary = set(tokens(source['text']))

@@ -1,0 +1,30 @@
+{
+  "project": "vietnamforamericans",
+  "title": "Vietnam, End to End.",
+  "brand_name": "Bốn Bản (four plates)",
+  "note": "Print palette derived 2026-10-14 from the site's «Bốn Bản» identity (poster red + jade + gold on cream, Anton/Source Sans 3/Space Mono). NOT lifted verbatim: the site's #E8331C is a screen red that floods at 40% ink coverage and the #FFBE0B gold is a backlit yellow; both are deepened for cream stock. The book keeps Anton for display (the poster cut IS the site's thesis and it carries Vietnamese diacritics — Hội An, phở — in the same design) but swaps the body to Source Serif 4, a sibling of the site's Source Sans 3 that survives 13px justified over 15k words. Space Mono stays as the apparatus face.",
+  "palette": {
+    "paper": "#F3EDE0", "ink": "#16140F", "accent": "#C9321D", "jade": "#137A64",
+    "gilt": "#D9A520", "muted": "#514B42", "soft": "#8A8378", "line": "#D7CFBD",
+    "line_soft": "#E6DFCF", "zone": "#EAE3D3", "stone": "#E2D9C6", "deep": "#8F2112",
+    "water": "#CFDDD8"
+  },
+  "derivation": {
+    "paper": "site --bone #F2EDE1 → #F3EDE0 · a touch warmer; cream reads cooler on a backlit screen",
+    "ink": "site --ink #0C0B0A → #16140F · lifted; a near-black that dark closes up on cream",
+    "accent": "site --green(primary) #E8331C → #C9321D · deepened and desaturated; poster red floods at ledger-rule coverage",
+    "jade": "site --brass(accent) #0E8C70 → #137A64 · deepened one step for hairline rules and the verdict bar",
+    "gilt": "site --saffron #FFBE0B → #D9A520 · softened; screen gold is harsh on cream stock, used for the endmark and figure numbers",
+    "line": "site --line #D7CFBD → unchanged; warm hairlines already work in print",
+    "muted": "site --ink-soft #514B42 → unchanged; caption and label grey"
+  },
+  "fonts": {
+    "display": "Anton", "display_note": "the site's poster cut; carries Vietnamese diacritics",
+    "body": "Source Serif 4", "body_note": "sibling of the site's Source Sans 3; low-contrast book serif, prints cleanly at 13.4px",
+    "mono": "Space Mono", "mono_note": "the site's utility face; furniture, ledger heads, marks",
+    "local": "all faces are local woff2 under build/fonts/ with local-fonts.css — never base64 (bug log #34)"
+  },
+  "page": { "size": "8.5x11in", "margin": "92px 82px 72px 82px", "viewport": "816x1056" },
+  "audience": "first-time American visitors",
+  "price_band": "USD 24 (fleet default)"
+}

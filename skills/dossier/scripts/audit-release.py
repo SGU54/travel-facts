@@ -74,7 +74,10 @@ def legacy_gates(root):
 def inspect_pdf(root, doc):
     result = {"gate": f"pdf:{doc['id']}", "status": "PASS", "errors": [], "warnings": []}
     try:
-        import fitz
+        try:
+            import pymupdf as fitz
+        except ImportError:
+            import fitz
         pdf_path = local_path(root, doc["pdf"], ".pdf")
         with fitz.open(pdf_path) as pdf:
             if pdf.needs_pass or not len(pdf):
