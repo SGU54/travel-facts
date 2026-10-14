@@ -2,9 +2,13 @@
 """check-svg-text.py — every <text> in every figure must sit inside its viewBox
 with 6 units of clearance and must not overlap another <text> (d-draw.md:
 'a character-count estimate can only PROPOSE a position — it cannot certify
-containment'). Measures real getBBox() after the fonts load. Exit 1 on any hit."""
+containment'). Measures real getBBox() after the fonts load. Exit 1 on any hit.
+
+Run:  python3 check-svg-text.py <build-dir>   (needs maps.FIGURES, covers.cover_svg, design2.CSS)"""
 import glob, os, sys, json
 from playwright.sync_api import sync_playwright
+BUILD = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.getcwd()
+sys.path.insert(0, BUILD); os.chdir(BUILD)
 import maps, covers
 from design2 import CSS
 parts=[f'<figure id="fig-{k}">{fn()}</figure>' for k,(fn,c) in maps.FIGURES.items()]
