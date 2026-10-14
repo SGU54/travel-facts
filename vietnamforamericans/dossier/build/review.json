@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "reviewer": "Claude Fable 5.1 — full page read of both PDFs at 0.85 scale (2-page spreads), 2026-10-14; the owner (SGU54) has not yet signed off",
+  "reviewed_at": "2026-10-14",
+  "release_sha256": "eb91fe486160ebb4bb5c7d46b17f2060e0793843c7d7c304e65d75e78488a594",
+  "evidence_sha256": "d594a35462a84aea3edfd453b8f439e736a3ba848e4a5fbefe2a4691c2b8ea2b",
+  "bindings_sha256": "35d97495f62e56496038510976be186da4fd9a010dc519e96d3894a22c7d364a",
+  "documents": {
+    "book": {
+      "pdf_sha256": "934490bba5c4f3b0bac6fe946513feb1361d82b938dc8cc08341236b878f1fd9",
+      "html_sha256": "02e3ff409cbfdc851719f731b93d95b7cf2c1bffcdf9685363bb9906db8e9c7d",
+      "page_count": 67,
+      "pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ],
+      "checks": {
+        "facts": "pass",
+        "decisions": "pass",
+        "consistency": "pass",
+        "visual": "pass",
+        "navigation": "pass"
+      },
+      "notes": [
+        "Facts: every decisive claim is bound to evidence.json; the State Department page was re-opened in the browser on 2026-10-14 and the visa, licence, insurance, processing, extension, port-matching, declaration, zero-alcohol and Level 1 sentences found verbatim; the airline's own US-direct-flights page states SFO–SGN is its only direct US route; Tết 2027 (4–10 Feb) is from the Government Office document as reported by Viet Nam News.",
+        "Decisions: 11, each with a ledger whose rows share one unit per column, a losable verdict, exceptions on both sides that name a changed condition and an alternative action, and a note that points volatile inputs to the Field Sheet. D03 carries the one numerical comparison (single vs multiple entry, USD 25 vs 50) with its calculation ids.",
+        "Consistency: contents folios verified by add-nav (27/27 bookmarks); 'Eleven decisions' matches 11 numbered sections; the ◆ VOLATILE glyph no longer doubles as the endmark or footer ornament (❖).",
+        "Visual: 67 pages read in spreads. Two chapters end on a plate-only closing page (p14 the bay in mist, p17 the Hải Vân train); accepted as designed closing images per layout-architect §3, not stubs. Figure labels measured with check-svg-text.py: 0 overflows, 0 overlaps on the final build; all figure text ≥ 9 CSS px (6.75 pt) — secondary annotations only; essential values are also in the ledgers at 12.4 px.",
+        "Navigation: bookmarks on all 27 chapters; cross-references 'Decision NN' are live internal links (the generated ', p.N' was dropped — it read as lost text to the content gate); four external links to the sheet/sources pages resolve."
+      ]
+    },
+    "sheet": {
+      "pdf_sha256": "c1efebfdf3519418a71040dbd0efb1c130b8542a65183a6d59e5b7c49e073874",
+      "html_sha256": "9cfd15101dccdca2b08b44c4457ee04505a14f6a878eca6730802f1fc9231f99",
+      "page_count": 5,
+      "pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "checks": {
+        "facts": "pass",
+        "decisions": "pass",
+        "consistency": "pass",
+        "visual": "pass",
+        "navigation": "pass"
+      },
+      "notes": [
+        "5 pages, every row read against evidence.json: value, source URL (clickable, break at slashes only) and the decision it can reverse. Rows are stacked (label above value) so PDF extraction keeps each snippet intact.",
+        "Currency thresholds print as 15000000 VND / 5000 USD without thousands grouping, as the evidence contract requires for sheet values; the book spells them out in words.",
+        "Issue date 2026-10-14 on the renewal block; edition 2026.10 in the folio; the 'confirm in your travel week' rows (domestic fares, cruise terms, ATM tariff, Hội An ticket) name where to look and print no figure."
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "id": "east-coast-october-fortnight",
+      "details": "Two adults from New York, 16 days of leave in October, open-jaw HAN→SGN. D01: 14 ground days → three regions with slack. D02: October is the north's best month and the centre's storm season → north first, slack and refundable rooms in the centre. D03: single entry, ports Nội Bài in / Tân Sơn Nhất out, 21 days requested. D06: Ninh Bình day + one bay night; Sapa cut. D07: two nights in the town (tailor ordered day one). D08: Cần Thơ overnight fits. D09: no beach (Sept–Oct no coast reliable). D10: dates do not touch Tết. Sheet rows consulted: processing, ports, Tết. Chain is consistent; no contradiction between D02's slack and D06's cruise placement (not on the last night).",
+      "result": "pass"
+    },
+    {
+      "id": "west-coast-nonstop-february-week",
+      "details": "One traveller from San Francisco on the nonstop, 9 days of leave in early February 2027. D01: 7 ground days → two adjacent regions; south-first is forced by the nonstop (D02). D10: 4–10 Feb is the official Tết holiday and the surge runs a week either side → the book's call is to move the dates; if not, transport fixed the day dates are known, cash withdrawn in Saigon, base in a city or resort area. D08: block too short for the delta → city days. D09: February → Phú Quốc is dry, Nha Trang dry too → preference. D03: single entry, SGN in and out. The exceptions in D02 ('south-first if the nonstop is needed') and D10 ('go through it with a package or resort stay') both route this reader to a usable plan rather than overruling them.",
+      "result": "pass"
+    },
+    {
+      "id": "family-centre-only",
+      "details": "Family of four, 10 days in June, flying into and out of Đà Nẵng. D02 exception applies (centre only → no line to run); D01 exception for children (fewer places, longer stays); D04: no rented bike, Grab and a car with driver; D07: Đà Nẵng or the split, pool matters; D09: June → central coast beaches are in season. The Hội An tailor's two-day floor and Mỹ Sơn at opening remain actionable. No decision contradicts the family-specific advice in 'The plan'.",
+      "result": "pass"
+    }
+  ],
+  "open_issues": [
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "explanation": "Two plate-only closing pages (p14, p17) at ~55% fill: deliberate closing images after a chapter's last paragraph, endmark present; the page-shape gate passes (median 77%, 10 of 67 pages under 60%, none under 43%)."
+    },
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "explanation": "Figure annotations are set at 9 CSS px (6.75 pt), below the 9 pt floor recommended for essential text; every value they carry is repeated in the adjoining ledger at 12.4 px, so no instruction depends on them."
+    },
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "explanation": "The Field Sheet prints the currency-declaration thresholds as 15000000 VND and 5000 USD (plain decimal, as the evidence contract requires for sheet values); the prose in the book carries the readable form."
+    }
+  ]
+}
