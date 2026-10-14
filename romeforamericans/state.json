@@ -129,5 +129,15 @@
     },
     "logo": "Monogram roundel (wax-seal R + wordmark), layout A: one-line wordmark + italic IM Fell serif tagline (replaced the cluttered mono-caps tagline that wrapped to 3 lines).",
     "faq": "Reverted to fleet standard: any article <h2> ending in '?' → FAQPage JSON-LD via extractFaqPairs+faqLd (ships in v2 base). No custom accordion/authoring — matches previous sites."
-  }
+  },
+  "site_url": "https://www.romeforamericans.com",
+  "admin_url": "https://romeforamericans-admin.vercel.app",
+  "launched": "2026-06-10",
+  "published_count": 96,
+  "guide": {
+    "live": true,
+    "price": "$19"
+  },
+  "reconciled_at": "2026-10-14",
+  "reconciled_by": "state-reconcile.mjs (proposal, not applied)"
 }
