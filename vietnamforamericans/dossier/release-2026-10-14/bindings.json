@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "release_sha256": "eb91fe486160ebb4bb5c7d46b17f2060e0793843c7d7c304e65d75e78488a594",
+  "release_sha256": "bf6fb7d8fa30d10ac4ee44183a176b011cd21fb088a8d75aaf0092a1fb154516",
   "evidence_sha256": "d594a35462a84aea3edfd453b8f439e736a3ba848e4a5fbefe2a4691c2b8ea2b",
   "assets_sha256": {
     "fonts/anton--1Ptgg87LROyAm3K8-C8CSKlvPfE.woff2": "889f979804fc6c2ddb3c9577805caf156bfd092a5b6e58d680535d65267b933e",
@@ -44,12 +44,25 @@
     "img/A15.jpg": "854a09fec0adb6ef7df5d4a53d44e7e7429981378b7879f0f89cb8e8dc217832",
     "img/A16.jpg": "f3db8f297d321102a405194551ef83b9521bcb1e79446e0ab628626d276438fb",
     "img/A17.jpg": "e572fe720f53538c74d961ca49607f26d1280417cc36fa8a616016131431d79b",
-    "img/A18.jpg": "1fc915bfcbc8ded11c6bcec91aa1ae315cf1850ea2c29500f7f98860c545859f"
+    "img/A18.jpg": "1fc915bfcbc8ded11c6bcec91aa1ae315cf1850ea2c29500f7f98860c545859f",
+    "img/A19.jpg": "91fa2c9e83e528e0e794606fd9e1c7dfb81625457ebd3824f9b4227bc928ca79",
+    "img/A20.jpg": "8dbba3bcc1008728fb79fa01445c3f277f1a4ea614c83fb14f10917ad80cc42c",
+    "img/A21.jpg": "279ca97d1d604562c7238c68b1b350d07c5a095831f39e1497a3aadde5341eea",
+    "img/A22.jpg": "5036e71f1899d1958c375689c7aab17a17e6c7cb85e74dfd12d98f941b3201d9",
+    "img/A23.jpg": "39c5a3dee332a1bff709da9fda5c706dc1b8c939de87db5771e2e7cf22b5b181",
+    "img/A24.jpg": "4494a618dc09454283c03b0d321b9fbc29366de64bf636946a8c04fb4fcc8823",
+    "img/A25.jpg": "c2c65ba27ae7356ebf59b08a05ee8c6c38e3e88c66987a369fce4bd75fdf2c91",
+    "img/A26.jpg": "9cb2e4dbe85a9613b3089d11992b2d8f249022f492d7cdc8be6ac8228b16be94",
+    "img/A27.jpg": "91ef92df80b823e02ea513ac9206521d8eeb5625e79d2b8f4ec5deb5801789c9",
+    "img/A28.jpg": "5192d25468ef3fcca394e5fde42ad7cc358c9ce05a7f03adca78292ef8f9023c",
+    "img/A29.jpg": "43383fdbd960effcddf5996dc1740287a1dd2c7f83999460b6539792f69b2563",
+    "img/A30.jpg": "536fd3abc44d8e2e840f03380200e8a357e3225cac3af6750ba4ce284b4a76a0",
+    "img/A31.jpg": "1fb1b1c1a6d60b597dab58ac7a08b91a12d59c0214024f60a06d04db1794f1cf"
   },
   "documents": {
     "book": {
       "template": "book.template.html",
-      "template_sha256": "2eb3bc40c6f2736488ad55fa83e8d47ce1830f0f3cff4bfaafe6585bd1822266",
+      "template_sha256": "d222409fd985ff3769e31d3c89b1b16b73a1b5f2a683c8d1943d72c54c050274",
       "html": "_book.html",
       "claims": {
         "nonstop": 2,
@@ -79,11 +92,11 @@
         "natday-2027": 1,
         "cash-declare": 1
       },
-      "html_sha256": "02e3ff409cbfdc851719f731b93d95b7cf2c1bffcdf9685363bb9906db8e9c7d"
+      "html_sha256": "f9dd1c23f1eb020aebb85866204dc3b182c9d1cf2ac2979ef113294b45c69d84"
     },
     "sheet": {
       "template": "sheet.template.html",
-      "template_sha256": "90cf3109324a13451a76f3a372bcba580c56fdf6da3293be60575006a155ff87",
+      "template_sha256": "11ced8c2dc1469e09d013bd143f3bf03ba5bbeca8590c565c78e1e0a1d1688cc",
       "html": "_sheet.html",
       "claims": {
         "visa-required": 1,
@@ -121,7 +134,7 @@
         "natday-2027": 1,
         "hoian-ticket": 1
       },
-      "html_sha256": "9cfd15101dccdca2b08b44c4457ee04505a14f6a878eca6730802f1fc9231f99"
+      "html_sha256": "af67925fa6e8a27716026f358ffc8935070b5e3268875fbdcc339bff0f043e55"
     }
   }
 }

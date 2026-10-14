@@ -24,10 +24,10 @@ POST https://vietnamforamericans-admin.vercel.app/api/guide-name-backfill
 
 | field | value |
 |---|---|
-| pages | 67 (the book) + 5 (the Field Sheet) + 99 (phone edition) |
+| pages | 73 (the book) + 5 (the Field Sheet) + 99 (phone edition) |
 | decisions | 11 |
 | failureModes | 19 rows in three ledgers (hospital 5 · days 8 · money 6) |
-| figures | 14 computed figures + 18 plates |
+| figures | 14 computed figures + 31 plates |
 | priceAnchor | *(left empty — no book figure is a dollar amount; the stakes are days and refusals)* |
 
 ## Hooks by swamp id (`hooks` — band-shaped, two beats)

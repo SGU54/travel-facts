@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "reviewer": "Claude Fable 5.1 — full page read of both PDFs at 0.85 scale (2-page spreads), 2026-10-14; the owner (SGU54) has not yet signed off",
+  "reviewer": "Claude Fable 5.1 — full page read of both PDFs at 0.85 scale (2-page spreads), 2026-10-14, re-read in full after the 13-plate v3 rebuild; the owner (SGU54) has not yet signed off",
   "reviewed_at": "2026-10-14",
-  "release_sha256": "eb91fe486160ebb4bb5c7d46b17f2060e0793843c7d7c304e65d75e78488a594",
+  "release_sha256": "bf6fb7d8fa30d10ac4ee44183a176b011cd21fb088a8d75aaf0092a1fb154516",
   "evidence_sha256": "d594a35462a84aea3edfd453b8f439e736a3ba848e4a5fbefe2a4691c2b8ea2b",
-  "bindings_sha256": "35d97495f62e56496038510976be186da4fd9a010dc519e96d3894a22c7d364a",
+  "bindings_sha256": "7d46b4d0ad38d0d6aa4641ede7a62da016f4a9b8521dab2439d9bddb3b297f4e",
   "documents": {
     "book": {
-      "pdf_sha256": "934490bba5c4f3b0bac6fe946513feb1361d82b938dc8cc08341236b878f1fd9",
-      "html_sha256": "02e3ff409cbfdc851719f731b93d95b7cf2c1bffcdf9685363bb9906db8e9c7d",
-      "page_count": 67,
+      "pdf_sha256": "dc2a2dc109049189e3c8bd5c5b840f56e67b320748a58ed34aaa9f80eb2a44d0",
+      "html_sha256": "f9dd1c23f1eb020aebb85866204dc3b182c9d1cf2ac2979ef113294b45c69d84",
+      "page_count": 73,
       "pages_viewed": [
         1,
         2,
@@ -77,7 +77,13 @@
         64,
         65,
         66,
-        67
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73
       ],
       "checks": {
         "facts": "pass",
@@ -90,13 +96,13 @@
         "Facts: every decisive claim is bound to evidence.json; the State Department page was re-opened in the browser on 2026-10-14 and the visa, licence, insurance, processing, extension, port-matching, declaration, zero-alcohol and Level 1 sentences found verbatim; the airline's own US-direct-flights page states SFO–SGN is its only direct US route; Tết 2027 (4–10 Feb) is from the Government Office document as reported by Viet Nam News.",
         "Decisions: 11, each with a ledger whose rows share one unit per column, a losable verdict, exceptions on both sides that name a changed condition and an alternative action, and a note that points volatile inputs to the Field Sheet. D03 carries the one numerical comparison (single vs multiple entry, USD 25 vs 50) with its calculation ids.",
         "Consistency: contents folios verified by add-nav (27/27 bookmarks); 'Eleven decisions' matches 11 numbered sections; the ◆ VOLATILE glyph no longer doubles as the endmark or footer ornament (❖).",
-        "Visual: 67 pages read in spreads. Two chapters end on a plate-only closing page (p14 the bay in mist, p17 the Hải Vân train); accepted as designed closing images per layout-architect §3, not stubs. Figure labels measured with check-svg-text.py: 0 overflows, 0 overlaps on the final build; all figure text ≥ 9 CSS px (6.75 pt) — secondary annotations only; essential values are also in the ledgers at 12.4 px.",
+        "Visual: 73 pages read in spreads after the v3 rebuild (31 plates; 13 added by the 2026-10-14 review, each checked at 1:1 and against the site's own alt text — the Phnom Penh frame captioned as Saigon was replaced by a Saigon River plate from the site's library, the cajuput forest is no longer called mangrove, the railway carriage is no longer called the Reunification line, an invented time of day was removed). Two chapters end on a plate-only closing page (p14 the bay in mist, p17 the Hải Vân train); accepted as designed closing images. Figure labels measured with check-svg-text.py: 0 overflows, 0 overlaps; all figure text ≥ 9 CSS px.",
         "Navigation: bookmarks on all 27 chapters; cross-references 'Decision NN' are live internal links (the generated ', p.N' was dropped — it read as lost text to the content gate); four external links to the sheet/sources pages resolve."
       ]
     },
     "sheet": {
-      "pdf_sha256": "c1efebfdf3519418a71040dbd0efb1c130b8542a65183a6d59e5b7c49e073874",
-      "html_sha256": "9cfd15101dccdca2b08b44c4457ee04505a14f6a878eca6730802f1fc9231f99",
+      "pdf_sha256": "fee238169c2da02a0474598da14b2a7263d1c36de2d05e28591d6fda90f1e855",
+      "html_sha256": "af67925fa6e8a27716026f358ffc8935070b5e3268875fbdcc339bff0f043e55",
       "page_count": 5,
       "pages_viewed": [
         1,
@@ -140,7 +146,7 @@
     {
       "severity": "minor",
       "status": "accepted",
-      "explanation": "Two plate-only closing pages (p14, p17) at ~55% fill: deliberate closing images after a chapter's last paragraph, endmark present; the page-shape gate passes (median 77%, 10 of 67 pages under 60%, none under 43%)."
+      "explanation": "Plate-only or short closing pages (p14, p17, p25 pocket card, p34 the Decision 01 call page) at 48–61% fill: closing images and the decision tails that now open a page so the inline plates do not push the call and its forks off together (design2.py: .verdict and .dtail may break before). Median fill 85%, 12 of 73 pages under 62%, none under 48%."
     },
     {
       "severity": "minor",

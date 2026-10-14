@@ -94,7 +94,7 @@ a{ color:inherit; text-decoration:none; }
 /* fragmentation rules, set ONCE */
 h1,h2,.dnum,.standfirst{ break-after:avoid; }
 .ledger,.verdict,.forks,figure,.note,.card{ break-inside:avoid; }
-.verdict,.forks,.ledger{ break-before:avoid; }
+.forks,.ledger{ break-before:avoid; } /* 2026-10-14: the verdict may open a page; it still carries its forks (.dtail) with it */
 
 /* ── ROLE: opener ─────────────────────────────────────────────────────────── */
 .opener{ break-inside:avoid; break-after:avoid; overflow:hidden; margin:0 0 15px; }
@@ -179,7 +179,7 @@ figure.snug img, figure.snug svg{ height:var(--snug); width:auto; max-width:100%
   letter-spacing:.07em; color:var(--jade); }
 
 /* a decision's tail travels as one block */
-.dtail{ break-inside:avoid; break-before:avoid; }
+.dtail{ break-inside:avoid; }
 
 /* ── the note strip ───────────────────────────────────────────────────────── */
 .note{ font-size:10.8px; line-height:1.5; color:var(--muted); border-top:1px solid var(--line);

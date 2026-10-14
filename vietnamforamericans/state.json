@@ -122,21 +122,28 @@
     "built": "2026-10-14",
     "release": "dossier/release-2026-10-14/",
     "pages": {
-      "book": 67,
+      "book": 73,
       "sheet": 5,
       "phone": 99,
       "freehook": 3
     },
     "decisions": 11,
     "figures": 14,
-    "plates": 18,
-    "gates": "audit-release.py RELEASE PASS 2026-10-14 (evidence, bindings, pdf, content, review, legacy, source-defects)",
+    "plates": 31,
+    "gates": "audit-release.py RELEASE PASS 2026-10-14 v3 (evidence, bindings, pdf, content, review, legacy, source-defects); audit-rhythm.py PASS (4.2 plates/10pp)",
     "still_open": [
       "★ confirm the name, then POST /api/guide-name-backfill {name, dry_run:false}",
       "★ price (fleet default $24) + Stripe payment link → site_settings via the admin Guide panel",
       "upload build/cover-web.jpg to Cloudinary and set SITE.guide.cover",
       "merge branch guide-vietnam-end-to-end in the site repo (site.ts guide identity)",
       "quarterly Field Sheet reissue"
+    ],
+    "revisions": [
+      {
+        "date": "2026-10-14",
+        "v": "v3",
+        "what": "13 plates added (Opus review, commit f9fbd3b) then fact-checked against the site's alt text: Phnom Penh frame captioned as Saigon replaced; three captions corrected; decision tails may open a page; full chain re-rendered and all 73 pages re-read"
+      }
     ]
   },
   "reconciled_at": "2026-10-14",
