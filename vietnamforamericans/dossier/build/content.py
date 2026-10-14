@@ -20,6 +20,8 @@ DECISIONS = [
 # ── 01 ───────────────────────────────────────────────────────────────────────
 {
  "n": "01", "cat": "Days",
+ "plate2": "A23", "plate2_after": 1,
+ "plate2_cap": "One road, one valley, the better part of a morning. Distance in the north is counted in hours rather than miles, and this is what a thin line on the map is actually asking of the calendar.",
  "q": "How many days do you really have, and how many regions do they buy?",
  "cols": ["Days of leave", "What the ground will hold"],
  "fig": "days",
@@ -81,6 +83,8 @@ centre has shrunk to a single night before anyone has argued about it. {EST}</p>
 # ── 02 ── THE FREE HOOK ──────────────────────────────────────────────────────
 {
  "n": "02", "cat": "Season",
+ "plate2": "A24", "plate2_after": 1,
+ "plate2_cap": "The north under its winter grey: ten in the morning, cloud sitting on the ridge, none of it burning off. It is not rain and it does not spoil a trip, but it is the version of the country the photographs never show.",
  "q": "Which month, and which end do you start from?",
  "cols": ["Month", "What the line is doing"],
  "fig": "season",
@@ -280,6 +284,8 @@ and {C:zero-alcohol}</p>""",
 # ── 05 ───────────────────────────────────────────────────────────────────────
 {
  "n": "05", "cat": "Legs",
+ "plate2": "A29", "plate2_after": 1,
+ "plate2_cap": "A reunification-line carriage, which is the whole argument in one object: slower than the flight, and the only leg of the trip where the travelling is the thing you remember rather than the thing you endure.",
  "q": "Fly, train, or sleep through it — leg by leg?",
  "cols": ["The leg", "The call"],
  "fig": "legs",
@@ -344,6 +350,8 @@ overland, so a return booked for the day of an international flight has no fallb
 # ── 06 ───────────────────────────────────────────────────────────────────────
 {
  "n": "06", "cat": "North",
+ "plate2": "A25", "plate2_after": 2,
+ "plate2_cap": "The terraces in their short green-and-gold fortnight. Sapa’s case rests almost entirely on this, and it is the narrowest window anywhere in the northern leg.",
  "q": "The bay, Ninh Bình, or Sapa — which one does the northern leg carry?",
  "cols": ["Excursion from Hanoi", "What it costs the leg"],
  "fig": "north",
@@ -407,6 +415,8 @@ anchor of the north; the leg rarely holds both without the centre paying for it.
 # ── 07 ───────────────────────────────────────────────────────────────────────
 {
  "n": "07", "cat": "Centre",
+ "plate2": "A26", "plate2_after": 2,
+ "plate2_cap": "Hội An after the lights go on, which is the hour the town is sold on — and also the hour the day visitors are still in it. The case for sleeping here rather than at the beach is about the hours either side of this one.",
  "q": "Hội An, An Bàng, or Đà Nẵng — and how many nights does the tailor need?",
  "cols": ["Base", "What it costs each day"],
  "fig": "centre",
@@ -470,6 +480,8 @@ is the thing worth paying for there.</p>""",
 # ── 08 ───────────────────────────────────────────────────────────────────────
 {
  "n": "08", "cat": "South",
+ "plate2": "A27", "plate2_after": 2,
+ "plate2_cap": "A mangrove channel in the delta, well off the coach circuit. The last block of days in the south turns on whether you want this or the ninety-minute boat with the coconut-candy stop.",
  "q": "What can the last block of days absorb?",
  "cols": ["Ending", "Days it takes"],
  "fig": "south",
@@ -534,6 +546,8 @@ before an international connection. {EST}</p>""",
 # ── 09 ───────────────────────────────────────────────────────────────────────
 {
  "n": "09", "cat": "Beach",
+ "plate2": "A31", "plate2_after": 1,
+ "plate2_cap": "Phú Quốc from the west coast at the end of the day. Which month you come decides whether the evening looks like this or like a grey chop, and that is the beach decision in one frame.",
  "q": "Which beach — and does the month leave you a choice?",
  "cols": ["Coast", "Its calm months"],
  "fig": "beach",
@@ -598,6 +612,8 @@ directly, which helps only if the island is the whole trip. {OFF}</p>""",
 # ── 10 ───────────────────────────────────────────────────────────────────────
 {
  "n": "10", "cat": "Calendar",
+ "plate2": "A30", "plate2_after": 1,
+ "plate2_cap": "Trấn Quốc on the West Lake causeway. Around Tết the pagodas fill while much of the ordinary city shuts, which is the shape of the holiday in one frame: not an empty country so much as a differently occupied one.",
  "q": "Your dates touch Tết. Go through it, or around it?",
  "cols": ["What Tết does", "Which way it pushes"],
  "fig": "tet",
@@ -661,6 +677,8 @@ is that one contains a national holiday, that is a real reason to pick the other
 # ── 11 ───────────────────────────────────────────────────────────────────────
 {
  "n": "11", "cat": "Money",
+ "plate2": "A28", "plate2_after": 2,
+ "plate2_cap": "A market morning, where the card does not reach. The stalls, the xe ôm and the small kitchens are a cash economy, so the number worth planning is what a machine will give you in a day, not what sits in the account.",
  "q": "How much cash, and where does the card quietly stop?",
  "cols": ["Where you are", "What works"],
  "fig": "cash",

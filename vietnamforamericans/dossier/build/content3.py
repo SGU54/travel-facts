@@ -95,6 +95,8 @@ glass of weak iced tea beside it is there to drink between sips. {EST}</p>
 RISK = {
  "kind": "Risk",
  "title": "How worried should you be?",
+ "plate": "A22", "plate_after": 3,
+ "plate_cap": "Saigon from the water at dusk, which is usually when the question gets asked. Most of what goes wrong here is ordinary and recoverable — a bag on the wrong shoulder, a fare agreed too late — and the fear and the risk do not point in the same direction.",
  "standfirst": "The risk Americans worry about and the risk that sends them home "
                "early are not the same thing.",
  "body": """

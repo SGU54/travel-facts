@@ -104,11 +104,22 @@ TOC_RAIL = {
 
 _PLATES_DONE = set()
 
+def plate_letter(n):
+    """1 -> A, 26 -> Z, 27 -> AA. The old `chr(64 + n)` silently produced '['
+    for plate 27 and '\\' for 28 — a book is only ever a few plates away from
+    captioning itself 'PL. ['. Spreadsheet-style labels carry on correctly."""
+    s = ""
+    while n > 0:
+        n, r = divmod(n - 1, 26)
+        s = chr(65 + r) + s
+    return s
+
+
 def plate(slot, caption):
     if slot in _PLATES_DONE:
         return ""
     _PLATES_DONE.add(slot)
-    letter = chr(64 + int(slot[1:]))
+    letter = plate_letter(int(slot[1:]))
     return (f'<figure class="photo" id="plate-{slot}">'
             f'<img src="img/{slot}.jpg" alt="{html.escape(caption)}">'
             f'<figcaption><span class="fnum">PL. {letter}</span> &nbsp;{caption}</figcaption>'
@@ -192,7 +203,18 @@ def decision(d, total, mode):
         p.append(f'<tr><td>{subst_marks(left)}</td><td>{subst_marks(right)}</td></tr>')
     p.append('</table></div>')
     if d.get("reasoning"):
-        p.append(xref(season_marks(subst_marks(subst_claims(d["reasoning"], mode)))))
+        reasoning = xref(season_marks(subst_marks(subst_claims(d["reasoning"], mode))))
+        # A decision runs four to six pages and carried exactly ONE plate, parked
+        # at the very end of the section. `plate2` places a second one INSIDE the
+        # reasoning, the way chapters already do, so the long analytical middle —
+        # where a skimming buyer decides — is not an unbroken column of type.
+        if d.get("plate2"):
+            parts = reasoning.split('</p>')
+            at = min(d.get("plate2_after", 2), max(0, len(parts) - 1))
+            reasoning = ('</p>'.join(parts[:at]) + '</p>'
+                         + plate(d["plate2"], d["plate2_cap"])
+                         + '</p>'.join(parts[at:]))
+        p.append(reasoning)
     p.append('<div class="verdict"><span class="vlab">The call</span>'
              f'<p>{xref(subst_claims(d["verdict"], mode))}</p></div>')
     p.append('<div class="dtail">')

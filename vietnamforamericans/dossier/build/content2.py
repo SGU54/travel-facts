@@ -192,6 +192,8 @@ take your passport at check-in: {C:police-reg} That is the rule working, not a s
 DAYS = {
  "kind": "The plan",
  "title": "The days, as operations",
+ "plate": "A19", "plate_after": 3,
+ "plate_cap": "A phin takes four minutes and nobody hurries it. A day here is built out of fixed points like this one — the morning coffee, the middle of the afternoon, the hour the kitchen stops — and a plan that ignores them is a list of places rather than a day.",
  "standfirst": "Not an itinerary. Four shapes a day can take, the fourteen-day spine most "
                "first trips run on, and the joints where it is won or lost.",
  "body": """
@@ -253,6 +255,8 @@ present.</p>
 HORIZONS = {
  "kind": "The horizons",
  "title": "How far ahead each thing must be decided",
+ "plate": "A20", "plate_after": 3,
+ "plate_cap": "The bay on a clear morning, with most of the fleet already out. This is the one line in the trip where the good operators genuinely fill, because the boats are finite and the dates are not — which is why it is the booking that has to move first.",
  "standfirst": "The booking calendar, counted backwards from departure. Stable horizons "
                "only — the prices live on the Field Sheet.",
  "body": """
@@ -289,6 +293,8 @@ down turned out to be better than the thing you had booked.</p>
 KIT = {
  "kind": "The kit",
  "title": "The pocket card",
+ "plate": "A21", "plate_after": 2,
+ "plate_cap": "Bến Thành’s clock tower, the landmark half of Saigon’s directions are given from. The card in your pocket does the same job — one fixed thing to point at when the phone is dead and the tones in the street name are not coming out right.",
  "standfirst": "Two panels, 3.25 by 4.5 inches each. Cut around the pair, fold down the "
                "dashed line, print at 100%.",
  "body": """
