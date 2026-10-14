@@ -40,7 +40,7 @@ the ranking is what decides the next forty articles.
 How to run it (name the real parts; auto-detection lies):
 
 ```bash
-python3 /mnt/skills/user/dossier/scripts/audit-synthesis.py corpus.json \
+python3 ~/.claude/skills/dossier/scripts/audit-synthesis.py corpus.json \
   "theme1 regex" "theme2 regex" "theme3 regex" "theme4 regex"
 ```
 
