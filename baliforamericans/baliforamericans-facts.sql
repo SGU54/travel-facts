@@ -349,3 +349,11 @@ values ('bali', 'getting_around.road_distances', '"about 22 miles from the airpo
 on conflict (scope, key) do update set
   value = excluded.value, status = excluded.status,
   checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- 2026-10-15 correction (corrections.json): the consular phone above was wrong.
+-- Source: https://id.usembassy.gov/bali/ (Telephone: (62) 036-1958-6161).
+update common.facts
+   set value = '"+62-361-958-6161"'::jsonb,
+       source_url = 'https://id.usembassy.gov/bali/',
+       checked_at = now()
+ where scope = 'bali' and key = 'safety_health.us_consular_agency_bali';
