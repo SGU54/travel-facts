@@ -161,7 +161,14 @@
    "amount": "2400 usd",
    "note": "a Payment Link amount cannot be edited — a price change means a new link + new URL"
   },
-  "went_live": "2026-10-14"
+  "went_live": "2026-10-14",
+  "delivery": {
+   "links": "signed HMAC tokens, 24h (DOWNLOAD_LINK_SECRET); bare session_id accepted only within 60 min of paying",
+   "recovery": "/guide/access — mails a fresh link to the address that PAID, so a forwarded email is useless",
+   "why": "forwarding the delivery mail handed over the book: a Stripe session id never expires",
+   "verified_2026-10-15": "14 local signer tests; invalid token refused in prod; old session_id link expired after 60 min; buyer and non-buyer get identical responses; mint probe passes on build 192c697",
+   "caveat": "closes link-sharing only — the PDF itself is still copyable; per-buyer watermarking is the next lever if it ever matters"
+  }
  },
  "reconciled_at": "2026-10-14",
  "reconciled_by": "state-reconcile.mjs (proposal, not applied)",
