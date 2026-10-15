@@ -1,0 +1,262 @@
+[
+  {
+    "id": "visa-required",
+    "text": "Visa: required. B1 tourist visa (visa on arrival = e-VOA, same product), 30 days, extendable once for 30. Buy on the official site after flights and the final passport, or at the airport counter.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-fee",
+    "text": "Visa fee: 500000 IDR, same online or at the counter; the dollar amount moves with the rate. Online: Visa, Mastercard, JCB; one application covers up to five travellers. A higher price means an agency.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-90",
+    "text": "e-VOA validity for entry: 90 days from issue, so it can be bought well ahead; the form asks for a departure date and a booked return flight.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-ext",
+    "text": "Extension: once, 30 days; online application and payment, then a photograph and interview at an immigration office (since 29 May 2025). Fee 500000 IDR per application. No official processing time is published: the site's margin is to file about two weeks before day 30.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "overstay",
+    "text": "Overstay: 1000000 IDR per day (State Dept), with possible detention, deportation or a ban. Thirty days is counted from the stamp, not rounded; read the date on the record before leaving the desk.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "passport-6m",
+    "text": "Passport: six months beyond the landing date; two blank VISA pages (endorsement pages do not count). An emergency or limited-validity passport cannot use the visa on arrival: apply at an embassy before travel.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "onward",
+    "text": "Onward ticket: immigration can ask for a ticket out of Indonesia; a domestic hop to Lombok does not count. Carry the booking offline.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "same-passport",
+    "text": "Leaving: on the same passport you entered with. A passport replaced during the trip needs a special pass from immigration before you can fly; allow time. US Consular Agency, Jimbaran: +62-361-958-6161.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "levy",
+    "text": "Levy: 150000 IDR per person, once per trip (a Lombok or Gili side trip stays inside it). Pay at lovebali.baliprov.go.id by card (Visa, Mastercard, Amex, JCB) before you fly; voucher QR by email, one per traveller, saved offline. No cash anywhere. Exemptions are by visa type; none for children found.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "arrival-card",
+    "text": "Arrival card (All Indonesia): free; opens only within 72 h of the LOCAL arrival date; one per traveller including infants; carries the customs and health declaration; QR code to immigration and customs. A site that charges is not the official one.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "customs",
+    "text": "Customs, per adult: USD 500 of goods duty-free (10% duty + VAT above); 1 L alcohol (21+); 200 cigarettes / 25 cigars / 100 g; vape liquid 30 ml open or 12 ml closed (18+). EXCESS ALCOHOL, TOBACCO AND VAPES ARE DESTROYED, NOT TAXED. Duty-free bought at the hub counts. Medicine → red channel with the prescription.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "cash-declare",
+    "text": "Cash declaration: 100000000 IDR or equivalent, in and out; undeclared penalty 10%, max 300000000 IDR. Taking that much RUPIAH out needs a Bank Indonesia permit. Spend or change small notes before leaving.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "phone",
+    "text": "Phone: no IMEI registration for a tourist roaming on a US SIM or using a local SIM registered at an operator's outlet (90 days' access). A foreign travel eSIM is the site's reading of the roaming case, not a customs statement. The phone must be unlocked for either.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "meds",
+    "text": "Medicine: prescribed, 90 days with the prescription; psychotropic, 60 days; NARCOTIC CLASS, NONE (prescription or not); over-the-counter, three days' need. Original packaging, prescription per item, a letter by generic name. Declare it on the arrival card; the red channel is where it is looked at. BPOM publishes a contact for individual questions.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "adhd",
+    "text": "ADHD and other stimulants: the State Dept says some, including ADHD medicines, are illegal; no official list exists. Ask your doctor which class your drug is in and what you would switch to.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "cbd",
+    "text": "Cannabis and CBD: illegal in every form, Class I under the Narcotics Law; importing carries 5–15 years and, above 1 kg of plant or 5 g in other forms, life or death. Check jacket pockets and toiletry bags before packing.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "licence",
+    "text": "Driving: US licence alone not recognised; carry an IDP (AAA, issued at home) WITH the licence. Motorcycles are a separate licence class: an IDP translates a car licence and adds nothing. The site's reading: no motorcycle endorsement = unlicensed on a scooter.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "licence-fine",
+    "text": "Riding unlicensed: up to 4 months' detention or 1000000 IDR (statutory maxima, not a roadside price). Helmets required for rider and passenger. If fined: ask for an official receipt (State Dept).",
+    "min_occurrences": 1
+  },
+  {
+    "id": "presumed",
+    "text": "After an accident: stay at the scene, notify the police; the larger vehicle's driver is often presumed responsible. The police report is what a claim will ask for.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "circular",
+    "text": "Circular 7/2025: licensed accommodation only; modest dress at sacred places; inner and middle temple courtyards for worshippers in Balinese dress only; licensed changers, pay in rupiah; licence + helmet to ride; pay the levy; no single-use plastics; roadworthy registered hire cars. Residents report via a WhatsApp hotline.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "enforcement",
+    "text": "Enforcement: the US Consular Agency reports an active campaign on traffic and vehicle violations, illegal work and visa violations, and drug possession by foreigners. The rules above are being applied.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "advisory",
+    "text": "Travel advisory: Level 2 — Exercise Increased Caution (Indonesia as a whole; Level 4 for two Papua provinces). Read it again before you fly; advisories are revised.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "medical-pay",
+    "text": "Care: deposit before treatment, mostly cash; US plans, Medicare and Medicaid pay nothing abroad; insurance reimburses from the medical report, itemised bill, proof of payment and police report. Ask the clinic for an estimate; no price is printed here because none is official.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "ambulance",
+    "text": "Emergency: 112 unified (free, works without credit) · 110 police · 119 ambulance (State Dept also lists 118) · 113 fire. Ambulances can take 45 min or more: a taxi is the ambulance. Ask your accommodation on day one which clinic it would send a guest to.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "evacuation",
+    "text": "Evacuation: strongly recommended by the State Dept; transfers between hospitals are the patient's cost. Read what triggers it, who decides and where it takes you; check the scooter, diving, trekking and boat clauses by name.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "rabies",
+    "text": "Rabies: common in Indonesia's dogs. After ANY bite or scratch: soap and running water, then a clinic the same day, and call the insurer. Pre-travel vaccine: a doctor's decision for remote travel, small children or long stays.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "malaria",
+    "text": "Malaria: none in Bali's resort areas, Ubud or the Gilis (CDC); present elsewhere in Indonesia. Dengue: everywhere, bites by day, no US vaccine; warning signs come 24–48 h AFTER the fever breaks.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "zika",
+    "text": "Zika: CDC Level 2 travel health notice for Bali at this edition. Pregnant or planning: read the current notice and talk to a doctor before booking. Notices change; check the date.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "vaccines",
+    "text": "Vaccines: none required at the border. CDC recommends routine, hepatitis A, hepatitis B and typhoid; Japanese encephalitis only for long or rural stays. Some need spaced doses: 6–8 weeks out.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "water",
+    "text": "Water: sealed bottled water from a major brand (State Dept); ask for it by name and check the seal; no ice where unsure; brush teeth with bottled water. A filter bottle squares this with the plastics rule.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "methanol",
+    "text": "Drinks: methanol poisoning and spiking are both reported (State Dept). Sealed, branded, opened in sight; spirits from a labelled bottle only; nothing from strangers; nothing left unattended. A hangover out of proportion, or any change in vision: hospital, and say methanol.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "consular",
+    "text": "US Consular Agency, Jimbaran: +62-361-958-6161 (lost passport, arrest, consular help). Local emergency numbers first for medical or safety emergencies. Embassy: Jakarta.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "nyepi-2027",
+    "text": "Nyepi 2027: Monday 8 March (2026 was 19 March; 2028 to be decreed). Mobile data, TV and radio off 06:00–06:00; in 2026 the airport halted regular flights for the same 24 h — 2027 hours NOT yet announced at this edition: confirm with your airline. Land a full day before; stay inside your accommodation on the day.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "holidays-2027",
+    "text": "2027 national holidays near a Bali trip: 1 Jan · 6 Feb Chinese New Year (leave 5) · 8 Mar Nyepi · 10–11 Mar Eid al-Fitr (leave 9, 12, 15) · 26 Mar Good Friday (leave 25) · 1 May · 6 May · 17 May Eid al-Adha (leave 18) · 20 May Vesak (leave 19) · 1 Jun · 6 Jun · 17 Aug · 25 Dec (leave 24). Government offices closed; book rooms early for long weekends.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "galungan-2027",
+    "text": "Galungan 2027: 13 Jan and 11 Aug; Kuningan 23 Jan and 21 Aug. Penjor on the roads, families at the temples, no closure; confirm drivers and guides a few days before.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "nonstop",
+    "text": "Nonstop US–Bali: none (October 2026 schedule). Every routing connects once; book both flights on one ticket for a first trip.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "hubs",
+    "text": "Hubs, second leg into Bali (Oct 2026 snapshot): Singapore ~3.5 h · KL / Bangkok / Manila listed · Hong Kong, Taipei ~5 to 6 h · Tokyo, Seoul ~7 to 8 h · Dubai, Doha ~10 h · Istanbul ~13 h. Routes change by season: search your own dates.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "timezone",
+    "text": "Time: UTC+8, no clock change. +12 h on New York in summer, +13 in winter; +15/+16 on Los Angeles. The flight west crosses the date line: count hotel nights from the LOCAL arrival date on the ticket.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "bags-dot",
+    "text": "Two tickets: ask the second airline, before buying, what it does for a passenger stranded by the first airline's delay; assume bags are NOT transferred (collect, enter the hub country, re-check). Delay expenses: a Montreal Convention claim afterwards, with receipts.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "domestic-bags",
+    "text": "Domestic flights: 20 kg full-service / 15 kg medium / no-frills may charge (PM 185/2015 as reported); the fare conditions are the authority. Separate ticket from your international one; never on the same day as the flight home. Different terminals at Denpasar.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "distances",
+    "text": "Road miles from the airport: Kuta 4 · Seminyak 7 · Nusa Dua 8 · Sanur 11 · Canggu 12 · Uluwatu 13 · Ubud 22 · Padang Bai 35 · Kintamani 48 · Munduk 51 · Amed 61 · Lovina 62. Drive times: none printed; a live map at your hour and day, the night before, and the longer of its answer and your driver's.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "rain",
+    "text": "Rain, inches, Denpasar normals: Jan 14 · Feb 11 · Mar 9 · Apr 4 · May <4 · Jun <3 · Jul 1 · Aug 1.4 · Sep 2.5 · Oct 2.5 · Nov 5 · Dec 13. 79–83°F all year. Sea level only; Ubud, the mountains and the north are not described. The meteorological agency forecasts each season's start by zone: read it in your travel month.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "surf-coast",
+    "text": "Surf: west coast and the Bukit April–October (biggest swells June–August); east coast (Keramas, Sanur, Nusa Dua) November–March. A base follows the coast. Beginners: a school chooses the beach and the hour; many Bukit waves break over reef.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "crossing",
+    "text": "Crossings (travel-guide figures, no official timetable): Sanur–Penida ~30 min (Toyapakeh, Buyuk, Sampalan) · Sanur–Lembongan 35–45 min (Jungutbatu or Mushroom Bay; wet landing) · Lembongan–Penida ~10 min · Padang Bai–Gili ~1.5 h, Amed shortest, south ~2.5 h · Lombok airport–Bangsal 1 h 40–2 h by road. Morning boats, in daylight; a named boat and time; a life jacket per seat.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "strait",
+    "text": "The sea: sailing approvals are issued per boat by the harbour master, who holds boats in poor weather; waves above 2.5 m put the Sanur route at risk; a boat capsized at Sanur on 5 Aug 2025 (two deaths). Roughest: July–August. No cancellation rate exists. BUFFER: one full day before an international flight, two in July, August or the wet season.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "batur",
+    "text": "Batur: ~2 h climb from Toya Bungkah, ~1,700 m, guide required (local association, office in Toya Bungkah); pickup well before dawn, earlier the further south you sleep; cold at the top; an active volcano, so confirm its status the day before. Prices: none printed; ask what the package includes.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "good-days",
+    "text": "Nights → good days (the site's estimate): 5 → ~3, one base · 7 → ~5, two · 10 → ~8, three · 14 → ~12, four. Ten nights is the site's recommended first-trip length from the US.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "tax",
+    "text": "On the bill: 10% local tax on food, drink and rooms in Badung and Gianyar (Denpasar's rate not sourced; Sanur: read the menu). Service charge: the business's own rate, to staff by regulation. Entertainment (bars, clubs, spas): 40% set from Jan 2024, contested and possibly amended — read how the venue states prices.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "qris",
+    "text": "QRIS: not usable from a US banking app (connected: Thailand, Malaysia, Singapore, Japan, South Korea, China). Cards and rupiah cash are the two methods. The official sites take Visa, Mastercard, JCB (visa) and Amex too (levy); charged in rupiah.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "changer",
+    "text": "Changers: licence number + Bank Indonesia QR logo at the counter, or no deal; agree the amount, count it yourself, be the last to touch the stack. ATMs: US cards accepted, fees possible (State Dept); secure locations, check for tampering; no official limit or fee figure exists.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "atm",
+    "text": "ATM fee and cap: not printed — none is primary-sourced. Read the machine's screen; your own bank's foreign schedule is the half you can check before you fly. Decline the dollar offer; pay in rupiah.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "costs",
+    "text": "Prices: confirm in your travel week — a driver's day rate, hours, fuel, parking and stops in writing; entrance fees at the booth, small notes; boat tickets with the cancellation terms; beach-club minimum spends per person or per bed, before or after tax. The book prints none of these, on purpose.",
+    "min_occurrences": 1
+  }
+]

@@ -1,0 +1,194 @@
+{
+ "schema_version": 1,
+ "reviewer": "Claude Fable 5.1 — full page read of both PDFs as 2-page spreads at 82 dpi, 2026-10-15, after the final render; every plate caption checked against the site's own Unsplash description for that image (cand/manifest.json) and seven captions hedged to what the description supports; the owner (SGU54) has not yet signed off",
+ "reviewed_at": "2026-10-15",
+ "release_sha256": "3243d34fbfa7f7ed4e1e3a60fe857b298cf18e8596fa65c4e8739fa69f3bde9f",
+ "evidence_sha256": "6368f4732d9bae52fc4eafe0508b2de3cbc1fcd3cbcc60a6e0f1a6e39b299056",
+ "bindings_sha256": "3d98286e98f1e004045dd63df8ee54693cbdb9768d2cb78ab3443a5fe5ef529a",
+ "documents": {
+  "book": {
+   "pdf_sha256": "75d10257058489ada1efd2abaae67704692ef5ddc0e3b2b29b41807e50cfdfe5",
+   "html_sha256": "5f84fbef467f3c94859a718b5a7f08b0eb530f47cc7f901bba00854a3d7bc041",
+   "page_count": 91,
+   "pages_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91
+   ],
+   "checks": {
+    "facts": "pass",
+    "decisions": "pass",
+    "consistency": "pass",
+    "visual": "pass",
+    "navigation": "pass"
+   },
+   "notes": [
+    "Facts: every decisive claim is bound to evidence.json (52 claims, 34 sources); the sources are the ones the site's fact layer opened on 2026-10-13 (State Department Indonesia page, US Consular Agency Bali, the e-visa portal and fee schedule, Love Bali, Governor's Circular 7/2025, customs passenger-goods and cash pages, BPOM, CDC Indonesia, Bank Indonesia QRIS, the 2027 holiday decree and Hindu holiday letter, Law 22/2009) plus the corpus articles for the climate normals, road miles, crossing times, the boat accident and the schedule snapshot. No drive time, price, exchange rate, cancellation rate or sickness rate is printed anywhere; the book says so and the sheet carries the regulated figures in plain decimal notation.",
+    "Decisions: 11, each with a two-column ledger whose rows share one unit per column, a losable verdict, three exceptions on each side naming a changed condition and an alternative action, and a note pointing volatile inputs to the Field Sheet. No numerical comparison is asserted that the ledgers cannot produce: the days-per-leg comparison in D06 and the four-calendar comparison in D03 are qualitative by design, and evidence.json carries no comparison block for them.",
+    "Consistency: contents folios verified against the PDF outline by add-nav (27/27 bookmarks); 'Eleven decisions' matches 11 numbered sections; the ◆ VOLATILE glyph is distinct from the endmark and footer ornament (❖); figure numbering is by appearance (FIG.1 the island … FIG.16 the bill); plate letters run A–AN in reading order with no gap.",
+    "Visual: 91 pages read in spreads after the final render: cover, contents, 8 essays, 11 decisions, back matter. 38 plates from the site's own published library, every one landscape and ≥1200px, each checked at 1:1 and captioned against the site's Unsplash description (seven captions hedged: the terraces are 'in the centre of the island', the tour boat and the beach are unplaced, the Lembongan plate describes the channel and bridge that are visible, the split gate and the volcano are not named, the anchored boats are not called fast boats). Plate-only closing pages at p8, p11, p23, p26, p30, p33, p36, p66, p70, p74, p79, p84, p88 and p91 are the compositor's tail-feed and are accepted as designed closing images; two openers (p22 where-to-stay, p75 D10) sit at 43% and 60% because their long figure and ledger break to the next page, accepted. Figure labels measured with check-svg-text.py: 0 overflows, 0 overlaps; all figure text ≥ 9 CSS px.",
+    "Navigation: bookmarks on all 27 chapters; cross-references 'Decision NN' are live internal links; two external links (the sheet and sources pages) resolve."
+   ]
+  },
+  "sheet": {
+   "pdf_sha256": "b742b265fd86459b1e5efa166d94f9c8714f0245d595a64486bb207314628955",
+   "html_sha256": "736fb0f2f777173843e803b813915af7dcd7680b73f61729a0b9ae2bbb41fee6",
+   "page_count": 9,
+   "pages_viewed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "checks": {
+    "facts": "pass",
+    "decisions": "pass",
+    "consistency": "pass",
+    "visual": "pass",
+    "navigation": "pass"
+   },
+   "notes": [
+    "9 pages, 52 rows, every row read against evidence.json: value, source URL (clickable, break at slashes only) and the decision it can reverse. Rows are stacked (label above value) so PDF extraction keeps each snippet intact; the last page carries two rows and the endmark.",
+    "Rupiah figures print as 500000 IDR / 150000 IDR / 1000000 IDR / 100000000 IDR without thousands grouping, as the evidence contract requires; the book spells them out in words or refers to the sheet.",
+    "Issue date 2026-10-15 on the renewal block; edition 2026.10 in the folio; the 'confirm' rows (Nyepi 2027 airport hours, the entertainment tax, ATM fee and cap, prices) name where to look and print no figure they cannot stand behind."
+   ]
+  }
+ },
+ "scenarios": [
+  {
+   "id": "west-coast-ten-nights-may",
+   "details": "Two adults from Los Angeles, two weeks off in May, no boat experience. D01: ten nights on the island after the date line and a day at home → three bases. D02: Ubud first (dawn waking among the terraces), Lembongan in the middle (boats on days 4 and 7, three days of slack), Seminyak last (7 road miles to the terminal). D03: May is under four inches, before the peak, west-coast surf beginning. D04: passport test, e-VOA after the ticket, levy from home, arrival card the evening before leaving LA. D05: a driver for the days out, apps in the south, no scooter. D06: Lembongan with a Penida day, return boat day 7. D09: one ticket via a Pacific hub, daytime landing. Every step resolves from the book without an external lookup; the fees come from the sheet.",
+   "result": "pass"
+  },
+  {
+   "id": "east-coast-week-in-march",
+   "details": "One adult from New York, seven nights, dates fixed 5–12 March 2027. D08: Nyepi on the 8th inside the 6–15 March cluster; the arrival on the 5th (local date) is a full day clear, the night of the 8th is spent inside the accommodation, the departure on the 12th is a collective-leave day with offices shut but flights running; the book tells the reader to confirm the airport hours with the airline because 2027's were not announced. D01: two bases. D06: no island on a week in March with the cluster on both sides of the closure. D02: Ubud first, Sanur or Seminyak last. Resolves, with the sheet's Nyepi row marked confirm.",
+   "result": "pass"
+  },
+  {
+   "id": "car-licence-surfer-july",
+   "details": "A surfer with a car-only US licence, July, the Bukit. D05: unlicensed on a scooter under the site's reading of Law 22/2009; a driver or app for the Bukit's spread-out coast, the ride back from any cliff arranged before arriving. D03: July is the west coast's season and the strait's roughest month, so D06 says the Gilis go by air via Lombok or not at all, with the domestic flight never on the departure day. D10: the policy's surfing and evacuation clauses read before paying. Resolves.",
+   "result": "pass"
+  }
+ ],
+ "open_issues": [
+  {
+   "severity": "minor",
+   "status": "accepted",
+   "explanation": "Nyepi 2027 airport hours are not announced at this edition; the sheet row is marked confirm with the airline and the book's instruction (land a full day clear, stay inside on the day) holds under any announcement. Re-check when the airport operator publishes 2027 hours."
+  },
+  {
+   "severity": "minor",
+   "status": "accepted",
+   "explanation": "The entertainment-tax rate (40% on bars, clubs and spas) is stated as set by the 2023 regulations from January 2024 and publicly contested since; neither regency's current position could be confirmed from a primary page, so the book and sheet instruct the reader to read the venue's own pricing. The 10% restaurant and hotel rate the decisions turn on is not in dispute."
+  },
+  {
+   "severity": "minor",
+   "status": "accepted",
+   "explanation": "Two openers (p22 where-to-stay at 43%, p75 Decision 10 at 60%) and plate-only closing pages at p8, p11, p23, p26, p30, p33, p36, p66, p70, p74, p79, p84, p88 and p91 (57–61%) are the compositor's result (a long figure or ledger breaking to the next page; tail-fed closing plates), not hand-placed. Median fill 88.5%, 15 of 91 pages under 62%, none under 43%."
+  },
+  {
+   "severity": "minor",
+   "status": "accepted",
+   "explanation": "Figure annotations are set at 9 CSS px (6.75 pt); every value they carry is repeated in the adjoining ledger or prose, so no instruction depends on them."
+  },
+  {
+   "severity": "minor",
+   "status": "accepted",
+   "explanation": "The name 'Bali, in Its Own Time.' is proposed and not yet confirmed by the owner; the price, Stripe link, cover upload and site-branch merge are the owner's calls and are listed in DELIVERABLES.md. None affects the book's content."
+  }
+ ]
+}

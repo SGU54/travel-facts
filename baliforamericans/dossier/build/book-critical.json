@@ -1,0 +1,202 @@
+[
+  {
+    "id": "visa-required",
+    "text": "A US passport needs a visa for Bali: the B1 tourist visa, bought online in advance or at the airport, which gives thirty days, extendable once for another thirty.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-ext",
+    "text": "The visa can be extended once, for another thirty days, by an online application and, since 29 May 2025, a photograph and an interview at an immigration office.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "overstay",
+    "text": "Overstaying is fined by the day, at a rate twice the cost of the extension itself, with possible detention, deportation or a ban on returning.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "passport-6m",
+    "text": "A US passport must be valid for at least six months beyond the arrival date and have two blank visa pages, and the endorsement pages at the back do not count.",
+    "min_occurrences": 2
+  },
+  {
+    "id": "levy",
+    "text": "Bali's tourist levy is a provincial charge, separate from the visa, paid once per trip and cashless on the province's own site; under the governor's 2025 circular a tourist who has not paid can be refused service at attractions.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "arrival-card",
+    "text": "Every traveller submits Indonesia's All Indonesia arrival card, free, within the seventy-two hours before arrival; the site refuses earlier submissions, and the QR code it produces is shown to immigration and customs.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "customs",
+    "text": "The allowances per adult are goods to five hundred US dollars, one litre of alcohol at twenty-one or over, two hundred cigarettes, and thirty millilitres of open or twelve of closed vape liquid.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "cash-declare",
+    "text": "Cash or other payment instruments worth a hundred million rupiah or more, or the equivalent, must be declared on entry and exit; it is a declaration duty, not a limit.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "meds",
+    "text": "Indonesia's food and drug agency allows up to ninety days of prescribed medicine with a prescription, sixty days of psychotropic medicine, and no narcotic-class medicine at all, with or without a prescription.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "adhd",
+    "text": "The State Department says some prescription medications, including those for ADHD, are illegal in Indonesia, and that customs publishes no list of prohibited drugs.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "cbd",
+    "text": "Marijuana, cannabis and CBD products are illegal in Indonesia, with no exception for a product bought legally in a US state, and convictions can bring heavy fines, long sentences and in extreme cases the death penalty.",
+    "min_occurrences": 2
+  },
+  {
+    "id": "licence",
+    "text": "A US driver's licence alone is not recognised in Indonesia and foreign drivers must carry an International Driving Permit; Indonesian law requires a licence matching the type of vehicle driven, and motorcycles are a class of their own.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "licence-fine",
+    "text": "The traffic law sets a maximum of four months' detention or a fine of a million rupiah for riding without the required licence, with lower maxima for not carrying one and for riding without a helmet.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "presumed",
+    "text": "in a collision between a car and a motorcycle the driver of the larger vehicle is often presumed responsible, and the guidance after any accident is to stay at the scene and notify the police.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "advisory",
+    "text": "The State Department places Indonesia, Bali included, at Level 2, Exercise Increased Caution, citing natural disasters, unrest and terrorism; its strongest warning applies to two provinces in Papua, far from Bali.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "medical-pay",
+    "text": "Hospitals and doctors often require payment or a sizable deposit before treatment, most accept only cash, most US health plans, Medicare and Medicaid pay nothing abroad, and a traveller with supplemental insurance pays first and claims afterwards.",
+    "min_occurrences": 3
+  },
+  {
+    "id": "ambulance",
+    "text": "Ambulances are not widely available and can take forty-five minutes or longer, so a taxi or private vehicle may be the faster way to a hospital.",
+    "min_occurrences": 2
+  },
+  {
+    "id": "evacuation",
+    "text": "the US government strongly recommends supplemental insurance covering medical evacuation, an injured traveller will likely need to reach a major city, and patients pay all costs of transfer to or between hospitals.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "rabies",
+    "text": "The CDC says dogs infected with rabies are commonly found in Indonesia and its instruction after any bite or scratch is to seek medical attention immediately.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "malaria",
+    "text": "The CDC reports no malaria transmission in the resort areas of Bali, in Ubud or in the Gili Islands, and lists dengue as a risk throughout Indonesia.",
+    "min_occurrences": 2
+  },
+  {
+    "id": "vaccines",
+    "text": "No vaccination is required to enter Indonesia; the CDC recommends routine vaccines and hepatitis A, hepatitis B and typhoid for most travellers.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "water",
+    "text": "Tap water in many areas of Indonesia is not safe to drink, many restaurants and hotels serve it unless bottled water is asked for, and the CDC's advice extends the rule to ice and to brushing teeth.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "methanol",
+    "text": "The State Department warns of drink poisoning in Indonesia, including alcohol mixed with methanol, and of drink spiking in Bali, Lombok and the Gilis; methanol cannot be told by taste or smell, and the CDC says its effects may not appear for one to seventy-two hours.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "nyepi-2027",
+    "text": "Nyepi falls on Monday 8 March 2027 by Indonesia's official holiday decree; mobile data and broadcasts are switched off from six in the morning for twenty-four hours, and in 2026 the airport halted all regular commercial flights for the same window.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "holidays-2027",
+    "text": "The 2027 decree puts Eid al-Fitr on 10 and 11 March with collective leave on 9, 12 and 15 March, so that no working day falls between Saturday 6 and Monday 15 March.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "galungan-2027",
+    "text": "Galungan falls on 13 January and 11 August 2027, with Kuningan ten days after each; neither is a national holiday and no official restriction on visitors attaches to them.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "nonstop",
+    "text": "No airline flies nonstop between the United States and Bali, so every itinerary has at least one connection.",
+    "min_occurrences": 2
+  },
+  {
+    "id": "hubs",
+    "text": "The October 2026 schedule lists nonstop flights into Bali from Singapore at about three and a half hours, Hong Kong and Taipei at five to six, Tokyo and Seoul at seven to eight, Dubai and Doha at about ten, and Istanbul at about thirteen.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "timezone",
+    "text": "Bali is eight hours ahead of UTC with no daylight saving, which puts it twelve or thirteen hours ahead of New York and fifteen or sixteen ahead of Los Angeles.",
+    "min_occurrences": 3
+  },
+  {
+    "id": "bags-dot",
+    "text": "The Department of Transportation ranks a connection between two different airlines as the least secure arrangement for checked bags, behind a nonstop, a through flight and a connection on one airline, and advises asking whether bags will be transferred.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "domestic-bags",
+    "text": "Under Indonesian regulation a full-service airline includes up to twenty kilograms of checked baggage in an economy fare, a medium-service airline up to fifteen, and a no-frills airline may charge for every bag.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "distances",
+    "text": "The road distances in this book are the site's own, measured on the road network: the airport is about four miles from Kuta, seven from Seminyak, twelve from Canggu, eight from Nusa Dua, eleven from Sanur, thirteen from Uluwatu and twenty-two from Ubud.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "rain",
+    "text": "South Bali's climate normals show about an inch of rain in July and about fourteen in January, with the average temperature between seventy-nine and eighty-three degrees in every month.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "surf-coast",
+    "text": "Surf guides describe the west-facing coast as best from about April to October and the east-facing coast from about November to March, because the wind reverses between the seasons.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "crossing",
+    "text": "Travel guides put the crossing from Sanur at roughly thirty minutes to Nusa Penida and thirty-five to forty-five to Lembongan, and the Padang Bai boat to the Gilis at about an hour and a half; none is an official timetable.",
+    "min_occurrences": 2
+  },
+  {
+    "id": "strait",
+    "text": "Travel guides describe the sea between Bali and Lombok as roughest in July and August, when the swells are strongest, and the fast boat that capsized at Sanur in August 2025 was in waves forecast at two to four metres.",
+    "min_occurrences": 2
+  },
+  {
+    "id": "batur",
+    "text": "Travel guides put the Batur climb at about two hours from Toya Bungkah to a summit of about seventeen hundred metres, with a required local guide from the Association of Mount Batur Trekking Guides.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "tax",
+    "text": "In Badung regency, which covers Kuta, Seminyak, Canggu, Jimbaran, Uluwatu and Nusa Dua, the local tax on restaurant food and drink and on hotel stays is ten percent, and Gianyar, which includes Ubud, sets the same rate.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "qris",
+    "text": "Bank Indonesia's cross-border QR scheme connects Thailand, Malaysia, Singapore, Japan, South Korea and China, and the United States is not among them.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "changer",
+    "text": "Bali's 2025 rules tell visitors to change money only at authorised changers, identified by a licence number and a Bank Indonesia logo with a QR code, and to transact in rupiah.",
+    "min_occurrences": 1
+  }
+]

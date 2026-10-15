@@ -101,20 +101,29 @@
  "published_count": 77,
  "guide": {
   "live": false,
-  "price": null,
-  "status": "awaiting the dossier (Fable v2). Everything book-independent is done.",
-  "plumbing_2026-10-15": "two-file download route + sessionBelongsToSite guard + expiring tokens + /guide/access + /api/guide-resend + SITE.guide.kind copy; DOWNLOAD_LINK_SECRET and GUIDE_ADMIN_TOKEN set on both projects",
-  "when_the_book_lands": [
-   "SITE.guide identity: name, thesis, cover, pages, decisions, failureModes, figures (counts off the SHIPPED build)",
-   "upload book + Field Sheet to the private `guides` bucket; verify with download(), not list()",
-   "cover to R2; cut 3 See-inside previews from the shipped PDF and fill previewImages",
-   "Stripe product + $24 price + payment link carrying metadata.site=bali and the {CHECKOUT_SESSION_ID} redirect; own webhook endpoint",
-   "GUIDE_PDF_* / GUIDE_SHEET_* / STRIPE_* / RESEND_API_KEY env vars",
-   "guide-span name backfill (45 spans), WITHOUT the trailing full stop",
-   "the $1 end-to-end test BEFORE announcing — it is what caught every Vietnam defect",
-   "then guide_ads_enabled = true"
+  "price": "$24 (fleet default, not yet set)",
+  "name": "Bali, in Its Own Time.",
+  "name_confirmed": false,
+  "built": "2026-10-15",
+  "release": "dossier/release-2026-10-15/",
+  "pages": {
+   "book": 91,
+   "sheet": 9,
+   "phone": 127,
+   "freehook": 4
+  },
+  "decisions": 11,
+  "figures": 16,
+  "plates": 38,
+  "gates": "audit-release.py (evidence, bindings, pdf, content, review, legacy, source-defects); audit-rhythm.py PASS (4.2 plates/10pp); audit-layout CLEAN — see dossier/build/review.json for the signed review",
+  "still_open": [
+   "★ confirm the name, then POST /api/guide-name-backfill dry_run:false (45 spans, no trailing stop)",
+   "★ price + Stripe payment link + guide_ads_enabled via the admin Guide panel",
+   "★ upload build/cover-web.jpg and preview-1..3.jpg to Cloudinary; set SITE.guide.cover/previewImages",
+   "★ merge site branch guide-bali-in-its-own-time",
+   "quarterly Field Sheet reissue; Nyepi 2027 airport hours when announced"
   ],
-  "deploy_note": "baliforamericans-site does NOT build on a git push — run `npx vercel deploy --prod --yes`"
+  "note": "2026-10-15: built by Claude Fable 5.1 with the dossier skill from the 77-article corpus (85,873 words); organising fact 'short miles, long days' with three pinned points (arrival hour, the sea, the airport run); no drive time, price or exchange rate printed anywhere, by design. Plate captions checked against the site's own Unsplash descriptions (cand/manifest.json)."
  },
  "reconciled_at": "2026-10-14",
  "reconciled_by": "state-reconcile.mjs (proposal, not applied)"
