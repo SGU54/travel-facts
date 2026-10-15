@@ -996,6 +996,19 @@
       "review_after": "2027-04-13",
       "risk": "standard",
       "caveat": "No amounts: withdrawal limits and fee figures remain unsourced. Never print one."
+    },
+    "cost_tiers": {
+      "fact_key": "money.cost_tiers",
+      "value": "Per person per day, excluding the international flight: budget about $30-50, mid-range about $80-150, luxury about $240 or more. Planning brackets, not quotes.",
+      "status": "verified",
+      "source_url": "https://www.budgetyourtrip.com/indonesia/bali",
+      "source_kind": "secondary",
+      "scope": "daily travel spending in Bali by travel style",
+      "support": "BudgetYourTrip, read 2026-10-15: 'budget travelers spend $29 ... per day on average, mid-range travelers spend $80 ... and luxury travelers spend around $239'. 2026 travel-guide estimates (bali.com, Wego, DMC Quote, Ohana) run higher: budget $25-50, mid-range $70-150, luxury $300+. Seeded to common.facts as status provisional; never a serve_live value.",
+      "checked_at": "2026-10-15",
+      "review_after": "2027-01-15",
+      "risk": "medium",
+      "caveat": "Averages of self-reported traveler spending and guide estimates; prices move with the rupiah and the season. Present as planning ranges only."
     }
   },
   "connectivity": {
