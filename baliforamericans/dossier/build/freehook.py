@@ -39,7 +39,7 @@ BODY = f"""
   <p class="standfirst">This is one of the eleven connections the book makes. It is given away whole,
   figure and arithmetic included, so you can judge the rest of it before paying for it.</p>
   <p class="lede">{sub(d["lede"])}</p></div>
-  <figure class="fig">{fig_island()}<figcaption><span class="fnum">FIG.1</span> &nbsp;The island from coordinates, the airport at its neck, and the site's own road miles to every base. Nothing is far in miles; the hours are the subject of the book.</figcaption></figure>
+  <figure class="fig">{fig_island()}<figcaption><span class="fnum">FIG.1</span> &nbsp;Every base the site measured, ranked by road miles from the airport. Nothing is far in miles — four to sixty-two, the whole island; the colour is the kind of journey, which is why Sidemen and Padang Bai share 35 miles and not a band. The hours are the subject of the book.</figcaption></figure>
   <figure class="fig">{fig_order()}<figcaption><span class="fnum">FIG.2</span> &nbsp;The same ten nights, in two orders. The three pins are the points the trip cannot move; the second order puts each of them where it costs least.</figcaption></figure>
   <div class="ledger wrap"><div class="lcap">{d["table_title"]}</div>
   <table><tr><th>{d["cols"][0]}</th><th>{d["cols"][1]}</th></tr>{rows}</table></div>

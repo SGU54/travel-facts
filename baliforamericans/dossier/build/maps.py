@@ -148,62 +148,76 @@ SWELL = [0,0,0,0,0,1,2,2,1,0,0,0]          # the strait at its roughest, July–
 
 # ═════════════════════════════════════════════════════════════════════════════
 def fig_island():
-    """THE figure. The island from coordinates, the airport at its neck, and the
-    corpus's road miles to every base drawn as rings. Short miles; the hours are
-    the book."""
-    h = 456
-    keys = [k for k in GEO if k not in ("Gili T","Gili Air","Bangsal","Lombok airport","Atuh","Sampalan","Toyapakeh","Ceningan","Kelingking")]
-    f = _proj([GEO[k] for k in keys], W, h, 46)
-    p = _svg(h)
-    AX, AY = f(*GEO["Airport"])
-    # rings of road miles from the airport: drawn as straight-line scale from the
-    # corpus's road figure, so the ring says "this many road miles", not a radius
-    for mi, lab in ((15, "15"), (35, "35 ROAD MILES"), (60, "60")):
-        # scale: pixels per road mile taken from Ubud (22 road miles) on the projected board
-        ux, uy = f(*GEO["Ubud"]); ppm = math.hypot(ux - AX, uy - AY) / 22.0
-        r = mi * ppm
-        p.append(f'<circle cx="{AX:.1f}" cy="{AY:.1f}" r="{r:.1f}" fill="none" stroke="{C["line"]}" stroke-dasharray="3 4"/>')
-        if mi == 60: pass
-        elif mi == 35: p.append(_t(AX - r * 0.71 - 4, AY - r * 0.71 - 2, lab, 7.5, C["soft"], "end", ls="1"))
-        else: p.append(_t(AX + r * 0.71 + 4, AY - r * 0.71 - 2, lab, 7.5, C["soft"], "start", ls="1"))
+    """THE figure. Every base the corpus measured, ranked by road miles from the
+    airport, coloured by which of the three journeys it is.
+
+    REDRAWN 2026-10-15. The first version plotted places by COORDINATE and then
+    ringed them by ROAD MILES — two different metrics on one board, so a point
+    never sat on the ring its own label named, and the south arrived as an
+    unreadable knot of eight overlapping labels. It also showed nine places with
+    no measured distance at all, which left most of the figure carrying no data.
+
+    One metric now: road miles, the only number the corpus actually measured.
+    Sorted, so nothing overlaps and the span reads at a glance — four miles to
+    sixty-two, the whole island. The colour carries the argument the chapter
+    makes: the three groups are KINDS OF JOURNEY, not mileage cuts, which is
+    why Sidemen and Padang Bai sit at the same 35 miles in different bands.
+    That coincidence was invisible before and is the chapter's point."""
+    rows = []
     groups = {
-      "south": ["Kuta","Seminyak","Canggu","Uluwatu","Nusa Dua","Sanur","Jimbaran","Tanah Lot"],
-      "centre": ["Ubud","Tegallalang","Kintamani","Sidemen","Besakih"],
-      "far": ["Munduk","Lovina","Amed","Padang Bai","Tulamben","Lempuyang","Singaraja","Ulun Danu"],
+      "south": ["Kuta", "Seminyak", "Nusa Dua", "Sanur", "Canggu", "Uluwatu"],
+      "centre": ["Ubud", "Sidemen", "Kintamani"],
+      "far": ["Padang Bai", "Munduk", "Amed", "Lovina"],
     }
-    col = {"south": C["accent"], "centre": C["jade"], "far": C["gilt"]}
-    off = {"Kuta":(8,3,"start"), "Seminyak":(-8,3,"end"), "Canggu":(8,-4,"start"), "Uluwatu":(10,10,"start"),
-           "Nusa Dua":(8,12,"start"), "Sanur":(8,3,"start"), "Jimbaran":(8,-6,"start"), "Tanah Lot":(-8,-6,"end"),
-           "Ubud":(10,4,"start"), "Tegallalang":(10,-2,"start"), "Kintamani":(12,10,"start"), "Sidemen":(10,12,"start"),
-           "Besakih":(-10,-4,"end"), "Munduk":(-8,-4,"end"), "Lovina":(8,-6,"start"), "Amed":(8,-2,"start"),
-           "Padang Bai":(8,12,"start"), "Tulamben":(8,-4,"start"), "Lempuyang":(8,10,"start"), "Singaraja":(8,-4,"start"),
-           "Ulun Danu":(8,12,"start")}
+    note = {"Padang Bai": "the Gili port", "Kintamani": "the crater rim",
+            "Lovina": "the north coast", "Amed": "the far east"}
     for g, names in groups.items():
         for n in names:
-            x, y = f(*GEO[n]); dx, dy, an = off[n]
-            big = n in ("Ubud","Seminyak","Uluwatu","Sanur","Munduk","Amed","Canggu","Nusa Dua")
-            p.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{5 if big else 3}" fill="{col[g]}" stroke="{C["paper"]}" stroke-width="1.2"/>')
-            rm = road("Airport", n)
-            lab = f"{n}" + (f" · {rm} mi" if rm else "")
-            p.append(_t(x + dx, y + dy, _esc(lab), 9.5 if big else 8.5, C["ink"] if big else C["muted"], an, fam=BODY))
-    # the two volcanoes as triangles
-    for v in ("Mt Batur","Mt Agung"):
-        x, y = f(*GEO[v])
-        p.append(f'<path d="M{x:.1f},{y-7:.1f} l6,11 l-12,0 z" fill="none" stroke="{C["muted"]}" stroke-width="1.2"/>')
-        p.append(_t(x + (12 if v == "Mt Agung" else -12), y + 2, v.upper(), 7.5, C["soft"], "start" if v == "Mt Agung" else "end", ls="1"))
-    # the Nusa islands
-    for n in ("Lembongan",):
-        x, y = f(*GEO[n]); p.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{C["water"]}" stroke="{C["jade"]}" stroke-width="1.4"/>')
-        p.append(_t(x + 7, y + 3, "Nusa Lembongan · by boat", 8.5, C["muted"], fam=BODY))
-    # the airport
-    p.append(f'<rect x="{AX-6:.1f}" y="{AY-6:.1f}" width="12" height="12" fill="{C["ink"]}"/>')
-    p.append(_t(AX - 10, AY + 4, "AIRPORT", 8.5, C["ink"], "end", ls="1"))
-    p.append(_t(10, 14, "FROM COORDINATES · ROAD MILES FROM THE AIRPORT ARE THE SITE'S OWN · NO DRIVE TIMES", 7, C["soft"], ls="1"))
-    ly = h - 12
-    for i, (g, lab) in enumerate((("south","THE SOUTH · 4–13 MILES"),("centre","THE CENTRE · 22–48"),("far","THE FAR SIDE · 35–62"))):
-        x = 10 + i * 200
-        p.append(f'<circle cx="{x+5}" cy="{ly-3}" r="4.5" fill="{col[g]}"/>')
-        p.append(_t(x + 15, ly, lab, 8, C["muted"], ls="1"))
+            mi = road("Airport", n)
+            if mi:                      # a base with no measured road figure is omitted,
+                rows.append((n, mi, g)) # never estimated (hard rule 1)
+    rows.sort(key=lambda r: r[1])
+
+    col = {"south": C["accent"], "centre": C["jade"], "far": C["gilt"]}
+    # RIGHT leaves room for the mileage label AND the longest kind-note beside
+    # the farthest dot; at W - 58 "the north coast" ran off the board.
+    LEFT, RIGHT = 104, W - 132
+    TOP, STEP = 64, 30
+    h = TOP + STEP * len(rows) + 64
+    MAXMI = 65
+    def x(mi):
+        return LEFT + (RIGHT - LEFT) * mi / MAXMI
+
+    p = _svg(h)
+    p.append(_t(10, 20, "ROAD MILES FROM THE AIRPORT · THE SITE'S OWN MEASUREMENTS · NO DRIVE TIMES",
+                7, C["soft"], ls="1"))
+
+    # the scale: the three thresholds the chapter argues in, not a tidy 0/20/40/60
+    for mi, lab in ((0, "0"), (15, "15"), (35, "35"), (60, "60 MI")):
+        p.append(f'<line x1="{x(mi):.1f}" y1="{TOP - 18:.1f}" x2="{x(mi):.1f}" y2="{h - 46:.1f}" '
+                 f'stroke="{C["line"]}" stroke-dasharray="2 5"/>')
+        p.append(_t(x(mi), TOP - 24, lab, 7.5, C["soft"], "middle", ls="1"))
+
+    for i, (n, mi, g) in enumerate(rows):
+        y = TOP + i * STEP
+        # the row's own rule, so the eye can run name -> dot without drifting
+        p.append(f'<line x1="{LEFT:.1f}" y1="{y:.1f}" x2="{x(mi):.1f}" y2="{y:.1f}" '
+                 f'stroke="{col[g]}" stroke-width="2.2" opacity="0.30"/>')
+        p.append(f'<circle cx="{x(mi):.1f}" cy="{y:.1f}" r="6" fill="{col[g]}" '
+                 f'stroke="{C["paper"]}" stroke-width="1.6"/>')
+        p.append(_t(LEFT - 12, y + 4, _esc(n), 11, C["ink"], "end", fam=BODY))
+        p.append(_t(x(mi) + 13, y + 4, f"{mi} mi", 10, C["muted"], "start", fam=BODY))
+        if n in note:
+            p.append(_t(x(mi) + 13 + len(f"{mi} mi") * 6.4 + 8, y + 4, _esc(note[n]), 9,
+                        C["soft"], "start", fam=BODY))
+
+    ly = h - 16
+    for i, (g, lab) in enumerate((("south", "THE SOUTH · AN APP RIDE"),
+                                  ("centre", "THE CENTRE · A MORNING"),
+                                  ("far", "THE FAR SIDE · A DAY, SO A STAY"))):
+        xx = 10 + i * 214
+        p.append(f'<circle cx="{xx + 5}" cy="{ly - 3}" r="4.5" fill="{col[g]}"/>')
+        p.append(_t(xx + 15, ly, lab, 8, C["muted"], ls="1"))
     p.append('</svg>')
     return "".join(p)
 
@@ -700,7 +714,7 @@ def fig_bases():
     return "".join(p)
 
 FIGURES = {
- "island":  (fig_island,  "The island from coordinates, the airport at its neck, and the site's own road miles to every base. Nothing is far in miles; the hours are the subject of this book."),
+ "island":  (fig_island,  "Every base the site measured, ranked by road miles from the airport. Nothing is far in miles — four to sixty-two, the whole island; the colour is the kind of journey, which is why Sidemen and Padang Bai share 35 miles and not a band. The hours are the subject of this book."),
  "nights":  (fig_nights,  "Where the nights go. The first two days are slow, the last is partly spent leaving, and a base needs three nights: the ticks are the bases each length buys."),
  "order":   (fig_order,   "The same ten nights, in two orders. The three pins are the points the trip cannot move; the second order puts each of them where it costs least."),
  "season":  (fig_season,  "Four calendars that do not agree: the rain, the crowd, the coast the surf is on, and the months the strait is roughest. July is dry, full and rough at once."),
