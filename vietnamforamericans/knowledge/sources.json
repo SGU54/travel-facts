@@ -33,13 +33,9 @@
         "236-241, 246-253 hotel and restaurant listings (deliberately not read: directory material)",
         "286-299 index"
       ],
-      "ocr_problems": ["p47 (First Indochina War) unreadable in the text layer; image-heavy page"]
-    },
-    "lp-2017": {
-      "title": "Lonely Planet Vietnam (full country guide, 14th ed.)",
-      "year": 2017,
-      "archive_id": "TO FIND — user-supplied ID vietnam0000stew_v3m3 is 'Discover Vietnam', not the full guide; search archive.org for the 2017 full guide (authors Stewart, Atkinson, Bush, Ray) before asking the user to borrow",
-      "status": "not_started"
+      "ocr_problems": [
+        "p47 (First Indochina War) unreadable in the text layer; image-heavy page"
+      ]
     },
     "moon-2015": {
       "title": "Moon Vietnam",
@@ -66,6 +62,15 @@
       "archive_id": "vietnamesephrase0000unse_a7s0",
       "status": "not_started",
       "note": "language mechanics and etiquette only; do not transcribe phrase lists"
+    },
+    "lp-2016": {
+      "title": "Lonely Planet Vietnam (full country guide, 13th ed.)",
+      "year": 2016,
+      "isbn": "9781743218723",
+      "archive_id": "vietnam0000stew_x4j9",
+      "pages": 518,
+      "status": "not_started",
+      "note": "RESOLVED 2026-10-16: archive.org has no 2017+ FULL guide. Both 2017 items (vietnam0000stew, vietnam0000stew_v3m3, ISBN 9781786579379) are 300-page 'Best of / Discover'-format books, not the 518-page full guide. The newest full guide on archive.org is this 2016 13th edition (518 pp, Angkor bonus chapter). Borrow this one. The 2014 12th ed is vietnam0000stew_f6r8 if the 2016 copy is out on loan."
     }
   },
   "reading_method": "Chrome (claude-in-chrome) → archive.org/details/<id>/page/<P>/mode/1up → wait ~5 s → get_page_text; one URL navigation per page, batched 6–8 pages per call. Viewer-only; no download, no DRM handling.",

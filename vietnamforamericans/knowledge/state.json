@@ -5,13 +5,13 @@
     "dk-2015"
   ],
   "books_pending": [
-    "lp-2017",
+    "lp-2016",
     "moon-2015",
     "insight-2015",
     "goscha-2016",
     "lp-phrasebook-2016"
   ],
-  "next_action": "Ask the user to borrow the next book. Recommended order: Lonely Planet 2017 full guide first (most practical detail, closest to today), then Moon 2015, then Insight 2015 (culture), Goscha (history-context.json), LP phrasebook last. Before asking, find the correct archive.org ID for the LP 2017 full guide — vietnam0000stew_v3m3 is 'Discover Vietnam'.",
+  "next_action": "Ask the user to borrow Lonely Planet Vietnam 13th ed. (2016), archive ID vietnam0000stew_x4j9 (518 pp). No 2017+ full guide exists on archive.org; the two 2017 'Vietnam' items are the 300-page Best-of format. Then Moon 2015 (vietnam0000file), Insight 2015 (vietnam0000zgli_s6v6), Goscha (penguinhistoryof0000gosc), LP phrasebook (vietnamesephrase0000unse_a7s0).",
   "method_notes": [
     "printed page P = leaf n(P+5) for dk-2015; other books will have their own offset — find it from the contents page first",
     "get_page_text returns ~1.2 KB of archive.org boilerplate per page; batches of 6–8 pages per browser_batch call are the sweet spot",
