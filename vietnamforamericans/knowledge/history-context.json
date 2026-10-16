@@ -1,34 +1,419 @@
 {
   "_README": "The historical spine as DK 2015 tells it (pp40–53, plus region openers). Paraphrase only; dates are standard and durable. Purpose: give article writers and the dossier the framing an American reader needs — above all that Vietnam's self-narrative is a 2,000-year fight against China, in which the American War is one 15-year chapter. Goscha (penguinhistoryof0000gosc) will deepen this file when borrowed.",
   "framing": [
-    {"id": "hist.frame-china", "claim": "The book frames national history as a thousand years of Chinese occupation (207 BC–AD 938), repeated Chinese and Mongol invasions beaten back (938, 1288, 1428, 1789, 1979), a century of French rule, and reunification in 1975. In that telling the United States is a late, short chapter, which is why American visitors meet little rancour.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 41}, "related_articles": ["vietnam-war-history-sites-guide", "vietnam-etiquette-for-americans"]},
-    {"id": "hist.frame-american-war", "claim": "Vietnamese call it the American War; the book dates it from the first US advisors in 1960 to 1975.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 48}, "related_articles": ["war-remnants-museum-cu-chi-tunnels", "vietnam-war-history-sites-guide"]},
-    {"id": "hist.frame-south-north", "claim": "The north–south division is older than 1954: the Trinh (Hanoi) and Nguyen (Hue) warlord families split the country for two centuries from 1539, and the south was conquered from Champa and Cambodia late (Mekong 1680–1757). Regional difference is historical, not just climatic.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 45}, "related_articles": ["north-to-south-or-south-to-north-vietnam", "vietnamese-food-guide-first-timers"]}
+    {
+      "id": "hist.frame-china",
+      "claim": "The book frames national history as a thousand years of Chinese occupation (207 BC–AD 938), repeated Chinese and Mongol invasions beaten back (938, 1288, 1428, 1789, 1979), a century of French rule, and reunification in 1975. In that telling the United States is a late, short chapter, which is why American visitors meet little rancour.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 41
+      },
+      "related_articles": [
+        "vietnam-war-history-sites-guide",
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "hist.frame-american-war",
+      "claim": "Vietnamese call it the American War; the book dates it from the first US advisors in 1960 to 1975.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 48
+      },
+      "related_articles": [
+        "war-remnants-museum-cu-chi-tunnels",
+        "vietnam-war-history-sites-guide"
+      ]
+    },
+    {
+      "id": "hist.frame-south-north",
+      "claim": "The north–south division is older than 1954: the Trinh (Hanoi) and Nguyen (Hue) warlord families split the country for two centuries from 1539, and the south was conquered from Champa and Cambodia late (Mekong 1680–1757). Regional difference is historical, not just climatic.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 45
+      },
+      "related_articles": [
+        "north-to-south-or-south-to-north-vietnam",
+        "vietnamese-food-guide-first-timers"
+      ]
+    },
+    {
+      "id": "hist.lp-nation-not-war",
+      "claim": "LP's opening frame: forty years on, Vietnam is 'resolutely a nation, not a war' in the world's eyes — self-confident, fast-developing, with labyrinthine trading quarters beside French mansions overseen from skybars.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 4
+      },
+      "related_articles": [
+        "vietnam-war-history-sites-guide",
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "hist.lp-china-big-brother",
+      "claim": "China as 'overbearing big brother': a thousand years of subordination, a border war that only ended in 1990, the South China Sea (always the 'East Sea' in Vietnam), the May 2014 oil-rig riots with 21+ dead and thousands of Chinese fleeing, then repair visits in 2015; yet trade booms and Chinese is the second most-studied foreign language.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 435
+      },
+      "related_articles": [
+        "vietnam-war-history-sites-guide"
+      ]
+    }
   ],
   "timeline": [
-    {"id": "hist.origins", "claim": "Origin myth: dragon lord Lac Long Quan and mountain fairy Au Co have 100 sons, half go to the mountains and half to the sea; the eldest becomes the first Hung King at Phu Tho (Van Lang). Dong Son bronze drums belong to this era. 258 BC Au Lac with its capital at Co Loa near Hanoi is the first historical Viet state.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 41}, "related_articles": ["day-trips-from-hanoi", "vietnam-festivals-calendar"]},
-    {"id": "hist.chinese-millennium", "claim": "207 BC Trieu Da's Nam Viet begins Chinese rule; 111 BC Han province; AD 40 the Trung Sisters' three-year revolt (the first and most celebrated); AD 679 the Tang name An Nam ('pacified south'); AD 938 Ngo Quyen sinks a Chinese fleet on the Bach Dang River with iron-tipped stakes — the founding independence story.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 42}, "related_articles": ["best-things-to-do-in-hanoi", "halong-bay-day-trip-vs-overnight-cruise"]},
-    {"id": "hist.funan-champa", "claim": "Two Indianised kingdoms in the south: Funan (Mekong, 1st–6th c., port Oc Eo near Rach Gia, traded as far as Rome) then Khmer Chen La; Champa from AD 192 on the central coast (seafarers of Javanese origin, My Son its religious capital 4th–13th c.), crushed by the Viet in 1471 and extinguished by 1832. This is why Cham towers stand at My Son, Nha Trang, Phan Rang and Quy Nhon and why a Cham Muslim/Hindu minority survives.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 43}, "related_articles": ["my-son-sanctuary-guide", "nha-trang-travel-guide", "vietnam-temples-pagodas-guide"]},
-    {"id": "hist.dai-viet", "claim": "Dinh, Early Le, then the Ly (1009–1225): 1010 capital moved to Thang Long (Hanoi), capital for ~800 years; 1070 Temple of Literature; Buddhist state, Confucian administration. Tran (1225–1400): 1288 Tran Hung Dao beats the Mongols at Bach Dang with the same stake trick. 1407 Ming occupation, 1428 Le Loi expels them → Later Le (1428–1788); 1471 Champa broken.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 44}, "related_articles": ["best-things-to-do-in-hanoi", "hanoi-travel-guide-first-timers"]},
-    {"id": "hist.division-and-europeans", "claim": "1527 Mac usurpation; 1539–1787 Trinh north vs Nguyen south; Nguyen absorb Khmer Prey Nokor (Saigon) and the Mekong. Portuguese 1545, Dutch and French in the 17th c.; Jesuit Alexandre de Rhodes devises quoc ngu and converts thousands, is expelled, and French interest is born. Tay Son rebellion 1771–92 (Quang Trung beats a Chinese invasion). 1802 Nguyen Anh becomes Gia Long, capital Hue, last dynasty (to 1945); his reign name fuses Gia Dinh (Saigon) and Thang Long (Hanoi).", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 45}, "related_articles": ["hue-imperial-city-guide", "hue-travel-guide"]},
-    {"id": "hist.french-conquest", "claim": "Minh Mang, Thieu Tri and Tu Duc persecute Catholics; France uses missionary executions as pretext: Danang 1858, Saigon 1862, Cochinchina colony 1865, protectorates over the centre and north 1883, Indochinese Union with its capital at Hanoi 1887. Colonial economy: salt, alcohol and opium monopolies, forced labour, rubber and coffee plantations. 1940 Vichy hands Indochina to Japanese control.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 46}, "related_articles": ["hanoi-travel-guide-first-timers", "ho-chi-minh-city-travel-guide"]},
-    {"id": "hist.independence-war", "claim": "Ho Chi Minh (born 1890 near Kim Lien, Nghe An) at the Comintern 1924, Viet Minh 1941, independence declared 2 Sep 1945; First Indochina War from 1946; Dien Bien Phu May 1954; Geneva splits the country at the 17th parallel — a communist north under Ho and a Catholic-led south under Ngo Dinh Diem. (p47 OCR unreadable; dates from the surrounding timeline.)", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 47}, "related_articles": ["vietnam-war-history-sites-guide", "dmz-vinh-moc-tunnels-tour-from-hue"]},
-    {"id": "hist.american-war", "claim": "US advisors 1960, NLF/Viet Cong formed 1960, Buddhist self-immolations and Diem's assassination 1963, Gulf of Tonkin 1964, first combat troops and bombing of the north 1965, half a million US troops by 1967 (mostly one-year conscripts), Ho Chi Minh Trail supply line, Tet Offensive and My Lai 1968, Hamburger Hill and Ho's death 1969, napalm photo and Haiphong bombing 1972, Paris Accords January 1973 (US withdraws, ~500 POWs freed), helicopter evacuation 29 April and fall of Saigon 30 April 1975.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 48}, "related_articles": ["war-remnants-museum-cu-chi-tunnels", "vietnam-war-history-sites-guide", "dmz-vinh-moc-tunnels-tour-from-hue"]},
-    {"id": "hist.hard-decade", "claim": "1976 Socialist Republic proclaimed, forced collectivisation in the south, re-education camps, Saigon renamed, the Hoa merchant class persecuted; 'boat people' from 1977; US embargo; Khmer Rouge border attacks, Vietnam invades Cambodia and ousts Pol Pot 1978, China's punitive invasion 1979; near-starvation by the early 1980s.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 50}, "related_articles": ["vietnam-and-cambodia-combined-itinerary", "mekong-delta-day-trip-vs-multi-day-tour"]},
-    {"id": "hist.doi-moi", "claim": "1986 doi moi market reforms after Le Duan's death; 1991 Soviet collapse forces opening; 1994 US embargo lifted; 1995 US relations restored and ASEAN membership; 2000 Clinton visit; 2001 trade normalisation; 2003 first US warship visit; 2007 WTO; 2008 inflation; 2011 land-grab protests; 2012–14 South China Sea tensions and anti-China riots. Poverty fell from 58% (1993) to under 16% (2008); Vietnam became the world's second rice exporter.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 51}, "related_articles": ["vietnam-etiquette-for-americans", "is-vietnam-safe-for-americans"]}
+    {
+      "id": "hist.origins",
+      "claim": "Origin myth: dragon lord Lac Long Quan and mountain fairy Au Co have 100 sons, half go to the mountains and half to the sea; the eldest becomes the first Hung King at Phu Tho (Van Lang). Dong Son bronze drums belong to this era. 258 BC Au Lac with its capital at Co Loa near Hanoi is the first historical Viet state.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 41
+      },
+      "related_articles": [
+        "day-trips-from-hanoi",
+        "vietnam-festivals-calendar"
+      ]
+    },
+    {
+      "id": "hist.chinese-millennium",
+      "claim": "207 BC Trieu Da's Nam Viet begins Chinese rule; 111 BC Han province; AD 40 the Trung Sisters' three-year revolt (the first and most celebrated); AD 679 the Tang name An Nam ('pacified south'); AD 938 Ngo Quyen sinks a Chinese fleet on the Bach Dang River with iron-tipped stakes — the founding independence story.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 42
+      },
+      "related_articles": [
+        "best-things-to-do-in-hanoi",
+        "halong-bay-day-trip-vs-overnight-cruise"
+      ]
+    },
+    {
+      "id": "hist.funan-champa",
+      "claim": "Two Indianised kingdoms in the south: Funan (Mekong, 1st–6th c., port Oc Eo near Rach Gia, traded as far as Rome) then Khmer Chen La; Champa from AD 192 on the central coast (seafarers of Javanese origin, My Son its religious capital 4th–13th c.), crushed by the Viet in 1471 and extinguished by 1832. This is why Cham towers stand at My Son, Nha Trang, Phan Rang and Quy Nhon and why a Cham Muslim/Hindu minority survives.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 43
+      },
+      "related_articles": [
+        "my-son-sanctuary-guide",
+        "nha-trang-travel-guide",
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "hist.dai-viet",
+      "claim": "Dinh, Early Le, then the Ly (1009–1225): 1010 capital moved to Thang Long (Hanoi), capital for ~800 years; 1070 Temple of Literature; Buddhist state, Confucian administration. Tran (1225–1400): 1288 Tran Hung Dao beats the Mongols at Bach Dang with the same stake trick. 1407 Ming occupation, 1428 Le Loi expels them → Later Le (1428–1788); 1471 Champa broken.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 44
+      },
+      "related_articles": [
+        "best-things-to-do-in-hanoi",
+        "hanoi-travel-guide-first-timers"
+      ]
+    },
+    {
+      "id": "hist.division-and-europeans",
+      "claim": "1527 Mac usurpation; 1539–1787 Trinh north vs Nguyen south; Nguyen absorb Khmer Prey Nokor (Saigon) and the Mekong. Portuguese 1545, Dutch and French in the 17th c.; Jesuit Alexandre de Rhodes devises quoc ngu and converts thousands, is expelled, and French interest is born. Tay Son rebellion 1771–92 (Quang Trung beats a Chinese invasion). 1802 Nguyen Anh becomes Gia Long, capital Hue, last dynasty (to 1945); his reign name fuses Gia Dinh (Saigon) and Thang Long (Hanoi).",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 45
+      },
+      "related_articles": [
+        "hue-imperial-city-guide",
+        "hue-travel-guide"
+      ]
+    },
+    {
+      "id": "hist.french-conquest",
+      "claim": "Minh Mang, Thieu Tri and Tu Duc persecute Catholics; France uses missionary executions as pretext: Danang 1858, Saigon 1862, Cochinchina colony 1865, protectorates over the centre and north 1883, Indochinese Union with its capital at Hanoi 1887. Colonial economy: salt, alcohol and opium monopolies, forced labour, rubber and coffee plantations. 1940 Vichy hands Indochina to Japanese control.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 46
+      },
+      "related_articles": [
+        "hanoi-travel-guide-first-timers",
+        "ho-chi-minh-city-travel-guide"
+      ]
+    },
+    {
+      "id": "hist.independence-war",
+      "claim": "Ho Chi Minh (born 1890 near Kim Lien, Nghe An) at the Comintern 1924, Viet Minh 1941, independence declared 2 Sep 1945; First Indochina War from 1946; Dien Bien Phu May 1954; Geneva splits the country at the 17th parallel — a communist north under Ho and a Catholic-led south under Ngo Dinh Diem. (p47 OCR unreadable; dates from the surrounding timeline.)",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 47
+      },
+      "related_articles": [
+        "vietnam-war-history-sites-guide",
+        "dmz-vinh-moc-tunnels-tour-from-hue"
+      ]
+    },
+    {
+      "id": "hist.american-war",
+      "claim": "US advisors 1960, NLF/Viet Cong formed 1960, Buddhist self-immolations and Diem's assassination 1963, Gulf of Tonkin 1964, first combat troops and bombing of the north 1965, half a million US troops by 1967 (mostly one-year conscripts), Ho Chi Minh Trail supply line, Tet Offensive and My Lai 1968, Hamburger Hill and Ho's death 1969, napalm photo and Haiphong bombing 1972, Paris Accords January 1973 (US withdraws, ~500 POWs freed), helicopter evacuation 29 April and fall of Saigon 30 April 1975.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 48
+      },
+      "related_articles": [
+        "war-remnants-museum-cu-chi-tunnels",
+        "vietnam-war-history-sites-guide",
+        "dmz-vinh-moc-tunnels-tour-from-hue"
+      ]
+    },
+    {
+      "id": "hist.hard-decade",
+      "claim": "1976 Socialist Republic proclaimed, forced collectivisation in the south, re-education camps, Saigon renamed, the Hoa merchant class persecuted; 'boat people' from 1977; US embargo; Khmer Rouge border attacks, Vietnam invades Cambodia and ousts Pol Pot 1978, China's punitive invasion 1979; near-starvation by the early 1980s.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 50
+      },
+      "related_articles": [
+        "vietnam-and-cambodia-combined-itinerary",
+        "mekong-delta-day-trip-vs-multi-day-tour"
+      ]
+    },
+    {
+      "id": "hist.doi-moi",
+      "claim": "1986 doi moi market reforms after Le Duan's death; 1991 Soviet collapse forces opening; 1994 US embargo lifted; 1995 US relations restored and ASEAN membership; 2000 Clinton visit; 2001 trade normalisation; 2003 first US warship visit; 2007 WTO; 2008 inflation; 2011 land-grab protests; 2012–14 South China Sea tensions and anti-China riots. Poverty fell from 58% (1993) to under 16% (2008); Vietnam became the world's second rice exporter.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 51
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans",
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "hist.lp-vietnam-today-2016",
+      "claim": "LP's 2016 snapshot: per-capita income from US$98 in 1993 to over US$2,000 by 2015; among the ten fastest-growing economies; the state still controls around two-fifths of the economy and half of the biggest 200 firms; Transparency International ranked Vietnam lowest in Asia-Pacific measured in 2014; backhanders are everyday life. Tourist arrivals dipped in 2015 (Russia's rouble, China tensions), prompting the first European visa waivers.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 434
+      },
+      "verify_against": "World Bank GDP per capita (~US$4,300 in 2024); TI CPI current rank",
+      "related_articles": [
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "hist.lp-1940s-famine",
+      "claim": "The 1944–45 famine killed about two million people — LP cites it as context for the post-war scramble and the overcharging mentality.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 456
+      },
+      "related_articles": [
+        "vietnam-war-history-sites-guide"
+      ]
+    },
+    {
+      "id": "hist.lp-railway-history",
+      "claim": "The Transindochinois railway (1899–1936) was sabotaged by the Viet Minh, who carried off rails to build a 300 km network of their own between Ninh Hoa and Danang; the South rebuilt 1,041 km with US money in the 1950s; 795 Viet Cong attacks in 1961–64 closed large sections including the Dalat spur; bomb craters still ring northern bridges; the line was reopened as the Reunification Express on 31 December 1976 after repairing 1,334 bridges, 27 tunnels and 158 stations.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 497
+      },
+      "related_articles": [
+        "reunification-express-train-guide"
+      ]
+    }
   ],
   "sites_and_history": [
-    {"id": "hist.site-hoa-lo", "claim": "Hoa Lo prison is the 'Hanoi Hilton' of American POWs.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 10}, "related_articles": ["best-things-to-do-in-hanoi", "vietnam-war-history-sites-guide"]},
-    {"id": "hist.site-reunification-palace", "claim": "Reunification Palace is where tanks broke through the gates on 30 April 1975.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 11}, "related_articles": ["best-things-to-do-in-hcmc"]},
-    {"id": "hist.site-war-remnants", "claim": "The War Remnants Museum is explicitly about the conflict with the US; the book says most visitors leave shaken.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 11}, "related_articles": ["war-remnants-museum-cu-chi-tunnels"]},
-    {"id": "hist.site-my-son-bombing", "claim": "My Son was heavily bombed by the US in the 1960s; groups B and C are the best preserved.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 12}, "related_articles": ["my-son-sanctuary-guide"]},
-    {"id": "hist.site-hue-citadel", "claim": "Hue citadel combines a Chinese square plan, feng shui and French Vauban military engineering; the Ngo Mon gate's central opening was for the emperor alone; Hien Lam pavilion presides over the Nine Dynastic Urns (one per emperor, each over two tons).", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 31}, "related_articles": ["hue-imperial-city-guide"]},
-    {"id": "hist.site-ho-mausoleum", "claim": "Ho Chi Minh's birthday has become quasi-spiritual and the mausoleum is treated as a shrine; dress and behaviour rules apply.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 35}, "related_articles": ["best-things-to-do-in-hanoi", "vietnam-etiquette-for-americans"]},
-    {"id": "hist.site-dien-bien-phu", "claim": "Dien Bien Phu valley is the 1954 victory site and a national pilgrimage in the far northwest.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 183}, "related_articles": ["vietnam-war-history-sites-guide"]},
-    {"id": "hist.site-angkor-war", "claim": "US bombing of Cambodia from 1970 fed the Khmer Rouge; Vietnam ended their rule in 1979 — context for the combined itinerary.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 209}, "related_articles": ["vietnam-and-cambodia-combined-itinerary"]}
+    {
+      "id": "hist.site-hoa-lo",
+      "claim": "Hoa Lo prison is the 'Hanoi Hilton' of American POWs.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 10
+      },
+      "related_articles": [
+        "best-things-to-do-in-hanoi",
+        "vietnam-war-history-sites-guide"
+      ]
+    },
+    {
+      "id": "hist.site-reunification-palace",
+      "claim": "Reunification Palace is where tanks broke through the gates on 30 April 1975.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 11
+      },
+      "related_articles": [
+        "best-things-to-do-in-hcmc"
+      ]
+    },
+    {
+      "id": "hist.site-war-remnants",
+      "claim": "The War Remnants Museum is explicitly about the conflict with the US; the book says most visitors leave shaken.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 11
+      },
+      "related_articles": [
+        "war-remnants-museum-cu-chi-tunnels"
+      ]
+    },
+    {
+      "id": "hist.site-my-son-bombing",
+      "claim": "My Son was heavily bombed by the US in the 1960s; groups B and C are the best preserved.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 12
+      },
+      "related_articles": [
+        "my-son-sanctuary-guide"
+      ]
+    },
+    {
+      "id": "hist.site-hue-citadel",
+      "claim": "Hue citadel combines a Chinese square plan, feng shui and French Vauban military engineering; the Ngo Mon gate's central opening was for the emperor alone; Hien Lam pavilion presides over the Nine Dynastic Urns (one per emperor, each over two tons).",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 31
+      },
+      "related_articles": [
+        "hue-imperial-city-guide"
+      ]
+    },
+    {
+      "id": "hist.site-ho-mausoleum",
+      "claim": "Ho Chi Minh's birthday has become quasi-spiritual and the mausoleum is treated as a shrine; dress and behaviour rules apply.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 35
+      },
+      "related_articles": [
+        "best-things-to-do-in-hanoi",
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "hist.site-dien-bien-phu",
+      "claim": "Dien Bien Phu valley is the 1954 victory site and a national pilgrimage in the far northwest.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 183
+      },
+      "related_articles": [
+        "vietnam-war-history-sites-guide"
+      ]
+    },
+    {
+      "id": "hist.site-angkor-war",
+      "claim": "US bombing of Cambodia from 1970 fed the Khmer Rouge; Vietnam ended their rule in 1979 — context for the combined itinerary.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 209
+      },
+      "related_articles": [
+        "vietnam-and-cambodia-combined-itinerary"
+      ]
+    },
+    {
+      "id": "hist.lp-hanoi-1990s",
+      "claim": "As recently as the early 1990s Hanoi ran on bicycles and Soviet-era buses; the author first arrived in 1991 when the country was 'still shell-shocked from the war with the USA' — the generational change an American visitor should expect to hear about.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 5
+      },
+      "related_articles": [
+        "hanoi-travel-guide-first-timers"
+      ]
+    },
+    {
+      "id": "hist.lp-cidg",
+      "claim": "Many highland minorities served with US Special Forces in the Civilian Irregular Defense Groups; some militias fought Hanoi into the 1980s; the cyclo drivers of HCMC who speak English are often former ARVN soldiers with re-education stories.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 458
+      },
+      "related_articles": [
+        "vietnam-war-history-sites-guide",
+        "getting-around-ho-chi-minh-city"
+      ]
+    }
   ],
   "obsolete_political": [
-    {"id": "hist.leaders-2015", "claim": "The book names the 2015 prime minister and president; both long gone. Never cite leadership from a 2015 book.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 20}},
-    {"id": "hist.population-2015", "claim": "Population ~92 million; 58 provinces + 5 municipalities.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 14}, "verify_against": "GSO: ~100 m; 2025 provincial mergers cut the count to 34 provinces/cities", "related_articles": ["vietnam-itinerary-first-timers"]}
+    {
+      "id": "hist.leaders-2015",
+      "claim": "The book names the 2015 prime minister and president; both long gone. Never cite leadership from a 2015 book.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 20
+      }
+    },
+    {
+      "id": "hist.population-2015",
+      "claim": "Population ~92 million; 58 provinces + 5 municipalities.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 14
+      },
+      "verify_against": "GSO: ~100 m; 2025 provincial mergers cut the count to 34 provinces/cities",
+      "related_articles": [
+        "vietnam-itinerary-first-timers"
+      ]
+    }
   ]
 }

@@ -1,101 +1,1436 @@
 {
-  "_README": "Per-region orientation drawn from the DK 2015 region openers and 'getting around' boxes. Paraphrase only. Region keys follow DK's six-way split plus the Angkor excursion. Each region: identity, bases, the book's transport verdict, and leads to verify.",
+  "_README": "Per-region orientation drawn from the DK 2015 region openers and 'getting around' boxes. Paraphrase only. Region keys follow DK's six-way split plus the Angkor excursion. Each region: identity, bases, the book's transport verdict, and leads to verify. Lonely Planet 2016 entries added 2026-10-16; LP's 'Southwest Highlands' is a seventh region key.",
   "regions": {
     "hanoi": {
       "identity": [
-        {"id": "hanoi.founding", "claim": "Founded 1010 as Thang Long by Ly Thai To next to the much older Co Loa citadel; the royal citadel sat in the middle and the guild settlement east of it grew into today's Old Quarter by the 16th century.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 157}, "related_articles": ["hanoi-travel-guide-first-timers", "hanoi-old-quarter-guide"]},
-        {"id": "hanoi.layout", "claim": "Hoan Kiem Lake is the pivot: Old Quarter (the '36 Streets') directly north, French Quarter boulevards south, Temple of Literature and the Ba Dinh/Mausoleum complex west, West Lake and Truc Bach to the north-west. The Museum of Ethnology is out in Cau Giay.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 158}, "related_articles": ["where-to-stay-in-hanoi", "best-things-to-do-in-hanoi"]},
-        {"id": "hanoi.french-demolition", "claim": "The French tore down parts of the citadel and some temples to build the European quarter; the city centre came through the First Indochina War intact and was bombed in the American War.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 157}, "related_articles": ["hanoi-travel-guide-first-timers"]},
-        {"id": "hanoi.two-day-shape", "claim": "DK's two-day Hanoi: day one Hoan Kiem + Old Quarter in the morning, French Quarter (Metropole, Opera House, History Museum, Hoa Lo, Ambassador's Pagoda) in the afternoon; day two Ba Dinh (Mausoleum, Stilt House, One Pillar, Citadel, a military or fine-arts museum), then Temple of Literature and either the Ethnology Museum or West Lake temples.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 10}, "related_articles": ["vietnam-itinerary-7-days", "best-things-to-do-in-hanoi"]}
+        {
+          "id": "hanoi.founding",
+          "claim": "Founded 1010 as Thang Long by Ly Thai To next to the much older Co Loa citadel; the royal citadel sat in the middle and the guild settlement east of it grew into today's Old Quarter by the 16th century.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 157
+          },
+          "related_articles": [
+            "hanoi-travel-guide-first-timers",
+            "hanoi-old-quarter-guide"
+          ]
+        },
+        {
+          "id": "hanoi.layout",
+          "claim": "Hoan Kiem Lake is the pivot: Old Quarter (the '36 Streets') directly north, French Quarter boulevards south, Temple of Literature and the Ba Dinh/Mausoleum complex west, West Lake and Truc Bach to the north-west. The Museum of Ethnology is out in Cau Giay.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 158
+          },
+          "related_articles": [
+            "where-to-stay-in-hanoi",
+            "best-things-to-do-in-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.french-demolition",
+          "claim": "The French tore down parts of the citadel and some temples to build the European quarter; the city centre came through the First Indochina War intact and was bombed in the American War.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 157
+          },
+          "related_articles": [
+            "hanoi-travel-guide-first-timers"
+          ]
+        },
+        {
+          "id": "hanoi.two-day-shape",
+          "claim": "DK's two-day Hanoi: day one Hoan Kiem + Old Quarter in the morning, French Quarter (Metropole, Opera House, History Museum, Hoa Lo, Ambassador's Pagoda) in the afternoon; day two Ba Dinh (Mausoleum, Stilt House, One Pillar, Citadel, a military or fine-arts museum), then Temple of Literature and either the Ethnology Museum or West Lake temples.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 10
+          },
+          "related_articles": [
+            "vietnam-itinerary-7-days",
+            "best-things-to-do-in-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.lp-when-to-go",
+          "claim": "LP's Hanoi-specific calendar: Oct–Dec clear, sunny and cooler is the ideal window; Jan–Apr cool with Tet colour; Jun–Aug heavy heat and humidity is Hanoi's LOW season with hotel bargains. This differs from the national 'March–May' advice both books give.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 54
+          },
+          "related_articles": [
+            "hanoi-travel-guide-first-timers",
+            "best-time-to-visit-vietnam"
+          ]
+        },
+        {
+          "id": "hanoi.name-and-bridge",
+          "claim": "Named 'Hanoi' (river interior) by Tu Duc in 1831 after a century as a regional capital once Gia Long ruled from Hue; capital of French Indochina 1902–53. The 1,682 m Long Bien bridge was bombed repeatedly and rebuilt each time; local legend says the raids stopped once US POWs were put to work on it, and the bridge is the city's symbol of tenacity.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 55
+          },
+          "related_articles": [
+            "hanoi-travel-guide-first-timers",
+            "vietnam-war-history-sites-guide"
+          ]
+        },
+        {
+          "id": "hanoi.museum-hours",
+          "claim": "Some Hanoi museums close on Mondays and take a two-hour lunch break on other days; check hours before setting out.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 55
+          },
+          "verify_against": "Each museum's own site or board",
+          "related_articles": [
+            "best-things-to-do-in-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.lp-one-day",
+          "claim": "LP's one-day Hanoi: dawn Hoan Kiem walk, pho breakfast, Mausoleum complex and HCM Museum, Military History Museum, Fine Arts Museum, Temple of Literature, Old Quarter or Women's Museum, bia hoi, water puppets, dinner. Day two: Ethnology Museum in the suburbs, Revolution and History museums.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 55
+          },
+          "related_articles": [
+            "vietnam-itinerary-7-days",
+            "best-things-to-do-in-hanoi"
+          ]
+        }
       ],
       "getting_around": [
-        {"id": "hanoi.walkable", "claim": "Old Quarter and the Hoan Kiem area are meant to be walked; the Old Quarter can be covered end to end in a day.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 159}, "related_articles": ["getting-around-hanoi"]},
-        {"id": "hanoi.self-drive-no", "claim": "Self-drive cars are not an option for visitors; DK calls renting a bicycle or motorbike in Hanoi a choice for 'the brave, or reckless'.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 159}, "related_articles": ["renting-a-motorbike-in-vietnam", "getting-around-hanoi"], "note": "Supports corrections.json #2 framing."},
-        {"id": "hanoi.bus-infancy", "claim": "In 2015 the city bus network was described as embryonic, so taxis were advised for anything beyond walking distance.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 159}, "verify_against": "Hanoi bus network + metro lines 2A (Cat Linh–Ha Dong, 2021) and 3 (Nhon–Hanoi station, 2024); Grab", "related_articles": ["getting-around-hanoi"]},
-        {"id": "hanoi.day-trips", "claim": "Half- and full-day minibus tours from hotels and agencies reach the Thay and Tay Phuong pagodas west of the city, the Hung Kings' temples and Co Loa; DK treats Halong and Sapa as the two standard multi-day tours from Hanoi.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 285}, "related_articles": ["day-trips-from-hanoi"]}
+        {
+          "id": "hanoi.walkable",
+          "claim": "Old Quarter and the Hoan Kiem area are meant to be walked; the Old Quarter can be covered end to end in a day.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 159
+          },
+          "related_articles": [
+            "getting-around-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.self-drive-no",
+          "claim": "Self-drive cars are not an option for visitors; DK calls renting a bicycle or motorbike in Hanoi a choice for 'the brave, or reckless'.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 159
+          },
+          "related_articles": [
+            "renting-a-motorbike-in-vietnam",
+            "getting-around-hanoi"
+          ],
+          "note": "Supports corrections.json #2 framing."
+        },
+        {
+          "id": "hanoi.bus-infancy",
+          "claim": "In 2015 the city bus network was described as embryonic, so taxis were advised for anything beyond walking distance.",
+          "status": "obsolete",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 159
+          },
+          "verify_against": "Hanoi bus network + metro lines 2A (Cat Linh–Ha Dong, 2021) and 3 (Nhon–Hanoi station, 2024); Grab",
+          "related_articles": [
+            "getting-around-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.day-trips",
+          "claim": "Half- and full-day minibus tours from hotels and agencies reach the Thay and Tay Phuong pagodas west of the city, the Hung Kings' temples and Co Loa; DK treats Halong and Sapa as the two standard multi-day tours from Hanoi.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 285
+          },
+          "related_articles": [
+            "day-trips-from-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.station-b-trap",
+          "claim": "Northbound trains to Lao Cai (for Sapa) and China leave from a separate 'Station B' on Tran Quy Cap street behind the main Hanoi station, with its own ticket office; private Sapa carriages exchange a voucher for a ticket at a tour desk there. Eastbound Haiphong trains leave from Gia Lam OR Long Bien, so check which.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 94
+          },
+          "verify_against": "dsvn.vn departure station per train",
+          "related_articles": [
+            "getting-from-hanoi-to-sapa",
+            "reunification-express-train-guide"
+          ]
+        },
+        {
+          "id": "hanoi.airport-modes-2016",
+          "claim": "Noi Bai is about 35 km north, ~45 min on a modern highway. 2016 options: public bus 17 to Long Bien station (~90 min, luggage may cost extra), the Jetstar bus, the Vietnam Airlines minibus hourly to the Trang Thi office, or Airport Taxi door to door. Official airport-taxi drivers wore yellow jackets and did not charge the bridge toll; others did, so ask first.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 94
+          },
+          "verify_against": "Bus 86 express (2016+), Grab pickup rules, current toll practice",
+          "related_articles": [
+            "vietnam-airport-guide"
+          ]
+        },
+        {
+          "id": "hanoi.airport-scam-warning",
+          "claim": "LP's blunt line: numerous airport scams involve taxi drivers and dodgy hotels; never use freelance touts; if you have a booking, take the hotel's transfer.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 94
+          },
+          "related_articles": [
+            "vietnam-airport-guide",
+            "is-vietnam-safe-for-americans"
+          ]
+        },
+        {
+          "id": "hanoi.taxi-structure-2016",
+          "claim": "Metered taxis: a flagfall covering the first 1–2 km then a per-km rate; some operators ran 'high-speed meters', so stick to known brands (Hanoi Taxi, Mai Linh, Thanh Nga, Van Xuan in 2016). For two or more people a taxi beats a convoy of xe om.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 95
+          },
+          "verify_against": "Grab / Xanh SM pricing; Mai Linh current flagfall",
+          "related_articles": [
+            "getting-around-hanoi",
+            "grab-app-vietnam-guide"
+          ]
+        },
+        {
+          "id": "hanoi.cyclo-doubling-trick",
+          "claim": "Cyclos survive in the Old Quarter; agree the price first. The classic trick: agree a fare, then at the end insist it was per person. Few drivers speak English — carry a map and the hotel's card.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 95
+          },
+          "related_articles": [
+            "getting-around-hanoi",
+            "is-vietnam-safe-for-americans"
+          ]
+        },
+        {
+          "id": "hanoi.motorbike-verdict",
+          "claim": "Riding yourself in Hanoi means relentless traffic, no road manners, poor lighting, theft, parking hassles and 'bribe-happy police' — LP's words: not for the timid.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 95
+          },
+          "related_articles": [
+            "renting-a-motorbike-in-vietnam",
+            "getting-around-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.bus-stations-by-direction",
+          "claim": "Hanoi's long-distance stations split by direction: Giap Bat for the south (Ninh Binh, Hue, Danang, Nha Trang), Gia Lam for the northeast (Haiphong, Halong, Lao Cai, Sapa), My Dinh for the northwest (Hoa Binh, Son La, Dien Bien Phu, Ha Giang, Cao Bang). Luong Yen (Cat Ba, HCMC) existed in 2016 and has since closed.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 93
+          },
+          "verify_against": "Hanoi DoT station list; Nuoc Ngam now takes many southern routes",
+          "related_articles": [
+            "sleeper-bus-vs-sleeper-train-vietnam",
+            "getting-from-hanoi-to-sapa"
+          ]
+        },
+        {
+          "id": "hanoi.journey-times-2016",
+          "claim": "Approximate 2016 times from Hanoi: train to Hue 11 h, Danang 13.5 h, Nha Trang 24.5 h, HCMC 31 h; bus to Sapa 10 h, Halong 3.5 h, Ha Giang 8 h, Dien Bien Phu 8 h, Hue 10 h, Danang 12 h, HCMC 40 h.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 93
+          },
+          "verify_against": "dsvn.vn timetable; Vexere durations (Sapa now ~5.5 h, Halong ~2.5 h by expressway)",
+          "related_articles": [
+            "north-to-south-or-south-to-north-vietnam",
+            "getting-from-hanoi-to-sapa"
+          ]
+        }
       ],
       "leads": [
-        {"id": "hanoi.airport-distance", "claim": "Noi Bai given as about 35 km / 22 mi north; taxi 45–60 min; bus or minibus an hour or more.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 10}, "verify_against": "ACV / Noi Bai airport site; Google distance", "related_articles": ["vietnam-airport-guide"]}
+        {
+          "id": "hanoi.airport-distance",
+          "claim": "Noi Bai given as about 35 km / 22 mi north; taxi 45–60 min; bus or minibus an hour or more.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 10
+          },
+          "verify_against": "ACV / Noi Bai airport site; Google distance",
+          "related_articles": [
+            "vietnam-airport-guide"
+          ]
+        }
       ]
     },
     "northern-vietnam": {
       "identity": [
-        {"id": "north.two-norths", "claim": "The north splits into a NORTHWEST of high mountains and minority villages (Hoang Lien range, Sapa, Bac Ha, Son La, Dien Bien Phu; Hmong, Thai, Dao, Nung) and a NORTHEAST of karst: Halong and Bai Tu Long bays, Cat Ba island, Haiphong port, the Dong Van karst plateau toward Ha Giang, Ba Be lake. The Red River Delta between them is the Kinh heartland.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 183}, "related_articles": ["sapa-trekking-guide", "halong-bay-day-trip-vs-overnight-cruise", "cat-ba-island-guide"]},
-        {"id": "north.sapa-popularity", "claim": "Sapa is the single most popular northern destination, with Bac Ha's Sunday market an easy add-on; Halong Bay is the country's most celebrated natural sight.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 184}, "related_articles": ["sapa-trekking-guide", "halong-bay-day-trip-vs-overnight-cruise"]},
-        {"id": "north.ha-giang-absent", "claim": "Ha Giang barely registers in the 2015 book (one mention of the Dong Van geopark). It has since become a headline motorbike-loop destination. Our article list has no Ha Giang article either.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 184}, "note": "see coverage-gaps.md"},
-        {"id": "north.perfume-pagoda-crowds", "claim": "The Perfume Pagoda festival runs roughly three months from the first lunar month (Feb–May), during which the site is thronged with pilgrims; a quiet visit means avoiding that window.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 34}, "related_articles": ["day-trips-from-hanoi", "vietnam-festivals-calendar"]},
-        {"id": "north.cuc-phuong-butterflies", "claim": "Cuc Phuong NP has mass butterfly emergences in April–May; Tam Dao 300+ species, Cat Tien 440.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 23}, "related_articles": ["best-national-parks-treks-vietnam", "ninh-binh-day-trip-from-hanoi"]}
+        {
+          "id": "north.two-norths",
+          "claim": "The north splits into a NORTHWEST of high mountains and minority villages (Hoang Lien range, Sapa, Bac Ha, Son La, Dien Bien Phu; Hmong, Thai, Dao, Nung) and a NORTHEAST of karst: Halong and Bai Tu Long bays, Cat Ba island, Haiphong port, the Dong Van karst plateau toward Ha Giang, Ba Be lake. The Red River Delta between them is the Kinh heartland.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 183
+          },
+          "related_articles": [
+            "sapa-trekking-guide",
+            "halong-bay-day-trip-vs-overnight-cruise",
+            "cat-ba-island-guide"
+          ]
+        },
+        {
+          "id": "north.sapa-popularity",
+          "claim": "Sapa is the single most popular northern destination, with Bac Ha's Sunday market an easy add-on; Halong Bay is the country's most celebrated natural sight.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 184
+          },
+          "related_articles": [
+            "sapa-trekking-guide",
+            "halong-bay-day-trip-vs-overnight-cruise"
+          ]
+        },
+        {
+          "id": "north.ha-giang-absent",
+          "claim": "Ha Giang barely registers in the 2015 book (one mention of the Dong Van geopark). It has since become a headline motorbike-loop destination. Our article list has no Ha Giang article either.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 184
+          },
+          "note": "see coverage-gaps.md"
+        },
+        {
+          "id": "north.perfume-pagoda-crowds",
+          "claim": "The Perfume Pagoda festival runs roughly three months from the first lunar month (Feb–May), during which the site is thronged with pilgrims; a quiet visit means avoiding that window.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 34
+          },
+          "related_articles": [
+            "day-trips-from-hanoi",
+            "vietnam-festivals-calendar"
+          ]
+        },
+        {
+          "id": "north.cuc-phuong-butterflies",
+          "claim": "Cuc Phuong NP has mass butterfly emergences in April–May; Tam Dao 300+ species, Cat Tien 440.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 23
+          },
+          "related_articles": [
+            "best-national-parks-treks-vietnam",
+            "ninh-binh-day-trip-from-hanoi"
+          ]
+        },
+        {
+          "id": "north.lp-ha-giang-headline",
+          "claim": "By 2016 LP already treats Ha Giang as the north's greatest road trip ('the nation's Tibet'), with Dong Van, Lung Cu flag tower, Vuong Palace and the Ma Pi Leng pass; no public transport on the Dong Van–Meo Vac stretch, so it needs a hired bike, xe om or car.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 31
+          },
+          "related_articles": [
+            "best-national-parks-treks-vietnam"
+          ],
+          "note": "Still no Ha Giang article in our list; see coverage-gaps."
+        },
+        {
+          "id": "north.sapa-crowded-bac-ha-quieter",
+          "claim": "Sapa is the trekking hub with gear hire and guides but its main trails are 'incredibly popular' — some villages see hiking groups hourly; remote paths need an expert local guide. Bac Ha is lower, less rainy and less trampled with Flower Hmong and Nung villages, but less dramatic.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 37
+          },
+          "related_articles": [
+            "sapa-trekking-guide",
+            "sapa-homestay-vs-day-trek"
+          ]
+        },
+        {
+          "id": "north.lp-when-to-go",
+          "claim": "LP's northern calendar: May for Halong (blue skies, calm seas, before high season); late Aug–Sep sunny with few crowds; LP says November for Sapa/Bac Ha harvest trekking, though the Sapa rice harvest is usually mid-Sep to early Oct.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 99
+          },
+          "verify_against": "Sapa harvest timing (local tourism boards)",
+          "related_articles": [
+            "best-time-to-trek-in-sapa",
+            "halong-bay-day-trip-vs-overnight-cruise"
+          ]
+        },
+        {
+          "id": "north.lp-mountain-loop",
+          "claim": "LP's three-week northern loop: Hanoi → Mai Chau (2 nights, White Thai) → Son La → Dien Bien Phu (2 nights, new museum) → Tram Ton pass → Sapa (~4 days) → Bac Ha (3 nights, market) → Ha Giang slowly → Bao Lac → Cao Bang → Ba Be (3 nights in Tay homestays) → Hanoi. Ideal on two wheels; doable by public transport with patience.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 31
+          },
+          "related_articles": [
+            "vietnam-itinerary-3-weeks",
+            "best-national-parks-treks-vietnam"
+          ]
+        },
+        {
+          "id": "north.lan-ha-sup",
+          "claim": "Stand-up paddleboarding on Lan Ha Bay from Cat Ba was new in 2016; Cat Ba is the north's rock-climbing and kayaking base (Asia Outdoors).",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 22
+          },
+          "related_articles": [
+            "cat-ba-island-guide"
+          ]
+        }
       ],
       "getting_around": [
-        {"id": "north.ne-roads-improving", "claim": "New roads to Haiphong, Halong City and the China border were making the northeast easier in 2015.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 185}, "verify_against": "Hanoi–Hai Phong expressway (2015), Ha Long–Van Don–Mong Cai expressway (2022): Hanoi→Halong is now ~2.5 h by car", "related_articles": ["halong-bay-day-trip-vs-overnight-cruise"]},
-        {"id": "north.nw-night-train-or-fly", "claim": "For the northwest DK's advice was the overnight train to Lao Cai (for Sapa) or a flight to Dien Bien Phu, rather than the long road trip.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 185}, "verify_against": "Noi Bai–Lao Cai expressway opened Sept 2014; limousine vans / sleeper buses now do Hanoi–Sapa in ~5–6 h, making bus vs train a real choice", "related_articles": ["getting-from-hanoi-to-sapa"], "note": "The book was already stale on its own publication date."},
-        {"id": "north.car-driver-best", "claim": "Car with driver is DK's pick for actually seeing the northern scenery; buses are bookable through hotels/agencies in Hanoi, Ninh Binh and Sapa.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 185}, "related_articles": ["hiring-a-driver-vs-self-drive-vietnam"]},
-        {"id": "north.halong-boat-hire", "claim": "Halong boats can be hired at the Bai Chay pier in Halong City or booked through Hanoi agencies; a hydrofoil linked Haiphong with Cat Ba.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 185}, "verify_against": "Current Cat Ba access (Got ferry via Cat Hai / Tan Vu–Lach Huyen bridge; Tuan Chau–Gia Luan ferry; speedboats from Hai Phong)", "related_articles": ["cat-ba-island-guide", "best-halong-bay-cruise-operators"]}
+        {
+          "id": "north.ne-roads-improving",
+          "claim": "New roads to Haiphong, Halong City and the China border were making the northeast easier in 2015.",
+          "status": "obsolete",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 185
+          },
+          "verify_against": "Hanoi–Hai Phong expressway (2015), Ha Long–Van Don–Mong Cai expressway (2022): Hanoi→Halong is now ~2.5 h by car",
+          "related_articles": [
+            "halong-bay-day-trip-vs-overnight-cruise"
+          ]
+        },
+        {
+          "id": "north.nw-night-train-or-fly",
+          "claim": "For the northwest DK's advice was the overnight train to Lao Cai (for Sapa) or a flight to Dien Bien Phu, rather than the long road trip.",
+          "status": "obsolete",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 185
+          },
+          "verify_against": "Noi Bai–Lao Cai expressway opened Sept 2014; limousine vans / sleeper buses now do Hanoi–Sapa in ~5–6 h, making bus vs train a real choice",
+          "related_articles": [
+            "getting-from-hanoi-to-sapa"
+          ],
+          "note": "The book was already stale on its own publication date."
+        },
+        {
+          "id": "north.car-driver-best",
+          "claim": "Car with driver is DK's pick for actually seeing the northern scenery; buses are bookable through hotels/agencies in Hanoi, Ninh Binh and Sapa.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 185
+          },
+          "related_articles": [
+            "hiring-a-driver-vs-self-drive-vietnam"
+          ]
+        },
+        {
+          "id": "north.halong-boat-hire",
+          "claim": "Halong boats can be hired at the Bai Chay pier in Halong City or booked through Hanoi agencies; a hydrofoil linked Haiphong with Cat Ba.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 185
+          },
+          "verify_against": "Current Cat Ba access (Got ferry via Cat Hai / Tan Vu–Lach Huyen bridge; Tuan Chau–Gia Luan ferry; speedboats from Hai Phong)",
+          "related_articles": [
+            "cat-ba-island-guide",
+            "best-halong-bay-cruise-operators"
+          ]
+        }
       ]
     },
     "central-vietnam": {
       "identity": [
-        {"id": "central.four-unesco", "claim": "One region, four UNESCO sites: Phong Nha–Ke Bang caves, My Son, the Hue citadel, Hoi An's old town. Settlement hugs a narrow coastal strip under the Truong Son range (the Laos border).", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 125}, "related_articles": ["hue-travel-guide", "hoi-an-travel-guide", "my-son-sanctuary-guide"]},
-        {"id": "central.base-logic", "claim": "DK's base logic: Hue for everything north of the Hai Van Pass (DMZ, Phong Nha, Lang Co beach, which it rates among the region's best); Hoi An or Danang for everything south of it (My Son, Ba Na, China Beach, Cham Islands, Son Tra, Bach Ma).", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 126}, "related_articles": ["hoian-vs-anbang-vs-danang-where-to-base", "hue-to-hoian-how-to-travel"]},
-        {"id": "central.war-pilgrimage", "claim": "The DMZ sites just north of Hue (Khe Sanh, Vinh Moc) are framed as places of pilgrimage for Vietnamese and Americans alike; Ho Chi Minh's boyhood villages Hoang Tru and Kim Lien (Nghe An) are national shrines.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 125}, "related_articles": ["dmz-vinh-moc-tunnels-tour-from-hue", "vietnam-war-history-sites-guide"]},
-        {"id": "central.hue-tet-1968", "claim": "Communist forces held Hue for 25 days in the 1968 Tet Offensive and both sides took heavy losses, which is why so much of the citadel is ruined or rebuilt.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 49}, "related_articles": ["hue-imperial-city-guide"]}
+        {
+          "id": "central.four-unesco",
+          "claim": "One region, four UNESCO sites: Phong Nha–Ke Bang caves, My Son, the Hue citadel, Hoi An's old town. Settlement hugs a narrow coastal strip under the Truong Son range (the Laos border).",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 125
+          },
+          "related_articles": [
+            "hue-travel-guide",
+            "hoi-an-travel-guide",
+            "my-son-sanctuary-guide"
+          ]
+        },
+        {
+          "id": "central.base-logic",
+          "claim": "DK's base logic: Hue for everything north of the Hai Van Pass (DMZ, Phong Nha, Lang Co beach, which it rates among the region's best); Hoi An or Danang for everything south of it (My Son, Ba Na, China Beach, Cham Islands, Son Tra, Bach Ma).",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 126
+          },
+          "related_articles": [
+            "hoian-vs-anbang-vs-danang-where-to-base",
+            "hue-to-hoian-how-to-travel"
+          ]
+        },
+        {
+          "id": "central.war-pilgrimage",
+          "claim": "The DMZ sites just north of Hue (Khe Sanh, Vinh Moc) are framed as places of pilgrimage for Vietnamese and Americans alike; Ho Chi Minh's boyhood villages Hoang Tru and Kim Lien (Nghe An) are national shrines.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 125
+          },
+          "related_articles": [
+            "dmz-vinh-moc-tunnels-tour-from-hue",
+            "vietnam-war-history-sites-guide"
+          ]
+        },
+        {
+          "id": "central.hue-tet-1968",
+          "claim": "Communist forces held Hue for 25 days in the 1968 Tet Offensive and both sides took heavy losses, which is why so much of the citadel is ruined or rebuilt.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 49
+          },
+          "related_articles": [
+            "hue-imperial-city-guide"
+          ]
+        },
+        {
+          "id": "central.lp-when-to-go",
+          "claim": "LP's central calendar (Hue chart): late April Danang fireworks; May temperatures rise and the beaches come into their own; September the summer heat relents, crowds thin, sea still warm. The rain bars Oct–Jan are the window to avoid.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 152
+          },
+          "related_articles": [
+            "hue-travel-guide",
+            "best-time-to-visit-vietnam"
+          ]
+        },
+        {
+          "id": "central.airports-2016",
+          "claim": "By 2016 LP notes upgraded international airports at Hue and Danang and improving highways; Danang had direct flights to Laos, KL, Siem Reap, Singapore, Tokyo and several Chinese cities, while Hue was 'international' in name only.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 488
+          },
+          "verify_against": "Current DAD and HUI international routes",
+          "related_articles": [
+            "da-nang-travel-guide",
+            "vietnam-airport-guide"
+          ]
+        },
+        {
+          "id": "central.lp-night-allocation",
+          "claim": "LP's coastal-classic itinerary gives Hoi An three days ('certainly warrants three'), Hue one night, and routes Hue → Phong Nha before the long leg to Halong.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 29
+          },
+          "related_articles": [
+            "hue-to-hoian-how-to-travel",
+            "vietnam-itinerary-14-days"
+          ],
+          "note": "Decision material: Hue 1 night vs 2 is unresolved between the books."
+        },
+        {
+          "id": "central.phong-nha-must",
+          "claim": "Phong Nha-Ke Bang is 'emerging as a must-visit': three gargantuan cave systems including the world's largest, Hang Son Doong (Oxalis the only licensed operator), plus cheaper Hang Toi zipline/kayak, Hang Va, 7 km inside Paradise Cave, the two-day Hang En trek, and Tu Lan swim-through caves.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 42
+          },
+          "related_articles": [
+            "best-national-parks-treks-vietnam"
+          ],
+          "note": "No Phong Nha article; see coverage-gaps."
+        },
+        {
+          "id": "central.danang-dynamic",
+          "claim": "LP calls Danang 'fast emerging as one of the nation's most dynamic cities' and lists My Khe among the country's best beaches; An Bang is the beach for Hoi An, reached by bicycle.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 152
+          },
+          "related_articles": [
+            "da-nang-travel-guide",
+            "hoian-vs-anbang-vs-danang-where-to-base"
+          ]
+        }
       ],
       "getting_around": [
-        {"id": "central.car-first", "claim": "DK's first choice for the region is a hired car (with driver); fallback is agency minibuses for day trips such as the DMZ from Hue or the Hai Van Pass between Hue and Danang. The Reunification Express also serves the region.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 127}, "related_articles": ["hue-to-hoian-how-to-travel", "hai-van-pass-guide"]},
-        {"id": "central.hue-hoian-by-bike", "claim": "Hue and Hoi An are explored by bicycle or on foot; the Perfume River boat leaves from the wharf on Le Loi Street in Hue.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 127}, "related_articles": ["hue-travel-guide", "hoi-an-travel-guide"]}
+        {
+          "id": "central.car-first",
+          "claim": "DK's first choice for the region is a hired car (with driver); fallback is agency minibuses for day trips such as the DMZ from Hue or the Hai Van Pass between Hue and Danang. The Reunification Express also serves the region.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 127
+          },
+          "related_articles": [
+            "hue-to-hoian-how-to-travel",
+            "hai-van-pass-guide"
+          ]
+        },
+        {
+          "id": "central.hue-hoian-by-bike",
+          "claim": "Hue and Hoi An are explored by bicycle or on foot; the Perfume River boat leaves from the wharf on Le Loi Street in Hue.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 127
+          },
+          "related_articles": [
+            "hue-travel-guide",
+            "hoi-an-travel-guide"
+          ]
+        }
       ]
     },
     "south-central": {
       "identity": [
-        {"id": "sc.champa-heartland", "claim": "The region is old Champa: the kingdom peaked from the 4th century, shrank after AD 1000, and its last principality Panduranga (Phan Rang to Phan Thiet) fell in 1832. Cham towers cluster here and the Cham minority still lives around Phan Rang, celebrating Kate in early autumn.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 107}, "related_articles": ["nha-trang-travel-guide", "vietnam-temples-pagodas-guide"]},
-        {"id": "sc.coast-vs-interior", "claim": "The coast gets far more visitors than the interior. Mui Ne and Nha Trang are the bases; Quy Nhon, Sa Huynh and Quang Ngai are fishing towns most travellers skip but which have beaches and Cham towers. Dalat is the pleasant highland base; Buon Ma Thuot for Yok Don NP; Kontum roads are little travelled.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 108}, "related_articles": ["phu-quoc-vs-nha-trang-which-beach", "mui-ne-guide"]},
-        {"id": "sc.mui-ne-wind", "claim": "Mui Ne's beach runs about 20 km from Phan Thiet; the windy months Oct–Feb are the kitesurf season, so the 'dry' season there is also the windy one.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 55}, "related_articles": ["mui-ne-guide", "best-beaches-islands-vietnam"]},
-        {"id": "sc.highland-access-limited", "claim": "In 2015 access to some Central Highlands minority areas near Kontum was described as still limited because of unrest.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 108}, "verify_against": "Current provincial permit rules for foreigners in Gia Lai / Kon Tum / Dak Lak border districts", "related_articles": ["best-national-parks-treks-vietnam"]},
-        {"id": "sc.my-lai", "claim": "The Son My memorial near Quang Ngai marks the 1968 My Lai massacre.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 107}, "related_articles": ["vietnam-war-history-sites-guide"]}
+        {
+          "id": "sc.champa-heartland",
+          "claim": "The region is old Champa: the kingdom peaked from the 4th century, shrank after AD 1000, and its last principality Panduranga (Phan Rang to Phan Thiet) fell in 1832. Cham towers cluster here and the Cham minority still lives around Phan Rang, celebrating Kate in early autumn.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 107
+          },
+          "related_articles": [
+            "nha-trang-travel-guide",
+            "vietnam-temples-pagodas-guide"
+          ]
+        },
+        {
+          "id": "sc.coast-vs-interior",
+          "claim": "The coast gets far more visitors than the interior. Mui Ne and Nha Trang are the bases; Quy Nhon, Sa Huynh and Quang Ngai are fishing towns most travellers skip but which have beaches and Cham towers. Dalat is the pleasant highland base; Buon Ma Thuot for Yok Don NP; Kontum roads are little travelled.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 108
+          },
+          "related_articles": [
+            "phu-quoc-vs-nha-trang-which-beach",
+            "mui-ne-guide"
+          ]
+        },
+        {
+          "id": "sc.mui-ne-wind",
+          "claim": "Mui Ne's beach runs about 20 km from Phan Thiet; the windy months Oct–Feb are the kitesurf season, so the 'dry' season there is also the windy one.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 55
+          },
+          "related_articles": [
+            "mui-ne-guide",
+            "best-beaches-islands-vietnam"
+          ]
+        },
+        {
+          "id": "sc.highland-access-limited",
+          "claim": "In 2015 access to some Central Highlands minority areas near Kontum was described as still limited because of unrest.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 108
+          },
+          "verify_against": "Current provincial permit rules for foreigners in Gia Lai / Kon Tum / Dak Lak border districts",
+          "related_articles": [
+            "best-national-parks-treks-vietnam"
+          ]
+        },
+        {
+          "id": "sc.my-lai",
+          "claim": "The Son My memorial near Quang Ngai marks the 1968 My Lai massacre.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 107
+          },
+          "related_articles": [
+            "vietnam-war-history-sites-guide"
+          ]
+        },
+        {
+          "id": "sc.lp-when-to-go",
+          "claim": "LP's southeast-coast calendar (Quang Ngai chart): July is the perfect time for Nha Trang; October brings Kate at Po Klong Garai; December in Mui Ne means the best kitesurfing and windsurfing. The coast's good swimming season is the north's bad one.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 233
+          },
+          "related_articles": [
+            "nha-trang-travel-guide",
+            "mui-ne-guide",
+            "phu-quoc-vs-nha-trang-which-beach"
+          ]
+        },
+        {
+          "id": "sc.quiet-coast",
+          "claim": "LP's off-track picks between Hoi An and Nha Trang: Bai Xep near Quy Nhon (an emerging beach scene with beachside guesthouses, 'Phu Quoc without the crowds'), Ganh Da Dia volcanic coast and Bai Mon in Phu Yen, Tam Hai island, Doc Let north of Nha Trang and Bai Dai south of it as quieter bases than Nha Trang beach.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 28
+          },
+          "related_articles": [
+            "best-beaches-islands-vietnam",
+            "nha-trang-travel-guide"
+          ]
+        },
+        {
+          "id": "sc.nha-trang-dive-shops",
+          "claim": "Nha Trang has several reputable dive operators and also 'an excess' of dodgy shops, some with fake PADI credentials; LP says stick to recommended schools with real safety procedures.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 42
+          },
+          "related_articles": [
+            "nha-trang-travel-guide"
+          ]
+        },
+        {
+          "id": "sc.nha-trang-dalat-road",
+          "claim": "The Nha Trang–Dalat road through forest over a 1,700 m pass and the Dalat–Mui Ne descent are two of the south's great rides; LP suggests an Easy Rider pillion for the latter.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 40
+          },
+          "related_articles": [
+            "mui-ne-guide",
+            "hiring-a-driver-vs-self-drive-vietnam"
+          ]
+        },
+        {
+          "id": "sc.alt-highway-1-loops",
+          "claim": "Coastal back-road loops off Highway 1 that LP names: east of Hue between Thuan An and Vinh Hien; Chi Thanh to the Hon Gom peninsula; south of Nha Trang to Cam Ranh airport; Phan Thiet to Vung Tau.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 39
+          },
+          "related_articles": [
+            "hai-van-pass-guide"
+          ]
+        }
       ],
       "getting_around": [
-        {"id": "sc.spine", "claim": "Highway 1 and the HCMC–Hanoi railway are the easy spine; coastal buses plus hotel/agency minibuses (the open-tour model) link the resorts. Dalat is easy to reach and Route 27 up from the coast (Phan Rang side) is the scenic approach.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 109}, "related_articles": ["sleeper-bus-vs-sleeper-train-vietnam"]},
-        {"id": "sc.highlands-car", "claim": "For the Central Highlands DK suggests car-and-driver or a motorcycle over the sparse minibuses; Route 14 from HCMC was upgraded but is steep and winding north of Buon Ma Thuot.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 109}, "related_articles": ["hiring-a-driver-vs-self-drive-vietnam"]},
-        {"id": "sc.airports-missing", "claim": "The 2015 getting-around box omits Cam Ranh (Nha Trang) and Lien Khuong (Dalat) airports, which are now the normal way in.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 109}, "verify_against": "Vietnam Airlines / Vietjet route maps for CXR and DLI", "related_articles": ["domestic-flights-vietnam", "nha-trang-travel-guide"]}
+        {
+          "id": "sc.spine",
+          "claim": "Highway 1 and the HCMC–Hanoi railway are the easy spine; coastal buses plus hotel/agency minibuses (the open-tour model) link the resorts. Dalat is easy to reach and Route 27 up from the coast (Phan Rang side) is the scenic approach.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 109
+          },
+          "related_articles": [
+            "sleeper-bus-vs-sleeper-train-vietnam"
+          ]
+        },
+        {
+          "id": "sc.highlands-car",
+          "claim": "For the Central Highlands DK suggests car-and-driver or a motorcycle over the sparse minibuses; Route 14 from HCMC was upgraded but is steep and winding north of Buon Ma Thuot.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 109
+          },
+          "related_articles": [
+            "hiring-a-driver-vs-self-drive-vietnam"
+          ]
+        },
+        {
+          "id": "sc.airports-missing",
+          "claim": "The 2015 getting-around box omits Cam Ranh (Nha Trang) and Lien Khuong (Dalat) airports, which are now the normal way in.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 109
+          },
+          "verify_against": "Vietnam Airlines / Vietjet route maps for CXR and DLI",
+          "related_articles": [
+            "domestic-flights-vietnam",
+            "nha-trang-travel-guide"
+          ]
+        }
       ]
     },
     "ho-chi-minh-city": {
       "identity": [
-        {"id": "hcmc.name", "claim": "Khmer trading post (Prey Nokor) → Nguyen provincial capital called Saigon by the 18th century → capital of French Cochinchina ('Paris of the Orient') → capital of South Vietnam from 1954 → renamed Ho Chi Minh City in 1975. The book notes the new name was never fully accepted in the south and most residents still say Saigon.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 57}, "related_articles": ["ho-chi-minh-city-travel-guide"]},
-        {"id": "hcmc.layout", "claim": "District 1 around Dong Khoi is the core (colonial set pieces, museums, cafés). The Jade Emperor Pagoda is north of the centre; Cholon (Districts 5–6) to the west is the Chinese quarter with the oldest pagodas, herbalists and Binh Tay market.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 58}, "related_articles": ["where-to-stay-in-hcmc", "best-things-to-do-in-hcmc"]},
-        {"id": "hcmc.region-extras", "claim": "DK's HCMC chapter also covers Cu Chi, the Cao Dai Holy See at Tay Ninh, Vung Tau and Long Hai beaches, Ho Coc, Binh Chau hot springs, Nui Ba Den and Cat Tien NP as excursions.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 58}, "related_articles": ["war-remnants-museum-cu-chi-tunnels", "best-national-parks-treks-vietnam"]},
-        {"id": "hcmc.two-day-shape", "claim": "DK's two days: day one Lam Son Square, People's Committee, Notre Dame, Reunification Palace, then War Remnants Museum, Ben Thanh and the Bitexco Skydeck; day two Jade Emperor Pagoda, Le Van Duyet temple, History Museum and zoo, then Cholon's Binh Tay market and pagodas.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 11}, "related_articles": ["best-things-to-do-in-hcmc", "vietnam-itinerary-7-days"]},
-        {"id": "hcmc.dong-khoi-history", "claim": "Dong Khoi was the French Rue Catinat and the setting of Graham Greene's The Quiet American; its bars shut under early communism and revived after 1986.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 60}, "related_articles": ["ho-chi-minh-city-nightlife-guide"]}
+        {
+          "id": "hcmc.name",
+          "claim": "Khmer trading post (Prey Nokor) → Nguyen provincial capital called Saigon by the 18th century → capital of French Cochinchina ('Paris of the Orient') → capital of South Vietnam from 1954 → renamed Ho Chi Minh City in 1975. The book notes the new name was never fully accepted in the south and most residents still say Saigon.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 57
+          },
+          "related_articles": [
+            "ho-chi-minh-city-travel-guide"
+          ]
+        },
+        {
+          "id": "hcmc.layout",
+          "claim": "District 1 around Dong Khoi is the core (colonial set pieces, museums, cafés). The Jade Emperor Pagoda is north of the centre; Cholon (Districts 5–6) to the west is the Chinese quarter with the oldest pagodas, herbalists and Binh Tay market.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 58
+          },
+          "related_articles": [
+            "where-to-stay-in-hcmc",
+            "best-things-to-do-in-hcmc"
+          ]
+        },
+        {
+          "id": "hcmc.region-extras",
+          "claim": "DK's HCMC chapter also covers Cu Chi, the Cao Dai Holy See at Tay Ninh, Vung Tau and Long Hai beaches, Ho Coc, Binh Chau hot springs, Nui Ba Den and Cat Tien NP as excursions.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 58
+          },
+          "related_articles": [
+            "war-remnants-museum-cu-chi-tunnels",
+            "best-national-parks-treks-vietnam"
+          ]
+        },
+        {
+          "id": "hcmc.two-day-shape",
+          "claim": "DK's two days: day one Lam Son Square, People's Committee, Notre Dame, Reunification Palace, then War Remnants Museum, Ben Thanh and the Bitexco Skydeck; day two Jade Emperor Pagoda, Le Van Duyet temple, History Museum and zoo, then Cholon's Binh Tay market and pagodas.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 11
+          },
+          "related_articles": [
+            "best-things-to-do-in-hcmc",
+            "vietnam-itinerary-7-days"
+          ]
+        },
+        {
+          "id": "hcmc.dong-khoi-history",
+          "claim": "Dong Khoi was the French Rue Catinat and the setting of Graham Greene's The Quiet American; its bars shut under early communism and revived after 1986.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 60
+          },
+          "related_articles": [
+            "ho-chi-minh-city-nightlife-guide"
+          ]
+        },
+        {
+          "id": "hcmc.lp-when-to-go",
+          "claim": "LP's HCMC calendar: February has the least rain and humidity and Tet blooms; March stays dry; December is a whisper cooler and comparatively dry. The wet bars run May–November.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 311
+          },
+          "related_articles": [
+            "ho-chi-minh-city-travel-guide",
+            "best-time-to-visit-vietnam"
+          ]
+        },
+        {
+          "id": "hcmc.pop-2016",
+          "claim": "Population 7.9 million in LP 2016; Hanoi 7.1 million.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 311
+          },
+          "verify_against": "GSO census; 2025 provincial mergers",
+          "related_articles": [
+            "ho-chi-minh-city-travel-guide"
+          ]
+        },
+        {
+          "id": "hcmc.pham-ngu-lao-24-7",
+          "claim": "Pham Ngu Lao is the backpacker strip, 'virtually 24/7'; open-tour buses leave from there, and bottom-end tours sold there are 'often terrible — you get what you pay for'.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 51
+          },
+          "related_articles": [
+            "where-to-stay-in-hcmc",
+            "ho-chi-minh-city-nightlife-guide"
+          ]
+        },
+        {
+          "id": "hcmc.craft-beer-2016",
+          "claim": "Craft beer arrived in 2016 with Pasteur Street Brewing (lemongrass, Dalat coffee, Phu Quoc pepper) and BiaCraft in Thao Dien, District 2 — a trend that held.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 22
+          },
+          "verify_against": "Both still trading",
+          "related_articles": [
+            "ho-chi-minh-city-nightlife-guide",
+            "bia-hoi-guide-vietnam"
+          ]
+        }
       ],
       "getting_around": [
-        {"id": "hcmc.xe-om-default", "claim": "In 2015 the book's default for moving between Dong Khoi and Cholon was the xe om (motorbike taxi) at 'a few dollars' anywhere in town, with radio-dispatched metered taxis as the newer alternative.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 59}, "verify_against": "Grab/Xanh SM pricing; Metro Line 1 (opened Dec 2024)", "related_articles": ["getting-around-ho-chi-minh-city", "grab-app-vietnam-guide"]},
-        {"id": "hcmc.bus-stations", "claim": "Two long-distance bus stations: Mien Dong for routes north and east, Mien Tay for the Mekong Delta.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 58}, "verify_against": "New Mien Dong station in Thu Duc took long-distance routes from 2022; old Mien Dong keeps short routes", "related_articles": ["mekong-delta-day-trip-vs-multi-day-tour", "sleeper-bus-vs-sleeper-train-vietnam"]}
+        {
+          "id": "hcmc.xe-om-default",
+          "claim": "In 2015 the book's default for moving between Dong Khoi and Cholon was the xe om (motorbike taxi) at 'a few dollars' anywhere in town, with radio-dispatched metered taxis as the newer alternative.",
+          "status": "obsolete",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 59
+          },
+          "verify_against": "Grab/Xanh SM pricing; Metro Line 1 (opened Dec 2024)",
+          "related_articles": [
+            "getting-around-ho-chi-minh-city",
+            "grab-app-vietnam-guide"
+          ]
+        },
+        {
+          "id": "hcmc.bus-stations",
+          "claim": "Two long-distance bus stations: Mien Dong for routes north and east, Mien Tay for the Mekong Delta.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 58
+          },
+          "verify_against": "New Mien Dong station in Thu Duc took long-distance routes from 2022; old Mien Dong keeps short routes",
+          "related_articles": [
+            "mekong-delta-day-trip-vs-multi-day-tour",
+            "sleeper-bus-vs-sleeper-train-vietnam"
+          ]
+        },
+        {
+          "id": "hcmc.airport-arrival-2016",
+          "claim": "Tan Son Nhat is 7 km northwest of the centre. Use Mai Linh or Vinasun and avoid similar-sounding imitations; Mai Linh had an arrivals counter; an airport access fee was added to the fare; cheaper metered cabs could be caught upstairs at departures. Bus 152 ran every ~15 min 6am–6pm along De Tham and the Dong Khoi hotels. Xe om cannot enter the airport — walk out to the road.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 357
+          },
+          "verify_against": "Current bus 109/49 and Grab pickup point at SGN",
+          "related_articles": [
+            "vietnam-airport-guide",
+            "getting-around-ho-chi-minh-city"
+          ]
+        },
+        {
+          "id": "hcmc.xe-om-vs-taxi",
+          "claim": "LP's box: in theory a taxi costs more, in practice xe om overcharging in tourist areas erases the gap; a metered taxi avoids rip-offs until you know the distances and is cheaper for two or more; xe om is faster in rush hour. Trusted taxis: Vinasun and Mai Linh. The '15,000 — no, I said 50,000' trick.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 358
+          },
+          "related_articles": [
+            "getting-around-ho-chi-minh-city",
+            "grab-app-vietnam-guide"
+          ]
+        },
+        {
+          "id": "hcmc.cyclo-day-only",
+          "claim": "Travellers have been mugged by cyclo drivers in HCMC, so LP says use cyclos only by day there and take a metered taxi home from bars; many streets ban cyclos so routes are circuitous; some older riders are ex-ARVN soldiers who speak English and tell war and re-education stories; negotiate for all passengers and write numbers down.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 358
+          },
+          "related_articles": [
+            "is-vietnam-safe-for-americans",
+            "getting-around-ho-chi-minh-city"
+          ]
+        },
+        {
+          "id": "hcmc.bus-stations-2016",
+          "claim": "Mien Tay (10 km west) for the Mekong, Mien Dong (5 km north in Binh Thanh, express buses on the east side) for everything north, An Suong for Tay Ninh/Cu Chi — though LP says Cu Chi by public bus is a nightmare and the tourist buses from District 1 are cheap. Cambodia buses (Phnom Penh ~6 h, Siem Reap ~12 h) leave from Pham Ngu Lao.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 356
+          },
+          "verify_against": "New Mien Dong in Thu Duc (2022) now takes long-distance routes",
+          "related_articles": [
+            "war-remnants-museum-cu-chi-tunnels",
+            "vietnam-and-cambodia-combined-itinerary"
+          ]
+        },
+        {
+          "id": "hcmc.metro-2016-box",
+          "claim": "LP's 2016 box: Metro Line 1 Ben Thanh–Suoi Tien was 'slated for 2020', 88% Japanese-funded, central station by the Opera House. It opened in December 2024.",
+          "status": "obsolete",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 357
+          },
+          "related_articles": [
+            "getting-around-ho-chi-minh-city"
+          ]
+        },
+        {
+          "id": "hcmc.motorbike-insurance-warning",
+          "claim": "LP on renting a motorbike in HCMC: expats call it the fastest way around 'or to the hospital'; travel insurance may not cover you; observe the traffic first; your passport may be held as collateral.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 357
+          },
+          "related_articles": [
+            "renting-a-motorbike-in-vietnam"
+          ],
+          "note": "Supports facts.json getting_around.unlicensed_insurance."
+        },
+        {
+          "id": "hcmc.uber-2016",
+          "claim": "'Uber is also becoming more popular in the city' (2016). Uber sold its SE Asia business to Grab in 2018.",
+          "status": "obsolete",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 358
+          },
+          "related_articles": [
+            "grab-app-vietnam-guide"
+          ]
+        }
       ],
       "leads": [
-        {"id": "hcmc.airport-distance", "claim": "Tan Son Nhat about 5–7 km north of the centre, roughly 20–30 min by taxi, longer in rush hour.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 280}, "verify_against": "ACV; note Long Thanh airport due ~2026 will change the picture", "related_articles": ["vietnam-airport-guide"]},
-        {"id": "hcmc.population", "claim": "About seven million in 2015.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 57}, "verify_against": "GSO Vietnam census (2019: ~9 m); 2025 provincial merger with Binh Duong + Ba Ria–Vung Tau changes the figure", "related_articles": ["ho-chi-minh-city-travel-guide"]},
-        {"id": "hcmc.notre-dame-renovation", "claim": "Book describes the cathedral as open and built of local stone with French tiles.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 60}, "verify_against": "Cathedral has been under restoration since 2017 with interior access limited; check before sending readers inside", "related_articles": ["best-things-to-do-in-hcmc"]}
+        {
+          "id": "hcmc.airport-distance",
+          "claim": "Tan Son Nhat about 5–7 km north of the centre, roughly 20–30 min by taxi, longer in rush hour.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 280
+          },
+          "verify_against": "ACV; note Long Thanh airport due ~2026 will change the picture",
+          "related_articles": [
+            "vietnam-airport-guide"
+          ]
+        },
+        {
+          "id": "hcmc.population",
+          "claim": "About seven million in 2015.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 57
+          },
+          "verify_against": "GSO Vietnam census (2019: ~9 m); 2025 provincial merger with Binh Duong + Ba Ria–Vung Tau changes the figure",
+          "related_articles": [
+            "ho-chi-minh-city-travel-guide"
+          ]
+        },
+        {
+          "id": "hcmc.notre-dame-renovation",
+          "claim": "Book describes the cathedral as open and built of local stone with French tiles.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 60
+          },
+          "verify_against": "Cathedral has been under restoration since 2017 with interior access limited; check before sending readers inside",
+          "related_articles": [
+            "best-things-to-do-in-hcmc"
+          ]
+        }
       ]
     },
     "mekong-delta": {
       "identity": [
-        {"id": "mekong.nine-dragons", "claim": "The river is ~4,500 km from Tibet; Vietnamese call its delta Cuu Long, Nine Dragons, for its mouths. It is the rice basket and the fruit basket (coconut, longan, mango).", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 89}, "related_articles": ["mekong-delta-day-trip-vs-multi-day-tour"]},
-        {"id": "mekong.town-roles", "claim": "Town roles for a visitor: My Tho is the nearest launch pad from HCMC (the day-trip default), Vinh Long just south is homestay country, Can Tho is the biggest city with the floating markets, Chau Doc has floating houses and the Cambodia crossing, Soc Trang and Tra Vinh are Khmer culture, Ha Tien has quiet beaches and karst, Con Dao and Phu Quoc are the islands.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 90}, "related_articles": ["best-mekong-delta-homestay-tours", "can-tho-floating-market-guide", "chau-doc-cambodia-border-crossing"]},
-        {"id": "mekong.khmer-history", "claim": "Cambodia long claimed the delta; the Khmer Rouge massacred border villages in 1978, and the region also carries Agent Orange and flood history.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 89}, "related_articles": ["vietnam-and-cambodia-combined-itinerary"]},
-        {"id": "mekong.phu-quoc-2015-view", "claim": "In 2015 Phu Quoc and Con Dao were pitched as eco-tourism islands 'fast becoming popular'.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 89}, "verify_against": "Phu Quoc is now a mass-resort island with a cable car and casino; Con Dao remains low-key", "related_articles": ["phu-quoc-travel-guide", "con-dao-islands-guide"]}
+        {
+          "id": "mekong.nine-dragons",
+          "claim": "The river is ~4,500 km from Tibet; Vietnamese call its delta Cuu Long, Nine Dragons, for its mouths. It is the rice basket and the fruit basket (coconut, longan, mango).",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 89
+          },
+          "related_articles": [
+            "mekong-delta-day-trip-vs-multi-day-tour"
+          ]
+        },
+        {
+          "id": "mekong.town-roles",
+          "claim": "Town roles for a visitor: My Tho is the nearest launch pad from HCMC (the day-trip default), Vinh Long just south is homestay country, Can Tho is the biggest city with the floating markets, Chau Doc has floating houses and the Cambodia crossing, Soc Trang and Tra Vinh are Khmer culture, Ha Tien has quiet beaches and karst, Con Dao and Phu Quoc are the islands.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 90
+          },
+          "related_articles": [
+            "best-mekong-delta-homestay-tours",
+            "can-tho-floating-market-guide",
+            "chau-doc-cambodia-border-crossing"
+          ]
+        },
+        {
+          "id": "mekong.khmer-history",
+          "claim": "Cambodia long claimed the delta; the Khmer Rouge massacred border villages in 1978, and the region also carries Agent Orange and flood history.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 89
+          },
+          "related_articles": [
+            "vietnam-and-cambodia-combined-itinerary"
+          ]
+        },
+        {
+          "id": "mekong.phu-quoc-2015-view",
+          "claim": "In 2015 Phu Quoc and Con Dao were pitched as eco-tourism islands 'fast becoming popular'.",
+          "status": "obsolete",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 89
+          },
+          "verify_against": "Phu Quoc is now a mass-resort island with a cable car and casino; Con Dao remains low-key",
+          "related_articles": [
+            "phu-quoc-travel-guide",
+            "con-dao-islands-guide"
+          ]
+        },
+        {
+          "id": "mekong.lp-when-to-go",
+          "claim": "LP's delta calendar (My Tho chart): January, Phu Quoc beaches temperate and dry while the north shivers; March avoids Tet and the summer heat and rain; November the dry season starts with the Khmer longboat festivals in Tra Vinh and Soc Trang.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 366
+          },
+          "related_articles": [
+            "phu-quoc-travel-guide",
+            "mekong-delta-day-trip-vs-multi-day-tour"
+          ]
+        },
+        {
+          "id": "mekong.lp-south-loop",
+          "claim": "LP's southern itinerary: HCMC (2 days) → Ben Tre (bike the canal lanes, boat the islands) → cargo boat to Tra Vinh (Khmer pagodas) → Can Tho (2 days, floating markets) → Chau Doc (border countryside by bike) → Phu Quoc (3 days) → fly back → Cat Tien → Dalat → Mui Ne → HCMC. Not for the southern rainy season if beaches are the point.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 32
+          },
+          "related_articles": [
+            "best-mekong-delta-homestay-tours",
+            "vietnam-itinerary-3-weeks"
+          ]
+        },
+        {
+          "id": "mekong.phu-quoc-trump-card",
+          "claim": "LP calls Phu Quoc's Sao Beach and Long Beach the delta's trump cards, a world away from the muddy riverbanks; seas around Phu Quoc are more sheltered than the main coast's riptides.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 52
+          },
+          "related_articles": [
+            "phu-quoc-travel-guide",
+            "best-beach-resorts-in-phu-quoc",
+            "vietnam-itinerary-for-families"
+          ]
+        },
+        {
+          "id": "mekong.river-to-cambodia",
+          "claim": "Regular fast boats run Phnom Penh ↔ Chau Doc via the Vinh Xuong–Kaam Samnor river crossing; luxury riverboats continue to Siem Reap.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 491
+          },
+          "verify_against": "Current operators (Hang Chau, Blue Cruiser) and the e-visa gate list",
+          "related_articles": [
+            "chau-doc-cambodia-border-crossing"
+          ]
+        }
       ],
       "getting_around": [
-        {"id": "mekong.airports", "claim": "Airports at Can Tho, Con Dao, Rach Gia and Phu Quoc.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 91}, "verify_against": "Current schedules: Con Dao served by Vietnam Airlines ATRs from HCMC; Can Tho has limited routes", "related_articles": ["domestic-flights-vietnam"]},
-        {"id": "mekong.boat-is-the-way", "claim": "Highways reliable, rural roads bumpy, local buses erratic; agencies in HCMC and the delta sell coach and car trips; but DK's verdict is that boats are the way to see the delta, over ~2,800 km of canals, with public boats adequate and private tours more comfortable.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 91}, "related_articles": ["mekong-delta-day-trip-vs-multi-day-tour"]},
-        {"id": "mekong.expressway-missing", "claim": "The 2015 book predates the HCMC–Trung Luong–My Thuan–Can Tho expressway, which has cut HCMC→Can Tho to about three hours.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 91}, "verify_against": "Current drive times HCMC→My Tho / Can Tho", "related_articles": ["can-tho-floating-market-guide"]}
+        {
+          "id": "mekong.airports",
+          "claim": "Airports at Can Tho, Con Dao, Rach Gia and Phu Quoc.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 91
+          },
+          "verify_against": "Current schedules: Con Dao served by Vietnam Airlines ATRs from HCMC; Can Tho has limited routes",
+          "related_articles": [
+            "domestic-flights-vietnam"
+          ]
+        },
+        {
+          "id": "mekong.boat-is-the-way",
+          "claim": "Highways reliable, rural roads bumpy, local buses erratic; agencies in HCMC and the delta sell coach and car trips; but DK's verdict is that boats are the way to see the delta, over ~2,800 km of canals, with public boats adequate and private tours more comfortable.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 91
+          },
+          "related_articles": [
+            "mekong-delta-day-trip-vs-multi-day-tour"
+          ]
+        },
+        {
+          "id": "mekong.expressway-missing",
+          "claim": "The 2015 book predates the HCMC–Trung Luong–My Thuan–Can Tho expressway, which has cut HCMC→Can Tho to about three hours.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 91
+          },
+          "verify_against": "Current drive times HCMC→My Tho / Can Tho",
+          "related_articles": [
+            "can-tho-floating-market-guide"
+          ]
+        }
       ]
     },
     "angkor-excursion": {
       "identity": [
-        {"id": "angkor.basics", "claim": "Angkor was the Khmer capital AD 802–1432, about 200 sq km of ruins and ~70 temples; Angkor Wat (Suryavarman II, 1113–50) is the world's largest religious complex; Angkor Thom and the Bayon are Jayavarman VII's. Siem Reap is the gateway.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 208}, "related_articles": ["vietnam-and-cambodia-combined-itinerary"]},
-        {"id": "angkor.modern-history", "claim": "US bombing of Cambodia from 1970 fed the Khmer Rouge's rise; they ruled 1975–79 and killed an estimated two million; Vietnam's invasion ended it in 1979. UXO clearance preceded the site's reopening.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 209}, "related_articles": ["vietnam-and-cambodia-combined-itinerary"]}
+        {
+          "id": "angkor.basics",
+          "claim": "Angkor was the Khmer capital AD 802–1432, about 200 sq km of ruins and ~70 temples; Angkor Wat (Suryavarman II, 1113–50) is the world's largest religious complex; Angkor Thom and the Bayon are Jayavarman VII's. Siem Reap is the gateway.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 208
+          },
+          "related_articles": [
+            "vietnam-and-cambodia-combined-itinerary"
+          ]
+        },
+        {
+          "id": "angkor.modern-history",
+          "claim": "US bombing of Cambodia from 1970 fed the Khmer Rouge's rise; they ruled 1975–79 and killed an estimated two million; Vietnam's invasion ended it in 1979. UXO clearance preceded the site's reopening.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "dk-2015",
+            "page": 209
+          },
+          "related_articles": [
+            "vietnam-and-cambodia-combined-itinerary"
+          ]
+        }
       ],
       "not_read": "DK's Angkor survival guide (pp226–229) was skipped as out of scope; read if the combined-itinerary article is revised."
+    },
+    "southwest-highlands": {
+      "identity": [
+        {
+          "id": "swh.why-go",
+          "claim": "LP splits the Central Highlands into their own region: the Ho Chi Minh Highway winds past coffee plantations, pine mountains, buffalo in paddies, reed-covered lakes and hill-tribe villages — 'the challenge of a two-wheeled journey'. Protected jungle has gibbons, pygmy loris, wild elephants and huge bird numbers; Dalat is the French hill station with a cool climate and the last emperor's palaces.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 287
+          },
+          "related_articles": [
+            "best-national-parks-treks-vietnam"
+          ]
+        },
+        {
+          "id": "swh.when-to-go",
+          "claim": "LP's highland calendar (Dalat chart): March for the Buon Ma Thuot coffee festival and elephant races at Don; October 'autumn in Dalat', best for activities; December for Cat Tien trekking and cycling in cooler weather.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 287
+          },
+          "verify_against": "Coffee festival is biennial (odd years); elephant races have been curtailed on welfare grounds"
+        },
+        {
+          "id": "swh.bases-and-parks",
+          "claim": "Dalat for canyoning, mountain biking, kayaking and Bidoup Nui Ba NP; Buon Ma Thuot for Yok Don (elephants) — the easy access park; Cat Tien (near HCMC) for the Wild Gibbon Trek, crocodile lake and night hikes, guide required; Kon Tum for Bahnar village homestays and rong houses; Jarai 'grave-feeding' rites.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 287
+          },
+          "related_articles": [
+            "best-national-parks-treks-vietnam"
+          ]
+        },
+        {
+          "id": "swh.easy-riders",
+          "claim": "The Easy Riders scheme (Dalat-born) hires a local rider to carry you pillion on back roads between Dalat and the coast or Hoi An — LP's answer for travellers who want the motorbike experience without riding.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 39
+          },
+          "related_articles": [
+            "hiring-a-driver-vs-self-drive-vietnam",
+            "renting-a-motorbike-in-vietnam"
+          ],
+          "note": "This is the publishable form of the motorbike swamp given corrections #2."
+        },
+        {
+          "id": "swh.minority-history",
+          "claim": "Many highland minorities fought with US Special Forces in the CIDG programme and some militias resisted Hanoi into the 1980s — the root of the lingering 'subversive' prejudice and of access limits near Kon Tum that DK mentioned.",
+          "status": "context",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 458
+          },
+          "related_articles": [
+            "vietnam-war-history-sites-guide"
+          ]
+        }
+      ],
+      "getting_around": [
+        {
+          "id": "swh.transport",
+          "claim": "Route 14 / the Ho Chi Minh Highway is light on traffic and scenic; Dalat is easy to reach (Lien Khuong airport, buses from HCMC ~7 h in 2016); the highlands reward a 4WD or motorbike, and Dalat is the base camp for the two-day cycling descent to Mui Ne.",
+          "status": "lead",
+          "vintage": 2016,
+          "source": {
+            "book": "lp-2016",
+            "page": 38
+          },
+          "verify_against": "HCMC–Dalat expressway progress; current flights to DLI",
+          "related_articles": [
+            "domestic-flights-vietnam"
+          ]
+        }
+      ]
     }
   }
 }

@@ -69,8 +69,34 @@
       "isbn": "9781743218723",
       "archive_id": "vietnam0000stew_x4j9",
       "pages": 518,
-      "status": "not_started",
-      "note": "RESOLVED 2026-10-16: archive.org has no 2017+ FULL guide. Both 2017 items (vietnam0000stew, vietnam0000stew_v3m3, ISBN 9781786579379) are 300-page 'Best of / Discover'-format books, not the 518-page full guide. The newest full guide on archive.org is this 2016 13th edition (518 pp, Angkor bonus chapter). Borrow this one. The 2014 12th ed is vietnam0000stew_f6r8 if the 2016 copy is out on loan."
+      "status": "read",
+      "note": "RESOLVED 2026-10-16: archive.org has no 2017+ FULL guide. Both 2017 items (vietnam0000stew, vietnam0000stew_v3m3, ISBN 9781786579379) are 300-page 'Best of / Discover'-format books, not the 518-page full guide. The newest full guide on archive.org is this 2016 13th edition (518 pp, Angkor bonus chapter). Borrow this one. The 2014 12th ed is vietnam0000stew_f6r8 if the 2016 copy is out on loan.",
+      "read_on": "2026-10-16",
+      "viewer_note": "printed page P = leaf n(P+1); /page/P/mode/1up resolves directly",
+      "pages_read": [
+        "3 contents",
+        "4-5 Welcome",
+        "18-53 Plan Your Trip complete (Need to Know, First Time, What's New, If You Like, Month by Month, Itineraries + off-track map, Outdoors, Eat & Drink Like a Local, Regions at a Glance)",
+        "54-55, 99-101, 152, 233, 287, 311, 366 region openers with Why Go / When to Go",
+        "93-95 Hanoi getting there & around",
+        "356-358 HCMC getting there & around",
+        "434-435 Vietnam Today",
+        "454-459 People & Culture",
+        "464-469 Food & Drink",
+        "478-487 Directory A-Z (complete)",
+        "488-497 Transport (complete)",
+        "498-502 Health (complete)",
+        "503 Language intro"
+      ],
+      "pages_skipped": [
+        "sight-by-sight region entries",
+        "hotel/restaurant listings",
+        "436-453 History (DK covered the spine; Goscha next)",
+        "460-463 Arts",
+        "470-473 Environment",
+        "417-433 Siem Reap/Angkor",
+        "504-511 phrase lists"
+      ]
     }
   },
   "reading_method": "Chrome (claude-in-chrome) → archive.org/details/<id>/page/<P>/mode/1up → wait ~5 s → get_page_text; one URL navigation per page, batched 6–8 pages per call. Viewer-only; no download, no DRM handling.",

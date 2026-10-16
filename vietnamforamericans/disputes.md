@@ -298,3 +298,50 @@ Added 2026-10-16 from the `knowledge/` build. Every item is a 2013–2017 guideb
 ## Pho timing — DK p244
 - DK 2015: connoisseurs go late for a stronger broth.
 - Common local guidance: go early. Not a fact-layer item; flagged so no article repeats the book line as received wisdom.
+
+# Guidebook leads vs facts.json — Lonely Planet Vietnam, 13th ed. (2016)
+
+Added 2026-10-16 from the second `knowledge/` book. Same rules: paraphrased, page-tagged, facts.json wins.
+
+## getting_around.driving_licence / corrections #2 — LP p493
+- LP 2016: licence rules changed in late 2015 and foreigners may now ride with an International Driving Permit plus local insurance; in practice nobody asks.
+- facts.json (State Dept): US licence and IDP invalid; fine, arrest, jail; insurance may not pay.
+- Verdict: corrections #2 stands. This is the 1968-Convention framing, one year older than DK's "rarely asked". Note that LP's own HCMC chapter (p356) states flatly that foreigners may not drive without a Vietnamese licence — the book contradicts itself.
+
+## visa.type / visa.no_extension_in_country / corrections #4 — LP p485–486
+- LP 2016: visa-on-arrival approval letters via online agents as the preferred air route; extensions arranged through agents, "if you've got the dollars, they've got the rubber stamp".
+- facts.json: e-visa only; no in-country extension of an e-visa.
+- Verdict: obsolete. The named agents are the intermediary market our visa articles warn about.
+
+## customs.tobacco — LP p479
+- LP 2016: 400 cigarettes, 1.5 L spirits. Same stale figure as DK.
+- Verdict: facts.json (200).
+
+## corrections #1 (ATM figures) — LP p482
+- LP prints per-withdrawal fees and bank-by-bank caps.
+- Verdict: structural rule only; figures never print.
+
+## tipping_norm — LP p21 vs p482 vs DK p243
+- LP First Time: not expected; 5–10% in smart restaurants if very pleased; "locals don't tip". LP Directory: "not expected but enormously appreciated". DK: 10% appreciated in better restaurants.
+- Verdict: three editorial opinions, no primary source. Publish the structural rule only (not expected, appreciated, scaled to local wages, service charge may not reach staff).
+
+## calendar.public_holidays — LP p483
+- LP lists Buddha's birthday as a public holiday on the 8th of the 4th lunar month.
+- Verdict: wrong on both date (15th) and status (not a public holiday). Use the government's annual schedule.
+
+## safety_health.malaria — LP p500
+- LP: no risk in Danang, Hanoi, HCMC, Nha Trang; rural risk outweighs tablet side effects; high-risk Ca Mau, Bac Lieu, rural south.
+- facts.json (CDC): rural only, rare in the deltas, none in the main cities.
+- Verdict: broadly consistent; CDC governs the wording.
+
+## tap_water_safe (open dispute) — LP p500
+- LP: avoid tap water even in cities; bottled everywhere; ice generally safe in cities and resorts.
+- Verdict: a usable direction for the open dispute — "no to tap, yes to city ice" — but still editorial, not primary. CDC's tap-water line is the citable half.
+
+## transport.rail_hcmc_hanoi_duration — LP p497 vs p94
+- LP gives 31 h (Hanoi chapter) and 32–36 h (Transport chapter) for the same journey.
+- Verdict: dsvn.vn timetable; the book is internally inconsistent.
+
+## car-with-driver: who pays fuel — LP p494 vs DK p283
+- LP: driver pays own food and lodging, you pay petrol. DK: driver pays own food and lodging, fuel inside the quoted price.
+- Verdict: no standard; agree it in writing. Decision-gap material.

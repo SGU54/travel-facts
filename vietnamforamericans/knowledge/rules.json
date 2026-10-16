@@ -1,48 +1,1038 @@
 {
   "_README": "Visa, customs, health, safety, police, legal and photography rules as DK 2015 states them (Survival Guide pp270–275, hotel check-in p233). Paraphrase only. facts.json and corrections.json are the published truth; every disagreement is marked conflict and logged in ../disputes.md.",
   "visa": [
-    {"id": "visa.voa-letter-2015", "claim": "In 2015 visas came from embassies (best via an agency) or by 'visa on arrival': an online approval letter plus a US$45 stamping fee paid at the airport. Tourist visas were one month, three months cost little more; business visas needed a sponsor letter.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 271}, "conflict_with": "facts.json visa.type / visa.fee / visa.max_stay_days: Americans use the e-visa (US$25 single, US$50 multiple, up to 90 days) at evisa.gov.vn; the VOA approval-letter trade is the intermediary market corrections #4 and disputes.md warn about", "related_articles": ["do-americans-need-a-visa-for-vietnam", "vietnam-evisa-how-to-apply"]},
-    {"id": "visa.waivers-neighbours", "claim": "Citizens of some neighbouring countries got waivers on arrival of varying length.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 270}, "related_articles": ["do-americans-need-a-visa-for-vietnam"], "note": "Consistent with corrections #5: the US has never been on the unilateral exemption list."},
-    {"id": "visa.hotel-passport", "claim": "Hotels take the passport at check-in to register the guest with police; big-city hotels may copy and return it; a photocopy is 'usually acceptable' if the passport is at an embassy.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 233}, "verify_against": "facts.json documents.police_registration (verified duty); current hotel practice is photograph-and-return", "related_articles": ["is-vietnam-safe-for-americans", "where-to-stay-in-hanoi"], "note": "corrections #7: never state a consequence for non-registration."},
-    {"id": "visa.rental-registration", "claim": "Renting a private room or apartment long-term also requires police registration.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 234}, "related_articles": ["vietnam-visa-extension-guide"]}
+    {
+      "id": "visa.voa-letter-2015",
+      "claim": "In 2015 visas came from embassies (best via an agency) or by 'visa on arrival': an online approval letter plus a US$45 stamping fee paid at the airport. Tourist visas were one month, three months cost little more; business visas needed a sponsor letter.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 271
+      },
+      "conflict_with": "facts.json visa.type / visa.fee / visa.max_stay_days: Americans use the e-visa (US$25 single, US$50 multiple, up to 90 days) at evisa.gov.vn; the VOA approval-letter trade is the intermediary market corrections #4 and disputes.md warn about",
+      "related_articles": [
+        "do-americans-need-a-visa-for-vietnam",
+        "vietnam-evisa-how-to-apply"
+      ]
+    },
+    {
+      "id": "visa.waivers-neighbours",
+      "claim": "Citizens of some neighbouring countries got waivers on arrival of varying length.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 270
+      },
+      "related_articles": [
+        "do-americans-need-a-visa-for-vietnam"
+      ],
+      "note": "Consistent with corrections #5: the US has never been on the unilateral exemption list."
+    },
+    {
+      "id": "visa.hotel-passport",
+      "claim": "Hotels take the passport at check-in to register the guest with police; big-city hotels may copy and return it; a photocopy is 'usually acceptable' if the passport is at an embassy.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 233
+      },
+      "verify_against": "facts.json documents.police_registration (verified duty); current hotel practice is photograph-and-return",
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "where-to-stay-in-hanoi"
+      ],
+      "note": "corrections #7: never state a consequence for non-registration."
+    },
+    {
+      "id": "visa.rental-registration",
+      "claim": "Renting a private room or apartment long-term also requires police registration.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 234
+      },
+      "related_articles": [
+        "vietnam-visa-extension-guide"
+      ]
+    },
+    {
+      "id": "visa.lp-2016-picture",
+      "claim": "LP 2016 visa picture: 'very complicated… fluid — always check'. Fifteen-day exemptions for a list of European and Asian nationalities, 30 days for ASEAN, none for the USA, Australia or New Zealand; exemption users cannot extend and cannot re-enter on exemption within 30 days; tourist visas of 30 or 90 days; online agents sold a visa-on-arrival approval letter (airports only) as 'the preferred method for most travellers arriving by air'; embassies slower and dearer.",
+      "status": "obsolete",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 486
+      },
+      "conflict_with": "facts.json visa.* — the e-visa (2017 pilot, 90-day multi-entry from Aug 2023) replaced the letter; the agents named are now the intermediary market our visa articles warn about",
+      "related_articles": [
+        "do-americans-need-a-visa-for-vietnam",
+        "vietnam-evisa-how-to-apply"
+      ]
+    },
+    {
+      "id": "visa.lp-extension-rubber-stamp",
+      "claim": "LP 2016 on extensions: 'if you've got the dollars, they've got the rubber stamp' — officially cheap, arranged only via agents, about seven days, 30 or 90 days depending on the visa, dearer if done in a different city from arrival, smoothest in HCMC, Hanoi, Danang and Hue.",
+      "status": "conflict",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 486
+      },
+      "conflict_with": "corrections.json #4 and facts.json visa.no_extension_in_country: an e-visa cannot be extended in-country; intermediaries selling e-visa extensions sell something the government says does not exist. The 2016 picture applied to embassy/VOA visas.",
+      "related_articles": [
+        "vietnam-visa-extension-guide"
+      ]
+    },
+    {
+      "id": "visa.lp-multiple-entry",
+      "claim": "To pop into Cambodia or Laos and return you must already hold a multiple-entry visa before leaving Vietnam; LP 2016 said agents in Hanoi/HCMC could convert a single to multiple for a fee in up to seven days.",
+      "status": "obsolete",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 486
+      },
+      "verify_against": "facts.json: choose multiple-entry at e-visa application; no in-country conversion",
+      "related_articles": [
+        "vietnam-and-cambodia-combined-itinerary",
+        "vietnam-visa-extension-guide"
+      ]
+    },
+    {
+      "id": "visa.lp-hotel-passport",
+      "claim": "Passports are almost always requested at check-in; LP says handing it over is not absolutely essential but at minimum a photocopy of the passport details and visa is needed, because the government strictly regulates registering foreigners overnight — which is also why every homestay must be officially licensed.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 478
+      },
+      "verify_against": "facts.json documents.police_registration (verified); current hotel practice",
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "best-mekong-delta-homestay-tours"
+      ]
+    }
   ],
   "customs": [
-    {"id": "customs.allowances-2015", "claim": "2015 allowance: 1.5 litres of alcohol and 400 cigarettes; declare gold over 300 g and cash over US$5,000; a yellow customs-form copy was handed back.", "status": "conflict", "vintage": 2015, "source": {"book": "dk-2015", "page": 271}, "conflict_with": "facts.json customs.tobacco = 200 cigarettes / 250 g / 20 cigars (Decree 134/2016); customs.alcohol tiers 1.5 L ≥20% ABV, 2 L <20%, 3 L beer; the US$5,000 / 15,000,000 VND cash declaration matches documents.currency_declaration; the yellow form no longer exists", "related_articles": ["vietnam-customs-and-duty-free-rules"]},
-    {"id": "customs.sensitive-material", "claim": "Few foreigners are searched, but material judged politically sensitive or pornographic — including media critical of the government — can be seized.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 271}, "related_articles": ["vietnam-customs-and-duty-free-rules"]},
-    {"id": "customs.parcels-inspected", "claim": "All outbound parcels, including courier shipments and packets of CDs or photographs, are opened and inspected before leaving the country, which is why parcels take months.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 279}, "verify_against": "Vietnam Post / DHL current export inspection practice", "related_articles": ["vietnamese-cooking-ingredients-to-bring-home", "hoi-an-tailors-how-to-order"]},
-    {"id": "customs.exotic-meat-banned", "claim": "Some restaurants serve wild species such as porcupine despite an official ban.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 245}, "related_articles": ["vietnamese-food-guide-first-timers"], "note": "US readers may also face US import rules on wildlife products — out of the book's scope."}
+    {
+      "id": "customs.allowances-2015",
+      "claim": "2015 allowance: 1.5 litres of alcohol and 400 cigarettes; declare gold over 300 g and cash over US$5,000; a yellow customs-form copy was handed back.",
+      "status": "conflict",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 271
+      },
+      "conflict_with": "facts.json customs.tobacco = 200 cigarettes / 250 g / 20 cigars (Decree 134/2016); customs.alcohol tiers 1.5 L ≥20% ABV, 2 L <20%, 3 L beer; the US$5,000 / 15,000,000 VND cash declaration matches documents.currency_declaration; the yellow form no longer exists",
+      "related_articles": [
+        "vietnam-customs-and-duty-free-rules"
+      ]
+    },
+    {
+      "id": "customs.sensitive-material",
+      "claim": "Few foreigners are searched, but material judged politically sensitive or pornographic — including media critical of the government — can be seized.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 271
+      },
+      "related_articles": [
+        "vietnam-customs-and-duty-free-rules"
+      ]
+    },
+    {
+      "id": "customs.parcels-inspected",
+      "claim": "All outbound parcels, including courier shipments and packets of CDs or photographs, are opened and inspected before leaving the country, which is why parcels take months.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 279
+      },
+      "verify_against": "Vietnam Post / DHL current export inspection practice",
+      "related_articles": [
+        "vietnamese-cooking-ingredients-to-bring-home",
+        "hoi-an-tailors-how-to-order"
+      ]
+    },
+    {
+      "id": "customs.exotic-meat-banned",
+      "claim": "Some restaurants serve wild species such as porcupine despite an official ban.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 245
+      },
+      "related_articles": [
+        "vietnamese-food-guide-first-timers"
+      ],
+      "note": "US readers may also face US import rules on wildlife products — out of the book's scope."
+    },
+    {
+      "id": "customs.lp-allowances-2016",
+      "claim": "LP 2016 duty limits: 400 cigarettes, 1.5 litres of spirits, declare US$5,000 or more.",
+      "status": "conflict",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 479
+      },
+      "conflict_with": "facts.json customs.tobacco = 200 cigarettes (Decree 134/2016); both 2015–16 books carry the old 400 figure",
+      "related_articles": [
+        "vietnam-customs-and-duty-free-rules"
+      ]
+    },
+    {
+      "id": "customs.lp-pepper-souvenir",
+      "claim": "Vietnamese black peppercorns are a fine edible souvenir 'if your country will allow it in'; US CBP admits commercially packaged dried spices — a good ingredients-to-bring-home item. Snake wine is the opposite: the snakes are often protected species and the bottle is a wildlife product.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 465
+      },
+      "verify_against": "CBP 'bringing food into the US' rules; CITES",
+      "related_articles": [
+        "vietnamese-cooking-ingredients-to-bring-home",
+        "vietnam-customs-and-duty-free-rules"
+      ]
+    }
   ],
   "health": [
-    {"id": "health.vaccines-who", "claim": "WHO-recommended for SE Asia: hepatitis A and B, tetanus, MMR, diphtheria, typhoid.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 271}, "verify_against": "facts.json safety_health.vaccines_recommended (CDC list, verified) — CDC is the source we publish", "related_articles": ["vietnam-health-and-vaccines"]},
-    {"id": "health.malaria-2015", "claim": "Malaria 'eradicated from most of the country', slight risk on Phu Quoc and in highland areas; prophylaxis if visiting jungle areas or the Mekong, doctor's advice first.", "status": "conflict", "vintage": 2015, "source": {"book": "dk-2015", "page": 271}, "conflict_with": "facts.json safety_health.malaria (CDC): rural transmission only, rare in the deltas, none in the main cities; CDC does not single out Phu Quoc. CDC wins.", "related_articles": ["vietnam-health-and-vaccines", "phu-quoc-travel-guide"]},
-    {"id": "health.dengue", "claim": "Dengue is the serious mosquito risk, with no vaccine in 2015; repellent and nets; biting peaks dusk and dawn; fan/A-C rooms have fewer mosquitoes.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "verify_against": "CDC Vietnam page: dengue vaccine (Qdenga) exists but is not routinely recommended for travellers", "related_articles": ["vietnam-health-and-vaccines"]},
-    {"id": "health.pay-first", "claim": "Hospitals may refuse treatment without proof of ability to pay; care outside HCMC/Hanoi is poor; serious cases go to Bangkok, Singapore or Hong Kong; insurance must cover medevac and theft.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 274}, "related_articles": ["vietnam-health-and-vaccines", "is-vietnam-safe-for-americans"]},
-    {"id": "health.pharmacies", "claim": "City pharmacies are well stocked but check expiry dates; bring your own supply of anything specific.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 274}, "related_articles": ["what-to-pack-for-vietnam"]},
-    {"id": "health.food-water", "claim": "Diarrhoea, dysentery and giardia are the common ailments; wash hands, eat where food is cooked in front of you, peel fruit yourself, be wary even of five-star buffets and room service; bottled or boiled water; tea is safe.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["street-food-safety-vietnam"]},
-    {"id": "health.epidemics", "claim": "Bird flu, swine flu and hand-foot-and-mouth (children) have recurred since 2005; avoid the caged 'release' birds sold at temples.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["vietnam-health-and-vaccines", "vietnam-itinerary-for-families"]},
-    {"id": "health.wounds", "claim": "Cuts infect quickly in the climate; carry disinfectant and dressings.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["what-to-pack-for-vietnam", "renting-a-motorbike-in-vietnam"]},
-    {"id": "health.heat", "claim": "Hydrate, hat, sunglasses, loose clothes, sunscreen; the Feb–Apr hot season is the dangerous one.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["what-to-pack-for-vietnam"]}
+    {
+      "id": "health.vaccines-who",
+      "claim": "WHO-recommended for SE Asia: hepatitis A and B, tetanus, MMR, diphtheria, typhoid.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 271
+      },
+      "verify_against": "facts.json safety_health.vaccines_recommended (CDC list, verified) — CDC is the source we publish",
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.malaria-2015",
+      "claim": "Malaria 'eradicated from most of the country', slight risk on Phu Quoc and in highland areas; prophylaxis if visiting jungle areas or the Mekong, doctor's advice first.",
+      "status": "conflict",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 271
+      },
+      "conflict_with": "facts.json safety_health.malaria (CDC): rural transmission only, rare in the deltas, none in the main cities; CDC does not single out Phu Quoc. CDC wins.",
+      "related_articles": [
+        "vietnam-health-and-vaccines",
+        "phu-quoc-travel-guide"
+      ]
+    },
+    {
+      "id": "health.dengue",
+      "claim": "Dengue is the serious mosquito risk, with no vaccine in 2015; repellent and nets; biting peaks dusk and dawn; fan/A-C rooms have fewer mosquitoes.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "verify_against": "CDC Vietnam page: dengue vaccine (Qdenga) exists but is not routinely recommended for travellers",
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.pay-first",
+      "claim": "Hospitals may refuse treatment without proof of ability to pay; care outside HCMC/Hanoi is poor; serious cases go to Bangkok, Singapore or Hong Kong; insurance must cover medevac and theft.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 274
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines",
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "health.pharmacies",
+      "claim": "City pharmacies are well stocked but check expiry dates; bring your own supply of anything specific.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 274
+      },
+      "related_articles": [
+        "what-to-pack-for-vietnam"
+      ]
+    },
+    {
+      "id": "health.food-water",
+      "claim": "Diarrhoea, dysentery and giardia are the common ailments; wash hands, eat where food is cooked in front of you, peel fruit yourself, be wary even of five-star buffets and room service; bottled or boiled water; tea is safe.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "related_articles": [
+        "street-food-safety-vietnam"
+      ]
+    },
+    {
+      "id": "health.epidemics",
+      "claim": "Bird flu, swine flu and hand-foot-and-mouth (children) have recurred since 2005; avoid the caged 'release' birds sold at temples.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines",
+        "vietnam-itinerary-for-families"
+      ]
+    },
+    {
+      "id": "health.wounds",
+      "claim": "Cuts infect quickly in the climate; carry disinfectant and dressings.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "related_articles": [
+        "what-to-pack-for-vietnam",
+        "renting-a-motorbike-in-vietnam"
+      ]
+    },
+    {
+      "id": "health.heat",
+      "claim": "Hydrate, hat, sunglasses, loose clothes, sunscreen; the Feb–Apr hot season is the dangerous one.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "related_articles": [
+        "what-to-pack-for-vietnam"
+      ]
+    },
+    {
+      "id": "health.lp-tap-water-ice",
+      "claim": "LP's tap-water box: urban tap water is heavily chlorinated but still avoid it; bottled water everywhere; ice is generally safe in cities and resorts and is routinely added to drinks and coffee.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 500
+      },
+      "verify_against": "CDC Vietnam page 'do not drink tap water'; ice from commercial producers",
+      "related_articles": [
+        "street-food-safety-vietnam",
+        "vietnamese-coffee-guide"
+      ],
+      "note": "Resolves the direction of disputes.md tap_water_safe: no to tap, yes to city ice."
+    },
+    {
+      "id": "health.lp-malaria-2016",
+      "claim": "LP 2016: enormous misinformation about malaria; minimal-to-no risk in cities and resorts including Danang, Hanoi, HCMC and Nha Trang; in most rural areas the risk outweighs tablet side effects; isolated high-risk areas named as Ca Mau and Bac Lieu provinces and the rural south; doxycycline, mefloquine (~90%, psychiatric side effects) and Malarone (best for divers and short trips) discussed; standby treatment is a weak option.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 500
+      },
+      "verify_against": "facts.json safety_health.malaria (CDC) governs: rural only, rare in the deltas, none in the main cities",
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.lp-dengue-day-biter",
+      "claim": "The dengue mosquito bites by day as well as night, so repellent is an all-day measure; several hundred thousand hospitalisations a year in Vietnam, fatality under 0.3%; treat with rest and paracetamol, never aspirin.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 500
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.lp-diarrhoea-stats",
+      "claim": "Travellers' diarrhoea hits 30–50% of visitors within two weeks; over 80% is bacterial and responds to antibiotics; loperamide is only a 'stopper' for bus days and must not be used with fever or blood; restaurants are the biggest risk factor — fresh-cooked food, avoid shellfish and buffets, peel fruit, busy high-turnover places.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 501
+      },
+      "related_articles": [
+        "street-food-safety-vietnam",
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.lp-facilities",
+      "claim": "Private clinics first (Hanoi, HCMC, Danang near developed-country standard, can organise evacuation); state hospitals overcrowded and basic and need a special licence to treat foreigners, which few hold; for surgery fly to Bangkok, Singapore or Hong Kong; evacuation bills of US$100,000 are 'not unknown'; fake and expired over-the-counter drugs are common.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 499
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines",
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "health.lp-rabies",
+      "claim": "Rabies is uniformly fatal; dogs and monkeys are the usual source; wash the bite, apply iodine, start post-exposure treatment immediately; pre-travel vaccination greatly simplifies treatment because immunoglobulin is scarce.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 501
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.lp-heat-sun",
+      "claim": "Take it easy on arrival; rehydration solution and salty food; heatstroke above 41°C is an emergency; sunburn happens on cloudy days — SPF 30+, hat, avoid 10am–2pm; sunscreen is scarce and dear in Vietnam, bring it.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 502
+      },
+      "related_articles": [
+        "what-to-pack-for-vietnam"
+      ]
+    },
+    {
+      "id": "health.lp-accidents-not-disease",
+      "claim": "LP's framing: travellers worry about infections, but accidental injury — above all traffic — accounts for most life-threatening problems; serious infectious illness is rare, minor sickness common.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 498
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "renting-a-motorbike-in-vietnam"
+      ]
+    },
+    {
+      "id": "health.lp-yellow-fever-only",
+      "claim": "The only vaccination required by regulation is yellow fever, and only if you were in a yellow-fever zone within six days of arrival; WHO's recommended list (hep A and B, tetanus/diphtheria booster, MMR, typhoid, varicella; JE, rabies, meningitis and TB testing for long stays) matches the CDC list in facts.json.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 498
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.lp-pregnancy",
+      "claim": "Pregnant travellers: second trimester ideal; avoid remote areas; insurance must cover premature labour; no antimalarial is fully safe; azithromycin is the safe diarrhoea treatment; bring birth control as options are limited.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 502
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    }
   ],
   "safety": [
-    {"id": "safety.framing", "claim": "The book calls Vietnam 'one of the safest places to travel in the world': authoritarian state, law-abiding society, rising petty crime in big cities, rare violent crime.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 274}, "related_articles": ["is-vietnam-safe-for-americans"], "note": "Matches facts.json safety_health.main_risk and the Level 1 advisory."},
-    {"id": "safety.drive-by-snatch", "claim": "Motorbike-mounted thieves snatch bags, phones and cameras from pedestrians and pillion riders in HCMC and Nha Trang especially; money belt, hotel safe, photocopies of documents.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 274}, "related_articles": ["is-vietnam-safe-for-americans", "vietnam-for-solo-female-travelers"]},
-    {"id": "safety.coffee-scam", "claim": "A specific HCMC con: friendly strangers in District 1 invite you home or for coffee, leading to a rigged card game run by a Filipino gang.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 274}, "verify_against": "Still reported on forums; check for a current US Embassy mention", "related_articles": ["is-vietnam-safe-for-americans", "ho-chi-minh-city-travel-guide"]},
-    {"id": "safety.police", "claim": "Tourist police at major sites are 'generally just for show'; general police may refuse to file a theft report; be polite, bring an interpreter.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 274}, "related_articles": ["is-vietnam-safe-for-americans"], "note": "Consistent with facts.json safety_health.consular_access on slow official processes."},
-    {"id": "safety.uxo", "claim": "Unexploded ordnance remains a concern in the DMZ; tourist areas are cleared; never touch anything that looks like a shell.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["dmz-vinh-moc-tunnels-tour-from-hue"], "note": "Matches facts.json safety_health.uxo."},
-    {"id": "safety.women", "claim": "Solo foreign women are common; rural staring is curiosity; invitations home happen; dress modestly; normal night precautions.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["vietnam-for-solo-female-travelers"]},
-    {"id": "safety.lgbt", "claim": "Attitudes liberalised over the decade before 2015; HCMC has a thriving gay scene.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["ho-chi-minh-city-nightlife-guide"]},
-    {"id": "safety.emergency-numbers", "claim": "115 ambulance, 114 fire, 113 police.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["is-vietnam-safe-for-americans"], "note": "Matches facts.json safety_health.emergency_numbers."},
-    {"id": "safety.political-activism", "claim": "The timeline records a US citizen jailed in 2012 for pro-democracy activity, journalists expelled, and blocked social media — the state tolerates religion and commerce, not political dissent.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 51}, "related_articles": ["vietnam-etiquette-for-americans", "is-vietnam-safe-for-americans"]}
+    {
+      "id": "safety.framing",
+      "claim": "The book calls Vietnam 'one of the safest places to travel in the world': authoritarian state, law-abiding society, rising petty crime in big cities, rare violent crime.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 274
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans"
+      ],
+      "note": "Matches facts.json safety_health.main_risk and the Level 1 advisory."
+    },
+    {
+      "id": "safety.drive-by-snatch",
+      "claim": "Motorbike-mounted thieves snatch bags, phones and cameras from pedestrians and pillion riders in HCMC and Nha Trang especially; money belt, hotel safe, photocopies of documents.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 274
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "vietnam-for-solo-female-travelers"
+      ]
+    },
+    {
+      "id": "safety.coffee-scam",
+      "claim": "A specific HCMC con: friendly strangers in District 1 invite you home or for coffee, leading to a rigged card game run by a Filipino gang.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 274
+      },
+      "verify_against": "Still reported on forums; check for a current US Embassy mention",
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "ho-chi-minh-city-travel-guide"
+      ]
+    },
+    {
+      "id": "safety.police",
+      "claim": "Tourist police at major sites are 'generally just for show'; general police may refuse to file a theft report; be polite, bring an interpreter.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 274
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans"
+      ],
+      "note": "Consistent with facts.json safety_health.consular_access on slow official processes."
+    },
+    {
+      "id": "safety.uxo",
+      "claim": "Unexploded ordnance remains a concern in the DMZ; tourist areas are cleared; never touch anything that looks like a shell.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "related_articles": [
+        "dmz-vinh-moc-tunnels-tour-from-hue"
+      ],
+      "note": "Matches facts.json safety_health.uxo."
+    },
+    {
+      "id": "safety.women",
+      "claim": "Solo foreign women are common; rural staring is curiosity; invitations home happen; dress modestly; normal night precautions.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "related_articles": [
+        "vietnam-for-solo-female-travelers"
+      ]
+    },
+    {
+      "id": "safety.lgbt",
+      "claim": "Attitudes liberalised over the decade before 2015; HCMC has a thriving gay scene.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "related_articles": [
+        "ho-chi-minh-city-nightlife-guide"
+      ]
+    },
+    {
+      "id": "safety.emergency-numbers",
+      "claim": "115 ambulance, 114 fire, 113 police.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans"
+      ],
+      "note": "Matches facts.json safety_health.emergency_numbers."
+    },
+    {
+      "id": "safety.political-activism",
+      "claim": "The timeline records a US citizen jailed in 2012 for pro-democracy activity, journalists expelled, and blocked social media — the state tolerates religion and commerce, not political dissent.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 51
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans",
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "safety.lp-framing",
+      "claim": "LP: 'an extremely safe country'; police keep a tight grip on social order; muggings, robberies and sexual assaults rarely reported; scams and hassles concentrated in Hanoi, HCMC and Nha Trang, less in Hoi An; vendor hustle in Hue, Sapa and tourist beaches, none off the track; the single most important precaution is extra care on two wheels.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 484
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "safety.lp-uxo-numbers",
+      "claim": "UXO: an estimated 150,000 tonnes left at war's end; more than 40,000 Vietnamese maimed or killed since 1975; the central provinces worst, over 8,000 incidents in Quang Tri alone; cities, farmland and travelled paths are safe, straying is not; never touch relics or climb into bomb craters; don't leave established trekking paths.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 484
+      },
+      "related_articles": [
+        "dmz-vinh-moc-tunnels-tour-from-hue",
+        "sapa-trekking-guide"
+      ],
+      "note": "Consistent with facts.json safety_health.uxo; figures are LP's, 2016."
+    },
+    {
+      "id": "safety.lp-copycat-hotels",
+      "claim": "'Hotels from hell': a well-reviewed hotel spawns a copycat with the same name down the road, and taxi drivers deliver arrivals to the fake one — Hanoi especially; check the room before checking in; some Hanoi hotels harass guests to book tours.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 479
+      },
+      "related_articles": [
+        "where-to-stay-in-hanoi",
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "safety.lp-riptides",
+      "claim": "Big riptides run along the main coastline; flags and lifeguards only at popular beaches; test the current at quiet beaches; Phu Quoc's seas are more sheltered.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 479
+      },
+      "related_articles": [
+        "best-beaches-islands-vietnam",
+        "vietnam-itinerary-for-families"
+      ]
+    },
+    {
+      "id": "safety.lp-sea-creatures",
+      "claim": "Jellyfish (travel in groups — look before leaping; vinegar on stings), stonefish, scorpion fish and stingrays in the shallows — plastic shoes help; risk small.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 484
+      },
+      "related_articles": [
+        "best-beaches-islands-vietnam"
+      ]
+    },
+    {
+      "id": "safety.lp-children-attention",
+      "claim": "Children attract overwhelming attention, especially blond or blue-eyed babies — cheek pinching and, rarely, groin-grabbing of small boys — 'keep them close'; no car seats in taxis or rental cars; cots only in mid/top hotels; the real hazard is hand-to-mouth with dysentery, typhoid and hepatitis around — bring hand gel.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 479
+      },
+      "related_articles": [
+        "vietnam-itinerary-for-families"
+      ]
+    },
+    {
+      "id": "safety.lp-police-reports",
+      "claim": "Foreigners rarely get police hassle and bribe demands are very rare; after a theft the police can do little beyond an insurance report 'for a negotiable fee' — bring an English-speaking Vietnamese; many plain-clothes police; drug arrests mean a large fine, a long sentence or both.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 481
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans"
+      ],
+      "note": "Consistent with facts.json safety_health.drug_laws."
+    },
+    {
+      "id": "safety.lp-women",
+      "claim": "Relatively free of serious hassles; thousands of women travel alone each year; society does not expect women to be subordinate; East-Asian-looking women with Western men may very occasionally be taken for sex workers by 'ill-educated locals'; sleeveless tops draw attention away from the beach.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 487
+      },
+      "related_articles": [
+        "vietnam-for-solo-female-travelers"
+      ]
+    },
+    {
+      "id": "safety.lp-lgbt",
+      "claim": "No laws against same-sex relations; VietPride marches since 2012 (Hanoi late July/early August); a 2015 marriage law allows but does not recognise gay weddings; discreet scenes in both cities; same-sex hotel check-in fine; no public affection for anyone.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 481
+      },
+      "related_articles": [
+        "ho-chi-minh-city-nightlife-guide",
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "safety.lp-insurance-exclusions",
+      "claim": "Many policies exclude motorbiking, diving and even trekking — check; evacuation cover is essential; driving a vehicle requires a Vietnamese insurance policy.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 481
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines",
+        "renting-a-motorbike-in-vietnam"
+      ]
+    }
   ],
   "legal_and_practical": [
-    {"id": "legal.photography", "claim": "No photography of military areas or police stations; ask before photographing people (especially ethnic minorities) and religious sites.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 273}, "related_articles": ["best-photography-spots-in-vietnam", "sapa-trekking-guide"]},
-    {"id": "legal.helmet-two-up", "claim": "Helmets are mandatory; two people max per motorbike, inconsistently enforced.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 285}, "related_articles": ["renting-a-motorbike-in-vietnam"], "note": "facts.json getting_around.traffic_laws adds zero-alcohol and tightening enforcement."},
-    {"id": "legal.censorship", "claim": "All media censored; some websites blocked permanently, others intermittently; the post office inspects parcels.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 278}, "verify_against": "Facebook/Google accessible today; some news sites still blocked; VPN use common", "related_articles": ["esim-and-connectivity-vietnam"]},
-    {"id": "legal.betting", "claim": "Betting legal only on greyhounds and horses in 2015.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 260}, "verify_against": "Vung Tau dog track closed; casinos admit foreign passport holders", "related_articles": ["ho-chi-minh-city-nightlife-guide"]},
-    {"id": "legal.electricity", "claim": "220 V; most sockets take both French round and US flat two-pin plugs; hotels lend adapters; charge daily because small-town outages happen.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 273}, "related_articles": ["what-to-pack-for-vietnam"], "note": "disputes.md identity.power_plug_voltage agrees (A/C/F)."},
-    {"id": "legal.time", "claim": "UTC+7, 12 h ahead of US Eastern Standard, 15 h ahead of Pacific Standard; Gregorian calendar official, lunar for religion.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 273}, "related_articles": ["flights-to-vietnam-from-us"], "note": "Matches facts.json identity.timezone."},
-    {"id": "legal.toilets", "claim": "Public toilets rare; attended pay toilets in central HCMC; Hoi An has the most; squat toilets exist; carry paper and bin it rather than flush.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["what-to-pack-for-vietnam"]},
-    {"id": "legal.addresses", "claim": "Addresses read number, street, district (HCMC); a slash (120/5) means alley beside no. 120, building 5; numbering restarts at district lines; the word for street precedes the name.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 279}, "related_articles": ["grab-app-vietnam-guide", "where-to-stay-in-hcmc"]},
-    {"id": "legal.disabled-access", "claim": "Wheelchair users face vendor-blocked sidewalks (the kerb ramps are for motorbikes), few lifts, almost no accessible toilets; only new luxury hotels are equipped; agencies can hire an untrained helper.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 272}, "related_articles": ["vietnam-itinerary-first-timers"], "note": "No accessibility article exists — see coverage-gaps.md."}
+    {
+      "id": "legal.photography",
+      "claim": "No photography of military areas or police stations; ask before photographing people (especially ethnic minorities) and religious sites.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 273
+      },
+      "related_articles": [
+        "best-photography-spots-in-vietnam",
+        "sapa-trekking-guide"
+      ]
+    },
+    {
+      "id": "legal.helmet-two-up",
+      "claim": "Helmets are mandatory; two people max per motorbike, inconsistently enforced.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 285
+      },
+      "related_articles": [
+        "renting-a-motorbike-in-vietnam"
+      ],
+      "note": "facts.json getting_around.traffic_laws adds zero-alcohol and tightening enforcement."
+    },
+    {
+      "id": "legal.censorship",
+      "claim": "All media censored; some websites blocked permanently, others intermittently; the post office inspects parcels.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 278
+      },
+      "verify_against": "Facebook/Google accessible today; some news sites still blocked; VPN use common",
+      "related_articles": [
+        "esim-and-connectivity-vietnam"
+      ]
+    },
+    {
+      "id": "legal.betting",
+      "claim": "Betting legal only on greyhounds and horses in 2015.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 260
+      },
+      "verify_against": "Vung Tau dog track closed; casinos admit foreign passport holders",
+      "related_articles": [
+        "ho-chi-minh-city-nightlife-guide"
+      ]
+    },
+    {
+      "id": "legal.electricity",
+      "claim": "220 V; most sockets take both French round and US flat two-pin plugs; hotels lend adapters; charge daily because small-town outages happen.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 273
+      },
+      "related_articles": [
+        "what-to-pack-for-vietnam"
+      ],
+      "note": "disputes.md identity.power_plug_voltage agrees (A/C/F)."
+    },
+    {
+      "id": "legal.time",
+      "claim": "UTC+7, 12 h ahead of US Eastern Standard, 15 h ahead of Pacific Standard; Gregorian calendar official, lunar for religion.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 273
+      },
+      "related_articles": [
+        "flights-to-vietnam-from-us"
+      ],
+      "note": "Matches facts.json identity.timezone."
+    },
+    {
+      "id": "legal.toilets",
+      "claim": "Public toilets rare; attended pay toilets in central HCMC; Hoi An has the most; squat toilets exist; carry paper and bin it rather than flush.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 275
+      },
+      "related_articles": [
+        "what-to-pack-for-vietnam"
+      ]
+    },
+    {
+      "id": "legal.addresses",
+      "claim": "Addresses read number, street, district (HCMC); a slash (120/5) means alley beside no. 120, building 5; numbering restarts at district lines; the word for street precedes the name.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 279
+      },
+      "related_articles": [
+        "grab-app-vietnam-guide",
+        "where-to-stay-in-hcmc"
+      ]
+    },
+    {
+      "id": "legal.disabled-access",
+      "claim": "Wheelchair users face vendor-blocked sidewalks (the kerb ramps are for motorbikes), few lifts, almost no accessible toilets; only new luxury hotels are equipped; agencies can hire an untrained helper.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 272
+      },
+      "related_articles": [
+        "vietnam-itinerary-first-timers"
+      ],
+      "note": "No accessibility article exists — see coverage-gaps.md."
+    },
+    {
+      "id": "legal.lp-lunch-closure",
+      "claim": "Vietnamese rise early and 'consider sleeping in a sure indication of illness'; lunch is sacred — virtually everything shuts noon to 1.30pm and government offices 11.30 to 2; Saturday mornings open, Sundays closed; museums often shut Mondays.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 483
+      },
+      "related_articles": [
+        "best-things-to-do-in-hanoi",
+        "hue-imperial-city-guide"
+      ]
+    },
+    {
+      "id": "legal.lp-photo-rules",
+      "claim": "No photographs of airports, military bases or border checkpoints, and 'don't even think of' photographing Ho Chi Minh in his sarcophagus; with hill-tribe people ask first, accept no, and send the photo if you promise one.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 483
+      },
+      "related_articles": [
+        "best-photography-spots-in-vietnam",
+        "sapa-trekking-guide"
+      ]
+    },
+    {
+      "id": "legal.lp-tourist-offices",
+      "claim": "Government 'tourist offices' (Vietnam Tourism, Saigon Tourist and provincial equivalents) are travel agencies selling tours, not information desks; agents, backpacker cafés and other travellers are better sources.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 485
+      },
+      "related_articles": [
+        "vietnam-itinerary-first-timers"
+      ]
+    },
+    {
+      "id": "legal.lp-electricity",
+      "claim": "220 V 50 Hz, very rarely 110 V; sockets usually take two round pins (LP) — DK adds flat US pins also fit; bring an adapter either way.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 480
+      },
+      "verify_against": "IEC plug database (A, C, F)",
+      "related_articles": [
+        "what-to-pack-for-vietnam"
+      ]
+    },
+    {
+      "id": "legal.lp-toilets",
+      "claim": "If there is a bin beside the toilet the paper goes in the bin; no bin, flush; paper provided except at bus and train stations; squat toilets persist in public and rural places; scarcity hits women harder; a sarong makes roadside stops easier.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 485
+      },
+      "related_articles": [
+        "what-to-pack-for-vietnam"
+      ]
+    },
+    {
+      "id": "legal.lp-accessibility",
+      "claim": "Not easy for wheelchair users: chaotic traffic, pavements blocked by parked bikes and stalls, bathroom doorways too narrow for chairs over 60 cm; some budget and most mid/top hotels have lifts; trains are not geared for wheelchairs but open-tour buses are doable; a private car and driver makes almost anywhere accessible; Vietnamese are always willing to help lift; blind travellers need a sighted companion for the traffic.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 485
+      },
+      "related_articles": [
+        "vietnam-itinerary-first-timers"
+      ],
+      "note": "Still no accessibility article; see coverage-gaps."
+    },
+    {
+      "id": "legal.lp-smoking",
+      "claim": "A smoker's paradise and a non-smoker's nightmare despite an official ban in public places; air-con transport is effectively smoke-free.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 482
+      }
+    },
+    {
+      "id": "legal.lp-media-censorship",
+      "claim": "Vietnam News is 'propagandist'; Voice of Vietnam is pumped through loudspeakers in rural towns and parts of Hanoi — the dawn loudspeaker is real; listings magazines come and go.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 482
+      },
+      "related_articles": [
+        "esim-and-connectivity-vietnam"
+      ]
+    },
+    {
+      "id": "legal.lp-no-right-on-red",
+      "claim": "In cities you cannot turn right on a red light — a specifically American habit to unlearn.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 495
+      },
+      "verify_against": "Road Traffic Law; some junctions now have green right-turn arrows",
+      "related_articles": [
+        "renting-a-motorbike-in-vietnam"
+      ]
+    },
+    {
+      "id": "legal.lp-pirated-guidebooks",
+      "claim": "Cheap Lonely Planet guides sold on the street are pirated copies — 'if it's cheap, it's a copy'.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 481
+      },
+      "related_articles": [
+        "best-markets-in-vietnam"
+      ]
+    },
+    {
+      "id": "legal.lp-mobile-network",
+      "claim": "Excellent, comprehensive cellular network; three carriers — Viettel, Vinaphone, Mobifone — with offices nationwide; local SIMs 'extremely cheap'; LP 2016 said the GSM bands were incompatible with North American phones, which is no longer true of modern handsets.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 484
+      },
+      "verify_against": "Carrier tourist-SIM pages; eSIM support",
+      "related_articles": [
+        "sim-card-vs-esim-vietnam",
+        "esim-and-connectivity-vietnam"
+      ]
+    },
+    {
+      "id": "legal.lp-wifi",
+      "claim": "Wifi in about 98% of hotels and guesthouses, free except at some five-stars; cafés and restaurants too; speeds fine for everything but streaming (2016).",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 481
+      },
+      "verify_against": "Today fibre is standard",
+      "related_articles": [
+        "esim-and-connectivity-vietnam"
+      ]
+    },
+    {
+      "id": "legal.lp-public-holidays-2016",
+      "claim": "LP's 2016 public-holiday list: Jan 1; Tet (three days); Feb 3; Hung Kings (10th of 3rd moon); Apr 30; May 1; May 19; Sep 2; weekend holidays observed on Monday. It wrongly adds Buddha's birthday as a holiday on the 8th of the 4th moon.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 483
+      },
+      "verify_against": "Government annual holiday schedule",
+      "related_articles": [
+        "vietnam-festivals-calendar"
+      ]
+    }
   ]
 }

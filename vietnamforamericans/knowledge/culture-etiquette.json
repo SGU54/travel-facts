@@ -1,53 +1,839 @@
 {
   "_README": "Peoples, religion, manners, dress, language mechanics and shopping behaviour from DK 2015 (Portrait pp16–31, Practical pp272–273, Shopping pp254–256, Phrase Book p300). Paraphrase only. Mostly durable context; a few leads where the book names businesses or practices that drift.",
   "peoples": [
-    {"id": "people.54-groups", "claim": "54 recognised ethnic groups; Kinh (Viet) about 86%, on the coast and in the two deltas, sharing the lowlands with Hoa (ethnic Chinese, city merchants), Khmer (Mekong) and Cham (south-central coast and Mekong). Around 50 smaller groups live in the northern and central highlands; northern groups (Thai, Hmong, Dao) migrated from China, Central Highlands groups (Bahnar, Ede, Jarai, Bru, Mnong) are indigenous.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 24}, "related_articles": ["sapa-trekking-guide", "vietnam-etiquette-for-americans"]},
-    {"id": "people.minority-markers", "claim": "Visual markers a visitor meets: Flower Hmong layered embroidery (Bac Ha market), Red Dao red turbans with shaved hairlines, Black Thai black turbans with embroidery, Muong weaving under stilt houses, Bahnar communal houses with tall tapered roofs.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 25}, "related_articles": ["sapa-homestay-vs-day-trek", "best-photography-spots-in-vietnam"]},
-    {"id": "people.viet-kieu", "claim": "Overseas Vietnamese (Viet Kieu) who fled in the 1950s and after 1975 are returning to do business or find roots, while many older exiles refuse to go back; they bring Western habits with them.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 18}, "related_articles": ["vietnam-etiquette-for-americans"]},
-    {"id": "people.china-love-hate", "claim": "A thousand years of Chinese rule left Confucian hierarchy, Taoism, Buddhism and architecture, but the relationship is love-hate: borrow the culture, reject the political domination. Anti-China feeling flares (2014 riots) and shapes how Vietnamese see outsiders — the US is not the historic enemy.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 18}, "related_articles": ["vietnam-etiquette-for-americans", "vietnam-war-history-sites-guide"]},
-    {"id": "people.society", "claim": "Society is Confucian-hierarchical and patriarchal in form: elders respected, education prized, family duty cardinal; women formally equal in public life and in practice running the home.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 18}, "related_articles": ["vietnam-etiquette-for-americans"]},
-    {"id": "people.ao-dai", "claim": "Youth dress is Western; the ao dai survives for school uniforms, ceremonies and formal settings.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 18}, "related_articles": ["what-to-pack-for-vietnam"]}
+    {
+      "id": "people.54-groups",
+      "claim": "54 recognised ethnic groups; Kinh (Viet) about 86%, on the coast and in the two deltas, sharing the lowlands with Hoa (ethnic Chinese, city merchants), Khmer (Mekong) and Cham (south-central coast and Mekong). Around 50 smaller groups live in the northern and central highlands; northern groups (Thai, Hmong, Dao) migrated from China, Central Highlands groups (Bahnar, Ede, Jarai, Bru, Mnong) are indigenous.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 24
+      },
+      "related_articles": [
+        "sapa-trekking-guide",
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "people.minority-markers",
+      "claim": "Visual markers a visitor meets: Flower Hmong layered embroidery (Bac Ha market), Red Dao red turbans with shaved hairlines, Black Thai black turbans with embroidery, Muong weaving under stilt houses, Bahnar communal houses with tall tapered roofs.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 25
+      },
+      "related_articles": [
+        "sapa-homestay-vs-day-trek",
+        "best-photography-spots-in-vietnam"
+      ]
+    },
+    {
+      "id": "people.viet-kieu",
+      "claim": "Overseas Vietnamese (Viet Kieu) who fled in the 1950s and after 1975 are returning to do business or find roots, while many older exiles refuse to go back; they bring Western habits with them.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 18
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "people.china-love-hate",
+      "claim": "A thousand years of Chinese rule left Confucian hierarchy, Taoism, Buddhism and architecture, but the relationship is love-hate: borrow the culture, reject the political domination. Anti-China feeling flares (2014 riots) and shapes how Vietnamese see outsiders — the US is not the historic enemy.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 18
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans",
+        "vietnam-war-history-sites-guide"
+      ]
+    },
+    {
+      "id": "people.society",
+      "claim": "Society is Confucian-hierarchical and patriarchal in form: elders respected, education prized, family duty cardinal; women formally equal in public life and in practice running the home.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 18
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "people.ao-dai",
+      "claim": "Youth dress is Western; the ao dai survives for school uniforms, ceremonies and formal settings.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 18
+      },
+      "related_articles": [
+        "what-to-pack-for-vietnam"
+      ]
+    },
+    {
+      "id": "people.lp-national-psyche",
+      "claim": "LP's sketch: industrious, proud, stubborn, mischievous, quick to laugh; direct questions get evasive answers; nobody tells a stranger their life story; harmony and teamwork in principle, 'everyone for themselves' on the road and in commerce — the two things outsiders find most alien.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 454
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "people.lp-north-south-caricature",
+      "claim": "'Southerners think, then do; northerners think, then think some more.' Southerners see northerners as hard-faced and humourless; northerners see southerners as frivolous and money-obsessed. Climate underlies it — three rice harvests a year in the Mekong versus the north's grey drizzly winter, 'Maine and Alabama' — plus fifty years of communism north and two decades of American free-for-all south.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 455
+      },
+      "related_articles": [
+        "north-to-south-or-south-to-north-vietnam",
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "people.lp-kinship-example",
+      "claim": "Address terms by relative age: a man in his twenties calls a mid-thirties stranger anh (big brother) and himself em; calls a man in his forties chu (uncle) and himself chau (nephew); friends can agree on ban. Getting it wrong can be an insult or merely too casual.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 454
+      },
+      "related_articles": [
+        "vietnamese-language-useful-phrases",
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "people.lp-generations",
+      "claim": "Elders remember the war years and value restraint; the young want success, the new motorbike, the haircut and the iPhone, date whom they like and stay out late — but still come home to Mum and Dad; several generations under one roof is normal; family status outranks salary; the extended family runs to third cousins.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 455
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "people.lp-early-risers",
+      "claim": "Idleness is despised; parks fill with t'ai chi at dawn and offices are fully staffed by 7am — the whole nation runs on early energy regardless of heat.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 455
+      },
+      "related_articles": [
+        "best-things-to-do-in-hanoi"
+      ]
+    },
+    {
+      "id": "people.lp-overcharging-explained",
+      "claim": "Why foreigners get overcharged: the habit sits in tourism and is rare off the trail; the mentality is that Westerners won't learn prices or the language and leave in two weeks; it is shifting as repeat business and online reviews bite; and the state taught it — until recently the government itself set foreigner prices four to ten times the local rate for trains and hotels. Context: two million dead in the 1940s famine and post-war destitution.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 456
+      },
+      "related_articles": [
+        "vietnam-money-and-costs",
+        "tipping-in-vietnam"
+      ]
+    },
+    {
+      "id": "people.lp-minorities-stats",
+      "claim": "53 minorities, about 14 million people, 14% of the population but half of all poor households (WHO 2015); most live in the northern mountains along the China and Laos borders; the government pushes lowland resettlement and cash crops; northern women still weave and embroider, central-highland dress is mostly gone; media prejudice shows them as primitive or 'subversive' because some sided with the US in the war (CIDG).",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 457
+      },
+      "related_articles": [
+        "sapa-trekking-guide",
+        "sapa-homestay-vs-day-trek"
+      ]
+    },
+    {
+      "id": "people.lp-minority-groups",
+      "claim": "Main groups by LP: Tay 1.6m (lowland northeast, Vietnamese-style beliefs plus spirits), Thai 1.5m (river valleys Hoa Binh–Muong Lay, stilt houses, Red/Black/White), Muong 1.4m (Hoa Binh, gongs), Hmong ~1m (far north, animist, Black/White/Red/Green/Flower dress), Nung 800k (northeast, basketry), Jarai 350k (highlands, carved grave effigies), Sedang 150k (no family names, sexual equality). Village picks: Sapa (Red Dzao, Black Hmong), Bac Ha (Flower Hmong), Mai Chau (White Thai), Cao Bang, Kon Tum (Bahnar), Bho Hoong (Co Tu).",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 457
+      },
+      "related_articles": [
+        "sapa-trekking-guide",
+        "best-national-parks-treks-vietnam"
+      ]
+    },
+    {
+      "id": "people.lp-viet-kieu-attitudes",
+      "claim": "Overseas Vietnamese were traditionally maligned at home as cowardly, arrogant and privileged; official policy now welcomes them and their money. Relevant to Vietnamese-American readers.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 455
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "people.lp-hoa-commerce",
+      "claim": "The ethnic Chinese have always been the largest minority and much of the urban commercial class, viewed with suspicion by the state; many left as boat people in the 1970s; today central to the economy.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 456
+      },
+      "related_articles": [
+        "ho-chi-minh-city-travel-guide"
+      ]
+    }
   ],
   "religion": [
-    {"id": "rel.tam-giao", "claim": "The 'triple religion' Tam Giao blends Mahayana Buddhism, Confucianism and Taoism, with ancestor veneration and spirit worship as an unacknowledged fourth strand; Theravada among the Khmer; Cham Hindus on the coast and Cham Muslims (Bani, a local Shia form) in the Mekong; about nine million Christians (90% Catholic); home-grown Cao Dai (~3 m) and Hoa Hao (Mekong, puritanical, anti-communist in the war). All tolerated so long as they don't challenge the Party.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 26}, "related_articles": ["vietnam-temples-pagodas-guide"]},
-    {"id": "rel.atheism-era", "claim": "Atheism was officially promoted in the communist decades; the old faiths have flourished since the 1990s.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 19}, "related_articles": ["vietnam-temples-pagodas-guide"]},
-    {"id": "rel.cao-dai", "claim": "Cao Dai, founded by civil servant Ngo Van Chieu, holds seances with 'divine agents' and counts Joan of Arc, Pasteur and Chaplin among its saints; priests wear yellow, blue and red for the three teachings; the Divine Eye in a triangle marks every temple; the Holy See is at Tay Ninh.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 27}, "related_articles": ["war-remnants-museum-cu-chi-tunnels", "vietnam-temples-pagodas-guide"]},
-    {"id": "rel.ancestor-altar", "claim": "Nearly every home has an ancestor altar with photos, name tablets, incense, fruit, tea, sometimes cigarettes and alcohol; paper money (often fake US dollars) and paper goods are burned for the dead; family tombs stand in the paddy fields.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 27}, "related_articles": ["vietnam-etiquette-for-americans", "traveling-vietnam-during-tet"]},
-    {"id": "rel.incense-everywhere", "claim": "Incense burning, originally Buddhist, runs through every tradition — even Catholic churches.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 26}, "related_articles": ["vietnam-temples-pagodas-guide"]},
-    {"id": "rel.pagoda-vs-temple", "claim": "A pagoda (chua) is Buddhist; a temple (den) honours a deity, hero or spirit. Pagodas: single-storey timber halls on ironwood columns, front/central/altar halls in rising order, pond, bell tower, dragons everywhere. Multi-tier towers are Chinese-derived.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 30}, "related_articles": ["vietnam-temples-pagodas-guide"]}
+    {
+      "id": "rel.tam-giao",
+      "claim": "The 'triple religion' Tam Giao blends Mahayana Buddhism, Confucianism and Taoism, with ancestor veneration and spirit worship as an unacknowledged fourth strand; Theravada among the Khmer; Cham Hindus on the coast and Cham Muslims (Bani, a local Shia form) in the Mekong; about nine million Christians (90% Catholic); home-grown Cao Dai (~3 m) and Hoa Hao (Mekong, puritanical, anti-communist in the war). All tolerated so long as they don't challenge the Party.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 26
+      },
+      "related_articles": [
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "rel.atheism-era",
+      "claim": "Atheism was officially promoted in the communist decades; the old faiths have flourished since the 1990s.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 19
+      },
+      "related_articles": [
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "rel.cao-dai",
+      "claim": "Cao Dai, founded by civil servant Ngo Van Chieu, holds seances with 'divine agents' and counts Joan of Arc, Pasteur and Chaplin among its saints; priests wear yellow, blue and red for the three teachings; the Divine Eye in a triangle marks every temple; the Holy See is at Tay Ninh.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 27
+      },
+      "related_articles": [
+        "war-remnants-museum-cu-chi-tunnels",
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "rel.ancestor-altar",
+      "claim": "Nearly every home has an ancestor altar with photos, name tablets, incense, fruit, tea, sometimes cigarettes and alcohol; paper money (often fake US dollars) and paper goods are burned for the dead; family tombs stand in the paddy fields.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 27
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans",
+        "traveling-vietnam-during-tet"
+      ]
+    },
+    {
+      "id": "rel.incense-everywhere",
+      "claim": "Incense burning, originally Buddhist, runs through every tradition — even Catholic churches.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 26
+      },
+      "related_articles": [
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "rel.pagoda-vs-temple",
+      "claim": "A pagoda (chua) is Buddhist; a temple (den) honours a deity, hero or spirit. Pagodas: single-storey timber halls on ironwood columns, front/central/altar halls in rising order, pond, bell tower, dragons everywhere. Multi-tier towers are Chinese-derived.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 30
+      },
+      "related_articles": [
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "rel.lp-faith-stats",
+      "claim": "Surveys suggest only about 20% of Vietnamese consider themselves to have a faith, though most identify with the Tam Giao blend; Catholics are 8–10%, the second-highest concentration in Asia; Protestants ~200k, mostly highland minorities; Cao Dai 2–3 million; Hoa Hao founded 1939 in the delta; ~70k Cham Muslims (traditionally Friday-only Islam) and ~60k Cham Hindus around Phan Rang.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 458
+      },
+      "related_articles": [
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "rel.lp-mega-temples",
+      "claim": "Vast new Buddhist complexes have been built (Bai Dinh near Ninh Binh) and giant Buddha statues now define the Danang and Vung Tau coastlines — religion as spectacle and state-tolerated identity.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 459
+      },
+      "related_articles": [
+        "ninh-binh-day-trip-from-hanoi",
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "rel.lp-cao-dai-saints",
+      "claim": "Cao Dai's prophets include Buddha, Confucius, Jesus, Moses and Mohammed alongside Joan of Arc, Shakespeare and Victor Hugo; founded in the 1920s; HQ at Tay Ninh.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 459
+      },
+      "related_articles": [
+        "war-remnants-museum-cu-chi-tunnels"
+      ]
+    }
   ],
   "manners": [
-    {"id": "man.core", "claim": "Smile a lot, never raise your voice, never point at people; beckon with the palm facing down; losing your temper is counter-productive — grievances work when put politely.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 272}, "related_articles": ["vietnam-etiquette-for-americans"]},
-    {"id": "man.touch", "claim": "Handshakes are normal; don't touch anyone's head (seat of the soul); same-sex arm-linking and shoulder-patting is ordinary, opposite-sex touching is not unless married; locals may pinch or cuddle foreign babies out of affection.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 273}, "related_articles": ["vietnam-etiquette-for-americans", "vietnam-itinerary-for-families"]},
-    {"id": "man.dress", "claim": "Men in shorts are common, women dress modestly; at places of worship cover arms and legs — the Vietnamese care about propriety there.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 273}, "related_articles": ["what-to-pack-for-vietnam", "vietnam-temples-pagodas-guide"]},
-    {"id": "man.table", "claim": "Wait for the eldest to begin unless you are guest of honour; never stand chopsticks upright in a bowl or stab food (funeral gestures); noisy enthusiastic eating is appreciation; dishes come as they are ready, not in courses; order one dish per person plus one for the table and share; home invitations are rare — guests are hosted in restaurants.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 273}, "related_articles": ["vietnam-etiquette-for-americans", "vietnamese-food-guide-first-timers"]},
-    {"id": "man.bia-hoi", "claim": "Bia hoi joints are tiny-stool, mostly-male, hole-in-the-wall places where foreigners are welcome.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 243}, "related_articles": ["bia-hoi-guide-vietnam"]},
-    {"id": "man.photography", "claim": "Ask before photographing people, minorities and religious sites; none at military or police installations.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 273}, "related_articles": ["best-photography-spots-in-vietnam"]},
-    {"id": "man.minority-villages", "claim": "Trekking agencies' local guides act as 'ambassadors' when approaching ethnic villages — the book's implicit rule is that you don't walk into a village unaccompanied.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 265}, "related_articles": ["sapa-homestay-vs-day-trek", "sapa-trekking-guide"]},
-    {"id": "man.children", "claim": "Children are adored and welcome everywhere; no kids' menus but ice cream, yogurt and fruit are always available; hotels put under-12s in the parents' bed free and can find a babysitter.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 272}, "related_articles": ["vietnam-itinerary-for-families"]}
+    {
+      "id": "man.core",
+      "claim": "Smile a lot, never raise your voice, never point at people; beckon with the palm facing down; losing your temper is counter-productive — grievances work when put politely.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 272
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "man.touch",
+      "claim": "Handshakes are normal; don't touch anyone's head (seat of the soul); same-sex arm-linking and shoulder-patting is ordinary, opposite-sex touching is not unless married; locals may pinch or cuddle foreign babies out of affection.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 273
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans",
+        "vietnam-itinerary-for-families"
+      ]
+    },
+    {
+      "id": "man.dress",
+      "claim": "Men in shorts are common, women dress modestly; at places of worship cover arms and legs — the Vietnamese care about propriety there.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 273
+      },
+      "related_articles": [
+        "what-to-pack-for-vietnam",
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "man.table",
+      "claim": "Wait for the eldest to begin unless you are guest of honour; never stand chopsticks upright in a bowl or stab food (funeral gestures); noisy enthusiastic eating is appreciation; dishes come as they are ready, not in courses; order one dish per person plus one for the table and share; home invitations are rare — guests are hosted in restaurants.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 273
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans",
+        "vietnamese-food-guide-first-timers"
+      ]
+    },
+    {
+      "id": "man.bia-hoi",
+      "claim": "Bia hoi joints are tiny-stool, mostly-male, hole-in-the-wall places where foreigners are welcome.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 243
+      },
+      "related_articles": [
+        "bia-hoi-guide-vietnam"
+      ]
+    },
+    {
+      "id": "man.photography",
+      "claim": "Ask before photographing people, minorities and religious sites; none at military or police installations.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 273
+      },
+      "related_articles": [
+        "best-photography-spots-in-vietnam"
+      ]
+    },
+    {
+      "id": "man.minority-villages",
+      "claim": "Trekking agencies' local guides act as 'ambassadors' when approaching ethnic villages — the book's implicit rule is that you don't walk into a village unaccompanied.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 265
+      },
+      "related_articles": [
+        "sapa-homestay-vs-day-trek",
+        "sapa-trekking-guide"
+      ]
+    },
+    {
+      "id": "man.children",
+      "claim": "Children are adored and welcome everywhere; no kids' menus but ice cream, yogurt and fruit are always available; hotels put under-12s in the parents' bed free and can find a babysitter.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 272
+      },
+      "related_articles": [
+        "vietnam-itinerary-for-families"
+      ]
+    },
+    {
+      "id": "man.lp-senior-pays",
+      "claim": "When dining with Vietnamese, the most senior person customarily pays for everyone; remove shoes entering a home; never pat or touch a head; don't point your feet at people or sacred objects; shorts to the knee and covered shoulders at religious sites; no topless or nude sunbathing anywhere.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 21
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "man.lp-business-cards",
+      "claim": "Business cards are exchanged for even the smallest transaction or contact — 'hand them out like confetti'.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 456
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "man.lp-face-and-temper",
+      "claim": "Face is everything: never lose your temper with a Vietnamese person — it ends any chance of a resolution. The reverse holds too: traders shouting at, tugging or pressuring tourists is culturally unacceptable, so when a hustler does it, 'walk on'.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 455
+      },
+      "related_articles": [
+        "vietnam-etiquette-for-americans",
+        "best-markets-in-vietnam"
+      ]
+    },
+    {
+      "id": "man.lp-hats-bow",
+      "claim": "Take off your hat and bow the head slightly when addressing elders or monks; the head is the symbolic high point of the body.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 456
+      },
+      "related_articles": [
+        "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "man.lp-restaurant-manners",
+      "claim": "Reservations rarely needed except national-park restaurants and top city places; scruffy-but-busy local restaurants mean fresh food; tourist-area 'international' places tone the local food down; cafés serve snacks, not meals.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 21
+      },
+      "related_articles": [
+        "vietnamese-food-guide-first-timers"
+      ]
+    }
   ],
   "language": [
-    {"id": "lang.basics", "claim": "Vietnamese is Mon-Khmer (Austroasiatic), six-toned in the Hanoi standard; central and southern dialects have fewer tones and different vocabulary but the same grammar. Written in quoc ngu, a Roman script devised by 17th-century Jesuits and made official by the French.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 300}, "related_articles": ["vietnamese-language-useful-phrases"]},
-    {"id": "lang.kinship-address", "claim": "People address each other by kinship terms chosen by relative age and status: anh/chi (older brother/sister) for a young adult, em for anyone younger, ong/ba (grandfather/grandmother) respectfully for elders, co for madam. Getting this roughly right matters more than vocabulary.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 300}, "related_articles": ["vietnamese-language-useful-phrases", "vietnam-etiquette-for-americans"]},
-    {"id": "lang.pronunciation-traps", "claim": "Traps for English speakers: d sounds like z (north) or y (south); đ is d; gi like z/y; tr like ch; x like s; r like z; ng/ngh nasal; nh like ny. Place-name consequence: 'Dong Khoi' and 'Da Nang' start with different letters.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 300}, "related_articles": ["vietnamese-language-useful-phrases"]},
-    {"id": "lang.write-it-down", "claim": "Vendors speak fractured English but because the script is Roman they can WRITE prices and names — have them write it; in rural areas hire an interpreter.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 272}, "related_articles": ["vietnamese-language-useful-phrases"]},
-    {"id": "lang.rice-greeting", "claim": "The everyday greeting literally asks whether you have eaten rice yet; rice vocabulary is vast (ordinary gao te vs sticky gao nep for festivals).", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 244}, "related_articles": ["vietnamese-language-useful-phrases", "vietnamese-food-guide-first-timers"]},
-    {"id": "lang.literature", "claim": "The Tale of Kieu (Nguyen Du) is the national classic; Bao Ninh's The Sorrow of War is the Vietnamese war novel an American reader is most likely to be pointed to.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 19}, "related_articles": ["vietnam-war-history-sites-guide"]}
+    {
+      "id": "lang.basics",
+      "claim": "Vietnamese is Mon-Khmer (Austroasiatic), six-toned in the Hanoi standard; central and southern dialects have fewer tones and different vocabulary but the same grammar. Written in quoc ngu, a Roman script devised by 17th-century Jesuits and made official by the French.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 300
+      },
+      "related_articles": [
+        "vietnamese-language-useful-phrases"
+      ]
+    },
+    {
+      "id": "lang.kinship-address",
+      "claim": "People address each other by kinship terms chosen by relative age and status: anh/chi (older brother/sister) for a young adult, em for anyone younger, ong/ba (grandfather/grandmother) respectfully for elders, co for madam. Getting this roughly right matters more than vocabulary.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 300
+      },
+      "related_articles": [
+        "vietnamese-language-useful-phrases",
+        "vietnam-etiquette-for-americans"
+      ]
+    },
+    {
+      "id": "lang.pronunciation-traps",
+      "claim": "Traps for English speakers: d sounds like z (north) or y (south); đ is d; gi like z/y; tr like ch; x like s; r like z; ng/ngh nasal; nh like ny. Place-name consequence: 'Dong Khoi' and 'Da Nang' start with different letters.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 300
+      },
+      "related_articles": [
+        "vietnamese-language-useful-phrases"
+      ]
+    },
+    {
+      "id": "lang.write-it-down",
+      "claim": "Vendors speak fractured English but because the script is Roman they can WRITE prices and names — have them write it; in rural areas hire an interpreter.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 272
+      },
+      "related_articles": [
+        "vietnamese-language-useful-phrases"
+      ]
+    },
+    {
+      "id": "lang.rice-greeting",
+      "claim": "The everyday greeting literally asks whether you have eaten rice yet; rice vocabulary is vast (ordinary gao te vs sticky gao nep for festivals).",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 244
+      },
+      "related_articles": [
+        "vietnamese-language-useful-phrases",
+        "vietnamese-food-guide-first-timers"
+      ]
+    },
+    {
+      "id": "lang.literature",
+      "claim": "The Tale of Kieu (Nguyen Du) is the national classic; Bao Ninh's The Sorrow of War is the Vietnamese war novel an American reader is most likely to be pointed to.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 19
+      },
+      "related_articles": [
+        "vietnam-war-history-sites-guide"
+      ]
+    },
+    {
+      "id": "lang.lp-muong-and-tones",
+      "claim": "Vietnamese is Mon-Khmer with Muong (a hill-tribe language) as its closest relative; six tones in the standard, but in the south two tones merge so southern speech effectively has five; words are monosyllabic so stress is not an issue; north/south vocabulary differs ('yes' is vang in the north, da in the south).",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 503
+      },
+      "related_articles": [
+        "vietnamese-language-useful-phrases"
+      ]
+    },
+    {
+      "id": "lang.lp-english-reality",
+      "claim": "English is not widely spoken; hotel and restaurant staff in tourist areas speak a little and 'communication problems are very common'; a few phrases go a long way.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 21
+      },
+      "related_articles": [
+        "vietnamese-language-useful-phrases"
+      ]
+    },
+    {
+      "id": "lang.lp-reading-list",
+      "claim": "LP's reading and viewing list: The Quiet American (Greene), The Sorrow of War (Bao Ninh), Vietnam: Rising Dragon (Hayton), Catfish & Mandala (Andrew X. Pham, a Vietnamese-American's return), Shadows and Wind (Templer), Paradise of the Blind (Duong Thu Huong), Communion (Kim Fay, food); films Apocalypse Now, The Deer Hunter, Platoon, Cyclo, The Quiet American (2002).",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 434
+      },
+      "related_articles": [
+        "vietnam-war-history-sites-guide"
+      ]
+    }
   ],
   "arts": [
-    {"id": "arts.water-puppets", "claim": "Water puppetry (roi nuoc) was post-harvest village entertainment in the Red River Delta; Hanoi's Thang Long theatre by Hoan Kiem is the canonical venue, HCMC's Golden Dragon runs daily shows; the Thay Pagoda festival honours the art's patron saint.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 29}, "related_articles": ["hanoi-water-puppet-show-guide"]},
-    {"id": "arts.theatre-forms", "claim": "Three sung theatre forms: tuong/hat boi (court classical, Chinese-opera style, red face = loyal, white = villain), cheo (village moral theatre, northern), cai luong (southern 'reformed' musical with spoken scenes). Hue's nha nhac court music is UNESCO-listed (2003); ca tru chamber singing is on the urgent-safeguarding list (2009); quan ho is Bac Ninh's courtship singing.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 28}, "related_articles": ["hue-travel-guide", "vietnam-festivals-calendar"]},
-    {"id": "arts.hue-festival", "claim": "Hue Festival was biennial in June of even years.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 261}, "verify_against": "Since 2022 it runs as a year-round 'four seasons' programme", "related_articles": ["hue-travel-guide"]},
-    {"id": "arts.tube-houses", "claim": "'Tube houses' date from the Later Le era (1428–1788): as narrow as 2 m and up to 80 m deep because of land deeds; today's skinny 'rocket' buildings are the same plots gone vertical — which explains the streetscape an American notices first.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 31}, "related_articles": ["hanoi-old-quarter-guide"]},
-    {"id": "arts.guild-streets", "claim": "Old Quarter streets are named for what they once sold (Hang Gai silk, Hang Ma paper goods, Hang Chieu mats, Hang Thiec tin) and still loosely specialise; Hang Ma is the lantern street at Mid-Autumn.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 255}, "related_articles": ["hanoi-old-quarter-guide", "best-markets-in-vietnam"]}
+    {
+      "id": "arts.water-puppets",
+      "claim": "Water puppetry (roi nuoc) was post-harvest village entertainment in the Red River Delta; Hanoi's Thang Long theatre by Hoan Kiem is the canonical venue, HCMC's Golden Dragon runs daily shows; the Thay Pagoda festival honours the art's patron saint.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 29
+      },
+      "related_articles": [
+        "hanoi-water-puppet-show-guide"
+      ]
+    },
+    {
+      "id": "arts.theatre-forms",
+      "claim": "Three sung theatre forms: tuong/hat boi (court classical, Chinese-opera style, red face = loyal, white = villain), cheo (village moral theatre, northern), cai luong (southern 'reformed' musical with spoken scenes). Hue's nha nhac court music is UNESCO-listed (2003); ca tru chamber singing is on the urgent-safeguarding list (2009); quan ho is Bac Ninh's courtship singing.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 28
+      },
+      "related_articles": [
+        "hue-travel-guide",
+        "vietnam-festivals-calendar"
+      ]
+    },
+    {
+      "id": "arts.hue-festival",
+      "claim": "Hue Festival was biennial in June of even years.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 261
+      },
+      "verify_against": "Since 2022 it runs as a year-round 'four seasons' programme",
+      "related_articles": [
+        "hue-travel-guide"
+      ]
+    },
+    {
+      "id": "arts.tube-houses",
+      "claim": "'Tube houses' date from the Later Le era (1428–1788): as narrow as 2 m and up to 80 m deep because of land deeds; today's skinny 'rocket' buildings are the same plots gone vertical — which explains the streetscape an American notices first.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 31
+      },
+      "related_articles": [
+        "hanoi-old-quarter-guide"
+      ]
+    },
+    {
+      "id": "arts.guild-streets",
+      "claim": "Old Quarter streets are named for what they once sold (Hang Gai silk, Hang Ma paper goods, Hang Chieu mats, Hang Thiec tin) and still loosely specialise; Hang Ma is the lantern street at Mid-Autumn.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 255
+      },
+      "related_articles": [
+        "hanoi-old-quarter-guide",
+        "best-markets-in-vietnam"
+      ]
+    }
   ],
   "shopping_behaviour": [
-    {"id": "shop.hours", "claim": "City shops roughly 8am–8/9pm, malls 10–10, staff winding down an hour early; traditional markets sunrise to sunset with street night markets to midnight; seven days; some closures around Tet.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 254}, "verify_against": "Current hours at Ben Thanh / Dong Xuan / Hoi An night market", "related_articles": ["best-markets-in-vietnam", "ben-thanh-market-guide"]},
-    {"id": "shop.counterfeit-relics", "claim": "Counterfeits everywhere; the US-tourist-specific ones are fake Zippo lighters with 'regimental' engravings and fake army dog tags sold as war relics.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 255}, "related_articles": ["ben-thanh-market-guide", "vietnam-war-history-sites-guide", "vietnam-customs-and-duty-free-rules"]},
-    {"id": "shop.coffee", "claim": "Three coffee tiers: Arabica (dearest), Robusta (cheaper, the bulk crop), 'weasel' civet coffee (expensive, dubious); lotus-scented green tea; buy at markets, not from street vendors who overcharge.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 255}, "related_articles": ["vietnamese-coffee-guide", "vietnamese-cooking-ingredients-to-bring-home"]},
-    {"id": "shop.hoi-an-tailors", "claim": "Hoi An is the clothes capital: boutiques copy a magazine outfit in hours; named 2015 shops are leads only.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 256}, "verify_against": "Our hoi-an-tailors article covers method, not names; verify any named shop still exists", "related_articles": ["hoi-an-tailors-how-to-order"]},
-    {"id": "shop.khai-silk-warning", "claim": "The book praises Khai Silk in Hanoi.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 256}, "verify_against": "2017 scandal: Chinese-made silk relabelled; brand collapsed. Never recommend.", "related_articles": ["hanoi-old-quarter-guide"]},
-    {"id": "shop.ethical-craft", "claim": "Non-profit craft outlets employing disabled makers existed in Hanoi and Hoi An (Lan Handicrafts, HoaNhap) — a good ethical-shopping angle if still trading.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 256}, "verify_against": "Whether these outlets still operate; Reaching Out (Hoi An) is the better-known current example", "related_articles": ["hoi-an-travel-guide"]},
-    {"id": "shop.furniture-shipping", "claim": "Furniture and lacquer shops arrange shipping home; lacquer often carries eggshell or mother-of-pearl inlay.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 256}, "related_articles": ["best-markets-in-vietnam"]}
+    {
+      "id": "shop.hours",
+      "claim": "City shops roughly 8am–8/9pm, malls 10–10, staff winding down an hour early; traditional markets sunrise to sunset with street night markets to midnight; seven days; some closures around Tet.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 254
+      },
+      "verify_against": "Current hours at Ben Thanh / Dong Xuan / Hoi An night market",
+      "related_articles": [
+        "best-markets-in-vietnam",
+        "ben-thanh-market-guide"
+      ]
+    },
+    {
+      "id": "shop.counterfeit-relics",
+      "claim": "Counterfeits everywhere; the US-tourist-specific ones are fake Zippo lighters with 'regimental' engravings and fake army dog tags sold as war relics.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 255
+      },
+      "related_articles": [
+        "ben-thanh-market-guide",
+        "vietnam-war-history-sites-guide",
+        "vietnam-customs-and-duty-free-rules"
+      ]
+    },
+    {
+      "id": "shop.coffee",
+      "claim": "Three coffee tiers: Arabica (dearest), Robusta (cheaper, the bulk crop), 'weasel' civet coffee (expensive, dubious); lotus-scented green tea; buy at markets, not from street vendors who overcharge.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 255
+      },
+      "related_articles": [
+        "vietnamese-coffee-guide",
+        "vietnamese-cooking-ingredients-to-bring-home"
+      ]
+    },
+    {
+      "id": "shop.hoi-an-tailors",
+      "claim": "Hoi An is the clothes capital: boutiques copy a magazine outfit in hours; named 2015 shops are leads only.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 256
+      },
+      "verify_against": "Our hoi-an-tailors article covers method, not names; verify any named shop still exists",
+      "related_articles": [
+        "hoi-an-tailors-how-to-order"
+      ]
+    },
+    {
+      "id": "shop.khai-silk-warning",
+      "claim": "The book praises Khai Silk in Hanoi.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 256
+      },
+      "verify_against": "2017 scandal: Chinese-made silk relabelled; brand collapsed. Never recommend.",
+      "related_articles": [
+        "hanoi-old-quarter-guide"
+      ]
+    },
+    {
+      "id": "shop.ethical-craft",
+      "claim": "Non-profit craft outlets employing disabled makers existed in Hanoi and Hoi An (Lan Handicrafts, HoaNhap) — a good ethical-shopping angle if still trading.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 256
+      },
+      "verify_against": "Whether these outlets still operate; Reaching Out (Hoi An) is the better-known current example",
+      "related_articles": [
+        "hoi-an-travel-guide"
+      ]
+    },
+    {
+      "id": "shop.furniture-shipping",
+      "claim": "Furniture and lacquer shops arrange shipping home; lacquer often carries eggshell or mother-of-pearl inlay.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 256
+      },
+      "related_articles": [
+        "best-markets-in-vietnam"
+      ]
+    },
+    {
+      "id": "shop.lp-tourism-survey",
+      "claim": "An EU-funded 2015 survey found only 6% of visitors said they would return; complaints: dangerous road transport, poor infrastructure, vendor hassle, shopkeeper overcharging, no reliable information. Worth knowing as the baseline grievance list our articles answer.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 435
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "shop.lp-hustle-geography",
+      "claim": "Hustle from vendors and cyclo drivers concentrates in Hue, Sapa and tourist beaches and the three big cities; off the beaten track there is little or none.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 20
+      },
+      "related_articles": [
+        "hue-travel-guide",
+        "sapa-trekking-guide"
+      ]
+    }
   ]
 }

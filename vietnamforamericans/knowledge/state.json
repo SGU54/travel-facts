@@ -2,16 +2,16 @@
   "_README": "Reading state for the guidebook knowledge DB. Read this before resuming. The project-wide state.json one level up is the site's record; this one only tracks book reading.",
   "updated_at": "2026-10-16",
   "books_done": [
-    "dk-2015"
+    "dk-2015",
+    "lp-2016"
   ],
   "books_pending": [
-    "lp-2016",
     "moon-2015",
     "insight-2015",
     "goscha-2016",
     "lp-phrasebook-2016"
   ],
-  "next_action": "Ask the user to borrow Lonely Planet Vietnam 13th ed. (2016), archive ID vietnam0000stew_x4j9 (518 pp). No 2017+ full guide exists on archive.org; the two 2017 'Vietnam' items are the 300-page Best-of format. Then Moon 2015 (vietnam0000file), Insight 2015 (vietnam0000zgli_s6v6), Goscha (penguinhistoryof0000gosc), LP phrasebook (vietnamesephrase0000unse_a7s0).",
+  "next_action": "Ask the user to borrow Moon Vietnam 2015 (vietnam0000file), then Insight 2015 (vietnam0000zgli_s6v6), Goscha (penguinhistoryof0000gosc), LP phrasebook (vietnamesephrase0000unse_a7s0). Each new book: find its leaf offset from the contents page first.",
   "method_notes": [
     "printed page P = leaf n(P+5) for dk-2015; other books will have their own offset — find it from the contents page first",
     "get_page_text returns ~1.2 KB of archive.org boilerplate per page; batches of 6–8 pages per browser_batch call are the sweet spot",
@@ -32,7 +32,8 @@
     "coverage-gaps.md",
     "decision-gaps.md",
     "raw-notes/dk-2015-notes.md",
-    "fact-wishlist.md"
+    "fact-wishlist.md",
+    "raw-notes/lp-2016-notes.md"
   ],
   "disputes_logged": "../disputes.md — section 'Guidebook leads vs facts.json' appended 2026-10-16",
   "fact_wishlist_note": "fact-wishlist.md lists ~55 fact keys the books quantify that facts.json lacks, with the primary source to settle each. P1 rows are candidates for the next facts build."

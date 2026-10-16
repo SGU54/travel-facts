@@ -52,3 +52,51 @@ Dossier material. A guidebook lays options side by side; it almost never says "f
 - Dong, not dollars (p254).
 - Pay-in-advance medical reality and medevac insurance (p274).
 - Central coast is its own weather regime (p38 chart, despite the text).
+
+---
+
+# Lonely Planet 2016 — additional unresolved forks (2026-10-16)
+
+Numbering continues from the DK list. Only forks LP raises that DK did not, or where LP takes the opposite side.
+
+## Routing and sequence
+35. **South→north or north→south — the books disagree.** LP's coastal classic runs HCMC→Hanoi (p28); DK's runs Hanoi→HCMC (p12). Neither gives a reason tied to month, gateway or jet lag. The swamp is confirmed real: two major editors default opposite ways.
+36. **Hue: one night (LP p29) or two days (DK p12)?** LP gives Hoi An three days and Hue one; DK gives Hue two. No criterion offered.
+37. **Phong Nha on the spine or skipped?** LP routes Hue→Phong Nha→Halong; DK doesn't mention it. Cost: a day and a half. Neither weighs it against Halong or Ninh Binh.
+38. **Open-tour ticket vs point-to-point tickets (LP p493).** LP states the trade (cheaper, central departures; herded, kickbacks, locked to the trail) and ends "many people go for them". No rule by trip length or style.
+39. **Ha Giang: loop by hired bike, xe om pillion, or car (LP p31)?** No public transport on the key stretch; LP lists the three options without a verdict and without the licence/insurance problem.
+40. **Bus at 50 km/h vs sleeper train vs flight per leg (LP p492, p356).** LP's own table shows flying ≈ sleeper price beyond Nha Trang; it never says "fly those legs".
+41. **Fly a day early for international connections (LP p491).** LP says regional cancellations are common and advises a buffer day, but not for which airports or seasons.
+
+## Timing
+42. **Which city's calendar wins when they conflict (LP region openers).** Hanoi Oct–Dec, Hue May/Sep, Nha Trang July, Mui Ne December, HCMC Feb–Mar, Phu Quoc January. A two-city trip has no single best month; LP never says how to choose.
+43. **August: peak and "hot, hot, hot" (LP p27) — go or avoid?** It is the only summer month most Americans can travel. LP describes, doesn't advise.
+44. **Tet's nine-day train blackout (LP p497).** Stated as fact; never turned into "if your dates touch Tet, fly or stay put".
+45. **Sapa harvest: September (reality) vs November (LP p99).** The book's own calendar contradicts the trekking season; a visitor needs a date.
+
+## Bases and activities
+46. **Sapa (crowded, dramatic) vs Bac Ha (quiet, less dramatic) vs Mai Chau (easy, valley) (LP p37).** Three bases ranked on different axes, no verdict for a first-timer with three days.
+47. **Nha Trang beach vs Doc Let / Bai Dai (LP p28).** "Less developed base" offered as an aside; no rule on who should leave the city.
+48. **Dive in Nha Trang (cheap, dodgy shops) or Con Dao (best, double price, remote) (LP p42).** Prices and quality given; the decision isn't.
+49. **Easy Rider pillion vs self-ride vs car for Dalat→Mui Ne / Hai Van (LP p32, p39).** LP says "ideally on the back of a motorbike"; insurance validity decides it and LP buries that in another chapter.
+50. **Street-food tour on night one vs a showcase restaurant first (LP p44).** Both suggested; no sequence.
+
+## Money and services
+51. **Three tipping opinions (LP p21, p482; DK p243).** None cites a source; the dossier owes a single rule.
+52. **Who pays the driver's fuel (LP p494 vs DK p283).** Must be negotiated; neither book says that outright.
+53. **Hand over the passport, or a photocopy (LP p478, DK p233).** Both say "photocopy at minimum"; neither says when to insist.
+54. **Buy bus tickets at the station or through the hotel (LP p493 vs p94).** LP says both: station prices are fixed and drivers overcharge, but agents' commission "offsets the language hassle". No rule.
+55. **Reconvert dong on departure or spend it down (LP p482).** "Cannot legally take dong out" vs small reconversion windows; no practical threshold.
+
+## Risk
+56. **Cyclos: charming (Hanoi) or mugging risk (HCMC, day only) (LP p95, p358, p495).** City-specific verdicts never consolidated.
+57. **Malaria tablets for the Mekong (LP p500 "rural south high risk" vs CDC "rare in the deltas").** The two sources differ in emphasis; a traveller doing a two-day delta tour needs a yes/no.
+58. **State hospital vs private clinic vs fly out (LP p499).** Tiered, but no threshold for "fly to Bangkok".
+
+## What LP settles well (keep, cite as book opinion)
+- Never rely on a regional flight for a same-day international connection.
+- Direct international buses only at land borders.
+- Buy bus tickets at the office, never from the driver.
+- Upper berth is cheapest on hard sleepers; soft sleeper is one price.
+- Ice in cities is fine; tap water is not.
+- A car with driver makes Vietnam accessible to wheelchair users; trains do not.

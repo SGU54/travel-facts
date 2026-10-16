@@ -1,65 +1,1109 @@
 {
   "_README": "Arrival, intercity and local transport from DK 2015 (region boxes pp59/91/109/127/159/185 and Survival Guide pp280–285). Paraphrase only. Every figure is a 2015 lead. Several entries are marked obsolete because the infrastructure has changed since; they are kept so nobody re-imports them from another 2013–2017 book.",
   "arrival_by_air": [
-    {"id": "air.gateways-2015", "claim": "In 2015 there were three international airports: Tan Son Nhat (busiest), Noi Bai, Danang. US and European arrivals mostly connected via Bangkok or Hong Kong.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 280}, "verify_against": "Cam Ranh, Phu Quoc, Da Lat, Hue, Hai Phong, Van Don and Can Tho also take international flights now; SFO–SGN nonstop since Nov 2021 (the ONLY US nonstop, per state.json)", "related_articles": ["vietnam-airport-guide", "flights-to-vietnam-from-us"]},
-    {"id": "air.vn-airlines-sfo-claim", "claim": "The book lists San Francisco among Vietnam Airlines' direct destinations in 2015.", "status": "conflict", "vintage": 2015, "source": {"book": "dk-2015", "page": 280}, "conflict_with": "state.json 2026-10-13 verification: SFO–SGN nonstop began Nov 2021; in 2015 there was no US nonstop", "verify_against": "vietnamairlines.com route history", "related_articles": ["flights-to-vietnam-from-us"], "note": "Treat as a book error; do not cite."},
-    {"id": "air.flight-time", "claim": "A trans-Pacific journey from the US takes over 20 hours door to door with a connection.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 280}, "verify_against": "SFO–SGN nonstop is ~16–17 h; one-stop itineraries 20–24 h", "related_articles": ["flights-to-vietnam-from-us"]},
-    {"id": "air.transit-visa-check", "claim": "Check whether the stopover country needs a transit or tourist visa.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 280}, "related_articles": ["flights-to-vietnam-from-us"]},
-    {"id": "air.arrival-card", "claim": "An immigration form was handed out on the plane and submitted with the passport.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 280}, "verify_against": "No paper arrival card today; the optional/required pre-arrival e-declaration at prearrival.immigration.gov.vn is the current analogue (facts.json visa.pre_arrival_declaration, corrections #3)", "related_articles": ["vietnam-evisa-how-to-apply"]},
-    {"id": "air.sgn-arrival", "claim": "Tan Son Nhat: security check on arrival as well as departure; the authorised metered-taxi rank is near the currency-exchange counter; refuse drivers offering flat rates; hotel shuttles on request; expect crowds of greeters outside the terminal.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 280}, "verify_against": "Current SGN T2 taxi/Grab pickup arrangement (designated lanes, Grab pickup at the parking building)", "related_articles": ["vietnam-airport-guide"]},
-    {"id": "air.airport-table-2015", "claim": "2015 airport table: SGN 5 km from centre, ~US$15 taxi, 20 min; DAD 1.6 km, ~US$2, 5 min; HAN 35 km, ~US$17, 45–60 min.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 280}, "verify_against": "Grab fare estimates; airport taxi posted rates", "related_articles": ["vietnam-airport-guide"], "note": "Hard rule 1: these numbers never print; the structural point (DAD is in town, HAN is far out) is the usable part."},
-    {"id": "air.han-taxi-scams", "claim": "At Noi Bai (new terminal in 2015) drivers often refused the meter and a notorious 'taxi mafia' diverted arrivals to commission-paying hotels; the fix was to negotiate first or use the Vietnam Airlines shuttle (~US$3 to the Trang Thi office) or city buses 7/17 (every 15 min, ~90 min to Hoan Kiem). No tolls apply on the airport road.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 281}, "verify_against": "Bus 86 express (since 2016) and Grab have changed the picture; the hotel-diversion scam still gets reported", "related_articles": ["vietnam-airport-guide", "hanoi-travel-guide-first-timers"]},
-    {"id": "air.dad-terminal", "claim": "Danang had a single small terminal with a fixed, cheap taxi rate into town.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 281}, "verify_against": "Separate international terminal since 2017", "related_articles": ["da-nang-travel-guide", "vietnam-airport-guide"]}
+    {
+      "id": "air.gateways-2015",
+      "claim": "In 2015 there were three international airports: Tan Son Nhat (busiest), Noi Bai, Danang. US and European arrivals mostly connected via Bangkok or Hong Kong.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 280
+      },
+      "verify_against": "Cam Ranh, Phu Quoc, Da Lat, Hue, Hai Phong, Van Don and Can Tho also take international flights now; SFO–SGN nonstop since Nov 2021 (the ONLY US nonstop, per state.json)",
+      "related_articles": [
+        "vietnam-airport-guide",
+        "flights-to-vietnam-from-us"
+      ]
+    },
+    {
+      "id": "air.vn-airlines-sfo-claim",
+      "claim": "The book lists San Francisco among Vietnam Airlines' direct destinations in 2015.",
+      "status": "conflict",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 280
+      },
+      "conflict_with": "state.json 2026-10-13 verification: SFO–SGN nonstop began Nov 2021; in 2015 there was no US nonstop",
+      "verify_against": "vietnamairlines.com route history",
+      "related_articles": [
+        "flights-to-vietnam-from-us"
+      ],
+      "note": "Treat as a book error; do not cite."
+    },
+    {
+      "id": "air.flight-time",
+      "claim": "A trans-Pacific journey from the US takes over 20 hours door to door with a connection.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 280
+      },
+      "verify_against": "SFO–SGN nonstop is ~16–17 h; one-stop itineraries 20–24 h",
+      "related_articles": [
+        "flights-to-vietnam-from-us"
+      ]
+    },
+    {
+      "id": "air.transit-visa-check",
+      "claim": "Check whether the stopover country needs a transit or tourist visa.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 280
+      },
+      "related_articles": [
+        "flights-to-vietnam-from-us"
+      ]
+    },
+    {
+      "id": "air.arrival-card",
+      "claim": "An immigration form was handed out on the plane and submitted with the passport.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 280
+      },
+      "verify_against": "No paper arrival card today; the optional/required pre-arrival e-declaration at prearrival.immigration.gov.vn is the current analogue (facts.json visa.pre_arrival_declaration, corrections #3)",
+      "related_articles": [
+        "vietnam-evisa-how-to-apply"
+      ]
+    },
+    {
+      "id": "air.sgn-arrival",
+      "claim": "Tan Son Nhat: security check on arrival as well as departure; the authorised metered-taxi rank is near the currency-exchange counter; refuse drivers offering flat rates; hotel shuttles on request; expect crowds of greeters outside the terminal.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 280
+      },
+      "verify_against": "Current SGN T2 taxi/Grab pickup arrangement (designated lanes, Grab pickup at the parking building)",
+      "related_articles": [
+        "vietnam-airport-guide"
+      ]
+    },
+    {
+      "id": "air.airport-table-2015",
+      "claim": "2015 airport table: SGN 5 km from centre, ~US$15 taxi, 20 min; DAD 1.6 km, ~US$2, 5 min; HAN 35 km, ~US$17, 45–60 min.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 280
+      },
+      "verify_against": "Grab fare estimates; airport taxi posted rates",
+      "related_articles": [
+        "vietnam-airport-guide"
+      ],
+      "note": "Hard rule 1: these numbers never print; the structural point (DAD is in town, HAN is far out) is the usable part."
+    },
+    {
+      "id": "air.han-taxi-scams",
+      "claim": "At Noi Bai (new terminal in 2015) drivers often refused the meter and a notorious 'taxi mafia' diverted arrivals to commission-paying hotels; the fix was to negotiate first or use the Vietnam Airlines shuttle (~US$3 to the Trang Thi office) or city buses 7/17 (every 15 min, ~90 min to Hoan Kiem). No tolls apply on the airport road.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 281
+      },
+      "verify_against": "Bus 86 express (since 2016) and Grab have changed the picture; the hotel-diversion scam still gets reported",
+      "related_articles": [
+        "vietnam-airport-guide",
+        "hanoi-travel-guide-first-timers"
+      ]
+    },
+    {
+      "id": "air.dad-terminal",
+      "claim": "Danang had a single small terminal with a fixed, cheap taxi rate into town.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 281
+      },
+      "verify_against": "Separate international terminal since 2017",
+      "related_articles": [
+        "da-nang-travel-guide",
+        "vietnam-airport-guide"
+      ]
+    },
+    {
+      "id": "air.lp-five-airports-2016",
+      "claim": "LP 2016 counts five international airports: Tan Son Nhat, Noi Bai, Danang, Cam Ranh (36 km south of Nha Trang: Hong Kong, Chengdu, Seoul) and Phu Quoc (Singapore); Hue was 'international' in name only. Vietnam Airlines flew to 17 countries.",
+      "status": "obsolete",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 488
+      },
+      "verify_against": "CAAV list; Van Don, Can Tho, Hai Phong, Hue, Da Lat since added routes",
+      "related_articles": [
+        "vietnam-airport-guide",
+        "flights-to-vietnam-from-us"
+      ]
+    },
+    {
+      "id": "air.lp-arrival-formalities",
+      "claim": "Air arrivals are smoother than land borders; Cambodia and China crossings 'relatively stress-free', Laos slow. Passport valid six months on arrival.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 488
+      },
+      "related_articles": [
+        "do-americans-need-a-visa-for-vietnam",
+        "overland-border-crossings-vietnam"
+      ]
+    }
   ],
   "arrival_overland": [
-    {"id": "land.crossings-2015", "claim": "2015 count of crossings open to foreigners: three with China (Dong Dang/Friendship Pass — rail and road, the busiest, with a twice-weekly Beijing–Hanoi train; Lao Cai; Mong Cai), seven with Laos (Lao Bao, Cau Treo, Nam Can, Cha Lo, Na Meo, Tay Trang, Bo Y), seven with Cambodia (Moc Bai busiest, ~2 h from HCMC with many daily buses; Vinh Xuong near Chau Doc by Mekong boat; five remote others).", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 281}, "verify_against": "facts.json visa.entry_gates lists 27 land gates valid for e-visa after Resolution 389/NQ-CP (Dec 2025); check each named gate against that list", "related_articles": ["overland-border-crossings-vietnam", "chau-doc-cambodia-border-crossing"]},
-    {"id": "land.laos-fly", "claim": "DK's verdict on Laos: the bus crossings are extremely slow; fly instead.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 281}, "related_articles": ["overland-border-crossings-vietnam"], "note": "Unresolved in the book: which of the seven Laos gates is least bad, and whether the Vientiane/Luang Prabang–Hanoi sleeper buses are worth it. See decision-gaps.md."},
-    {"id": "land.cambodia-easy", "claim": "Entry from Cambodia is described as easy and hassle-free; the Mekong boat route via Vinh Xuong is the scenic option.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 281}, "related_articles": ["chau-doc-cambodia-border-crossing", "vietnam-and-cambodia-combined-itinerary"]}
+    {
+      "id": "land.crossings-2015",
+      "claim": "2015 count of crossings open to foreigners: three with China (Dong Dang/Friendship Pass — rail and road, the busiest, with a twice-weekly Beijing–Hanoi train; Lao Cai; Mong Cai), seven with Laos (Lao Bao, Cau Treo, Nam Can, Cha Lo, Na Meo, Tay Trang, Bo Y), seven with Cambodia (Moc Bai busiest, ~2 h from HCMC with many daily buses; Vinh Xuong near Chau Doc by Mekong boat; five remote others).",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 281
+      },
+      "verify_against": "facts.json visa.entry_gates lists 27 land gates valid for e-visa after Resolution 389/NQ-CP (Dec 2025); check each named gate against that list",
+      "related_articles": [
+        "overland-border-crossings-vietnam",
+        "chau-doc-cambodia-border-crossing"
+      ]
+    },
+    {
+      "id": "land.laos-fly",
+      "claim": "DK's verdict on Laos: the bus crossings are extremely slow; fly instead.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 281
+      },
+      "related_articles": [
+        "overland-border-crossings-vietnam"
+      ],
+      "note": "Unresolved in the book: which of the seven Laos gates is least bad, and whether the Vientiane/Luang Prabang–Hanoi sleeper buses are worth it. See decision-gaps.md."
+    },
+    {
+      "id": "land.cambodia-easy",
+      "claim": "Entry from Cambodia is described as easy and hassle-free; the Mekong boat route via Vinh Xuong is the scenic option.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 281
+      },
+      "related_articles": [
+        "chau-doc-cambodia-border-crossing",
+        "vietnam-and-cambodia-combined-itinerary"
+      ]
+    },
+    {
+      "id": "land.lp-crossing-table",
+      "claim": "LP 2016 crossing table (gate → Vietnamese town → far side): Cambodia — Le Thanh/O Yadaw (Pleiku–Ban Lung), Moc Bai/Bavet (HCMC–Phnom Penh), Vinh Xuong/Kaam Samnor (Chau Doc–Phnom Penh by river), Xa Xia/Prek Chak (Ha Tien–Kep/Kampot), Tinh Bien/Phnom Den (Chau Doc–Takeo), plus Loc Ninh/Trapeang Sre on the map; China — Lao Cai/Hekou (Kunming), Mong Cai/Dongxing, Dong Dang/Pingxiang (Lang Son–Nanning); Laos — Bo Y/Phou Keua (Kon Tum–Attapeu), Cau Treo/Nam Phao (Vinh–Lak Sao), Lao Bao/Dansavanh (Hue–Savannakhet), Nam Can/Nong Haet (Vinh–Phonsavan), Tay Trang/Sop Hun (Dien Bien Phu–Muang Khua), Na Meo/Nam Xoi.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 489
+      },
+      "verify_against": "facts.json visa.entry_gates (27 e-visa land gates) — check each named gate is on it",
+      "related_articles": [
+        "overland-border-crossings-vietnam",
+        "chau-doc-cambodia-border-crossing"
+      ]
+    },
+    {
+      "id": "land.golden-rule-direct-bus",
+      "claim": "LP's golden rule for land borders: take direct city-to-city international buses; going step by step on local buses invites serious overcharging and drivers renegotiating 'in the middle of nowhere'; use remote crossings only with time and patience. Everyone gets off the bus to clear both sides.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 489
+      },
+      "related_articles": [
+        "overland-border-crossings-vietnam"
+      ]
+    },
+    {
+      "id": "land.border-hours-money-fees",
+      "claim": "Crossings are generally open about 7am–5pm (Cambodian side 8–8); official exchange booths now exist on the Vietnamese side (USD, renminbi, kip, riel) — avoid black marketeers; travellers are occasionally asked for an 'immigration fee' of a dollar or two.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 489
+      },
+      "verify_against": "Current gate hours",
+      "related_articles": [
+        "overland-border-crossings-vietnam"
+      ]
+    },
+    {
+      "id": "land.laos-options",
+      "claim": "For Laos LP names the 'long nightmare bus' Vientiane–Hanoi via Cau Treo and the easier Savannakhet–Hue via Lao Bao; 30-day Lao visas available at all crossings; Cambodia issues visas on arrival at every gate (overcharging common except Bavet); China needs a visa in advance and is one hour ahead.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 489
+      },
+      "verify_against": "Lao/Cambodian e-visa and VOA rules today",
+      "related_articles": [
+        "overland-border-crossings-vietnam"
+      ]
+    },
+    {
+      "id": "land.vehicles-across-borders",
+      "claim": "Taking a vehicle across is theoretically possible with Cambodia and Laos only (registration, liability insurance, IDP and a carnet); a Vietnamese motorbike goes out easily but bringing one in is very hard; nothing into China. Trains: daily Hanoi–Nanning (on to Beijing), scenic Hanoi–Lao Cai–Kunming; no rail to Cambodia or Laos.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 491
+      },
+      "related_articles": [
+        "overland-border-crossings-vietnam"
+      ]
+    }
   ],
   "intercity": {
-    "ranking": {"id": "intercity.dk-ranking", "claim": "DK's own ranking: trains are the most efficient and comfortable value; plain long-distance buses are cheap but wear thin after a few hours, express buses are better; the Open Tour hop-on bus is the most popular tourist option; planes for speed between cities; ferries/hydrofoils on a few routes; car-and-driver is 'relatively inexpensive' for independent travellers; metered and motorbike taxis locally.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "related_articles": ["sleeper-bus-vs-sleeper-train-vietnam", "north-to-south-or-south-to-north-vietnam"]},
+    "ranking": {
+      "id": "intercity.dk-ranking",
+      "claim": "DK's own ranking: trains are the most efficient and comfortable value; plain long-distance buses are cheap but wear thin after a few hours, express buses are better; the Open Tour hop-on bus is the most popular tourist option; planes for speed between cities; ferries/hydrofoils on a few routes; car-and-driver is 'relatively inexpensive' for independent travellers; metered and motorbike taxis locally.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 282
+      },
+      "related_articles": [
+        "sleeper-bus-vs-sleeper-train-vietnam",
+        "north-to-south-or-south-to-north-vietnam"
+      ]
+    },
     "air": [
-      {"id": "dom.airlines-2015", "claim": "Four domestic airlines in 2015: Vietnam Airlines (state, nationwide), VASCO (state, southern routes incl. Con Dao), Jetstar Pacific (part-state, six biggest cities), Vietjet (first private).", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "verify_against": "Jetstar Pacific → Pacific Airlines (2020); Bamboo Airways (2019); Vietravel Airlines (2021); route maps", "related_articles": ["domestic-flights-vietnam"]},
-      {"id": "dom.fares-2015", "claim": "Domestic fares usually under US$150 excluding baggage; buy online, at airline offices, airport counters, or through agents at no markup.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "verify_against": "Current fare bands; baggage-fee structures on Vietjet", "related_articles": ["domestic-flights-vietnam"]}
+      {
+        "id": "dom.airlines-2015",
+        "claim": "Four domestic airlines in 2015: Vietnam Airlines (state, nationwide), VASCO (state, southern routes incl. Con Dao), Jetstar Pacific (part-state, six biggest cities), Vietjet (first private).",
+        "status": "obsolete",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 282
+        },
+        "verify_against": "Jetstar Pacific → Pacific Airlines (2020); Bamboo Airways (2019); Vietravel Airlines (2021); route maps",
+        "related_articles": [
+          "domestic-flights-vietnam"
+        ]
+      },
+      {
+        "id": "dom.fares-2015",
+        "claim": "Domestic fares usually under US$150 excluding baggage; buy online, at airline offices, airport counters, or through agents at no markup.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 282
+        },
+        "verify_against": "Current fare bands; baggage-fee structures on Vietjet",
+        "related_articles": [
+          "domestic-flights-vietnam"
+        ]
+      },
+      {
+        "id": "dom.lp-cancellations",
+        "claim": "Domestic flights are good, growing and cheap if booked early, but cancellations are 'quite common': never rely on a regional flight to make a same-day international connection — travel a day early. Vietnam Airlines is least likely to cancel but costs more; fares show no foreigner premium.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 491
+        },
+        "related_articles": [
+          "domestic-flights-vietnam",
+          "flights-to-vietnam-from-us"
+        ]
+      },
+      {
+        "id": "dom.fly-vs-train-threshold",
+        "claim": "LP's 2016 HCMC connections table shows the structural rule that survives the stale prices: for every leg beyond Nha Trang (Hue, Hanoi), flying cost about the same as a soft sleeper and saved a day; for Nha Trang itself the overnight train competed.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 356
+        },
+        "related_articles": [
+          "domestic-flights-vietnam",
+          "sleeper-bus-vs-sleeper-train-vietnam",
+          "north-to-south-or-south-to-north-vietnam"
+        ]
+      }
     ],
     "rail": [
-      {"id": "rail.network", "claim": "One coastal line HCMC–Hanoi with stops at the main cities, plus Hanoi branches to Haiphong (Halong side), Lao Cai (Sapa) and China.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "related_articles": ["reunification-express-train-guide"]},
-      {"id": "rail.hcmc-hanoi-time", "claim": "Fastest HCMC–Hanoi transit about 33 hours in 2015.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "verify_against": "dsvn.vn timetable (SE trains ~30–33 h); North–South high-speed line approved Nov 2024, target 2035", "related_articles": ["reunification-express-train-guide"]},
-      {"id": "rail.late-or-early", "claim": "Trains commonly run late and sometimes arrive early.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "related_articles": ["reunification-express-train-guide"]},
-      {"id": "rail.numbering", "claim": "Even-numbered trains run north→south, odd-numbered south→north; 'Reunification Express' is a nickname, no train carries the name.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "verify_against": "dsvn.vn train codes (SE1/SE3 southbound odd, SE2/SE4 northbound even — note this is the REVERSE of the book's statement; verify which is right)", "related_articles": ["reunification-express-train-guide"], "note": "Possible book error: current DSVN convention is odd = Hanoi→Saigon."},
-      {"id": "rail.classes", "claim": "Four classes: hard seat (wooden bench), soft seat (reclining, carriage with TV), hard sleeper (six bunks), soft sleeper (four bunks, lockable compartment). Dining car plus roaming vendors; platform food at stops.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "verify_against": "dsvn.vn class list; hard seat is largely gone from SE trains", "related_articles": ["reunification-express-train-guide", "sleeper-bus-vs-sleeper-train-vietnam"]},
-      {"id": "rail.tickets", "claim": "Tickets at stations, agents (some can only sell to limited destinations) and good hotels; fares from a few dollars to over US$100; private Victoria carriages Hanoi–Lao Cai were the priciest.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "verify_against": "dsvn.vn online booking; Victoria Express ended; private carriages now Chapa Express, Fanxipan, Sapaly, Laman etc.", "related_articles": ["getting-from-hanoi-to-sapa"]},
-      {"id": "rail.stations-2015", "claim": "Hanoi station 120 Le Duan; Saigon station 1 Nguyen Thong, District 3; Danang station 202 Hai Phong St.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "verify_against": "dsvn.vn; Hanoi's Tran Quy Cap side entrance serves some trains", "related_articles": ["reunification-express-train-guide"]}
+      {
+        "id": "rail.network",
+        "claim": "One coastal line HCMC–Hanoi with stops at the main cities, plus Hanoi branches to Haiphong (Halong side), Lao Cai (Sapa) and China.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 282
+        },
+        "related_articles": [
+          "reunification-express-train-guide"
+        ]
+      },
+      {
+        "id": "rail.hcmc-hanoi-time",
+        "claim": "Fastest HCMC–Hanoi transit about 33 hours in 2015.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 282
+        },
+        "verify_against": "dsvn.vn timetable (SE trains ~30–33 h); North–South high-speed line approved Nov 2024, target 2035",
+        "related_articles": [
+          "reunification-express-train-guide"
+        ]
+      },
+      {
+        "id": "rail.late-or-early",
+        "claim": "Trains commonly run late and sometimes arrive early.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 282
+        },
+        "related_articles": [
+          "reunification-express-train-guide"
+        ]
+      },
+      {
+        "id": "rail.numbering",
+        "claim": "Even-numbered trains run north→south, odd-numbered south→north; 'Reunification Express' is a nickname, no train carries the name.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 282
+        },
+        "verify_against": "dsvn.vn train codes (SE1/SE3 southbound odd, SE2/SE4 northbound even — note this is the REVERSE of the book's statement; verify which is right)",
+        "related_articles": [
+          "reunification-express-train-guide"
+        ],
+        "note": "Possible book error: current DSVN convention is odd = Hanoi→Saigon."
+      },
+      {
+        "id": "rail.classes",
+        "claim": "Four classes: hard seat (wooden bench), soft seat (reclining, carriage with TV), hard sleeper (six bunks), soft sleeper (four bunks, lockable compartment). Dining car plus roaming vendors; platform food at stops.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 282
+        },
+        "verify_against": "dsvn.vn class list; hard seat is largely gone from SE trains",
+        "related_articles": [
+          "reunification-express-train-guide",
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      },
+      {
+        "id": "rail.tickets",
+        "claim": "Tickets at stations, agents (some can only sell to limited destinations) and good hotels; fares from a few dollars to over US$100; private Victoria carriages Hanoi–Lao Cai were the priciest.",
+        "status": "obsolete",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 282
+        },
+        "verify_against": "dsvn.vn online booking; Victoria Express ended; private carriages now Chapa Express, Fanxipan, Sapaly, Laman etc.",
+        "related_articles": [
+          "getting-from-hanoi-to-sapa"
+        ]
+      },
+      {
+        "id": "rail.stations-2015",
+        "claim": "Hanoi station 120 Le Duan; Saigon station 1 Nguyen Thong, District 3; Danang station 202 Hai Phong St.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "verify_against": "dsvn.vn; Hanoi's Tran Quy Cap side entrance serves some trains",
+        "related_articles": [
+          "reunification-express-train-guide"
+        ]
+      },
+      {
+        "id": "rail.lp-classes",
+        "claim": "SE-numbered trains are the fastest and smartest, TN trains slower and older; four classes (hard seat, soft seat, hard sleeper, soft sleeper) each air-con or not, air-con only on the express trains; hard sleeper has three tiers of six bunks with the UPPER cheapest, soft sleeper two tiers of four at one price; linen provided but a sleep sheet is worth bringing; hard seat is packed and smoky.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 496
+        },
+        "verify_against": "dsvn.vn current classes (hard seat largely withdrawn on SE trains)",
+        "related_articles": [
+          "reunification-express-train-guide",
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      },
+      {
+        "id": "rail.lp-booking",
+        "claim": "Reserve long trips 60–90 days ahead; a day or two is usually fine except at holidays, but book sleepers a week or more out. In 2016 dsvn.vn took only Vietnamese cards, so foreigners booked through Bao Lau (international cards, e-tickets, small commission) or agents; schedules change often — check VR, Bao Lau or seat61.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 497
+        },
+        "verify_against": "dsvn.vn now accepts international cards; Baolau still operates",
+        "related_articles": [
+          "reunification-express-train-guide"
+        ]
+      },
+      {
+        "id": "rail.lp-history-and-speed",
+        "claim": "The 1,726 km Hanoi–Saigon line was begun in 1899 and finished in 1936; the 1930s trip took just over 40 hours. Sabotaged and bombed through both wars, it was restored as the Reunification Express on 31 December 1976. Today's average is about 50 km/h, barely faster than the 1930s, on a mostly single-track line carrying under 1% of north–south freight; LP 2016 said the high-speed plan was shelved.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 497
+        },
+        "verify_against": "North–South high-speed rail approved by the National Assembly Nov 2024, target 2035",
+        "related_articles": [
+          "reunification-express-train-guide"
+        ]
+      },
+      {
+        "id": "rail.lp-private-carriages",
+        "claim": "Private carriages on the Hanoi–Lao Cai run (Victoria, Orient Express, Livitrans and about six others in 2016) and on Hanoi–Hue/Danang and HCMC–Nha Trang (Golden Trains) offered a classier sleeper for a premium.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 496
+        },
+        "verify_against": "Victoria Express discontinued; current private carriage operators",
+        "related_articles": [
+          "getting-from-hanoi-to-sapa"
+        ]
+      },
+      {
+        "id": "rail.theft-at-stations",
+        "claim": "Petty theft on trains happens as they pull out of stations; keep bags close and tie or lock them, especially at night. Bikes and motorbikes travel in freight and may arrive on a different train.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 497
+        },
+        "related_articles": [
+          "reunification-express-train-guide"
+        ]
+      },
+      {
+        "id": "rail.children-fares",
+        "claim": "Children under two travel free and ages two to nine at half fare; no discounts on Hanoi–Lao Cai.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 496
+        },
+        "verify_against": "dsvn.vn fare rules",
+        "related_articles": [
+          "vietnam-itinerary-for-families"
+        ]
+      }
     ],
     "bus": [
-      {"id": "bus.express-vs-local", "claim": "Express buses are faster, safer and more comfortable than local buses and minibuses; their stated drawback in 2015 was the onboard karaoke.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "related_articles": ["sleeper-bus-vs-sleeper-train-vietnam"]},
-      {"id": "bus.open-tour", "claim": "Open Tour buses (Sinh Tourist and similar cafés) run between the main tourist stops with one-way, cheap, flexible tickets allowing stop-offs.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "verify_against": "Sinh Tourist still operates; the 'open ticket' has largely given way to point-to-point sleeper buses booked on Vexere/12Go", "related_articles": ["sleeper-bus-vs-sleeper-train-vietnam"]},
-      {"id": "bus.hcmc-hanoi-fare", "claim": "HCMC–Hanoi by bus US$45–60 in 2015.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "verify_against": "Vexere current fares", "related_articles": ["sleeper-bus-vs-sleeper-train-vietnam"]},
-      {"id": "bus.ticketing-complex", "claim": "Station ticketing is complex: a given station sells only to certain destinations and connections complicate it, so DK says book through an agent or hotel.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "verify_against": "Vexere / 12Go / bus-company apps now cover this", "related_articles": ["sleeper-bus-vs-sleeper-train-vietnam"]},
-      {"id": "bus.minibus-charter", "claim": "A chartered minibus for up to 16 is arrangeable through most hotels and agencies for out-of-town trips.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "related_articles": ["hiring-a-driver-vs-self-drive-vietnam"]},
-      {"id": "bus.stations-2015", "claim": "HCMC: Mien Dong (north/east), Mien Tay (delta), Cholon; Hanoi: Giap Bat (south), Gia Lam (northeast), Kim Ma (northwest).", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "verify_against": "New Mien Dong (Thu Duc) since 2022; Kim Ma closed; My Dinh and Nuoc Ngam are Hanoi's main stations", "related_articles": ["sleeper-bus-vs-sleeper-train-vietnam"]}
+      {
+        "id": "bus.express-vs-local",
+        "claim": "Express buses are faster, safer and more comfortable than local buses and minibuses; their stated drawback in 2015 was the onboard karaoke.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      },
+      {
+        "id": "bus.open-tour",
+        "claim": "Open Tour buses (Sinh Tourist and similar cafés) run between the main tourist stops with one-way, cheap, flexible tickets allowing stop-offs.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "verify_against": "Sinh Tourist still operates; the 'open ticket' has largely given way to point-to-point sleeper buses booked on Vexere/12Go",
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      },
+      {
+        "id": "bus.hcmc-hanoi-fare",
+        "claim": "HCMC–Hanoi by bus US$45–60 in 2015.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "verify_against": "Vexere current fares",
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      },
+      {
+        "id": "bus.ticketing-complex",
+        "claim": "Station ticketing is complex: a given station sells only to certain destinations and connections complicate it, so DK says book through an agent or hotel.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "verify_against": "Vexere / 12Go / bus-company apps now cover this",
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      },
+      {
+        "id": "bus.minibus-charter",
+        "claim": "A chartered minibus for up to 16 is arrangeable through most hotels and agencies for out-of-town trips.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "related_articles": [
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ]
+      },
+      {
+        "id": "bus.stations-2015",
+        "claim": "HCMC: Mien Dong (north/east), Mien Tay (delta), Cholon; Hanoi: Giap Bat (south), Gia Lam (northeast), Kim Ma (northwest).",
+        "status": "obsolete",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "verify_against": "New Mien Dong (Thu Duc) since 2022; Kim Ma closed; My Dinh and Nuoc Ngam are Hanoi's main stations",
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      },
+      {
+        "id": "bus.lp-speed",
+        "claim": "Bus travel is never speedy: reckon on about 50 km/h even on Highway 1 because of motorbikes, trucks and pedestrians sharing the road (2016, before the expressways).",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 492
+        },
+        "verify_against": "Expressway legs now faster (Hanoi–Haiphong, HCMC–Dalat, Danang–Quang Ngai)",
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      },
+      {
+        "id": "bus.lp-sleeper-vs-train",
+        "claim": "Deluxe air-con buses give an allocated seat; some recline, some have padded flat beds; LP calls sleeper buses 'a good alternative to trains' at comparable cost; non-smoking, occasional wifi, TVs with kung-fu films and sometimes karaoke — bring earplugs and an eye mask.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 492
+        },
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      },
+      {
+        "id": "bus.lp-open-tour-verdict",
+        "claim": "Open-tour buses: cheap through-tickets with hop-on/off at major cities, departing from central hostels and cafés rather than outlying stations — which is why they shine in HCMC. Downsides: herded with other backpackers, no locals, confined to the banana-pancake trail, operators living on kickbacks from sister hotels. Point-to-point tickets cost a little more and keep the option of a train or a motorbike leg.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 493
+        },
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam",
+          "vietnam-itinerary-first-timers"
+        ]
+      },
+      {
+        "id": "bus.buy-at-the-office",
+        "claim": "Always buy bus tickets at the station or office, where prices are fixed and posted; boarding en route invites overcharging, and in remote areas drivers ask foreigners four to ten times the local fare. Local buses leave when full and few run after about 4pm.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 492
+        },
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
+      }
     ],
     "car": [
-      {"id": "car.must-hire-driver", "claim": "Renting a car means hiring a Vietnam-licensed driver with it; 2015 price US$65–120/day by distance and fuel; the driver covers his own meals and lodging on multi-day trips.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "verify_against": "Current car-and-driver day rates from established agencies", "related_articles": ["hiring-a-driver-vs-self-drive-vietnam"]},
-      {"id": "car.never-self-drive", "claim": "DK's 'number one rule of the road': never rent a self-drive car; the traffic is too chaotic for foreigners.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 285}, "related_articles": ["hiring-a-driver-vs-self-drive-vietnam"], "note": "Agrees with facts.json getting_around.driving_licence."},
-      {"id": "car.train-misses-stops", "claim": "DK's two-week itinerary uses the train only for Hanoi→Halong tour and then switches to car-and-driver because the railway stops at Hue and Nha Trang but not at My Son or Mui Ne.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 12}, "related_articles": ["north-to-south-or-south-to-north-vietnam", "vietnam-itinerary-14-days"], "note": "A real decision: rail vs car on the coast turns on whether you want the off-rail stops."}
+      {
+        "id": "car.must-hire-driver",
+        "claim": "Renting a car means hiring a Vietnam-licensed driver with it; 2015 price US$65–120/day by distance and fuel; the driver covers his own meals and lodging on multi-day trips.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "verify_against": "Current car-and-driver day rates from established agencies",
+        "related_articles": [
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ]
+      },
+      {
+        "id": "car.never-self-drive",
+        "claim": "DK's 'number one rule of the road': never rent a self-drive car; the traffic is too chaotic for foreigners.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 285
+        },
+        "related_articles": [
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ],
+        "note": "Agrees with facts.json getting_around.driving_licence."
+      },
+      {
+        "id": "car.train-misses-stops",
+        "claim": "DK's two-week itinerary uses the train only for Hanoi→Halong tour and then switches to car-and-driver because the railway stops at Hue and Nha Trang but not at My Son or Mui Ne.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 12
+        },
+        "related_articles": [
+          "north-to-south-or-south-to-north-vietnam",
+          "vietnam-itinerary-14-days"
+        ],
+        "note": "A real decision: rail vs car on the coast turns on whether you want the off-rail stops."
+      },
+      {
+        "id": "car.lp-rates-2016",
+        "claim": "Car with driver cost about US$80–120 a day for a standard car and US$120–135 for a 4WD in 2016; a 4WD is needed for the rough roads of the northwest.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 494
+        },
+        "verify_against": "Current agency day rates",
+        "related_articles": [
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ]
+      },
+      {
+        "id": "car.lp-driver-costs-who-pays",
+        "claim": "LP: the driver usually pays his own accommodation and meals while you pay for petrol — check this when agreeing the price. DK's 2015 version has fuel inside the quoted price. Settle the split in writing.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 494
+        },
+        "verify_against": "Agency contracts",
+        "related_articles": [
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ],
+        "note": "Decision gap: who pays fuel is never standard."
+      },
+      {
+        "id": "car.driver-guide-checklist",
+        "claim": "Hiring a driver-guide: meet them first; check their English; get the itinerary in writing from the agency and use it as leverage if they improvise; say you want to avoid tourist-trap restaurants and shops; tip if good. Most plain drivers speak no English — a driver-guide opens doors.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 494
+        },
+        "related_articles": [
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ]
+      },
+      {
+        "id": "car.no-self-drive-lp",
+        "claim": "No rental agency allows self-drive; all car hire comes with a driver — LP states it as the rule, and in the HCMC chapter says plainly it is illegal to drive without a Vietnamese licence.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 493
+        },
+        "related_articles": [
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ],
+        "note": "Agrees with facts.json getting_around.driving_licence."
+      }
     ],
     "motorbike": [
-      {"id": "moto.licence-rarely-asked", "claim": "The book says a licence is legally required to rent a motorbike but 'rarely asked' for, and suggests xe om hire from ~US$10/day instead; helmets compulsory.", "status": "conflict", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "conflict_with": "corrections.json #2 and facts.json getting_around.driving_licence: a US licence and IDP are invalid; riding without a Vietnamese licence risks fine, arrest or jail and voids insurance. We publish the State Department line, never the 'rarely asked' framing.", "related_articles": ["renting-a-motorbike-in-vietnam", "hiring-a-driver-vs-self-drive-vietnam"]},
-      {"id": "moto.watch-first", "claim": "If you do ride, DK says watch the traffic for a few days first; livestock on rural roads; max two per bike, inconsistently enforced.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 285}, "related_articles": ["renting-a-motorbike-in-vietnam"]},
-      {"id": "moto.cycling-route", "claim": "For cyclists Hanoi–HCMC is the classic, but Highway 1 is congested and flood-prone so Highway 14 (the inland Ho Chi Minh road) is preferred; the Mekong is flat and easy; avoid the northern mountains in winter.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 266}, "related_articles": ["hai-van-pass-guide"]}
+      {
+        "id": "moto.licence-rarely-asked",
+        "claim": "The book says a licence is legally required to rent a motorbike but 'rarely asked' for, and suggests xe om hire from ~US$10/day instead; helmets compulsory.",
+        "status": "conflict",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "conflict_with": "corrections.json #2 and facts.json getting_around.driving_licence: a US licence and IDP are invalid; riding without a Vietnamese licence risks fine, arrest or jail and voids insurance. We publish the State Department line, never the 'rarely asked' framing.",
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam",
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ]
+      },
+      {
+        "id": "moto.watch-first",
+        "claim": "If you do ride, DK says watch the traffic for a few days first; livestock on rural roads; max two per bike, inconsistently enforced.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 285
+        },
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam"
+        ]
+      },
+      {
+        "id": "moto.cycling-route",
+        "claim": "For cyclists Hanoi–HCMC is the classic, but Highway 1 is congested and flood-prone so Highway 14 (the inland Ho Chi Minh road) is preferred; the Mekong is flat and easy; avoid the northern mountains in winter.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 266
+        },
+        "related_articles": [
+          "hai-van-pass-guide"
+        ]
+      },
+      {
+        "id": "moto.lp-idp-claim-2016",
+        "claim": "LP 2016 says the licence rules were changing in late 2015 and foreigners were 'now permitted' to ride with an International Driving Permit combined with local insurance, while 'on the ground' nobody — police or rental shops — ever asks for one.",
+        "status": "conflict",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 493
+        },
+        "conflict_with": "corrections.json #2 and facts.json getting_around.driving_licence: the State Department states that a US licence and an IDP do not work in Vietnam. The 2016 'IDP now valid' framing is the convention argument we rejected; we publish the government line.",
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam",
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ]
+      },
+      {
+        "id": "moto.lp-rental-practice",
+        "claim": "Motorbike rental: available everywhere; some shops keep your passport as deposit; sign a written agreement covering what you rent, the price and compensation; for the northern mountains take a road or trail bike; local driver-guides carry you for a modest daily rate. 2016 rates: semi-auto US$5–7, automatic US$6–10, trail bikes US$20+.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 494
+        },
+        "verify_against": "Current rental rates and deposit practice",
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam"
+        ]
+      },
+      {
+        "id": "moto.lp-insurance-line",
+        "claim": "LP: 'do not even consider renting a motorbike' without travel insurance, and many policies exclude motorbiking; the cost of treating serious injuries can be bankrupting. Rental contracts often make you agree a theft valuation — use guarded parking.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 494
+        },
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam",
+          "vietnam-health-and-vaccines"
+        ],
+        "note": "Supports facts.json getting_around.unlicensed_insurance."
+      },
+      {
+        "id": "moto.lp-road-reality",
+        "claim": "Road safety 'definitely not one of Vietnam's strong points': two-lane highways getting more dangerous, head-on collisions 'sickeningly familiar'; typhoon potholes, mud roads, landslides on mountain routes; no efficient rescue system — you or your guide get you to a clinic; children and livestock on the road.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 494
+        },
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam",
+          "is-vietnam-safe-for-americans"
+        ]
+      },
+      {
+        "id": "moto.lp-road-rules",
+        "claim": "Rules as LP saw them: effectively none — size wins; urban limit 50 km/h where a blue skyscraper sign marks the zone, and police now have speed guns; no right turn on red in cities; honking is a safety signal not aggression; helmets compulsory for passengers too and local 'eggshell' helmets are useless — buy a decent imported one for long rides; two per bike, enforced only in cities; no national seat-belt law in 2016.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 495
+        },
+        "verify_against": "Road Traffic Law 2024 (seat belts now mandatory front and rear; higher fines from 2025)",
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam",
+          "crossing-the-street-in-vietnam"
+        ]
+      },
+      {
+        "id": "moto.lp-tours",
+        "claim": "Guided motorbike tours through the north are 'one of Vietnam's defining moments'; all-inclusive tours ran from about US$100 per person per day for a group of four in 2016, with first-timer tuition offered; foreign guides cost much more than local ones; Minsk/Ural vintage-bike operators and Ha Giang specialists exist.",
+        "status": "lead",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 496
+        },
+        "verify_against": "Current operator pricing",
+        "related_articles": [
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ]
+      },
+      {
+        "id": "moto.lp-route-advice",
+        "claim": "Avoid Highway 1 on two wheels ('exhaust fumes and barged by trucks'); the inland Ho Chi Minh Highway loses the ocean but has scenery and empty roads, the Duc Tho–Phong Nha stretch especially; fuel from real stations because roadside sellers dilute it; spare parts easy for Japanese and Chinese bikes.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 39
+        },
+        "related_articles": [
+          "hai-van-pass-guide",
+          "renting-a-motorbike-in-vietnam"
+        ]
+      }
     ],
     "boat": [
-      {"id": "boat.mekong-to-chau-doc", "claim": "Boats run HCMC → Chau Doc on the Mekong: two days slow, one day fast.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "verify_against": "Current operators (Hang Chau, Blue Cruiser, Victoria Mekong) — most now run Chau Doc↔Phnom Penh rather than from HCMC", "related_articles": ["chau-doc-cambodia-border-crossing"]},
-      {"id": "boat.phu-quoc-ferry", "claim": "Ferries to Phu Quoc from Rach Gia.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "verify_against": "Superdong / Phu Quoc Express from Rach Gia AND Ha Tien; most visitors fly", "related_articles": ["phu-quoc-travel-guide"]},
-      {"id": "boat.vung-tau-hydrofoil", "claim": "Hydrofoils HCMC (Bach Dang jetty) ↔ Vung Tau.", "status": "obsolete", "vintage": 2015, "source": {"book": "dk-2015", "page": 283}, "verify_against": "GreenlinesDP catamaran replaced the hydrofoils", "related_articles": ["best-beaches-islands-vietnam"]}
+      {
+        "id": "boat.mekong-to-chau-doc",
+        "claim": "Boats run HCMC → Chau Doc on the Mekong: two days slow, one day fast.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "verify_against": "Current operators (Hang Chau, Blue Cruiser, Victoria Mekong) — most now run Chau Doc↔Phnom Penh rather than from HCMC",
+        "related_articles": [
+          "chau-doc-cambodia-border-crossing"
+        ]
+      },
+      {
+        "id": "boat.phu-quoc-ferry",
+        "claim": "Ferries to Phu Quoc from Rach Gia.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "verify_against": "Superdong / Phu Quoc Express from Rach Gia AND Ha Tien; most visitors fly",
+        "related_articles": [
+          "phu-quoc-travel-guide"
+        ]
+      },
+      {
+        "id": "boat.vung-tau-hydrofoil",
+        "claim": "Hydrofoils HCMC (Bach Dang jetty) ↔ Vung Tau.",
+        "status": "obsolete",
+        "vintage": 2015,
+        "source": {
+          "book": "dk-2015",
+          "page": 283
+        },
+        "verify_against": "GreenlinesDP catamaran replaced the hydrofoils",
+        "related_articles": [
+          "best-beaches-islands-vietnam"
+        ]
+      },
+      {
+        "id": "boat.lp-fares-fair",
+        "claim": "Ferries and hydrofoils have fixed prices; small local boats around the Mekong and to the Cham Islands charge foreigners more.",
+        "status": "context",
+        "vintage": 2016,
+        "source": {
+          "book": "lp-2016",
+          "page": 492
+        },
+        "related_articles": [
+          "can-tho-floating-market-guide",
+          "hoi-an-travel-guide"
+        ]
+      }
     ]
   },
   "local": [
-    {"id": "local.taxi-safest", "claim": "DK's 2015 city verdict: metered taxi = safest and most convenient; city buses crowded and erratic; xe om quickest and cheapest (about US 70c per km, negotiated); cyclos banned from main streets in 2009 and surviving only in tourist zones, 'not necessarily advised'.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 284}, "verify_against": "Grab, Xanh SM (electric taxis), Be; the HCMC metro; cyclo status in Hanoi's Old Quarter", "related_articles": ["getting-around-ho-chi-minh-city", "getting-around-hanoi", "grab-app-vietnam-guide"]},
-    {"id": "local.meter-rigging", "claim": "Even reputable taxi firms were acknowledged (by the government, per the book) to rig meters or take long routes; fares started just under US$1; watch the meter and carry exact change because drivers claim to have none.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 285}, "verify_against": "Mai Linh / Vinasun reputation today; Grab fixed fares remove the problem", "related_articles": ["grab-app-vietnam-guide", "is-vietnam-safe-for-americans"]},
-    {"id": "local.crossing-street", "claim": "Traffic lights are treated as advisory; to cross, let four-wheeled vehicles pass, then walk slowly and steadily through the two-wheelers without hesitating or stopping, so riders can predict you.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 285}, "related_articles": ["crossing-the-street-in-vietnam"]},
-    {"id": "local.taxi-brands-2015", "claim": "2015 trusted brands: Mai Linh and Vina Taxi (HCMC), Hanoi Taxi and Mai Linh (Hanoi).", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 285}, "verify_against": "Mai Linh and Vinasun still the street-hail standards; Xanh SM since 2023", "related_articles": ["getting-around-ho-chi-minh-city"]},
-    {"id": "local.organised-tours", "claim": "Organised day and 1–2 day tours are cheap for groups; the standard ones are Cu Chi and the Mekong from HCMC, Halong and Sapa from Hanoi; prices vary widely so compare several desks.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 285}, "related_articles": ["day-trips-from-hanoi", "mekong-delta-day-trip-vs-multi-day-tour"]}
+    {
+      "id": "local.taxi-safest",
+      "claim": "DK's 2015 city verdict: metered taxi = safest and most convenient; city buses crowded and erratic; xe om quickest and cheapest (about US 70c per km, negotiated); cyclos banned from main streets in 2009 and surviving only in tourist zones, 'not necessarily advised'.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 284
+      },
+      "verify_against": "Grab, Xanh SM (electric taxis), Be; the HCMC metro; cyclo status in Hanoi's Old Quarter",
+      "related_articles": [
+        "getting-around-ho-chi-minh-city",
+        "getting-around-hanoi",
+        "grab-app-vietnam-guide"
+      ]
+    },
+    {
+      "id": "local.meter-rigging",
+      "claim": "Even reputable taxi firms were acknowledged (by the government, per the book) to rig meters or take long routes; fares started just under US$1; watch the meter and carry exact change because drivers claim to have none.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 285
+      },
+      "verify_against": "Mai Linh / Vinasun reputation today; Grab fixed fares remove the problem",
+      "related_articles": [
+        "grab-app-vietnam-guide",
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "local.crossing-street",
+      "claim": "Traffic lights are treated as advisory; to cross, let four-wheeled vehicles pass, then walk slowly and steadily through the two-wheelers without hesitating or stopping, so riders can predict you.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 285
+      },
+      "related_articles": [
+        "crossing-the-street-in-vietnam"
+      ]
+    },
+    {
+      "id": "local.taxi-brands-2015",
+      "claim": "2015 trusted brands: Mai Linh and Vina Taxi (HCMC), Hanoi Taxi and Mai Linh (Hanoi).",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 285
+      },
+      "verify_against": "Mai Linh and Vinasun still the street-hail standards; Xanh SM since 2023",
+      "related_articles": [
+        "getting-around-ho-chi-minh-city"
+      ]
+    },
+    {
+      "id": "local.organised-tours",
+      "claim": "Organised day and 1–2 day tours are cheap for groups; the standard ones are Cu Chi and the Mekong from HCMC, Halong and Sapa from Hanoi; prices vary widely so compare several desks.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "dk-2015",
+        "page": 285
+      },
+      "related_articles": [
+        "day-trips-from-hanoi",
+        "mekong-delta-day-trip-vs-multi-day-tour"
+      ]
+    },
+    {
+      "id": "local.lp-fares-fair-box",
+      "claim": "LP's 'Fare's fair?' summary of who overcharges: airfares never; rail fixed by class; ferries fixed; buses fixed at the station but not en route; taxis metered and cheap with the occasional fast meter; xe om and cyclos never fixed — 'bargain. Hard.'",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 492
+      },
+      "related_articles": [
+        "vietnam-money-and-costs",
+        "grab-app-vietnam-guide"
+      ]
+    },
+    {
+      "id": "local.lp-taxi-rate-structure",
+      "claim": "Metered taxis are very cheap by international standards and the safe way home at night; dodgy go-fast meters cluster around bus terminals; Mai Linh and Vinasun are the two nationwide companies with excellent reputations.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 495
+      },
+      "verify_against": "Xanh SM and Grab have since joined the trusted set",
+      "related_articles": [
+        "grab-app-vietnam-guide"
+      ]
+    },
+    {
+      "id": "local.lp-city-buses",
+      "claim": "Few travellers use city buses because of language and the cheapness of taxis, but Hanoi's and HCMC's networks are 'not impossible' with a bus map; HCMC had 130+ air-con routes at a flat fare, including useful lines from Ben Thanh to the airport, train station, Cholon and both bus stations.",
+      "status": "lead",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 357
+      },
+      "verify_against": "BusMap app; current route numbers",
+      "related_articles": [
+        "getting-around-ho-chi-minh-city",
+        "getting-around-hanoi"
+      ]
+    },
+    {
+      "id": "local.lp-xe-om-named",
+      "claim": "Xe om means 'motorbike hug'; drivers wait on street corners, markets, hotels and bus stations and 'will find you before you find them'; fares like cyclos, negotiated first; fine without luggage.",
+      "status": "context",
+      "vintage": 2016,
+      "source": {
+        "book": "lp-2016",
+        "page": 495
+      },
+      "related_articles": [
+        "grab-app-vietnam-guide"
+      ]
+    }
   ]
 }

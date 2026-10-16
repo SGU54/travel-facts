@@ -91,3 +91,47 @@ Status legend: **P1** cited by 5+ articles or a swamp · **P2** cited by 2–4 �
 - Each P1 row is a candidate `facts.json` key for the next facts build (travel-empire Stage 2 / fleet facts checker). Add the key only when a primary source is found; otherwise it stays here.
 - Rows marked "observation-grade" can never become verified facts; they become structural prose rules, like corrections #1.
 - Later books (LP 2017, Moon, Insight) will add rows; keep the "raised by" column so provenance survives.
+
+---
+
+# Lonely Planet 2016 — additional fact keys (2026-10-16)
+
+Rows LP quantifies that neither facts.json nor the DK list above holds.
+
+| key | raised by | settle with | priority |
+|---|---|---|---|
+| transport.airport_access_fee_sgn | LP p357 (vehicle access ticket added to taxi fare) | ACV / SGN fee schedule | P2 |
+| transport.airport_bus_routes_current | LP p19, p357 (routes 152/17 in 2016) | HCMC and Hanoi bus operators (109, 86 today) | P1 |
+| transport.train_classes_and_berth_pricing | LP p496 (SE/TN; upper berth cheapest) | dsvn.vn | P1 |
+| transport.train_booking_window_days | LP p497 (60–90 days) | dsvn.vn | P2 |
+| transport.tet_train_suspension_days | LP p497 (nine days) | dsvn.vn annual notice | P1 |
+| transport.train_child_fares | LP p496 (under 2 free, 2–9 half) | dsvn.vn | P2 |
+| transport.bus_average_speed_structural | LP p492 (~50 km/h) | observation-grade; expressway list from MoT | P3 |
+| transport.open_tour_operators_current | LP p493 | Sinh Tourist, Futa, Vexere listings | P2 |
+| transport.land_gate_hours | LP p489 (7–5; Cambodia 8–8) | Immigration Dept gate list | P2 |
+| transport.cambodia_laos_visa_on_arrival_rules | LP p489 | Cambodian e-visa / Lao VOA official pages | P1 |
+| transport.china_border_rail_services | LP p491 (Hanoi–Nanning daily) | China Railway / dsvn.vn | P3 |
+| transport.urban_speed_limit_and_right_on_red | LP p495 (50 km/h; no right on red) | Road Traffic Law 2024 | P2 |
+| transport.seatbelt_law | LP p495 (none in 2016) | Road Traffic Law 2024 (now mandatory) | P2 |
+| transport.helmet_passenger_rule | LP p495 | Road Traffic Law | P2 |
+| transport.metro_lines_open | LP p357 box | HCMC Metro Line 1 (Dec 2024); Hanoi 2A, 3 | P1 |
+| money.hotel_tax_service_structure | LP p479 ("++") | hotel practice; VAT law | P2 |
+| money.dong_export_rule | LP p482 (cannot take dong out) | State Bank regulation on carrying VND across the border | P2 |
+| money.card_surcharge_structural | LP p482 (~3%) | observation-grade | P3 |
+| calendar.tet_date_window | LP p458 (19 Jan–20 Feb) | lunar calendar | P1 |
+| calendar.hue_festival_format | LP p26 (biennial then; annual now) | huefestival.com | P2 |
+| calendar.danang_fireworks_dates | LP p26 | DIFF official | P2 |
+| health.dengue_hospitalisations_structural | LP p500 | WHO / MoH figures | P3 |
+| health.state_hospital_foreigner_licence | LP p499 | MoH list of licensed facilities | P2 |
+| health.private_clinics_list | LP p499 | US Embassy medical list | P1 (dup of earlier row; raise priority) |
+| health.rabies_igg_availability | LP p501 | US Embassy / clinic info | P2 |
+| health.ice_safety_structural | LP p500 | observation-grade; CDC tap-water line | P2 |
+| safety.uxo_statistics | LP p484 (150,000 t; 40,000 casualties; Quang Tri) | MAG / VNMAC | P2 |
+| safety.riptide_beaches_with_lifeguards | LP p479 | provincial beach management | P3 |
+| daily.lunch_closure_hours | LP p483 (noon–1.30) | observation-grade | P3 |
+| daily.museum_monday_closures | LP p55 | each museum | P2 |
+| daily.mobile_carriers_and_tourist_sims | LP p484 (Viettel, Vinaphone, Mobifone) | carrier pages | P1 (dup; keep) |
+| daily.homestay_licensing_rule | LP p478 | Ministry of Culture, Sports and Tourism | P2 |
+| legal.lgbt_marriage_law_status | LP p481 (2015 law) | Law on Marriage and Family 2014 | P3 |
+| culture.minority_population_share | LP p457 (14 m / 14%) | GSO census 2019 | P2 |
+| culture.catholic_share | LP p459 (8–10%) | GSO census religion table | P3 |

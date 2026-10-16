@@ -64,3 +64,59 @@ Method: every topic the DK book treats at opener/survival-guide depth was mapped
 - **vegetarian-vegan-food-vietnam**: Hue as the Buddhist vegetarian capital; nuoc mam trap.
 - **hanoi-old-quarter-guide**: tube-house land-deed origin of the skinny buildings; guild-street names.
 - **ninh-binh / best-national-parks**: Cuc Phuong butterfly season (Apr–May), unmarked trails → guide, Muong village overnight.
+
+---
+
+# Lonely Planet 2016 — additions (2026-10-16)
+
+LP is a practical guide and sees more of the modern country than DK. Everything below is NEW relative to the DK tables above; topics already listed are not repeated.
+
+## A2. Book covers it, we have no article (new candidates from LP)
+
+| Topic | Where in LP | Why it might earn an article | Risk / note |
+|---|---|---|---|
+| **Ha Giang loop** (now confirmed by both books' silence/salience) | p31, p40, p148 | LP already calls it the north's greatest road trip in 2016 and plans three weeks around it; we have nothing. The car-and-driver / xe om version is the publishable angle. | Strongest single gap in the corpus. |
+| **Phong Nha–Ke Bang** | p42, p162 | "Emerging as a must-visit"; cave tiers from day caves to Son Doong; sits on the Hue–Hanoi leg. | Volatile pricing at the top tier; stable at the day-cave tier. |
+| **Mai Chau / Moc Chau / Ba Be** as Sapa alternatives | p31, p38, p129 | White Thai homestays, quieter than Sapa, 3–4 h from Hanoi; Ba Be lake homestays with Tay families. | Serves the sapa-trek-choice swamp directly. |
+| **Cham Islands** | p42, p223 | Hoi An's dive/snorkel day with homestays; seasonal closure. | Fold into hoi-an-travel-guide if short. |
+| **Open-tour bus vs point-to-point** as its own decision | p493 | LP lays out the trade (cheap and central vs herded, kickbacks, locked to the trail). Our sleeper-bus article compares modes, not ticket types. | Long-leg-transport swamp material. |
+| **Airport-to-city per gateway** | p19, p94, p357 | LP has a per-airport options block (bus, shuttle, taxi brand, scams, access fee). Our airport guide should carry the same per-gateway structure. | Figures all stale; structure durable. |
+| **Dalat** | p287–298 | Second book to make it a base; adventure sports (canyoning), K'Ho coffee, the Dalat–Mui Ne road. | Still absent. |
+| **Con Dao** detail | p279, p42 | Best diving in Vietnam, Vo Thi Sau pilgrimage, "self-imposed exile of three nights". | We have con-dao-islands-guide; check it carries the dive and prison-history angles. |
+| **Quy Nhon / Bai Xep / Phu Yen coast** | p22, p238 | LP's "Phu Quoc without the crowds"; Ganh Da Dia; Bai Mon. | Fold into best-beaches or a "quiet coast" piece. |
+| **Vietnamese-American return travel** | p434 (Catfish & Mandala), p455 (Viet Kieu) | A real audience segment for this site; both books mention Viet Kieu attitudes; facts.json has documents.child_exit. | No article addresses the returning-diaspora reader. |
+| **Children's practicalities** | p479 | Riptides, no car seats, cots, attention-overload, hand gel. | Section in the families itinerary. |
+| **Accessibility** | p485 | Doorway widths, lifts, car-and-driver as the enabler. Both books now. | Gap confirmed. |
+| **Women's / LGBT travel** | p481, p487 | Short, factual, low-risk. | Fold into solo-female and etiquette. |
+| **Motorbike tours with a rider** (Easy Riders, guided north tours) | p39, p295, p496 | The only publishable motorbike experience given corrections #2. | Fits hiring-a-driver article as a section. |
+| **Cycling** | p38, p491 | Mekong back roads, Hoi An craft villages, Hue by bike, Dalat→Mui Ne descent. | No cycling article. |
+| **Tet as a visitor** (first-visitor rule, nine-day train suspension) | p458, p497 | We have the Tet article; check it carries these two specifics. | — |
+
+## B2. We cover it, LP 2016 is blind (adds to the DK list)
+
+| Our article(s) | What LP 2016 cannot know |
+|---|---|
+| grab-app-vietnam-guide | LP mentions Uber "becoming popular" in HCMC and nothing in Hanoi; Grab absent. |
+| sim-card-vs-esim | LP says GSM bands are incompatible with North American phones — untrue of any modern phone; eSIM nonexistent. |
+| getting-around-ho-chi-minh-city | Metro Line 1 "slated for 2020"; opened Dec 2024. |
+| vietnam-evisa-how-to-apply | Visa-on-arrival letters as the "preferred method"; e-visa did not exist. |
+| getting-from-hanoi-to-sapa | 10-hour bus; the expressway bus is ~5.5 h. |
+| hue-travel-guide | Hue Festival biennial; now annual four-season. |
+| da-nang-travel-guide | Fireworks "last week of April"; now a multi-weekend summer festival. Golden Bridge (2018) absent. |
+| reunification-express-train-guide | High-speed plan "shelved"; approved Nov 2024. dsvn.vn "Vietnamese cards only". |
+
+## C2. Overlap angles worth adding (LP-specific)
+
+- **best-time-to-visit-vietnam**: LP's per-city calendars disagree with the national "Mar–May" line (Hanoi Oct–Dec; Nha Trang July; Mui Ne December) — the article's month×region verdict grid should say so explicitly.
+- **vietnam-money-and-costs**: LP's "Fare's fair?" structure (who overcharges and who can't) is a clean editorial device; the state-set dual-pricing origin of the overcharging habit is a good explanatory paragraph.
+- **tipping-in-vietnam**: three editorial opinions now logged; the article should say no standard exists and give the structural rule.
+- **is-vietnam-safe-for-americans**: copycat hotels with the same name, cyclo muggings in HCMC (day use only), xe om "I said 50,000" trick, airport taxi-and-hotel scams, accidents-not-disease framing.
+- **vietnam-etiquette-for-americans**: senior diner pays, business cards, no right turn on red, Tet first-visitor rule, never lose your temper / traders shouting is equally unacceptable.
+- **vietnamese-language-useful-phrases**: Muong as closest relative, southern tone merger, N/S vocabulary, the kinship-address worked example.
+- **pho-bun-cha-banh-mi**: LP's honest "fine pho is hard to find" line; Hanoi bun cha specifics; my quang and cao lau as the central dishes we under-name.
+- **vietnamese-cooking-ingredients-to-bring-home**: black pepper as the souvenir; nuoc mam grades; snake wine as a don't.
+- **vegetarian-vegan-food-vietnam**: the 1st/15th lunar-day rule.
+- **vietnam-health-and-vaccines**: accidents-not-disease; dengue bites by day; private clinics first; state hospitals need a licence to treat foreigners; evacuation bills; fake OTC drugs.
+- **overland-border-crossings-vietnam**: LP's full gate table (16 named gates) and the "direct bus only" golden rule.
+- **sleeper-bus-vs-sleeper-train**: upper berth cheapest on hard sleepers; SE vs TN trains; 50 km/h bus reality; sleeper bus "comparable" to train in cost.
+- **hiring-a-driver-vs-self-drive**: the driver-guide checklist; who pays fuel is not standard.
