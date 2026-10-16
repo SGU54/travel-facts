@@ -250,3 +250,51 @@ Facts: 129; equal supplied values: 4; disagreements: 49; incomplete responses: 9
 - deepseek: "Phu Quoc International Airport (PQC). ~10 km from Duong Dong town center; ~30 min to northern resort areas. Taxi ~VND 150,000–250,000 depending on destination. Grab available."
 
 Open appropriate sources, check scope and effective dates, then write verified facts separately. Review all unresolved items; never cap their count.
+
+---
+
+# Guidebook leads vs facts.json — DK Eyewitness Vietnam & Angkor Wat (2015)
+
+Added 2026-10-16 from the `knowledge/` build. Every item is a 2013–2017 guidebook claim, paraphrased, with the printed page. facts.json and corrections.json win in every case; these are logged so the stale version is never re-imported from another old book. Full entries in `knowledge/rules.json`, `knowledge/transport.json`, `knowledge/costs.json`.
+
+## visa.type / visa.fee / visa.max_stay_days — DK p271
+- DK 2015: visas from embassies or by "visa on arrival" approval letter + US$45 airport stamping fee; tourist visa 1 month, 3 months a little more.
+- facts.json: e-visa at evisa.gov.vn, US$25 single / US$50 multiple, up to 90 days; no VOA letter route for tourists.
+- Verdict: obsolete. The VOA-letter trade is now the intermediary market corrections #4 warns about.
+
+## customs.tobacco — DK p271
+- DK 2015: 400 cigarettes.
+- facts.json (Decree 134/2016, customs.gov.vn): 200 cigarettes or 250 g tobacco or 20 cigars.
+- Verdict: facts.json. Alcohol 1.5 L and the US$5,000 cash declaration agree.
+
+## getting_around.driving_licence / corrections #2 — DK p283
+- DK 2015: a licence is legally required to rent a motorbike but "rarely asked" for.
+- facts.json (State Dept): US licence and IDP invalid; fine, arrest or jail; insurance may not pay.
+- Verdict: corrections #2 stands. The book's framing is the one we rejected.
+
+## safety_health.malaria — DK p271, p275
+- DK 2015: eradicated from most of the country, slight risk Phu Quoc + highlands; consider prophylaxis for jungle and Mekong.
+- facts.json (CDC): rural only, rare in the deltas, none in the main cities.
+- Verdict: CDC.
+
+## corrections #1 (ATM figures) — DK p276
+- DK 2015 prints a per-withdrawal cap (2–5 million dong) and fee (US$2–5).
+- Verdict: the structural rule is publishable, the figures are not. Nothing changes.
+
+## country_facts.getting_there.flight_from_audience_origins — DK p280
+- DK 2015 lists San Francisco among Vietnam Airlines' direct destinations in 2015 and says US arrivals come via Bangkok/Hong Kong.
+- state.json 2026-10-13 verification: SFO–SGN nonstop began Nov 2021 and is the only US nonstop.
+- Verdict: book error for 2015; irrelevant today. Do not cite.
+
+## identity.timezone, safety_health.emergency_numbers, safety_health.uxo, safety_health.main_risk, documents.police_registration — DK p273–275, p233
+- Agree with facts.json in substance (UTC+7 / EST+12 / PST+15; 113/114/115; UXO concentrated at the DMZ; motorbike snatch theft; hotels register guests with police and may hold the passport).
+- Verdict: consistent; no action. corrections #7 still forbids stating a consequence for non-registration — the book states none either.
+
+## Reunification Express train numbering — DK p282
+- DK 2015: even-numbered trains run north→south, odd south→north.
+- Current DSVN practice appears to be the reverse (SE1/SE3 Hanoi→Saigon).
+- Verdict: unresolved lead; verify on dsvn.vn before any article states a parity rule.
+
+## Pho timing — DK p244
+- DK 2015: connoisseurs go late for a stronger broth.
+- Common local guidance: go early. Not a fact-layer item; flagged so no article repeats the book line as received wisdom.

@@ -1,0 +1,44 @@
+{
+  "_README": "Cuisine regions, eating customs, dish glossary (names and one-line meaning only, no recipes or menu text), street-food safety, from DK 2015 pp242–245 and p266. Paraphrase only.",
+  "regions": [
+    {"id": "food.three-regions", "claim": "Three culinary regions: NORTH simpler and less sweet, cooler-climate, home of pho and bun cha, exotic meats and snake wine; CENTRE spicier, with Hue's imperial multi-course tradition and the country's strongest vegetarian (Buddhist) cooking; SOUTH sweeter and more tropical, coconut, curries, Khmer/Thai/Indian touches.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 244}, "related_articles": ["vietnamese-food-guide-first-timers", "pho-bun-cha-banh-mi-what-to-order"]},
+    {"id": "food.influences", "claim": "Chinese legacy: chopsticks, soy sauce, tofu, stir-frying; French: baguette, coffee, dairy, pâté; Cham/Indian rhythms in the south.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 244}, "related_articles": ["vietnamese-food-guide-first-timers", "vietnamese-coffee-guide"]},
+    {"id": "food.rice-centre", "claim": "Rice is the centre of the language and the plate: everyday non-sticky rice vs glutinous rice for festivals; rice flour becomes noodles, rice paper, cakes; distilled rice becomes rice wine.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 245}, "related_articles": ["vietnamese-food-guide-first-timers"]},
+    {"id": "food.exotic-warning", "claim": "Frog, snake, snails, turtle, sparrows and — in the north — dog appear on menus; some places serve banned wild species. An American reader needs the vocabulary to avoid them, not a lecture.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 245}, "verify_against": "Hanoi's 2018 campaign to curb dog meat; current prevalence in tourist districts", "related_articles": ["vietnamese-food-guide-first-timers", "vietnamese-language-useful-phrases"]}
+  ],
+  "venues": [
+    {"id": "food.venue-ladder", "claim": "The venue ladder: white-tablecloth restaurants (big cities, hotels) → specialist sit-downs built around one dish (bun thit nuong, banh xeo, lau hotpot) → quan com point-at-the-glass-case rice shops, often six seats → pho shops → pushcarts and yoke vendors with a charcoal stove.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 242}, "related_articles": ["vietnamese-food-guide-first-timers", "street-food-safety-vietnam"]},
+    {"id": "food.pick-the-crowd", "claim": "Choose the street stall packed with locals on plastic stools; 'com bui' (dusty food) is the affectionate name for street eating.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 245}, "related_articles": ["street-food-safety-vietnam", "best-street-food-tours-hanoi-saigon"]},
+    {"id": "food.bia-hoi", "claim": "Bia hoi is Hanoi's preservative-free draught beer, brewed daily and drunk the same day in hole-in-the-wall bars on tiny stools; southern beer gardens rotate promoted brands weekly and serve DIY spring rolls.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 243}, "related_articles": ["bia-hoi-guide-vietnam"]},
+    {"id": "food.pho-timing-claim", "claim": "DK says pho connoisseurs come LATE to a stall for a stronger, more reduced broth.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 244}, "verify_against": "Most Hanoi guidance says the opposite (go early before the broth and the best cuts run out). Treat as a book claim, not a fact.", "related_articles": ["pho-bun-cha-banh-mi-what-to-order"]},
+    {"id": "food.cooking-classes", "claim": "Hotel-run half-day classes with a market visit (Metropole, Hanoi) and Hoi An's long-running Miss Vy class were the 2015 benchmarks; culinary tours (HCMC→Hoi An→Hue→Hanoi) cover the three regional styles in about a week.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 266}, "verify_against": "Whether both classes still run and at what price", "related_articles": ["best-cooking-classes-vietnam"]}
+  ],
+  "customs": [
+    {"id": "food.sharing", "claim": "No courses: dishes arrive as cooked; order one dish per head plus one for the table; everyone shares; slurping and bone-dropping are normal in local places; loud is friendly.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 243}, "related_articles": ["vietnam-etiquette-for-americans", "vietnamese-food-guide-first-timers"]},
+    {"id": "food.vegetarian", "claim": "Dedicated vegetarian restaurants were few in 2015 but avoiding meat is easy; the trap is nuoc mam (fish sauce) in almost everything — vegans must say so explicitly. Hue is the vegetarian capital; the Buddhist tradition produces meat-free versions of classic dishes with tofu and mushrooms.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 243}, "related_articles": ["vegetarian-vegan-food-vietnam"], "note": "'Toi an chay' = I eat vegetarian; 'an chay' restaurants have multiplied since."},
+    {"id": "food.spice-shock", "claim": "The book warns bland-diet travellers that Vietnamese food can be spicy enough to upset the stomach; carry antacids.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["street-food-safety-vietnam"]},
+    {"id": "food.water-rule", "claim": "Bottled or boiled water; tea is safe because it is boiled; peel fruit yourself; watch buffets and room service even in top hotels.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 275}, "related_articles": ["street-food-safety-vietnam", "vietnam-health-and-vaccines"]}
+  ],
+  "glossary": {
+    "_note": "Names with a one-phrase gloss only; the book's menu lists are not reproduced.",
+    "items": [
+      {"term": "pho", "gloss": "beef or chicken noodle soup with star anise; the northern-born national dish", "source": {"book": "dk-2015", "page": 244}},
+      {"term": "bun thit nuong", "gloss": "grilled marinated meat on rice noodles with herbs and sweet fish-sauce dressing", "source": {"book": "dk-2015", "page": 242}},
+      {"term": "banh xeo", "gloss": "crisp rice-flour pancake with pork, prawn and beansprouts, wrapped in lettuce", "source": {"book": "dk-2015", "page": 242}},
+      {"term": "lau", "gloss": "hotpot cooked at the table", "source": {"book": "dk-2015", "page": 242}},
+      {"term": "chao", "gloss": "rice porridge / congee", "source": {"book": "dk-2015", "page": 242}},
+      {"term": "com", "gloss": "cooked rice; quan com = rice shop", "source": {"book": "dk-2015", "page": 242}},
+      {"term": "nuoc mam", "gloss": "fermented fish sauce, the base seasoning", "source": {"book": "dk-2015", "page": 245}},
+      {"term": "nuoc cham", "gloss": "fish-sauce dip with lime, sugar, garlic, chilli", "source": {"book": "dk-2015", "page": 245}},
+      {"term": "nem ran / cha gio", "gloss": "fried spring rolls (northern / southern name)", "source": {"book": "dk-2015", "page": 245}},
+      {"term": "banh cuon", "gloss": "steamed rice-flour rolls with minced filling", "source": {"book": "dk-2015", "page": 245}},
+      {"term": "chao tom", "gloss": "prawn paste grilled on sugar cane", "source": {"book": "dk-2015", "page": 245}},
+      {"term": "canh chua ca", "gloss": "southern sour fish soup with pineapple and chilli", "source": {"book": "dk-2015", "page": 245}},
+      {"term": "cha ca", "gloss": "Hanoi turmeric fish with dill and peanuts", "source": {"book": "dk-2015", "page": 245}},
+      {"term": "banh chung / banh tet", "gloss": "Tet sticky-rice cakes (square north / cylindrical south)", "source": {"book": "dk-2015", "page": 33}},
+      {"term": "bia hoi", "gloss": "fresh draught beer", "source": {"book": "dk-2015", "page": 243}},
+      {"term": "ca phe sua", "gloss": "coffee with (condensed) milk", "source": {"book": "dk-2015", "page": 303}},
+      {"term": "an chay", "gloss": "vegetarian (food/eating)", "source": {"book": "dk-2015", "page": 303}}
+    ]
+  }
+}

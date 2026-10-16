@@ -1,0 +1,39 @@
+{
+  "_README": "Reading state for the guidebook knowledge DB. Read this before resuming. The project-wide state.json one level up is the site's record; this one only tracks book reading.",
+  "updated_at": "2026-10-16",
+  "books_done": [
+    "dk-2015"
+  ],
+  "books_pending": [
+    "lp-2017",
+    "moon-2015",
+    "insight-2015",
+    "goscha-2016",
+    "lp-phrasebook-2016"
+  ],
+  "next_action": "Ask the user to borrow the next book. Recommended order: Lonely Planet 2017 full guide first (most practical detail, closest to today), then Moon 2015, then Insight 2015 (culture), Goscha (history-context.json), LP phrasebook last. Before asking, find the correct archive.org ID for the LP 2017 full guide — vietnam0000stew_v3m3 is 'Discover Vietnam'.",
+  "method_notes": [
+    "printed page P = leaf n(P+5) for dk-2015; other books will have their own offset — find it from the contents page first",
+    "get_page_text returns ~1.2 KB of archive.org boilerplate per page; batches of 6–8 pages per browser_batch call are the sweet spot",
+    "image-heavy pages (maps, climate charts, timeline spreads) OCR badly; screenshot + zoom if a figure matters",
+    "write paraphrased notes to raw-notes/<book>-notes.md after every batch; never store OCR text"
+  ],
+  "outputs_written": [
+    "README.md",
+    "sources.json",
+    "regions.json",
+    "seasons.json",
+    "transport.json",
+    "costs.json",
+    "rules.json",
+    "culture-etiquette.json",
+    "history-context.json",
+    "food.json",
+    "coverage-gaps.md",
+    "decision-gaps.md",
+    "raw-notes/dk-2015-notes.md",
+    "fact-wishlist.md"
+  ],
+  "disputes_logged": "../disputes.md — section 'Guidebook leads vs facts.json' appended 2026-10-16",
+  "fact_wishlist_note": "fact-wishlist.md lists ~55 fact keys the books quantify that facts.json lacks, with the primary source to settle each. P1 rows are candidates for the next facts build."
+}

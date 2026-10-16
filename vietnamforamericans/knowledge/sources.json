@@ -1,0 +1,73 @@
+{
+  "_README": "Registry of books read for this knowledge DB. All read in the Internet Archive viewer under controlled digital lending on the user's account; nothing downloaded. Page numbers in every other file are the printed page numbers of the edition listed here.",
+  "books": {
+    "dk-2015": {
+      "title": "DK Eyewitness Travel: Vietnam & Angkor Wat",
+      "publisher": "Dorling Kindersley, London",
+      "year": 2015,
+      "isbn": "9781409329831",
+      "archive_id": "vietnamangkorwat0000unse_v8c5",
+      "viewer_note": "printed page P = leaf n(P+5); /page/P/mode/1up also resolves directly",
+      "status": "read",
+      "read_on": "2026-10-16",
+      "pages_read": [
+        "8-55 Introducing Vietnam + At a Glance (complete)",
+        "56-60 HCMC opener, exploring map, getting-around box, Dong Khoi street",
+        "89-91 Mekong Delta opener + getting around",
+        "107-109 South Central opener + getting around",
+        "125-127 Central Vietnam opener + getting around",
+        "157-159 Hanoi opener + getting around",
+        "183-185 Northern Vietnam opener + getting around",
+        "207-209 Angkor intro",
+        "232-235 Where to Stay intro",
+        "242-245 Where to Eat intro + Flavors of Vietnam",
+        "254-257 Shopping intro",
+        "260-261 Entertainment intro",
+        "264-267 Outdoor Activities (complete)",
+        "270-285 Survival Guide: Practical Information + Travel Information (complete)",
+        "300-303 Phrase Book front matter (language facts only)"
+      ],
+      "pages_skipped": [
+        "61-87, 92-105, 110-123, 128-155, 160-181, 186-205 region sight-by-sight entries",
+        "210-229 Angkor temples + Angkor survival guide",
+        "236-241, 246-253 hotel and restaurant listings (deliberately not read: directory material)",
+        "286-299 index"
+      ],
+      "ocr_problems": ["p47 (First Indochina War) unreadable in the text layer; image-heavy page"]
+    },
+    "lp-2017": {
+      "title": "Lonely Planet Vietnam (full country guide, 14th ed.)",
+      "year": 2017,
+      "archive_id": "TO FIND — user-supplied ID vietnam0000stew_v3m3 is 'Discover Vietnam', not the full guide; search archive.org for the 2017 full guide (authors Stewart, Atkinson, Bush, Ray) before asking the user to borrow",
+      "status": "not_started"
+    },
+    "moon-2015": {
+      "title": "Moon Vietnam",
+      "year": 2015,
+      "archive_id": "vietnam0000file",
+      "status": "not_started"
+    },
+    "insight-2015": {
+      "title": "Insight Guides Vietnam",
+      "year": 2015,
+      "archive_id": "vietnam0000zgli_s6v6",
+      "status": "not_started"
+    },
+    "goscha-2016": {
+      "title": "The Penguin History of Modern Vietnam (Christopher Goscha)",
+      "year": 2016,
+      "archive_id": "penguinhistoryof0000gosc",
+      "status": "not_started",
+      "note": "history-context only; no prices"
+    },
+    "lp-phrasebook-2016": {
+      "title": "Lonely Planet Vietnamese Phrasebook & Dictionary",
+      "year": 2016,
+      "archive_id": "vietnamesephrase0000unse_a7s0",
+      "status": "not_started",
+      "note": "language mechanics and etiquette only; do not transcribe phrase lists"
+    }
+  },
+  "reading_method": "Chrome (claude-in-chrome) → archive.org/details/<id>/page/<P>/mode/1up → wait ~5 s → get_page_text; one URL navigation per page, batched 6–8 pages per call. Viewer-only; no download, no DRM handling.",
+  "not_used": "Two files in ../books-knowledge/ (a DK PDF and an LP EPUB with z-library filenames) were NOT opened or used: they are not the legally borrowed copies. Everything here comes from the archive.org viewer."
+}

@@ -1,0 +1,71 @@
+{
+  "_README": "Climate, when-to-go logic, festival calendar and Tet mechanics from DK 2015 pp32–39 and p270. Paraphrase only. Lunar-calendar festivals shift every year: dates here are the book's 2015 approximations and are leads. Our published climate layer (best-time-to-visit-vietnam, geo.ts climate tables) is the published truth; nothing here overrides it.",
+  "climate": [
+    {"id": "climate.three-regimes", "claim": "Three regimes, not one: the SOUTH is warm and humid all year with a May–Oct/Nov wet season; the CENTRAL COAST has typhoons Jul–Nov and its heaviest rain Sep–Dec, with cool rainy winters; the NORTH has cold wet winters Nov–Mar (occasional snow on Fansipan) and hot humid summers wettest May–Aug.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 38}, "related_articles": ["vietnam-weather-by-region-and-month", "best-time-to-visit-vietnam"]},
+    {"id": "climate.hot-season", "claim": "The hot season Feb–Apr can reach about 35°C / 95°F with 80–100% humidity.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 38}, "verify_against": "Vietnam NCHMF climate normals", "related_articles": ["vietnam-weather-by-region-and-month"]},
+    {"id": "climate.book-generalisation-wrong", "claim": "The book's own one-line summary ('dry Nov–Feb') is wrong for the central coast, whose wettest month is October–November; its own climate chart shows Hue's October rain exceeding Hanoi's wettest month. Treat any single-country 'dry season' claim as a red flag.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 38}, "related_articles": ["best-time-to-visit-vietnam", "hue-travel-guide"]},
+    {"id": "climate.chart-figures", "claim": "Chart figures (OCR-partial, mm per month for Apr/Jul/Oct/Jan): Hanoi ≈ 81/323/99/20; Hue ≈ 51/72/516+/≈100; Halong Jul ≈ 316; Phan Thiet ≈ 51/295/260/≈0. Cities charted: Lao Cai, Son La, Hanoi, Halong City, Hue, Pleiku, Nha Trang, Quang Ngai, Phan Thiet, Dalat, HCMC, Chau Doc, Can Tho.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 39}, "verify_against": "NCHMF / WMO normals; the site's geo.ts climate layer already holds verified month tables", "note": "OCR of a graphic; use only as a sanity check, never as a figure."},
+    {"id": "climate.mui-ne-wind", "claim": "Mui Ne is windy Oct–Feb (kitesurf season), i.e. its best beach-lounging months are its windiest.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 55}, "related_articles": ["mui-ne-guide"]}
+  ],
+  "when_to_go": [
+    {"id": "wtg.dk-recommendation", "claim": "DK's overall pick: March–May for better weather and fewer crowds; Dec–Feb for Tet atmosphere but higher prices; rainy months are off-season and cheaper but bring floods and poor visibility.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 270}, "related_articles": ["best-time-to-visit-vietnam"], "note": "Decision the book leaves open: it never reconciles 'March–May is best' with the central coast's own calendar or with the north's spring drizzle."},
+    {"id": "wtg.peak-flying", "claim": "Peak flying season is Dec–Feb because overseas Vietnamese (Viet Kieu) fly home for Christmas and Tet; DK says book flights for that window at least three months ahead, and high-end hotels too; budget rooms rarely sell out.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 270}, "verify_against": "Fare-trend data for SFO/LAX→SGN/HAN around Tet", "related_articles": ["flights-to-vietnam-from-us", "traveling-vietnam-during-tet"]},
+    {"id": "wtg.domestic-peak", "claim": "Domestic flight peak is mid-November to mid-March; reserve ahead.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 282}, "verify_against": "Airline fare calendars", "related_articles": ["domestic-flights-vietnam"]},
+    {"id": "wtg.business-hotels", "claim": "HCMC and Hanoi hotels can be full of business travellers at any time of year, independent of tourist season.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 232}, "related_articles": ["where-to-stay-in-hcmc", "where-to-stay-in-hanoi"]}
+  ],
+  "tet": [
+    {"id": "tet.what-it-is", "claim": "Tet Nguyen Dan, the lunar new year, is the one festival that matters. The week before: debts settled, graves cleaned, homes decorated with peach blossom (north) or kumquat trees, Kitchen God offerings, flower markets everywhere. The three core days are domestic: families at home, ancestors believed to visit, paper offerings burned.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 32}, "related_articles": ["traveling-vietnam-during-tet"]},
+    {"id": "tet.closures", "claim": "Officially a three-day holiday, but businesses often shut for a week; some shops close for days, others open late.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 34}, "verify_against": "Current Labour Code public-holiday schedule (Tet is now 5 days off plus weekends, typically 7–9 days)", "related_articles": ["traveling-vietnam-during-tet"]},
+    {"id": "tet.firecrackers-banned", "claim": "Firecrackers have been banned since 1994, down to playing recordings; paper firecracker garlands are paraded instead.", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 33}, "verify_against": "Decree 137/2020/ND-CP (legalised certain non-explosive 'fireworks' for private use from 2021); state fireworks displays happen", "related_articles": ["traveling-vietnam-during-tet"]},
+    {"id": "tet.foods-and-games", "claim": "Tet foods: banh chung / banh tet sticky-rice cakes, chicken, dried fruit, watermelon. Human chess is played only at Tet; lion/unicorn dances.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 33}, "related_articles": ["traveling-vietnam-during-tet", "vietnamese-food-guide-first-timers"]},
+    {"id": "tet.zodiac", "claim": "The Vietnamese zodiac has a Cat where China has a Rabbit; years cycle in 12 within 60-year hoi. 2026 is a Horse year.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 35}, "related_articles": ["traveling-vietnam-during-tet"]}
+  ],
+  "festival_calendar": {
+    "_note": "Lunar months unless marked fixed. Each entry is a lead for the specific date; the existence and character of the festival is context.",
+    "lunar_month_1": [
+      {"id": "fest.tet", "claim": "Tet (late Jan–Feb).", "status": "context", "source": {"book": "dk-2015", "page": 34}},
+      {"id": "fest.party-day", "claim": "Communist Party founding day, Feb 3 (fixed; not a day off).", "status": "context", "source": {"book": "dk-2015", "page": 34}},
+      {"id": "fest.tay-son", "claim": "Tay Son festival, Binh Dinh, early Feb: elephants, drumming, martial arts, a week long.", "status": "lead", "source": {"book": "dk-2015", "page": 34}},
+      {"id": "fest.yen-tu", "claim": "Yen Tu pilgrimage season mid-Feb to end April (Truc Lam Buddhism's founding mountain).", "status": "lead", "source": {"book": "dk-2015", "page": 34}},
+      {"id": "fest.lim", "claim": "Lim festival, Bac Ninh, 14 days after Tet: quan ho call-and-response courtship singing, wrestling, weaving contests.", "status": "lead", "source": {"book": "dk-2015", "page": 34}},
+      {"id": "fest.perfume-pagoda", "claim": "Perfume Pagoda festival runs about three months, Feb–May; thousands of pilgrims.", "status": "lead", "source": {"book": "dk-2015", "page": 34}, "related_articles": ["day-trips-from-hanoi"]}
+    ],
+    "lunar_month_2": [
+      {"id": "fest.hai-ba-trung", "claim": "Trung Sisters festival, Hanoi, early March: statues carried to the Red River for a ritual bath.", "status": "lead", "source": {"book": "dk-2015", "page": 34}},
+      {"id": "fest.ba-chua-kho", "claim": "Ba Chua Kho temple, Bac Ninh, March: worshippers symbolically borrow money from the goddess for the year.", "status": "lead", "source": {"book": "dk-2015", "page": 34}}
+    ],
+    "lunar_month_3": [
+      {"id": "fest.thay-pagoda", "claim": "Thay Pagoda festival, early April: water-puppet shows for the art's patron saint.", "status": "lead", "source": {"book": "dk-2015", "page": 34}, "related_articles": ["hanoi-water-puppet-show-guide"]},
+      {"id": "fest.hon-chen", "claim": "Hon Chen temple, Hue: boat procession on the Perfume River in the 3rd and 7th lunar months.", "status": "lead", "source": {"book": "dk-2015", "page": 35}},
+      {"id": "fest.thanh-minh", "claim": "Thanh Minh grave-tending day, early April, nationwide.", "status": "context", "source": {"book": "dk-2015", "page": 35}},
+      {"id": "fest.hung-kings", "claim": "Hung Kings' festival, Phu Tho, 10th day of the 3rd lunar month, three days, public holiday.", "status": "context", "source": {"book": "dk-2015", "page": 35}, "related_articles": ["vietnam-festivals-calendar"]},
+      {"id": "fest.liberation-day", "claim": "Liberation/Reunification Day, April 30 (fixed), marks the fall of Saigon; followed by May 1 Labour Day — together a long weekend with heavy domestic travel.", "status": "context", "source": {"book": "dk-2015", "page": 35}, "related_articles": ["vietnam-festivals-calendar"]}
+    ],
+    "lunar_month_4_5": [
+      {"id": "fest.hcm-birthday", "claim": "Ho Chi Minh's birthday May 19 (fixed; quasi-spiritual; not a day off).", "status": "context", "source": {"book": "dk-2015", "page": 35}},
+      {"id": "fest.buddha-birthday", "claim": "Buddha's birthday (Le Phat Dan), 15th of the 4th lunar month: lanterns at temples and homes.", "status": "context", "source": {"book": "dk-2015", "page": 35}},
+      {"id": "fest.doan-ngo", "claim": "Tet Doan Ngo, 5th day of the 5th month: summer-solstice 'kill the inner insects' festival.", "status": "context", "source": {"book": "dk-2015", "page": 36}}
+    ],
+    "lunar_month_7_8": [
+      {"id": "fest.vu-lan", "claim": "Trung Nguyen / Vu Lan, mid-7th lunar month (Aug): 'wandering souls' day, the most important festival after Tet; paper money burned for the dead.", "status": "context", "source": {"book": "dk-2015", "page": 36}, "related_articles": ["vietnam-festivals-calendar"]},
+      {"id": "fest.national-day", "claim": "National Day Sep 2 (fixed): parades in Ba Dinh Square, Hanoi.", "status": "context", "source": {"book": "dk-2015", "page": 36}},
+      {"id": "fest.do-son-buffalo", "claim": "Do Son buffalo fighting, Haiphong, early Sep; the animals are slaughtered afterwards, which many Western readers will want to know before going.", "status": "lead", "source": {"book": "dk-2015", "page": 36}},
+      {"id": "fest.trung-thu", "claim": "Mid-Autumn / Children's Moon Festival, 15th of the 8th month (mid-Sep): lanterns, masks, moon cakes; Hang Ma street in Hanoi is the hub.", "status": "context", "source": {"book": "dk-2015", "page": 36}, "related_articles": ["vietnam-festivals-calendar", "vietnam-itinerary-for-families"]},
+      {"id": "fest.whale", "claim": "Whale festival, Phan Thiet, Sep: whale veneration of Cham/Khmer origin.", "status": "lead", "source": {"book": "dk-2015", "page": 36}}
+    ],
+    "lunar_month_9_12": [
+      {"id": "fest.kate", "claim": "Kate, the Cham new year, Sep–Oct at Po Klong Garai towers near Phan Rang; follows the Cham calendar.", "status": "lead", "source": {"book": "dk-2015", "page": 37}},
+      {"id": "fest.keo-pagoda", "claim": "Keo Pagoda festival, Thai Binh, mid-Oct, three days.", "status": "lead", "source": {"book": "dk-2015", "page": 37}},
+      {"id": "fest.teachers-day", "claim": "Confucius' birthday is observed as Teachers' Day (modern VN: Nov 20).", "status": "context", "source": {"book": "dk-2015", "page": 37}},
+      {"id": "fest.oc-om-boc", "claim": "Oc Om Boc and ngo boat races, Soc Trang, mid-Nov: Khmer moon festival, canoes carved from single trees, crews from Vietnam and Cambodia.", "status": "lead", "source": {"book": "dk-2015", "page": 37}, "related_articles": ["vietnam-festivals-calendar"]},
+      {"id": "fest.dalat-flowers", "claim": "Dalat Flower Festival, December.", "status": "lead", "source": {"book": "dk-2015", "page": 37}, "verify_against": "Now biennial (odd years, e.g. Dec 2025, Dec 2027)"},
+      {"id": "fest.christmas", "claim": "Christmas is celebrated enthusiastically in the big cities (lights, fake snow) given the large Catholic population; Jan 1 is a holiday but minor.", "status": "context", "source": {"book": "dk-2015", "page": 37}}
+    ],
+    "public_holidays_2015": {"id": "fest.holiday-list-2015", "claim": "2015 list: Jan 1; Tet 3 days; Hung Kings; Apr 30; May 1; Sep 2. (Feb 3 and May 19 are commemorations, not days off.)", "status": "lead", "vintage": 2015, "source": {"book": "dk-2015", "page": 37}, "verify_against": "Current list adds a second day at National Day (Sep 1 or 3) and gives Tet 5 days; verify annually via the government's published holiday schedule", "related_articles": ["vietnam-festivals-calendar"]}
+  },
+  "seasonal_hooks": [
+    {"id": "hook.autumn-north", "claim": "Autumn (Aug–Oct) is when the north turns cool and pleasant and is the best season to follow northern festivals; winter (Nov–Jan) is cold and drizzly in the north with few festivals.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 36}, "related_articles": ["best-time-to-visit-vietnam", "best-time-to-trek-in-sapa"]},
+    {"id": "hook.spring-most-festive", "claim": "Spring (Feb–Apr) is the most festive season nationally, and the Red River Delta has the densest festival calendar.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 34}, "related_articles": ["vietnam-festivals-calendar"]},
+    {"id": "hook.bach-ma-rhododendron", "claim": "Bach Ma NP's Rhododendron Trail flowers in spring.", "status": "context", "vintage": 2015, "source": {"book": "dk-2015", "page": 265}, "related_articles": ["best-national-parks-treks-vietnam"]}
+  ]
+}
