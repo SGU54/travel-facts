@@ -389,3 +389,10 @@ Moon has the China clashes and the Cambodia war "resolved by the end of 1979". T
 - **International rail (Moon p491 vs LP p491)** — not re-verified this pass; LP's version (Hanoi–Nanning exists) remains the working assumption. No key.
 - **Hotel passport (DK p233 / LP p478 / Moon p497)** — Law 47/2014 Art 33 puts the declaration duty on the host within 12 h and requires no passport surrender. Key `documents.hotel_registration_law`; corrections #7 still governs consequences.
 - **Tipping (four opinions)** — unchanged: structural rule only.
+
+## Batches 21–23 (2026-10-17) — leads checked while writing
+
+- **Methanol: taste as a warning sign.** Moon 2015 (p506–507) tells readers to stop drinking if a drink tastes too sweet or harsh. UK FCDO Vietnam advice (read 2026-10-17): "It is not possible to identify methanol in alcoholic drinks by taste or smell." The FCDO statement is `safety.methanol`; the book rule is not printed anywhere on the site.
+- **Time difference to Washington.** The State Department's Vietnam page now reads "11 hours ahead of Washington, D.C. during Eastern Standard Time". UTC+7 against UTC−5 is 12 hours; 11 is the daylight-time figure. `identity.timezone` keeps 12 hours for EST; flagged so the checker does not "correct" it to the page.
+- **Overseas-Vietnamese visa exemption.** do-americans-need-a-visa-for-vietnam (batch 1) mentioned the five-year certificate without a key; Decree 82/2015/ND-CP was read in full and is now `visa.overseas_vietnamese_exemption`. No conflict with the published sentence.
+- **Cambodian visa on arrival at the Chau Doc river post.** LP 2016 (p489) says every Cambodian gate issues visas on arrival. Not re-verified against a Cambodian government page; the new Mekong article says only that the e-visa does not work there (`transport.cambodia_evisa_ports`).

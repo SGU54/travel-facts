@@ -160,3 +160,7 @@ Moon's regional model is coast-and-delta: no Ha Giang, no Central Highlands beyo
 - **Simplify your English** — the "where is the toilet" rule (p503).
 - **Bank lunch closures**, torn-note refusal, courier-not-post for purchases (p509–511).
 - **Boston-to-Miami** scale analogy for the north–south decision (p14).
+
+## Status 2026-10-17 (after batches 21–23 were written)
+
+Thirteen of the gaps above now have a drafted article (Stage 3 done, Stage 4 pending): Ha Giang loop, Phong Nha, the Mekong's second axis (Vinh Long / Sa Dec / Tram Chim / Chau Doc / Tra Vinh), the DMZ per stop, death rituals and ghost money, street names, counterfeit spirits, food allergies, accessibility, exotic-meat vocabulary, Ha Long-or-Ninh Binh, Hue's day count, and the Vietnamese-American return. Still open: Dalat and the Central Highlands, Con Dao, Quy Nhon/Phu Yen quiet coast (folded into the beaches article), Bac Ha/Mai Chau, national parks as a category, the LGBTQ+ page.

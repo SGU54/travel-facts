@@ -6,7 +6,7 @@
     "country": "Vietnam",
     "country_iso": "VN",
     "built_at": "2026-10-17",
-    "built_from": "raw/claude.json + raw/chatgpt.json + raw/deepseek.json, reconciled; promoted by hand | 2026-10-17 Stage 0b wishlist pass: P1 rows verified directly against primary/official sources (read this session), no external-model panel",
+    "built_from": "raw/claude.json + raw/chatgpt.json + raw/deepseek.json, reconciled; promoted by hand | 2026-10-17 Stage 0b wishlist pass: P1 rows verified directly against primary/official sources (read this session), no external-model panel | 2026-10-17 batch 21–23 pass: 5 keys added for the gap-topic articles (overseas-Vietnamese exemption paper, same-passport rule, minor exit consent, methanol, Son Doong), read directly",
     "audience": {
       "nationality": "American",
       "home_currency": "USD"
@@ -14,16 +14,20 @@
     "primary_sources": [
       "https://english.luatvietnam.vn/an-ninh-trat-tu/law-on-road-traffic-order-and-safety-2024-no-36-2024-qh15-360844-d1.html",
       "https://english.luatvietnam.vn/circular-no-32-2013-tt-nhnn-dated-december-26th-2013-of-the-state-bank-of-vietnam-on-guiding-the-implementation-of-regulations-on-restricting-the-use-83764-doc1.html",
+      "https://english.luatvietnam.vn/decree-no-82-2015-nd-cp-dated-september-24-2015-of-the-government-prescribing-visa-exemption-for-overseas-vietnamese-and-foreigners-who-are-spouses-98640-doc1.html",
       "https://english.luatvietnam.vn/law-no-47-2014-qh13-on-entry-exit-transit-and-residence-of-foreigners-in-vietnam-87925-doc1.html",
       "https://evisa.gov.vn/faq",
       "https://grab.com/global/airport-rides/tan-son-nhat-international-airport",
       "https://laoevisa.gov.la/info",
       "https://metrohanoi.vn/",
+      "https://oxalisadventure.com/cave/son-doong-cave/",
       "https://prearrival.immigration.gov.vn/",
       "https://recberlin.mfaic.gov.kh/en-us/border-crossings",
       "https://sbv.gov.vn/en/money-issuance",
       "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
+      "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
       "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
+      "https://www.gov.uk/foreign-travel-advice/vietnam/safety-and-security",
       "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt",
       "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam"
     ]
@@ -184,6 +188,18 @@
       "checked_at": "2026-10-12",
       "review_after": "2027-04-12",
       "risk": "high"
+    },
+    "overseas_vietnamese_exemption": {
+      "fact_key": "visa.overseas_vietnamese_exemption",
+      "value": "Overseas Vietnamese, and the foreign spouses and children of overseas Vietnamese or of Vietnamese citizens, can apply for a visa-exemption paper under Decree 82/2015/ND-CP instead of a visa. It is valid for up to five years and must expire at least six months before the passport does; the passport must have at least one year left at application; each entry on it earns a six-month temporary-residence stamp, extendable once by up to six months with a sponsor. Proof of eligibility is a birth certificate, a decision renouncing Vietnamese nationality, a certificate of loss of nationality or another paper showing Vietnamese origin (for a spouse or child, a paper proving the relationship). Applications from abroad go to a Vietnamese embassy or consulate; applicants already in Vietnam apply to the Immigration Department, which decides within five working days.",
+      "status": "verified",
+      "source_url": "https://english.luatvietnam.vn/decree-no-82-2015-nd-cp-dated-september-24-2015-of-the-government-prescribing-visa-exemption-for-overseas-vietnamese-and-foreigners-who-are-spouses-98640-doc1.html",
+      "source_kind": "primary",
+      "scope": "overseas Vietnamese and their foreign spouses/children, including Vietnamese Americans",
+      "support": "Decree 82/2015/ND-CP Art 2 (subjects), Art 3 (passport valid at least 1 year), Art 4(1) ('valid for no more than 5 years and expires at least 6 months prior to the expiry date of the holder's passport'), Art 6(3) (proof papers), Art 7–8 (where to apply; Immigration Department within 5 working days), Art 10 ('a six-month temporary residence certificate upon each entry'; extension 'for 6 months at most'). Read in full on luatvietnam 2026-10-17. The fee is set separately (Art 5) and is not recorded.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "risk": "high"
     }
   },
   "documents": {
@@ -267,6 +283,30 @@
       "source_kind": "primary",
       "scope": "Foreign guests at any accommodation in Vietnam",
       "support": "Law No. 47/2014/QH13 on Entry, Exit, Transit and Residence of Foreigners (English text, LuatVietnam), Article 33: foreigners temporarily residing in Vietnam declare 'via managers and executives of accommodation establishments' to the commune/ward police; clause 2: declarations filed 'within 12 hours or within 24 hours, for remote and deep-lying areas, after the foreigners arrive'; no passport-surrender provision. US Embassy Hanoi (vietnamese-visas-and-entry-exit, read 2026-10-17): 'all visitors (including Vietnamese) are required to register their temporary residence with the police station where they are staying overnight.' Corrections #7 governs: state no consequence. The hold-as-deposit practice is guidebook observation (Moon 2015 p497), not law.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "risk": "high"
+    },
+    "same_passport": {
+      "fact_key": "documents.same_passport",
+      "value": "You must enter and exit Vietnam on the same passport, and domestic travel inside Vietnam must also be done on the passport you entered with. A dual national cannot enter on one passport and fly domestically or leave on the other.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+      "source_kind": "primary",
+      "scope": "all travellers; decisive for dual US–Vietnamese nationals",
+      "support": "travel.state.gov Vietnam page (advisory issued June 24, 2026): 'You must enter and exit Vietnam on the same passport. Domestic travel must also be done on the same passport you use for entry and exit.' Read in Chrome 2026-10-17.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "risk": "high"
+    },
+    "minor_exit_consent": {
+      "fact_key": "documents.minor_exit_consent",
+      "value": "Notarised parental consent is required for every Vietnamese minor, including a child who is also a US citizen, to travel without a parent or guardian, and Vietnamese authorities have sometimes stopped US-citizen minors from leaving when travelling without one. If one parent travels alone with the child, the State Department advises carrying the other parent's notarised consent letter or proof of sole custody.",
+      "status": "verified",
+      "source_url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+      "source_kind": "primary",
+      "scope": "minors with Vietnamese nationality, including dual US citizens",
+      "support": "travel.state.gov Vietnam page: 'notarized consent is required for all Vietnamese minors, including dual U.S. citizens, to travel without a parent or guardian. Vietnamese authorities have sometimes blocked U.S. citizen minors from leaving when traveling without a parent or guardian.' Read in Chrome 2026-10-17.",
       "checked_at": "2026-10-17",
       "review_after": "2027-04-17",
       "risk": "high"
@@ -395,6 +435,18 @@
       "support": "State Dept, verbatim: 'Air pollution is a significant problem in Vietnam's major cities, especially Hanoi. You should consult your doctor prior to travel and consider the impact that poor air quality may have on you.'",
       "checked_at": "2026-10-12",
       "review_after": "2027-10-12"
+    },
+    "methanol": {
+      "fact_key": "safety.methanol",
+      "value": "There have been deaths and serious illness in Vietnam from alcoholic drinks containing methanol, and the cases have come from drinks bought in licensed bars, shops and hotels in tourist areas, not only from street sellers. Even a small amount of methanol can kill, and it cannot be identified by taste or smell. Symptoms call for urgent medical attention.",
+      "status": "verified",
+      "source_url": "https://www.gov.uk/foreign-travel-advice/vietnam/safety-and-security",
+      "source_kind": "primary",
+      "scope": "all travellers who drink spirits or cocktails",
+      "support": "UK FCDO Vietnam travel advice, safety and security: 'There have been deaths and cases of serious illness caused by alcoholic drinks containing methanol in Vietnam. Methanol poisoning cases have resulted from drinks purchased in licensed bars, shops and hotels in tourist areas. Even small amounts of methanol can kill. It is not possible to identify methanol in alcoholic drinks by taste or smell.' Fetched 2026-10-17. The US State Department Vietnam page does not mention methanol; the UK government page is the official source used. Note: Moon 2015 (p506–507) says to stop drinking if a drink tastes off; the FCDO says taste does not reveal methanol, so the book's rule is not printed.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "risk": "high"
     }
   },
   "getting_around": {
@@ -819,6 +871,18 @@
       "support": "VietnamPlus (Vietnam News Agency), 3 Sep 2026, citing Official Dispatch 1909/CV-BTL of 23 Apr 2026 from the Mausoleum Command: 'tu bo dinh ky tu ngay 4/9/2026 den ngay 2/11/2026', reopening 'tu ngay 3/11/2026'. Prior closures: 10 Jun–12 Aug 2024 and 2 Jun–31 Jul 2025 (Bao Lao Cai / Bao Quoc Te). Regular hours (mornings, closed Monday and Friday) appear on thuvienphapluat.vn behind a bot wall and are not asserted beyond 'mornings only'. The official site bqllang.gov.vn did not resolve.",
       "checked_at": "2026-10-17",
       "review_after": "2027-03-01"
+    },
+    "son_doong_expedition": {
+      "fact_key": "services.son_doong_expedition",
+      "value": "Hang Son Doong is visited only on Oxalis Adventure's multi-day expedition (sold as six days and five nights, graded challenging, with about a day and a half of trekking to reach the cave mouth). Oxalis lists the price at VND 80,000,000, about USD 3,000, per person. The tour was approved as an adventure tour in 2013 with pilot trips that August and launched in 2014.",
+      "status": "verified",
+      "source_url": "https://oxalisadventure.com/cave/son-doong-cave/",
+      "source_kind": "primary",
+      "scope": "Son Doong expeditions",
+      "support": "Oxalis Adventure's Son Doong page (the operator's own page): '6 days and 5 nights journey'; 'Visitors have to spend 1.5 days trekking to reach the cave entrance'; 'VND 80,000,000/pax US$3,000'; approved 2013, pilot tours August 2013, launched 2014. Fetched 2026-10-17. Exclusivity is widely reported and consistent with LP 2016 p42 ('Oxalis the only licensed operator') but the page itself does not state it; the key is worded as 'visited only on Oxalis's expedition' on that basis. Price is a company figure and will drift: span it, never freeze it in a heading.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "risk": "standard"
     }
   },
   "daily": {

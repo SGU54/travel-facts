@@ -292,3 +292,135 @@ values ('vietnam', 'visa.port_must_match', '"The entry and exit location on an e
 on conflict (scope, key) do update set
   value = excluded.value, status = excluded.status,
   checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- ============================================================
+-- batch-21 — 2026-10-17 (appended)
+-- ============================================================
+
+-- transport.no_licence_prohibited_act — ha-giang-loop-ride-pillion-or-car
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'transport.no_licence_prohibited_act', '"driving without the licence the law requires is itself a listed prohibited act"'::jsonb, 'verified', now(),
+        'https://english.luatvietnam.vn/an-ninh-trat-tu/law-on-road-traffic-order-and-safety-2024-no-36-2024-qh15-360844-d1.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- transport.helmets_all_riders — ha-giang-loop-ride-pillion-or-car
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'transport.helmets_all_riders', '"every rider and every passenger on a motorbike must wear a helmet with the chin strap fastened"'::jsonb, 'verified', now(),
+        'https://english.luatvietnam.vn/an-ninh-trat-tu/law-on-road-traffic-order-and-safety-2024-no-36-2024-qh15-360844-d1.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- services.son_doong_expedition — phong-nha-which-cave-tour
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'services.son_doong_expedition', '"a six-day, five-night expedition priced at VND 80,000,000, about USD 3,000, per person"'::jsonb, 'verified', now(),
+        'https://oxalisadventure.com/cave/son-doong-cave/')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- transport.hanoi_halong_drive — two-days-from-hanoi-halong-or-ninh-binh
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'transport.hanoi_halong_drive', '"about 2.5 hours since the expressway and the Bach Dang bridge opened in 2018"'::jsonb, 'verified', now(),
+        'https://hanoitimes.vn/ha-long-hai-phong-expressway-officially-opens-to-traffic-470.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- transport.halong_boat_suspensions — two-days-from-hanoi-halong-or-ninh-binh
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'transport.halong_boat_suspensions', '"the provincial waterways port authority stops issuing departure permits to every tourist vessel, day boats and overnight cruises alike"'::jsonb, 'verified', now(),
+        'https://voh.com.vn/xa-hoi/tam-dung-toan-bo-tau-du-lich-tren-vinh-ha-long-do-bao-so-3-606092.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- ============================================================
+-- batch-22 — 2026-10-17 (appended)
+-- ============================================================
+
+-- safety.methanol — counterfeit-spirits-drinking-safely
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'safety.methanol', '"deaths and serious illness from drinks containing methanol, bought in licensed bars, shops and hotels in tourist areas"'::jsonb, 'verified', now(),
+        'https://www.gov.uk/foreign-travel-advice/vietnam/safety-and-security')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- services.medical_facilities_hanoi — counterfeit-spirits-drinking-safely
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'services.medical_facilities_hanoi', '"Family Medical Practice, International SOS and Raffles Medical as English-speaking clinics with emergency medicine"'::jsonb, 'verified', now(),
+        'https://www.gov.uk/government/publications/list-of-medical-facilities-in-vietnam/list-of-medical-facilities-in-hanoi-and-northern-provinces')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- transport.cambodia_evisa_ports — mekong-delta-beyond-can-tho
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'transport.cambodia_evisa_ports', '"Crossing into Cambodia on a Cambodian e-visa works only at Bavet, the road crossing on the Ho Chi Minh City to Phnom Penh bus route"'::jsonb, 'verified', now(),
+        'https://recberlin.mfaic.gov.kh/en-us/border-crossings')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- ============================================================
+-- batch-23 — 2026-10-17 (appended)
+-- ============================================================
+
+-- visa.overseas_vietnamese_exemption — returning-to-vietnam-vietnamese-american
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'visa.overseas_vietnamese_exemption', '"a visa-exemption paper valid for up to five years, with a six-month stay on each entry"'::jsonb, 'verified', now(),
+        'https://english.luatvietnam.vn/decree-no-82-2015-nd-cp-dated-september-24-2015-of-the-government-prescribing-visa-exemption-for-overseas-vietnamese-and-foreigners-who-are-spouses-98640-doc1.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- documents.same_passport — returning-to-vietnam-vietnamese-american
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'documents.same_passport', '"enter and exit Vietnam on the same passport, and travel domestically on the passport you entered with"'::jsonb, 'verified', now(),
+        'https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- documents.child_exit — returning-to-vietnam-vietnamese-american
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'documents.child_exit', '"a Vietnamese passport or a Vietnamese exit visa is required by the Vietnamese government in the event your child needs to exit Vietnam"'::jsonb, 'verified', now(),
+        'https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- documents.minor_exit_consent — returning-to-vietnam-vietnamese-american
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'documents.minor_exit_consent', '"notarised consent is required for every Vietnamese minor, including dual US citizens, to travel without a parent or guardian"'::jsonb, 'verified', now(),
+        'https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- documents.hotel_registration_law — returning-to-vietnam-vietnamese-american
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'documents.hotel_registration_law', '"the host must declare a foreign guest''s temporary residence to the local police within 12 hours of arrival, or 24 hours in remote areas"'::jsonb, 'verified', now(),
+        'https://english.luatvietnam.vn/law-no-47-2014-qh13-on-entry-exit-transit-and-residence-of-foreigners-in-vietnam-87925-doc1.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- calendar.tet_dates — returning-to-vietnam-vietnamese-american
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'calendar.tet_dates', '"6 February 2027"'::jsonb, 'verified', now(),
+        'https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- transport.us_nonstop_routes — returning-to-vietnam-vietnamese-american
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('vietnam', 'transport.us_nonstop_routes', '"Vietnam Airlines'' San Francisco to Ho Chi Minh City flight"'::jsonb, 'verified', now(),
+        'https://info.flightmapper.net/route/YY_SFO_SGN')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
