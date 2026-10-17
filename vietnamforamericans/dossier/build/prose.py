@@ -197,6 +197,38 @@ around trekking changes the calculation — a question for a clinic with the act
 front of it, not for this page. Dengue is the mosquito risk with no vaccine; it is urban,
 seasonal, and bites by day, so repellent is not a jungle concern.</p>
 
+<h2>If you are Vietnamese American</h2>
+
+<p>The largest group of Americans travelling to Vietnam with a reason beyond tourism has a
+paperwork layer the tourist pages do not describe, and most of it surfaces at departure rather
+than arrival, which is the wrong place to learn it.</p>
+
+<div class="ledger wrap">
+  <div class="lcap">What a family of Vietnamese origin travels on</div>
+  <table>
+    <tr><th>Who</th><th>What the trip runs on</th></tr>
+    <tr><td>A dual-national adult {OFF}</td><td>one passport for entry, every domestic flight and exit; chosen before booking</td></tr>
+    <tr><td>A US-citizen child of Vietnamese parentage {OFF}</td><td>ask the Vietnamese consulate first: a Vietnamese passport or exit visa may be needed to leave</td></tr>
+    <tr><td>A Vietnamese minor without both parents {OFF}</td><td>the absent parent's notarised consent, or proof of sole custody</td></tr>
+    <tr><td>An overseas Vietnamese who will go back more than once {OFF}</td><td>the five-year visa-exemption paper instead of an e-visa per trip</td></tr>
+    <tr><td>Everyone else on a US passport {EST}</td><td>the e-visa — Decision 03</td></tr>
+  </table>
+</div>
+
+<p>The first rule is about documents, not nationality: {C:same-passport} A family that enters on
+Vietnamese passports and tries to leave on American ones, or the reverse, has created the
+problem at the booking stage. Decide which passport the trip runs on before a single flight is
+bought, and use it for every domestic sector too, because the airlines check. {OFF}</p>
+
+<p>The children are where families are caught. {C:child-exit} {C:minor-consent} A grandparent
+taking a grandchild to the village, or one parent travelling alone with the children, carries
+the other parent's notarised consent or proof of sole custody; the question of what a
+particular child needs in order to leave goes to the Vietnamese consulate before booking, not
+to the US Embassy, which cannot answer it. For families who will go back more than once there
+is a standing alternative to the e-visa: {C:exemption-paper} It replaces a ninety-day visa
+bought trip by trip with something closer to a permission, and it is applied for at a
+Vietnamese consulate in the United States. {OFF}</p>
+
 <h2>What does not need doing</h2>
 
 <p>You do not need an International Driving Permit, which Vietnam does not recognise. You do
@@ -291,6 +323,8 @@ paperwork, not money.</p>
     <tr><td>Riding a rented scooter without a Vietnamese licence, then an accident {OFF}</td><td>Decision 04 — illegal, and the insurer may refuse the medical bill</td></tr>
     <tr><td>A river exit to Cambodia on a visa issued for an airport {OFF}</td><td>Decision 03 — the exit port is binding; name the crossing before you apply</td></tr>
     <tr><td>Arriving with a substance that was legal at home still in the blood {OFF}</td><td>The risk chapter — blood tests happen; consular access is routinely delayed</td></tr>
+    <tr><td>A cocktail from a bucket in a backpacker bar; blurred vision the next morning {OFF}</td><td>The risk chapter — methanol; a hospital, not a hangover</td></tr>
+    <tr><td>A dual-national child enters on the Vietnamese passport and the family tries to leave on the American one {OFF}</td><td>Before you fly — one passport for the whole trip; the child may need a Vietnamese passport or exit visa</td></tr>
   </table>
 </div>
 
@@ -308,6 +342,8 @@ paperwork, not money.</p>
     <tr><td>A mid-trip internal flight in Tết week; the seat does not exist {EST}</td><td>Decision 10 — book the transport the day the dates are known, or move them</td></tr>
     <tr><td>Clothes ordered in Hội An on the last evening {EST}</td><td>Decision 07 — two fittings, two full days; order on the first morning</td></tr>
     <tr><td>The Mekong coach circuit, taken as "the delta" {EST}</td><td>Decision 08 — Cái Răng is at dawn in Cần Thơ, or not at all</td></tr>
+    <tr><td>The bay cruise booked for the only two free days; the port authority grounds the fleet {OFF}</td><td>Decision 06 — read the forecast first; Ninh Bình from the same hotel the same morning</td></tr>
+    <tr><td>Huế given the template's single night; the citadel or the tombs, not both {EST}</td><td>The middle — two nights for history, one with the train for everyone else</td></tr>
   </table>
 </div>
 

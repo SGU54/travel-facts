@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "project": "vietnamforamericans — Vietnam, End to End.",
- "release_date": "2026-10-14",
+ "release_date": "2026-10-17",
  "sources": [
   {
    "id": "s-state-entry",
@@ -119,6 +119,96 @@
    "locator": "Vietnam Railways booking site (timetable lookup); no fixed schedule page is published",
    "scope": "rail timetables and fares",
    "label": "Vietnam Railways"
+  },
+  {
+   "id": "s-law36",
+   "kind": "primary",
+   "url": "https://english.luatvietnam.vn/an-ninh-trat-tu/law-on-road-traffic-order-and-safety-2024-no-36-2024-qh15-360844-d1.html",
+   "checked_at": "2026-10-17",
+   "locator": "Law 36/2024/QH15 on Road Traffic Order and Safety: Art 9 (prohibited acts), Art 11(4)(c) (red signal), Art 33(2) (helmets)",
+   "scope": "all road users in Vietnam",
+   "label": "Law on Road Traffic Order and Safety 2024 (LuatVietnam English text)"
+  },
+  {
+   "id": "s-law47",
+   "kind": "primary",
+   "url": "https://english.luatvietnam.vn/law-no-47-2014-qh13-on-entry-exit-transit-and-residence-of-foreigners-in-vietnam-87925-doc1.html",
+   "checked_at": "2026-10-17",
+   "locator": "Law 47/2014/QH13 Art 33: declaration of temporary residence by the accommodation establishment",
+   "scope": "foreigners staying overnight in Vietnam",
+   "label": "Law on Entry, Exit, Transit and Residence of Foreigners 2014"
+  },
+  {
+   "id": "s-dec82",
+   "kind": "primary",
+   "url": "https://english.luatvietnam.vn/decree-no-82-2015-nd-cp-dated-september-24-2015-of-the-government-prescribing-visa-exemption-for-overseas-vietnamese-and-foreigners-who-are-spouses-98640-doc1.html",
+   "checked_at": "2026-10-17",
+   "locator": "Decree 82/2015/ND-CP Arts 2, 3, 4, 6, 7, 8, 10",
+   "scope": "overseas Vietnamese and their foreign spouses and children",
+   "label": "Decree 82/2015 on visa exemption for overseas Vietnamese"
+  },
+  {
+   "id": "s-sbv32",
+   "kind": "primary",
+   "url": "https://english.luatvietnam.vn/circular-no-32-2013-tt-nhnn-dated-december-26th-2013-of-the-state-bank-of-vietnam-on-guiding-the-implementation-of-regulations-on-restricting-the-use-83764-doc1.html",
+   "checked_at": "2026-10-17",
+   "locator": "Circular 32/2013/TT-NHNN Arts 3–4: restricting the use of foreign exchange in Vietnam",
+   "scope": "pricing and payment inside Vietnam",
+   "label": "State Bank of Vietnam Circular 32/2013"
+  },
+  {
+   "id": "s-fcdo",
+   "kind": "primary",
+   "url": "https://www.gov.uk/foreign-travel-advice/vietnam/safety-and-security",
+   "checked_at": "2026-10-17",
+   "locator": "Safety and security: 'Methanol poisoning' and 'Drink spiking' paragraphs",
+   "scope": "visitors buying alcoholic drinks in Vietnam",
+   "label": "UK FCDO — Vietnam travel advice"
+  },
+  {
+   "id": "s-state-2026",
+   "kind": "primary",
+   "url": "https://travel.state.gov/en/international-travel/travel-advisories/vietnam.html",
+   "checked_at": "2026-10-17",
+   "locator": "Entry, exit and visa requirements: 'You must enter and exit Vietnam on the same passport'; Traveling with minors: notarized consent for Vietnamese minors",
+   "scope": "US citizens, including dual nationals and their children",
+   "label": "US State Department — Vietnam (2026 page)"
+  },
+  {
+   "id": "s-khmfa",
+   "kind": "primary",
+   "url": "https://recberlin.mfaic.gov.kh/en-us/border-crossings",
+   "checked_at": "2026-10-17",
+   "locator": "Border crossings table: e-visa accepted at Bavet; Kaam Samnor, Prek Chak and Phnom Den not listed for e-visa",
+   "scope": "entry to Cambodia from Vietnam",
+   "label": "Royal Embassy of Cambodia (Berlin) — border crossings"
+  },
+  {
+   "id": "s-hnt",
+   "kind": "primary",
+   "url": "https://hanoitimes.vn/ha-long-hai-phong-expressway-officially-opens-to-traffic-470.html",
+   "checked_at": "2026-10-17",
+   "locator": "Report of the Hạ Long–Hải Phòng expressway and Bạch Đằng bridge opening, 1 September 2018",
+   "scope": "Hanoi–Hạ Long road",
+   "label": "Hanoi Times"
+  },
+  {
+   "id": "s-voh",
+   "kind": "secondary",
+   "url": "https://voh.com.vn/xa-hoi/tam-dung-toan-bo-tau-du-lich-tren-vinh-ha-long-do-bao-so-3-606096.html",
+   "checked_at": "2026-10-17",
+   "locator": "Report of the Quảng Ninh waterways port authority suspending every tourist vessel on Hạ Long Bay for storm No 3",
+   "scope": "Hạ Long Bay tourist vessels",
+   "label": "VOH — Hạ Long Bay suspension notice"
+  },
+  {
+   "id": "s-oxalis",
+   "kind": "primary",
+   "url": "https://oxalisadventure.com/cave/son-doong-cave/",
+   "checked_at": "2026-10-17",
+   "locator": "Sơn Đoòng cave expedition page: duration, price, grade",
+   "scope": "Sơn Đoòng expeditions",
+   "label": "Oxalis Adventure (operator)"
   }
  ],
  "claims": [
@@ -773,6 +863,274 @@
    ]
   },
   {
+   "id": "helmets",
+   "text": "Every rider and every passenger on a motorbike, moped or motorised bicycle must wear a helmet to the national standard with the strap fastened (Law 36/2024 Art 33).",
+   "scope": "all motorbike riders and pillion passengers",
+   "authority": "official",
+   "volatility": "stable",
+   "topic": "legal",
+   "status": "verified",
+   "sources": [
+    "s-law36"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2028-09-16",
+   "critical": true,
+   "display": {
+    "book": "every rider and every passenger on a motorbike must wear a helmet with the strap fastened, the pillion included.",
+    "sheet": "Helmets: rider and pillion, strap fastened — Law 36/2024 Art 33. Ask the easy-rider operator what it issues."
+   }
+  },
+  {
+   "id": "no-licence-act",
+   "text": "Driving a motor vehicle without the licence the law requires is itself a listed prohibited act under Law 36/2024 Art 9, as is letting an unqualified person drive.",
+   "scope": "all drivers in Vietnam",
+   "authority": "official",
+   "volatility": "stable",
+   "topic": "legal",
+   "status": "verified",
+   "sources": [
+    "s-law36"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2028-09-16",
+   "critical": true,
+   "display": {
+    "book": "under Vietnam's own traffic law, driving without the licence it requires is a listed prohibited act, and so is handing the keys to someone who lacks one."
+   }
+  },
+  {
+   "id": "red-light",
+   "text": "A red signal means stop; a right turn on red is lawful only where a supplementary arrow or sign permits it (Law 36/2024 Art 11).",
+   "scope": "all road users in Vietnam",
+   "authority": "official",
+   "volatility": "stable",
+   "topic": "legal",
+   "status": "verified",
+   "sources": [
+    "s-law36"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2028-09-16",
+   "critical": true,
+   "display": {
+    "book": "red means stop here, and a right turn on red is lawful only where an arrow or a sign says so.",
+    "sheet": "Red light: stop; right on red only with a supplementary arrow or sign (Law 36/2024 Art 11). Two 2015–16 guidebooks said the opposite."
+   }
+  },
+  {
+   "id": "cambodia-evisa",
+   "text": "A Cambodian e-visa is accepted from Vietnam only at Bavet (the Mộc Bài road crossing); the Kaam Samnor river crossing from Châu Đốc, Prek Chak and Phnom Den are not e-visa gates.",
+   "scope": "entry to Cambodia from Vietnam on a Cambodian e-visa",
+   "authority": "official",
+   "volatility": "changeable",
+   "topic": "admission",
+   "status": "verified",
+   "sources": [
+    "s-khmfa"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2027-01-10",
+   "critical": true,
+   "display": {
+    "book": "on the Cambodian side an e-visa works only at Bavet, the road crossing on the Saigon–Phnom Penh bus route, so the river exit at Châu Đốc needs a Cambodian visa obtained another way.",
+    "sheet": "Cambodian e-visa: accepted at Bavet (Mộc Bài road crossing) only; the Châu Đốc river post (Kaam Samnor), Hà Tiên (Prek Chak) and Tịnh Biên (Phnom Den) are not e-visa gates. Decision 03 and 08."
+   }
+  },
+  {
+   "id": "methanol",
+   "text": "There have been deaths and serious illness from alcoholic drinks containing methanol in Vietnam; cases came from drinks bought in licensed bars, shops and hotels in tourist areas; even small amounts can kill and methanol cannot be identified by taste or smell.",
+   "scope": "visitors drinking spirits or cocktails in Vietnam",
+   "authority": "official",
+   "volatility": "changeable",
+   "topic": "other",
+   "status": "verified",
+   "sources": [
+    "s-fcdo"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2027-01-10",
+   "critical": true,
+   "display": {
+    "book": "there have been deaths and serious illness in Vietnam from drinks containing methanol, bought in licensed bars, shops and hotels in tourist areas, and methanol cannot be identified by taste or smell.",
+    "sheet": "Methanol: deaths from spirits bought in licensed bars, shops and hotels in tourist areas; taste does not reveal it (UK FCDO). Beer and sealed wine by default; symptoms can arrive a day later as a hangover with blurred vision — a hospital, not sleep."
+   }
+  },
+  {
+   "id": "same-passport",
+   "text": "A traveller must enter and exit Vietnam on the same passport, and domestic travel must be done on the passport used for entry.",
+   "scope": "all travellers, decisive for dual US–Vietnamese nationals",
+   "authority": "official",
+   "volatility": "stable",
+   "topic": "legal",
+   "status": "verified",
+   "sources": [
+    "s-state-2026"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2028-09-16",
+   "critical": true,
+   "display": {
+    "book": "you must enter and leave Vietnam on the same passport, and fly domestically on it too.",
+    "sheet": "One passport: enter, fly domestically and exit on the same document. Dual nationals choose before booking."
+   }
+  },
+  {
+   "id": "child-exit",
+   "text": "In general a Vietnamese passport or a Vietnamese exit visa is required for a US-citizen child of Vietnamese parentage to exit Vietnam.",
+   "scope": "US-citizen children of Vietnamese parentage",
+   "authority": "official",
+   "volatility": "stable",
+   "topic": "legal",
+   "status": "verified",
+   "sources": [
+    "s-embassy"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2028-09-16",
+   "critical": true,
+   "display": {
+    "book": "a US-citizen child of Vietnamese parentage may need a Vietnamese passport or a Vietnamese exit visa to leave the country, and the requirement attaches to parentage, not to the passport the child arrived on.",
+    "sheet": "Children of Vietnamese parentage: a Vietnamese passport or exit visa may be required to leave; ask the Vietnamese consulate before booking (US Embassy)."
+   }
+  },
+  {
+   "id": "minor-consent",
+   "text": "Notarised consent is required for all Vietnamese minors, including dual US citizens, to travel without a parent or guardian; Vietnamese authorities have sometimes blocked US-citizen minors from leaving without it.",
+   "scope": "Vietnamese minors including dual US citizens",
+   "authority": "official",
+   "volatility": "stable",
+   "topic": "legal",
+   "status": "verified",
+   "sources": [
+    "s-state-2026"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2028-09-16",
+   "critical": true,
+   "display": {
+    "book": "a Vietnamese minor, a dual US citizen included, needs notarised consent to travel without a parent or guardian, and children have been stopped at departure without it.",
+    "sheet": "Minors: notarised parental consent for any Vietnamese minor (dual US citizens included) travelling without a parent or guardian; a lone parent carries the other's consent or proof of sole custody."
+   }
+  },
+  {
+   "id": "exemption-paper",
+   "text": "Overseas Vietnamese and their foreign spouses and children may apply for a visa-exemption paper valid up to five years, giving a six-month stay on each entry, on proof of Vietnamese origin or of the relationship (Decree 82/2015).",
+   "scope": "overseas Vietnamese, including Vietnamese Americans, and their spouses and children",
+   "authority": "official",
+   "volatility": "changeable",
+   "topic": "admission",
+   "status": "verified",
+   "sources": [
+    "s-dec82"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2027-01-10",
+   "critical": true,
+   "display": {
+    "book": "an overseas Vietnamese, or the spouse or child of one, can hold a visa-exemption paper valid for up to five years that admits them for six months at a time, on proof of Vietnamese origin or of the relationship.",
+    "sheet": "Visa-exemption paper (Decree 82/2015): overseas Vietnamese and their spouses/children; up to 5 years, 6 months per entry; passport with 1 year left; proof of origin (birth certificate, renunciation or loss-of-nationality papers). Apply at a Vietnamese consulate. Fee set separately — ask."
+   }
+  },
+  {
+   "id": "halong-road",
+   "text": "Hanoi to Hạ Long city by road takes about 2.5 hours since the Hạ Long–Hải Phòng expressway and Bạch Đằng bridge opened on 1 September 2018.",
+   "scope": "Hanoi–Hạ Long road",
+   "authority": "reported",
+   "volatility": "changeable",
+   "topic": "schedule",
+   "status": "verified",
+   "sources": [
+    "s-hnt"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2027-01-10",
+   "critical": true,
+   "display": {
+    "book": "the road from Hanoi to the bay has been about two and a half hours since the expressway opened in 2018, which is the same morning Ninh Bình costs.",
+    "sheet": "Hanoi–Hạ Long by road: about 2.5 h on the expressway (since 2018). Ninh Bình: about 2 h. Guidebooks printed before 2019 still say four."
+   }
+  },
+  {
+   "id": "bay-suspension",
+   "text": "When a storm or dangerous weather is forecast the Quảng Ninh waterways port authority stops issuing departure permits to every tourist vessel on Hạ Long Bay, day boats and overnight cruises alike.",
+   "scope": "Hạ Long Bay tourist vessels",
+   "authority": "reported",
+   "volatility": "stable",
+   "topic": "other",
+   "status": "verified",
+   "sources": [
+    "s-voh"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2028-09-16",
+   "critical": true,
+   "display": {
+    "book": "the port authority stops every tourist vessel at once when a storm is forecast, day boats and overnight cruises alike, and the operators can only refund or reschedule.",
+    "sheet": "Bay suspensions: the port authority grounds every tourist vessel at once on a storm forecast; operators refund or reschedule. A two-day window has no room to reschedule into — Decision 06."
+   }
+  },
+  {
+   "id": "dong-only",
+   "text": "Inside Vietnam prices, quotes, advertising and payment must be in đồng; pricing or paying in foreign currency is restricted to listed cases such as duty-free shops (SBV Circular 32/2013).",
+   "scope": "payments inside Vietnam",
+   "authority": "official",
+   "volatility": "stable",
+   "topic": "legal",
+   "status": "verified",
+   "sources": [
+    "s-sbv32"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2028-09-16",
+   "critical": true,
+   "display": {
+    "book": "prices, quotes and payment inside Vietnam are in đồng by law, with dollar pricing confined to listed cases such as duty-free shops.",
+    "sheet": "Legal tender: đồng only for prices and payment inside Vietnam (SBV Circular 32/2013); dollar quotes are the exception, not a courtesy."
+   }
+  },
+  {
+   "id": "host-reg",
+   "text": "By law the hotel, homestay or host declares a foreign guest's temporary residence to the local police within 12 hours of arrival (24 in remote areas), usually electronically; the statute requires no passport surrender.",
+   "scope": "foreigners staying overnight in Vietnam",
+   "authority": "official",
+   "volatility": "stable",
+   "topic": "legal",
+   "status": "verified",
+   "sources": [
+    "s-law47"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2028-09-16",
+   "critical": true,
+   "display": {
+    "book": "the duty is the host's, within twelve hours of your arrival, and the statute asks for a declaration, not the surrender of the passport.",
+    "sheet": "Residence declaration: the host files it within 12 h (24 h remote), usually online — Law 47/2014 Art 33. No passport surrender is required; a copy and a look are what the desk needs."
+   }
+  },
+  {
+   "id": "son-doong",
+   "text": "Hang Sơn Đoòng is visited only on Oxalis Adventure's multi-day expedition, sold as six days and five nights, graded challenging, priced by the operator at VND 80,000,000 (about USD 3,000) per person.",
+   "scope": "Sơn Đoòng expeditions",
+   "authority": "reported",
+   "volatility": "changeable",
+   "topic": "fare",
+   "status": "verified",
+   "sources": [
+    "s-oxalis"
+   ],
+   "as_of": "2026-10-17",
+   "recheck_by": "2027-01-10",
+   "critical": true,
+   "display": {
+    "sheet": "Sơn Đoòng: Oxalis only; 6 days / 5 nights, graded challenging; operator price about 3000 USD per person (VND 80000000); a day and a half of trekking to the mouth. Places are few and sell out far ahead."
+   },
+   "value": {
+    "amount": "3000",
+    "unit": "USD/person"
+   }
+  },
+  {
    "id": "hoian-ticket",
    "text": "Hội An's Ancient Town ticket covers a set number of heritage sites and its validity is reported differently by different visitors.",
    "scope": "Hội An Ancient Town entry",
@@ -854,7 +1212,8 @@
     "visa-port",
     "declaration",
     "visa-required",
-    "visa-90"
+    "visa-90",
+    "cambodia-evisa"
    ],
    "comparison": {
     "basis": "one US adult, one e-visa application on the official portal, government fee only, excluding agent markups and bank charges",
@@ -880,10 +1239,11 @@
     },
     {
      "condition": "the exit is by river at Châu Đốc or by road at Mộc Bài",
-     "action": "name that crossing as the exit port on the application",
+     "action": "name that crossing as the exit port on the application; for the river exit obtain the Cambodian visa by a route other than the Cambodian e-visa, which Kaam Samnor does not accept",
      "claim_ids": [
       "visa-port",
-      "visa-gates"
+      "visa-gates",
+      "cambodia-evisa"
      ]
     },
     {
@@ -903,15 +1263,47 @@
    "claim_ids": [
     "licence",
     "insurance",
-    "zero-alcohol"
+    "zero-alcohol",
+    "helmets",
+    "no-licence-act",
+    "red-light"
    ],
    "exceptions": [
     {
      "condition": "flat quiet lanes around Hội An or Ninh Bình, with the risk accepted knowingly",
-     "action": "rent a bicycle instead; if a scooter anyway, own helmet, photographs of every scratch, photocopy as deposit, no alcohol",
+     "action": "rent a bicycle instead; if a scooter anyway, own helmet with the strap fastened, stop on red, photographs of every scratch, photocopy as deposit, no alcohol",
      "claim_ids": [
       "licence",
-      "zero-alcohol"
+      "zero-alcohol",
+      "helmets",
+      "red-light"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d06-north",
+   "question": "The bay, Ninh Bình, or Sapa — which one does the northern leg carry?",
+   "when": "a northern leg of four or five days, or a two-day window outside Hanoi",
+   "action": "short leg: Ninh Bình; standard leg: the overnight bay; Sapa only when the mountains are the reason; with two days, let the forecast decide between the boat and the rowboat and keep the other as the same-morning fallback",
+   "claim_ids": [
+    "halong-road",
+    "bay-suspension"
+   ],
+   "exceptions": [
+    {
+     "condition": "the forecast for the two days shows cloud, wind or a storm warning",
+     "action": "go to Ninh Bình and sleep there; the port authority grounds every boat at once and a two-day window cannot reschedule",
+     "claim_ids": [
+      "bay-suspension"
+     ]
+    },
+    {
+     "condition": "the cruise is cancelled on the morning of departure",
+     "action": "turn the day into a Ninh Bình day trip from the same hotel",
+     "claim_ids": [
+      "halong-road",
+      "bay-suspension"
      ]
     }
    ]
@@ -968,7 +1360,9 @@
    "action": "withdraw the maximum, rarely; decline dynamic currency conversion; carry cash into the countryside",
    "claim_ids": [
     "cash-declare",
-    "police-reg"
+    "police-reg",
+    "dong-only",
+    "host-reg"
    ],
    "exceptions": [
     {
@@ -1049,7 +1443,7 @@
   }
  ],
  "field_sheet": {
-  "checked_at": "2026-10-14",
+  "checked_at": "2026-10-17",
   "claim_ids": [
    "visa-required",
    "visa-fee",
@@ -1064,14 +1458,24 @@
    "declaration",
    "passport-6m",
    "exit-control",
+   "same-passport",
+   "child-exit",
+   "minor-consent",
+   "exemption-paper",
+   "cambodia-evisa",
    "cash-declare",
    "customs-alcohol",
    "atm-structure",
    "police-reg",
+   "host-reg",
+   "dong-only",
    "advisory",
    "licence",
    "insurance",
    "zero-alcohol",
+   "helmets",
+   "red-light",
+   "methanol",
    "vaccines",
    "malaria",
    "drugs",
@@ -1082,6 +1486,9 @@
    "han-sgn-rail",
    "fares-domestic",
    "cruise-terms",
+   "halong-road",
+   "bay-suspension",
+   "son-doong",
    "tet-2027",
    "natday-2027",
    "hoian-ticket"

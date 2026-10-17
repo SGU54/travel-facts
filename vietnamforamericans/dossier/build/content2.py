@@ -185,7 +185,10 @@ than the same bed at the start. {EST}</p>
 <p>Ask which floor the room is on and whether there is a lift (many Old Quarter buildings
 are tall, narrow and stair-only), and whether the room has a window, which a surprising
 number of cheap rooms do not and the price does not signal. And remember that the hotel will
-take your passport at check-in: {C:police-reg} That is the rule working, not a scam.</p>
+take your passport at check-in: {C:police-reg} That is the rule working, not a scam — and
+the statute is narrower than the desk's habit: {C:host-reg} A photocopy and a look are what the
+declaration needs; if a hotel wants to keep the passport overnight, ask for it back once the
+form is filed.</p>
 """,
 }
 
@@ -341,4 +344,63 @@ less than the book and more than your memory at the end of a long day.</p>
 """,
 }
 
-OPERATIONS = [TIMING, SETPIECES, STAY, DAYS, HORIZONS, KIT]
+MIDDLE = {
+ "kind": "The middle",
+ "title": "Huế's nights, Phong Nha's days, and the pool they are paid from",
+ "plate": "A32", "plate_after": 3,
+ "plate_cap": "The boat into Phong Nha cave, which is the whole of the show-cave day and needs no fitness at all. The adventure caves and Sơn Đoòng are a different proposition in days, money and legs, and they are sold from the same village under one name.",
+ "standfirst": "Three guidebooks give Huế three different answers because none of them says "
+               "whose trip it is planning. The central coast's nights come from one pool, and "
+               "Phong Nha draws on it too.",
+ "body": """
+<p class="lede">Every first itinerary trips over Huế. One widely used two-week plan skips it
+altogether, another gives it a single night on the way through, a third gives it two full
+days, and all three are right for a different reader. The disagreement is not about Huế. It is
+about the pool of central-coast nights that also pays for Hội An and Đà Nẵng, and the honest
+way to settle it is to allocate the pool once, by trip length and by what you came for.</p>
+
+<div class="ledger wrap">
+  <div class="lcap">Huế's nights, by what the trip is for</div>
+  <table>
+    <tr><th>If the trip is for</th><th>Huế gets</th></tr>
+    <tr><td>History: the citadel and the tombs {EST}</td><td>two nights, one full day — the Imperial City in the morning, two tombs in the afternoon</td></tr>
+    <tr><td>The war, with a family reason {EST}</td><td>three nights; the DMZ is a ten-to-twelve-hour day north of the city</td></tr>
+    <tr><td>Beaches, food and Hội An {EST}</td><td>one night on the way through, with the train over the pass as the reason to pass through at all</td></tr>
+    <tr><td>Seven days or fewer {EST}</td><td>none as a base: a day trip from Đà Nẵng, or the pass-through</td></tr>
+    <tr><td>October to December {EST}</td><td>one night at most; the citadel in a downpour is an endurance event, and the second day belongs to Hội An</td></tr>
+  </table>
+</div>
+
+<p>What one full day covers is the Imperial City before the heat and two of the three
+tombs that tours circuit — Tự Đức and Khải Định are the usual pair, Minh Mạng the formal
+third — with Thiên Mụ on the river between them. It is brisk and it is not rushed. The single
+night that most templates give Huế buys an afternoon, which means the citadel or the tombs
+done properly and not both; it works, and it is why so many people report Huế as fine, which
+is the sound of a place seen at half strength. The second full day is for the DMZ or for the
+food, and rarely both. {EST}</p>
+
+<p>The pool itself is simple to state. On a fortnight the usual split is two nights in Huế and
+three in Hội An; on ten days, one and three or two and two; on a week the centre has three
+nights in total and the choice is Hội An plus a Huế day from Đà Nẵng, or Huế plus the train
+and a single Hội An night. Huế before Hội An turns the pass into a scenic train ride; after
+it, the same journey is backtracking (Decision 05). {EST}</p>
+
+<h2>Phong Nha</h2>
+
+<p>Phong Nha-Ke Bàng, the cave park north of Huế, has gone from a backpacker secret to a
+fixture, and it draws on the same pool. Its caves fall into three bands that the tour boards
+do not separate: the show caves — the river boat into Phong Nha cave, the lit walkways of
+Paradise Cave — which need shoes and nothing else; the adventure caves, a day or two of
+walking, swimming and kayaking with a licensed operator, Hang Én's sandy camp inside the
+cave the best of them; and Sơn Đoòng, a six-day expedition in a category of its own that is
+a trip to plan a holiday around, not a stop to add to one. Its price lives on the Field Sheet.
+The cost to a first itinerary is about four days — a day in from Huế or Hanoi, two in the
+park, a day out — and on a fortnight those days come out of the central coast or the delta,
+which is the trade to make deliberately. The cheap day trips sold out of Huế reach the show
+caves, rushed, and spend most of the day on the road. The park's rivers rise in the central
+coast's autumn and the adventure caves close when they flood, so the dry months are the
+window. {EST}</p>
+""",
+}
+
+OPERATIONS = [TIMING, SETPIECES, STAY, DAYS, MIDDLE, HORIZONS, KIT]

@@ -192,10 +192,15 @@ Flying in is therefore never the problem. The second rule is the binding one. {C
 Overland and on the river is where both bite, because only some land crossings accept an
 e-visa at all, and the one you intend to use has to be the one you named. The Châu Đốc
 boat to Phnom Penh, the Mộc Bài bus, a return through either — each is a line on the form,
-filled in before the route existed. {OFF}</p>""",
+filled in before the route existed. {OFF}</p>
+
+<p>The river exit has a second form behind it, and it is Cambodia's. {C:cambodia-evisa} The
+boat still runs and the post still stamps; the document it stamps has to have come from a
+consulate or the arrival counter rather than the Cambodian website, and that is settled in
+the same week as the Vietnamese form, not on the jetty at Châu Đốc.</p>""",
  "for": [
    "then take multiple entry → Vietnam, then Cambodia, then Vietnam again, usually because of a return flight that cannot be changed",
-   "then name a land gate → the Mekong boat or the Mộc Bài bus is the exit, and the visa must say so",
+   "then name a land gate → the Mekong boat or the Mộc Bài bus is the exit, and the visa must say so; the river exit also needs a Cambodian visa that is not the Cambodian e-visa",
    "then skip the visa → Phú Quốc only, thirty days or fewer, arriving and leaving the island directly and never clearing the mainland",
  ],
  "against": [
@@ -208,7 +213,7 @@ filled in before the route existed. {OFF}</p>""",
    "shortens the queue. Do it. Fees, processing time and the gate count are on the Field "
    "Sheet with their check date."
  ),
- "claims": ["visa-90", "visa-fee", "visa-processing", "visa-noext", "visa-gates", "visa-port", "declaration"],
+ "claims": ["visa-90", "visa-fee", "visa-processing", "visa-noext", "visa-gates", "visa-port", "declaration", "cambodia-evisa"],
  "compare": {
    "traveller": "one US adult, one e-visa application on the official portal",
    "alternatives": ["single entry", "multiple entry"],
@@ -235,7 +240,7 @@ filled in before the route existed. {OFF}</p>""",
  "table_title": "Six ways to cover the same road · a first-time visitor",
  "rows": [
    ("Rent and ride yourself {OFF}", "illegal without a Vietnamese licence; the insurer may refuse the bill"),
-   ("Pillion with an easy-rider {EST}", "the mountain route and the pass, legally, with a guide"),
+   ("Pillion with an easy-rider {OFF}", "the only lawful two-wheel form for a visitor; a helmet for you as well as the rider"),
    ("Car with a driver {EST}", "the regional legs; costs about what bare rental costs at home"),
    ("Grab bike or car {EST}", "the city hops, a dollar or two, fare fixed in the app"),
    ("Train {EST}", "the coast between Huế and Đà Nẵng, and the overnight legs"),
@@ -263,7 +268,12 @@ pillion in any case, and the passenger is the one who gets to look at the scener
 a driver waits while you wander and carries the bags between hotels. The Hải Vân Pass is
 better from the railway below it than from the road, and the view is the only reason to be
 on the road at all. {EST} The one thing self-drive buys is the lane too narrow for a car —
-and {C:zero-alcohol}</p>""",
+and {C:zero-alcohol}</p>
+
+<p>The law the shop ignores is Vietnam's own, not only Washington's reading of it. {C:no-licence-act}
+Two further rules travel with the pillion seat and the handlebars alike: {C:helmets} And {C:red-light}
+Two of the guidebooks still in print say a right turn on red is tolerated outside Hanoi; the
+2024 statute says otherwise, and the cameras in both cities read the statute.</p>""",
  "for": [
    "then ride anyway, knowingly → the quiet lanes around Hội An or the flat roads of Ninh Bình, with your own helmet, photographs of every scratch, a photocopy as deposit and no beer at lunch",
    "then rent a bicycle → An Bàng, Tra Quế and the paddies are flat and a few kilometres apart",
@@ -278,7 +288,7 @@ and {C:zero-alcohol}</p>""",
    "big cities — and the drink-driving limit is zero, not a threshold. A bia hơi evening and a "
    "scooter home is an offence, not a judgement call."
  ),
- "claims": ["licence", "insurance", "zero-alcohol"],
+ "claims": ["licence", "insurance", "zero-alcohol", "no-licence-act", "helmets", "red-light"],
 },
 
 # ── 05 ───────────────────────────────────────────────────────────────────────
@@ -380,7 +390,9 @@ overland, so a return booked for the day of an international flight has no fallb
    "overnight and not worth the day trip, and it is worth asking for Lan Hạ by name, where "
    "the same limestone carries a fraction of the boats. Sapa is five hours of mountain road "
    "in each direction with no flight behind it, and if the trek is the point it earns that; "
-   "if it is on the list because it was on a list, it is the addition most people regret."
+   "if it is on the list because it was on a list, it is the addition most people regret. With "
+   "two days and no more, read the forecast before you read the brochures: calm and clear, the "
+   "boat; cloud, wind or a warning, the rowboat — and sleep in Ninh Bình rather than come back."
  ),
  "reasoning": """<p>The reason the day trip to the bay disappoints is structural rather than bad luck. It is
 a long road transfer each way for a few hours on the busiest water, alongside the other day
@@ -388,6 +400,14 @@ boats, with a shopping stop on the way; what it cannot deliver is the late after
 the day boats have gone and the early morning before they return, which is what the
 photographs are made of. {EST} An overnight buys those two windows, kayaking from the back
 of the boat, and an anchorage. Cancellations are decided by the port authority, not the operator, so a cruise never goes on the night before an international flight.</p>
+
+<p>The two-day case is the common one and it has an asymmetry the brochures do not print.
+{C:bay-suspension} Ninh Bình's rowboats go out in rain, and a wet day there is a worse day
+rather than a lost one. {C:halong-road} So the two places are substitutes and not merely
+alternatives: the same transfer, the same limestone, one of them at the mercy of a forecast and
+the other not. A cancelled sailing on the morning of departure turns into a Ninh Bình day from
+the same hotel if the fallback was already in your head; it turns into a day in Hanoi if it was
+not.</p>
 
 <p>Sapa's cost is the road, and the road has no substitute. There is no airport, the
 railway stops an hour short at Lào Cai, and the expressway van is the fastest version at
@@ -401,6 +421,7 @@ anchor of the north; the leg rarely holds both without the centre paying for it.
  ],
  "against": [
    "then skip the bay → it is winter and the mist that photographs well makes the karsts invisible in person; Ninh Bình is the better bet",
+   "then take the rowboat → the two-day forecast shows cloud, wind or a storm warning; the port authority grounds the fleet at once and a two-day window has nowhere to move to",
    "then skip Sapa → the leg is four days or fewer; two of them on a mountain road is the wrong trade",
    "then skip the day trip → if the bay matters, do the overnight; if the day is all there is, Ninh Bình gives comparable scenery for half the travel",
  ],
@@ -409,7 +430,7 @@ anchor of the north; the leg rarely holds both without the centre paying for it.
    "Lan Hạ — how many cabins the boat has, and what happens when the port authority cancels. "
    "The answers, not the price, separate the tiers."
  ),
- "claims": [],
+ "claims": ["bay-suspension", "halong-road"],
 },
 
 # ── 07 ───────────────────────────────────────────────────────────────────────
@@ -723,7 +744,11 @@ list: private guides and drivers hired by the day, spa therapists, porters, and 
 envelope on an overnight cruise. The scams that exist are price-ambiguity rather than theft
 — a service begun before a number is named — and one habit prevents nearly all of them:
 agree the figure, in đồng, before anything starts. {EST} Crossing a border is the one
-place the cash itself is regulated: {C:cash-declare}</p>""",
+place the cash itself is regulated: {C:cash-declare}</p>
+
+<p>The đồng is not a courtesy to the country; it is the law. {C:dong-only} A price quoted in
+dollars is therefore the seller's convenience rather than a rate you are bound to, and
+settling it in đồng is both the cheaper and the regular course.</p>""",
  "for": [
    "then carry more → the far north, the delta backroads, or any dates inside the Tết window; refill in the last city",
    "then rely on the card → a trip that stays in the four cities and sleeps in chain hotels",
@@ -737,8 +762,8 @@ place the cash itself is regulated: {C:cash-declare}</p>""",
  "note": (
    "{OFF} Every visitor's overnight address is registered with the police; the hotel does it "
    "from your passport at check-in; that is why they ask for it. In a homestay the host is "
-   "responsible, and it is worth confirming when you book."
+   "responsible, and it is worth confirming when you book. {C:host-reg}"
  ),
- "claims": ["cash-declare"],
+ "claims": ["cash-declare", "dong-only", "host-reg"],
 },
 ]

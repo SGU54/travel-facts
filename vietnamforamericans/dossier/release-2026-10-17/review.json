@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "reviewer": "Claude Fable 5.1 — v4 (2026-10-17): every page of both PDFs read on contact sheets at 0.42 scale and the changed pages (8–11, 15–26, 41–53, 70–74; sheet 1–7) at 0.75–0.8 scale after each of three re-renders; the owner (SGU54) authorised the v4 build in session ('we can do it, there is no sells yet') and has not yet signed off the rendered pages",
+  "reviewed_at": "2026-10-17",
+  "release_sha256": "d66b9da6fc7e53652a4ca6c79587396e34dda35fb3ca42b220278671f5273d5b",
+  "evidence_sha256": "dc271e027c04d9980662e4824773a8d4e19aea756628448e3da071a2aa4298d3",
+  "bindings_sha256": "61250972cedcbe5ed6bb7442f8401551274f545bfdaf9b44ac106019cd5a7373",
+  "documents": {
+    "book": {
+      "pdf_sha256": "021d47bdc0504cce6d5dd4836240fd8159f331a279fcab95837d08c08d1c5666",
+      "html_sha256": "d6e58383e1ccaf3ea4737228efbaeeb7cbffd43f374064f4ac3bcda06f672cd9",
+      "page_count": 76,
+      "pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "checks": {
+        "facts": "pass",
+        "decisions": "pass",
+        "consistency": "pass",
+        "visual": "pass",
+        "navigation": "pass"
+      },
+      "notes": [
+        "Facts: v4 adds 14 claims, every one read from its primary page on 2026-10-17 for the site's fact layer (Law 36/2024 Arts 9, 11, 33; Law 47/2014 Art 33; Decree 82/2015 Arts 2–10; SBV Circular 32/2013; the FCDO Vietnam safety page; the State Department's 2026 Vietnam page for the same-passport and minor-consent rules; the Cambodian embassy's border table; the Hanoi Times expressway report; the VOH suspension notice; Oxalis's own Sơn Đoòng page). The eight facts the 2026-10-17 Stage A pass named were checked against v3's text first: nothing in v3 was retracted.",
+        "Decisions: still 11. D03 gains the Cambodian side of the river exit (e-visa only at Bavet) in the reasoning, a fork and the evidence record; D04 gains the helmet, prohibited-act and red-light rules with their claims; D06 gains the two-day forecast rule and the grounding asymmetry, a fork, and a new d06-north evidence entry; D11 cites the đồng law and the host's registration duty. A new operations chapter, 'The middle', sets Huế's nights by what the trip is for and prices Phong Nha in days (Sơn Đoòng's price on the sheet only). 'Before you fly' gains a Vietnamese-American section with a five-row ledger. The hospital ledger gains methanol; the failure-mode ledgers gain four rows (23 total).",
+        "Consistency: the D06 ledger row added in the first v4 build was removed because it pushed the figure and ledger off the opener and left page 50 at 30% (audit-book 'orphan stub'); its content lives in the reasoning and the fork. The Vietnamese-American sub-heading stranded at the foot of page 9 in the second build; the section was reordered (lead, ledger, body) and the third build keeps the heading with its ledger. Contents folios verified by add-nav (28/28 bookmarks, 29 chapters); 'Eleven decisions' still matches.",
+        "Visual: 76 pages (v3 73); 32 plates (A32, the Phong Nha river boat from the site's batch-21 library, added at 'The middle'); audit-book CLEAN (median fill 85%, range 41–92%, no orphan stubs, longest text-only run 5); audit-layout CLEAN (69/76 anchored, no bare spread); audit-rhythm PASS; check-svg-text 318 labels, 0 hits. Eight chapter tails end above 62% without a closing plate (p5, 17, 20, 28, 37, 52, 57, 70) — the same shape v3 accepted.",
+        "Navigation: 28 bookmarks on all chapters; 'Decision NN' cross-references live; four external links resolve."
+      ]
+    },
+    "sheet": {
+      "pdf_sha256": "c67e33f10b663cc32dfc8070dbfe3ed20ab3aa6b6aaa58f2a0a19f95eaeea502",
+      "html_sha256": "b10ce758b95f469570de12009c9bbb2579e922bf72c5cc1ddf62b4a20788def5",
+      "page_count": 7,
+      "pages_viewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "checks": {
+        "facts": "pass",
+        "decisions": "pass",
+        "consistency": "pass",
+        "visual": "pass",
+        "navigation": "pass"
+      },
+      "notes": [
+        "7 pages (v3 5), 47 rows, each read against evidence.json; 13 rows added: one passport, children of Vietnamese parentage, minors without a parent, the visa-exemption paper, Cambodian e-visa gates, the residence declaration law, legal tender, helmets, red light, methanol, Hanoi–Hạ Long road, bay suspensions, Sơn Đoòng.",
+        "Sơn Đoòng prints its operator price as 3000 USD (plain decimal, with the VND figure as 80000000) as the evidence contract requires; the first v4 build printed it with thousands grouping and the evidence gate failed it.",
+        "Issue date 2026-10-17 on the renewal block; edition stays 2026.10 (same quarter as v3); the reissue clock is unchanged (2027-01-01)."
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "id": "east-coast-october-fortnight",
+      "details": "Unchanged from v3 and re-walked: two adults from New York, 16 days of leave in October, open-jaw HAN→SGN. D01 three regions with slack; D02 north first; D03 single entry, airports named; D06 Ninh Bình day + one bay night — v4 adds the forecast rule, which in October (the bay's clearest month) leaves the overnight in place; The middle: two nights in Huế for history, the train over the pass (D05); D07 two nights in town; D08 Cần Thơ overnight; D10 clear of Tết. No contradiction between the new D06 rule and D02's slack placement.",
+      "result": "pass"
+    },
+    {
+      "id": "west-coast-nonstop-february-week",
+      "details": "Unchanged from v3: one traveller on the SFO nonstop, 9 days of leave in early February 2027; D10 moves the dates or fixes transport the day they are known; D08 city days; D09 Phú Quốc dry. v4's D04 helmet and red-light rules apply to the Grab bike hops without changing the call.",
+      "result": "pass"
+    },
+    {
+      "id": "family-centre-only",
+      "details": "Unchanged from v3: family of four, 10 days in June, DAD in and out. The middle now gives Huế one night on the way through for a beach-and-food trip, which agrees with D07's split and the fourteen-day spine in 'The plan'.",
+      "result": "pass"
+    },
+    {
+      "id": "vietnamese-american-family-two-free-days",
+      "details": "New for v4: a Vietnamese-American couple from San Jose with a US-born child, 12 days in late November, flying into Hanoi on one-stop tickets, staying four nights with family in Hải Phòng, then Hanoi and two free days. Before you fly: the trip runs on the US passports throughout (same-passport claim); the child's parentage sends them to the Vietnamese consulate before booking for the exit document; the family home's host files the residence declaration (host-reg; no passport surrender). D03: e-visa single entry naming Nội Bài both ways; the exemption paper is noted for the next trip. D06: late November — the forecast rule decides the two free days; a storm warning sends them to Ninh Bình to sleep there, otherwise the overnight bay; either way the cruise is not on the last night. D11: đồng for everything, gifts in cash withdrawn in Hanoi. The chain is consistent; the new claims route this reader to an action at every step and no decision overrules them.",
+      "result": "pass"
+    }
+  ],
+  "open_issues": [
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "explanation": "Eight chapter tails end above 62% without a closing plate (p5, 17, 20, 28, 37, 52, 57, 70), the same shape v3 accepted; the rhythm gate names them as candidates for a spare plate, not failures. Page 52 (the D06 Sapa plate page) is 42% full because the plate and the call were kept apart deliberately."
+    },
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "explanation": "Figure annotations at 9 CSS px (6.75 pt) remain, as in v3; every value they carry is repeated in the adjoining ledger."
+    },
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "explanation": "Two legacy plates (A20, A27) are wider than 3:2 and letterbox slightly in the column, as they did in v3; validate-images reports them and they were left as shipped."
+    },
+    {
+      "severity": "minor",
+      "status": "accepted",
+      "explanation": "The State Department's 2026 Vietnam page prints the time difference to Washington as 11 hours in Eastern Standard Time, which is the daylight-time figure; the book keeps 12 (UTC+7 against UTC−5) and the site's disputes file records the discrepancy for the checker. Accepted: the book's figure is the arithmetically correct one and the sheet row carries both seasons; nothing in either document depends on the source page's wording."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "release_sha256": "bf6fb7d8fa30d10ac4ee44183a176b011cd21fb088a8d75aaf0092a1fb154516",
-  "evidence_sha256": "d594a35462a84aea3edfd453b8f439e736a3ba848e4a5fbefe2a4691c2b8ea2b",
+  "release_sha256": "d66b9da6fc7e53652a4ca6c79587396e34dda35fb3ca42b220278671f5273d5b",
+  "evidence_sha256": "dc271e027c04d9980662e4824773a8d4e19aea756628448e3da071a2aa4298d3",
   "assets_sha256": {
     "fonts/anton--1Ptgg87LROyAm3K8-C8CSKlvPfE.woff2": "889f979804fc6c2ddb3c9577805caf156bfd092a5b6e58d680535d65267b933e",
     "fonts/anton--1Ptgg87LROyAm3K9-C8CSKlvPfE.woff2": "ae1a8ac1c2899a66eed47a851201bb78a56664bf8da6d34a9ee226582d15ac19",
@@ -57,12 +57,13 @@
     "img/A28.jpg": "5192d25468ef3fcca394e5fde42ad7cc358c9ce05a7f03adca78292ef8f9023c",
     "img/A29.jpg": "43383fdbd960effcddf5996dc1740287a1dd2c7f83999460b6539792f69b2563",
     "img/A30.jpg": "536fd3abc44d8e2e840f03380200e8a357e3225cac3af6750ba4ce284b4a76a0",
-    "img/A31.jpg": "1fb1b1c1a6d60b597dab58ac7a08b91a12d59c0214024f60a06d04db1794f1cf"
+    "img/A31.jpg": "1fb1b1c1a6d60b597dab58ac7a08b91a12d59c0214024f60a06d04db1794f1cf",
+    "img/A32.jpg": "1a587291220121eb9fbdc017e72f9148c3bbe9c110575369734c0a2ac14df144"
   },
   "documents": {
     "book": {
       "template": "book.template.html",
-      "template_sha256": "d222409fd985ff3769e31d3c89b1b16b73a1b5f2a683c8d1943d72c54c050274",
+      "template_sha256": "34c40b09d2a6f98ce9016a91801a3c63d953159fd772086b3256795fd7c267f2",
       "html": "_book.html",
       "claims": {
         "nonstop": 2,
@@ -71,32 +72,45 @@
         "passport-6m": 1,
         "vaccines": 1,
         "malaria": 1,
+        "same-passport": 1,
+        "child-exit": 1,
+        "minor-consent": 1,
+        "exemption-paper": 1,
         "visa-port": 2,
         "exit-control": 1,
         "police-reg": 1,
+        "host-reg": 2,
         "advisory": 1,
         "emergency": 1,
         "drugs": 1,
+        "methanol": 1,
         "timezone": 1,
         "tet-2027": 2,
         "visa-90": 1,
         "visa-noext": 1,
         "visa-gates": 1,
+        "cambodia-evisa": 1,
         "visa-fee": 1,
         "declaration": 1,
         "zero-alcohol": 1,
+        "no-licence-act": 1,
+        "helmets": 1,
+        "red-light": 1,
         "licence": 1,
         "insurance": 1,
         "han-sgn-rail": 1,
         "hue-dn-rail": 1,
+        "bay-suspension": 1,
+        "halong-road": 1,
         "natday-2027": 1,
-        "cash-declare": 1
+        "cash-declare": 1,
+        "dong-only": 1
       },
-      "html_sha256": "f9dd1c23f1eb020aebb85866204dc3b182c9d1cf2ac2979ef113294b45c69d84"
+      "html_sha256": "d6e58383e1ccaf3ea4737228efbaeeb7cbffd43f374064f4ac3bcda06f672cd9"
     },
     "sheet": {
       "template": "sheet.template.html",
-      "template_sha256": "11ced8c2dc1469e09d013bd143f3bf03ba5bbeca8590c565c78e1e0a1d1688cc",
+      "template_sha256": "b6f3b595ab16df38cc9856c8f3c76b3c5dcedebff59e4ccccd33f466deaa98c2",
       "html": "_sheet.html",
       "claims": {
         "visa-required": 1,
@@ -112,14 +126,24 @@
         "declaration": 1,
         "passport-6m": 1,
         "exit-control": 1,
+        "same-passport": 1,
+        "child-exit": 1,
+        "minor-consent": 1,
+        "exemption-paper": 1,
+        "cambodia-evisa": 1,
         "cash-declare": 1,
         "customs-alcohol": 1,
         "atm-structure": 1,
         "police-reg": 1,
+        "host-reg": 1,
+        "dong-only": 1,
         "advisory": 1,
         "licence": 1,
         "insurance": 1,
         "zero-alcohol": 1,
+        "helmets": 1,
+        "red-light": 1,
+        "methanol": 1,
         "vaccines": 1,
         "malaria": 1,
         "drugs": 1,
@@ -130,11 +154,14 @@
         "han-sgn-rail": 1,
         "fares-domestic": 1,
         "cruise-terms": 1,
+        "halong-road": 1,
+        "bay-suspension": 1,
+        "son-doong": 1,
         "tet-2027": 1,
         "natday-2027": 1,
         "hoian-ticket": 1
       },
-      "html_sha256": "af67925fa6e8a27716026f358ffc8935070b5e3268875fbdcc339bff0f043e55"
+      "html_sha256": "b10ce758b95f469570de12009c9bbb2579e922bf72c5cc1ddf62b4a20788def5"
     }
   }
 }

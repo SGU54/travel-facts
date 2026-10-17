@@ -1,0 +1,237 @@
+[
+  {
+    "id": "visa-required",
+    "text": "Visa: required for a US passport; apply before travel. Exception: 30 days or fewer on Phú Quốc only, arriving and leaving directly.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-fee-single",
+    "text": "E-visa, single entry: 25 USD, paid by bank transfer on the official portal.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-fee-multi",
+    "text": "E-visa, multiple entry: 50 USD, paid by bank transfer on the official portal.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-fee",
+    "text": "E-visa fee: 25 USD single entry / 50 USD multiple entry; bank transfer; official portal evisa.gov.vn only.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-90",
+    "text": "E-visa validity: up to 90 days; the period granted is normally the period requested.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-processing",
+    "text": "E-visa processing: usually 3–5 working days from receipt of application and payment; longer at holidays and surges. Vietnam's embassy in India publishes 5–30 working days: treat 3–5 as a floor.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-port",
+    "text": "Ports: the entry and exit points used must match those named on the application.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-noext",
+    "text": "Extension: none exists for an e-visa; a longer stay means leaving and applying again from outside.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-gates",
+    "text": "E-visa gates: 83 (17 airports, 27 land, 39 sea) since Resolution 389/NQ-CP, 2 Dec 2025. Every international airport is covered; only some land crossings are.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "visa-print",
+    "text": "Carry a printed e-visa with the passport.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "declaration",
+    "text": "Pre-arrival declaration: prearrival.immigration.gov.vn, free, filed no earlier than 3 days before arrival. State Dept: required (air arrivals, foreign passport). Vietnam's portal: advisory. File it.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "passport-6m",
+    "text": "Passport: 6 months' validity beyond arrival; blank pages — the State Dept page says both one per stamp and at least two, so carry two.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "licence",
+    "text": "Driving: US licence and IDP both invalid; renting a motorbike without a Vietnamese licence is illegal; fine, arrest or jail.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "insurance",
+    "text": "Insurance: after an accident without a valid licence, the policy may not pay the medical bills.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "zero-alcohol",
+    "text": "Drink-driving limit: zero. Cameras and higher fines in Hanoi and Saigon.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "advisory",
+    "text": "Travel advisory: Level 1 — Exercise Normal Precautions (dated 24 June 2026). Re-read before you fly.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "cash-declare",
+    "text": "Currency declaration: above 15000000 VND or 5000 USD in foreign currency, on entry and on exit. No limit; a form, not a tax. The 7000 USD figure online traces to a 2005 notice.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "customs-alcohol",
+    "text": "Duty-free alcohol, per entry: 1.5 L at ≥20% ABV, or 2 L under 20%, or 3 L of beer — one of the three. A single bottle over by ≤1 L passes whole. Tobacco: 200 cigarettes or 250 g or 20 cigars. Other goods: 10,000,000 VND.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "vaccines",
+    "text": "Vaccines: none required at the border. CDC recommends Hep A, Hep B and typhoid for most travellers; Japanese encephalitis and rabies are conditional.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "malaria",
+    "text": "Malaria: rural only; none in Hanoi, Saigon, Đà Nẵng, Hải Phòng, Nha Trang, Quy Nhơn. Resistance in named provinces; the drug depends on the route — a clinic question.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "timezone",
+    "text": "Time: UTC+7, no daylight saving; +12 h on US Eastern in winter, +11 h in summer.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "nonstop",
+    "text": "Nonstop US–Vietnam: Vietnam Airlines SFO–SGN only (about 15–17 h westbound); no nonstop to Hanoi. Days of operation vary by season: check the airline before fixing dates.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "tet-2027",
+    "text": "Tết 2027: 6 February; official holiday 4–10 February (Document 10065/VPCP-KGVX). The surge runs about a week either side. 2028 will be announced in 2027 — check.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "natday-2027",
+    "text": "National Day 2027: 2–5 September. Reunification Day and Labour Day: 30 April – 1 May, span announced each year.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "exit-control",
+    "text": "Exit: valid status required to leave; overstaying — including for a medical emergency — likely means fines and delays obtaining permission to go.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "emergency",
+    "text": "Emergency: 113 traffic police · 115 ambulance · 1900-54-55-70 expressway hotline. Often answered in Vietnamese only.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "police-reg",
+    "text": "Residence registration: every overnight address is registered with the police; hotels do it from your passport, a homestay host must.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "drugs",
+    "text": "Drugs: blood tests happen; a substance used legally abroad can mean arrest; some ADHD and other prescription ingredients are illegal — carry documentation.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "hue-dn-rail",
+    "text": "Huế–Đà Nẵng by rail: about 2.5–3 h. Timetable and fares: dsvn.vn — confirm in your travel week; book the better carriages a day or two ahead.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "han-sgn-rail",
+    "text": "Hanoi–Saigon by rail: roughly 32–36 h end to end; almost nobody rides it through. Sleeper classes: 4-berth soft, 6-berth hard; berths sold individually.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "fares-domestic",
+    "text": "Domestic fares: confirm in your travel week on the carriers' own sites (Vietnam Airlines, VietJet, Bamboo). The gap between carriers is often smaller than the baggage fee. Reverses nothing in the book; sets the fly-or-train toss-up between 150 and 500 miles.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "cruise-terms",
+    "text": "Bay cruises: confirm with the operator, in writing — which bay, cabin count, kayaking included, cave fees, and what happens when the port authority cancels (refund, reschedule, credit). Reverses Decision 06 only if the bay is closed for your dates.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "atm-structure",
+    "text": "ATM fee and cap: not printed — no bank's own foreign-card tariff could be verified. Read the machine's screen before confirming; your own bank's foreign charge is the half you can check before you fly.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "helmets",
+    "text": "Helmets: rider and pillion, strap fastened — Law 36/2024 Art 33. Ask the easy-rider operator what it issues.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "red-light",
+    "text": "Red light: stop; right on red only with a supplementary arrow or sign (Law 36/2024 Art 11). Two 2015–16 guidebooks said the opposite.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "cambodia-evisa",
+    "text": "Cambodian e-visa: accepted at Bavet (Mộc Bài road crossing) only; the Châu Đốc river post (Kaam Samnor), Hà Tiên (Prek Chak) and Tịnh Biên (Phnom Den) are not e-visa gates. Decision 03 and 08.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "methanol",
+    "text": "Methanol: deaths from spirits bought in licensed bars, shops and hotels in tourist areas; taste does not reveal it (UK FCDO). Beer and sealed wine by default; symptoms can arrive a day later as a hangover with blurred vision — a hospital, not sleep.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "same-passport",
+    "text": "One passport: enter, fly domestically and exit on the same document. Dual nationals choose before booking.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "child-exit",
+    "text": "Children of Vietnamese parentage: a Vietnamese passport or exit visa may be required to leave; ask the Vietnamese consulate before booking (US Embassy).",
+    "min_occurrences": 1
+  },
+  {
+    "id": "minor-consent",
+    "text": "Minors: notarised parental consent for any Vietnamese minor (dual US citizens included) travelling without a parent or guardian; a lone parent carries the other's consent or proof of sole custody.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "exemption-paper",
+    "text": "Visa-exemption paper (Decree 82/2015): overseas Vietnamese and their spouses/children; up to 5 years, 6 months per entry; passport with 1 year left; proof of origin (birth certificate, renunciation or loss-of-nationality papers). Apply at a Vietnamese consulate. Fee set separately — ask.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "halong-road",
+    "text": "Hanoi–Hạ Long by road: about 2.5 h on the expressway (since 2018). Ninh Bình: about 2 h. Guidebooks printed before 2019 still say four.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "bay-suspension",
+    "text": "Bay suspensions: the port authority grounds every tourist vessel at once on a storm forecast; operators refund or reschedule. A two-day window has no room to reschedule into — Decision 06.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "dong-only",
+    "text": "Legal tender: đồng only for prices and payment inside Vietnam (SBV Circular 32/2013); dollar quotes are the exception, not a courtesy.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "host-reg",
+    "text": "Residence declaration: the host files it within 12 h (24 h remote), usually online — Law 47/2014 Art 33. No passport surrender is required; a copy and a look are what the desk needs.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "son-doong",
+    "text": "Sơn Đoòng: Oxalis only; 6 days / 5 nights, graded challenging; operator price about 3000 USD per person (VND 80000000); a day and a half of trekking to the mouth. Places are few and sell out far ahead.",
+    "min_occurrences": 1
+  },
+  {
+    "id": "hoian-ticket",
+    "text": "Hội An Ancient Town ticket: confirm at the booth how many sites it covers and how long it stays valid. The lantern night is the 14th of each lunar month.",
+    "min_occurrences": 1
+  }
+]

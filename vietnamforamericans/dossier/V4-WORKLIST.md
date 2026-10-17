@@ -1,4 +1,4 @@
-# Vietnam, End to End. — v4 worklist (from the 2026-10-17 Stage A pass)
+# Vietnam, End to End. — v4 worklist (from the 2026-10-17 Stage A pass) — DONE 2026-10-17, all 11 rows shipped in v4 (release-2026-10-17)
 
 Nothing in v3 is wrong against facts.json (73 keys). v4 is additions. Each row names the build file,
 the claim, its provenance mark and the fact key that supports it. Shelf-life decides the document.

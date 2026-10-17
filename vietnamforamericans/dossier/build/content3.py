@@ -117,6 +117,7 @@ badly, not exotic ones.</p>
     <tr><td>Drugs and prescriptions {OFF}</td><td>blood tests happen; some ADHD ingredients are illegal; consular access is routinely delayed</td></tr>
     <tr><td>Stomach illness {EST}</td><td>the commonest thing that goes wrong; vaccinations and turnover are the controls</td></tr>
     <tr><td>Unexploded ordnance {OFF}</td><td>real and narrowly located; low in towns and tourist sites; stay on paths at the DMZ</td></tr>
+    <tr><td>Counterfeit spirits {OFF}</td><td>methanol, from licensed bars and shops in tourist areas; beer and sealed wine are the exposure-free drinks</td></tr>
   </table>
 </div>
 
@@ -150,6 +151,19 @@ than it otherwise would is the aftermath: consular access to detained Americans 
 delayed, often by several weeks, so the embassy may not reach you quickly. Carry any
 prescription in its original labelled packaging with a copy of the prescription, and check
 anything you depend on before you fly rather than at the border. {OFF}</p>
+
+<h2>The one in the glass</h2>
+
+<p>Most of the drinking in Vietnam is beer, and beer is not the problem. {C:methanol} The
+mechanism is ordinary fraud — a known label refilled with cheap distilled alcohol, or a batch
+of local rice liquor distilled badly — and the exposure is the open bottle: cocktails, shots
+and free-pour measures in places whose supply chain is nobody's reputation, which is why the
+cases cluster in the backpacker streets and the beach resorts. The rule that follows costs
+nothing: beer or sealed wine by default; spirits only in an established hotel bar or
+restaurant; a bottle for a party from a supermarket, never a corner shop; and nothing that
+arrives in a bucket or at a price that could not have bought a genuine measure. The symptoms
+start the next day and look like a hangover, and the sign that separates them is the eyes —
+blurred or snowy vision is a hospital, not sleep and water. {OFF}</p>
 
 <h2>Air</h2>
 
