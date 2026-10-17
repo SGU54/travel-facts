@@ -116,3 +116,14 @@ teaserBySwamp: north-south-routing→1 · halong-bay-cruise-choice→5 · visa-c
 - `SITE.guide.cover` ← Cloudinary public_id of `build/cover-web.jpg` (exported; upload is the operator's).
 - `site_settings.guide_price` (fleet default **$24**), `guide_checkout_url` (a Stripe payment link with `after_completion` → `/guide/success?session_id=`), `guide_ads_enabled` — all set from the admin Guide panel; the product goes live only when all three exist.
 - The backfill above, after the name is confirmed.
+
+## Added 2026-10-17 — raw hooks for the two new swamps (★ user confirms; marketing skill strengthens)
+
+The DB now carries `swamp` = `halong-or-ninh-binh` on two-days-from-hanoi-halong-or-ninh-binh and
+`hue-how-long` on how-many-days-for-hue; until `SITE.guide.hooks` has these keys the surfaces fall
+back to the thesis.
+
+| swamp id | hook (band) | aside | inline |
+|---|---|---|---|
+| halong-or-ninh-binh | The bay is cancelled by the port authority, not the operator, and a two-day window has nowhere to reschedule into. The book turns the forecast into the call — boat or rowboat — and keeps the other as the same-morning fallback. | Is the forecast for your two days calm enough to put them on a boat? | Which of the two you give the days to is one node in the month-by-region table the book is built on. |
+| hue-how-long | Three guidebooks give Huế three answers because they never say whose trip they are planning. The book sets Huế's nights by what you came for, out of the same pool that pays for Hội An and Hanoi. | Is Huế a base or a stop on the way through — and did the pool of nights decide, or the itinerary you copied? | How many nights Huế takes is settled with the rest of the central-coast allocation in the book. |

@@ -77,3 +77,51 @@ Hooks by swamp id (raw, accurate first) are emitted in DELIVERABLES.md after Sta
 196 files on the volume (batches 01–10 under `upload/`, 11–20 under `images/`); 176 landscape
 ≥1200px. Contact sheets `_sheets/sheet-00..04` (b11–20) and `sheet-10..13` (b01–10), index in
 `_sheets/index.json`. Plates chosen in build/content*.py by slot.
+
+---
+
+# Stage A pass · 2026-10-17 (after batches 21–23 and the knowledge-first exercise)
+
+Input: `STAGE-A-INPUT-2026-10-17.md`. Corpus re-exported: **113 published articles, 118,230 words**
+(guide-span paragraphs stripped before every tally). Yield model 113 × 0.5 ≈ 56 pages; the shipped
+v3 runs 73, so the constraint is editorial. Depth: v3 uses 19.8k of 118k words (16.7 %, floor 11 %).
+
+## Check of the v3 release against the eight new facts — nothing to retract
+
+| fact | v3 says | verdict |
+|---|---|---|
+| transport.red_light_no_turn | nothing on turning on red | no conflict; the rule can be added to D04's "if you ride anyway" |
+| transport.tet_trains | no blackout claim | no conflict (the LP blackout was never imported) |
+| transport.us_nonstop_routes | "the only nonstop … San Francisco to Ho Chi Minh City" | agrees |
+| transport.hanoi_halong_drive | no hours printed for the road | no conflict; the 2.5 h figure strengthens D06 |
+| transport.cambodia_evisa_ports | "provided the e-visa named a river exit" (Vietnamese side only) | agrees; the Cambodian side (e-visa works only at Bavet) is missing — add |
+| calendar.tet_dates / tet_2027_holiday | "In 2027 Tết falls on 6 February, holiday 4–10 February" | agrees |
+| money.legal_tender_dong_only | "always đồng" (DCC context) | agrees; the legal basis can be cited |
+| documents.hotel_registration_law | "registered with the local police … a homestay host is responsible" | agrees with Law 47/2014 Art 33 |
+
+The three book-vs-book forks: Hạ Long season — v3 says October is the clearest month (agrees with
+Moon's Sep–early Dec and the site); Sapa harvest — v3 says "September: the terrace harvest" (agrees);
+passport at the desk — v3 says the hotel takes it for registration (agrees, and the law now adds
+that no surrender is required, only the host's declaration).
+
+## Synthesis checks on the 113-article corpus
+
+| thesis (themes) | scattered in | joined in | HEADROOM |
+|---|---|---|---|
+| month × direction × visa port × nonstop (the v3 spine) | 41/36/22/5 | 0 | **11.5** (was 7.4 at 100 articles) |
+| bay suspension × Ninh Bình × winter fog × two-day window | 9/20/46/26 | 2 | **5.9 STRONG** — the `halong-or-ninh-binh` swamp is a real decision, not a sub-point |
+| licence × insurer × Hà Giang/Hải Vân pillion × helmet/police | 23/19/27/17 | 7 | 2.3 STRONG but partly pre-joined (D04 already exists; the new articles join it) |
+| same passport × exemption paper × minor consent × registration (the Vietnamese-American reader) | 13/6/22/19 | 1 | 4.6 but THIN raw material (6 articles) — a box, not a decision |
+
+## What the thirteen new articles add to the vein
+
+- **halong-or-ninh-binh** (new swamp): the forecast rule, the port-authority grounding as the asymmetry, Ninh Bình as the same-morning fallback, and the 2.5 h road. Extends D06.
+- **hue-how-long** (new swamp): the three-book disagreement resolved by interest (history 2 nights / DMZ 3 / beach-and-food 1 / ≤7 days a pass-through), and the "pool of central-coast nights" framing. Extends D07.
+- **Phong Nha**: a four-day cost and what it displaces; Sơn Đoòng as a trip, not a stop (volatile price → Field Sheet). New set piece under D06/D07.
+- **D04**: pillion with a licensed rider is the only lawful two-wheel form; helmets for every rider and passenger (Law 36/2024 Art 33); no licence is itself a prohibited act (Art 9); red means stop.
+- **D03**: the Cambodian e-visa works only at Bavet, so the Châu Đốc river exit needs a Cambodian visa by another route — the one line v3 lacks.
+- **Hospital ledger**: methanol (FCDO: licensed bars and shops in tourist areas; taste does not reveal it) — a failure-mode row and a rule (beer and sealed wine by default; spirits only where the supply chain is the reputation).
+- **Before You Fly box for Vietnamese Americans**: same-passport rule, child exit document, notarised consent for minors, the five-year exemption paper. Four verified keys, thin corpus — one page, marked ◇.
+- Not for the book: street names, funerals, exotic menu words, allergies, mobility (experience/reference cell; the site has them).
+
+Estimated v4 delta: **+5 to +7 pages**, no retractions, two new hooks.
