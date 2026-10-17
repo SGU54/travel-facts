@@ -382,3 +382,10 @@ Moon: the country "shuts down for weeks before and after". Overstated against cu
 
 ### Cambodia war dating — Moon p485
 Moon has the China clashes and the Cambodia war "resolved by the end of 1979". The Cambodian occupation ran to 1989. Lead/inaccurate; history article uses standard dating.
+
+### Resolved by the 2026-10-17 facts build
+- **transport.right_turn_on_red** — Law 36/2024/QH15 Art 11(4)(c): red means stop; a turn on red is lawful only with a right-arrow signal. LP 2016 was right, Moon 2015 wrong. Key `transport.red_light_no_turn`.
+- **Tet train blackout (LP p497)** — Vietnam Railways ran 906 trains over Tet 2026 and added services in the holiday week; the nine-day suspension is obsolete. Key `transport.tet_trains`.
+- **International rail (Moon p491 vs LP p491)** — not re-verified this pass; LP's version (Hanoi–Nanning exists) remains the working assumption. No key.
+- **Hotel passport (DK p233 / LP p478 / Moon p497)** — Law 47/2014 Art 33 puts the declaration duty on the host within 12 h and requires no passport surrender. Key `documents.hotel_registration_law`; corrections #7 still governs consequences.
+- **Tipping (four opinions)** — unchanged: structural rule only.

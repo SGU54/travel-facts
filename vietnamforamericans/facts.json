@@ -5,17 +5,26 @@
     "project": "vietnamforamericans",
     "country": "Vietnam",
     "country_iso": "VN",
-    "built_at": "2026-10-12",
-    "built_from": "raw/claude.json + raw/chatgpt.json + raw/deepseek.json, reconciled; promoted by hand",
+    "built_at": "2026-10-17",
+    "built_from": "raw/claude.json + raw/chatgpt.json + raw/deepseek.json, reconciled; promoted by hand | 2026-10-17 Stage 0b wishlist pass: P1 rows verified directly against primary/official sources (read this session), no external-model panel",
     "audience": {
       "nationality": "American",
       "home_currency": "USD"
     },
     "primary_sources": [
+      "https://english.luatvietnam.vn/an-ninh-trat-tu/law-on-road-traffic-order-and-safety-2024-no-36-2024-qh15-360844-d1.html",
+      "https://english.luatvietnam.vn/circular-no-32-2013-tt-nhnn-dated-december-26th-2013-of-the-state-bank-of-vietnam-on-guiding-the-implementation-of-regulations-on-restricting-the-use-83764-doc1.html",
+      "https://english.luatvietnam.vn/law-no-47-2014-qh13-on-entry-exit-transit-and-residence-of-foreigners-in-vietnam-87925-doc1.html",
+      "https://evisa.gov.vn/faq",
+      "https://grab.com/global/airport-rides/tan-son-nhat-international-airport",
+      "https://laoevisa.gov.la/info",
+      "https://metrohanoi.vn/",
+      "https://prearrival.immigration.gov.vn/",
+      "https://recberlin.mfaic.gov.kh/en-us/border-crossings",
+      "https://sbv.gov.vn/en/money-issuance",
       "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Vietnam.html",
       "https://vn.usembassy.gov/vietnamese-visas-and-entry-exit/",
-      "https://evisa.gov.vn/faq",
-      "https://prearrival.immigration.gov.vn/",
+      "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt",
       "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam"
     ]
   },
@@ -249,6 +258,18 @@
       "checked_at": "2026-10-12",
       "review_after": "2027-04-12",
       "risk": "high"
+    },
+    "hotel_registration_law": {
+      "fact_key": "documents.hotel_registration_law",
+      "value": "By law it is the hotel, homestay or host who must declare a foreign guest's temporary residence to the local police, within 12 hours of arrival (24 hours in remote areas), usually electronically. The statute does not require you to surrender your passport; the desk needs its details to file the declaration, so handing it over for copying and asking for it back is consistent with the law. Many hotels still hold it during the stay as a deposit practice, and may ask for prepayment if you insist on keeping it.",
+      "status": "verified",
+      "source_url": "https://english.luatvietnam.vn/law-no-47-2014-qh13-on-entry-exit-transit-and-residence-of-foreigners-in-vietnam-87925-doc1.html",
+      "source_kind": "primary",
+      "scope": "Foreign guests at any accommodation in Vietnam",
+      "support": "Law No. 47/2014/QH13 on Entry, Exit, Transit and Residence of Foreigners (English text, LuatVietnam), Article 33: foreigners temporarily residing in Vietnam declare 'via managers and executives of accommodation establishments' to the commune/ward police; clause 2: declarations filed 'within 12 hours or within 24 hours, for remote and deep-lying areas, after the foreigners arrive'; no passport-surrender provision. US Embassy Hanoi (vietnamese-visas-and-entry-exit, read 2026-10-17): 'all visitors (including Vietnamese) are required to register their temporary residence with the police station where they are staying overnight.' Corrections #7 governs: state no consequence. The hold-as-deposit practice is guidebook observation (Moon 2015 p497), not law.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "risk": "high"
     }
   },
   "safety_health": {
@@ -314,14 +335,14 @@
     },
     "malaria": {
       "fact_key": "safety.malaria",
-      "value": "Malaria transmission in Vietnam is rural only, with rare cases in the Mekong and Red River deltas, and CDC lists no transmission in the cities of Da Nang, Hai Phong, Hanoi, Ho Chi Minh City, Nha Trang or Quy Nhon. Chloroquine and mefloquine resistance is present in named provinces (Binh Phuoc, Dak Lak, Dak Nong, Gia Lai, Khanh Hoa, Kon Tum, Lam Dong, Ninh Thuan, Tay Ninh), where CDC points to atovaquone-proguanil, doxycycline or tafenoquine; elsewhere in transmission areas mefloquine remains listed. Whether any prophylaxis is warranted depends on the specific itinerary.",
+      "value": "Malaria transmission in Vietnam is rural only, with rare cases in the Mekong and Red River deltas, and CDC lists no transmission in the cities of Da Nang, Hai Phong, Hanoi, Ho Chi Minh City, Nha Trang or Quy Nhon. For the deltas CDC recommends no chemoprophylaxis, only bite precautions. Chloroquine and mefloquine resistance is present in ten named provinces (Binh Duong, Binh Phuoc, Dak Lak, Dak Nong, Gia Lai, Khanh Hoa, Kon Tum, Lam Dong, Ninh Thuan, Tay Ninh), where CDC points to atovaquone-proguanil, doxycycline or tafenoquine; in other transmission areas mefloquine is also listed. Whether any prophylaxis is warranted depends on the specific rural areas visited.",
       "status": "verified",
       "source_url": "https://wwwnc.cdc.gov/travel/destinations/traveler/none/vietnam",
       "source_kind": "primary",
       "scope": "All travellers to Vietnam regardless of nationality",
-      "support": "CDC Vietnam destination page, malaria transmission areas, verbatim: 'Rural areas only; rare cases in the Mekong and Red River Deltas' and 'None in the cities of Da Nang, Hai Phong, Hanoi, Ho Chi Minh City (Saigon), Nha Trang, and Quy Nhon.' Drug resistance listed as chloroquine and mefloquine. CORRECTED 2026-10-12: an earlier version generalised the resistance-driven drug choice to the whole country, dropping CDC's province-level qualification. The six named cities are the ONLY places CDC names as transmission-free — do not extend that list to other destinations by inference.",
-      "checked_at": "2026-10-12",
-      "review_after": "2027-10-12",
+      "support": "CDC Vietnam destination page, malaria section 'Updated April 23, 2025', page reviewed August 25, 2026, re-read 2026-10-17: 'Rural areas only; rare cases in the Mekong and Red River Deltas'; 'None in the cities of Da Nang, Hai Phong, Hanoi, Ho Chi Minh City (Saigon), Nha Trang, and Quy Nhon'; deltas: 'No chemoprophylaxis recommended (insect bite precautions and mosquito avoidance only)'; provinces listed for atovaquone-proguanil, doxycycline, tafenoquine: Binh Duong, Binh Phuoc, Dak Lak, Dak Nong, Gia Lai, Khanh Hoa, Kon Tum, Lam Dong, Ninh Thuan, Tay Ninh; resistance 'Chloroquine and mefloquine'. Three 2015–16 guidebooks give three different readings; this page is the only authority.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
       "risk": "high"
     },
     "drug_laws": {
@@ -424,6 +445,222 @@
       "checked_at": "2026-10-12",
       "review_after": "2027-04-12",
       "risk": "high"
+    },
+    "red_light_no_turn": {
+      "fact_key": "transport.red_light_no_turn",
+      "value": "A red light means stop, and there is no general right turn on red in Vietnam. A right turn on red is lawful only where a supplementary right-turn arrow signal or sign permits it. Two 2015–16 guidebooks said the opposite (one claimed right on red was allowed everywhere except Hanoi); the 2024 law settles it.",
+      "status": "verified",
+      "source_url": "https://english.luatvietnam.vn/an-ninh-trat-tu/law-on-road-traffic-order-and-safety-2024-no-36-2024-qh15-360844-d1.html",
+      "source_kind": "primary",
+      "scope": "Anyone driving or riding in Vietnam; also relevant to pedestrians judging traffic",
+      "support": "Law on Road Traffic Order and Safety No. 36/2024/QH15 (in force 1 Jan 2025), Article 11 clause 4(c): 'The red light signal means stop.' Tuoi Tre News explainer of 20 Jan 2025 on the same law: drivers cannot turn in any direction on a red signal; where a designated right-turn arrow is lit, a right turn on red is not a violation. Decree 168/2024 sets the fines.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17"
+    },
+    "helmets_all_riders": {
+      "fact_key": "transport.helmets_all_riders",
+      "value": "Every rider and every passenger on a motorbike, moped or motorised bicycle must wear a helmet meeting the national technical standard, with the chin strap fastened. This covers pillion passengers on motorbike taxis. A xe om driver's spare helmet satisfies the letter of the law but little else, so bring or buy a proper one for any real riding.",
+      "status": "verified",
+      "source_url": "https://english.luatvietnam.vn/an-ninh-trat-tu/law-on-road-traffic-order-and-safety-2024-no-36-2024-qh15-360844-d1.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Law 36/2024/QH15 Article 33 clause 2: drivers and passengers of two- or three-wheeled motorcycles and mopeds 'shall wear crash helmets up to national technical regulations' with chin straps fastened correctly; Article 31 clause 3 applies the same to motorised bicycles. Passenger fines under Decree 168/2024 are reported by Vietnamese legal press and are not printed here.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17"
+    },
+    "no_licence_prohibited_act": {
+      "fact_key": "transport.no_licence_prohibited_act",
+      "value": "Operating a motor vehicle without the driving licence the law requires is itself a listed prohibited act under the 2024 traffic law, and letting an unqualified person drive is a second one. This is the Vietnamese statute behind the State Department's warning, and it is why every car hire comes with a driver.",
+      "status": "verified",
+      "source_url": "https://english.luatvietnam.vn/an-ninh-trat-tu/law-on-road-traffic-order-and-safety-2024-no-36-2024-qh15-360844-d1.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Law 36/2024/QH15 Article 9 clause 1 lists among prohibited acts operating motor vehicles without a driver's licence 'as required by law'; Article 9 clause 7 prohibits 'Letting unqualified persons operate motor vehicles or special-purpose vehicles on the road'. Corroborates facts.json transport.driving_licence (State Dept) and corrections #2.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17",
+      "note": "Article 55 (foreign-plated vehicles) sits behind the publisher's paywall and was not read."
+    },
+    "ride_hailing_legal": {
+      "fact_key": "transport.ride_hailing_legal",
+      "value": "App-based ride-hailing (Grab and similar) has operated nationwide as a regular licensed business since 1 April 2020 under Decree 10/2020/ND-CP, which ended the earlier pilot limited to a few provinces. Ride-hailing cars must carry a reflective 'contract car' sign on the front and rear windscreens, which is how to tell a legitimate app car from a freelancer.",
+      "status": "verified",
+      "source_url": "https://vir.com.vn/decree-10-legalises-ride-hailing-for-benefit-of-passengers-and-drivers-74185.html",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Vietnam Investment Review (24 Feb 2020): Decree 10/2020/ND-CP replaces Decree 86/2014/ND-CP; 'Grab and other ride-hailing firms can officially operate nationwide from April 1, 2020'; contract-based vehicles must affix a 'Contract Car' sign of reflective material, minimum 06 x 20 cm, on front and rear windshields. Corroborated by Baker McKenzie client alert (13 Mar 2020) and KrASIA.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17"
+    },
+    "metro_hanoi": {
+      "fact_key": "transport.metro_hanoi",
+      "value": "Hanoi has two operating metro lines run by Hanoi Metro: Line 2A (Cat Linh to Ha Dong, 12 stations) and Line 3 (Nhon to Hanoi Station), of which only the elevated western section is open. Both run 05:30 to 22:00. Neither line serves the airport or the Old Quarter directly; Cat Linh is the closest Line 2A station to the centre.",
+      "status": "verified",
+      "source_url": "https://metrohanoi.vn/",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Operator site metrohanoi.vn (Cong ty TNHH MTV Duong sat Ha Noi / Hanoi Metro), read 2026-10-17: 'Tuyen 2A: Cat Linh - Ha Dong' 12 stations; 'Tuyen 3: Nhon - Ga Ha Noi' 12 stations; operating hours '05:30 - 22:00' for both; notice 2507-TB-DSHN dated 11.9.2026. Line 3 underground section (Kim Ma to Hanoi Station) still under construction with a late-2027 target per VTV/VietnamPlus and Tuoi Tre; the elevated section opened 8 Aug 2024 (Tuoi Tre, 9 Aug 2025).",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "note": "Fares not printed: the operator's ticket page was not readable."
+    },
+    "metro_hcmc_line1": {
+      "fact_key": "transport.metro_hcmc_line1",
+      "value": "Ho Chi Minh City Metro Line 1 (Ben Thanh to Suoi Tien, 19.7 km, 14 stations) opened 22 December 2024 and is run by HURC1. It runs from 05:00 to 22:00 on weekdays and to 23:00 on Saturdays, Sundays and public holidays, every 6 to 8 minutes at peak and 10 to 12 minutes off-peak. Ben Thanh is the District 1 terminus; the line does not reach the airport.",
+      "status": "verified",
+      "source_url": "https://news.tuoitre.vn/ho-chi-minh-city-metro-line-adds-more-trips-extends-operating-hours-on-weekends-103250817102502158.htm",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Tuoi Tre News, 17 Aug 2025: operator 'Ho Chi Minh City Urban Railway No. 1 Company Limited'; service from 05:00 daily, to 22:00 weekdays and 23:00 Saturdays, Sundays and public holidays; peak headway 6–8 minutes, off-peak 10–12; 243 weekday / 246 weekend trips from September 2025. Opening date 22 Dec 2024 per Tuoi Tre (Dec 2024) and VTV (Jan 2025).",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17"
+    },
+    "metro_hcmc_fares": {
+      "fact_key": "transport.metro_hcmc_fares",
+      "value": "HCMC Metro Line 1 fares set by the city People's Committee: single trips 7,000 to 20,000 VND cash by distance, or 6,000 to 19,000 VND cashless; a one-day pass 40,000 VND; a three-day pass 90,000 VND; a monthly pass 300,000 VND. In US terms the longest ride is under a dollar.",
+      "status": "verified",
+      "source_url": "https://vneconomy.vn/tp-hcm-chinh-thuc-chot-gia-ve-tau-metro-1.htm",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "VnEconomy, 23 Nov 2024, reporting the HCMC People's Committee fare decision: cash 7,000–20,000 VND per trip; cashless 6,000–19,000; day pass 40,000 (unlimited); 3-day pass 90,000; monthly 300,000 (students 150,000). Vietnam News (Nov 2024) reports the same figures. Fares are official tariffs, not estimates; re-check after any fare revision.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17"
+    },
+    "airport_bus_hcmc_109": {
+      "fact_key": "transport.airport_bus_hcmc_109",
+      "value": "Public bus 109 links the Saigon bus station next to Ben Thanh Market with Tan Son Nhat airport, and since 28 April 2025 it serves the new Terminal 3 (domestic) instead of Terminals 1 and 2. It runs roughly 05:30 to 22:40 from the airport and 05:45 to 22:30 from the city, with fares between 8,000 and 15,000 VND. International arrivals land at Terminal 2, so check which bus currently serves T2 before relying on 109.",
+      "status": "verified",
+      "source_url": "https://voh.com.vn/giao-thong/tuyen-xe-buyt-109-doi-lo-trinh-ket-noi-truc-tiep-nha-ga-t3-san-bay-tan-son-nhat-591657.html",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "VOH (Voice of Ho Chi Minh City), 28 Apr 2025, reporting the HCMC Public Transport Management Center announcement: route 109 'ket noi truc tiep voi nha ga T3 thay vi nha ga T1 va T2 nhu truoc day'; hours 05:30–22:40 at T3 and 05:45–22:30 at the Saigon bus station; fare 8,000–15,000 VND per trip.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "note": "Which route serves Terminal 2 after this change was not verified; treat as open."
+    },
+    "airport_bus_hanoi_86": {
+      "fact_key": "transport.airport_bus_hanoi_86",
+      "value": "Express bus 86, run by Transerco, links Hanoi railway station on Le Duan with both Noi Bai terminals in about 55 minutes with eight stops, from early morning to late evening. It replaced the Vietnam Airlines minibus that older guidebooks describe. The fare has risen since the 2016 launch and is not printed here.",
+      "status": "verified",
+      "source_url": "https://vietnamnews.vn/society/296202/bus-route-linking-ha-noi-noi-bai-airport-launched.html",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Viet Nam News, 30 Apr 2016: route 86 operated by 'The Ha Noi Transport Corporation (Transerco)', starting 'from the Ha Noi Station at Le Duan Street', eight stops, 33 km, departures 05:05–21:40 from the station and 06:18–22:58 from the airport, launch fare VND 30,000. Current fare conflicts across 2024–26 travel sites (30,000 vs 45,000) and no Transerco page was found, so no figure is published.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17"
+    },
+    "grab_pickup_sgn": {
+      "fact_key": "transport.grab_pickup_sgn",
+      "value": "At Tan Son Nhat, Grab's designated pickup point for international arrivals is in the parking-lot area outside the terminal, not at the kerb; follow the in-app directions to the pin and meet the driver there. Fares are fixed up front in the app, so there is nothing to negotiate, and ride-hailing is the standard answer to the airport-taxi scams the guidebooks describe.",
+      "status": "verified",
+      "source_url": "https://grab.com/global/airport-rides/tan-son-nhat-international-airport",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Grab airport page for Tan Son Nhat, read 2026-10-17: pickup point 'International Arrival - Parking Lot Area - Tan Son Nhat International Airport'; 'Follow the in-app directions to meet your driver at the pick up location'; 'Skip the bargaining and avoid airport touts with upfront fixed fares'; advance booking offered for airport transfers.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17"
+    },
+    "grab_pickup_han": {
+      "fact_key": "transport.grab_pickup_han",
+      "value": "At Noi Bai, Grab's pickup points for international arrivals are at pillars 8 and 11 outside the international terminal, with a separate GrabBike point at the international terminal; follow the in-app pin. Fares are fixed before booking.",
+      "status": "verified",
+      "source_url": "https://grab.com/global/airport-rides/noi-bai-international-airport",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Grab airport page for Noi Bai, read 2026-10-17: 'International Arrival Terminal - Pillar 8 - Noi Bai International Airport', 'International Arrival Terminal - Pillar 11', 'GrabBike Pickup/Drop-off Point - International Terminal'; in-app directions; upfront fixed fares except GrabTaxi.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17"
+    },
+    "rail_hanoi_hcmc": {
+      "fact_key": "transport.rail_hanoi_hcmc",
+      "value": "The Hanoi to Ho Chi Minh City train takes about 33 to 34 hours end to end (SE1 about 33 h, SE3 about 34 h), with daily departures. Classes are air-conditioned soft seat, six-berth hard sleeper and four-berth soft sleeper, plus a few two-berth VIP compartments on SE1/SE2. Upper berths are cheaper than lower. Booking opens about 60 days ahead, sometimes over 90 for the full route; dsvn.vn is reported to accept overseas cards but may need a Vietnamese phone number, with Baolau or 12Go as the fallback.",
+      "status": "verified",
+      "source_url": "https://www.seat61.com/vietnam.htm",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "The Man in Seat 61, Vietnam page last updated 10 June 2026: SE1 Hanoi 20:50 to Saigon 05:45 two days later (~33 h); SE3 19:20 to 05:15 (~34 h); classes listed; 'Upper berths are cheaper'; booking 'opens 60 days before departure, and sometimes over 90 days'; overseas cards on dsvn.vn 'should now' be accepted. Vietnam Railways' own site (dsvn.vn) is a JavaScript app and could not be read directly.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "note": "Moon 2015 and LP 2016 gave 31–36 h; the range still holds."
+    },
+    "tet_trains": {
+      "fact_key": "transport.tet_trains",
+      "value": "Trains do not stop running over Tet. For Tet 2026 Vietnam Railways ran 906 passenger trains across a plan period of 3 February to 8 March, and added short-distance services during the official holiday week rather than cutting them. The constraint is seats, not schedules: southern-route tickets for the peak days before and after Tet sold out weeks ahead. A 2016 guidebook's claim of a nine-day train blackout no longer describes reality.",
+      "status": "verified",
+      "source_url": "https://vietnamnews.vn/society/1764361/railway-capacity-up-7-for-tet-2026-with-906-trains.html",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Viet Nam News, 23 Jan 2026: 'Viet Nam's railway sector will operate 906 passenger trains during the upcoming Lunar New Year (Tet) holiday in 2026'; plan 'from February 3 to March 8'; 'during the official Lunar New Year holiday, from February 14 to 22, additional short-distance trains will be arranged'; southern-route peak tickets 'from February 7 to 14' sold out. Only a handful of Hanoi–Hai Phong local trains were suspended on New Year's Eve and Day 1 (Bao Hai Phong).",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-01-17"
+    },
+    "hanoi_halong_drive": {
+      "fact_key": "transport.hanoi_halong_drive",
+      "value": "Hanoi to Ha Long city by road is about 2.5 hours since the Ha Long–Hai Phong expressway and Bach Dang bridge opened on 1 September 2018, cutting the distance from 180 km to 130 km. Guidebooks printed before 2019 still say four hours.",
+      "status": "verified",
+      "source_url": "https://hanoitimes.vn/ha-long-hai-phong-expressway-officially-opens-to-traffic-470.html",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Hanoi Times, Sept 2018: expressway 'shortens the time to travel from Hanoi to Ha Long from 3.5 hours to 2.5 hours'; Bizhub/Viet Nam News: cuts Hanoi–Ha Long from 180 km to 130 km, opened 1 Sept 2018. VTV quoted a government projection of 1.5 hours; the 2.5-hour figure is the conservative one. Vietnam News Agency (3 Feb 2019): the Ha Long–Van Don extension put Hanoi–Van Don at 2.5 hours 'from four'.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17"
+    },
+    "halong_boat_suspensions": {
+      "fact_key": "transport.halong_boat_suspensions",
+      "value": "Ha Long Bay cruises are grounded by the provincial waterways port authority whenever a storm or dangerous weather is forecast: it stops issuing departure permits to every tourist vessel, day boats and overnight cruises alike, until conditions clear. Operators then cancel or reschedule. Typhoon season on this coast runs roughly July to November, and winter fog and northeast monsoon winds can also hold boats in port.",
+      "status": "verified",
+      "source_url": "https://voh.com.vn/xa-hoi/tam-dung-toan-bo-tau-du-lich-tren-vinh-ha-long-do-bao-so-3-606092.html",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "VOH, 20 Jul 2025: 'Cang vu Duong thuy noi dia va Dang kiem phuong tien thuy tinh Quang Ninh' issued an urgent dispatch halting departure permits for all tourist passenger vessels on Ha Long Bay and inter-island routes ahead of Storm No. 3. Earlier Bao Van Hoa reports document the same mechanism for other storms and for bad weather at Bai Chay. The seasonal framing (typhoon Jul–Nov; winter fog) is from the climate layer (facts.json climate regimes via geo.ts), not this source.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17"
+    },
+    "us_nonstop_routes": {
+      "fact_key": "transport.us_nonstop_routes",
+      "value": "The only nonstop service between the United States and Vietnam is Vietnam Airlines' San Francisco to Ho Chi Minh City flight (VN99 westbound, VN98 eastbound), four times a week on an Airbus A350-900, about 16 hours westbound and under 14 hours eastbound, with schedules published through at least late 2026. Every other routing connects in Northeast Asia. Vietnam Airlines sells Los Angeles fares, but no nonstop LAX service was confirmed.",
+      "status": "verified",
+      "source_url": "https://info.flightmapper.net/route/YY_SFO_SGN",
+      "source_kind": "secondary",
+      "scope": "Travellers between the United States and Vietnam",
+      "support": "Flightmapper SFO–SGN route page, read 2026-10-17: Vietnam Airlines VN 99, Airbus A350-900, 4 weekly (Wed, Thu, Sat, Sun), 16:30 block, schedule entries valid through 2026-10-22 and 'Effective from 2026-10-24'. Launch 29 Nov 2021 per Hanoi Times. Vietnam Airlines' own LAX page lists SGN–LAX and HAN–LAX fares without a routing description, so nonstop LAX is unverified.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-01-17"
+    },
+    "international_airports": {
+      "fact_key": "transport.international_airports",
+      "value": "Vietnam has eleven airports handling scheduled international flights: Noi Bai (HAN, Hanoi), Tan Son Nhat (SGN, Ho Chi Minh City), Da Nang (DAD), Cam Ranh (CXR, for Nha Trang), Phu Quoc (PQC), Phu Bai (HUI, Hue), Van Don (VDO, Quang Ninh), Cat Bi (HPH, Hai Phong), Can Tho (VCA), Vinh (VII) and Phu Cat (UIH, Quy Nhon). Lien Khuong (DLI, Da Lat) is designated international but mainly domestic, and Long Thanh near HCMC is under construction. For an American itinerary the practical gateways remain HAN, SGN and DAD, with CXR and PQC useful for regional connections.",
+      "status": "verified",
+      "source_url": "https://www.vietjetair.com/en/pages/travel-guides-1665635013747/list-of-domestic-and-international-airports-in-vietnam-1704855641333",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Vietjet Air travel guide 'List of Domestic and International Airports in Vietnam', read 2026-10-17: '12 international airports' listed as HAN, SGN, PQC, DAD, CXR, HUI, VDO, VCA, VII, UIH, HPH plus Lien Khuong '(proposed)' and Long Thanh '(under construction)'. No CAAV list was found; the government master plan (baochinhphu, 2023) targets 14 international airports by 2030.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "note": "Airline page, not a CAAV register; the count moves as designations change."
+    },
+    "cambodia_evisa_ports": {
+      "fact_key": "transport.cambodia_evisa_ports",
+      "value": "Crossing from Vietnam into Cambodia on a Cambodian e-visa works only at Bavet (the Moc Bai road crossing on the HCMC to Phnom Penh bus route). The other Vietnam-border checkpoints — Kaam Samnor (the Mekong river crossing from Chau Doc), Phnom Den, Prek Chak (to Kampot/Kep from Ha Tien), Trapeang Phlong, Trapeang Sre, O Yadav and Banteay Chakrei — do not accept e-visa entry, though any of them can be used to exit. For those crossings a visa on arrival or an embassy visa is needed; check the current fee on evisa.gov.kh.",
+      "status": "verified",
+      "source_url": "https://recberlin.mfaic.gov.kh/en-us/border-crossings",
+      "source_kind": "primary",
+      "scope": "Travellers entering Cambodia overland from Vietnam",
+      "support": "Cambodian Ministry of Foreign Affairs and International Cooperation border-crossing table (hosted on the Royal Embassy of Cambodia in Berlin site, © 2026 MFAIC), read 2026-10-17: Cambodia–Vietnam checkpoints — Bavet (Svay Rieng) e-Visa entry Yes / exit Yes; Kaam Samnor, Phnom Den, Trapeang Phlong, Trapeang Sre, Oyadav, Prek Chak, Banteay Chakrei all entry No / exit Yes; 'you may exit Cambodia through any official exit point, regardless of your visa type'. E-visa fee not printed: secondary reports conflict (USD 30 all-in vs 30 + 6).",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "risk": "high"
+    },
+    "laos_evisa_ports": {
+      "fact_key": "transport.laos_evisa_ports",
+      "value": "The Lao e-visa cannot be used at any Vietnam–Laos land border. Its accepted entry points are Vientiane, Luang Prabang and Pakse airports, the Lao–Thai Friendship Bridges I, II and IV, the Boten checkpoint and railway station on the China border, and Khamsavath railway station. Anyone crossing overland from Vietnam needs a visa on arrival or an embassy visa instead; processing of the e-visa itself is about three working days.",
+      "status": "verified",
+      "source_url": "https://laoevisa.gov.la/info",
+      "source_kind": "primary",
+      "scope": "Travellers entering Laos overland from Vietnam",
+      "support": "Lao Ministry of Foreign Affairs e-visa portal, Information page, read 2026-10-17: 'eVisa can be used to enter through these following designated ports: 1. Wattay International Airport ... 9. Khamsavath Railway Station' — nine ports, none on the Vietnam border; 'The processing time of the eVisa is usually 03 working days'. Lao visa-on-arrival rules at Vietnam border gates were not verified here.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "risk": "high"
     }
   },
   "customs": {
@@ -495,5 +732,142 @@
       "review_after": "2027-04-12",
       "risk": "high"
     }
+  },
+  "money": {
+    "banknotes": {
+      "fact_key": "money.banknotes",
+      "value": "Twelve banknote denominations are legal tender: six polymer notes of 500,000, 200,000, 100,000, 50,000, 20,000 and 10,000 dong, and six older cotton-paper notes of 5,000, 2,000, 1,000, 500, 200 and 100 dong. Five coin denominations exist but are rarely seen. The 500,000 and 20,000 polymer notes are both blue-toned and are the classic mix-up; the 100,000 and 10,000 are both greenish. There is no 1,000,000 dong note, whatever a scammer tells you.",
+      "status": "verified",
+      "source_url": "https://sbv.gov.vn/en/money-issuance",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Bank of Vietnam, Money Issuance page, read 2026-10-17: polymer notes 500,000 (issued 17/12/2003), 200,000 (30/8/2006), 100,000 (1/9/2004), 50,000 (17/12/2003), 20,000 (17/5/2006), 10,000 (2006); cotton-paper notes 5,000, 2,000, 1,000, 500, 200, 100; coins 5,000, 2,000, 1,000, 500, 200. Tuoi Tre News, 24 Jan 2026, reporting the SBV's 23 Jan 2026 statement: 12 note denominations and five coin denominations all legal tender; 'the SBV also reiterated that it has no plan to issue a VND1 million banknote'. Colour-confusion note is editorial, not from the source.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17"
+    },
+    "legal_tender_dong_only": {
+      "fact_key": "money.legal_tender_dong_only",
+      "value": "Inside Vietnam, payments, price lists, quotes and advertising must be in Vietnamese dong; pricing or settling in US dollars is restricted by law except in listed cases such as duty-free shops, services inside the isolated zones of international airports and border gates, fees charged by state agencies at border gates, and foreign-language promotional listings by airlines, hotels and tour businesses that still show the dong price. A business that insists on dollars is the exception, not the rule, and you can always pay in dong.",
+      "status": "verified",
+      "source_url": "https://english.luatvietnam.vn/circular-no-32-2013-tt-nhnn-dated-december-26th-2013-of-the-state-bank-of-vietnam-on-guiding-the-implementation-of-regulations-on-restricting-the-use-83764-doc1.html",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "State Bank of Vietnam Circular 32/2013/TT-NHNN (effective 10 Feb 2014), implementing Article 22 of the Ordinance on Foreign Exchange as amended 2013. Article 3: in Vietnamese territory, except the Article 4 cases, 'all transactions, payments, listings, advertisements, price quotations, setting and writing of prices' may not be in foreign exchange. Article 4 exceptions read: clause 1 state agencies at border gates; clause 9 duty-free shops; clause 10 services in isolation areas at international border gates and bonded warehouses; clause 13 air transport, hotel and tourism businesses may list dong prices with foreign-currency equivalents on foreign-language websites and publications, menus and service price lists excluded; clause 16(b) residents selling to non-residents may quote and receive foreign currency. Guidebooks from 2015–16 saying USD is 'widely accepted' describe tolerated practice, not the law.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17"
+    }
+  },
+  "calendar": {
+    "public_holidays": {
+      "fact_key": "calendar.public_holidays",
+      "value": "Vietnam's statutory public holidays total eleven days: New Year's Day (1 Jan), Lunar New Year (five days), Hung Kings' Commemoration Day (10th day of the 3rd lunar month), Victory Day (30 April), International Labour Day (1 May) and National Day (2 September plus one adjacent day). The Prime Minister fixes the exact Tet and National Day dates each year, and holidays falling on a weekend are taken on the next working day, which is why the real Tet break is usually seven to nine days.",
+      "status": "verified",
+      "source_url": "https://vietanlaw.com/vietnam-labour-code-2019/",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Labor Code No. 45/2019/QH14 (English translation reproduced by Viet An Law), Article 112 clause 1: 'Gregorian Calendar New Year Holiday: 01 day', 'Lunar New Year Holidays: 05 days', 'Victory Day: 01 day (the 30th of April)', 'International Labor Day: 01 day (the 1st of May)', 'National Day: 02 days (the 2nd of September ... and the previous or next day)', 'Hung Kings Commemoration Day: 01 day (the 10th of the third month of the Lunar calendar)'; clause 3: 'The Prime Minister shall decide the specific public holidays' for Tet and National Day each year. Weekend substitution per Article 111(3) as summarised by lawnet.vn. The official English text on LuatVietnam is paywalled beyond Article 77, hence secondary.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17"
+    },
+    "tet_dates": {
+      "fact_key": "calendar.tet_dates",
+      "value": {
+        "2027": "2027-02-06",
+        "2028": "2028-01-26",
+        "2029": "2029-02-13"
+      },
+      "status": "verified",
+      "source_url": "https://www.hko.gov.hk/en/gts/time/calendar/text/files/T2027e.txt",
+      "source_kind": "primary",
+      "scope": "Lunar New Year's Day (first day of the first lunar month) in each year; Vietnam's Tet falls on the same day as the Chinese lunar new year except in rare timezone-edge years",
+      "support": "Hong Kong Observatory Gregorian–Lunar calendar conversion tables (text format), read 2026-10-17: '2027/2/6 1st Lunar Month Saturday' (T2027e.txt); '2028/1/26 1st Lunar Month Wednesday' (T2028e.txt); '2029/2/13 1st Lunar Month Tuesday' (T2029e.txt). The 2027 date is confirmed by Vietnam's Ministry of Home Affairs holiday notice (see calendar.tet_2027_holiday). HKO computes for UTC+8; Vietnam uses UTC+7, which can shift the lunar date in rare years, none of which are 2027–2029.",
+      "checked_at": "2026-10-17",
+      "review_after": "2029-12-31"
+    },
+    "tet_2027_holiday": {
+      "fact_key": "calendar.tet_2027_holiday",
+      "value": "The official Tet 2027 holiday for Vietnam's public sector runs seven consecutive days, Thursday 4 February to Wednesday 10 February 2027 (the 28th of the 12th lunar month to the 5th of the 1st), per the Ministry of Home Affairs notice of 9 October 2026. Expect government offices, banks and many businesses shut across that week, with transport at its most crowded in the days either side.",
+      "status": "verified",
+      "source_url": "https://hatinh.gov.vn/vi/bai-viet/tet-nguyen-dan-2027-cong-chuc-vien-chuc-duoc-nghi-7-ngay-lien-tuc",
+      "source_kind": "primary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "Ha Tinh provincial government portal, 9 Oct 2026, reproducing Ministry of Home Affairs Notice No. 11483/TB-BNV of 9 Oct 2026: 'ky nghi Tet Nguyen dan 2027 keo dai 7 ngay lien tuc, tu thu Nam (4/2/2027, tuc 28 thang Chap nam Binh Ngo) den het thu Tu (10/2/2027, tuc mung 5 thang Gieng nam Dinh Mui)'. Applies to cadres, civil servants and public employees; private employers follow the five statutory days plus weekend substitutions. The Ministry's own notice page was not opened.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-03-01"
+    }
+  },
+  "services": {
+    "medical_facilities_hanoi": {
+      "fact_key": "services.medical_facilities_hanoi",
+      "value": "A government-published list of medical facilities in Hanoi names, among others, Family Medical Practice Hanoi, International SOS Hanoi and Raffles Medical Clinic as English-speaking clinics with emergency medicine, Hanoi French Hospital and Vinmec Times City as English-capable private hospitals, and Bach Mai, Viet Duc and Army 108 as major public hospitals with some English. The US Embassy's own doctors list page has been taken down; this UK list (2022) is the most recent government list found.",
+      "status": "verified",
+      "source_url": "https://www.gov.uk/government/publications/list-of-medical-facilities-in-vietnam/list-of-medical-facilities-in-hanoi-and-northern-provinces",
+      "source_kind": "secondary",
+      "scope": "English-speaking travellers needing medical care in Hanoi",
+      "support": "UK FCDO 'List of medical facilities in Hanoi and northern provinces', last updated 24 June 2022, read 2026-10-17: 13 facilities including Family Medical Practice Hanoi (clinic, English yes, emergency medicine), International SOS Hanoi (clinic, English yes), Raffles Medical Clinic (clinic, English yes), Hanoi French Hospital (hospital, English yes), Vinmec Times City (hospital, some English), Bach Mai, Viet Duc, Army 108 (public). FCDO disclaimer: providers 'for information only', none 'endorsed or recommended'. No payment-terms statement on the page. The US Embassy URL vn.usembassy.gov/u-s-citizen-services/doctors/ returned 404 on 2026-10-17.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-04-17",
+      "note": "Payment-up-front practice and the HCMC/Da Nang lists remain unverified; see _open_questions."
+    },
+    "ho_chi_minh_mausoleum_2026": {
+      "fact_key": "sights.ho_chi_minh_mausoleum_2026",
+      "value": "The Ho Chi Minh Mausoleum closes for about two months every year for maintenance of the body and building. In 2026 the closure runs 4 September to 2 November, reopening 3 November 2026; in 2024 and 2025 it closed from early June to the end of July or mid-August. Anyone planning Hanoi around the mausoleum should check the current year's closure window, and remember it opens mornings only.",
+      "status": "verified",
+      "source_url": "https://www.vietnamplus.vn/tu-bo-dinh-ky-lang-chu-tich-ho-chi-minh-tu-49-den-211-post1133954.vnp",
+      "source_kind": "secondary",
+      "scope": "Visitors to the Ho Chi Minh Mausoleum, Hanoi",
+      "support": "VietnamPlus (Vietnam News Agency), 3 Sep 2026, citing Official Dispatch 1909/CV-BTL of 23 Apr 2026 from the Mausoleum Command: 'tu bo dinh ky tu ngay 4/9/2026 den ngay 2/11/2026', reopening 'tu ngay 3/11/2026'. Prior closures: 10 Jun–12 Aug 2024 and 2 Jun–31 Jul 2025 (Bao Lao Cai / Bao Quoc Te). Regular hours (mornings, closed Monday and Friday) appear on thuvienphapluat.vn behind a bot wall and are not asserted beyond 'mornings only'. The official site bqllang.gov.vn did not resolve.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-03-01"
+    }
+  },
+  "daily": {
+    "electricity": {
+      "fact_key": "daily.electricity",
+      "value": "Vietnam's mains supply is 220–230 V at 50 Hz, with sockets that take flat two-pin (type A/B) and round two-pin (type C) plugs; most hotel sockets are the hybrid kind that accept both. A US traveller needs no plug adapter for flat two-pin devices but does need to confirm each device is dual-voltage (100–240 V), because 120 V-only appliances such as hair tools will burn out without a converter.",
+      "status": "verified",
+      "source_url": "https://www.worldstandards.eu/electricity/plug-voltage-by-country/",
+      "source_kind": "secondary",
+      "scope": "All travellers to Vietnam regardless of nationality",
+      "support": "WorldStandards plug/voltage by country table, last updated 7 September 2025, Vietnam row: plug types 'A / B / C', voltage '230 V', frequency '50 Hz'. The IEC retired its World Plugs guide in 2026, so no standards-body page exists; Vietnamese sources commonly state 220 V. The dual-voltage advice is editorial.",
+      "checked_at": "2026-10-17",
+      "review_after": "2028-10-17"
+    },
+    "climate_normals_source": {
+      "fact_key": "daily.climate_normals_source",
+      "value": "The authoritative Vietnamese source for station climate characteristics is the National Center for Hydro-Meteorological Forecasting (Trung tam Du bao khi tuong thuy van quoc gia), which publishes climate profiles for Hanoi, Son La, Thai Nguyen, Phu Lien (Hai Phong), Vinh, Nha Trang, Pleiku and Ho Chi Minh City plus monthly and seasonal outlooks. Our month-by-region tables (geo.ts) should be checked against these station profiles rather than guidebook charts.",
+      "status": "verified",
+      "source_url": "https://nchmf.gov.vn/",
+      "source_kind": "primary",
+      "scope": "Editorial reference for the climate layer",
+      "support": "nchmf.gov.vn, read 2026-10-17: footer 'Trung tam Du bao khi tuong thuy van quoc gia'; Climate (Khi hau) menu with monthly, seasonal and climate forecasts; 'Dac diem khi hau khu vuc' station pages for Ha Noi, Son La, Thai Nguyen, Phu Lien, Vinh, Nha Trang, Pleiku, TP Ho Chi Minh. The English sub-site path returned 404.",
+      "checked_at": "2026-10-17",
+      "review_after": "2027-10-17"
+    }
+  },
+  "_open_questions": {
+    "_note": "Items needing a human or a better source; max 5 by rule. Each stayed OUT of the fact layer.",
+    "items": [
+      {
+        "q": "Hospital payment up front / direct insurance billing",
+        "why": "No government page states it. The US Embassy doctors page is gone (404) and the UK FCDO list is silent on payment. Guidebooks (DK p274, Moon p508) say cash or deposit first. Structural rule only until a clinic's own terms page is cited."
+      },
+      {
+        "q": "Tap water",
+        "why": "CDC's Vietnam page does not say 'do not drink tap water'; it gives general food-and-water guidance. Keep the long-standing editorial line (bottled or filtered, ice in reputable places fine) without a fact span."
+      },
+      {
+        "q": "Mobile carriers and tourist eSIM terms",
+        "why": "No official Viettel/VinaPhone/MobiFone page was found; only resellers. Decree 163/2024 on subscriber identification (passport registration) was not read in full. No key."
+      },
+      {
+        "q": "US Embassy Hanoi street address",
+        "why": "The embassy site's location pages return 404 and the State Dept country page could not be fetched this session. The existing consular_access key stands; the address needs a fresh read before any article prints it."
+      },
+      {
+        "q": "Cambodia e-visa fee and bus 152/T2 at Tan Son Nhat",
+        "why": "Fee reports conflict (USD 30 all-in vs 30+6); evisa.gov.kh renders as a JavaScript app with no readable text. Which public bus serves Terminal 2 after route 109 moved to T3 (Apr 2025) is unverified."
+      }
+    ]
   }
 }

@@ -174,3 +174,47 @@ Keys Moon quantifies or asserts that neither facts.json nor the DK/LP wishlist r
 | bus.dangerous_routes | Hue→Hanoi and the Sapa road (p493) | National Traffic Safety Committee accident data | P3 |
 | phone.area_codes_2017 | all book numbers use pre-2017 codes (p511) | MIC renumbering decision 2017 | P3 |
 | dogmeat.city_bans | government ban (p500) | Hanoi 2018 directive; HCMC policy | P3 |
+
+# Resolution pass — 2026-10-17 (facts build from the P1 rows)
+
+Every P1 row above was taken to its named primary source in this session. Result per row (key = now in `facts.json`; open = listed in `facts.json._open_questions`; structural = no key by design, prose rule only).
+
+| wishlist row | outcome | facts.json key / note |
+|---|---|---|
+| money.legal_tender_and_usd_pricing | key (primary: SBV Circular 32/2013 Art 3–4) | money.legal_tender_dong_only |
+| money.atm_structural_rule | structural | corrections #1 stands; still no bank fee schedule found |
+| money.note_denominations_in_circulation | key (primary: SBV) | money.banknotes |
+| calendar.public_holidays_current_year | key (secondary: Labour Code Art 112 translation) | calendar.public_holidays |
+| calendar.tet_dates_next_3_years | key (primary: HKO conversion tables) | calendar.tet_dates |
+| calendar.tet_closure_duration_structural | key (primary: MoHA Notice 11483/TB-BNV via Ha Tinh portal) | calendar.tet_2027_holiday |
+| climate.month_by_region_normals | key (primary: NCHMF) | daily.climate_normals_source |
+| transport.international_airports_list | key (secondary: Vietjet list; no CAAV register found) | transport.international_airports |
+| transport.airport_to_city_distance_and_modes / airport_bus_routes_current / han_bus_86 | keys (secondary) | transport.airport_bus_hcmc_109, transport.airport_bus_hanoi_86 |
+| airport.grab_pickup_zones_han_sgn | keys (primary: grab.com) | transport.grab_pickup_sgn, transport.grab_pickup_han |
+| transport.us_nonstop_routes | key (secondary: Flightmapper) | transport.us_nonstop_routes |
+| transport.rail_hcmc_hanoi_duration_and_classes / train_classes_and_berth_pricing | key (secondary: seat61) | transport.rail_hanoi_hcmc |
+| transport.tet_train_suspension_days | key (secondary) — LP's nine-day blackout is obsolete | transport.tet_trains |
+| transport.car_with_driver_requirement | key (primary: Law 36 Art 9) | transport.no_licence_prohibited_act |
+| transport.metro_lines_open | keys (Hanoi primary operator; HCMC secondary) | transport.metro_hanoi, transport.metro_hcmc_line1, transport.metro_hcmc_fares |
+| transport.ride_hailing_legal_status | key (secondary: Decree 10/2020 via VIR) | transport.ride_hailing_legal |
+| transport.right_turn_on_red | key (primary: Law 36 Art 11) — Moon wrong, LP right | transport.red_light_no_turn |
+| transport.helmet_passenger_required | key (primary: Law 36 Art 33) | transport.helmets_all_riders |
+| transport.cambodia_laos_visa_on_arrival_rules | keys (primary: MFAIC table; Lao MoFA portal) | transport.cambodia_evisa_ports, transport.laos_evisa_ports |
+| halong.hanoi_transfer_time | key (secondary) | transport.hanoi_halong_drive |
+| halong.cruise_cancellation_season | key (secondary) | transport.halong_boat_suspensions |
+| documents.hotel_passport_practice / hotel.passport_hold_practice | key (primary: Law 47/2014 Art 33 + US Embassy) | documents.hotel_registration_law |
+| visa.phu_quoc_exemption_current | already verified | visa.phu_quoc_exception |
+| health.malaria_province_list | refreshed (primary: CDC, Binh Duong added) | safety_health.malaria |
+| health.international_clinics_list / private_clinics_list | key (secondary: UK FCDO list; US Embassy page 404) | services.medical_facilities_hanoi |
+| health.hospital_payment_up_front | open | _open_questions #1 |
+| health.tap_water | open | _open_questions #2 |
+| connectivity.carriers_and_esim / mobile_carriers_and_tourist_sims | open | _open_questions #3 |
+| embassy.us_hanoi_address_current | open | _open_questions #4 |
+| daily.electricity_plugs | key (secondary: WorldStandards; IEC guide retired) | daily.electricity |
+| daily.tipping_norms | structural | no primary exists; prose rule |
+| sights.ho_chi_minh_mausoleum_hours_and_closure | key (secondary: VNA, Dispatch 1909/CV-BTL) | sights.ho_chi_minh_mausoleum_2026 |
+| airport.han_official_taxi_flat_rate | structural | no published tariff found; prose rule (official stand, posted rate, reconfirm) |
+| sapa.harvest_window | structural | observation grade; Sep–Oct per Moon and growers' calendars |
+| calendar.tet_date_window | covered | calendar.tet_dates |
+
+Net: 28 new keys, 1 refreshed, 4 open, 4 structural. facts.json now 68 records, validator 0 errors.
