@@ -58,6 +58,14 @@
       "wrong": "Stating a consequence, fine or enforcement risk for an unregistered overnight stay in Vietnam.",
       "right": "The registration duty is primary-verified (US Embassy: all visitors must register their overnight address with local police) but NO official statement of the consequence for a short-stay tourist was found. State the duty, note hotels do it automatically and that informal stays are the host's responsibility, and stop. Invent no threat.",
       "applies_to": "accommodation and safety articles"
+    },
+    {
+      "id": 8,
+      "date": "2026-10-17",
+      "scope": "fact",
+      "wrong": "Stating or implying a nonstop flight between Los Angeles and Vietnam, or 'two nonstop routes' from the United States.",
+      "right": "The only nonstop between the United States and Vietnam is Vietnam Airlines San Francisco–Ho Chi Minh City (about four weekly, A350). LAX–SGN is sold by Vietnam Airlines and United but is a one-stop (Flightmapper LAX–SGN/SGN–LAX route pages, 2026-10-17; vietnamairlines.com LAX page, 2026-10-13). Four live articles carried the LAX claim and were corrected in the DB on 2026-10-13 (site repo scripts/fix-lax-nonstop.mjs); the local content/batch-*/import-batch-*.json files still hold the old text and are NOT the corpus of record — the published DB is.",
+      "applies_to": "flights, routing and itinerary articles; facts.json transport.us_nonstop_routes"
     }
   ]
 }

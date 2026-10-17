@@ -5,52 +5,124 @@
     {
       "id": "north-south-routing",
       "name": "Flight, train, or a mix for Hanoi-to-HCMC, and in which order",
-      "one_liner": "The country is 1,650km long and nobody has time to see it all; the wrong direction or mode burns a full travel day."
+      "one_liner": "The country is 1,650km long and nobody has time to see it all; the wrong direction or mode burns a full travel day.",
+      "forks": [
+        1,
+        35,
+        40,
+        41,
+        63,
+        66
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     },
     {
       "id": "halong-bay-cruise-choice",
       "name": "Day trip vs. overnight cruise, and which operator",
-      "one_liner": "The boat you pick is also a safety decision, not just a budget one — real incidents have happened on the cheapest operators."
+      "one_liner": "The boat you pick is also a safety decision, not just a budget one — real incidents have happened on the cheapest operators.",
+      "forks": [
+        9,
+        59,
+        62,
+        68
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     },
     {
       "id": "visa-choice",
       "name": "E-visa, visa exemption, or visa-on-arrival, and for how many days",
-      "one_liner": "Getting this wrong can mean being turned away at the gate, not just a paperwork headache."
+      "one_liner": "Getting this wrong can mean being turned away at the gate, not just a paperwork headache.",
+      "forks": [
+        30,
+        53
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     },
     {
       "id": "motorbike-or-driver",
       "name": "Rent and ride yourself, hire a driver, or skip it",
-      "one_liner": "Vietnam's roads are genuinely dangerous for a first-timer, but also central to the classic trip (the Hai Van Pass, the countryside)."
+      "one_liner": "Vietnam's roads are genuinely dangerous for a first-timer, but also central to the classic trip (the Hai Van Pass, the countryside).",
+      "forks": [
+        29,
+        39,
+        49,
+        72,
+        73
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     },
     {
       "id": "long-leg-transport",
       "name": "Sleeper train, sleeper bus, or a short flight for the long legs",
-      "one_liner": "Comfort, cost, and real scam/quality risk on the cheapest sleeper buses."
+      "one_liner": "Comfort, cost, and real scam/quality risk on the cheapest sleeper buses.",
+      "forks": [
+        3,
+        38,
+        40,
+        63
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     },
     {
       "id": "mekong-day-vs-overnight",
       "name": "A rushed day trip from Saigon vs. a multi-day homestay",
-      "one_liner": "The Mekong Delta is one of the most commonly regretted bookings in the country when done as a rushed day trip."
+      "one_liner": "The Mekong Delta is one of the most commonly regretted bookings in the country when done as a rushed day trip.",
+      "forks": [
+        7,
+        11,
+        57,
+        64,
+        65
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     },
     {
       "id": "cash-vs-card",
       "name": "How much cash to carry, and where cards quietly stop working",
-      "one_liner": "Still a cash-heavy country outside the big cities; the wrong assumption leaves you stuck."
+      "one_liner": "Still a cash-heavy country outside the big cities; the wrong assumption leaves you stuck.",
+      "forks": [
+        24,
+        25,
+        26,
+        55,
+        69
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     },
     {
       "id": "hoian-base-choice",
       "name": "Hoi An Ancient Town, An Bang Beach, or Da Nang city",
-      "one_liner": "Three completely different trips wearing the same 'Hoi An/Da Nang' label."
+      "one_liner": "Three completely different trips wearing the same 'Hoi An/Da Nang' label.",
+      "forks": [
+        5,
+        8,
+        36,
+        47,
+        60
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     },
     {
       "id": "sapa-trek-choice",
       "name": "Independent trekking vs. a guided homestay tour in Sapa",
-      "one_liner": "A real ethical and financial layer: unlicensed guides, high-pressure sales, and treks that oversell the experience."
+      "one_liner": "A real ethical and financial layer: unlicensed guides, high-pressure sales, and treks that oversell the experience.",
+      "forks": [
+        10,
+        45,
+        46
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     },
     {
       "id": "tet-timing",
       "name": "Traveling during Tet (Lunar New Year) vs. timing around it",
-      "one_liner": "Much of the country closes for up to a week and prices spike; not knowing this can wreck a trip's logistics."
+      "one_liner": "Much of the country closes for up to a week and prices spike; not knowing this can wreck a trip's logistics.",
+      "forks": [
+        18,
+        44,
+        67
+      ],
+      "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
     }
   ],
   "articles": [
@@ -1160,5 +1232,304 @@
         "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
       }
     }
-  ]
+  ],
+  "candidates": [
+    {
+      "title": "Ha Giang Loop: Ride It Yourself, Ride Pillion, or Go by Car",
+      "slug": "ha-giang-loop-ride-pillion-or-car",
+      "category_slug": "nature-trekking",
+      "swamp": "motorbike-or-driver",
+      "handoff": "turn",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Options comparison (R2 survives: ways of doing one thing). No licence → pillion/car is the publishable form. Volume unknown.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "LP p31",
+          "Moon absent",
+          "decision-gaps #39"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Phong Nha Caves: Which Tour Fits Your Trip and Your Budget",
+      "slug": "phong-nha-which-cave-tour",
+      "category_slug": "nature-trekking",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "R3 flag: Oxalis is the canonical operator for the big caves — INVESTIGATE whether its site answers the question or only sells. Three books flag Phong Nha as the biggest coverage hole.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "LP p42",
+          "Moon p145, p170",
+          "decision-gaps #37, #61"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "The Mekong Delta Beyond Can Tho: Vinh Long, Sa Dec, Tram Chim and Chau Doc",
+      "slug": "mekong-delta-beyond-can-tho",
+      "category_slug": "mekong-delta",
+      "swamp": "mekong-day-vs-overnight",
+      "handoff": "seed",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Only Moon maps this axis; no site article covers it. Volume unknown.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p19–21, p391",
+          "decision-gaps #64"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "The DMZ from Hue: What Each Stop Actually Shows You",
+      "slug": "dmz-from-hue-what-each-stop-shows",
+      "category_slug": "hue",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "War-history intent exists (war-remnants article INVESTIGATE); this is the northern half nobody covers. Volume unknown.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p145, p170",
+          "coverage-gaps A3"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Funeral Tents, Altars and Ghost Money: What You Are Seeing on a Vietnamese Street",
+      "slug": "funeral-tents-altars-ghost-money",
+      "category_slug": "etiquette-and-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Explanatory, not answer-complete; likely low volume but high dwell and share value. Volume unknown.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p488–489"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Why Every Vietnamese City Has the Same Street Names",
+      "slug": "same-street-names-every-city",
+      "category_slug": "temples-history-culture",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "R4 borderline (a 'why' with a long answer, not a settled one-liner) — open the SERP for an Overview before writing.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p480–485",
+          "coverage-gaps A3"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Counterfeit Spirits in Vietnam: How to Drink Safely",
+      "slug": "counterfeit-spirits-drinking-safely",
+      "category_slug": "safety-and-health",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Safety topic absent from the corpus; procedure not place. Volume unknown.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p506–507"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Eating in Vietnam with a Peanut or Shellfish Allergy",
+      "slug": "peanut-shellfish-allergy-vietnam",
+      "category_slug": "vegetarian-dietary-needs",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Procedure/condition intent; no canonical owner. Volume unknown.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p506"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Vietnam with Limited Mobility: Where It Works and Where It Does Not",
+      "slug": "vietnam-limited-mobility",
+      "category_slug": "safety-and-health",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "First substantive source is Moon + LP's car-with-driver verdict. Volume unknown.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p504–505",
+          "LP p495"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Dog, Balut and Field Rat: The Menu Words to Know Before You Order",
+      "slug": "exotic-menu-words-to-know",
+      "category_slug": "dishes-what-to-order",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Vocabulary/decision article; not answer-complete. Volume unknown.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p500",
+          "decision-gaps #33"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Quy Nhon and Phan Rang: The Quiet Tier Below Nha Trang and Mui Ne",
+      "slug": "quy-nhon-phan-rang-quiet-coast",
+      "category_slug": "beaches-islands",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "R2 risk (reads as place-vs-place) — reframe as 'who should skip the resorts' before writing; INVESTIGATE.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p16, p227",
+          "LP p28",
+          "decision-gaps #13"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Two Days from Hanoi: Boat on Ha Long or Rowboat in Ninh Binh",
+      "slug": "two-days-from-hanoi-halong-or-ninh-binh",
+      "category_slug": "halong-bay-sapa",
+      "swamp": "halong-bay-cruise-choice",
+      "handoff": "turn",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Proposed new swamp halong-or-ninh-binh; R2 risk unless framed as a time decision; INVESTIGATE.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p97",
+          "decision-gaps #59, #62"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "How Many Days Hue Deserves",
+      "slug": "how-many-days-for-hue",
+      "category_slug": "hue",
+      "swamp": "hoian-base-choice",
+      "handoff": "turn",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "R4 'how many' but a contingent trade-off (three books disagree 0/1/2 days); open the SERP for an Overview; INVESTIGATE.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "DK p12",
+          "LP p29",
+          "Moon p15",
+          "decision-gaps #36, #60"
+        ],
+        "filed": "2026-10-17"
+      }
+    },
+    {
+      "title": "Returning to Vietnam as a Vietnamese American: Papers, Family and the First Trip Back",
+      "slug": "returning-to-vietnam-vietnamese-american",
+      "category_slug": "entry-and-visa",
+      "swamp": "visa-choice",
+      "handoff": "seed",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "INVESTIGATE",
+        "reason": "Audience-specific; the 5-year exemption certificate and remittance/Paris By Night bridges are already in facts/knowledge. Volume unknown; no canonical owner answers it.",
+        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p486, p489",
+          "facts.json visa.type"
+        ],
+        "filed": "2026-10-17"
+      }
+    }
+  ],
+  "_candidates_note": "Filed 2026-10-17 from knowledge/coverage-gaps.md after three books. Every row is INVESTIGATE: one SERP look each (owner + AI Overview) before promotion to articles[] and a predictions.json row. Not written, not imported."
 }
