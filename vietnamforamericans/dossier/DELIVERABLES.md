@@ -127,3 +127,12 @@ back to the thesis.
 |---|---|---|---|
 | halong-or-ninh-binh | The bay is cancelled by the port authority, not the operator, and a two-day window has nowhere to reschedule into. The book turns the forecast into the call — boat or rowboat — and keeps the other as the same-morning fallback. | Is the forecast for your two days calm enough to put them on a boat? | Which of the two you give the days to is one node in the month-by-region table the book is built on. |
 | hue-how-long | Three guidebooks give Huế three answers because they never say whose trip they are planning. The book sets Huế's nights by what you came for, out of the same pool that pays for Hội An and Hanoi. | Is Huế a base or a stop on the way through — and did the pool of nights decide, or the itinerary you copied? | How many nights Huế takes is settled with the rest of the central-coast allocation in the book. |
+
+### Strengthened 2026-10-17 (marketing three-part test) — shipped to `SITE.guide` in site.ts
+
+| swamp id | band | aside | inline | CTA |
+|---|---|---|---|---|
+| halong-or-ninh-binh | You'll want the overnight cruise for your two free days. The port authority grounds every boat at once, and a two-day window has nowhere to move to. The manual prices the bay, Ninh Bình and Sapa in days, so the leg still holds when the bay doesn't sail. | Two days, one boat, and a port authority that grounds them all. Is Ninh Bình already in the plan? | The bay, Ninh Bình and Sapa are paid for from the same four or five days; the manual prices each before the forecast gets a vote. | See what the northern leg can hold when the bay doesn't sail. |
+| hue-how-long | You'll give Huế the single night the itinerary templates give it, and see the citadel or the tombs but not both. The manual sets Huế's nights from the same pool that pays for Hội An and Hanoi, by what you came for. | One night in Huế means the citadel or the tombs. Which one were you going to drop? | Huế's nights come out of Hội An's; the manual allocates the central coast as one block, by trip length and by history, beach or food. | See how many nights Huế takes from the pool. |
+
+Both written against what v3 actually holds (D06 prices the northern leg in days and names the port authority as the canceller; D07 allocates the central-coast nights). They do not promise the v4 forecast rule or the Huế-by-interest rule until v4 ships. Unproven until link_clicks speak.
