@@ -123,6 +123,27 @@
         67
       ],
       "forks_note": "knowledge/decision-gaps.md numbering; see knowledge/swamp-forks.md (2026-10-17)"
+    },
+    {
+      "id": "halong-or-ninh-binh",
+      "name": "Two days from Hanoi: Ha Long Bay or Ninh Binh",
+      "one_liner": "Short trips can afford one, not both; the books frame the fork (Moon p97) and nobody resolves it.",
+      "forks": [
+        59,
+        62,
+        68
+      ],
+      "forks_note": "added 2026-10-17 from knowledge/swamp-forks.md"
+    },
+    {
+      "id": "hue-how-long",
+      "name": "How many days Hue deserves",
+      "one_liner": "Three guidebooks give three answers (0, 1 or 2 days); every itinerary trips on it.",
+      "forks": [
+        36,
+        60
+      ],
+      "forks_note": "added 2026-10-17 from knowledge/swamp-forks.md"
     }
   ],
   "articles": [
@@ -1231,20 +1252,18 @@
         "verdict": "PRODUCE",
         "reason": "Survives R1 and R2; no canonical-owner flag; estimated volume unmeasured (new site, no GSC history) — file as PRODUCE pending the first real GSC export."
       }
-    }
-  ],
-  "candidates": [
+    },
     {
       "title": "Ha Giang Loop: Ride It Yourself, Ride Pillion, or Go by Car",
       "slug": "ha-giang-loop-ride-pillion-or-car",
       "category_slug": "nature-trekking",
       "swamp": "motorbike-or-driver",
       "handoff": "turn",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "Options comparison (R2 survives: ways of doing one thing). No licence → pillion/car is the publishable form. Volume unknown.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP 2026-10-17: AI Overview PRESENT and detailed (Easy Rider vs self-drive table); page one Reddit, Mad Monkey, operators. Survives only as a connected decision with the American-licence angle the Overview gets wrong (it claims a 1968 IDP suffices; State Dept says no IDP works). Low confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1254,7 +1273,8 @@
           "decision-gaps #39"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "Phong Nha Caves: Which Tour Fits Your Trip and Your Budget",
@@ -1262,11 +1282,11 @@
       "category_slug": "nature-trekking",
       "swamp": "none",
       "handoff": "none",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "R3 flag: Oxalis is the canonical operator for the big caves — INVESTIGATE whether its site answers the question or only sells. Three books flag Phong Nha as the biggest coverage hole.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one Reddit, mini-adventures, Oxalis (R3 owner, has its own 'how to choose' page), vietnamtourism, GetYourGuide. Medium confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1276,7 +1296,8 @@
           "decision-gaps #37, #61"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "The Mekong Delta Beyond Can Tho: Vinh Long, Sa Dec, Tram Chim and Chau Doc",
@@ -1284,11 +1305,11 @@
       "category_slug": "mekong-delta",
       "swamp": "mekong-day-vs-overnight",
       "handoff": "seed",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "Only Moon maps this axis; no site article covers it. Volume unknown.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one tour operators, one 2020 blog, Tripadvisor/Facebook threads. Thin, winnable. Medium-high confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1297,7 +1318,8 @@
           "decision-gaps #64"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "The DMZ from Hue: What Each Stop Actually Shows You",
@@ -1305,11 +1327,11 @@
       "category_slug": "hue",
       "swamp": "none",
       "handoff": "none",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "War-history intent exists (war-remnants article INVESTIGATE); this is the northern half nobody covers. Volume unknown.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one operator pages (huedmztour, dmzvietnamtour), GetYourGuide, Tripadvisor, Reddit; PAA 'Is DMZ tour really worth it?'. Medium confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1318,7 +1340,8 @@
           "coverage-gaps A3"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "Funeral Tents, Altars and Ghost Money: What You Are Seeing on a Vietnamese Street",
@@ -1326,11 +1349,11 @@
       "category_slug": "etiquette-and-culture",
       "swamp": "none",
       "handoff": "none",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "Explanatory, not answer-complete; likely low volume but high dwell and share value. Volume unknown.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one a small Vercel blog, mortuary sites, Instagram, asiancustoms.eu. Very thin. Low volume expected; high dwell. Medium confidence on rank, low on volume.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1338,7 +1361,8 @@
           "Moon p488–489"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "Why Every Vietnamese City Has the Same Street Names",
@@ -1346,11 +1370,11 @@
       "category_slug": "temples-history-culture",
       "swamp": "none",
       "handoff": "none",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "R4 borderline (a 'why' with a long answer, not a settled one-liner) — open the SERP for an Overview before writing.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one a 2013 blog, Reddit, VietnamNet duplicates story, Wikipedia. R4 'why' is a long contingent answer. Medium confidence, low volume.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1359,7 +1383,8 @@
           "coverage-gaps A3"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "Counterfeit Spirits in Vietnam: How to Drink Safely",
@@ -1367,11 +1392,11 @@
       "category_slug": "safety-and-health",
       "swamp": "none",
       "handoff": "none",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "Safety topic absent from the corpus; procedure not place. Volume unknown.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one Reddit, People.com, The Independent, UK Travel Aware (government, R3-adjacent), Tripadvisor. Medium confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1379,7 +1404,8 @@
           "Moon p506–507"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "Eating in Vietnam with a Peanut or Shellfish Allergy",
@@ -1387,11 +1413,11 @@
       "category_slug": "vegetarian-dietary-needs",
       "swamp": "none",
       "handoff": "none",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "Procedure/condition intent; no canonical owner. Volume unknown.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one Reddit, Facebook groups, Intrepid, Wendy Wu, allergy blogs. Medium confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1399,7 +1425,8 @@
           "Moon p506"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "Vietnam with Limited Mobility: Where It Works and Where It Does Not",
@@ -1407,11 +1434,11 @@
       "category_slug": "safety-and-health",
       "swamp": "none",
       "handoff": "none",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "First substantive source is Moon + LP's car-with-driver verdict. Volume unknown.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one Vietnam Airlines wheelchair page (R3 partial), Facebook threads, daytripsvietnam, United Spinal 2017. Medium confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1420,7 +1447,8 @@
           "LP p495"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "Dog, Balut and Field Rat: The Menu Words to Know Before You Order",
@@ -1428,11 +1456,11 @@
       "category_slug": "dishes-what-to-order",
       "swamp": "none",
       "handoff": "none",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "Vocabulary/decision article; not answer-complete. Volume unknown.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one is mostly Tet food taboos and 'scary foods' listicles — query intent is poorly served. Low-medium confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1441,41 +1469,20 @@
           "decision-gaps #33"
         ],
         "filed": "2026-10-17"
-      }
-    },
-    {
-      "title": "Quy Nhon and Phan Rang: The Quiet Tier Below Nha Trang and Mui Ne",
-      "slug": "quy-nhon-phan-rang-quiet-coast",
-      "category_slug": "beaches-islands",
-      "swamp": "none",
-      "handoff": "none",
-      "status": "candidate",
-      "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "R2 risk (reads as place-vs-place) — reframe as 'who should skip the resorts' before writing; INVESTIGATE.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
       },
-      "origin": {
-        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
-        "sources": [
-          "Moon p16, p227",
-          "LP p28",
-          "decision-gaps #13"
-        ],
-        "filed": "2026-10-17"
-      }
+      "status": "planned"
     },
     {
       "title": "Two Days from Hanoi: Boat on Ha Long or Rowboat in Ninh Binh",
       "slug": "two-days-from-hanoi-halong-or-ninh-binh",
       "category_slug": "halong-bay-sapa",
-      "swamp": "halong-bay-cruise-choice",
+      "swamp": "halong-or-ninh-binh",
       "handoff": "turn",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "Proposed new swamp halong-or-ninh-binh; R2 risk unless framed as a time decision; INVESTIGATE.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one GetYourGuide/Viator combo tours, Reddit ('Halong Bay vs Ninh Binh'), Bhaya Cruises, ninhbinh-tour; PAA 'Should I go to Ninh Binh or Halong Bay?'. R2 risk acknowledged; written as a time decision (two days, boat or rowboat) it is a swamp page. Low-medium confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1484,19 +1491,20 @@
           "decision-gaps #59, #62"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "How Many Days Hue Deserves",
       "slug": "how-many-days-for-hue",
       "category_slug": "hue",
-      "swamp": "hoian-base-choice",
+      "swamp": "hue-how-long",
       "handoff": "turn",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "R4 'how many' but a contingent trade-off (three books disagree 0/1/2 days); open the SERP for an Overview; INVESTIGATE.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one Reddit, backpacker hostel blog, vietnam.travel (national board, R3 but sells nothing), personal blogs. Medium confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1507,7 +1515,8 @@
           "decision-gaps #36, #60"
         ],
         "filed": "2026-10-17"
-      }
+      },
+      "status": "planned"
     },
     {
       "title": "Returning to Vietnam as a Vietnamese American: Papers, Family and the First Trip Back",
@@ -1515,11 +1524,11 @@
       "category_slug": "entry-and-visa",
       "swamp": "visa-choice",
       "handoff": "seed",
-      "status": "candidate",
       "opportunity": {
-        "verdict": "INVESTIGATE",
-        "reason": "Audience-specific; the 5-year exemption certificate and remittance/Paris By Night bridges are already in facts/knowledge. Volume unknown; no canonical owner answers it.",
-        "rules_checked": "R1 title scan: clear; R2/R3/R4 noted in reason; volume unmeasured (new topic, no GSC history)"
+        "verdict": "PRODUCE",
+        "reason": "SERP: no Overview; page one VietLong Travel, Reddit (80+ comments), Quora, Facebook, US Embassy page. Nobody owns it. Medium confidence.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
       },
       "origin": {
         "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
@@ -1528,8 +1537,34 @@
           "facts.json visa.type"
         ],
         "filed": "2026-10-17"
+      },
+      "status": "planned"
+    }
+  ],
+  "candidates": [
+    {
+      "title": "Quy Nhon and Phan Rang: The Quiet Tier Below Nha Trang and Mui Ne",
+      "slug": "quy-nhon-phan-rang-quiet-coast",
+      "category_slug": "beaches-islands",
+      "swamp": "none",
+      "handoff": "none",
+      "status": "candidate",
+      "opportunity": {
+        "verdict": "REJECT",
+        "reason": "R2 fires: the SERP is 'Quy Nhon vs Nha Trang' threads and best-beach listicles; a place-vs-place page loses to every publisher. Fold the quiet-coast tier into best-beaches-islands-vietnam instead.",
+        "rules_checked": "R1 title scan clear; R2/R3/R4 assessed on the live SERP 2026-10-17 (Google, hl=en gl=us): AI Overview presence and page-one owners recorded in reason",
+        "serp_checked": "2026-10-17"
+      },
+      "origin": {
+        "stage": "0b knowledge-first, coverage-gaps A/A2/A3",
+        "sources": [
+          "Moon p16, p227",
+          "LP p28",
+          "decision-gaps #13"
+        ],
+        "filed": "2026-10-17"
       }
     }
   ],
-  "_candidates_note": "Filed 2026-10-17 from knowledge/coverage-gaps.md after three books. Every row is INVESTIGATE: one SERP look each (owner + AI Overview) before promotion to articles[] and a predictions.json row. Not written, not imported."
+  "_candidates_note": "2026-10-17: 14 filed from knowledge/coverage-gaps.md; 13 promoted to articles[] (status planned) after SERP looks; 1 REJECT (R2) kept here for the record."
 }
