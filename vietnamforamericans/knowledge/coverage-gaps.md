@@ -120,3 +120,43 @@ LP is a practical guide and sees more of the modern country than DK. Everything 
 - **overland-border-crossings-vietnam**: LP's full gate table (16 named gates) and the "direct bus only" golden rule.
 - **sleeper-bus-vs-sleeper-train**: upper berth cheapest on hard sleepers; SE vs TN trains; 50 km/h bus reality; sleeper bus "comparable" to train in cost.
 - **hiring-a-driver-vs-self-drive**: the driver-guide checklist; who pays fuel is not standard.
+
+# Moon Vietnam 2015 — additions (2026-10-17)
+
+Moon's regional model is coast-and-delta: no Ha Giang, no Central Highlands beyond Dalat, no Mai Chau, Phong Nha only as a side-trip. So it confirms rather than extends the mountain gaps, but it is the deepest of the three books on the Mekong Delta and on the practical texture of daily life, and it is the only one written from an American frame.
+
+## A3. Book covers it, we have no article (new candidates from Moon)
+- **Mekong second axis** — Vinh Long / An Binh homestay, Sa Dec, Cao Lanh, Tram Chim (sarus cranes), Chau Doc's Cham quarter, Tra Su, Tra Vinh's Khmer pagodas (Moon p19–21, 391). Our Mekong coverage is My Tho/Can Tho only. Strongest new destination gap in this book.
+- **Phong Nha** (p145, 170) — third book to flag it; Moon adds the time cost (4–5 days from the coast) and the independent-vs-operator cave split.
+- **DMZ anatomy** (p170) — Hien Luong bridge, Vinh Moc, Truong Son and Gio Linh cemeteries, Long Hung church. Our war-sites article is HCMC-centric.
+- **Death rituals decoder** (p488–489) — street funeral tents, pre-dawn processions, burned paper dollars, death anniversaries. A first-timer question no article answers.
+- **Street-name decoder** — Hai Ba Trung, Tran Hung Dao, Le Loi, Nguyen Hue appear in every city; Moon's history chapter supplies the one-line "who was that" for each.
+- **Counterfeit alcohol / methanol** (p506–507) — rules by venue type. Absent from the safety article.
+- **Food allergies** (p506) — shellfish and peanuts everywhere, cross-contamination, EpiPen. Absent.
+- **Accessibility** (p504–505) — first substantive source; Danang/Hoi An as the best-equipped area.
+- **Dog meat and the exotic menu, with vocabulary** (p500) — thit cho, hot vit lon, chuot dong, ran.
+- **Quy Nhon, Phan Rang/Ninh Chu** (p16, 227) — the "anonymous beach" tier below Nha Trang and Mui Ne.
+- **Con Dao** (p16, 22) — Moon ranks it the best diving and the hardest reach; we have an article slug but it is thin on the trade-off.
+- **Working/teaching in Vietnam** (p504) — out of scope for the travel site, a lead for a "moving to Vietnam" page if ever wanted.
+- **Paris By Night and the diaspora culture bridge** (p489) — material for the Vietnamese-American return-travel article that still does not exist.
+
+## B3. We cover it, Moon 2015 is blind (our edge)
+- Grab and ride-hailing (Moon is pre-Grab; every xe om/taxi paragraph assumes street hailing).
+- The e-visa (Moon's "e-visa" is the approval letter).
+- Expressways: Hanoi–Halong is "four hours" and the Sapa road "dangerous" in Moon; both changed within two years of print.
+- Metro, Nhat Tan bridge, bus 86, the new Mien Dong station, Cam Ranh/Phu Quoc international flights.
+- Ha Giang, Mai Chau, Central Highlands minorities beyond a paragraph, Vietnamese-American return travel, Tet from a diaspora angle.
+- eSIM, cashless payment, the 2017 phone renumbering.
+
+## C3. Overlap angles worth adding (Moon-specific)
+- **Airport arrival** — the three named Noi Bai scams and the "walk one block from any station" rule (p72–73).
+- **Taxi** — "never bargain against a meter", near-exact change, hail away from tourist streets, stop-pay-leave on a rigged meter (p74, 361, 493).
+- **Night rule** — taxi not xe om after dark, stated three times with the reason (p494, 509, 361).
+- **Hotel passport** — ask for it back after registration, expect to prepay (p497). Resolves our open fork.
+- **Street food** — Moon's judgment rule (clean, cooked-to-order, visible kitchen, herbs on the side) and the price-before-eating rule (p506, 510).
+- **Tailor sequencing** — order on day one in Hoi An (p15).
+- **Halong month verdict** — Sep to early Dec, with the reason for each other season (p98).
+- **Phu Quoc solo premium** — the island is built for couples/families; singles pay more (p460).
+- **Simplify your English** — the "where is the toilet" rule (p503).
+- **Bank lunch closures**, torn-note refusal, courier-not-post for purchases (p509–511).
+- **Boston-to-Miami** scale analogy for the north–south decision (p14).

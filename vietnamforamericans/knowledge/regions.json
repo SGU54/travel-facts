@@ -1,5 +1,5 @@
 {
-  "_README": "Per-region orientation drawn from the DK 2015 region openers and 'getting around' boxes. Paraphrase only. Region keys follow DK's six-way split plus the Angkor excursion. Each region: identity, bases, the book's transport verdict, and leads to verify. Lonely Planet 2016 entries added 2026-10-16; LP's 'Southwest Highlands' is a seventh region key.",
+  "_README": "Per-region orientation drawn from the DK 2015 region openers and 'getting around' boxes. Paraphrase only. Region keys follow DK's six-way split plus the Angkor excursion. Each region: identity, bases, the book's transport verdict, and leads to verify. Lonely Planet 2016 entries added 2026-10-16; LP's 'Southwest Highlands' is a seventh region key. Moon 2015 entries added 2026-10-17; Moon's regional model is coast-and-delta (no Ha Giang, no Central Highlands beyond Dalat).",
   "regions": {
     "hanoi": {
       "identity": [
@@ -112,6 +112,49 @@
           "related_articles": [
             "vietnam-itinerary-7-days",
             "best-things-to-do-in-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.moon-weekend",
+          "claim": "Moon gives Hanoi a weekend: day one is the Old Quarter by cyclo on arrival (the author's device for surviving the traffic while jet-lagged), Hoan Kiem, cathedral cafés, Hoa Lo and the Women's Museum, then the French Quarter and a water-puppet or ca tru show; day two is pho, an early mausoleum queue, the stilt house, One Pillar, the Military History Museum, Temple of Literature and bia hoi at rush hour.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 14
+          },
+          "related_articles": [
+            "hanoi-travel-guide-first-timers",
+            "vietnam-itinerary-7-days"
+          ]
+        },
+        {
+          "id": "hanoi.moon-sapa-alt",
+          "claim": "Moon offers Sapa as the alternative to Halong for 'people who aren't into water': overnight train, minibus up, a town afternoon (museum, Cau May street, Cat Cat or a hired bike to the waterfalls and Tram Ton pass), a guided village trek the next day, back overnight.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 15
+          },
+          "related_articles": [
+            "getting-from-hanoi-to-sapa",
+            "sapa-trekking-guide"
+          ],
+          "note": "2015 framing; the expressway bus has since displaced the train as the default."
+        },
+        {
+          "id": "hanoi.moon-van-phuc",
+          "claim": "Van Phuc silk village west of Hanoi: looms since the 9th century, royal supplier under the Nguyen, a thousand workshops today; raw silk costs the same as in town but finished scarves and shirts are cheaper; usually combined with a Perfume Pagoda day, or reached by city bus along Highway 6.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 78
+          },
+          "related_articles": [
+            "best-markets-in-vietnam",
+            "ninh-binh-day-trip-from-hanoi"
           ]
         }
       ],
@@ -286,6 +329,118 @@
             "north-to-south-or-south-to-north-vietnam",
             "getting-from-hanoi-to-sapa"
           ]
+        },
+        {
+          "id": "hanoi.moon-airport-scams",
+          "claim": "Moon's Noi Bai warning list: extortionate flat quotes, 'your hotel is closed or full' diversions to commission hotels, rigged fast meters. Counter: write the hotel's name and address down, use the official stand with its posted flat rate, reconfirm the price before moving, prefer Mai Linh.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 72
+          },
+          "related_articles": [
+            "vietnam-airport-guide",
+            "is-vietnam-safe-for-americans"
+          ]
+        },
+        {
+          "id": "hanoi.moon-airport-minibus-2015",
+          "claim": "In 2015 the cheapest hassle-free airport option was the Vietnam Airlines minibus to its downtown office south of Hoan Kiem (every ~30 min when full); public bus 17 to Long Bien was the bare-bones option. The minibus has since been replaced by express bus 86.",
+          "status": "obsolete",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 72
+          },
+          "verify_against": "Bus 86 schedule; Grab pickup at HAN",
+          "related_articles": [
+            "vietnam-airport-guide"
+          ]
+        },
+        {
+          "id": "hanoi.moon-station-taxi-walk",
+          "claim": "At both the train station and the bus stations, drivers crowd the exit and quote several times the fare; Moon's rule is to walk one block away, where meters reappear and prices normalise.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 72
+          },
+          "related_articles": [
+            "getting-around-hanoi",
+            "is-vietnam-safe-for-americans"
+          ]
+        },
+        {
+          "id": "hanoi.moon-sinh-cafe-impostors",
+          "claim": "Only two Old Quarter addresses are the genuine Sinh Tourist; every 'Sinh Cafe' variant on a sign is an impostor trading on the name — the same copycat pattern as the Old Quarter hotels.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 73
+          },
+          "related_articles": [
+            "sleeper-bus-vs-sleeper-train-vietnam",
+            "is-vietnam-safe-for-americans"
+          ]
+        },
+        {
+          "id": "hanoi.moon-taxi-rules",
+          "claim": "Hail cabs away from Ma May and Ly Quoc Su; meter always, flat rates never favour you; carry near-exact change because drivers claim to have no small notes; if a meter is visibly rigged, stop, pay what is fair and get out rather than argue.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 74
+          },
+          "related_articles": [
+            "getting-around-hanoi",
+            "grab-app-vietnam-guide"
+          ]
+        },
+        {
+          "id": "hanoi.moon-cyclo-hour",
+          "claim": "A cyclo hour is the gentlest introduction to the Old Quarter; expect to pay more than a motorbike because a person is pedalling; bargain first.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 74
+          },
+          "related_articles": [
+            "getting-around-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.moon-buses-9-14",
+          "claim": "City buses 9 and 14 from the north end of Hoan Kiem reach the mausoleum, Temple of Literature, Flag Tower and the Museum of Ethnology; Google Maps plotted Hanoi's routes accurately even in 2015; most routes stop by 8–9 pm.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 75
+          },
+          "verify_against": "Current Hanoi bus route numbers (BusMap)",
+          "related_articles": [
+            "getting-around-hanoi"
+          ]
+        },
+        {
+          "id": "hanoi.moon-no-right-on-red",
+          "claim": "Moon states twice that turning right on red is forbidden in Hanoi, while permitted elsewhere in the country.",
+          "status": "conflict",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 75
+          },
+          "conflict_with": "LP 2016 p495 says no right turn on red in cities generally; fact-wishlist transport.right_turn_on_red needs the current Road Traffic law text",
+          "related_articles": [
+            "crossing-the-street-in-vietnam",
+            "renting-a-motorbike-in-vietnam"
+          ]
         }
       ],
       "leads": [
@@ -443,6 +598,120 @@
           },
           "related_articles": [
             "cat-ba-island-guide"
+          ]
+        },
+        {
+          "id": "north.moon-sapa-months",
+          "claim": "Moon's Sapa verdict: September–October before the harvest strips the terraces, or early spring for valley views; November–February is cold (the one Vietnamese town that sees snow) and fogged in, which defeats the purpose.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 78
+          },
+          "related_articles": [
+            "best-time-to-trek-in-sapa",
+            "sapa-trekking-guide"
+          ],
+          "note": "Sides with reality against LP's 'November' harvest claim (decision gap #45)."
+        },
+        {
+          "id": "north.moon-sapa-history",
+          "claim": "Sapa was a French hill station from the early 1900s; ethnic Vietnamese settled from the 1960s; real growth came only in the 1990s. Minorities named: H'mong, Dao, Tay, Phu La, Giay. The museum is thin on them — a local guide is the way to learn.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 78
+          },
+          "related_articles": [
+            "sapa-trekking-guide"
+          ]
+        },
+        {
+          "id": "north.moon-cat-cat",
+          "claim": "Cat Cat is a paved three-mile round trip from town, closer to a hike than a trek, and by 2015 'more tourist attraction than village'.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 79
+          },
+          "verify_against": "Current entry fee and state of the village",
+          "related_articles": [
+            "sapa-homestay-vs-day-trek"
+          ]
+        },
+        {
+          "id": "north.moon-halong-planning",
+          "claim": "Moon's Halong arithmetic: a day cruise costs two travel days from Hanoi, an overnight cruise 2–3, Cat Ba at least 3; Ninh Binh is 1–2 nights plus a day for Cuc Phuong. Short-schedule travellers pick Halong OR Ninh Binh, not both.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 97
+          },
+          "related_articles": [
+            "halong-bay-day-trip-vs-overnight-cruise",
+            "ninh-binh-day-trip-from-hanoi",
+            "vietnam-itinerary-7-days"
+          ]
+        },
+        {
+          "id": "north.moon-halong-months",
+          "claim": "Moon's Halong calendar: June–August is a domestic 'madhouse' with prices up; September–December quiet with steady weather; late December–February quieter but Chinese weekenders arrive and bad weather sidelines cruises. Verdict: September to early December.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 98
+          },
+          "related_articles": [
+            "halong-bay-day-trip-vs-overnight-cruise",
+            "best-time-to-visit-vietnam"
+          ],
+          "note": "The clearest Halong month rule in any of the three books."
+        },
+        {
+          "id": "north.moon-halong-state",
+          "claim": "Moon acknowledges Halong's downsides in 2015: boats bunched on a few routes, floating trash, and fishing families being moved off the bay for tourism; Lan Ha (off Cat Ba) and Bai Tu Long are the quieter neighbours.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 98
+          },
+          "related_articles": [
+            "halong-bay-day-trip-vs-overnight-cruise",
+            "cat-ba-island-guide"
+          ]
+        },
+        {
+          "id": "north.moon-halong-legend",
+          "claim": "The name means Bay of the Descending Dragon: in the legend the Jade Emperor sent Mother Dragon and her children to spit jade pearls that became the islands and wrecked invading fleets; she stayed in Halong and her children settled Bai Tu Long. 1,969 islands; New7Wonders 2011; Ngo Quyen's 938 and Tran Hung Dao's 1288 victories on the Bach Dang nearby.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 98
+          },
+          "related_articles": [
+            "halong-bay-day-trip-vs-overnight-cruise",
+            "vietnam-history-for-travelers"
+          ]
+        },
+        {
+          "id": "north.moon-parks",
+          "claim": "Moon's park picks: Cat Ba (hiking, climbing, cycling, the endangered langur), Cuc Phuong (independent hikes and the primate centre), Bidoup-Nui Ba above Dalat (Lang Biang summit), Phong Nha (caves), Tram Chim (birds), Con Dao (least visited, best preserved). 30 national parks in 2015.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 22
+          },
+          "verify_against": "Current national park count (34 as of recent years)",
+          "related_articles": [
+            "best-national-parks-treks-vietnam"
           ]
         }
       ],
@@ -635,6 +904,111 @@
             "da-nang-travel-guide",
             "hoian-vs-anbang-vs-danang-where-to-base"
           ]
+        },
+        {
+          "id": "central.moon-no-hue-in-spine",
+          "claim": "Moon's two-week spine skips Hue entirely (Halong → Hoi An → Nha Trang), giving Hoi An three days; DK gives Hue two days, LP one night. Three books, three Hue weightings.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 15
+          },
+          "related_articles": [
+            "hue-travel-guide",
+            "vietnam-itinerary-14-days",
+            "hue-to-hoian-how-to-travel"
+          ],
+          "note": "Decision gap: how much Hue a first-timer needs is unresolved across all three books."
+        },
+        {
+          "id": "central.moon-tailor-day-one",
+          "claim": "Order tailored clothes on your first day in Hoi An to leave time for fittings — Moon's one hard sequencing rule for the town. An Bang is the quiet beach, Cua Dai the busier one, both by bicycle via Tra Que vegetable village.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 15
+          },
+          "related_articles": [
+            "hoi-an-travel-guide",
+            "hoi-an-tailors-guide"
+          ]
+        },
+        {
+          "id": "central.moon-planning",
+          "claim": "Moon's central allocation: a week for the region on a cross-country trip; My Son and the DMZ as day trips; a full day for Hue→Hoi An via Lang Co beach or the Hai Van Pass; Phong Nha is 'the country's best up-and-coming destination' but costs a day's travel each way plus two days there, so budget 4–5 days.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 145
+          },
+          "related_articles": [
+            "hue-to-hoian-how-to-travel",
+            "hai-van-pass-guide",
+            "vietnam-itinerary-3-weeks"
+          ]
+        },
+        {
+          "id": "central.moon-weather",
+          "claim": "The central provinces get the country's worst weather: storms, flash floods and monsoon rain; Hoi An's November floods put locals in canoes. Avoid September–January; August is brutally hot; February–May is best.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 145
+          },
+          "related_articles": [
+            "best-time-to-visit-vietnam",
+            "vietnam-weather-by-region-and-month",
+            "hoi-an-travel-guide"
+          ],
+          "note": "Agrees with the DK climate chart; starts the good window a month earlier than DK's text."
+        },
+        {
+          "id": "central.moon-phong-nha",
+          "claim": "Phong Nha: 130 miles north of Hue; three cave systems (Phong Nha, Vom, Nuoc Mooc) totalling about 90 miles of passage, 3–5 million years old, World Heritage; Son Doong (5.5 miles long, found by British cavers 2009) is capped and sold only through a certified operator at about US$3,000 in 2015; independent visitors are limited to a few caves; Hue day trips are cheap but rushed.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 170
+          },
+          "verify_against": "Oxalis current Son Doong price/slots; park entry per cave",
+          "related_articles": [
+            "best-national-parks-treks-vietnam"
+          ],
+          "note": "No Phong Nha article exists; third book to flag it."
+        },
+        {
+          "id": "central.moon-dmz-sites",
+          "claim": "DMZ anatomy from Moon: the Ben Hai River at the 17th parallel with the Hien Luong bridge and a mother-and-child statue facing north; Doc Mieu US base; Vinh Moc tunnels (about 600 residents, unknown to US intelligence); Truong Son cemetery, the largest, 60 miles north of Hue; Gio Linh graves marked 'name unknown'; the gutted Long Hung church from the 1972 Easter Offensive (an 81-day battle) on Highway 1.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 170
+          },
+          "related_articles": [
+            "vietnam-war-history-sites-guide",
+            "hue-travel-guide"
+          ]
+        },
+        {
+          "id": "central.moon-hue-hoian-history",
+          "claim": "Hoi An (Faifo) drew Chinese and Japanese traders from the 16th century and was the central economic hub until the Thu Bon silted up in the 19th; Gia Long moved the capital to Hue in 1802 and 13 Nguyen emperors followed; the French took Danang in 1859; Bao Dai abdicated to the Viet Minh in 1945 days before the independence speech.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 144
+          },
+          "related_articles": [
+            "hue-travel-guide",
+            "hoi-an-travel-guide",
+            "vietnam-history-for-travelers"
+          ]
         }
       ],
       "getting_around": [
@@ -806,6 +1180,92 @@
           },
           "related_articles": [
             "hai-van-pass-guide"
+          ]
+        },
+        {
+          "id": "sc.moon-when",
+          "claim": "Moon's south-central verdict: February–April (warm, pre-rain); sunny through August but oppressive late summer; autumn is the rainy season with wind in the south of the stretch and cooler Nha Trang/Quy Nhon. Phan Rang's semi-arid pocket is clear most of the year.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 227
+          },
+          "related_articles": [
+            "nha-trang-travel-guide",
+            "mui-ne-guide",
+            "best-time-to-visit-vietnam"
+          ]
+        },
+        {
+          "id": "sc.moon-beach-ranking",
+          "claim": "Moon's beach shortlist: Con Dao (best diving, hardest to reach), Mui Ne (resort enclave, kitesurf capital), Nha Trang (party; Doc Let quieter to the north), Ninh Chu at Phan Rang (sleepy and anonymous), Phu Quoc (couples and families; Long Beach lively, Sao pristine, Ganh Dau/Bai Dai wild).",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 16
+          },
+          "related_articles": [
+            "best-beaches-islands-vietnam",
+            "phu-quoc-vs-nha-trang-which-beach"
+          ]
+        },
+        {
+          "id": "sc.moon-anonymous-beaches",
+          "claim": "Phan Rang and Quy Nhon are offered as the escape from the big-city buzz 'without leaving the beaten track' — quiet shores with ordinary infrastructure; Dalat is the inland contrast 80 miles away.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 227
+          },
+          "related_articles": [
+            "best-beaches-islands-vietnam",
+            "nha-trang-travel-guide"
+          ]
+        },
+        {
+          "id": "sc.moon-champa",
+          "claim": "Champa held the south-central coast from the 2nd century to the mid-1600s: four states, a matriarchal Hindu maritime kingdom trading eaglewood and silk, red-brick towers; capital near Hoi An at its 9th-century peak; crushed in Binh Dinh in the 15th century, remnant in Ninh Thuan and Binh Thuan, diaspora in Cambodia.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 229
+          },
+          "related_articles": [
+            "my-son-sanctuary-guide",
+            "vietnam-history-for-travelers"
+          ]
+        },
+        {
+          "id": "sc.moon-landmines-mui-ne",
+          "claim": "Moon notes that landmines and other war remnants persist around Phan Thiet and Mui Ne — relevant to anyone driving off-road on the dunes.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 229
+          },
+          "verify_against": "Current UXO clearance data (VNMAC / MAG Vietnam)",
+          "related_articles": [
+            "mui-ne-guide",
+            "is-vietnam-safe-for-americans"
+          ]
+        },
+        {
+          "id": "sc.moon-nha-trang-days",
+          "claim": "Moon's Nha Trang pattern: arrive at dawn by night train, beach or mud baths, Long Son Pagoda and Po Nagar, nightlife; day two a full-day boat tour (snorkel, dive or cruise), then overnight train or flight to HCMC.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 17
+          },
+          "related_articles": [
+            "nha-trang-travel-guide",
+            "vietnam-itinerary-14-days"
           ]
         }
       ],
@@ -979,6 +1439,62 @@
             "ho-chi-minh-city-nightlife-guide",
             "bia-hoi-guide-vietnam"
           ]
+        },
+        {
+          "id": "hcmc.moon-author-home",
+          "claim": "Moon's author lives in Saigon and calls its street food the country's best; she also concedes the city is 'a blessing and a curse' — livelier, more chaotic and occasionally more dangerous than the coastal towns.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 307
+          },
+          "related_articles": [
+            "ho-chi-minh-city-travel-guide",
+            "is-vietnam-safe-for-americans"
+          ]
+        },
+        {
+          "id": "hcmc.moon-pop-2015",
+          "claim": "Moon 2015: 7.5 million official, 8–10 million by other estimates; outer districts swallowing Di An and Bien Hoa.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 305
+          },
+          "verify_against": "GSO; 2025 provincial mergers",
+          "related_articles": [
+            "ho-chi-minh-city-travel-guide"
+          ]
+        },
+        {
+          "id": "hcmc.moon-origins",
+          "claim": "Saigon took shape from 1674 along the Ben Nghe River: Vietnamese farmers in today's District 1, Ming-refugee Chinese merchants in District 5 (Cholon); the two settlements grew together over 200 years. The French from 1859 left the cathedral, theatre, post office and government buildings. Diem and Nhu were killed in 1963 after hiding in a District 5 church. Saigon itself stayed largely safe in the war and became the press hub.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 307
+          },
+          "related_articles": [
+            "ho-chi-minh-city-travel-guide",
+            "vietnam-history-for-travelers"
+          ]
+        },
+        {
+          "id": "hcmc.moon-two-days",
+          "claim": "Moon's HCMC two days: Notre Dame, Post Office, Reunification Palace, Turtle Lake lunch, War Remnants Museum, a rooftop bar, dinner in Tan Dinh; day two Cholon (Binh Tay Market, Thien Hau, Chaozhou hall, Cho Lon mosque), Ben Thanh, Le Loi, the Rex rooftop.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 18
+          },
+          "related_articles": [
+            "ho-chi-minh-city-travel-guide",
+            "vietnam-itinerary-7-days"
+          ]
         }
       ],
       "getting_around": [
@@ -1108,6 +1624,90 @@
           },
           "related_articles": [
             "grab-app-vietnam-guide"
+          ]
+        },
+        {
+          "id": "hcmc.moon-airport-2015",
+          "claim": "Tan Son Nhat in 2015: metered taxis about 40 minutes to District 1; a xe om from outside the terminal (walk past the overpass to the road) for solo light travellers; public bus 152 to Ben Thanh, no English aboard.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 360
+          },
+          "verify_against": "Grab bike pickup zone; buses 152/109 today",
+          "related_articles": [
+            "vietnam-airport-guide",
+            "getting-around-ho-chi-minh-city"
+          ]
+        },
+        {
+          "id": "hcmc.moon-taxi-brands",
+          "claim": "Mai Linh (green-white) and Vinasun (green-white-red) are the cabs to use, especially at night; others are fine by day; long-routing is the usual trick; never bargain, always meter; late at night ask a Vietnamese speaker to phone one.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 361
+          },
+          "related_articles": [
+            "getting-around-ho-chi-minh-city",
+            "grab-app-vietnam-guide"
+          ]
+        },
+        {
+          "id": "hcmc.moon-cyclo-no-warning",
+          "claim": "Moon describes HCMC cyclo drivers as English-speaking District 1 guides and gives no mugging warning, unlike LP's 'day only'. The resident author's silence is itself evidence the risk is situational (night, drunk, alone).",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 361
+          },
+          "related_articles": [
+            "getting-around-ho-chi-minh-city",
+            "is-vietnam-safe-for-americans"
+          ],
+          "note": "Decision gap #56."
+        },
+        {
+          "id": "hcmc.moon-bus-stations-2015",
+          "claim": "Tourist buses from Can Tho, Nha Trang, Dalat and Mui Ne drop at Pham Ngu Lao (23-9 Park, De Tham); the three public stations (An Suong, Mien Tay for the Delta, Mien Dong for the rest) are rarely needed. The long-distance Mien Dong has since moved out to Thu Duc.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 360
+          },
+          "verify_against": "Current station roles after the 2022 Mien Dong move",
+          "related_articles": [
+            "sleeper-bus-vs-sleeper-train-vietnam"
+          ]
+        },
+        {
+          "id": "hcmc.moon-rental-registration-card",
+          "claim": "When renting a motorbike in Pham Ngu Lao, test-ride it and make sure the registration card is in the bike; when buying one for a long trip, have a mechanic inspect it first.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 362
+          },
+          "related_articles": [
+            "renting-a-motorbike-in-vietnam"
+          ]
+        },
+        {
+          "id": "hcmc.moon-cu-chi-context",
+          "claim": "Cu Chi: dug by hand from the 1940s against the French, about 155 miles of tunnel by the 1960s; first bomb shelters, then workshops recycling unexploded ordnance into grenades; a declared free-strike zone drove whole communities underground for weeks (kitchens, hospitals, theatres, births); four levels, 2.5–4 ft wide.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 362
+          },
+          "related_articles": [
+            "war-remnants-museum-cu-chi-tunnels"
           ]
         }
       ],
@@ -1269,6 +1869,105 @@
           "verify_against": "Current operators (Hang Chau, Blue Cruiser) and the e-visa gate list",
           "related_articles": [
             "chau-doc-cambodia-border-crossing"
+          ]
+        },
+        {
+          "id": "mekong.moon-second-axis",
+          "claim": "Moon's Delta routing adds a whole second axis to the My Tho/Can Tho standard: Vinh Long and an An Binh Island homestay, Cai Be market at dawn, Sa Dec (the Huynh Thuy Le house, flower gardens), Cao Lanh, Tram Chim for sarus cranes before late morning, Chau Doc (Sam Mountain, the Bassac fish farms, the Cham quarter and Mubarak mosque), Tra Su bird sanctuary, then Cambodia. Six days end to end.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 20
+          },
+          "related_articles": [
+            "mekong-delta-day-trip-vs-multi-day-tour",
+            "best-mekong-delta-homestay-tours",
+            "chau-doc-cambodia-border-crossing"
+          ],
+          "note": "Tra Vinh, Sa Dec, Tram Chim and Chau Doc's Cham community have no article."
+        },
+        {
+          "id": "mekong.moon-planning",
+          "claim": "Moon's Delta time budget: Can Tho is the hub and worth a night for Cai Rang; Chau Doc and Vinh Long 1–2 days each; Phu Quoc at least 2–3 because the flight or speedboat makes a short stay wasteful; a day each for Tra Vinh's Khmer pagodas, Tram Chim and Sa Dec; day trips from HCMC reach My Tho, Ben Tre or Vinh Long. Little English west of Saigon and rough buses — bring patience.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 391
+          },
+          "related_articles": [
+            "mekong-delta-day-trip-vs-multi-day-tour",
+            "phu-quoc-travel-guide"
+          ]
+        },
+        {
+          "id": "mekong.moon-rainy-season",
+          "claim": "Moon: visit the Delta outside April–October, when steady rain and extreme flooding bury the landscape.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 391
+          },
+          "related_articles": [
+            "best-time-to-visit-vietnam",
+            "mekong-delta-day-trip-vs-multi-day-tour"
+          ]
+        },
+        {
+          "id": "mekong.moon-homestay-walkup",
+          "claim": "Moon is relaxed about homestays: cross to An Binh by ferry and ask, or arrange at the ferry or a travel outfit; cycle the island, eat with the family, watch the sunset. Its Essentials chapter adds the caveat that 'homestay' increasingly means a remote guesthouse with meals.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 19
+          },
+          "related_articles": [
+            "best-mekong-delta-homestay-tours"
+          ]
+        },
+        {
+          "id": "mekong.moon-history",
+          "claim": "The Delta is Vietnam's youngest region: Khmer land (Kampuchea Krom) taken from the late 1600s; Mac Cuu, a Chinese merchant, founded Ha Tien and sought Nguyen protection in 1708 against Thai pirates; Viet Minh and later NLF bases in the cajuput forests; some of the heaviest southern fighting; then the two-year war with the Khmer Rouge on the frontier.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 390
+          },
+          "related_articles": [
+            "vietnam-history-for-travelers",
+            "mekong-delta-day-trip-vs-multi-day-tour"
+          ]
+        },
+        {
+          "id": "mekong.moon-phu-quoc",
+          "claim": "Phu Quoc per Moon: high season December–January, visit November–April; 3–4 days to get the gist; pricier than the mainland and built for couples and families, so solo travellers pay more; Long Beach south of Duong Dong is the base; speedboats from Rach Gia and Ha Tien land at Bai Vong; roads were under construction in 2015 — ride pillion if you are not confident.",
+          "status": "lead",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 460
+          },
+          "verify_against": "Current ferry operators and road state",
+          "related_articles": [
+            "phu-quoc-travel-guide",
+            "best-beach-resorts-in-phu-quoc"
+          ]
+        },
+        {
+          "id": "mekong.moon-ha-tien-skip",
+          "claim": "Moon's verdict on Ha Tien's mainland beaches: not worth the beach time when Phu Quoc is 21 miles offshore; Hon Chong's Father-and-Son rock lost the 'father' in a 2006 storm.",
+          "status": "context",
+          "vintage": 2015,
+          "source": {
+            "book": "moon-2015",
+            "page": 458
+          },
+          "related_articles": [
+            "phu-quoc-travel-guide"
           ]
         }
       ],

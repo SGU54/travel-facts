@@ -345,3 +345,40 @@ Added 2026-10-16 from the second `knowledge/` book. Same rules: paraphrased, pag
 ## car-with-driver: who pays fuel — LP p494 vs DK p283
 - LP: driver pays own food and lodging, you pay petrol. DK: driver pays own food and lodging, fuel inside the quoted price.
 - Verdict: no standard; agree it in writing. Decision-gap material.
+
+## Guidebook leads vs facts.json — Moon Vietnam 2015 (read 2026-10-17)
+
+Third borrowed book. Moon is a US publisher with an American author resident in Saigon, so its disagreements with our fact layer are the ones an American reader is most likely to have absorbed from 2015-era web pages that still rank.
+
+### visa.* — Moon p11, p495–496
+Moon describes the 2015 regime (visa before arrival; embassy prices in USD; an "e-visa" that is really the approval-letter/VOA route at three airports) and says the government did not advertise it. Everything is superseded by the real e-visa (2017; 90-day multiple entry since Aug 2023). **Fact layer wins.** Logged because Moon's misuse of the word "e-visa" is exactly the confusion our visa articles have to untangle. Status: obsolete.
+
+### visa.no_extension_in_country (corrections #4) — Moon p495
+Moon: extend up to three months through any agency, the agency fee "unavoidable". Applied to paper visas in 2015; an e-visa cannot be extended in-country. **Fact layer wins.** Status: conflict.
+
+### getting_around.driving_licence (corrections #2) — Moon p495, p497
+Moon agrees with us that riding without a Vietnamese licence is illegal and that most travel insurance excludes unlicensed riders (p508). It then says that if stopped you "will have to pay a fine" and refusing is a bad idea. **We do not publish that.** Our line: don't ride unlicensed; if stopped, stay calm and polite; the embassy's guidance governs. Status: conflict on framing, agreement on law.
+
+### transport.right_turn_on_red — Moon p495 and p75 vs LP p495
+Moon twice says right on red is permitted except in Hanoi; LP says not permitted in cities. No primary source in either. Added to fact-wishlist as P1; the current Road Traffic Order and Safety law settles it. Status: conflict between books, open.
+
+### corrections #1 (ATM figures) — Moon p510
+Moon's 2015 fee ("rarely exceeds VND 10,000") is a fraction of today's foreign-card fees. The structural advice (domestic machines cheaper, fewer larger withdrawals) survives; no figure may be printed. **Fact layer wins.** Status: conflict.
+
+### tipping_norm — Moon p511 (fourth opinion)
+Moon: not required or customary outside high-end places; spas are the exception; otherwise optional. Four book positions now (DK hotel US$1 / DK restaurant 10% / LP "appreciated" / Moon "not customary"). None cites a source. **Conclusion unchanged:** publish the structural rule (not expected, appreciated, scaled to local wages, spas the one place it is looked for) and never a percentage.
+
+### safety_health.malaria — Moon p12 vs p505
+Moon contradicts itself: p12 "rare, Delta only, most skip tablets"; p505 "CDC recommends prophylaxis for rural south". With DK and LP that is three books and five readings. **CDC's current province list is the only citable answer**; the dossier states it plainly.
+
+### international rail — Moon p491 vs LP p491
+Moon says no international railway links Vietnam to its neighbours. The Hanoi–Nanning through service existed in 2015 and LP lists it. Moon is wrong. Status: conflict between books; LP's version matches facts.
+
+### Hotel passport practice — Moon p497 vs DK p233 / LP p478
+Not a conflict with facts.json but a resolution: Moon explains the police-registration reason, says ask for the passport back after the form is filled, and warns you may then be asked to prepay. Adopt as the published line pending the Law on Residence check (fact-wishlist hotel.passport_hold_practice).
+
+### Tet duration — Moon p10
+Moon: the country "shuts down for weeks before and after". Overstated against current practice (about a week of real closure, a longer slowdown). Lead, not fact; our Tet article's duration must come from the official holiday schedule.
+
+### Cambodia war dating — Moon p485
+Moon has the China clashes and the Cambodia war "resolved by the end of 1979". The Cambodian occupation ran to 1989. Lead/inaccurate; history article uses standard dating.

@@ -273,6 +273,116 @@
         "book": "lp-2016",
         "page": 483
       }
+    },
+    {
+      "id": "money.moon-refuse-torn-notes",
+      "claim": "Refuse ripped or torn dong notes, especially VND 10,000 and up — shops reject them and you are stuck; ask any exchange counter to swap worn notes.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 509
+      },
+      "related_articles": [
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "money.moon-exchange-safe",
+      "claim": "Exchange kiosks are usually not bank-affiliated but are safe because counterfeit dong is not a significant problem; gold shops and hotels also exchange at varying rates.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 509
+      },
+      "related_articles": [
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "money.moon-bank-lunch",
+      "claim": "Banks keep office hours (foreign banks 8–5, domestic often closing 4–4:30) and almost all break for lunch from about 11 to 1:30; some open Saturday mornings.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 510
+      },
+      "verify_against": "Vietcombank/Techcombank branch hours",
+      "related_articles": [
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "money.moon-atm-fee-2015",
+      "claim": "Moon 2015: domestic ATM fees minimal, foreign-bank machines rarely over VND 10,000 per withdrawal.",
+      "status": "conflict",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 510
+      },
+      "conflict_with": "corrections.json #1 — fees and caps are not publishable; today's foreign-card fees are several times this",
+      "related_articles": [
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "money.moon-ask-price-first",
+      "claim": "Ask the price before eating street-side: doubling or tripling the bill at the end is the known trick; agreeing first removes it. Tourist-heavy places (Phu Quoc, Hoi An) cost more; the Delta and Central Highlands a fraction.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 510
+      },
+      "related_articles": [
+        "street-food-safety-vietnam",
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "money.moon-atmosphere-not-food",
+      "claim": "A restaurant meal can cost ten times a street meal; what you pay for is atmosphere — the food at the hole-in-the-wall is often as good or better.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 510
+      },
+      "related_articles": [
+        "vietnamese-food-guide-first-timers",
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "money.moon-bargain-rule",
+      "claim": "Moon's bargaining heuristic: survey a few vendors, then offer 20–40% below the going ask; never start haggling unless you intend to buy — bargaining for sport angers vendors.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 511
+      },
+      "related_articles": [
+        "best-markets-in-vietnam",
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "money.moon-post-parcels",
+      "claim": "Postcards are cheap and take 2–3 weeks; parcels abroad are expensive and may never arrive — ship purchases by courier, not the post.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 511
+      },
+      "related_articles": [
+        "vietnam-customs-and-duty-free-rules"
+      ],
+      "note": "Relevant to decision gap #34 (ship vs carry)."
     }
   ],
   "tipping": [
@@ -331,6 +441,20 @@
       "related_articles": [
         "tipping-in-vietnam",
         "vietnam-temples-pagodas-guide"
+      ]
+    },
+    {
+      "id": "tip.moon-version",
+      "claim": "Moon, the FOURTH opinion: tipping is neither required nor customary outside high-end restaurants; some places add a service charge; the one real exception is spas and massage, where a tip is expected and a gratuity form may appear; elsewhere whatever you like, and in a country where a dollar buys a meal any tip is appreciated.",
+      "status": "conflict",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 511
+      },
+      "conflict_with": "DK p235/p243, LP p21/p482 — four book positions and no primary source (disputes.md tipping_norm); publish the structural rule only",
+      "related_articles": [
+        "tipping-in-vietnam"
       ]
     }
   ],
@@ -820,6 +944,183 @@
         "source": {
           "book": "lp-2016",
           "page": 487
+        }
+      }
+    ]
+  },
+  "figures_2015_moon": {
+    "_note": "Moon 2015 figures. Never print. Trend reference only; see figures_2015 (DK) and figures_2016 (LP) for the same years.",
+    "arrival": [
+      {
+        "id": "cost.moon-us-airfare",
+        "claim": "US round trips about US$1,000 ±100–200 in 2015; four figures from the East Coast and interior.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 491
+        },
+        "related_articles": [
+          "flights-to-vietnam-from-us"
+        ]
+      },
+      {
+        "id": "cost.moon-visa-2015",
+        "claim": "Embassy visa US$100 (1-month single) to US$180 (3-month multiple); agency extension about US$30 against an official US$10; approval-letter route: letter US$15–30 plus airport stamping US$45–95, all cash USD.",
+        "status": "obsolete",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 495
+        },
+        "related_articles": [
+          "do-americans-need-a-visa-for-vietnam"
+        ]
+      }
+    ],
+    "transport": [
+      {
+        "id": "cost.moon-hanoi-airport",
+        "claim": "Hanoi airport taxi 'no more than' VND 400k, hotel pickup from 350k, VNA minibus 40k, bus 17 5k (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 72
+        },
+        "related_articles": [
+          "vietnam-airport-guide"
+        ]
+      },
+      {
+        "id": "cost.moon-hcmc-airport",
+        "claim": "HCMC airport taxi VND 150–180k, xe om to Pham Ngu Lao ≤80k, bus 152 5k (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 360
+        },
+        "related_articles": [
+          "vietnam-airport-guide"
+        ]
+      },
+      {
+        "id": "cost.moon-city-fares",
+        "claim": "Taxi flagfall VND 10–15k; Old Quarter xe om ≤40k; cyclo hour from ~100k; city bus 5–7k; Dong Xuan electric car 150k/35 min or 250k/hour per 7-seat car (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 493
+        }
+      },
+      {
+        "id": "cost.moon-motorbike-rental",
+        "claim": "Motorbike rental VND 80–200k/day nationally; Hanoi Vietnamese shops ~100k vs foreign-owned ~210k; HCMC Pham Ngu Lao 100–120k (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 494
+        },
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam"
+        ]
+      },
+      {
+        "id": "cost.moon-day-tour",
+        "claim": "Mass-market day tours from about VND 100k; Vietjet sale fares as low as VND 100k (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 492
+        }
+      },
+      {
+        "id": "cost.moon-road-atlas",
+        "claim": "The only decent road atlas cost about VND 300k in bookshops (2015) — Google Maps has made it moot.",
+        "status": "obsolete",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 511
+        }
+      }
+    ],
+    "daily_life": [
+      {
+        "id": "cost.moon-meals",
+        "claim": "Street meal VND 15–20k vs restaurant up to 200k; bia hoi ~VND 4k a glass; laundry 25k/kg street vs 35k via hotel (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 510
+        },
+        "related_articles": [
+          "vietnam-money-and-costs"
+        ]
+      },
+      {
+        "id": "cost.moon-spa-tip",
+        "claim": "Spa tip floor about VND 40k (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 511
+        },
+        "related_articles": [
+          "tipping-in-vietnam"
+        ]
+      },
+      {
+        "id": "cost.moon-sights",
+        "claim": "Cu Chi VND 90k; Perfume Pagoda 50k plus boat; Cat Cat 40k; Hon Chong 5k (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 362
+        }
+      },
+      {
+        "id": "cost.moon-son-doong",
+        "claim": "Son Doong expedition about US$3,000 per person (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 22
+        },
+        "verify_against": "Oxalis",
+        "related_articles": [
+          "best-national-parks-treks-vietnam"
+        ]
+      },
+      {
+        "id": "cost.moon-exchange-rate",
+        "claim": "About VND 21,000 to the dollar; businesses using 20–22k (2015).",
+        "status": "obsolete",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 509
+        },
+        "related_articles": [
+          "vietnam-money-and-costs"
+        ]
+      },
+      {
+        "id": "cost.moon-teaching",
+        "claim": "Legitimate ESL jobs need a bachelor's, TESOL/CELTA, police check and medical; notarise the degree at home first (2015).",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 504
         }
       }
     ]

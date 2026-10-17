@@ -198,6 +198,63 @@
         "nha-trang-travel-guide",
         "best-national-parks-treks-vietnam"
       ]
+    },
+    {
+      "id": "wtg.moon-national-verdict",
+      "claim": "Moon's national answer is a THIRD opinion: September–October (southern rains ending, north not yet cold) or April–May (north thawed, south not yet raining). DK said March–May; LP said it depends on region. Three books, three answers.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 10
+      },
+      "related_articles": [
+        "best-time-to-visit-vietnam",
+        "vietnam-weather-by-region-and-month"
+      ],
+      "note": "Confirms the month×region grid is the only honest shape."
+    },
+    {
+      "id": "wtg.moon-high-season",
+      "claim": "High season November–March, peaking at Christmas and sliding into Tet; July–August brings few foreigners but a domestic flood at Halong and Nha Trang.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 10
+      },
+      "related_articles": [
+        "best-time-to-visit-vietnam"
+      ]
+    },
+    {
+      "id": "wtg.moon-north-south-split",
+      "claim": "North only: September–October or April–June; the northern high season is chilly and misty, pretty north of Hue only if you don't expect sun. South: cooler November–March, heat and humidity building to around 100°F before the rains start mid–late May; May–September showers are predictable afternoon affairs; October is the unpredictable tail.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 10
+      },
+      "related_articles": [
+        "vietnam-weather-by-region-and-month",
+        "hanoi-travel-guide-first-timers",
+        "ho-chi-minh-city-travel-guide"
+      ]
+    },
+    {
+      "id": "wtg.moon-regional-windows",
+      "claim": "Moon's regional windows side by side: Halong Sep–early Dec; Sapa Sep–Oct or early spring; central Feb–May (avoid Sep–Jan); south-central Feb–Apr; Delta Nov–Mar; Phu Quoc Nov–Apr with Dec–Jan peak. There is no month in which all six are good.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 98
+      },
+      "related_articles": [
+        "best-time-to-visit-vietnam",
+        "north-to-south-or-south-to-north-vietnam"
+      ]
     }
   ],
   "tet": [
@@ -309,6 +366,35 @@
       "related_articles": [
         "traveling-vietnam-during-tet",
         "reunification-express-train-guide"
+      ]
+    },
+    {
+      "id": "tet.moon-blunt-verdict",
+      "claim": "Moon is the bluntest of the three on Tet: it 'makes for a poor visit' — the country shuts for weeks either side, businesses that stay open double or triple prices, transport is unreliable. DK called it the best time to participate; LP described the train blackout.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 10
+      },
+      "verify_against": "Actual closure length is nearer a week; check current practice",
+      "related_articles": [
+        "traveling-vietnam-during-tet"
+      ],
+      "note": "Decision gap #18 now has a dissenting vote."
+    },
+    {
+      "id": "tet.moon-rice-wine",
+      "claim": "Home-made rice wine (up to ~22% ABV) is stockpiled in plastic jugs for Tet across the countryside; befriending villagers earns you shots.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 501
+      },
+      "related_articles": [
+        "traveling-vietnam-during-tet",
+        "bia-hoi-guide-vietnam"
       ]
     }
   ],

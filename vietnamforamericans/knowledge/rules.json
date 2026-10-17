@@ -117,6 +117,81 @@
         "is-vietnam-safe-for-americans",
         "best-mekong-delta-homestay-tours"
       ]
+    },
+    {
+      "id": "visa.moon-2015-regime",
+      "claim": "Moon 2015: visa required before arrival for everyone; 1- or 3-month, single or multiple; overland arrivals must use an embassy; air arrivals could use an approval-letter route at SGN, HAN or DAD which Moon mislabels 'e-visa' and notes the government did not advertise; all fees in US dollars cash; US consulates in DC, SF, Houston, NYC take applications in the morning only.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 495
+      },
+      "conflict_with": "facts.json visa.* — the real e-visa (2017; 90-day multiple entry from Aug 2023) replaced all of this for Americans",
+      "related_articles": [
+        "do-americans-need-a-visa-for-vietnam",
+        "vietnam-evisa-how-to-apply"
+      ],
+      "note": "Third book contradicting facts.json on visas; useful only to warn readers off 2015-era pages still online."
+    },
+    {
+      "id": "visa.moon-extension-agency",
+      "claim": "Moon 2015: extensions up to three months via any travel agency; the official stamp cost a fraction of the agency price but the process needed a Vietnamese speaker, so the agency fee was 'unavoidable'.",
+      "status": "conflict",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 495
+      },
+      "conflict_with": "corrections.json #4 / facts.json visa.no_extension_in_country: e-visas cannot be extended in-country",
+      "related_articles": [
+        "vietnam-visa-extension-guide"
+      ]
+    },
+    {
+      "id": "visa.moon-phu-quoc-exemption",
+      "claim": "From 2014 foreign overnight visitors to Phu Quoc were visa-exempt for 30 days; any mainland travel still needed a visa.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 11
+      },
+      "verify_against": "Current Phu Quoc exemption rule (Immigration Department)",
+      "related_articles": [
+        "phu-quoc-travel-guide",
+        "do-americans-need-a-visa-for-vietnam"
+      ]
+    },
+    {
+      "id": "visa.moon-us-consular-limits",
+      "claim": "US consular services in Hanoi and HCMC help citizens in emergencies but cannot help with Vietnamese visa problems; those go through an agent. The 2015 Hanoi embassy address has since changed.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 496
+      },
+      "verify_against": "vn.usembassy.gov current addresses",
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "do-americans-need-a-visa-for-vietnam"
+      ]
+    },
+    {
+      "id": "visa.moon-passport-at-desk",
+      "claim": "Moon's clearest statement on the hotel passport: hotels must register guests with the police and hold the passport partly for that and partly against walkouts; you may ask for it back once the form is filled, but may then be asked to prepay.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 497
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "best-mekong-delta-homestay-tours"
+      ],
+      "note": "Resolves decision gaps #30/#53 as book practice: ask for it back after registration, expect to prepay."
     }
   ],
   "customs": [
@@ -467,6 +542,132 @@
       "related_articles": [
         "vietnam-health-and-vaccines"
       ]
+    },
+    {
+      "id": "health.moon-vaccines",
+      "claim": "Moon cites the CDC directly: routine vaccines plus Hep A and typhoid for everyone; Hep B, Japanese encephalitis and pre-exposure rabies for remote areas, long stays, cyclists and animal contact.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 505
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.moon-malaria-contradiction",
+      "claim": "Moon contradicts itself on malaria: p12 says it is rare, Delta-only, and most travellers just use repellent; p505 says the CDC recommends prophylaxis for rural southern areas, warns of drug resistance and lists serious side effects. Three books, three readings.",
+      "status": "conflict",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 505
+      },
+      "conflict_with": "facts.json safety_health.malaria (CDC): the dossier verdict must quote the current CDC province list, not any book",
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.moon-diarrhoea-rule",
+      "claim": "Moon rejects 'no street food, no ice, no greens' as joyless; its rule: skip stalls that look dirty or whose food has sat out; hot, fried and grilled dishes are fine; a good stall cooks in plain sight; herbs come on the side so you can decline; ice in backpacker and better restaurants is safe; tap water for teeth and showers only; buy Imodium at home.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 506
+      },
+      "related_articles": [
+        "street-food-safety-vietnam",
+        "vietnam-health-and-vaccines"
+      ],
+      "note": "Decision gap #31 resolved as book opinion."
+    },
+    {
+      "id": "health.moon-dengue",
+      "claim": "Dengue exists in cities and countryside; no vaccine in 2015; acetaminophen only — never aspirin, ibuprofen or naproxen; the dangerous window is as the fever recedes; go to hospital for breathing trouble, clammy skin, persistent vomiting, nose or gum bleeding or red spots.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 506
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.moon-methanol",
+      "claim": "Methanol poisoning from counterfeit spirits: bars may not know they bought fakes; symptoms can appear up to 72 hours later and mimic a hangover; worst in backpacker zones, Saigon and Nha Trang named. Rules: too-cheap drinks are suspect; buy spirits at supermarkets or chain stores; stop if a drink tastes off; higher-end bars safer; fall back to beer and wine.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 507
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "ho-chi-minh-city-nightlife-guide"
+      ],
+      "note": "No article covers counterfeit alcohol."
+    },
+    {
+      "id": "health.moon-rabies",
+      "claim": "People still die of rabies in Vietnam each year; don't touch animals, even pets; wash a bite with soap then seek care; post-exposure vaccine is widely available even in remote areas; dogs chase cyclists.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 507
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "health.moon-allergies",
+      "claim": "Shellfish and peanuts are pervasive and cross-contamination at carts is unmanageable; explanations may not be understood; carry an EpiPen.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 506
+      },
+      "related_articles": [
+        "vietnamese-food-guide-first-timers",
+        "vietnam-health-and-vaccines"
+      ],
+      "note": "No article covers food allergies."
+    },
+    {
+      "id": "health.moon-hospitals",
+      "claim": "Public hospitals are overcrowded and poorly sanitised; international clinics in big cities handle minor cases; serious cases are airlifted to Singapore or Bangkok; some hospitals want cash up front; evacuations run to six figures.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 508
+      },
+      "related_articles": [
+        "vietnam-health-and-vaccines",
+        "vietnam-travel-insurance-guide"
+      ]
+    },
+    {
+      "id": "health.moon-drink-driving",
+      "claim": "Drinking culture is social and heavy ('100%', 'can't go home till drunk'); drink-driving is routine on already dismal roads — never ride pillion with a drinker.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 501
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "bia-hoi-guide-vietnam"
+      ]
     }
   ],
   "safety": [
@@ -731,6 +932,88 @@
         "vietnam-health-and-vaccines",
         "renting-a-motorbike-in-vietnam"
       ]
+    },
+    {
+      "id": "safety.moon-bag-snatch-protocol",
+      "claim": "Moon's anti-snatch protocol: pockets that close, bag on the side away from the street, both backpack straps, stay off the kerb edge (motorbike thieves drag victims), bag hugged to chest and necklaces tucked in when riding pillion, step into a shop to use your phone. 'Robbed more than once on a single trip' is common enough to justify it.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 509
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans",
+        "getting-around-ho-chi-minh-city"
+      ]
+    },
+    {
+      "id": "safety.moon-if-robbed",
+      "claim": "If robbed, especially at night, let it go — thieves want goods, not your life. Night rules: don't walk alone, avoid alleys, taxi not xe om.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 509
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "safety.moon-drugs",
+      "claim": "Drugs are widely available and zero-tolerance; large possession can carry the death penalty.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 509
+      },
+      "related_articles": [
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "safety.moon-police",
+      "claim": "Moon cites a Transparency International survey in which 37% of Vietnamese named the police the most corrupt institution; officers avoid foreigners because of language; bring a Vietnamese speaker to any police contact.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 496
+      },
+      "verify_against": "TI Global Corruption Barometer, latest Vietnam edition",
+      "related_articles": [
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "safety.moon-women-lgbtq",
+      "claim": "Solo women: safe, with marriage-proposal banter and occasional pestering — polite, firm, then ignore. LGBTQ travellers: accepting cities, conservative countryside, PDA discouraged for all couples; the 2015 law change lifted the ban on same-sex weddings without recognising marriage.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 505
+      },
+      "related_articles": [
+        "solo-female-travel-vietnam",
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "safety.moon-accessibility",
+      "claim": "Wheelchair users face few elevators outside big cities, broken pavements and sights that need mobility; HCMC, Danang and Hanoi are best equipped, and Danang/Hoi An businesses are used to older travellers.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 504
+      },
+      "related_articles": [
+        "vietnam-itinerary-for-families"
+      ],
+      "note": "First substantive accessibility source; agrees with LP's 'car with driver' verdict. Coverage gap."
     }
   ],
   "legal_and_practical": [
@@ -1033,6 +1316,83 @@
       "related_articles": [
         "vietnam-festivals-calendar"
       ]
+    },
+    {
+      "id": "legal.moon-helmet-law",
+      "claim": "Helmets are legally required for riders and passengers; the ones xe om drivers offer are useless but you can be stopped for not wearing one.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 494
+      },
+      "related_articles": [
+        "renting-a-motorbike-in-vietnam"
+      ]
+    },
+    {
+      "id": "legal.moon-wild-camping",
+      "claim": "Pitching a tent anywhere is not accepted; camping means a bungalow, cabin or tent in a national park or on a designated beach, cheaply.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 498
+      },
+      "related_articles": [
+        "best-national-parks-treks-vietnam"
+      ]
+    },
+    {
+      "id": "legal.moon-dog-meat-ban",
+      "claim": "Moon (2015) notes a government ban on the sale of dog meat, rabies risk in the trade, and that most animals are stolen pets or strays; it expects the dish to get harder to find.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 500
+      },
+      "verify_against": "Hanoi and HCMC dog-meat policies since 2018",
+      "related_articles": [
+        "vietnamese-food-guide-first-timers"
+      ]
+    },
+    {
+      "id": "legal.moon-work-permits",
+      "claim": "To teach legally you need a bachelor's degree, a TESOL/CELTA, a home-country police check and a medical; have the degree notarised and the police check done before arriving.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 504
+      },
+      "verify_against": "Decree 152/2020 work-permit rules",
+      "related_articles": [
+        "living-in-vietnam-as-an-american"
+      ]
+    },
+    {
+      "id": "legal.moon-metric",
+      "claim": "Metric throughout: Celsius, kilometres, kilograms.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 512
+      },
+      "related_articles": [
+        "vietnam-weather-by-region-and-month"
+      ]
+    },
+    {
+      "id": "legal.moon-area-codes-obsolete",
+      "claim": "Every phone number in the book uses 2015 area codes; the national renumbering of 2017 made them all wrong.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 511
+      }
     }
   ]
 }

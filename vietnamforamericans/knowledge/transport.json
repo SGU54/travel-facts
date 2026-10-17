@@ -160,6 +160,61 @@
         "do-americans-need-a-visa-for-vietnam",
         "overland-border-crossings-vietnam"
       ]
+    },
+    {
+      "id": "air.moon-from-north-america",
+      "claim": "The only 'From North America' section in the three books: in 2015 round trips hovered near US$1,000 and could swing US$100–200 either way; West Coast departures a little cheaper, East Coast and interior four figures; watch fares 6–8 weeks out; most routings cross the Pacific via Seoul, Hong Kong, Tokyo or Taipei, a few go via Europe or the Gulf; a cheap domestic hop to LAX before the transpacific leg can save money.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 491
+      },
+      "verify_against": "Current US–SGN/HAN fare bands (Google Flights history); nonstop SFO–SGN since 2021",
+      "related_articles": [
+        "flights-to-vietnam-from-us",
+        "best-airlines-to-vietnam-from-us"
+      ]
+    },
+    {
+      "id": "air.moon-carrier-opinion",
+      "claim": "Moon's carrier opinion: China Eastern and China Southern cheapest but weak on service and safety reputation; EVA, JAL, Emirates, Cathay, United, Singapore and Qatar worth 'a few extra dollars' on a 14-hour flight.",
+      "status": "lead",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 491
+      },
+      "verify_against": "Current carriers serving SGN/HAN from the US",
+      "related_articles": [
+        "best-airlines-to-vietnam-from-us"
+      ]
+    },
+    {
+      "id": "air.moon-three-gateways-2015",
+      "claim": "Three international gateways in 2015 (SGN, HAN, DAD); Cam Ranh, Phu Quoc, Da Lat and others have since added international service.",
+      "status": "obsolete",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 491
+      },
+      "related_articles": [
+        "vietnam-airport-guide"
+      ]
+    },
+    {
+      "id": "air.moon-budget-regional",
+      "claim": "AirAsia, Jetstar and Tiger from Bangkok, KL and Singapore are the cheap way in from the region, with fees for everything; fares from Laos and Cambodia are dearer than from the big hubs.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 492
+      },
+      "related_articles": [
+        "vietnam-and-cambodia-combined-itinerary"
+      ]
     }
   ],
   "arrival_overland": [
@@ -274,6 +329,20 @@
       "related_articles": [
         "overland-border-crossings-vietnam"
       ]
+    },
+    {
+      "id": "land.moon-gate-counts-2015",
+      "claim": "Moon 2015 counts five Cambodia, six Laos and three China crossings open to foreigners, no visa at any land border, daily international buses. It also says there is no international railway, which was wrong even in 2015 (Hanoi–Nanning).",
+      "status": "conflict",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 491
+      },
+      "conflict_with": "LP 2016 p491 lists the Nanning and Kunming rail links; facts.json visa.entry_gates lists today's e-visa gates",
+      "related_articles": [
+        "overland-border-crossings-vietnam"
+      ]
     }
   ],
   "intercity": {
@@ -347,6 +416,35 @@
           "domestic-flights-vietnam",
           "sleeper-bus-vs-sleeper-train-vietnam",
           "north-to-south-or-south-to-north-vietnam"
+        ]
+      },
+      {
+        "id": "dom.moon-carriers-2015",
+        "claim": "Domestic carriers in 2015: Vietnam Airlines (widest network, sole operator to Con Dao and Phu Quoc then), Jetstar Pacific (Moon's pick for fares and service; since rebranded Pacific Airlines) and Vietjet (flash sales). Bamboo and Vietravel have since joined.",
+        "status": "obsolete",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 492
+        },
+        "verify_against": "Current domestic carriers and Con Dao operators",
+        "related_articles": [
+          "domestic-flights-vietnam"
+        ]
+      },
+      {
+        "id": "dom.moon-halong-to-danang",
+        "claim": "After Halong, Moon says an overnight train and a budget flight to Danang cost roughly the same; the train leaves in the evening, the flight lets you keep a Hanoi night.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 15
+        },
+        "verify_against": "Current SE train vs Vietjet/Bamboo fares",
+        "related_articles": [
+          "domestic-flights-vietnam",
+          "sleeper-bus-vs-sleeper-train-vietnam"
         ]
       }
     ],
@@ -532,6 +630,20 @@
         "related_articles": [
           "vietnam-itinerary-for-families"
         ]
+      },
+      {
+        "id": "rail.moon-hotel-night-argument",
+        "claim": "Moon's case for overnight trains: dearer than a sleeper bus but the fare replaces a hotel night, and the train is preferable where mountain roads make buses unpleasant (Sapa). Recommends seat61.com as the reference.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 492
+        },
+        "related_articles": [
+          "reunification-express-train-guide",
+          "sleeper-bus-vs-sleeper-train-vietnam"
+        ]
       }
     ],
     "bus": [
@@ -670,6 +782,49 @@
         "related_articles": [
           "sleeper-bus-vs-sleeper-train-vietnam"
         ]
+      },
+      {
+        "id": "bus.moon-dangerous-routes",
+        "claim": "Moon names two bus routes to avoid as more dangerous: Hue→Hanoi and the road up to Sapa — take the train, a motorbike or a hired car instead. Big reputable operators (Sinh Tourist, Phuong Trang/Futa) are worth the few extra dollars over cheap lines that break down.",
+        "status": "lead",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 493
+        },
+        "verify_against": "Sapa expressway opened 2014 (post-book); current accident data",
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam",
+          "getting-from-hanoi-to-sapa"
+        ]
+      },
+      {
+        "id": "bus.moon-overnight-theft",
+        "claim": "Theft on overnight buses is a real pattern: keep bags on your lap or against your body; travellers wake at the destination missing things.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 493
+        },
+        "related_articles": [
+          "sleeper-bus-vs-sleeper-train-vietnam",
+          "is-vietnam-safe-for-americans"
+        ]
+      },
+      {
+        "id": "bus.moon-tours-verdict",
+        "claim": "Moon on cheap organised day tours: 'cookie-cutter' and good only for meeting travellers; do it yourself except where a guide genuinely adds value (Sapa treks); boutique independent outfits cost more but are good value split among a group.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 492
+        },
+        "related_articles": [
+          "sapa-trekking-guide",
+          "mekong-delta-day-trip-vs-multi-day-tour"
+        ]
       }
     ],
     "car": [
@@ -771,6 +926,20 @@
           "hiring-a-driver-vs-self-drive-vietnam"
         ],
         "note": "Agrees with facts.json getting_around.driving_licence."
+      },
+      {
+        "id": "car.moon-driver-required",
+        "claim": "Hired cars and minibuses always come with a driver because foreigners cannot drive without a local licence; agree exactly which fees are included before leaving (fuel, tolls, driver's meals, parking).",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 494
+        },
+        "related_articles": [
+          "hiring-a-driver-vs-self-drive-vietnam"
+        ],
+        "note": "Moon's 'agree it first' is the closest any book comes to a rule on who pays fuel (decision gap #52)."
       }
     ],
     "motorbike": [
@@ -915,6 +1084,78 @@
           "hai-van-pass-guide",
           "renting-a-motorbike-in-vietnam"
         ]
+      },
+      {
+        "id": "moto.moon-licence-reality",
+        "claim": "Moon states the law plainly: a Vietnamese licence is required, so tourists driving is illegal; enforcement varies; most expats and many Vietnamese ride unlicensed; children ride in the countryside. Police rarely stop foreigners outside Hanoi and HCMC; the legal remedy is impound plus fine but in practice money changes hands.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 495
+        },
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam"
+        ],
+        "note": "Agrees with facts.json getting_around.driving_licence; the 'money changes hands' line is not publishable as advice."
+      },
+      {
+        "id": "moto.moon-bribe-frankness",
+        "claim": "Moon's bribes section says a traffic stop is the only bribe a tourist is likely to face and that refusing is 'a bad idea' because impoundment is legal. Our line stays: don't ride unlicensed; if stopped, be calm and polite; the embassy's guidance governs.",
+        "status": "conflict",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 497
+        },
+        "conflict_with": "corrections.json #2 framing — we do not advise paying; we advise not riding unlicensed",
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam",
+          "is-vietnam-safe-for-americans"
+        ]
+      },
+      {
+        "id": "moto.moon-rental-rules",
+        "claim": "Rental practice per Moon: collateral is a deposit or passport, and some shops invent fees once they hold the passport, so use recommended shops; check brakes and fuel gauge; daily rentals are for town use — telling the shop you are taking the highway matters if anything happens; buy-and-sell for the length of the country is routine in HCMC and Hanoi backpacker streets.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 494
+        },
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam"
+        ]
+      },
+      {
+        "id": "moto.moon-right-on-red",
+        "claim": "Moon's road rules: drive on the right, motorbikes in the far-right lane, honking is a presence signal, buses and trucks 'play chicken'; right turn on red permitted except in Hanoi.",
+        "status": "conflict",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 495
+        },
+        "conflict_with": "LP 2016 p495 'no right turn on red in cities'; needs the current traffic law text",
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam",
+          "crossing-the-street-in-vietnam"
+        ]
+      },
+      {
+        "id": "moto.moon-insurance-exclusion",
+        "claim": "Moon: most travel insurance does not cover road accidents if the rider is unlicensed — the clearest single statement of the point in the three books.",
+        "status": "context",
+        "vintage": 2015,
+        "source": {
+          "book": "moon-2015",
+          "page": 508
+        },
+        "related_articles": [
+          "renting-a-motorbike-in-vietnam",
+          "vietnam-health-and-vaccines"
+        ],
+        "note": "Matches facts.json getting_around.unlicensed_insurance."
       }
     ],
     "boat": [
@@ -1100,6 +1341,47 @@
       "source": {
         "book": "lp-2016",
         "page": 495
+      },
+      "related_articles": [
+        "grab-app-vietnam-guide"
+      ]
+    },
+    {
+      "id": "local.moon-never-bargain-taxi",
+      "claim": "Never bargain a taxi fare: bargaining is never to your advantage against a working meter; check for a meter; Mai Linh is the most reputable national brand.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 493
+      },
+      "related_articles": [
+        "grab-app-vietnam-guide",
+        "vietnam-money-and-costs"
+      ]
+    },
+    {
+      "id": "local.moon-xe-om-night-rule",
+      "claim": "Xe om by day, taxi by night: after dark passengers have been robbed or thrown off bikes with the driver complicit, and drivers may have been drinking; never ride with anyone who seems drunk. Write the address down, agree the fare before boarding, hold the figure if the driver renegotiates mid-ride, insist on a helmet even though the ones offered are useless.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 494
+      },
+      "related_articles": [
+        "grab-app-vietnam-guide",
+        "is-vietnam-safe-for-americans"
+      ]
+    },
+    {
+      "id": "local.moon-xe-om-catcall",
+      "claim": "'You! Motorbiiike!' is the xe om street call; Moon likens the drivers to Manhattan cabbies who ignore physics and traffic law. A shared joke our reader will recognise.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 493
       },
       "related_articles": [
         "grab-app-vietnam-guide"

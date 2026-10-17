@@ -97,6 +97,33 @@
       "related_articles": [
         "vietnamese-cooking-ingredients-to-bring-home"
       ]
+    },
+    {
+      "id": "food.moon-three-regions",
+      "claim": "Moon's version of the three cuisines: north meat-heavy (chicken, beef), chao porridge, the 'officially' best pho, bun cha; centre spicy with bun bo Hue and Hue's bite-sized banh (beo, duc, loc, hoi); south sweeter, seafood-heavy and more fried (banh xeo, Vung Tau's banh khot). Rice and fish sauce are the constants; nearly every village has its own dish.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 499
+      },
+      "related_articles": [
+        "vietnamese-food-guide-first-timers",
+        "pho-bun-cha-banh-mi-what-to-order"
+      ]
+    },
+    {
+      "id": "food.moon-portions",
+      "claim": "Portions are smaller than American ones and cheap enough that seconds are normal — a useful expectation-setter.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 499
+      },
+      "related_articles": [
+        "vietnamese-food-guide-first-timers"
+      ]
     }
   ],
   "venues": [
@@ -303,6 +330,75 @@
       "related_articles": [
         "street-food-safety-vietnam"
       ]
+    },
+    {
+      "id": "food.moon-street-transparency",
+      "claim": "Moon's argument for street food: an open-air kitchen is transparent — you can see which vendors are clean — where a restaurant hides its kitchen. Street-only dishes: coloured xoi, hot tofu pudding with ginger, fried mung-bean rice cakes.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 499
+      },
+      "related_articles": [
+        "street-food-safety-vietnam",
+        "vietnamese-food-guide-first-timers"
+      ]
+    },
+    {
+      "id": "food.moon-bia-hoi",
+      "claim": "Bia hoi is a watery fresh lager in 100-litre kegs that must be drunk the day it is made; a Hanoi after-work men's ritual worth doing for the scene, not the beer. Regional bottled beers: Saigon Red in the south, Huda in the centre.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 500
+      },
+      "related_articles": [
+        "bia-hoi-guide-vietnam"
+      ]
+    },
+    {
+      "id": "food.moon-stranger-side",
+      "claim": "The dishes a squeamish reader should know the words for: thit cho (dog, mostly northern, one Saigon street), hot vit lon (balut, a 19–21-day duck embryo with salt, lime and beer), chuot dong (rice-paddy rat, a seasonal Delta delicacy), ran (snake, a northern ritual with blood and bile shots), pigeon and forest birds in the north, century eggs.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 500
+      },
+      "related_articles": [
+        "vietnamese-food-guide-first-timers"
+      ],
+      "note": "Answers decision gap #33 (avoidance vocabulary)."
+    },
+    {
+      "id": "food.moon-hoi-an-dishes",
+      "claim": "Hoi An's own dishes: cao lau noodles, fried wontons, white rose dumplings; a banh beo vendor sets up mid-afternoon outside the Ngu Bang assembly hall. Hue's com hen (baby clams and rice) is the central-coast opener photo.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 15
+      },
+      "related_articles": [
+        "hoi-an-travel-guide",
+        "pho-bun-cha-banh-mi-what-to-order"
+      ]
+    },
+    {
+      "id": "food.moon-saigon-coffee",
+      "claim": "The Saigon ritual Moon singles out is ca phe bet, sidewalk coffee sitting on the pavement in 30-4 Park — the city's version of Hanoi's bia hoi.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 10
+      },
+      "related_articles": [
+        "vietnamese-coffee-guide",
+        "ho-chi-minh-city-travel-guide"
+      ]
     }
   ],
   "customs": [
@@ -359,6 +455,19 @@
       "related_articles": [
         "street-food-safety-vietnam",
         "vietnam-health-and-vaccines"
+      ]
+    },
+    {
+      "id": "food.moon-greens-on-side",
+      "claim": "With pho, bun bo and banh xeo the fresh greens arrive on the side, so a nervous eater can simply leave them.",
+      "status": "context",
+      "vintage": 2015,
+      "source": {
+        "book": "moon-2015",
+        "page": 506
+      },
+      "related_articles": [
+        "street-food-safety-vietnam"
       ]
     }
   ],
@@ -667,6 +776,174 @@
         "source": {
           "book": "lp-2016",
           "page": 466
+        }
+      },
+      {
+        "term": "banh khot",
+        "gloss": "Vung Tau's bite-sized fried rice cakes",
+        "source": {
+          "book": "moon-2015",
+          "page": 500
+        }
+      },
+      {
+        "term": "banh duc",
+        "gloss": "sticky steamed rice cake, Hue",
+        "source": {
+          "book": "moon-2015",
+          "page": 499
+        }
+      },
+      {
+        "term": "banh loc",
+        "gloss": "Hue steamed tapioca dumplings with shrimp and pork fat",
+        "source": {
+          "book": "moon-2015",
+          "page": 499
+        }
+      },
+      {
+        "term": "banh hoi",
+        "gloss": "bundles of fine rice vermicelli, Hue",
+        "source": {
+          "book": "moon-2015",
+          "page": 499
+        }
+      },
+      {
+        "term": "chao",
+        "gloss": "rice porridge, a northern hot dish",
+        "source": {
+          "book": "moon-2015",
+          "page": 499
+        }
+      },
+      {
+        "term": "hot vit lon",
+        "gloss": "balut — fertilised duck egg eaten from the shell with salt, lime and beer",
+        "source": {
+          "book": "moon-2015",
+          "page": 500
+        }
+      },
+      {
+        "term": "thit cho",
+        "gloss": "dog meat",
+        "source": {
+          "book": "moon-2015",
+          "page": 500
+        }
+      },
+      {
+        "term": "chuot dong",
+        "gloss": "rice-paddy rat, a Delta seasonal dish",
+        "source": {
+          "book": "moon-2015",
+          "page": 500
+        }
+      },
+      {
+        "term": "bia tuoi / bia hoi",
+        "gloss": "fresh draught lager from a keg, drunk the day it is brewed",
+        "source": {
+          "book": "moon-2015",
+          "page": 500
+        }
+      },
+      {
+        "term": "do nhau",
+        "gloss": "drinking snacks — snails, grilled meat and the like",
+        "source": {
+          "book": "moon-2015",
+          "page": 501
+        }
+      },
+      {
+        "term": "tra da",
+        "gloss": "the free light iced tea served at local restaurants",
+        "source": {
+          "book": "moon-2015",
+          "page": 506
+        }
+      },
+      {
+        "term": "ca phe bet",
+        "gloss": "sidewalk coffee drunk sitting on the pavement (Saigon)",
+        "source": {
+          "book": "moon-2015",
+          "page": 10
+        }
+      },
+      {
+        "term": "com hen",
+        "gloss": "Hue baby-clam rice",
+        "source": {
+          "book": "moon-2015",
+          "page": 143
+        }
+      },
+      {
+        "term": "chen",
+        "gloss": "the small individual rice bowl at a family meal",
+        "source": {
+          "book": "moon-2015",
+          "page": 503
+        }
+      },
+      {
+        "term": "em oi",
+        "gloss": "the call that summons a server",
+        "source": {
+          "book": "moon-2015",
+          "page": 502
+        }
+      },
+      {
+        "term": "mot hai ba dzo",
+        "gloss": "'one, two, three, cheers' — the toast",
+        "source": {
+          "book": "moon-2015",
+          "page": 501
+        }
+      },
+      {
+        "term": "dam gio",
+        "gloss": "a death anniversary, celebrated as a family party",
+        "source": {
+          "book": "moon-2015",
+          "page": 489
+        }
+      },
+      {
+        "term": "nha nghi",
+        "gloss": "guesthouse (small budget lodging)",
+        "source": {
+          "book": "moon-2015",
+          "page": 498
+        }
+      },
+      {
+        "term": "khach san",
+        "gloss": "hotel",
+        "source": {
+          "book": "moon-2015",
+          "page": 498
+        }
+      },
+      {
+        "term": "nha thuoc tay",
+        "gloss": "pharmacy",
+        "source": {
+          "book": "moon-2015",
+          "page": 71
+        }
+      },
+      {
+        "term": "cho xoay",
+        "gloss": "the Phu Quoc ridgeback dog",
+        "source": {
+          "book": "moon-2015",
+          "page": 460
         }
       }
     ]

@@ -100,3 +100,53 @@ Numbering continues from the DK list. Only forks LP raises that DK did not, or w
 - Upper berth is cheapest on hard sleepers; soft sleeper is one price.
 - Ice in cities is fine; tap water is not.
 - A car with driver makes Vietnam accessible to wheelchair users; trains do not.
+
+---
+
+# Moon Vietnam 2015 — additional forks and resolutions (2026-10-17)
+
+Numbering continues. Moon is the most opinionated of the three books, so several earlier forks gain a verdict here (listed at the end); the new forks are the ones Moon raises or splits further.
+
+## Routing and sequence
+59. **Halong OR Ninh Binh for a short trip (p97).** Moon states it as the real either/or for travellers without four spare days; neither DK nor LP frames them as substitutes. Criteria never given: boat vs land, weather risk (Halong cancels in winter fog, Ninh Binh doesn't), cost.
+60. **Hue: zero (Moon), one night (LP) or two days (DK)?** Moon's two-week spine skips Hue entirely in favour of three Hoi An days. The dossier owes a rule keyed to interest in history vs beach/food.
+61. **Phong Nha's 4–5-day cost (p145) vs what it displaces.** Moon is the first to price it in days; it never says what to drop (Nha Trang? the Mekong?).
+62. **Day cruise vs overnight at Halong, in days not dollars (p97).** Moon's arithmetic: a day cruise still costs two travel days from Hanoi. The question becomes "if you are spending two days anyway, why not sleep aboard?" — unanswered.
+63. **Halong→Danang: night train or budget flight (p15).** Moon calls them equal in price and leaves the choice to whether you want another Hanoi night. Today's fares have moved; the frame (sleep on the train vs an extra city night) survives.
+64. **Which Delta axis (p19–21, 391).** Can Tho/Cai Rang (the standard) vs the Vinh Long–Sa Dec–Tram Chim–Chau Doc line vs Tra Vinh's Khmer culture. Moon lays out all three and gives day counts but no selection rule by interest (markets, birds, culture, Cambodia onward).
+65. **Phu Quoc minimum stay (p391, 460).** Moon: 2–3 days minimum because the flight or speedboat makes a short stay wasteful, and solo travellers pay a premium. Whether a couple's three Phu Quoc nights beat three Con Dao nights is never addressed.
+
+## Timing
+66. **Three national "best month" answers.** DK Mar–May; LP region-dependent; Moon Sep–Oct or Apr–May. The disagreement itself is the finding: any article giving one answer is wrong somewhere.
+67. **Tet: participate (DK) or avoid (Moon "poor visit")?** Moon is the dissenting vote on fork #18. The dossier should state the trade for a 10-day first-timer explicitly.
+68. **Halong's winter mist: atmosphere or cancellation risk (p98).** Moon says cruises get sidelined Dec–Feb; DK and LP sell the mist as moody. A reader with fixed February dates needs the cancellation probability, which no book has.
+
+## Money and services
+69. **Street cart vs restaurant for the same dish (p510).** Moon: you pay ten times for atmosphere and the food is often worse. True for locals; for a nervous first-timer the fork is really about hygiene confidence, which Moon handles separately (p506). The two need joining.
+70. **Which taxi brand, and whether to phone one at night (p361).** Moon: Mai Linh/Vinasun always at night, others by day. Today the fork is street brand vs Grab vs Xanh SM; the "night" axis is the durable part.
+71. **Xe om from the airport for solo travellers (p360).** A Moon-only option (cheap, 25 minutes, no luggage). Today it is a Grab bike. Never weighed against arriving tired with a bag.
+
+## Risk
+72. **Traffic stop: pay or refuse (p497).** Moon says refusing is a bad idea. We will not advise paying; the only clean resolution is not to ride unlicensed. This fork should be stated and closed in the dossier, not left open.
+73. **Right turn on red: Moon says legal outside Hanoi (p495, 75); LP says not in cities.** Needs the current traffic law. Matters for anyone who does ride.
+74. **Dune driving at Mui Ne vs residual landmines (p229).** Moon mentions remnants around Phan Thiet/Mui Ne; no book connects it to the quad-bike and jeep tours sold on the dunes.
+
+## Forks from the earlier lists that Moon resolves (as book opinion)
+- **#30 / #53 passport to the hotel** → hand it over for registration, ask for it back, expect to prepay (p497).
+- **#31 street food rule** → clean, cooked-to-order, visible kitchen, herbs optional, ice fine in decent places (p506).
+- **#33 exotic-meat vocabulary** → thit cho, hot vit lon, chuot dong, ran (p500).
+- **#34 ship or carry** → courier, never the post (p511).
+- **#45 Sapa harvest month** → September–October (p78), against LP's November.
+- **#52 who pays the driver's fuel** → agree every fee before leaving; no default (p494).
+- **#9 / Halong booking** → month verdict Sep–early Dec (p98); still nothing on Bai Chay vs Hanoi booking.
+- **#21 taxi vs xe om** → xe om by day, taxi by night, never bargain a meter (p493–494).
+- **#27 / #51 tipping** → Moon's fourth opinion (not customary except spas) does not resolve it; it confirms there is no norm to cite.
+
+## What Moon settles well (keep, cite as book opinion)
+- Halong: September to early December.
+- Central coast: February to May; avoid September to January.
+- Never bargain with a metered taxi; walk a block from any station before taking one.
+- Taxi, not xe om, after dark.
+- Order tailoring on the first Hoi An day.
+- Phu Quoc needs three days to justify the hop.
+- Simplify your English; agree the price before any service.

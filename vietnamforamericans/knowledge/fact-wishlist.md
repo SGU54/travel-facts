@@ -135,3 +135,42 @@ Rows LP quantifies that neither facts.json nor the DK list above holds.
 | legal.lgbt_marriage_law_status | LP p481 (2015 law) | Law on Marriage and Family 2014 | P3 |
 | culture.minority_population_share | LP p457 (14 m / 14%) | GSO census 2019 | P2 |
 | culture.catholic_share | LP p459 (8–10%) | GSO census religion table | P3 |
+
+# Moon Vietnam 2015 — additional fact keys (2026-10-17)
+
+Keys Moon quantifies or asserts that neither facts.json nor the DK/LP wishlist rows cover. Same P1–P3 scale. Figures are 2015 and never printed; the key is what we need, the source is where to get it.
+
+| key | what Moon claims (2015) | primary source to settle it | P |
+|---|---|---|---|
+| transport.right_turn_on_red | legal nationwide except Hanoi (p495, p75); LP says not in cities | Law on Road Traffic Order and Safety 2024 + Hanoi municipal rule | P1 |
+| transport.helmet_passenger_required | required for all riders incl. xe om passengers (p493) | same law | P1 |
+| airport.han_official_taxi_flat_rate | posted flat rate at the stand; cap "no more than" a 2015 figure (p72) | Noi Bai airport site; Mai Linh/Taxi Group published tariffs | P1 |
+| airport.han_bus_86 | replaced the VNA minibus Moon describes (p72) | Transerco bus 86 timetable | P1 |
+| airport.sgn_bus_152_109 | bus 152 to Ben Thanh (p360) | HCMC bus authority | P2 |
+| airport.grab_pickup_zones_han_sgn | Moon's xe om-outside-the-terminal tip (p360) is now Grab's pickup point | Grab help pages; airport signage | P1 |
+| money.torn_note_refusal | shops refuse torn VND 10k+ (p509) | State Bank regulation on damaged currency exchange | P2 |
+| money.bank_hours_lunch_closure | 11–1:30 lunch close, 4–4:30 close, Sat mornings (p510) | Vietcombank, BIDV, Techcombank branch hours | P2 |
+| money.spa_tip_expected | spas expect a tip and may present a form (p511) | none official — observation grade; note as such | P3 |
+| visa.phu_quoc_exemption_current | 30-day exemption for overnight Phu Quoc visitors since 2014 (p11) | Vietnam Immigration Department; Decree on Phu Quoc | P1 |
+| embassy.us_hanoi_address_current | book lists Lang Ha / Rose Garden (p71, 496); embassy has moved | vn.usembassy.gov | P1 |
+| health.rabies_pep_schedule | 5 shots unvaccinated vs 2 pre-vaccinated (p507) | CDC rabies PEP schedule (now 4 + RIG) | P2 |
+| health.dengue_vaccine_status | none in 2015 (p506) | CDC Vietnam page; Qdenga licensing in VN | P2 |
+| health.malaria_province_list | books disagree (p12 vs p505) | CDC Yellow Book Vietnam malaria map | P1 |
+| health.methanol_incidents | "a handful of cases" (p507) | MoH / press reports last 3 years; FCO/State advisories | P2 |
+| safety.ti_police_corruption_figure | 37% named police most corrupt (p496) | TI Global Corruption Barometer Asia, latest | P3 |
+| uxo.mui_ne_phan_thiet_status | landmines persist (p229) | VNMAC / MAG Vietnam provincial clearance data | P2 |
+| halong.cruise_cancellation_season | winter weather sidelines cruises (p98) | Quang Ninh port authority suspension notices; operator policies | P1 |
+| halong.hanoi_transfer_time | "four hours" in 2015 (p15); expressway since | Hanoi–Haiphong–Halong expressway timings | P1 |
+| sapa.harvest_window | Sep–Oct (p78) vs LP Nov | Lao Cai tourism board; agronomic calendar | P1 |
+| phongnha.son_doong_price_slots | ~US$3,000, capped (p22, p170) | Oxalis Adventure | P2 |
+| phongnha.independent_caves | which caves need an operator (p170) | Phong Nha-Ke Bang park site | P2 |
+| phuquoc.ferry_operators_ports | Rach Gia / Ha Tien → Bai Vong (p460) | Superdong, Phu Quoc Express schedules | P2 |
+| mekong.tram_chim_crane_season | best before late morning; season implicit (p20) | Tram Chim NP; BirdLife | P3 |
+| national_parks.count | 30 (p22) | MARD / VNFOREST list | P3 |
+| population.hcmc_current | 7.5m official 2015 (p305) | GSO 2024; post-merger figures | P2 |
+| hotel.star_rating_meaning | government stars track building size not quality (p498) | VNAT star-rating criteria (TCVN 4391) | P3 |
+| hotel.passport_hold_practice | legal registration + walkout insurance (p497) | Law on Residence / Decree on foreigner registration | P1 |
+| rail.hcmc_hanoi_vs_flight_price | "roughly the same" for Halong→Danang (p15) | dsvn.vn vs Vietjet/Bamboo live fares | P2 |
+| bus.dangerous_routes | Hue→Hanoi and the Sapa road (p493) | National Traffic Safety Committee accident data | P3 |
+| phone.area_codes_2017 | all book numbers use pre-2017 codes (p511) | MIC renumbering decision 2017 | P3 |
+| dogmeat.city_bans | government ban (p500) | Hanoi 2018 directive; HCMC policy | P3 |
