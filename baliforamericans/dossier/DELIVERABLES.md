@@ -116,6 +116,6 @@ teaserBySwamp: base-split→1 · traffic-time→6 · wet-dry-season→2 · scoot
 ## Site config and operator settings still ★
 
 - `SITE.guide.name/thesis/pages/decisions/failureModes/figures/hooks/asideHooks/inlineHooks/inlineCtas/decisionTeasers/teaserBySwamp/decisionChains/chainArticles/methodEntries` ← the values above (branch `guide-bali-in-its-own-time`, not pushed).
-- `SITE.guide.cover` ← Cloudinary public_id of `build/cover-web.jpg` (exported; upload is the operator's). `previewImages` ← `build/preview-1..3.jpg` (contents, Decision 02 figure page, the bases figure).
+- `SITE.guide.cover` ← media keys of `build/cover-web.jpg` (exported; upload is the operator's). `previewImages` ← `build/preview-1..3.jpg` (contents, Decision 02 figure page, the bases figure).
 - `site_settings.guide_price` (fleet default **$24**, country rule), `guide_checkout_url` (a Stripe payment link with `after_completion` → `/guide/success?session_id=`), `guide_ads_enabled` — all set from the admin Guide panel; the product goes live only when all three exist.
 - The backfill above, after the name is confirmed.

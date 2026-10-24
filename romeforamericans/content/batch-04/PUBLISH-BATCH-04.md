@@ -35,7 +35,7 @@ Then publish via the admin.
 5. best-time-to-visit-rome (when-to-go)
 
 ## Done when
-- [ ] 5 heroes uploaded to Cloudinary
+- [ ] 5 heroes uploaded to R2
 - [ ] 5 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

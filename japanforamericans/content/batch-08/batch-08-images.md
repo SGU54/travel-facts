@@ -24,7 +24,7 @@
 ```
 node scripts/upload-batch.mjs content/batch-08/images content/batch-08/import-batch-08.array.json
 ```
-Confirm `Cloudinary folder: japanforamericans/articles` and `Sorted by numeric prefix`, then `y`. Bulk-import → expect 13 × created. **Fills the empty `food-and-drink`, `what-to-eat`, and `where-to-eat` categories.**
+Confirm `media folder: japanforamericans/articles` and `Sorted by numeric prefix`, then `y`. Bulk-import → expect 13 × created. **Fills the empty `food-and-drink`, `what-to-eat`, and `where-to-eat` categories.**
 
 ## ⚠ Verification
 See `VERIFY-MASTER.md` (now B5–B8). Food content is mostly stable general knowledge, but dietary/allergy guidance and a few specifics are flagged.

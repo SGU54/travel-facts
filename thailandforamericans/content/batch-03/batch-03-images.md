@@ -99,4 +99,4 @@ node scripts/upload-batch.mjs <your-images-folder> articles/import-batch-03.json
 ---
 
 ### After upload
-Once all 15 are in Cloudinary, the `<!-- IMAGE_SLOT_n -->` comments get replaced with `<figure><img ...></figure>` (descriptive alt, URLs from the public_ids). The 5 hero `featured_image`s are already set in `import-batch-03.json`.
+Once all 15 are in R2, the `<!-- IMAGE_SLOT_n -->` comments get replaced with `<figure><img ...></figure>` (descriptive alt, URLs from the public_ids). The 5 hero `featured_image`s are already set in `import-batch-03.json`.

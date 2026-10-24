@@ -49,7 +49,7 @@ No factual errors found; eSIM + ETIAS + tipping all verified accurate.
 6. cash-cards-tipping-rome (money-and-costs)
 
 ## Done when
-- [ ] 6 heroes uploaded to Cloudinary
+- [ ] 6 heroes uploaded to R2
 - [ ] 6 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

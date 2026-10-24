@@ -19,7 +19,7 @@
 ```
 node scripts/upload-batch.mjs content/batch-10/images content/batch-10/import-batch-10.array.json
 ```
-Confirm the script prints `Cloudinary folder: japanforamericans/articles` and `Sorted by numeric prefix`, type `y`, then run the bulk import.
+Confirm the script prints `media folder: japanforamericans/articles` and `Sorted by numeric prefix`, type `y`, then run the bulk import.
 
 ## IMPORTANT — these are NEW articles (creates, not updates)
 - All 8 have `status: "draft"`. On import they should report **8 × created** (not "updated"). If your tool is the upsert-by-slug batch-update, that's fine — none of these slugs exist yet, so they'll be inserted as new draft rows.

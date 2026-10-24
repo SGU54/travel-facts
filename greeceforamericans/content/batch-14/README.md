@@ -14,6 +14,6 @@ ETIAS (not yet required, ~€7, late 2026) and EES (live since Oct 2025) change.
 
 ## Next
 1. Images: 15 per batch-14-images.md (named 01..15), then
-   CLOUDINARY_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-14.json  (expect 15/15)
+   MEDIA_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-14.json  (expect 15/15)
 2. node scripts/articles-batch.mjs update <path>/import-batch-14.json   (draft)
 3. links -> affiliates -> review -> publish.

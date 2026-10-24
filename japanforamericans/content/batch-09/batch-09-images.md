@@ -24,7 +24,7 @@
 ```
 node scripts/upload-batch.mjs content/batch-09/images content/batch-09/import-batch-09.array.json
 ```
-Confirm `Cloudinary folder: japanforamericans/articles` + `Sorted by numeric prefix`, `y`, bulk-import → expect 13 × created. **Fills the empty `connectivity` and `local-transit-ic-cards` categories.**
+Confirm `media folder: japanforamericans/articles` + `Sorted by numeric prefix`, `y`, bulk-import → expect 13 × created. **Fills the empty `connectivity` and `local-transit-ic-cards` categories.**
 
 ## ⚠ Verification
 See `VERIFY-MASTER.md` (now B5–B9). The SIM/eSIM articles NAME providers (Airalo, Ubigi, Holafly, Sakura Mobile, Mobal, IIJmio) and the JR Pass / Haruka / airport details — all flagged HIGH because plans, prices, and pass rules change.

@@ -45,7 +45,7 @@ is Leo XIV) so it won't date.
 6. caravaggio-in-rome (museums-and-galleries)
 
 ## Done when
-- [ ] 6 heroes uploaded to Cloudinary
+- [ ] 6 heroes uploaded to R2
 - [ ] 6 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

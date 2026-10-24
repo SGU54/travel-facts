@@ -1,6 +1,6 @@
 # Batch 4 — Image Manifest (barcelonaforamericans)
 Hero + 2 body per article, in order (15 total). Upload:
-  CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-04.json
+  MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-04.json
 Prefer landscape ≥1600px, no recognizable faces, daylight.
 
 ## girona-day-trip

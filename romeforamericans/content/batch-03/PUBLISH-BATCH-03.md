@@ -34,7 +34,7 @@ hero image loads; renders cleanly. Then publish via the admin.
 5. rome-in-3-days (rome-in-1-3-days)
 
 ## Done when
-- [ ] 5 heroes uploaded to Cloudinary
+- [ ] 5 heroes uploaded to R2
 - [ ] 5 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

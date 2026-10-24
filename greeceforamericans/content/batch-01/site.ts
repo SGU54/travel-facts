@@ -103,11 +103,11 @@ export const SITE = {
     quickLinksStyle: 'cards' as 'none' | 'cards' | 'list' | 'rail' | 'panel',
   },
 
-  cloudinary: {
-    // NOTE: 'cloud' is the Cloudinary CLOUD NAME (account id), NOT the folder.
+  media: {
+    // NOTE: 'cloud' is the R2 CLOUD NAME (account id), NOT the folder.
     // This account is co-hosted; the cloud name is 'dsrkwieur'. The per-site
     // FOLDER is 'greeceforamericans' (see folder below). Env overrides in prod.
-    cloud: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD ?? 'dsrkwieur',
+    cloud: process.env.NEXT_PUBLIC_MEDIA_HOST ?? 'dsrkwieur',
     folder: 'greeceforamericans',
     presets: {
       articles: 'greeceforamericans_articles',
@@ -132,11 +132,11 @@ export const SITE = {
 
 export type SiteConfig = typeof SITE;
 
-export function cloudinaryUrl(
+export function mediaUrl(
   publicId: string | null | undefined,
   transform = 'f_auto,q_auto'
 ): string | null {
   if (!publicId) return null;
-  const id = publicId.includes('/') ? publicId : `${SITE.cloudinary.folder}/${publicId}`;
-  return `https://res.cloudinary.com/${SITE.cloudinary.cloud}/image/upload/${transform}/${id}`;
+  const id = publicId.includes('/') ? publicId : `${SITE.media.folder}/${publicId}`;
+  return `https://img.sgfleetmedia.com/${SITE.media.cloud}/image/upload/${transform}/${id}`;
 }

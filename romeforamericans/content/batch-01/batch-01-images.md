@@ -4,7 +4,7 @@ Each article needs **one hero image**. Download them in THIS exact order and put
 them in a single folder, then run the upload script (below). Order matters — the
 script matches images to public_ids by download order.
 
-| # | Download order | Cloudinary public_id (auto-set by script) | Suggested subject |
+| # | Download order | media keys (auto-set by script) | Suggested subject |
 |---|----------------|--------------------------------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/colosseum-tickets-without-getting-scammed-hero | Colosseum exterior, golden hour, no crowds in front |
 | 2 | image 2 | romeforamericans/articles/colosseum-forum-palatine-combined-ticket-hero | Roman Forum looking toward the Colosseum |

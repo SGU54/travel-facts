@@ -1,6 +1,6 @@
 # Batch 16 — image manifest (10 files)
 
-Download in this order. Filenames are the Cloudinary public IDs — upload each
+Download in this order. Filenames are the R2 public IDs — upload each
 into `turkeyforamericans/articles/` with EXACTLY the name in the first column.
 
 **Registers rule (this batch is health/insurance):** no patients, no faces, no

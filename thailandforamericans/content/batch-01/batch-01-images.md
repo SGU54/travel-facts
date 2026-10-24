@@ -6,7 +6,7 @@
 node scripts/upload-batch.mjs <your-images-folder> articles/import-batch-01.json
 ```
 
-The script maps your folder (sorted by download order) to these Cloudinary public_ids, previews the mapping, and uploads only after you confirm. If the count doesn't match (15 images expected), it stops and shows both lists.
+The script maps your folder (sorted by download order) to these media keys, previews the mapping, and uploads only after you confirm. If the count doesn't match (15 images expected), it stops and shows both lists.
 
 **Picking rules for every image:**
 - The candidate links are **pages to pick from**, not guaranteed direct downloads.
@@ -109,4 +109,4 @@ The script maps your folder (sorted by download order) to these Cloudinary publi
 ---
 
 ### After upload
-Once `upload-batch.mjs` confirms all 15 are in Cloudinary, the `<!-- IMAGE_SLOT_n -->` comments in the article HTML get replaced with `<figure><img ...></figure>` tags (descriptive alt text, URLs built from the public_ids). The 5 `featured_image` heroes are already set in `import-batch-01.json`.
+Once `upload-batch.mjs` confirms all 15 are in R2, the `<!-- IMAGE_SLOT_n -->` comments in the article HTML get replaced with `<figure><img ...></figure>` tags (descriptive alt text, URLs built from the public_ids). The 5 `featured_image` heroes are already set in `import-batch-01.json`.

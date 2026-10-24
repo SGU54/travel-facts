@@ -1,6 +1,6 @@
 # Batch 5 — Image Manifest (barcelonaforamericans)
 Hero + 2 body per article (15 total). Upload:
-  CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-05.json
+  MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-05.json
 
 ## camp-nou-tour-guide
 - HERO Spotify Camp Nou under renovation / FC Barcelona stadium exterior — https://unsplash.com/s/photos/camp-nou · https://www.pexels.com/search/camp%20nou/

@@ -1,5 +1,5 @@
 # Batch 11 — Image Manifest (barcelonaforamericans) — 5 articles, 15 images
-Upload: CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-11.json
+Upload: MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-11.json
 
 ## sitges-day-trip
 - HERO Sitges seafront w/ hilltop Sant Bartomeu church over the water — https://unsplash.com/s/photos/sitges · https://www.pexels.com/search/sitges/

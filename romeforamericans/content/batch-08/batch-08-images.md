@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/tivoli-day-trip-hero | Villa d'Este fountains terraced gardens, or Hadrian's Villa Canopus pool |
 | 2 | image 2 | romeforamericans/articles/ostia-antica-day-trip-hero | Ostia Antica ancient street/ruins or its black-and-white mosaics |

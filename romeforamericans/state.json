@@ -72,7 +72,7 @@
         "SITE_CONFIG filled (structural only — palette/fonts left at neutral template defaults for Part 3 design): domain, dbSchema='rome', factRegions=['eu'], ui strings kept from live voice, localTime Europe/Rome, quickLinks (4 real Plan-your-trip slugs), destinationsRibbon, affiliates (+rail/esim), bylineNote (D23 honest).",
         "Feature-set config strips filled from facts.json: trustFacts (guides count dynamic), startHere (6 slugs VERIFIED), bestTime months (Apr/May/Oct=best), costTiers (honest ranges + rate-move nudge, hard rule 13), overviewMap copy.",
         "geo.ts filled — MODEL B single-city planner (Rome anchor at N-day depths + 7 day-trip bases). 16 slugs all verified against live article list; agreed_stable coordinates. Planner + DestinationsMap now render.",
-        "CLOUDINARY RULE-10 FIX: old repo wrongly set cloud=folder='romeforamericans'. v2 config: cloud from env (real ACCOUNT name, NOT 'romeforamericans'), folder='romeforamericans'. Existing public_ids embed 'romeforamericans/...' so cloudinaryUrl() resolves them unchanged; folder only affects new admin uploads."
+        "R2 RULE-10 FIX: old repo wrongly set cloud=folder='romeforamericans'. v2 config: cloud from env (real ACCOUNT name, NOT 'romeforamericans'), folder='romeforamericans'. Existing public_ids embed 'romeforamericans/...' so mediaUrl() resolves them unchanged; folder only affects new admin uploads."
       ],
       "db_migrations": {
         "artifact": "SETUP_rome_v2_migrations.sql",

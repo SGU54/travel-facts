@@ -35,7 +35,7 @@ frozen — all "check current"); hero image loads; renders cleanly. Then publish
 5. trastevere-after-dark (trastevere)
 
 ## Done when
-- [ ] 5 heroes uploaded to Cloudinary
+- [ ] 5 heroes uploaded to R2
 - [ ] 5 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

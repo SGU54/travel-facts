@@ -7,7 +7,7 @@ Status: WRITTEN. cloud=dsrkwieur, 15 images. Safety uses 112 (European emergency
 1. SECOND GATE: paste second-gate-prompt.txt into 1-2 models (checks 112-not-911, tipping, plug/water facts, phrase translations); send findings.
    NOTE: the phrase "no US-style 18-20% expectation" is CORRECT framing, not an error — a naive checker may false-flag it.
 2. Images: 15 per batch-15-images.md (named 01..15), then
-   CLOUDINARY_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-15.json  (expect 15/15)
+   MEDIA_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-15.json  (expect 15/15)
 3. node scripts/articles-batch.mjs update <path>/import-batch-15.json   (draft)
 4. links -> affiliates -> review -> publish.
 

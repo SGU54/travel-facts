@@ -1,6 +1,6 @@
 # Batch 6 — Image Manifest (barcelonaforamericans) — 4 articles, 12 images
 Hero + 2 body per article, in order. Upload:
-  CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-06.json
+  MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-06.json
 
 ## best-hotels-first-timers-barcelona
 - HERO Eixample hotel facade / elegant lobby — https://unsplash.com/s/photos/barcelona-hotel · https://www.pexels.com/search/hotel%20lobby/

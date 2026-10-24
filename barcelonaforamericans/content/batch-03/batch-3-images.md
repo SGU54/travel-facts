@@ -1,6 +1,6 @@
 # Batch 3 — Image Manifest (barcelonaforamericans)
 Hero + 2 body per article, in order (15 total). Upload:
-  CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-03.json
+  MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-03.json
 
 ## flights-to-barcelona-from-us
 - HERO widebody jet / BCN El Prat exterior — https://unsplash.com/s/photos/airplane-airport · https://www.pexels.com/search/airport%20plane/

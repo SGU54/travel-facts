@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/roman-dishes-to-try-hero | A classic Roman pasta (cacio e pepe / carbonara) plated, rustic table |
 | 2 | image 2 | romeforamericans/articles/best-trattorias-rome-hero | Cozy Roman trattoria interior or a Testaccio/|

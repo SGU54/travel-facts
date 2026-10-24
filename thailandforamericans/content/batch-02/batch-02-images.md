@@ -6,7 +6,7 @@
 node scripts/upload-batch.mjs <your-images-folder> articles/import-batch-02.json
 ```
 
-The script maps your folder (sorted by download order) to these Cloudinary public_ids, previews the mapping, and uploads only after you confirm. **15 images expected** (5 heroes + 10 in-body).
+The script maps your folder (sorted by download order) to these media keys, previews the mapping, and uploads only after you confirm. **15 images expected** (5 heroes + 10 in-body).
 
 **Picking rules for every image:** candidate links are pages to pick from, not direct downloads. Choose **landscape, ≥1600px**, sharp. Unsplash & Pexels = free commercial, no attribution. **No recognizable faces, no brand/logo signage.**
 
@@ -101,4 +101,4 @@ The script maps your folder (sorted by download order) to these Cloudinary publi
 ---
 
 ### After upload
-Once all 15 are in Cloudinary, the `<!-- IMAGE_SLOT_n -->` comments get replaced with `<figure><img ...></figure>` (descriptive alt text, URLs from the public_ids). The 5 hero `featured_image`s are already set in `import-batch-02.json`.
+Once all 15 are in R2, the `<!-- IMAGE_SLOT_n -->` comments get replaced with `<figure><img ...></figure>` (descriptive alt text, URLs from the public_ids). The 5 hero `featured_image`s are already set in `import-batch-02.json`.

@@ -25,7 +25,7 @@ guide: {
     'the number you would look up does not exist. This book does the reasoning ' +
     "the lookup can't.",
 
-  cover: '',        // Stage E — Cloudinary public_id once the cover renders
+  cover: '',        // Stage E — media keys once the cover renders
   pages: '',        // Stage F — set from the rendered PDF, never estimated
   decisions: 5,
   failureModes: 0,  // Stage C counts these; never guessed ahead

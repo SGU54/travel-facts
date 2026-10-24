@@ -40,7 +40,7 @@ flags this as "paid but not timed," that flag is wrong; keep the timed-entry wor
 6. castel-santangelo-guide (vatican)
 
 ## Done when
-- [ ] 6 heroes uploaded to Cloudinary
+- [ ] 6 heroes uploaded to R2
 - [ ] 6 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

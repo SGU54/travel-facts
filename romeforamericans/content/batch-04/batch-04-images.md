@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/getting-around-rome-overview-hero | Person walking a cobbled Rome street / a tram passing a piazza |
 | 2 | image 2 | romeforamericans/articles/rome-transport-tickets-roma-pass-hero | Rome metro entrance / yellow validation gate / ATAC bus |

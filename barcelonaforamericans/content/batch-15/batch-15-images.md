@@ -1,7 +1,7 @@
 # Batch 15 — Image Manifest (barcelonaforamericans) — FINAL 3 articles, 9 images
 # Format: each slot lists a SPECIFIC named subject + direct Unsplash & Pexels search links.
 # Pick whichever subject's results look best; alternates given where the lead subject is hard to shoot.
-Upload: CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-15.json
+Upload: MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-15.json
 
 ## barcelona-festivals-events
 - HERO  **Castellers (human towers)** — the iconic, photogenic festival image

@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/trastevere-neighborhood-guide-hero | Trastevere cobbled lane, ivy + ochre walls (daytime) |
 | 2 | image 2 | romeforamericans/articles/centro-storico-neighborhood-guide-hero | Pantheon or Piazza Navona / a centro storico lane |

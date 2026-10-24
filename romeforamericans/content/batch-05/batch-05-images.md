@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/common-scams-in-rome-hero | Busy Rome tourist crowd / pickpocket-awareness scene (no identifiable faces) |
 | 2 | image 2 | romeforamericans/articles/best-neighborhoods-to-stay-rome-hero | Rome rooftops across neighborhoods, or a characterful residential street |

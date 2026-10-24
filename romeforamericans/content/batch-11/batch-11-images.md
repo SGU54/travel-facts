@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/trevi-fountain-guide-hero | Trevi Fountain floodlit at night (Oceanus + cascades) |
 | 2 | image 2 | romeforamericans/articles/piazza-navona-guide-hero | Piazza Navona with Bernini's Four Rivers fountain |

@@ -6,6 +6,6 @@ Cluster interlinks + funnels to where-to-stay-in-crete (batch 3). IDP-for-drivin
 ## Next
 1. SECOND GATE: paste second-gate-prompt.txt into 1–2 models; send findings.
 2. Images: 15 per batch-08-images.md (named 01..15), then
-   CLOUDINARY_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-08.json  (expect 15/15)
+   MEDIA_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-08.json  (expect 15/15)
 3. node scripts/articles-batch.mjs update <path>/import-batch-08.json   (draft)
 4. links → affiliates → review → publish.

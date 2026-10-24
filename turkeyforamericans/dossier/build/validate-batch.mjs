@@ -6,7 +6,7 @@
  * rule applies to MUTATION).
  *
  * Usage:
- *   node scripts/validate-batch.mjs <import-batch-NN.json> [--folder <cloudinary-folder>] [--disclosure "<site disclosure string>"]
+ *   node scripts/validate-batch.mjs <import-batch-NN.json> [--folder <media-folder>] [--disclosure "<site disclosure string>"]
  *   node scripts/validate-batch.mjs --preflight <import-batch-NN.json>     # category check vs DB
  *
  * Preflight needs SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, SUPABASE_DB_SCHEMA in env

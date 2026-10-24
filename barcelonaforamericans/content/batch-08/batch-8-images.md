@@ -1,5 +1,5 @@
 # Batch 8 — Image Manifest (barcelonaforamericans) — 5 neighborhood guides, 15 images
-Upload: CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-08.json
+Upload: MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-08.json
 
 ## gothic-quarter-guide
 - HERO narrow atmospheric Gothic Quarter lane — https://unsplash.com/s/photos/gothic-quarter-barcelona · https://www.pexels.com/search/barcelona%20gothic%20quarter/

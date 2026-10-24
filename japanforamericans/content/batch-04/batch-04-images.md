@@ -11,7 +11,7 @@ Two heroes, no in-body images. Download in this order (matches `import-batch-04.
 ```
 node scripts/upload-batch.mjs content/batch-04/images content/batch-04/import-batch-04.array.json
 ```
-Confirm `Cloudinary folder: japanforamericans/articles`, then `y`.
+Confirm `media folder: japanforamericans/articles`, then `y`.
 
 ## Then
 Bulk-import `import-batch-04.array.json`. Both categories match the live schema → expect 2 × "created."

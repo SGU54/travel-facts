@@ -1,5 +1,5 @@
 # Batch 14 — Image Manifest (barcelonaforamericans) — 5 articles, 15 images
-Upload: CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-14.json
+Upload: MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-14.json
 
 ## poble-sec-sant-antoni-guide
 - HERO Carrer de Blai pintxos bar / Sant Antoni market iron facade — https://unsplash.com/s/photos/carrer-de-blai · https://www.pexels.com/search/pintxos%20bar/

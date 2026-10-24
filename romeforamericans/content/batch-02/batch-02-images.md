@@ -2,7 +2,7 @@
 
 Each article needs **one hero image**. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/st-peters-basilica-without-the-wait-hero | St. Peter's Basilica facade / dome across the square |
 | 2 | image 2 | romeforamericans/articles/vatican-museums-sistine-chapel-tickets-hero | Vatican Museums gallery (e.g. Gallery of Maps corridor) |

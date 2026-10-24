@@ -1,5 +1,5 @@
 # Batch 13 — Image Manifest (barcelonaforamericans) — 5 articles, 15 images
-Upload: CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-13.json
+Upload: MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-13.json
 
 ## vermouth-cava-barcelona
 - HERO glass of vermut on ice w/ orange + olive on sunny terrace — https://unsplash.com/s/photos/vermouth · https://www.pexels.com/search/vermouth/

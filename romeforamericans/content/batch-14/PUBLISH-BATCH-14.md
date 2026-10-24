@@ -55,7 +55,7 @@ Grok + Gemini clean on all 6. DeepSeek flagged 4 items:
 6. best-markets-rome (roman-dishes)
 
 ## Done when
-- [ ] 6 heroes uploaded to Cloudinary
+- [ ] 6 heroes uploaded to R2
 - [ ] 6 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

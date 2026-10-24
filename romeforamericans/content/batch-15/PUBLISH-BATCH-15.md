@@ -52,7 +52,7 @@ No factual errors; CIN + Line C + neighborhood facts all confirmed accurate by b
 6. apartment-vs-hotel-rome (budget-and-family)
 
 ## Done when
-- [ ] 6 heroes uploaded to Cloudinary
+- [ ] 6 heroes uploaded to R2
 - [ ] 6 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

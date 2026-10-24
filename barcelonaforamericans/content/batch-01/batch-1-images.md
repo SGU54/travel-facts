@@ -2,7 +2,7 @@
 
 Hero + 2 body slots per article. Candidate links are curated Unsplash/Pexels search
 URLs scoped to the exact subject — pick one, download, upload via the admin Media
-page into Cloudinary folder `barcelonaforamericans` (preset `_media`), then map the
+page into media folder `barcelonaforamericans` (preset `_media`), then map the
 slot to the public_id in Stage 4. Prefer: landscape ≥1600px, no recognizable faces,
 no heavy filters, daylight unless noted.
 

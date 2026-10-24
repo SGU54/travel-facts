@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/pantheon-visiting-guide-hero | Pantheon interior dome + oculus, light beam |
 | 2 | image 2 | romeforamericans/articles/roman-forum-guide-hero | Roman Forum columns with the Arch of Septimius Severus / Temple of Saturn |

@@ -65,7 +65,7 @@ cleanly. Then publish via admin.
 6. mistakes-americans-make-in-rome (safety-and-scams)
 
 ## Done when
-- [ ] 6 heroes picked, verified, uploaded to Cloudinary
+- [ ] 6 heroes picked, verified, uploaded to R2
 - [ ] 6 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

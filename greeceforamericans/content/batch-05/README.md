@@ -6,6 +6,6 @@ Interlink + funnel to where-to-stay-in-santorini (batch 1). Status: WRITTEN. clo
 ## Next
 1. SECOND GATE: paste second-gate-prompt.txt into 1–2 models; send findings.
 2. Images: 15 per batch-05-images.md (named 01..15), then
-   CLOUDINARY_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-05.json  (expect 15/15)
+   MEDIA_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-05.json  (expect 15/15)
 3. node scripts/articles-batch.mjs update <path>/import-batch-05.json   (draft)
 4. links → affiliates → review → publish.

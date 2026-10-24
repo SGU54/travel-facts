@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/roman-coffee-culture-hero | Espresso on a marble bar counter / Italian caffè interior |
 | 2 | image 2 | romeforamericans/articles/best-aperitivo-rome-hero | Aperol Spritz / aperitivo spread at golden hour |

@@ -14,7 +14,7 @@ From the repo root:
 ```
 node scripts/upload-batch.mjs content/batch-03/images content/batch-03/import-batch-03.array.json
 ```
-Confirm the preview reads `Cloudinary folder: japanforamericans/articles`, then `y`.
+Confirm the preview reads `media folder: japanforamericans/articles`, then `y`.
 
 ## Then
 Bulk-import `import-batch-03.array.json` in the admin. All 4 categories match the live schema → expect 4 × "created" with working heroes. No remap.

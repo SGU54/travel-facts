@@ -11,7 +11,7 @@ best-greek-islands-for-first-timers + best-beaches-in-greece are constrained STR
 ## Next
 1. SECOND GATE: paste second-gate-prompt.txt into 1-2 models (scope + correction#1 + flight/arrival facts); send findings.
 2. Images: 15 per batch-16-images.md (named 01..15), then
-   CLOUDINARY_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-16.json  (expect 15/15)
+   MEDIA_FOLDER=greeceforamericans node scripts/upload-batch.mjs <folder> <path>/import-batch-16.json  (expect 15/15)
 3. node scripts/articles-batch.mjs update <path>/import-batch-16.json   (draft)
 4. links -> affiliates -> review -> publish.
 

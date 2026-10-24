@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/colosseum-vs-vatican-where-to-stay-hero | Split-feel: Colosseum + St Peter's, or a Monti/Prati street |
 | 2 | image 2 | romeforamericans/articles/staying-near-termini-hero | Roma Termini station exterior / a hotel street near it |

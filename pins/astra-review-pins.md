@@ -150,13 +150,13 @@ Testé avec les mêmes polices et le même contenu : le bandeau de trois jours p
 
 **Coût lecteur :** rang 9 — netteté inutilement perdue à l’ouverture, invisible dans le seul contrôle miniature. **Coût de réalisation :** trivial à modéré.
 
-**Où :** `scripts/make_pins.py`, `cloudinary()`, appels dans `tpl_a()` et `tpl_b()`, `device_scale_factor=2` dans `render()` ; `references/templates.md`, introduction.
+**Où :** `scripts/make_pins.py`, `media()`, appels dans `tpl_a()` et `tpl_b()`, `device_scale_factor=2` dans `render()` ; `references/templates.md`, introduction.
 
-**Observation :** A demande à Cloudinary une image de **900 × 780**, B de **900 × 330**. Ces images sont placées dans un canevas capturé à DPR 2 : la surface raster affichée approche **1750 × 1560** pour A et **1750 × 660** pour B, selon les bordures. Le texte bénéficie bien du rendu 2× ; la photo issue de ces URLs est agrandie presque deux fois par axe. Les URLs complètes, laissées intactes par `cloudinary()`, ne sont pas couvertes par ce constat.
+**Observation :** A demande à R2 une image de **900 × 780**, B de **900 × 330**. Ces images sont placées dans un canevas capturé à DPR 2 : la surface raster affichée approche **1750 × 1560** pour A et **1750 × 660** pour B, selon les bordures. Le texte bénéficie bien du rendu 2× ; la photo issue de ces URLs est agrandie presque deux fois par axe. Les URLs complètes, laissées intactes par `media()`, ne sont pas couvertes par ce constat.
 
 **Pourquoi c’est un défaut :** Le PNG de 2000px ne donne pas rétroactivement cette définition à la photo. Le défaut de dimensionnement est certain ; la dégradation perceptible d’une photo donnée ne peut pas être affirmée à partir de placeholders.
 
-**Changement :** Demander à Cloudinary les dimensions de la zone image **multipliées par le DPR**, arrondies, en conservant le ratio exact de cette zone. Prévoir `crop_position` ou un point focal par pin lorsque `g_auto` ne choisit pas le bon sujet, sans double recadrage contradictoire. Vérifier à la fois le cadrage miniature et la netteté à l’ouverture. Ne pas agrandir artificiellement une source insuffisante : la signaler ou choisir une source adaptée.
+**Changement :** Demander à R2 les dimensions de la zone image **multipliées par le DPR**, arrondies, en conservant le ratio exact de cette zone. Prévoir `crop_position` ou un point focal par pin lorsque `g_auto` ne choisit pas le bon sujet, sans double recadrage contradictoire. Vérifier à la fois le cadrage miniature et la netteté à l’ouverture. Ne pas agrandir artificiellement une source insuffisante : la signaler ou choisir une source adaptée.
 
 ## D. L’idée directrice et les contrôles
 

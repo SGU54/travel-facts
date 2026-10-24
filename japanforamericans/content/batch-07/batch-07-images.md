@@ -24,7 +24,7 @@
 ```
 node scripts/upload-batch.mjs content/batch-07/images content/batch-07/import-batch-07.array.json
 ```
-Confirm `Cloudinary folder: japanforamericans/articles` and `Sorted by numeric prefix`, then `y`. Bulk-import → expect 13 × created. **Fills the empty `temples-and-shrines` category (+4).**
+Confirm `media folder: japanforamericans/articles` and `Sorted by numeric prefix`, then `y`. Bulk-import → expect 13 × created. **Fills the empty `temples-and-shrines` category (+4).**
 
 ## ⚠ Verification
 See `VERIFY-MASTER.md` (now covers B5–B7). Most of this batch leans on the verified FINAL.json sight pools (Osaka, Hakone, Nara, Nikko, Kamakura, Himeji, Senso-ji, Fushimi Inari, Meiji), so risk is moderate — new specifics flagged there.

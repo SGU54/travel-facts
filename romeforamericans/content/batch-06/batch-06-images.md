@@ -2,7 +2,7 @@
 
 One hero image per article. Download in THIS order into one folder, then run the upload script.
 
-| # | Order | Cloudinary public_id | Suggested subject |
+| # | Order | media keys | Suggested subject |
 |---|-------|----------------------|-------------------|
 | 1 | image 1 | romeforamericans/articles/rome-in-4-days-hero | Rome panorama with a day-trip feel (rooftops + a train or countryside hint) |
 | 2 | image 2 | romeforamericans/articles/rome-in-5-7-days-hero | Relaxed Roman scene — a quiet piazza, market, or long-stay neighborhood street |

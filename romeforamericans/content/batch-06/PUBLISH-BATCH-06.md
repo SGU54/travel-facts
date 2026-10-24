@@ -37,7 +37,7 @@ all "check current"); hero image loads; renders cleanly. Then publish via admin.
 This batch completes ALL 29 tier-1 articles (plus 1 tier-2). Batches 7+ are tier-2 depth pieces.
 
 ## Done when
-- [ ] 5 heroes uploaded to Cloudinary
+- [ ] 5 heroes uploaded to R2
 - [ ] 5 imported as draft
 - [ ] Each reviewed against the quality gate
 - [ ] Published via admin

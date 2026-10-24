@@ -2,7 +2,7 @@
 
 Hero + 2 body slots per article, in order. Pull one per slot, name them so they sort
 hero → 1 → 2 within each article (the import expects 15 total). Upload with:
-  CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-02.json
+  MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-02.json
 Prefer landscape ≥1600px, no recognizable faces, daylight.
 
 ## casa-batllo-vs-casa-mila

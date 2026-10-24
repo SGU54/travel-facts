@@ -55,17 +55,17 @@
       "id": 7,
       "date": "2026-06-12",
       "scope": "style",
-      "wrong": "In-body <figure> image URLs were written with the literal placeholder res.cloudinary.com/CLOUD/ because the cloud name was not yet known when figures were generated; broke all body-image previews in admin",
-      "right": "Always substitute the real Cloudinary cloud name (from SITE_CONFIG.cloudinary.cloud / NEXT_PUBLIC_CLOUDINARY_CLOUD) into figure URLs BEFORE building the import file. Never ship a CLOUD/<placeholder> URL. Better: store only the public_id and let the site build the URL at render time, matching how featured_image works",
+      "wrong": "In-body <figure> image URLs were written with the literal placeholder img.sgfleetmedia.com/CLOUD/ because the cloud name was not yet known when figures were generated; broke all body-image previews in admin",
+      "right": "Always substitute the real media host (from SITE_CONFIG.media.cloud / NEXT_PUBLIC_MEDIA_HOST) into figure URLs BEFORE building the import file. Never ship a CLOUD/<placeholder> URL. Better: store only the public_id and let the site build the URL at render time, matching how featured_image works",
       "applies_to": "all (publishing)"
     },
     {
       "id": 8,
       "date": "2026-06-12",
       "scope": "style",
-      "wrong": "upload-batch.mjs defaulted CLOUDINARY_FOLDER to the literal previous site (vmarokko) and derived the preset name as <BASE>_articles (plural), while the actual preset was <site>_article (singular); images silently uploaded to vmarokko/articles/<site>/articles/<slug>",
-      "right": "Per upload run, set CLOUDINARY_FOLDER=<thissite> explicitly. Template fix: upload-batch.mjs must REQUIRE CLOUDINARY_FOLDER (no vmarokko fallback \u2014 throw if unset) and the preset name must match what is actually created in Cloudinary. Standardize preset names to <site>_articles + <site>_media at site setup. Presets are SIGNED across this network (script signs); do not switch to unsigned",
-      "applies_to": "all (publishing, cloudinary setup)"
+      "wrong": "upload-batch.mjs defaulted MEDIA_FOLDER to the literal previous site (vmarokko) and derived the preset name as <BASE>_articles (plural), while the actual preset was <site>_article (singular); images silently uploaded to vmarokko/articles/<site>/articles/<slug>",
+      "right": "Per upload run, set MEDIA_FOLDER=<thissite> explicitly. Template fix: upload-batch.mjs must REQUIRE MEDIA_FOLDER (no vmarokko fallback \u2014 throw if unset) and the preset name must match what is actually created in R2. Standardize preset names to <site>_articles + <site>_media at site setup. Presets are SIGNED across this network (script signs); do not switch to unsigned",
+      "applies_to": "all (publishing, media setup)"
     },
     {
       "id": 9,

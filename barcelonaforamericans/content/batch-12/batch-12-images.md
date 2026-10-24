@@ -1,5 +1,5 @@
 # Batch 12 — Image Manifest (barcelonaforamericans) — 5 articles, 15 images
-Upload: CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-12.json
+Upload: MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-12.json
 
 ## barcelona-trip-cost-usd
 - HERO euros + Barcelona map + travel planning flat-lay — https://unsplash.com/s/photos/travel-budget · https://www.pexels.com/search/travel%20money%20map/

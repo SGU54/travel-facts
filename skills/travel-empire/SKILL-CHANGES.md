@@ -338,11 +338,11 @@ Lessons from the Thailand site (launched live, 80 articles) baked in. Files chan
 
 ## references/4-publishing.md
 - New MANDATORY step 3.5 "Convert slots → real figure tags" (the #1 broken-site cause): full
-  Cloudinary URL shape (cloud≠folder), hero-vs-body rule, and a grep-for-IMAGE_SLOT=0 pass gate.
+  R2 URL shape (cloud≠folder), hero-vs-body rule, and a grep-for-IMAGE_SLOT=0 pass gate.
   Real Thailand bug: 159 in-body images shipped invisible until converted.
 - Image-manifest link rules: queries must be photo-TAG words (subject+place), NOT slugified brief
   sentences (which produced garbage searches); 2 searches min; ⚠-flag composite slots + fallback.
-- Added the `npm install cloudinary` prerequisite for upload-batch.mjs (ERR_MODULE_NOT_FOUND).
+- Added the `npm install media` prerequisite for upload-batch.mjs (ERR_MODULE_NOT_FOUND).
 - Rewrote the internal-linking step: how to AUTHOR links-map.json (distinctive multi-word phrases,
   one-phrase-one-slug, verify phrases occur in prose), healthy benchmarks (~2.77 links/article),
   "orphans are OK — don't force them," and two gotchas (injector reads scripts/links-map.json;

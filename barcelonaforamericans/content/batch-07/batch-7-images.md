@@ -1,5 +1,5 @@
 # Batch 7 — Image Manifest (barcelonaforamericans) — 5 articles, 15 images
-Upload: CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-07.json
+Upload: MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-07.json
 
 ## etias-ees-americans-spain
 - HERO passport at automated border e-gate — https://unsplash.com/s/photos/passport-border · https://www.pexels.com/search/passport%20control/

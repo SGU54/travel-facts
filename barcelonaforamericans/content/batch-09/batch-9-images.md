@@ -1,5 +1,5 @@
 # Batch 9 — Image Manifest (barcelonaforamericans) — 5 articles, 15 images
-Upload: CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-09.json
+Upload: MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-09.json
 
 ## tapas-guide-barcelona
 - HERO vibrant tapas spread on a bar counter — https://unsplash.com/s/photos/tapas-bar · https://www.pexels.com/search/tapas/

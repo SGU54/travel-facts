@@ -1,5 +1,5 @@
 # Batch 10 — Image Manifest (barcelonaforamericans) — 5 articles, 15 images
-Upload: CLOUDINARY_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-10.json
+Upload: MEDIA_FOLDER=barcelonaforamericans node scripts/upload-batch.mjs <folder> scripts/import-batch-10.json
 
 ## gaudi-trail-barcelona
 - HERO Sagrada Família towers or Park Güell mosaic terrace — https://unsplash.com/s/photos/sagrada-familia · https://www.pexels.com/search/sagrada%20familia/
