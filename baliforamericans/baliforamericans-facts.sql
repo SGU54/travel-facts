@@ -357,3 +357,43 @@ update common.facts
        source_url = 'https://id.usembassy.gov/bali/',
        checked_at = now()
  where scope = 'bali' and key = 'safety_health.us_consular_agency_bali';
+
+-- ============================================================
+-- stopped-by-police-on-a-scooter-in-bali (agent article 2026-10-28) — seeded 2026-10-28
+-- ============================================================
+
+-- safety_health.enforcement_campaign
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.enforcement_campaign', '"a current enforcement campaign by Indonesian police, immigration, transport and tourism officials, with stepped-up enforcement of traffic and vehicle violations"'::jsonb, 'verified', '2026-10-13',
+        'https://id.usembassy.gov/bali/')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- getting_around.circular_driving_rules
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'getting_around.circular_driving_rules', '"hold a valid international or national driving licence, obey traffic rules, wear a helmet, not carry more passengers than the vehicle allows, and not be under the influence of alcohol or drugs"'::jsonb, 'verified', '2026-10-13',
+        'https://bmc.baliprov.go.id/news/11462')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- getting_around.accident_and_police
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'getting_around.accident_and_police', '"if fined, ask for an official receipt; travelers occasionally report requests for unofficial payments"'::jsonb, 'verified', '2026-10-13',
+        'https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;
+
+-- ============================================================
+-- stopped-by-police-on-a-scooter-in-bali (agent article 2026-10-28) — seeded 2026-10-28 (scams)
+-- ============================================================
+
+-- safety_health.scams
+insert into common.facts (scope, key, value, status, checked_at, source_url)
+values ('bali', 'safety_health.scams', '"be careful of anyone asking for money, including people who claim local authorities want money"'::jsonb, 'verified', '2026-10-13',
+        'https://travel.state.gov/en/international-travel/travel-advisories/indonesia.html')
+on conflict (scope, key) do update set
+  value = excluded.value, status = excluded.status,
+  checked_at = excluded.checked_at, source_url = excluded.source_url;

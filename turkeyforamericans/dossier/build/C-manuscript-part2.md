@@ -290,7 +290,7 @@ already behind you.
 
 ## FIELD SHEET — the dated annex
 
-**Verified at press time · July 2026**
+**Verified at press time · October 2026**
 
 This sheet carries the figures the book deliberately excludes: the ones that move.
 It is reissued; when it and the book disagree, the sheet is right.
@@ -303,7 +303,7 @@ and names where to look. There are no blank cells and no "verify" placeholders.*
 
 | item | value | source read |
 |---|---|---|
-| Consumer price inflation, year-on-year | 32.11% (June 2026) | Turkish statistical institute |
+| Consumer price inflation, year-on-year | 29.73% (September 2026) | Turkish statistical institute |
 | Ramadan, next occurrence | 8 Feb – 8 Mar 2027 | religious affairs calendar |
 | Ramazan Bayramı, next | 9–11 Mar 2027, half-day from 13:00 on 8 Mar | statute + calendar |
 | Kurban Bayramı, next | 16–19 May 2027, half-day from 13:00 on 15 May | statute + calendar |
