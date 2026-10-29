@@ -1,0 +1,169 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Model 5b — L'Affiche, essays and tools</title><style>@page{ size:8.5in 11in; margin:92px 82px 72px 82px; }
+html,body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; margin:0; }
+.rh-src{ string-set:rh content(text); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+@font-face{font-family:'Symbols';src:url('../../assets/fonts/NotoSansSymbols2-Regular.ttf');}i.mk{font-style:normal;font-family:'Symbols';font-size:.9em;}
+@font-face{font-family:'Archivo';src:url('../fonts/Archivo.ttf');font-weight:100 900;font-stretch:62% 125%;}
+@font-face{font-family:'Archivo';src:url('../fonts/Archivo-Italic.ttf');font-weight:100 900;font-stretch:62% 125%;font-style:italic;}
+@font-face{font-family:'Plex';src:url('../fonts/Archivo.ttf');font-weight:100 900;font-stretch:62% 125%;}
+@font-face{font-family:'Public';src:url('../fonts/Archivo.ttf');font-weight:100 900;font-stretch:62% 125%;}
+:root{ --paper:#F4F2EC; --ink:#17201C; --red:#A23520; --gold:#E0A828; --blue:#0E6390; --grey:#6B7773; --line:#17201C; }
+@page{ @top-left{ content:none } @top-right{ content:none } @bottom-center{ content:none }
+       @bottom-left{ content:"Barcelona, Without the Traps."; font-family:'Archivo'; font-size:8.5px; font-weight:500; letter-spacing:.06em; color:var(--grey); }
+       @bottom-right{ content:counter(page); font-family:'Archivo'; font-weight:700; font-size:10px; color:var(--ink); } }
+@page poster{ margin:0; @top-left{content:none} @top-right{content:none} @bottom-left{content:none} @bottom-center{content:none} @bottom-right{content:none} }
+html,body{ background:var(--paper); } .pagedjs_sheet{ background:var(--paper); }
+body{ font-family:'Archivo'; font-size:11px; line-height:17px; color:var(--ink); }
+.pg{ break-before:page; } .pg:first-child{ break-before:auto; }
+.poster{ page:poster; width:8.5in; height:11in; box-sizing:border-box; padding:64px 82px 60px; position:relative; overflow:hidden; display:flex; flex-direction:column; }
+.poster.red{ background:var(--red); color:var(--paper); } .poster.gold{ background:var(--gold); color:var(--ink); }
+.poster .slug{ font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; display:flex; justify-content:space-between; }
+.poster .giant{ font-weight:800; font-stretch:118%; line-height:.8; letter-spacing:-.045em; margin:34px 0 0 -6px; }
+.poster .under{ font-size:14px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; margin-top:18px; }
+.poster .foot{ margin-top:auto; display:grid; grid-template-columns:1fr 300px; column-gap:40px; align-items:end; }
+.poster .big{ font-size:30px; line-height:33px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.poster .foot p{ margin:0; font-size:12px; line-height:17px; font-weight:400; }
+.poster.red .foot p{ color:#F8E9E3; }
+.photo{ page:poster; width:8.5in; height:11in; box-sizing:border-box; position:relative; overflow:hidden; display:flex; flex-direction:column; }
+.photo img{ display:block; width:100%; height:740px; object-fit:cover; }
+.photo .tail{ padding:28px 82px 0; display:grid; grid-template-columns:340px 1fr; column-gap:48px; }
+.photo .cap{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-bottom:10px; }
+.photo p{ margin:0; }
+.photo .vol{ border-top:3px solid var(--red); padding-top:8px; }
+.photo .vol .lab{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; margin-bottom:5px; }
+.photo .vol p{ font-size:10px; line-height:14px; }
+.photo .vol .x{ color:var(--grey); }
+h1{ font-weight:800; font-stretch:88%; font-size:58px; line-height:.92; letter-spacing:-.035em; margin:0 0 14px; }
+.sf{ font-weight:300; font-size:15.5px; line-height:21px; width:430px; margin:0 0 26px; }
+.grid{ display:grid; grid-template-columns:340px 264px; column-gap:48px; align-items:start; }
+.prose p{ margin:0 0 11px; text-align:left; hyphens:auto; }
+.prose p:first-child::first-line{ font-weight:600; }
+.stack{ border-top:3px solid var(--line); }
+.stack .it{ padding:10px 0 11px; border-bottom:1px solid var(--line); }
+.stack .opt{ font-size:19px; line-height:21px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.stack .it.pick .opt::before{ content:''; display:inline-block; width:11px; height:11px; background:var(--red); margin:0 8px 1px 0; }
+.stack .sub{ font-size:9.5px; line-height:13px; color:var(--grey); margin-top:3px; }
+.stack .v{ font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-top:5px; }
+.stack .it.pick .v{ color:var(--red); }
+.stack .lab{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; padding:6px 0 2px; }
+.forks{ margin-top:22px; border-top:3px solid var(--line); }
+.forks .it{ padding:10px 0 11px; border-bottom:1px solid var(--line); }
+.forks .q{ font-size:16px; line-height:18px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; margin-bottom:4px; }
+.forks p{ margin:0; font-size:10px; line-height:14px; }
+.mapwrap svg{ display:block; width:100%; height:auto; }
+.mapwrap .cap{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:8px; }
+.ribbon{ display:grid; grid-template-columns:repeat(4,1fr); column-gap:24px; border-top:3px solid var(--line); margin-top:18px; }
+.ribbon .it{ padding:10px 0 0; } .ribbon .it + .it{ border-left:1px solid var(--line); padding-left:14px; margin-left:-12px; }
+.ribbon .opt{ font-size:15px; line-height:17px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.ribbon .sub{ font-size:9px; line-height:12px; color:var(--grey); margin-top:4px; }
+.ribbon .v{ font-size:8.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-top:5px; }
+.ribbon .it.pick .v{ color:var(--red); } .ribbon .it.pick .opt::before{ content:''; display:inline-block; width:10px; height:10px; background:var(--red); margin:0 7px 0 0; }
+.note{ border-top:3px solid var(--red); padding-top:8px; margin-top:22px; }
+.note .lab{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; margin-bottom:5px; }
+.note p{ margin:0; font-size:10px; line-height:14px; } .note .x{ color:var(--grey); }
+figure.band{ margin:22px 0 0; } figure.band img{ display:block; width:100%; height:262px; object-fit:cover; }
+figure.band figcaption{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:8px; }
+
+.poster.paper{ background:var(--paper); color:var(--ink); }
+.poster .lab{ color:var(--red); }
+.thesis{ font-weight:800; font-stretch:88%; font-size:64px; line-height:62px; letter-spacing:-.035em; margin-top:120px; }
+.thesis em{ font-style:normal; color:var(--red); }
+.poster .rule{ border-top:3px solid var(--ink); padding-top:12px; }
+h2{ font-size:19px; line-height:21px; font-weight:800; font-stretch:92%; letter-spacing:-.02em; margin:0 0 10px; padding-top:10px; border-top:3px solid var(--ink); }
+.prose i.mk{ color:var(--red); }
+.sideq{ border-top:3px solid var(--red); padding-top:10px; }
+.sideq .lab{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; margin-bottom:6px; }
+.sideq .big19{ font-size:19px; line-height:22px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.keyline{ font-size:9.5px; line-height:13px; color:var(--grey); margin-top:16px; border-top:1px solid var(--line); padding-top:8px; }
+.keyline i.mk{ color:var(--red); }
+figure.fig{ margin:0 0 22px; } figure.fig svg{ display:block; width:100%; height:auto; }
+figure.fig figcaption{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:8px; }
+/* the plan poster: five days as five columns */
+.days{ display:grid; grid-template-columns:repeat(5,1fr); column-gap:10px; margin-top:40px; height:660px; }
+.days .d{ padding:14px 12px 16px; display:flex; flex-direction:column; border-top:3px solid var(--ink); }
+.days .d.fix{ background:var(--red); color:var(--paper); border-top-color:var(--red); }
+.days .n{ font-weight:800; font-stretch:118%; font-size:150px; line-height:.8; letter-spacing:-.05em; margin-left:-4px; }
+.days .t{ margin-top:auto; font-size:15px; line-height:17px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; }
+.days .k{ font-size:9px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; margin-top:8px; }
+.days .d:not(.fix) .k{ color:var(--grey); }
+/* the plan's day sheet */
+.dayrow{ display:grid; grid-template-columns:120px 1fr; column-gap:24px; border-top:3px solid var(--ink); padding:16px 0 26px; }
+.dayrow.fix{ border-top-color:var(--red); }
+.dayrow .n{ font-weight:800; font-stretch:118%; font-size:104px; line-height:.82; letter-spacing:-.05em; }
+.dayrow.fix .n{ color:var(--red); }
+.dayrow .k{ font-size:9px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--grey); }
+.dayrow.fix .k{ color:var(--red); }
+.dayrow .h{ font-size:19px; line-height:22px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; margin:3px 0 5px; }
+.dayrow p{ margin:0; }
+/* the wallet card */
+.rules2{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; border-top:3px solid var(--red); padding-top:12px; margin-bottom:26px; }
+.rules2 .big{ font-size:30px; line-height:32px; font-weight:800; letter-spacing:-.025em; font-stretch:88%; }
+.rules2 .big b{ color:var(--red); }
+.rules2 p{ margin:6px 0 0; font-size:10px; line-height:14px; color:var(--grey); }
+.wgrid{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; row-gap:18px; }
+.wgrid .stack .it{ padding:7px 0 8px; } .wgrid .stack .opt{ font-size:15px; line-height:17px; }
+.cards{ display:flex; gap:28px; margin-top:30px; align-items:flex-start; }
+.card{ width:324px; height:204px; box-sizing:border-box; outline:1.5px dashed var(--grey); outline-offset:8px; padding:16px 18px; display:flex; flex-direction:column; }
+.card.front{ background:var(--red); color:var(--paper); }
+.card.front .g{ font-weight:800; font-stretch:118%; font-size:66px; line-height:.82; letter-spacing:-.045em; margin-top:12px; }
+.card.front .s{ font-size:12px; line-height:15px; font-weight:700; margin-top:auto; }
+.card .tag{ font-size:8.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:flex; justify-content:space-between; }
+.card.back{ background:#fff; }
+.card.back .ln{ display:grid; grid-template-columns:92px 1fr; column-gap:8px; font-size:9.5px; line-height:12.5px; border-top:1px solid var(--line); padding:3px 0; }
+.card.back .ln b{ font-weight:700; } .card.back .ln:first-of-type{ border-top:2px solid var(--ink); margin-top:6px; }
+.wgrid .stack .it.wl{ display:grid; grid-template-columns:118px 1fr; column-gap:10px; align-items:baseline; padding:6px 0 6px; }
+.wgrid .stack .it.wl .opt{ font-size:12px; line-height:15px; } .wgrid .stack .it.wl .v{ margin-top:0; font-size:8.5px; line-height:12px; }
+.cards{ break-inside:avoid; }
+.cut{ font-size:9px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:20px; }
+</style></head><body><div class="poster paper"><span class="rh-src">The Ground</span>
+  <div class="slug"><span class="lab">The organising fact</span><span>The Ground</span></div>
+  <div class="thesis">Barcelona doesn't overcharge you once. It charges you <em>four small times</em>, in four different places, and counts on you never seeing the pattern.</div>
+  <div class="foot rule"><div class="big">The city does not need to hide anything; the scattering does the work.</div><p>Everything downstream of this fact is defence: where you sleep, how you sequence the days, what you order at lunch. The calls in this book are the moves that keep the extraction machine from running on you by default.</p></div>
+</div>
+<div class="pg">
+  <h1>The Ground</h1>
+  <div class="grid" style="margin-top:22px"><div class="prose"><p>Here is the thing that reorganises a Barcelona trip once you see it. The city is very good at tourism, which means it is very good at the small, defensible extraction: the charge that is real, legal, and quoted just out of sight until the moment you pay it. No single one is large enough to resent. That is the design. The tourist tax isn't in your room rate. The airport ticket isn't the one your metro card holds. The card terminal offers you dollars with a helpful smile. The bright-blue ATM by the cathedral is happy to help. Each is a small leak; scattered across a week they are a real number, and because they arrive separately you never add them up.</p><p>This is not a complaint about Barcelona, and it is not a claim that the city is dishonest. Every one of these charges is posted somewhere, legal, and in most cases funds something defensible. The point is structural: they are <em>distributed</em>. A visitor meets them one at a time, in four different moods: at check-out when you are leaving, at a gate when you are rushed, at a terminal when someone is waiting behind you, at a table when you are hungry. Each moment is individually a bad moment to do arithmetic. The city does not need to hide anything; the scattering does the work.</p><p>Everything downstream of this fact is defence. Where you sleep determines how much you walk versus pay to move. How you sequence the days determines whether you get the good version of each sight or the rushed one. What you order at lunch determines whether the city's food reputation works for you or against you. The calls in this book are not a list of sights ranked, the free web has that, they are the moves that keep the extraction machine from running on you by default.</p><p>It is worth naming what this book is <em>not</em> claiming, because the honest version is more useful than the outraged one. Barcelona is not unusually expensive by Western European standards, and it is not unusually predatory. What it is, is unusually <em>practised</em>: a city that has hosted enormous visitor numbers for decades and has, over that time, evolved a dense and legal infrastructure for converting visitors into revenue at every plausible touchpoint. That infrastructure is not a conspiracy. It is what any city becomes when tourism is a major industry and nobody stops it. Knowing that changes your posture from indignation to preparation, which is the only posture that saves you anything.</p></div>
+    <div><div class="stack"><span class="lab">Four small charges, four moods</span><div class="it"><div class="opt">The tourist tax</div><div class="sub">isn't in your room rate</div><div class="v" style="color:var(--red)">at check-out, when you are leaving</div></div><div class="it"><div class="opt">The airport ticket</div><div class="sub">isn't the one your metro card holds</div><div class="v" style="color:var(--red)">at a gate, when you are rushed</div></div><div class="it"><div class="opt">The dollars prompt</div><div class="sub">offered with a helpful smile</div><div class="v" style="color:var(--red)">at a terminal, when someone is waiting</div></div><div class="it"><div class="opt">The tourist rate</div><div class="sub">the bright-blue ATM; the tourist-priced table</div><div class="v" style="color:var(--red)">at a table, when you are hungry</div></div></div><div class="forks"><div class="it"><div class="q">Read with Decision 03</div><p>The Money-Trap Web — the four extractions, in one place, with the arithmetic shown.</p></div></div></div></div>
+</div>
+<div class="pg">
+  <div class="grid"><div class="prose"><p>The sharpest single instance, the four-trap money web, is decision 03, and it is the one we would hand a friend for free. If you read only one page, read that one. The rest of the book applies the same discipline to the choices that cost you a day, or the shape of the trip, rather than a fistful of euros.</p></div>
+    <div class="sideq"><span class="lab">If you read one page</span><div class="big19">Decision 03. It is the one we would hand a friend for free.</div></div></div>
+  <figure class="fig" style="margin-top:14px"><h2>Why the metro map lies to you</h2><svg viewBox="0 0 652 250" xmlns="http://www.w3.org/2000/svg" font-family="Archivo, sans-serif">
+<circle cx="190" cy="128" r="128" fill="none" stroke="#17201C" stroke-width="3"/>
+<text x="190" y="128" text-anchor="middle" font-size="44" font-weight="800" letter-spacing="-1.5" fill="#17201C">ZONE 1</text>
+<text x="190" y="152" text-anchor="middle" font-size="12" fill="#6B7773">metro · bus · tram · funicular · local rail</text>
+<text x="190" y="168" text-anchor="middle" font-size="12" fill="#6B7773">one ticket covers essentially everything</text>
+<line x1="320" y1="132" x2="530" y2="132" stroke="#A23520" stroke-width="3" stroke-dasharray="9 7"/>
+<line x1="402" y1="114" x2="426" y2="150" stroke="#A23520" stroke-width="5"/>
+<line x1="426" y1="114" x2="402" y2="150" stroke="#A23520" stroke-width="5"/>
+<text x="414" y="98" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="2" fill="#A23520">T-CASUAL STOPS HERE</text>
+<text x="414" y="178" text-anchor="middle" font-size="11" fill="#6B7773">Hola Barcelona · T-usual: through</text>
+<circle cx="580" cy="132" r="46" fill="#A23520"/>
+<text x="580" y="141" text-anchor="middle" font-size="26" font-weight="800" fill="#F4F2EC">BCN</text>
+<text x="580" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#17201C">Airport metro</text>
+</svg><figcaption>Fig. 1 — One integrated system, one gap — and the gap is at the airport</figcaption></figure>
+  <div class="grid"><div class="prose"><p>The obvious tool for a compact European city is a transit pass, and Barcelona's is genuinely good <i class="mk">●</i>, metro, city buses, trams, the Montjuïc funicular and the local rail lines run on one integrated fare system, and almost everything a visitor wants sits inside Zone 1. But the tool has a hole positioned exactly where you are most rushed. The standard multi-ride ticket, the T-casual, does not work at the airport metro <i class="mk">●</i>. Visitors tap it all week, arrive at the airport with rides to spare, and are stopped at the gate needing a different ticket with a flight boarding.</p><p>Say what the hole is, precisely, because the opposite mistake costs money too: it is the T-casual and the single ticket that stop at that gate. Other titles do carry you through it — the monthly T-usual, and the Hola Barcelona travel card, which includes the airport metro both ways inside its validity. So the rule is not “buy a separate airport ticket”, it is: <strong>check whether the ticket you already hold covers Zone 1 including the airport, and buy the airport ticket only if it does not</strong>. If you are on a T-casual, it does not.</p></div>
+    <div class="sideq"><span class="lab">The rule</span><div class="big19">Check whether the ticket you already hold covers Zone 1 including the airport. If you are on a T-casual, it does not.</div>
+    <div class="keyline"><i class="mk">●</i> Established — structural, true for years</div></div></div>
+</div>
+<div class="photo"><img src="../../img/p-ground.jpg" style="object-position:50% 50%">
+  <div class="tail"><div><div class="cap">The tourist-facing retail of a city that is very good at tourism. All of it legal, all of it posted.</div></div><p>That is the city in miniature: a competently built default tool with one gap sited precisely where a visitor can least absorb it. It is why the transit question is folded into the money web rather than given a chapter of its own. It is not really a transit decision. It is one of the four extractions, wearing a transit costume.</p></div>
+</div><div class="poster paper"><span class="rh-src">The Plan</span>
+  <div class="slug"><span class="lab">The days as operations</span><span>The Plan</span></div>
+  <div class="days"><div class="d fix"><div class="n">1</div><div class="t">Sagrada, then the old city</div><div class="k">Booked · fixed</div></div><div class="d fix"><div class="n">2</div><div class="t">Park Güell, then downhill</div><div class="k">Booked · fixed</div></div><div class="d"><div class="n">3</div><div class="t">Market, hill, sea</div><div class="k">Floats · absorbs overflow</div></div><div class="d fix"><div class="n">4</div><div class="t">The day trip, a full clear day</div><div class="k">Booked · fixed</div></div><div class="d"><div class="n">5</div><div class="t">No agenda: the city itself</div><div class="k">Floats</div></div></div>
+  <div class="foot"><div class="big">Three anchors, two free days — the shape, not the list.</div><p>It assumes five days, an Eixample base and the two bookings made. Substitute freely inside a day; keep the order between them.</p></div>
+</div>
+<div class="pg">
+  <h1>The Plan</h1>
+  <div class="sf">Not an itinerary — a set of operations in an order that respects the constraints. Substitute freely inside a day; keep the order between them.</div>
+  <div class="grid"><div class="prose"><p>This is what the decisions produce when you run them forward. It assumes five days, an Eixample base and the two bookings made. Every named sight is replaceable; the <em>shape</em> is the part doing the work — which is why it is set out as operations rather than as an hour-by-hour itinerary.</p><p>The distinction matters. An itinerary tells you where to be at ten o'clock and breaks the moment a queue runs long or a morning turns wet. A shape tells you what each day is <em>for</em>, which anchors are fixed, and which parts are designed to absorb the overflow. Three of these five days carry an anchor; two are deliberately free, and the free ones are load-bearing rather than filler — they are where a delayed morning, a grey afternoon or a longer lunch goes without costing you anything you planned.</p><p>Every sight named above can be swapped; the constraints cannot. Keep the morning anchor on day one, whatever it is — the point is that the day's fixed commitment happens while you are fresh and the light is good, not that it is specifically a basilica. Keep the day trip whole and mid-week. Keep at least one day with nothing in it. Those three rules survive any amount of substitution, and they are what separate this from a list.</p><p>Compressing to three days: keep day one intact, merge days two and three, and cut the day trip rather than rushing it — a half-day excursion is the worst version of both the city day it replaced and the trip it pretends to be. Expanding to seven: add a second day trip and one more unscheduled day, not more sights. The marginal value of a sixth ticketed interior is close to zero; the marginal value of a second unhurried morning is high, and visitors reliably underestimate this in both directions.</p></div><div><div class="stack"><span class="lab">Three rules that survive any substitution</span><div class="it pick"><div class="opt">Keep the morning anchor on day one, whatever it is.</div></div><div class="it pick"><div class="opt">Keep the day trip whole and mid-week.</div></div><div class="it pick"><div class="opt">Keep at least one day with nothing in it.</div></div></div></div></div>
+  <figure class="band" style="margin-top:14px"><img src="../../img/h-plan.jpg" style="object-position:50% 50%;height:150px"><figcaption>The shape, from above. Three anchors and two deliberately empty days.</figcaption></figure>
+</div>
+<div class="pg"><div class="dayrow fix"><div class="n">1</div><div><div class="k">Booked · fixed</div><div class="h">The anchor, then the old city</div><p>Sagrada Família on your morning slot, because that is the constraint everything bends around. Afterwards walk rather than ride: the Modernisme hospital sits ten minutes away and is half-empty by comparison, which makes it the ideal decompression from the basilica. A long lunch. The Gothic Quarter for the late afternoon, when the day-trippers thin out and the lanes are at their best. A late dinner, on local time from the first full day.</p></div></div><div class="dayrow fix"><div class="n">2</div><div><div class="k">Booked · fixed</div><div class="h">The second booking, then downhill</div><p>Park Güell on your slot, early. Then let gravity do the planning: Gràcia sits immediately below and is the right kind of nothing — plazas, lunch, no monuments to tick off. One Gaudí house in the afternoon if you are doing one. The evening belongs in a neighborhood that eats well rather than one that photographs well.</p></div></div><div class="dayrow"><div class="n">3</div><div><div class="k">Floats · absorbs overflow</div><div class="h">The variety day</div><p>A market in the morning, a great interior around midday, the hill in the afternoon, the sea at golden hour. This is the day that shows you the city's range, and it is deliberately unbooked so that it can absorb whatever the first two days ran long on.</p></div></div><div class="dayrow fix"><div class="n">4</div><div><div class="k">Booked · fixed</div><div class="h">Out</div><p>The day trip, whichever one decision 06 landed on. A full day, mid-trip, so a grey forecast can still be traded for a city day. Nothing scheduled for the evening: travel days end tireder than they look on paper.</p></div></div><div class="dayrow"><div class="n">5</div><div><div class="k">Floats</div><div class="h">The city's own rhythm</div><p>Stop sightseeing. A market breakfast, a neighborhood you have not walked, the beach if the afternoon turns warm, a hilltop at sunset. The unscheduled day is the one people describe most fondly afterwards, which is a strong argument for building it in rather than hoping it emerges from the gaps.</p></div></div></div><div class="pg"><span class="rh-src">The Wallet Card</span>
+  <h1>The Wallet Card</h1>
+  <div class="sf">Everything the trip needs at the point of decision, on one card. The Book is for home; this is for the street.</div>
+  <div class="rules2"><div><div class="big">Say <b>euros</b> at every terminal.</div></div><div><div class="big">A <b>T-casual</b> will not open the airport gate.</div><p>A Hola Barcelona or a T-usual will.</p></div></div>
+  <div class="wgrid"><div class="stack"><span class="lab">At any card terminal or ATM</span><div class="it wl"><div class="opt">The prompt “charge in USD?”</div><div class="v">always choose euros</div></div><div class="it wl"><div class="opt">Which ATM</div><div class="v">CaixaBank / BBVA / Santander / Sabadell</div></div><div class="it wl"><div class="opt">Which to avoid</div><div class="v">blue standalone machines by the sights</div></div></div><div class="stack"><span class="lab">Transit</span><div class="it wl"><div class="opt">Airport metro</div><div class="v">T-casual no · Hola / T-usual OK</div></div><div class="it wl"><div class="opt">In-city</div><div class="v">almost everything is Zone 1</div></div></div><div class="stack"><span class="lab">Eating</span><div class="it wl"><div class="opt">Best-value meal</div><div class="v">menú del día — weekday lunch, 1–4pm</div></div><div class="it wl"><div class="opt">Real rice</div><div class="v">cooked to order, 20+ min; try fideà</div></div><div class="it wl"><div class="opt">Dinner starts</div><div class="v">~8:30pm — earlier rooms are tourist-only</div></div><div class="it wl"><div class="opt">Trap tell</div><div class="v">a photograph of the dish out front</div></div></div><div class="stack"><span class="lab">Booking &amp; documents</span><div class="it wl"><div class="opt">Sagrada Família</div><div class="v">sagradafamilia.org · morning slot</div></div><div class="it wl"><div class="opt">Apartment</div><div class="v">valid HUTB number, or skip it</div></div><div class="it wl"><div class="opt">ETIAS</div><div class="v">not live — don't pay for one</div></div></div></div>
+  <div class="cards"><div class="card front"><div class="tag"><span>Barcelona</span><span>Without the Traps</span></div><div class="g">EUROS.</div><div class="s">At every terminal. And a T-casual will not open the airport gate.</div></div>
+    <div class="card back"><div class="tag" style="color:var(--red)"><span>The street card</span><span>2026</span></div><div class="ln"><b>Card / ATM</b><span>charge in EUROS, always</span></div><div class="ln"><b>Cash</b><span>a bank machine, not the blue one</span></div><div class="ln"><b>Airport metro</b><span>T-casual no · Hola / T-usual OK</span></div><div class="ln"><b>Lunch</b><span>menú del día, weekdays 1–4pm</span></div><div class="ln"><b>Dinner</b><span>from ~8:30pm</span></div><div class="ln"><b>Rice</b><span>cooked to order, 20+ min</span></div><div class="ln"><b>Apartment</b><span>HUTB number, or skip it</span></div></div></div>
+  <div class="cut">Cut along the dashed line, fold in two, keep it behind your card.</div>
+</div></body></html>

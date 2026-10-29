@@ -1,0 +1,492 @@
+/* ═══════════════════════════════════════════════════════════════════
+   Barcelona, Without the Traps. — the dossier stylesheet
+   Page geometry per page-spec.md (US Letter 816×1056 @96dpi).
+   Palette derived from L'Entrada globals.css (see assets/brands/…json).
+   Fonts by FILE URL (never base64 — the paginator stalls on data-URIs).
+   ═══════════════════════════════════════════════════════════════════ */
+
+@font-face{ font-family:'Anton'; src:url('assets/fonts/Anton-Regular.ttf'); font-weight:400; }
+@font-face{ font-family:'Goudy'; src:url('assets/fonts/SortsMillGoudy-Regular.ttf'); font-weight:400; font-style:normal; }
+@font-face{ font-family:'Goudy'; src:url('assets/fonts/SortsMillGoudy-Italic.ttf'); font-weight:400; font-style:italic; }
+@font-face{ font-family:'Plex'; src:url('assets/fonts/IBMPlexMono-Regular.ttf'); font-weight:400; }
+@font-face{ font-family:'Plex'; src:url('assets/fonts/IBMPlexMono-Medium.ttf'); font-weight:500; }
+@font-face{ font-family:'Public'; src:url('assets/fonts/PublicSans-Variable.ttf'); font-weight:400 700; }
+
+:root{
+  --paper:#F2F7F5; --ink:#1B2622; --accent:#0E6390; --deep:#0B4E70;
+  --gilt:#E0A828; --brass:#A23520; --line:#D3DED9; --muted:#5B6B66;
+  --display:'Anton',sans-serif; --body:'Goudy',Georgia,serif;
+  --mono:'Plex',monospace; --sans:'Public',system-ui,sans-serif;
+}
+
+/* ── PAGE MODEL (Paged.js furnishes these margin boxes on every sheet) ── */
+@page{
+  size:8.5in 11in;
+  margin:92px 82px 72px 82px;
+  @top-left{ content:"Barcelona, Without the Traps." }
+  @top-right{ content:string(rh, last) }
+  @bottom-left{ content:"Barcelona for Americans" }
+  /* The ornament must NOT be a provenance glyph. This printed \25c6 (VOLATILE)
+     on all 32 sheets, so the book's own key said every page was a live price.
+     \00b7 is the punt volat — the interpunct of Catalan's ela geminada — which
+     belongs to this destination and means nothing in the mark vocabulary. */
+  @bottom-center{ content:"\00b7" }
+  @bottom-right{ content:counter(page) }
+}
+@page cover{ margin:0;
+  @top-left{content:none} @top-right{content:none}
+  @bottom-left{content:none} @bottom-center{content:none} @bottom-right{content:none} }
+@page annex{ margin:92px 82px 76px 82px; }
+.coverpage{ page:cover; }
+.fs{ page:annex; }
+
+html,body{ background:var(--paper); -webkit-print-color-adjust:exact; print-color-adjust:exact; margin:0; }
+.pagedjs_sheet{ background:var(--paper); }
+body{ font-family:var(--body); color:var(--ink); font-size:12.5px; line-height:1.52; }
+
+/* running-head string — ONE selector only */
+.rh-src{ string-set: rh content(text); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+
+.pagedjs_margin-top-left .pagedjs_margin-content,
+.pagedjs_margin-top-right .pagedjs_margin-content{
+  font-family:var(--mono); font-size:8.5px; letter-spacing:.13em; color:var(--muted); text-transform:uppercase; }
+.pagedjs_margin-bottom-left .pagedjs_margin-content,
+.pagedjs_margin-bottom-right .pagedjs_margin-content{
+  font-family:var(--mono); font-size:8.5px; letter-spacing:.1em; color:var(--muted); }
+.pagedjs_margin-bottom-center .pagedjs_margin-content{ color:var(--gilt); font-size:7px; }
+
+/* ── SECTION / CHAPTER ── */
+section{ break-before:page; }
+section.cont{ break-before:auto; }
+
+h1{ font-family:var(--display); font-weight:400; font-size:33px; line-height:.98;
+  letter-spacing:.005em; color:var(--deep); text-transform:uppercase; margin:0 0 2px; }
+.kicker{ font-family:var(--mono); font-size:9px; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--brass); margin:0 0 14px; display:flex; align-items:center; gap:9px; }
+.kicker::before{ content:''; width:26px; height:2px; background:var(--gilt); display:inline-block; }
+
+.standfirst{ font-family:var(--body); font-style:italic; font-size:14.5px; line-height:1.4;
+  color:var(--deep); margin:0 0 10px; padding:0 0 12px; border-bottom:1px solid var(--line); }
+
+h2{ font-family:var(--display); font-weight:400; font-size:16px; letter-spacing:.01em;
+  color:var(--deep); text-transform:uppercase; margin:20px 0 7px; }
+h3{ font-family:var(--sans); font-weight:700; font-size:11.5px; letter-spacing:.02em;
+  color:var(--ink); margin:14px 0 4px; }
+
+/* A HEADING MAY NOT BE THE LAST THING ON A PAGE. The band lever can rescue one
+   widow per chapter, but The Plan is a RUN of five headings — recovering one
+   simply pushed the next to the foot. break-after:avoid is the general rule and
+   Paged.js does honour it (unlike break-before:avoid, which it silently drops). */
+h2, h3{ break-after:avoid; }
+
+p{ margin:0 0 8.5px; text-align:justify; hyphens:auto; }
+/* No word may be hyphenated across a PAGE TURN — the reader carries half a word
+   over the fold. Chromium has no hyphenate-limit-last:page (nor -lines/-chars),
+   so CSS cannot express it and it has to be measured per paragraph. The bare `p`
+   rule above is (0,0,1); p.nohyph at (0,1,1) out-specifies it. */
+p.nohyph{ hyphens:manual; -webkit-hyphens:manual; }
+p.first{ text-indent:0; }
+p+p{ text-indent:1.1em; }
+
+/* drop cap — chapter opener only */
+.dropcap::first-letter{
+  font-family:var(--display); float:left; font-size:52px; line-height:.82;
+  padding:4px 8px 0 0; color:var(--brass); }
+
+/* ── PROVENANCE MARKS ── */
+.mk{ font-family:var(--mono); font-size:.82em; vertical-align:.08em; }
+.mk.est{ color:var(--accent); }      /* ● established */
+.mk.off{ color:var(--deep); }        /* ◇ official */
+.mk.sur{ color:var(--gilt); }        /* ▲ surveyed */
+/* ◈ OUR CALL — a judgment, not a finding. The book made its calls in the verdict
+   boxes but had no mark for a judgment made in running prose, so "the sweet spot
+   is May and June", "take Montserrat first" and the whole ranked base table sat
+   under ● ESTABLISHED beside the geography. Same fix Greece needed. */
+/* NOT brass: ◈ and ◆ are both diamonds, and in the same colour at 8.5px the
+   reader cannot tell a judgment from a live price. Brass stays the alarm colour
+   and belongs to VOLATILE alone; the call takes the one unused ink in the
+   palette. */
+.mk.call{ color:var(--muted); font-weight:500; }
+.mk.vol{ color:var(--brass); }       /* ◆ volatile → Field Sheet */
+
+/* ── DECISION LEDGER ── */
+/* Decisions FLOW across pages (a fixed page per decision is the padding failure
+   mode). Only the small blocks below resist breaking. */
+.decision{ }
+.ledger{ width:100%; border-collapse:collapse; margin:11px 0 10px; font-size:11px; }
+.ledger caption{ font-family:var(--mono); font-size:8.5px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--muted); text-align:left; padding:0 0 6px; }
+.ledger th{ font-family:var(--mono); font-size:7.8px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--brass); text-align:left; padding:0 8px 5px 0; border-bottom:1.5px solid var(--deep);
+  vertical-align:bottom; }
+.ledger th.num{ text-align:right; white-space:nowrap; }
+.ledger td{ padding:7px 8px 7px 0; border-bottom:1px solid var(--line); vertical-align:top;
+  font-family:var(--body); line-height:1.34; }
+.ledger td.num{ text-align:right; font-family:var(--mono); font-size:10px; color:var(--deep);
+  white-space:nowrap; font-weight:500; }
+.ledger .opt{ font-family:var(--sans); font-weight:700; font-size:10.5px; color:var(--ink); }
+.ledger .sub{ color:var(--muted); font-size:10px; }
+
+.verdict{ background:rgba(14,99,144,.06); border-left:3px solid var(--gilt);
+  padding:10px 14px; margin:10px 0; break-inside:avoid; }
+.verdict p{ text-align:left; margin:0; text-indent:0; font-size:11.5px; line-height:1.46; }
+.verdict strong{ color:var(--deep); }
+
+/* "When the default holds" / "When it doesn't" is a PAIRED comparison: the two
+   columns only mean anything read against each other. Unpinned, the grid broke
+   across a page turn — the left column's last line landed alone at the top of
+   the next sheet with the right column starting fresh beside it, so the two
+   halves sat on different pages and out of alignment. It is never more than a
+   third of a sheet; keep it whole. */
+.fa{ display:grid; grid-template-columns:1fr 1fr; gap:0 20px; margin:9px 0; font-size:10.5px;
+  break-inside:avoid; }
+.fa .col{ }
+.fa .lab{ font-family:var(--mono); font-size:8px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--brass); display:block; margin:0 0 3px; border-top:2px solid var(--line); padding-top:5px; }
+.fa p{ text-align:left; text-indent:0; margin:0 0 5px; line-height:1.38; }
+
+.note{ font-family:var(--sans); font-size:9.5px; line-height:1.42; color:var(--muted);
+  border-top:1px solid var(--line); padding-top:7px; margin-top:9px; }
+.note .xref{ color:var(--accent); }
+
+/* ── FIGURES (vector maps) ── */
+figure{ margin:12px 0; break-inside:avoid; }
+/* AN ARGUING FIGURE IS CAPPED, because its viewBox is not a page budget. FIG. 5
+   is drawn on a 600x560 board, which at full column width is 6.35in tall — so
+   the map, its head band and the ledger that reads it could never share a sheet
+   and the ledger lost every row but its header. Both dimensions auto with both
+   maxima set is the one combination that constrains a replaced element while
+   preserving its ratio; width:100% with max-height simply distorts. */
+figure svg{ display:block; margin:0 auto; width:auto; height:auto;
+  max-width:100%; max-height:4.6in; }
+/* Tighter still inside a decision, where the figure shares its page with the
+   band above it and the ledger below. */
+.decision figure svg{ max-height:3.5in; }
+/* Unless there is no band. A decision that gives up its head photograph gives
+   that space to the map, which on these chapters IS the argument — stated as a
+   structural rule rather than a list of ids, so it stays true if a band is
+   added or dropped later. :has() is safe here: this book renders in Chromium
+   only. */
+.decision:not(:has(.photo.band)) figure svg{ max-height:5.15in; }
+figcaption{ font-family:var(--mono); font-size:8px; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--muted); margin-top:6px; }
+
+/* ── COVER ── */
+.coverpage{ width:8.5in; height:11in; background:var(--deep); color:var(--paper);
+  position:relative; overflow:hidden; display:flex; flex-direction:column; padding:0; }
+.cv-band{ height:14px; background-image:radial-gradient(circle at 7px 50%, transparent 0 4.5px, var(--gilt) 4.5px 6px, transparent 6px); background-size:14px 14px; }
+.cv-top{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:9px;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--gilt); padding:20px 54px 0; }
+.cv-mid{ flex:1; display:flex; flex-direction:column; justify-content:center; padding:0 54px; }
+.cv-stamp{ align-self:flex-start; border:2px solid var(--gilt); color:var(--gilt); font-family:var(--mono);
+  font-size:10px; letter-spacing:.14em; text-transform:uppercase; padding:7px 14px; transform:rotate(-3deg); margin-bottom:26px; }
+.cv-mid h1{ font-family:var(--display); font-size:74px; line-height:.94; color:var(--paper); text-transform:uppercase; margin:0; }
+.cv-mid h1 .b{ color:var(--gilt); }
+.cv-sub{ font-family:var(--body); font-style:italic; font-size:17px; line-height:1.4; color:#CBE3EC;
+  margin-top:22px; max-width:5in; }
+.cv-rule{ display:flex; align-items:center; gap:12px; margin:28px 0; }
+.cv-rule .seg{ flex:1; border-top:2px dashed rgba(242,247,245,.32); }
+.cv-rule .d{ width:9px; height:9px; transform:rotate(45deg); background:var(--gilt); }
+.cv-meta{ font-family:var(--mono); font-size:9px; letter-spacing:.04em; color:#CBE3EC; line-height:1.95; }
+.cv-meta b{ color:var(--paper); }
+.cv-foot{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:8px;
+  letter-spacing:.14em; text-transform:uppercase; color:rgba(203,227,236,.7); padding:0 54px 22px; }
+
+/* ── HOW TO READ / marks key ── */
+.markskey{ margin:10px 0; }
+.markskey .row{ display:grid; grid-template-columns:28px 1fr; gap:10px; padding:6px 0; border-bottom:1px solid var(--line); font-size:11px; }
+.markskey .g{ font-family:var(--mono); font-size:14px; text-align:center; }
+
+/* ── TOC ── */
+.toc{ margin-top:8px; }
+.toc a{ display:flex; align-items:baseline; text-decoration:none; color:var(--ink); font-size:12px;
+  padding:5.5px 0; border-bottom:1px solid var(--line); }
+.toc .t{ font-family:var(--body); }
+.toc .num{ font-family:var(--sans); font-weight:700; color:var(--brass); width:26px; }
+.toc .dots{ flex:1; border-bottom:1px dotted var(--line); margin:0 8px; transform:translateY(-3px); }
+.toc .pg{ font-family:var(--mono); font-size:10px; color:var(--muted); }
+.toc a::after{ content: target-counter(attr(href), page); font-family:var(--mono); font-size:10px; color:var(--deep); }
+
+/* ── checklist / failure modes / wallet ── */
+ul.clean{ list-style:none; margin:8px 0; padding:0; }
+ul.clean li{ padding:5px 0 5px 20px; position:relative; border-bottom:1px solid var(--line); font-size:11px; line-height:1.4; }
+/* a list bullet is furniture too — \25c6 here read as VOLATILE on every item */
+ul.clean li::before{ content:'\2013'; position:absolute; left:0; top:5px; color:var(--gilt); font-size:9px; }
+.deadline{ font-family:var(--mono); font-size:9px; color:var(--brass); text-transform:uppercase; letter-spacing:.05em; }
+
+.fail{ break-inside:avoid; margin:11px 0; }
+.fail .head{ font-family:var(--sans); font-weight:700; font-size:11px; color:var(--brass); }
+.fail p{ text-align:left; text-indent:0; margin:2px 0 0; font-size:11px; }
+
+.wallet{ border:2px solid var(--deep); border-radius:8px; padding:16px 18px; margin:12px 0; background:rgba(14,99,144,.04); }
+.wallet h3{ margin-top:0; color:var(--deep); }
+.wallet .line{ display:flex; justify-content:space-between; font-size:10.5px; padding:4px 0; border-bottom:1px dashed var(--line); }
+.wallet .line .k{ font-family:var(--sans); font-weight:600; }
+.wallet .line .v{ font-family:var(--mono); font-size:10px; color:var(--deep); text-align:right; }
+
+.backmatter{ font-style:italic; color:var(--muted); }
+
+/* ── Field Sheet ── */
+.fs h1{ color:var(--brass); }
+.fstable{ width:100%; border-collapse:collapse; font-size:10.5px; margin:10px 0; }
+.fstable th{ font-family:var(--mono); font-size:8px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--brass); text-align:left; padding:0 8px 5px 0; border-bottom:1.5px solid var(--deep); }
+.fstable td{ padding:6px 8px 6px 0; border-bottom:1px solid var(--line); font-family:var(--body); }
+.fstable td.n{ font-family:var(--mono); text-align:right; color:var(--deep); white-space:nowrap; }
+.fsdate{ font-family:var(--mono); font-size:9px; color:var(--brass); text-transform:uppercase; letter-spacing:.08em; }
+
+/* ── PHOTOGRAPHIC PLATES ──────────────────────────────────────────────────
+   3:2 landscape only. Heights fixed so a plate never dominates a page; the
+   ARGUING figure (map, chart, diagram) still leads any page it shares. */
+.photo{ margin:13px 0 12px; break-inside:avoid; }
+.photo img{ width:100%; display:block; object-fit:cover; border-radius:2px; }
+.photo.wide img{ height:2.25in; }
+/* THE HEAD BAND — every chapter opens with one, directly under the standfirst.
+   It sits tight to the rule the standfirst draws, so the band reads as part of
+   the opener rather than as the first thing in the body. Never moved by the
+   compositor (see _PHOTO_RE in render-paged.py). */
+/* NO break-after:avoid here. It welds the band to whatever follows, and on a
+   decision chapter what follows is a scale map and its ledger — so the opener
+   could not hold all three, and Paged.js pushed the band, map and table off
+   together, leaving the kicker, title and standfirst alone on an empty sheet. */
+.photo.band{ margin:14px 0 15px; break-inside:avoid; }
+/* --band is written by the compositor (widow + fit passes). Both defaults
+   are the designed heights; only a measured pass ever overrides them. */
+.photo.band img{ height:var(--band, 2.35in); }
+.decision .photo.band img{ height:var(--band, 1.75in); }
+.photo.band figcaption{ font-family:var(--body); font-style:italic; font-size:10px;
+  letter-spacing:0; text-transform:none; line-height:1.4; color:var(--muted); margin-top:7px; }
+.photo figcaption{
+  font-family:var(--mono); font-size:8px; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--muted); margin-top:6px; }
+.photo figcaption .pl{ color:var(--brass); font-weight:500; }
+
+/* ── THE COMPOSITOR'S LEVERS ──────────────────────────────────────────────
+   render-paged.py measures every chapter's tail page after pagination and
+   writes one of these classes onto the chapter, then re-paginates. None of
+   them existed in this stylesheet, and the renderer's measure step keyed off
+   `section.dec` — a class this book didn't use — so the feather pass silently
+   measured nothing and the book paginated flat. A lever with no CSS behind it
+   is the same defect in the other direction: keep these in step with the
+   renderer's class names. */
+.chap.tight p{ line-height:1.44; margin-bottom:9px; }
+.chap.tight .photo.wide img{ height:2.0in; }
+.chap.loose p{ line-height:1.60; }
+/* a plate fed down to finish a chapter is sized to the page it closes */
+.photo.closing{ margin:30px 0 0; break-inside:avoid; }
+.photo.closing img{ height:4.6in; object-fit:cover; }
+.photo.closing figcaption{ margin-top:9px; line-height:1.6; }
+/* snug: a figure that would otherwise cost a whole sheet, cut to the room the
+   page before it actually has. The renderer sets --snug from its measurement. */
+figure.snug img, figure.snug svg{ height:var(--snug); width:auto; display:block;
+  margin-left:auto; margin-right:auto; }
+
+/* cover evidence strip */
+.cv-strip{ height:1.72in; overflow:hidden; border-top:1px solid rgba(224,168,40,.5);
+  border-bottom:1px solid rgba(224,168,40,.5); }
+.cv-strip img{ width:100%; height:100%; object-fit:cover; display:block; opacity:.92; }
+
+/* ─── the "Before you book" spread ──────────────────────────────────────────
+   Added 2026-09-29. The review's finding was that the books finish WHY and not
+   HOW. The checklist folios are target-counters into the chapters, so they move
+   when the chapters move; the counter hangs off the <a>, never the cell. */
+.ckl a::after{ content:target-counter(attr(href), page); }
+.ckl a{ text-decoration:none; color:inherit; }
+.askbox{ break-inside:avoid; margin:13px 0 0 0; padding:9px 0 0 0;
+  border-top:1px solid currentColor; }
+.askbox > .who{ font-size:.78em; letter-spacing:.14em; text-transform:uppercase;
+  opacity:.72; margin:0 0 6px 0; }
+.askbox ul{ margin:0; padding-left:1.05em; }
+.askbox li{ margin:0 0 4px 0; }
+/* These tables are LISTS, not instruments. Japan (and Morocco) style .ledger with
+   break-inside:avoid so an instrument is never split; a nine-row checklist is
+   taller than the space after an opener, so Paged.js pushed it sheet after sheet
+   and left the opener and the standfirst each alone on a near-empty page. */
+#beforeyoubook .ledger, #beforeyoubook table{ break-inside:auto; break-before:auto; }
+/* Keep a trip's name and its assumptions with the first rows of its table, but
+   let the table itself break — pinning the whole block cost Turkey a tail page. */
+.trip{ margin:15px 0 0 0; }
+.trip .tname{ font-weight:600; margin:0 0 3px 0; break-after:avoid; }
+.trip .tassume{ font-size:.86em; opacity:.78; margin:0 0 7px 0; break-after:avoid; }
+.trip .twhy{ font-size:.9em; margin:7px 0 0 0; opacity:.9; break-before:avoid; }
+/* The fallback table is four rows. Split, it sheds three onto a stub page;
+   whole, it is half a sheet and closes the spread. Keep it whole. */
+.fbwrap{ break-inside:avoid; }
+
+/* The compositor's FIT lever: a figure cut just enough that the table reading it
+   keeps its rows on the same page. Never below 85% — see render-paged.py. */
+figure[data-fit] svg, figure[data-fit] img{ height:var(--fit); width:auto;
+  display:block; margin-left:auto; margin-right:auto; }
+
+/* A closing plate sized to the page it closes (render-paged.py's fill pass).
+   The standard 4.6in is a floor, not a rule — a chapter that ends high on its
+   last sheet gets a taller plate rather than four inches of white. */
+figure.photo.fill img{ height:var(--fill); object-fit:cover; }
+/* The fallback MUST match .photo's own margin-top. Setting it to 30px added
+   17px above every one of the thirteen filled plates, which was enough to
+   push five of them onto fresh sheets — 46 pages became 51 for no reason
+   anyone reading the book could have seen. */
+figure.photo.fill{ margin-top:var(--fillpad, 13px); }
+
+/* ═══════════════════════════════════════════════════════════════════
+   ATELIER — the maquettiste's vocabulary (added 2026-10-24, pilot)
+   6-column grid: prose on four (426.7px), apparatus on two (201.3px).
+   Composed by compose.py from briefs.json. See ~/.claude/skills/atelier.
+   ═══════════════════════════════════════════════════════════════════ */
+@font-face{ font-family:'Symbols'; src:url('assets/fonts/NotoSansSymbols2-Regular.ttf'); }
+/* the provenance glyphs are not in Plex Mono; without this they fell back to
+   Menlo / Lucida Grande and the shipped PDF embedded both system fonts */
+.mk{ font-family:'Symbols',var(--mono); }
+:root{ --panel:#E6EEF0; --panel-deep:#DCE7EA; }
+
+section.at{ display:grid; grid-template-columns:426.7px 201.3px; column-gap:24px;
+  grid-auto-flow:row; align-items:start; }
+section.at > *{ grid-column:1; }
+section.at > .mg{ grid-column:2; }
+section.at > .c6{ grid-column:1/3; }
+section.at > .rh-src{ grid-column:1/3; }
+section.at > p{ text-align:left; text-indent:0; font-size:13px; line-height:20px; margin:0 0 9px; hyphens:auto; }
+section.at > p+p{ text-indent:0; }
+section.at > h2{ margin:14px 0 6px; }
+
+/* the opener pack */
+.opener6{ display:grid; grid-template-columns:426.7px 201.3px; column-gap:24px; align-items:start;
+  break-inside:avoid; break-after:avoid; margin:0 0 6px; }
+.opener6 .kicker{ margin:6px 0 14px; }
+.opener6 h1{ font-size:52px; line-height:.92; margin:0 0 12px; }
+.opener6 .standfirst{ font-size:16px; line-height:23px; margin:0 0 10px; padding:0; border:0; color:var(--ink); }
+.dnum{ font-family:var(--display); font-size:120px; line-height:.8; color:var(--accent); text-align:right;
+  letter-spacing:-.01em; margin:-2px -4px 0 0; }
+.dnum small{ display:block; font-family:var(--mono); font-size:9px; letter-spacing:.26em; text-transform:uppercase;
+  color:var(--muted); margin:12px 2px 0 0; line-height:14px; }
+.essay .dnum{ font-size:96px; }
+.opull{ font-family:var(--display); font-size:24px; line-height:26px; color:var(--accent); text-transform:uppercase;
+  border-top:2px solid var(--accent); padding-top:10px; margin-top:8px; }
+
+/* the verdict ticket */
+.ticket{ display:grid; grid-template-columns:128px 1fr; background:#fff; border:2px solid var(--ink);
+  box-shadow:6px 6px 0 var(--ink); position:relative; margin:6px 6px 17px 0; break-inside:avoid; }
+.ticket .stub{ background:var(--accent); color:#fff; padding:14px 14px 12px; border-right:2px dashed var(--paper);
+  display:flex; flex-direction:column; justify-content:space-between; min-height:120px; }
+.ticket .stub .big{ font-family:var(--display); line-height:.9; color:var(--gilt); word-break:break-word; }
+.ticket .stub .lab{ font-family:var(--mono); font-size:8px; letter-spacing:.18em; text-transform:uppercase;
+  line-height:12px; margin-top:10px; }
+.ticket .main{ padding:12px 16px 13px; }
+.ticket .vlab{ font-family:var(--mono); font-size:8.5px; letter-spacing:.26em; text-transform:uppercase;
+  color:var(--brass); margin:0 0 6px; text-align:left; text-indent:0; }
+.ticket .verdict{ background:none; border:0; padding:0; margin:0; font-size:14px; line-height:20px; text-align:left; text-indent:0; }
+.ticket .exc{ font-family:var(--sans); font-size:11px; line-height:16px; color:var(--muted); margin:10px 0 0;
+  padding-top:8px; border-top:1px dashed var(--line); text-align:left; text-indent:0; }
+.ticket .exc b{ font-weight:600; color:var(--ink); }
+.ticket::before,.ticket::after{ content:""; position:absolute; width:16px; height:16px; border-radius:50%;
+  background:var(--paper); border:2px solid var(--ink); top:50%; margin-top:-8px; }
+.ticket::before{ left:-10px } .ticket::after{ right:-10px; box-shadow:4px 4px 0 var(--paper); }
+
+/* the ledger as an instrument (div rows: a table under break-inside:avoid is unreliable) */
+.ledgerx{ background:var(--panel); border-top:2.5px solid var(--accent); margin:0 0 14px; break-inside:avoid; }
+.ledgerx .lcap{ display:flex; justify-content:space-between; font-family:var(--mono); font-size:8.5px;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--accent); padding:8px 14px 6px; border-bottom:1px solid var(--line); }
+.ledgerx .lcap span:last-child{ color:var(--muted); letter-spacing:.12em; }
+.ledgerx .row{ display:grid; grid-template-columns:64% 36%; border-bottom:1px solid var(--line); break-inside:avoid; }
+.ledgerx .row:last-child{ border-bottom:0; }
+.ledgerx .row > div{ padding:6px 14px; line-height:16px; font-size:11.5px; }
+.ledgerx .site b{ font-family:var(--sans); font-weight:650; }
+.ledgerx .site i{ color:var(--muted); font-family:var(--body); }
+.ledgerx .call{ font-family:var(--mono); font-size:10.5px; font-weight:500; color:var(--deep); text-align:right; }
+.ledgerx .row.decides{ border-top:2px solid var(--ink); background:var(--panel-deep); }
+.ledgerx .row.decides .site::before{ content:"CHANGES THE CHOICE"; display:block; font-family:var(--mono);
+  font-size:7.5px; letter-spacing:.22em; color:var(--brass); margin-bottom:3px; }
+
+/* the apparatus margin */
+.app{ font-family:var(--sans); font-size:10px; line-height:14px; color:var(--muted); margin:0 0 12px; }
+.app .k{ font-family:var(--mono); font-size:8px; letter-spacing:.22em; text-transform:uppercase; color:var(--brass);
+  border-top:1px solid var(--ink); padding-top:6px; margin:0 0 6px; }
+.app .ref{ margin:0; text-align:left; text-indent:0; font-family:var(--sans); font-size:10px; line-height:14px; }
+.app .ref b{ color:var(--ink); font-weight:600; }
+.app .marks div{ display:flex; gap:7px; margin:0 0 3px; }
+.app .marks .g{ font-family:'Symbols',var(--mono); width:12px; flex:none; }
+.app .marks .g.est{ color:var(--accent) } .app .marks .g.off{ color:var(--deep) } .app .marks .g.sur{ color:var(--gilt) }
+.app .marks .g.call{ color:var(--muted) } .app .marks .g.vol{ color:var(--brass) }
+
+/* captions, pull, inset */
+.cap{ font-family:var(--body); font-style:italic; font-size:12px; line-height:17px; color:var(--muted);
+  margin:0 0 17px; text-align:left; text-indent:0; }
+.cap .pl{ font-family:var(--mono); font-style:normal; font-size:8.5px; letter-spacing:.2em; color:var(--brass);
+  display:block; margin-bottom:4px; text-transform:uppercase; }
+.pull{ font-family:var(--display); font-size:24px; line-height:26px; color:var(--accent); text-transform:uppercase;
+  margin:4px 0 17px; border-top:2px solid var(--accent); padding-top:12px; }
+figure.inset{ margin:0 0 17px; break-inside:avoid; }
+figure.inset img{ width:100%; height:134px; object-fit:cover; display:block; border:2px solid var(--ink);
+  box-shadow:4px 4px 0 var(--ink); border-radius:0; }
+figure.inset figcaption{ font-family:var(--body); font-style:italic; font-size:11px; line-height:15px; color:var(--muted);
+  letter-spacing:0; text-transform:none; margin-top:12px; }
+figure.inset figcaption .pl{ display:block; font-family:var(--mono); font-style:normal; font-size:8.5px;
+  letter-spacing:.2em; color:var(--brass); margin-bottom:4px; text-transform:uppercase; }
+
+/* the bleed band — opens page C at the trim */
+.bleed{ break-before:page; margin:-92px -82px 14px; width:816px; height:262px; overflow:hidden; position:relative; }
+.bleed img{ width:100%; height:100%; object-fit:cover; display:block; }
+.bleed .tear{ position:absolute; left:0; right:0; bottom:0; height:8px;
+  background:repeating-linear-gradient(90deg,var(--paper) 0 10px,transparent 10px 16px); }
+figure.halfband{ margin:4px 0 14px; break-inside:avoid; }
+figure.halfband img{ width:100%; height:2.0in; object-fit:cover; display:block; border:2px solid var(--ink); }
+figure.halfband figcaption{ font-family:var(--body); font-style:italic; font-size:11px; line-height:15px;
+  letter-spacing:0; text-transform:none; color:var(--muted); margin-top:7px; }
+figure.figx{ margin:4px 0 14px; }
+figure.figx.pagetop{ break-before:page; }
+figure.figx svg{ max-height:4.2in; }
+
+/* the forks and the volatile row */
+.forks{ display:grid; grid-template-columns:1fr 1fr; column-gap:24px; margin:12px 0 0; position:relative;
+  padding-top:12px; break-inside:avoid; }
+.forks::before{ content:""; position:absolute; left:0; right:0; top:0; border-top:2px dashed var(--line); }
+.forks::after{ content:""; position:absolute; left:50%; top:-7px; width:12px; height:12px; margin-left:-6px;
+  border-radius:50%; background:var(--paper); border:2px solid var(--line); }
+.fork h4{ font-family:var(--mono); font-size:8.5px; letter-spacing:.22em; text-transform:uppercase; margin:0 0 6px; }
+.fork.a h4{ color:var(--accent) } .fork.b h4{ color:var(--brass) }
+.fork p{ font-family:var(--sans); font-size:11px; line-height:15.5px; margin:0 0 5px; text-align:left; text-indent:0; }
+.volrow{ display:flex; gap:16px; align-items:center; margin-top:14px; padding-top:9px; border-top:1px solid var(--line);
+  break-inside:avoid; }
+.volrow .stamp{ flex:none; font-family:var(--display); font-size:13px; letter-spacing:.06em; color:var(--brass);
+  border:2px solid var(--brass); padding:5px 9px 4px; transform:rotate(-3deg); text-transform:uppercase; line-height:1; }
+.volrow p{ font-family:var(--sans); font-size:10px; line-height:14px; color:var(--muted); margin:0; text-align:left; text-indent:0; }
+.volrow p .mk{ font-size:1em; }
+
+/* F · contents as a ticket; the wallet card as a ticket */
+#contents .toc{ border:2px solid var(--ink); box-shadow:6px 6px 0 var(--ink); background:#fff; padding:14px 18px; }
+.wallet{ border:2px solid var(--ink); border-radius:0; box-shadow:6px 6px 0 var(--ink); background:#fff; }
+/* marks inside the ledger gloss and the marks key: the glyph face must win over the italic/mono context */
+.ledgerx .site i .mk, .ledgerx .site b .mk, .markskey .g, .ticket .mk, .fork .mk, .volrow .mk{ font-family:'Symbols',var(--mono); font-style:normal; font-weight:400; }
+/* page-A paragraphs never fragment onto the page before the hero; the margin wrapper holds a slot's items */
+section.at > p.pa{ break-inside:avoid; }
+.mgw{ display:block; }
+.mgw > .app:last-child, .mgw > figure:last-child{ margin-bottom:0; }
+.ticket .stub .big{ white-space:nowrap; }
+/* ── PAIRING BY FLOATS, not grid rows (2026-10-24, render 5) ──
+   A grid row is as tall as its tallest cell, so an inset beside a short paragraph
+   left 60px of air under the paragraph on every page. Floats let the margin column
+   flow on its own: a margin item floats right at the top of the paragraph that
+   follows it, the prose keeps its 426.7px measure, and nothing stretches. */
+section.at{ display:block; }
+section.at > *{ width:426.7px; }
+section.at > .c6{ width:auto; clear:both; }
+section.at > .rh-src{ width:auto; }
+section.at > .mg{ float:right; clear:right; width:201.3px; margin:0 0 14px 24px; }
+section.at > .mg + .mg{ clear:right; }
+section.at > h2, section.at > h3{ clear:none; }
+
+/* ── MODEL 2 (2026-10-24): page-level levers applied by compose.py from levers.json ── */
+section.at > figure.photo{ width:auto; clear:both; }           /* a plate on a prose page spans the column, never four of six */
+section.at.loose > p{ line-height:20px; }                      /* the renderer's LOOSE card does not open composed prose */
+section.at.tight2 > p{ line-height:19px; margin-bottom:7px; }  /* the atelier's own tight notch */
+section.at.tight2 > .mg{ margin-bottom:10px; }
+section.at > p.wide{ width:auto; clear:both; }                 /* a page with nothing for its margin reads full measure */
+figure.photo.detail img{ object-position:var(--pos, 50% 50%); }
+.closeblock{ break-inside:avoid; }                             /* last paragraph + forks + volatile row travel together */
+/* the closeblock's children are composed like the section's own */
+section.at .closeblock > p{ width:426.7px; text-align:left; text-indent:0; font-size:13px; line-height:20px; margin:0 0 9px; hyphens:auto; }
+section.at .closeblock > p.wide{ width:auto; clear:both; }
+section.at .closeblock > .mg{ float:right; clear:right; width:201.3px; margin:0 0 14px 24px; }
+section.at .closeblock > .c6{ width:auto; clear:both; }
+section.at.tight2 .closeblock > p{ line-height:19px; margin-bottom:7px; }
+.mgw{ break-inside:avoid; }   /* a margin wrapper never splits across a page turn */

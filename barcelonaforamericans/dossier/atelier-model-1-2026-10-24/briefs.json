@@ -1,0 +1,477 @@
+{
+ "book": {
+  "title": "Barcelona, Without the Traps.",
+  "ncalls": "seven",
+  "site": "barcelonaforamericans",
+  "dialect": "L'Entrada — the admission ticket: 2px ink border, hard offset shadow, perforation, punched notches, stamp"
+ },
+ "sequence": "cover · B D · B E · F · B D · B E · B D · B D · B D D · A C ×7 · B E · B D · B E · B E E · B E · B D · B · B E · E",
+ "chapters": {
+  "contract": {
+   "kind": "essay",
+   "hero": {
+    "type": "pull",
+    "text": "A guide that refuses to commit is just the forty facts again, rearranged."
+   },
+   "inset": {
+    "src": "band",
+    "after": 0
+   },
+   "closer": "keep",
+   "instrument": false
+  },
+  "howto": {
+   "kind": "essay",
+   "hero": {
+    "type": "band"
+   },
+   "instrument": true,
+   "closer": "keep"
+  },
+  "contents": {
+   "kind": "divider",
+   "skip": true
+  },
+  "ground": {
+   "kind": "essay",
+   "hero": {
+    "type": "band"
+   },
+   "instrument": false,
+   "closer": "keep",
+   "pull": {
+    "text": "The city does not need to hide anything; the scattering does the work.",
+    "after": 1
+   },
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>Decision 03 · The Money-Trap Web</b><br>The four extractions, in one place, with the arithmetic shown.",
+     "after": 4
+    },
+    {
+     "marks": true,
+     "after": 5
+    }
+   ]
+  },
+  "fly": {
+   "kind": "essay",
+   "hero": {
+    "type": "number",
+    "value": "2",
+    "label": "bookings that truly bind — everything else bends"
+   },
+   "inset": {
+    "src": "band",
+    "after": 0
+   },
+   "instrument": true,
+   "closer": "keep",
+   "margin": [
+    {
+     "marks": true,
+     "after": 0
+    }
+   ]
+  },
+  "dayzero": {
+   "kind": "essay",
+   "hero": {
+    "type": "number",
+    "value": "6",
+    "label": "hours — the ones no guide writes"
+   },
+   "inset": {
+    "src": "band",
+    "after": 0
+   },
+   "instrument": false,
+   "closer": "drop",
+   "pull": {
+    "text": "Resist the timed sight.",
+    "after": 2
+   },
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>Decision 03 · The Money-Trap Web</b><br>The airport-metro gate, and the ticket that opens it.",
+     "after": 1
+    }
+   ]
+  },
+  "timing": {
+   "kind": "essay",
+   "hero": {
+    "type": "figure"
+   },
+   "inset": {
+    "src": "band",
+    "after": 1
+   },
+   "instrument": false,
+   "closer": "keep",
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>The Horizons</b><br>How far ahead each booking has to be made — firmer in the centenary year.",
+     "after": 3
+    }
+   ]
+  },
+  "setpieces": {
+   "kind": "essay",
+   "hero": {
+    "type": "band"
+   },
+   "instrument": false,
+   "closer": "drop",
+   "pull": {
+    "text": "A booked ticket is not the same as a solved visit.",
+    "after": 1
+   },
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>Decision 05 · The Gaudí Fork</b><br>Which of the Gaudí doors earn a ticket at all.",
+     "after": 2
+    },
+    {
+     "marks": true,
+     "after": 5
+    }
+   ]
+  },
+  "d01": {
+   "kind": "decision",
+   "hero": {
+    "type": "figure"
+   },
+   "break_after": 0,
+   "stub": {
+    "big": "EIXAMPLE",
+    "lab": "the default base — central, quiet at night, Gaudí on foot"
+   },
+   "exception": "for",
+   "decides_row": 1,
+   "inset": {
+    "src": "closer",
+    "after": 1
+   },
+   "pull": {
+    "text": "There are no bad areas on this list.",
+    "after": 2
+   },
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>Decision 02 · The Apartment Question</b><br>The base is one call; the kind of bed is the next.",
+     "after": 0
+    },
+    {
+     "marks": true,
+     "after": 0
+    }
+   ]
+  },
+  "d02": {
+   "kind": "decision",
+   "hero": {
+    "type": "band"
+   },
+   "break_after": 0,
+   "band_label": "The licence",
+   "stub": {
+    "big": "HUTB",
+    "lab": "no licence number, no booking"
+   },
+   "exception": "against",
+   "decides_row": 2,
+   "inset": {
+    "src": "closer",
+    "after": 2
+   },
+   "pull": {
+    "text": "It is law on a countdown.",
+    "after": 1
+   },
+   "stamp": "Nov 2028 · Phase-out",
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>Decision 01 · Where to Base</b><br>Which neighbourhood, before which kind of room.",
+     "after": 0
+    },
+    {
+     "marks": true,
+     "after": 1
+    }
+   ]
+  },
+  "d03": {
+   "kind": "decision",
+   "hero": {
+    "type": "figure"
+   },
+   "break_after": 0,
+   "stub": {
+    "big": "4",
+    "lab": "gates · four moves · five minutes to learn"
+   },
+   "exception": "for",
+   "decides_row": null,
+   "inset": {
+    "src": "band",
+    "after": 1
+   },
+   "pull": {
+    "text": "Your own bank will almost always do better.",
+    "after": 2
+   },
+   "stamp": "Rose 1 Apr 2026",
+   "closer": "keep",
+   "margin": [
+    {
+     "marks": true,
+     "after": 1
+    },
+    {
+     "k": "Read with",
+     "html": "<b>Decision 07 · How Not to Eat Like a Tourist</b><br>The fourth gate is a table, not a terminal.",
+     "after": 3
+    }
+   ]
+  },
+  "d05": {
+   "kind": "decision",
+   "hero": {
+    "type": "band"
+   },
+   "break_after": 0,
+   "band_label": "The morning nave",
+   "stub": {
+    "big": "3",
+    "lab": "anchors — the Sagrada morning, the day trip, the beach unpinned"
+   },
+   "exception": "against",
+   "decides_row": 0,
+   "inset": {
+    "src": "closer",
+    "after": 2
+   },
+   "pull": {
+    "text": "wedged into a morning it becomes a commute with a view",
+    "after": 1
+   },
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>Decision 06 · Which Day Trip</b><br>Which excursion gets the full clear day.",
+     "after": 0
+    },
+    {
+     "marks": true,
+     "after": 0
+    }
+   ]
+  },
+  "d06": {
+   "kind": "decision",
+   "hero": {
+    "type": "band"
+   },
+   "break_after": 0,
+   "band_label": "Sagrada Família",
+   "stub": {
+    "big": "2+1",
+    "lab": "ticketed sites + one house — the first-timer's dose"
+   },
+   "exception": "against",
+   "decides_row": 2,
+   "inset": {
+    "src": "closer",
+    "after": 1
+   },
+   "pull": {
+    "text": "Two is a schedule. Four is a timetable",
+    "after": 3
+   },
+   "stamp": "2026 · Centenary year",
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>Decision 04 · Sequencing the Days</b><br>Two ticketed sites on the same day means crossing the city twice on someone else's clock.",
+     "after": 0
+    },
+    {
+     "marks": true,
+     "after": 0
+    }
+   ]
+  },
+  "d07": {
+   "kind": "decision",
+   "hero": {
+    "type": "figure"
+   },
+   "break_after": 0,
+   "stub": {
+    "big": "MONTSERRAT",
+    "lab": "the one to take if you take one"
+   },
+   "exception": "against",
+   "decides_row": 0,
+   "inset": {
+    "src": "closer",
+    "after": 1
+   },
+   "pull": {
+    "text": "Montserrat leads because it is the least substitutable.",
+    "after": 2
+   },
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>Decision 04 · Sequencing the Days</b><br>The day trip wants a full clear day, mid-trip.",
+     "after": 0
+    },
+    {
+     "marks": true,
+     "after": 0
+    }
+   ]
+  },
+  "d08": {
+   "kind": "decision",
+   "hero": {
+    "type": "band"
+   },
+   "break_after": 0,
+   "band_label": "The register",
+   "stub": {
+    "big": "MENÚ",
+    "lab": "del día — the biggest food-money lever in the city"
+   },
+   "exception": "against",
+   "decides_row": 2,
+   "inset": {
+    "src": "closer",
+    "after": 2
+   },
+   "pull": {
+    "text": "Eating late here is not an affectation.",
+    "after": 4
+   },
+   "stamp": "See the Field Sheet",
+   "margin": [
+    {
+     "k": "Read with",
+     "html": "<b>Decision 03 · The Money-Trap Web</b><br>The tourist lunch is the fourth extraction.",
+     "after": 0
+    },
+    {
+     "marks": true,
+     "after": 0
+    }
+   ]
+  },
+  "horizons": {
+   "kind": "essay",
+   "hero": {
+    "type": "figure"
+   },
+   "inset": {
+    "src": "band",
+    "after": 0
+   },
+   "instrument": true,
+   "closer": "keep"
+  },
+  "risk": {
+   "kind": "essay",
+   "hero": {
+    "type": "number",
+    "value": "4",
+    "label": "named places. Everywhere else, ordinary alertness"
+   },
+   "inset": {
+    "src": "band",
+    "after": 0
+   },
+   "instrument": false,
+   "closer": "keep",
+   "pull": {
+    "text": "Anything sudden that asks for your attention in a crowd is the tell",
+    "after": 3
+   },
+   "margin": [
+    {
+     "marks": true,
+     "after": 1
+    }
+   ]
+  },
+  "plan": {
+   "kind": "essay",
+   "hero": {
+    "type": "figure"
+   },
+   "inset": {
+    "src": "band",
+    "after": 0
+   },
+   "instrument": true,
+   "closer": "drop"
+  },
+  "fail": {
+   "kind": "essay",
+   "hero": {
+    "type": "figure"
+   },
+   "inset": {
+    "src": "band",
+    "after": 0
+   },
+   "instrument": true,
+   "closer": "keep"
+  },
+  "wallet": {
+   "kind": "essay",
+   "hero": {
+    "type": "band"
+   },
+   "instrument": true
+  },
+  "back": {
+   "kind": "essay",
+   "hero": {
+    "type": "number",
+    "value": "4",
+    "label": "things this book refuses to do"
+   },
+   "inset": {
+    "src": "band",
+    "after": 0
+   },
+   "instrument": false
+  },
+  "then": {
+   "kind": "essay",
+   "hero": {
+    "type": "band"
+   },
+   "instrument": false
+  },
+  "beforeyoubook": {
+   "kind": "essay",
+   "hero": {
+    "type": "band"
+   },
+   "instrument": true
+  },
+  "fs": {
+   "kind": "reference",
+   "skip": true
+  }
+ }
+}

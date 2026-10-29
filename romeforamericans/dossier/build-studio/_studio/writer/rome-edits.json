@@ -1,0 +1,582 @@
+[
+ {
+  "id": "B1",
+  "chapter_id": "d01",
+  "old": "The €-figures move; the walk-times don’t. <i class=\"mk\">◆</i> Room rates by area and season live on the Field Sheet.",
+  "new": "Room rates move by season and by site, so we print none; the walk-times don’t move.",
+  "source": "no official or primary source publishes room rates by area; the deferral leaves the book (Ruth B1 alternative)",
+  "why": "D01 deferral had no value anywhere; it leaves the book",
+  "block": 10,
+  "field": "text"
+ },
+ {
+  "id": "B1",
+  "chapter_id": "d04",
+  "old": "<i class=\"mk\">◆</i> Timed-slot availability is on the Field Sheet.",
+  "new": "<i class=\"mk\">◆</i> When each tier goes on sale, and this season’s closing time, are on the Field Sheet.",
+  "source": "https://colosseo.it/orari-e-biglietti/ (site refused connections 2026-10-26 from two networks; wording read via WebSearch excerpt 2026-10-26: \"Le vendite dei biglietti ... sono aperte 30 giorni prima della data prevista per la visita\"; \"Il biglietto è nominativo per tutte le tipologie\"; \"insieme al biglietto acquistato dovrà essere tenuto a vista il documento di riconoscimento\")",
+  "why": "D04 now points to two values the Sheet carries (30-day sale; winter hours)",
+  "block": 10,
+  "field": "text"
+ },
+ {
+  "id": "B1",
+  "chapter_id": "d05",
+  "old": "Booking fees, opening hours and the passage-tour availability change; confirm on the Field Sheet.",
+  "new": "The booking fee, the opening hours and the closed days change; the current ones are on the Field Sheet.",
+  "source": "https://www.museivaticani.va/content/museivaticani/en/info/orari-musei-vaticani.html (read 2026-10-26); https://www.museivaticani.va/content/museivaticani/en/organizza-visita/tariffe-e-biglietti.html (€20 + €5 online; read 2026-10-26)",
+  "why": "D05 deferral now names only what the Sheet answers (passage tour cannot be sourced; dropped)",
+  "block": 10,
+  "field": "text"
+ },
+ {
+  "id": "B1",
+  "chapter_id": "d09",
+  "old": "Train times, Circumvesuviana conditions and site hours change; the Field Sheet carries the live figures.",
+  "new": "Train times and site hours change; the Field Sheet carries the current ones.",
+  "source": "https://servizionline.astralspa.it/Metromare.pdf (Metromare Roma–Lido, \"ORARIO IN VIGORE DAL 27 LUGLIO\" [2026; file dated 7 Oct 2026]: Ostia Antica 05:26 → Porta San Paolo 05:52, departures every 20 min Mon–Sat; read 2026-10-26); https://www.trenitalia.com/it/frecciarossa/collegamenti-frecciarossa/viaggia-tra-roma-e-napoli-con-le-frecce.html (\"poco più di 1.00h\"; read 2026-10-26)",
+  "why": "D09 deferral matches the Sheet rows (Lido timetable, Naples train, Ostia hours)",
+  "block": 10,
+  "field": "text"
+ },
+ {
+  "id": "B1",
+  "chapter_id": "d02",
+  "old": "inspectors issue fines starting around €100 (ATAC currently offers a 50% reduction if paid within five days — check the official notice for the current amount) without sympathy.",
+  "new": "inspectors issue a fine of about €105 (about €55 if paid within five days; the current figure is on the Field Sheet) without sympathy.",
+  "source": "https://www.atac.roma.it/customer-experience/multe-e-rimborsi (€104.90; €54.90 within 5 days — bot-walled; Ruth read via WebSearch excerpt 2026-10-25; re-tried 2026-10-26, ShieldSquare wall)",
+  "why": "the fine now matches the Sheet row",
+  "block": 7,
+  "field": "text"
+ },
+ {
+  "id": "B2",
+  "chapter_id": "d03",
+  "old": "The €55 fixed taxi fare was set by Roma Capitale (adopted 2024), not the airport authority;",
+  "new": "The €55 fixed taxi fare was set by Roma Capitale (adopted 2024, reissued unchanged in May 2026), not the airport authority;",
+  "source": "https://www.comune.roma.it/web-resources/cms/documents/TariffarioTaxi_giugno2026.pdf (Delib. G.C. 157, 21 May 2026; read 2026-10-26)",
+  "why": "p27 and the Sheet now give the same dates (2024; reissued 2026)",
+  "block": 10,
+  "field": "text"
+ },
+ {
+  "id": "M1",
+  "chapter_id": "d03",
+  "old": "For two adults, Leonardo Express tickets run about €28 total before the onward taxi or walk; the fixed taxi is €55 flat for the party, up to four people, door to door, no matter the traffic or hour.",
+  "new": "For two adults, Leonardo Express tickets run about €28; add the hop from Termini (about €3 for two metro rides, or about €9–13 by taxi) and the pair of you pay about €31–41 door to door. The fixed taxi is €55 flat for the party, up to four people, bags included (a fifth passenger or more, in a larger car, adds €5 each), door to door, no matter the traffic or hour.",
+  "source": "https://www.trenitalia.com/it/treni_regionali/lazio/leonardo_express.html (€14; 4 tickets €40; read 2026-10-26); https://www.atac.roma.it/biglietti-e-abbonamenti/roma24h (BIT €1.50, Roma 24h €8.50; read 2026-10-26); https://www.comune.roma.it/web-resources/cms/documents/TariffarioTaxi_giugno2026.pdf (Delib. G.C. 157, 21 May 2026; read 2026-10-26) (minimum ride €9; 5 km standard ride €13.10; fixed fares \"comprensive di tutti i supplementi\"); https://www.comune.roma.it/web-resources/cms/documents/TariffarioTaxi_giugno2026.pdf (\"Le tariffe predeterminate sono comprensive di tutti i supplementi ad eccezione del supplemento dal quinto passeggero in poi\"; \"€ 5,00 per ogni passeggero eccedente il quarto\"; read 2026-10-26)",
+  "why": "states the party-of-two door-to-door total the call rests on; X5: the €5 supplement per passenger beyond four",
+  "block": 5,
+  "field": "text"
+ },
+ {
+  "id": "M1",
+  "chapter_id": "d03",
+  "old": "For a central base the train’s €14 becomes €25–30 with the onward hop — competitive with the €55 fixed taxi.",
+  "new": "For two people and a central base, the train’s €28 becomes about €31–41 with the onward hop, against €55 for the fixed taxi.",
+  "source": "https://www.trenitalia.com/it/treni_regionali/lazio/leonardo_express.html (€14; 4 tickets €40; read 2026-10-26); https://www.comune.roma.it/web-resources/cms/documents/TariffarioTaxi_giugno2026.pdf (Delib. G.C. 157, 21 May 2026; read 2026-10-26)",
+  "why": "Fig. 5 caption in the party-of-two unit (Brunner redraws the bars to match)",
+  "block": 4,
+  "field": "cap"
+ },
+ {
+  "id": "M1",
+  "chapter_id": "d03",
+  "old": "≈ €28 for two tickets, plus the onward hop",
+  "new": "≈ €31–41 for two, door to door",
+  "source": "https://www.trenitalia.com/it/treni_regionali/lazio/leonardo_express.html (€14; 4 tickets €40; read 2026-10-26); https://www.comune.roma.it/web-resources/cms/documents/TariffarioTaxi_giugno2026.pdf (Delib. G.C. 157, 21 May 2026; read 2026-10-26)",
+  "why": "ledger row (field rows[0].vals[0]) gives the door-to-door total",
+  "block": 7,
+  "field": "rows[0].vals[0]"
+ },
+ {
+  "id": "M1",
+  "chapter_id": "d03",
+  "old": "you’re four people to the door → €55 split beats four train- plus-onward fares",
+  "new": "you’re four people to the door → €55 covers all four; the train’s four-for-€40 fare plus a cab from Termini costs about the same",
+  "source": "https://www.trenitalia.com/it/treni_regionali/lazio/leonardo_express.html (€14; 4 tickets €40; read 2026-10-26) (4 tickets €40); https://www.comune.roma.it/web-resources/cms/documents/TariffarioTaxi_giugno2026.pdf (Delib. G.C. 157, 21 May 2026; read 2026-10-26)",
+  "why": "the four-person overrule was wrong once the official group fare is counted",
+  "block": 9,
+  "field": "items[2].text"
+ },
+ {
+  "id": "M2/N1/N2",
+  "chapter_id": "d03",
+  "old": "Use only the official white taxis from the marked rank, and confirm it’s the posted fixed airport fare before you load the bags",
+  "new": "Use only the official taxis from the marked rank: white, with TAXI on the roof and the town’s emblem and license number on the front doors. <i class=\"mk\">◇</i> The €55 is Roma Capitale’s fare, so look for Rome’s emblem: Fiumicino’s own town taxis also work the airport, on fares their town sets. <i class=\"mk\">◇</i> The €55 covers the zone the tariff calls the Aurelian Walls: the walled city (Centro Storico, Monti, Trastevere, Termini) plus the Vatican, Borgo and Prati up to Viale delle Milizie. <i class=\"mk\">◇</i> Beyond that line the meter runs (at least €35, at most €80 from the airport), so agree the fare before you load the bags",
+  "source": "https://www.comune.roma.it/web-resources/cms/documents/TariffarioTaxi_giugno2026.pdf (Delib. G.C. 157, 21 May 2026; \"MURA AURELIANE … Area within the following clockwise boundary: … Via Gregorio VII, Piazza Pio XI, Via Anastasio II, Via Cipro, … Piazzale degli Eroi, Via Andrea Doria, Largo Trionfale, Viale delle Milizie, Piazza delle Cinque Giornate, Ponte Matteotti …\"; read 2026-10-26); https://www.adr.it/web/aeroporti-di-roma-en/pax-fco-taxi (read 2026-10-26: \"Fares are set by the competent municipality\"; \"The symbol of the municipality of reference is shown on the front doors\"; \"Fiumicino municipal taxis are available in the areas indicated in front of Terminal 1 and Terminal 3\"). No official Comune di Fiumicino tariff found (WebSearch of comune.fiumicino.rm.it 2026-10-26); press reports €80 — not used",
+  "why": "N1: names the €55 zone as the official perimeter draws it (Vatican, Borgo, Prati to Viale delle Milizie inside); N2: says what the official source says about Fiumicino-licensed cars",
+  "block": 6,
+  "field": "text"
+ },
+ {
+  "id": "M2/N1",
+  "chapter_id": "decide-these-first",
+  "old": "It applies between Fiumicino and the walled centre, and it is published. Agree it before the doors",
+  "new": "It covers the Walls plus the Vatican and Prati up to Viale delle Milizie, and it is published. Agree it before the doors",
+  "source": "https://www.comune.roma.it/web-resources/cms/documents/TariffarioTaxi_giugno2026.pdf (Delib. G.C. 157, 21 May 2026; \"MURA AURELIANE … Area within the following clockwise boundary: … Via Gregorio VII, Piazza Pio XI, Via Anastasio II, Via Cipro, … Piazzale degli Eroi, Via Andrea Doria, Largo Trionfale, Viale delle Milizie, Piazza delle Cinque Giornate, Ponte Matteotti …\"; read 2026-10-26)",
+  "why": "N1: p86 agrees with the official perimeter (line block +17 characters; Brunner to check the reflow)",
+  "block": 105,
+  "field": "text"
+ },
+ {
+  "id": "M4",
+  "chapter_id": "d06",
+  "old": "The standard Colosseum combined ticket runs on timed entry you should still reserve, especially in high season; the Pantheon is now timed-entry too. <i class=\"mk\">◇</i> These you book to skip the ticket line, not because they’ll be gone — a day or two ahead is usually enough.",
+  "new": "The standard Colosseum combined ticket runs on timed entry and goes on sale 30 days before the visit. <i class=\"mk\">◇</i> From April through October, book it when your dates are firm, because peak days do go; in winter, a few days ahead is usually enough. The Pantheon needs no booking at all: booking is optional and tickets are sold at its desks and kiosks. <i class=\"mk\">◇</i>",
+  "source": "https://colosseo.it/orari-e-biglietti/ (site refused connections 2026-10-26 from two networks; wording read via WebSearch excerpt 2026-10-26: \"Le vendite dei biglietti ... sono aperte 30 giorni prima della data prevista per la visita\"; \"Il biglietto è nominativo per tutte le tipologie\"; \"insieme al biglietto acquistato dovrà essere tenuto a vista il documento di riconoscimento\"); https://cultura.gov.it/luogo/pantheon (refused connections 2026-10-26; read via WebSearch excerpt 2026-10-26: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\"; Ruth read the same by WebFetch 2026-10-25)",
+  "why": "the claim now carries its source (30-day sale) and a season; the Pantheon line matches the official wording",
+  "block": 5,
+  "field": "text"
+ },
+ {
+  "id": "M4",
+  "chapter_id": "d06",
+  "old": "The standard Colosseum and the Pantheon need only a day or two.",
+  "new": "The standard Colosseum goes on sale 30 days out: in peak season book it then, in winter a few days ahead; the Pantheon needs no booking.",
+  "source": "https://colosseo.it/orari-e-biglietti/ (site refused connections 2026-10-26 from two networks; wording read via WebSearch excerpt 2026-10-26: \"Le vendite dei biglietti ... sono aperte 30 giorni prima della data prevista per la visita\"; \"Il biglietto è nominativo per tutte le tipologie\"; \"insieme al biglietto acquistato dovrà essere tenuto a vista il documento di riconoscimento\"); https://cultura.gov.it/luogo/pantheon (refused connections 2026-10-26; read via WebSearch excerpt 2026-10-26: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\"; Ruth read the same by WebFetch 2026-10-25)",
+  "why": "the call names the same window as the text",
+  "block": 8,
+  "field": "rest"
+ },
+ {
+  "id": "M4",
+  "chapter_id": "d06",
+  "old": "you only want the standard sights → a day or two ahead is genuinely enough; don’t over-plan",
+  "new": "you only want the standard sights in winter → a few days ahead is enough; from April to October, book when the 30-day sale opens",
+  "source": "https://colosseo.it/orari-e-biglietti/ (site refused connections 2026-10-26 from two networks; wording read via WebSearch excerpt 2026-10-26: \"Le vendite dei biglietti ... sono aperte 30 giorni prima della data prevista per la visita\"; \"Il biglietto è nominativo per tutte le tipologie\"; \"insieme al biglietto acquistato dovrà essere tenuto a vista il documento di riconoscimento\")",
+  "why": "overrule carries the season",
+  "block": 9,
+  "field": "items[2].text"
+ },
+ {
+  "id": "M4",
+  "chapter_id": "d06",
+  "old": "a day or two — to skip the ticket line",
+  "new": "Colosseum: on sale 30 days out; Pantheon: buy at the door",
+  "source": "https://colosseo.it/orari-e-biglietti/ (site refused connections 2026-10-26 from two networks; wording read via WebSearch excerpt 2026-10-26: \"Le vendite dei biglietti ... sono aperte 30 giorni prima della data prevista per la visita\"; \"Il biglietto è nominativo per tutte le tipologie\"; \"insieme al biglietto acquistato dovrà essere tenuto a vista il documento di riconoscimento\"); https://cultura.gov.it/luogo/pantheon (refused connections 2026-10-26; read via WebSearch excerpt 2026-10-26: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\"; Ruth read the same by WebFetch 2026-10-25)",
+  "why": "ledger row (field rows[4].vals[0])",
+  "block": 7,
+  "field": "rows[4].vals[0]"
+ },
+ {
+  "id": "M4",
+  "chapter_id": "d06",
+  "old": "~weeks — guided slots sell out separately",
+  "new": "on sale 30 days out — sells out fast",
+  "source": "https://colosseo.it/en/tickets/full-experience-underground-arena/ (sale opens 30 days ahead — Ruth, read 2026-10-25)",
+  "why": "ledger row (field rows[1].vals[0]) gives the official window",
+  "block": 7,
+  "field": "rows[1].vals[0]"
+ },
+ {
+  "id": "M4",
+  "chapter_id": "before-you-fly",
+  "old": "Reserve the standard Colosseum combined ticket and the Pantheon’s timed entry — to skip the",
+  "new": "In winter, reserve the standard Colosseum ticket (in peak season, book it 30 days out); the Pantheon",
+  "source": "https://colosseo.it/orari-e-biglietti/ (site refused connections 2026-10-26 from two networks; wording read via WebSearch excerpt 2026-10-26: \"Le vendite dei biglietti ... sono aperte 30 giorni prima della data prevista per la visita\"; \"Il biglietto è nominativo per tutte le tipologie\"; \"insieme al biglietto acquistato dovrà essere tenuto a vista il documento di riconoscimento\"); https://cultura.gov.it/luogo/pantheon (refused connections 2026-10-26; read via WebSearch excerpt 2026-10-26: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\"; Ruth read the same by WebFetch 2026-10-25)",
+  "why": "line block (+9 characters; Brunner to check the reflow); header “A day or two ahead” should read “A few days ahead”",
+  "block": 15,
+  "field": "text"
+ },
+ {
+  "id": "M4",
+  "chapter_id": "before-you-fly",
+  "old": "ticket line, not because they’ll sell out (Decision 06).",
+  "new": "sells tickets at the door, so book nothing there (Decision 06).",
+  "source": "https://cultura.gov.it/luogo/pantheon (refused connections 2026-10-26; read via WebSearch excerpt 2026-10-26: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\"; Ruth read the same by WebFetch 2026-10-25)",
+  "why": "line block, second line of the same item",
+  "block": 16,
+  "field": "text"
+ },
+ {
+  "id": "m28",
+  "chapter_id": "day-zero-the-arrival",
+  "old": "The Pantheon now charges admission and needs a timed slot (Decision 06);",
+  "new": "The Pantheon now charges admission, though you buy at the door and need no booking;",
+  "source": "https://cultura.gov.it/luogo/pantheon (refused connections 2026-10-26; read via WebSearch excerpt 2026-10-26: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\"; Ruth read the same by WebFetch 2026-10-25)",
+  "why": "WRONG in part (Ruth claims table): booking is optional",
+  "block": 3,
+  "field": "text"
+ },
+ {
+  "id": "m28",
+  "chapter_id": "the-set-pieces",
+  "old": "What’s changed recently is that it now charges admission and runs on timed entry, which blindsides first-timers who remember it as the free marvel it long was. <i class=\"mk\">◇</i> Book the timed slot a day or two ahead (Decision 06);",
+  "new": "What’s changed recently is that it now charges admission, which blindsides first-timers who remember it as the free marvel it long was. <i class=\"mk\">◇</i> Booking is optional and tickets are sold on site, so buy at the door;",
+  "source": "https://cultura.gov.it/luogo/pantheon (refused connections 2026-10-26; read via WebSearch excerpt 2026-10-26: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\"; Ruth read the same by WebFetch 2026-10-25)",
+  "why": "WRONG in part: every Pantheon booking line now matches \"Prenotazione Facoltativa\"",
+  "block": 2,
+  "field": "text"
+ },
+ {
+  "id": "M5",
+  "chapter_id": "d04",
+  "old": "valid for twenty-four hours across all three. <i class=\"mk\">◇</i>",
+  "new": "valid for twenty-four hours across all three. <i class=\"mk\">◇</i> Every ticket carries the visitor’s name, and each of you shows a photo ID with it at the gate, so book in the names on your passports. <i class=\"mk\">◇</i>",
+  "source": "https://colosseo.it/orari-e-biglietti/ (site refused connections 2026-10-26 from two networks; wording read via WebSearch excerpt 2026-10-26: \"Le vendite dei biglietti ... sono aperte 30 giorni prima della data prevista per la visita\"; \"Il biglietto è nominativo per tutte le tipologie\"; \"insieme al biglietto acquistato dovrà essere tenuto a vista il documento di riconoscimento\")",
+  "why": "the names-and-ID rule stated once, where the ticket is introduced (p29)",
+  "block": 2,
+  "field": "text"
+ },
+ {
+  "id": "M6",
+  "chapter_id": "the-set-pieces",
+  "old": "— governed by the basilica’s dress code and security, so it pairs with",
+  "new": "— and it sits behind the basilica’s security and its dress code: “Shoulders and knees must always be covered.” <i class=\"mk\">◇</i> Pack a scarf and long pants or a skirt for Vatican day. It pairs with",
+  "source": "https://www.basilicasanpietro.va/en/help/the-dome (read 2026-10-26: \"Yes, clothing appropriate for a place of worship is required. Shoulders and knees must always be covered.\")",
+  "why": "states the official dress code once (Marta may take the room from p66’s duplicate caption)",
+  "block": 5,
+  "field": "text"
+ },
+ {
+  "id": "M7",
+  "chapter_id": "before-you-fly",
+  "old": "This is the entire pre-departure list that matters, each line with the deadline that makes it urgent.",
+  "new": "This is the list of things with a deadline, each line with the one that makes it urgent.",
+  "source": "—",
+  "why": "drops \"entire\"",
+  "block": 2,
+  "field": "text"
+ },
+ {
+  "id": "M7",
+  "chapter_id": "before-you-fly",
+  "old": "The list is deliberately short, and its shortness is the point: the anxiety of trip-planning comes from treating every choice as equally urgent, when in truth only a handful have a clock on them.",
+  "new": "Under it sit three things every trip needs: for a US passport, at least three months’ validity past the day you leave the Schengen area (six months recommended) and two blank pages, for a stay of up to 90 days in any 180 <i class=\"mk\">◇</i> (at the border, the EU’s Entry/Exit System now takes your fingerprints and photo <i class=\"mk\">◇</i>; the ETIAS travel authorization is not yet required, and the Field Sheet says when it is); a phone that works on landing, by an international plan or an eSIM installed before you fly; and 112, the free emergency number everywhere in the EU. <i class=\"mk\">◇</i>",
+  "source": "https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Italy.html (403 to WebFetch; read via WebSearch excerpt 2026-10-26: valid three months past planned exit from Schengen); https://home-affairs.ec.europa.eu/policies/schengen/smart-borders/entry-exit-system_en (\"The system became fully operational on 10 April 2026\"; read 2026-10-26); https://digital-strategy.ec.europa.eu/en/policies/112 (\"112 is the European emergency phone number, available everywhere in the EU, free of charge.\"; read 2026-10-26); ETIAS: EEAS notice \"not yet operational\", no start date announced (WebSearch 2026-10-26); https://travel.state.gov/content/travel/en/international-travel/International-Travel-Country-Information-Pages/Italy.html ; https://it.usembassy.gov/visiting-living-in-italy/ (both 403 to WebFetch; read via WebSearch excerpts 2026-10-26: valid three months beyond planned Schengen departure, six months recommended, two blank pages); 90 days in any 180: https://travel.state.gov/en/international-travel/planning/guidance/europe.html (via WebSearch, Ruth 2026-10-26)",
+  "why": "the list covers passport/entry, a phone and 112, in the room of the sentence it replaces; X4: labeled the US rule; blank pages, 6 months, 90/180",
+  "block": 2,
+  "field": "text"
+ },
+ {
+  "id": "M8",
+  "chapter_id": "d07",
+  "old": "The coperto is a small per-person cover charge for the table, stated on the menu — not a gratuity and not a trick. <i class=\"mk\">●</i>",
+  "new": "The coperto is a small per-person cover charge for the table, not a gratuity. Lazio’s regional law bans it (Regional Law 22/2019, art. 75(4); at the table, “l.r. 22/2019, art. 75”) <i class=\"mk\">◇</i>, yet many menus still print it: ask before you sit, and if it appears on the bill, ask for it to come off; if they refuse, pay it (a euro or three a head) and don’t come back.",
+  "source": "https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9373&sv=vigente (L.R. Lazio 6 Nov 2019 n. 22, art. 75 c. 4, in force: \"Nella somministrazione è vietato applicare costi aggiuntivi per il coperto.\"; read 2026-10-26. NB Ruth cited L.R. 21/2006, which L.R. 22/2019 art. 107 repealed — same rule, now art. 75); https://www.regione.lazio.it/sites/default/files/documentazione/SVI_Legge_Regionale_06_11_2019_n22_TESTO_UNICO_COMMERCIO.pdf (art. 75 c. 4; read 2026-10-26)",
+  "why": "one line says what to do; drops \"not a trick\"; X3: the provision named inline",
+  "block": 5,
+  "field": "text"
+ },
+ {
+  "id": "M8",
+  "chapter_id": "d07",
+  "old": "Common, though technically banned in Lazio — not a tip, not a scam",
+  "new": "Banned in Lazio, still common: ask for it off; if refused, pay",
+  "source": "https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9373&sv=vigente (L.R. Lazio 6 Nov 2019 n. 22, art. 75 c. 4, in force: \"Nella somministrazione è vietato applicare costi aggiuntivi per il coperto.\"; read 2026-10-26. NB Ruth cited L.R. 21/2006, which L.R. 22/2019 art. 107 repealed — same rule, now art. 75)",
+  "why": "wallet ledger p40 (field rows[2].vals[0]) agrees with p41",
+  "block": 7,
+  "field": "rows[2].vals[0]"
+ },
+ {
+  "id": "M8",
+  "chapter_id": "the-wallet-card",
+  "old": "Technically banned in Lazio, though still common. Not a tip.",
+  "new": "Banned: l.r. Lazio 22/2019, art. 75. Ask for it off; else pay.",
+  "source": "https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9373&sv=vigente (L.R. Lazio 6 Nov 2019 n. 22, art. 75 c. 4, in force: \"Nella somministrazione è vietato applicare costi aggiuntivi per il coperto.\"; read 2026-10-26. NB Ruth cited L.R. 21/2006, which L.R. 22/2019 art. 107 repealed — same rule, now art. 75); https://www.regione.lazio.it/sites/default/files/documentazione/SVI_Legge_Regionale_06_11_2019_n22_TESTO_UNICO_COMMERCIO.pdf (art. 75 c. 4; read 2026-10-26)",
+  "why": "wallet card p80 agrees (shorter line); X3: the card carries the short form (line ~ same length)",
+  "block": 8,
+  "field": "text"
+ },
+ {
+  "id": "M8",
+  "chapter_id": "decide-these-first",
+  "old": "everywhere. Ask before you sit, not after. A menu in six languages beside a sight is the thing",
+  "new": "everywhere. Ask for it to come off; if refused, pay it. A menu in six languages beside a sight is the thing",
+  "source": "https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionalidettaglio&id=9373&sv=vigente (L.R. Lazio 6 Nov 2019 n. 22, art. 75 c. 4, in force: \"Nella somministrazione è vietato applicare costi aggiuntivi per il coperto.\"; read 2026-10-26. NB Ruth cited L.R. 21/2006, which L.R. 22/2019 art. 107 repealed — same rule, now art. 75)",
+  "why": "p87 agrees (line block +11 characters; Brunner to check the reflow)",
+  "block": 101,
+  "field": "text"
+ },
+ {
+  "id": "M16",
+  "chapter_id": "d05",
+  "old": "slots sell out weeks ahead in peak season <i class=\"mk\">●</i> —",
+  "new": "slots can sell out well ahead in peak season —",
+  "source": "no official source states a sell-out horizon (museivaticani.va tariffs page read 2026-10-26 gives none); claim becomes our read, unmarked",
+  "why": "loses its mark",
+  "block": 3,
+  "field": "text"
+ },
+ {
+  "id": "M16",
+  "chapter_id": "d06",
+  "old": "with queues that stretch two to three hours by mid-morning. <i class=\"mk\">●</i>",
+  "new": "with queues that form before opening and grow all morning.",
+  "source": "no official source for a queue length; unmarked read",
+  "why": "loses its mark and its unsourced number",
+  "block": 6,
+  "field": "text"
+ },
+ {
+  "id": "M16",
+  "chapter_id": "d06",
+  "old": "go weeks in advance in peak season. <i class=\"mk\">●</i>",
+  "new": "can go weeks in advance in peak season.",
+  "source": "no official sell-out horizon; unmarked read",
+  "why": "sibling of the p33 claim; loses its mark",
+  "block": 3,
+  "field": "text"
+ },
+ {
+  "id": "M16",
+  "chapter_id": "failure-modes",
+  "old": "the busiest day of the month, two-to-three-hour queues; “free” is",
+  "new": "the busiest day of the month, the longest queues; “free” is",
+  "source": "—",
+  "why": "same unsourced number, unmarked here; removed for agreement with p38/p56",
+  "block": 13,
+  "field": "text"
+ },
+ {
+  "id": "B3",
+  "chapter_id": "the-rhythm-of-the-week",
+  "old": "is the single busiest sightseeing day there is, with two-to-three-hour queues by mid-morning. <i class=\"mk\">●</i>",
+  "new": "is the single busiest sightseeing day there is.",
+  "source": "unsourced queue figure (M16); the closures paragraph follows (closures.json)",
+  "why": "also closes M16 for p56",
+  "block": 2,
+  "field": "text"
+ },
+ {
+  "id": "B3",
+  "chapter_id": "the-plan-as-operations",
+  "old": "The third is the Vatican — Museums on a booked early slot,",
+  "new": "The third is the Vatican, never on a Sunday — Museums on a booked early slot,",
+  "source": "https://www.museivaticani.va/content/museivaticani/en/info/orari-musei-vaticani.html (read 2026-10-26)",
+  "why": "the plan cannot put the Vatican on its closed day",
+  "block": 3,
+  "field": "text"
+ },
+ {
+  "id": "B3",
+  "chapter_id": "decide-these-first",
+  "old": "Vatican Museums on the official timed ticket; St Peter's early and free.",
+  "new": "Vatican Museums on the official timed ticket, never a Sunday; St Peter's early.",
+  "source": "https://www.museivaticani.va/content/museivaticani/en/info/orari-musei-vaticani.html (read 2026-10-26)",
+  "why": "p86 plan: line block, same length",
+  "block": 68,
+  "field": "text"
+ },
+ {
+  "id": "B3",
+  "chapter_id": "decide-these-first",
+  "old": "Ostia Antica: an entire ancient port for half a day and a metro fare.",
+  "new": "Ostia Antica (closed Mondays): an ancient port for half a day and a metro fare.",
+  "source": "https://ostiaantica.cultura.gov.it/ (refused connections 2026-10-26; via WebSearch excerpt of the Park site 2026-10-26: \"apre al pubblico dal martedì alla domenica e i festivi\"; Ruth: OMISSION, Monday closure, read 2026-10-25)",
+  "why": "p86 plan: line block (+10 characters)",
+  "block": 80,
+  "field": "text"
+ },
+ {
+  "id": "B3",
+  "chapter_id": "walking-the-quarters",
+  "old": "Knowing their textures turns a transfer between sights into the best part of the day. ",
+  "new": "",
+  "source": "—",
+  "why": "cut to make room for the closures paragraphs",
+  "block": 2,
+  "field": "text"
+ },
+ {
+  "id": "B3",
+  "chapter_id": "walking-the-quarters",
+  "old": " It’s often overlooked, which is exactly the reason to go.",
+  "new": "",
+  "source": "—",
+  "why": "cut to make room",
+  "block": 3,
+  "field": "text"
+ },
+ {
+  "id": "B3",
+  "chapter_id": "walking-the-quarters",
+  "old": " Neither is a sight to tick; both are the texture that the monuments, for all their grandeur, cannot give you — and both are a walk, or one short hop, from a central base.",
+  "new": "",
+  "source": "—",
+  "why": "cut to make room",
+  "block": 4,
+  "field": "text"
+ },
+ {
+  "id": "m29",
+  "chapter_id": "d09",
+  "old": "The Porta San Paolo–Ostia Antica leg itself is about thirty to thirty-five minutes on a regular metro ticket",
+  "new": "The Porta San Paolo–Ostia Antica leg itself is about twenty-six minutes, with a train every twenty minutes Monday to Saturday, <i class=\"mk\">◆</i> on a regular metro ticket",
+  "source": "https://servizionline.astralspa.it/Metromare.pdf (Metromare Roma–Lido, \"ORARIO IN VIGORE DAL 27 LUGLIO\" [2026; file dated 7 Oct 2026]: Ostia Antica 05:26 → Porta San Paolo 05:52, departures every 20 min Mon–Sat; read 2026-10-26)",
+  "why": "STALE (2022 timetable) replaced by the timetable in force from 27 July 2026; n4: a timetable carries ◆",
+  "block": 5,
+  "field": "text"
+ },
+ {
+  "id": "n1",
+  "chapter_id": "d03",
+  "old": "Re-price it honestly and the gap narrows to almost nothing.",
+  "new": "Re-price it honestly and the gap narrows: for two, the taxi costs about €14–24 more; for four, it is about a tie.",
+  "source": "arithmetic from the edits above (55 − 31…41; 4 × €10 + €9–13)",
+  "why": "n1: the wording matches its own figures",
+  "block": 5,
+  "field": "text"
+ },
+ {
+  "id": "n3",
+  "chapter_id": "d07",
+  "old": "Two things on the receipt look like tips or scams and are neither.",
+  "new": "Two things on the receipt look like tips and are not.",
+  "source": "—",
+  "why": "n3: no longer calls a banned charge \"not a scam\"",
+  "block": 5,
+  "field": "text"
+ },
+ {
+  "id": "m29",
+  "chapter_id": "d09",
+  "old": "metro, ~30–35 min each way",
+  "new": "train, ~26 min each way, plus the hop",
+  "source": "https://servizionline.astralspa.it/Metromare.pdf (Ostia Antica 05:26 → Porta San Paolo 05:52; read 2026-10-26)",
+  "why": "p47 ledger (field rows[0].opt) agrees with the text; mark retained by the composer",
+  "block": 7,
+  "field": "rows[0].opt"
+ },
+ {
+  "id": "M18",
+  "chapter_id": "d09",
+  "old": "several hours at the vast site, and the whole journey again in reverse — roughly two hours each way.",
+  "new": "six to seven hours at the vast site, lunch included, and the whole journey again in reverse — roughly two and a half hours each way from your door.",
+  "source": "https://www.trenitalia.com/it/frecciarossa/collegamenti-frecciarossa/viaggia-tra-roma-e-napoli-con-le-frecce.html (\"poco più di 1.00h\"; read 2026-10-26); Circumvesuviana 35–40 min (book p47, unchanged; EAV not read); site time is our read; https://www.romeforamericans.com/article/best-day-trips-from-rome-by-train (\"budget roughly 12 hours door to door\"; read 2026-10-26)",
+  "why": "M18: the legs now add up to the twelve hours (2½ + 6–7 + 2½)",
+  "block": 3,
+  "field": "text"
+ },
+ {
+  "id": "M18",
+  "chapter_id": "d09",
+  "old": "train + Circumvesuviana, ~2h each way",
+  "new": "train + Circumvesuviana, ~2½h each way",
+  "source": "https://www.trenitalia.com/it/frecciarossa/collegamenti-frecciarossa/viaggia-tra-roma-e-napoli-con-le-frecce.html (\"poco più di 1.00h\"; read 2026-10-26); Circumvesuviana 35–40 min (book p47, unchanged; EAV not read); site time is our read",
+  "why": "ledger (field rows[1].opt) agrees with p47",
+  "block": 7,
+  "field": "rows[1].opt"
+ },
+ {
+  "id": "M18",
+  "chapter_id": "day-trips-ranked-by-the-day-",
+  "old": "· ~2 hr each way, ~12 hr door-to-door",
+  "new": "· ~2½ hr each way, ~12 hr door-to-door",
+  "source": "https://www.trenitalia.com/it/frecciarossa/collegamenti-frecciarossa/viaggia-tra-roma-e-napoli-con-le-frecce.html (\"poco più di 1.00h\"; read 2026-10-26); Circumvesuviana 35–40 min (book p47, unchanged; EAV not read); site time is our read",
+  "why": "day-trip heading agrees (line block +2 characters)",
+  "block": 11,
+  "field": "text"
+ },
+ {
+  "id": "X1",
+  "chapter_id": "d02",
+  "old": "Tapping a card or phone on the reader charges the single fare and automatically caps your spending at the day-pass price once you’ve ridden enough —",
+  "new": "Each of you taps your own card or phone, because one card pays for one rider, and uses the same one every time: the reader charges the single fare and caps each rider’s spending at the Roma 24-hour price for the 24 hours from the first tap <i class=\"mk\">◇</i> (the figure is on the Field Sheet) —",
+  "source": "https://www.atac.roma.it/en/frequently-asked-questions/how-is-the-ticket-price-calculated-with-tap-go ; https://www.atac.roma.it/en/frequently-asked-questions/can-i-use-the-same-card-for-other-people-traveling-with-me (bot-walled; read via WebSearch excerpts 2026-10-26: 24 h \"calculated starting from the time of the first tap\", Roma 24h \"€ 8,50\", taps with the same card or device, individual service). The BIT count is not printed: ATAC’s Italian and English FAQs disagree (fifth vs sixth).",
+  "why": "X1: one card per traveler, same device, 24 h from the first tap; no BIT count",
+  "block": 7,
+  "field": "text"
+ },
+ {
+  "id": "X1",
+  "chapter_id": "d02",
+  "old": "The daily fare cap means you never overpay and",
+  "new": "The 24-hour fare cap means you never overpay and",
+  "source": "https://www.atac.roma.it/en/frequently-asked-questions/how-is-the-ticket-price-calculated-with-tap-go ; https://www.atac.roma.it/en/frequently-asked-questions/can-i-use-the-same-card-for-other-people-traveling-with-me (bot-walled; read via WebSearch excerpts 2026-10-26: 24 h \"calculated starting from the time of the first tap\", Roma 24h \"€ 8,50\", taps with the same card or device, individual service). The BIT count is not printed: ATAC’s Italian and English FAQs disagree (fifth vs sixth).",
+  "why": "X1: the call says 24 h, not per day",
+  "block": 9,
+  "field": "lead"
+ },
+ {
+  "id": "X1",
+  "chapter_id": "why-the-obvious-tool-doesn-t",
+  "old": "tap a contactless card and let the daily cap handle the fare (Decision 02);",
+  "new": "tap your own contactless card and let the 24-hour cap handle the fare (Decision 02);",
+  "source": "https://www.atac.roma.it/en/frequently-asked-questions/how-is-the-ticket-price-calculated-with-tap-go ; https://www.atac.roma.it/en/frequently-asked-questions/can-i-use-the-same-card-for-other-people-traveling-with-me (bot-walled; read via WebSearch excerpts 2026-10-26: 24 h \"calculated starting from the time of the first tap\", Roma 24h \"€ 8,50\", taps with the same card or device, individual service). The BIT count is not printed: ATAC’s Italian and English FAQs disagree (fifth vs sixth).",
+  "why": "X1: agrees with p23",
+  "block": 3,
+  "field": "text"
+ },
+ {
+  "id": "X1",
+  "chapter_id": "the-wallet-card",
+  "old": "Tap a contactless card. Skip the pass.",
+  "new": "Your own card each, same one all day. No pass.",
+  "source": "https://www.atac.roma.it/en/frequently-asked-questions/how-is-the-ticket-price-calculated-with-tap-go ; https://www.atac.roma.it/en/frequently-asked-questions/can-i-use-the-same-card-for-other-people-traveling-with-me (bot-walled; read via WebSearch excerpts 2026-10-26: 24 h \"calculated starting from the time of the first tap\", Roma 24h \"€ 8,50\", taps with the same card or device, individual service). The BIT count is not printed: ATAC’s Italian and English FAQs disagree (fifth vs sixth).",
+  "why": "X1: the wallet card (line +8 characters; Brunner to check the fit)",
+  "block": 14,
+  "field": "text"
+ },
+ {
+  "id": "X6",
+  "chapter_id": "d05",
+  "old": "though the Basilica’s own site does sell a real timed-reservation-plus-audioguide service, which skips nothing at security but is a genuine product, not a scam.",
+  "new": "though the Basilica’s own site sells an optional paid booking, a timed slot with a digital audioguide and a dedicated route in, but security is still mandatory and the wait for it is not guaranteed. <i class=\"mk\">◇</i>",
+  "source": "https://www.basilicasanpietro.va/it/faq/e-possibile-prenotare-l-ingresso-per-la-basilica-di-san-pietro ; https://booking.basilicasanpietro.va/en/idea/41280461/basilica (via WebSearch excerpts 2026-10-26: booking optional, paid, timed, includes the digital audioguide; \"a dedicated route\"; security checks \"remain mandatory for everyone\")",
+  "why": "X6: p33 and p36 describe the service the same way",
+  "block": 4,
+  "field": "text"
+ },
+ {
+  "id": "X6",
+  "chapter_id": "d06",
+  "old": "the official reservation/audioguide service may offer a dedicated entrance but does not remove screening or guarantee no wait (see Decision 05).",
+  "new": "the Basilica’s optional paid booking gives a timed slot and a dedicated route in, but security is still mandatory and the wait for it is not guaranteed (see Decision 05).",
+  "source": "https://www.basilicasanpietro.va/it/faq/e-possibile-prenotare-l-ingresso-per-la-basilica-di-san-pietro ; https://booking.basilicasanpietro.va/en/idea/41280461/basilica (via WebSearch excerpts 2026-10-26: booking optional, paid, timed, includes the digital audioguide; \"a dedicated route\"; security checks \"remain mandatory for everyone\")",
+  "why": "X6: same wording as p33",
+  "block": 5,
+  "field": "text"
+ },
+ {
+  "id": "X8",
+  "chapter_id": "d01",
+  "old": "From a hotel by Termini, the Pantheon is a thirty-five-minute walk and Piazza Navona closer to forty; from Centro Storico or Monti, the centre of the core is about thirteen.",
+  "new": "From a hotel by Termini, Piazza Venezia, the center of the core, is a twenty-eight-minute walk, the Pantheon about thirty-five and Piazza Navona closer to forty; from the middle of Centro Storico or Monti, Piazza Venezia is about thirteen.",
+  "source": "the book’s own measured walk-times (▲ SURVEYED 07/26, unchanged values); no new fact",
+  "why": "X8: each walk-time names its start and end; 28′ (to Piazza Venezia) and 35′ (to the Pantheon) are visibly two trips",
+  "block": 5,
+  "field": "text"
+ },
+ {
+  "id": "X8",
+  "chapter_id": "d01",
+  "old": "WALK TO CORE",
+  "new": "WALK TO PIAZZA VENEZIA",
+  "source": "—",
+  "why": "X8: ledger head (field heads[0]) names the end point",
+  "block": 7,
+  "field": "heads[0]"
+ },
+ {
+  "id": "X8",
+  "chapter_id": "the-ground-a-city-you-can-wa",
+  "old": "— a radius, not a total width.",
+  "new": "— a straight-line radius, not a total width.",
+  "source": "—",
+  "why": "m2 (inside X8): radius stated as straight-line, once",
+  "block": 0,
+  "field": "text"
+ },
+ {
+  "id": "X8",
+  "chapter_id": "d01",
+  "old": "Rome’s historic core is roughly a kilometre and a half across,",
+  "new": "Rome’s historic core reaches roughly a kilometer and a half from its center, Piazza Venezia,",
+  "source": "—",
+  "why": "m2: p17 says radius, as p9 does",
+  "block": 2,
+  "field": "text"
+ },
+ {
+  "id": "M17",
+  "chapter_id": "intro",
+  "block": 3,
+  "field": "text",
+  "old": "The facts underneath are free and everywhere. The connections between them, which is where nearly every expensive mistake actually hides, are what we’ve done for you.",
+  "new": "The facts underneath are free and everywhere, and the site this book comes from gives them away. What it never does is make the links. This book is the decision manual that joins the free guides into calls you can act on, and the Field Sheet keeps the figures that move current.",
+  "source": "owner's answer to Ruth M9 on Barcelona (2026-10-26), transposed; studio card 38 approved 2026-10-28",
+  "why": "Ruth M17: p4 must say what the book sells beyond the free site"
+ }
+]

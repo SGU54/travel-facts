@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Rome, Solved.</title>
+<style>
+@font-face{font-family:'Fraunces';src:url('models/fonts/Fraunces.ttf');font-weight:100 900;}
+@font-face{font-family:'Fraunces';src:url('models/fonts/Fraunces-Italic.ttf');font-weight:100 900;font-style:italic;}
+@font-face{font-family:'Newsreader';src:url('models/fonts/Newsreader.ttf');font-weight:200 800;}
+@font-face{font-family:'Newsreader';src:url('models/fonts/Newsreader-Italic.ttf');font-weight:200 800;font-style:italic;}
+@font-face{font-family:'DM';src:url('models/fonts/DMSans.ttf');font-weight:100 1000;}
+@font-face{font-family:'Symbols';src:url('assets/fonts/NotoSansSymbols2-Regular.ttf');}
+:root{ --paper:#EFE4CC; --ink:#2B241A; --grey:#6A5C42; --sect:#8A3324; --tint:#E4D6B8; --gold:#C9A94A; --red:#8A3324; --line:#D8C7A4;
+  --mono:'DM'; --sans:'DM'; --body:'Newsreader'; --display:'Fraunces'; }
+@page{ size:8.5in 11in; margin:92px 82px 72px 82px;
+  @top-left{ content:"Rome, Solved."; font-family:'DM'; font-size:8px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--grey); }
+  @top-right{ content:string(rh, last); font-family:'DM'; font-size:8px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--sect); }
+  @bottom-left{ content:"Rome for Americans"; font-family:'Fraunces'; font-style:italic; font-size:9px; color:var(--grey); }
+  @bottom-center{ content:none }
+  @bottom-right{ content:counter(page); font-family:'DM'; font-weight:600; font-size:9px; color:var(--ink); } }
+@page opener{ @top-left{content:none} @top-right{content:none} }
+@page cover{ margin:0; @top-left{content:none} @top-right{content:none} @bottom-left{content:none} @bottom-center{content:none} @bottom-right{content:none} }
+@page annex{ margin:72px 82px 60px 82px; }
+html,body{ background:var(--paper); -webkit-print-color-adjust:exact; print-color-adjust:exact; margin:0; }
+.pagedjs_sheet{ background:var(--paper); }
+body{ font-family:'Newsreader'; font-size:11px; line-height:16px; color:var(--ink); font-variation-settings:'opsz' 12; }
+.rh-src{ string-set:rh content(text); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+i.mk{ font-style:normal; font-family:'Symbols'; font-size:.9em; color:var(--sect); font-weight:400; }
+a{ color:inherit; text-decoration:none; }
+section{ break-before:page; }
+.pg{ break-before:page; } .pg.first{ break-before:auto; } .op{ page:opener; }
+/* ── cover ── */
+.pagedjs_cover_page .pagedjs_sheet{ background:linear-gradient(180deg, rgba(43,36,26,.15) 0%, rgba(43,36,26,0) 35%, rgba(43,36,26,.72) 100%), url('img/p03-0.jpeg') 50% 60% / cover no-repeat #2B241A; }
+.cover{ page:cover; width:816px; height:980px; box-sizing:border-box; padding:52px 82px 0; display:flex; flex-direction:column; overflow:hidden; color:#fff; }
+section#cover{ break-before:auto; }
+.cover .mast{ display:flex; justify-content:space-between; font-family:'DM'; font-size:9px; font-weight:600; letter-spacing:.24em; text-transform:uppercase; }
+.cover .blk{ margin-top:auto; padding-bottom:28px; }
+.cover .t{ font-family:'Fraunces'; font-weight:600; font-size:110px; line-height:.9; letter-spacing:-.02em; font-variation-settings:'opsz' 144,'SOFT' 50; }
+.cover .s{ font-family:'Newsreader'; font-style:italic; font-size:19px; line-height:25px; margin-top:22px; width:520px; font-variation-settings:'opsz' 18; }
+.cover .d{ font-family:'Newsreader'; font-size:12px; line-height:17px; margin-top:18px; width:430px; opacity:.92; }
+.cover .foot{ display:flex; justify-content:space-between; font-family:'DM'; font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; opacity:.9; }
+/* ── openers ── */
+.hero{ margin:-92px -82px 0; width:816px; height:600px; overflow:hidden; position:relative; }
+.hero img{ width:100%; height:100%; object-fit:cover; display:block; }
+.hero .cap{ position:absolute; left:82px; right:82px; bottom:14px; color:#fff; font-family:'DM'; font-size:8.5px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; text-shadow:0 1px 6px rgba(0,0,0,.7); }
+.open{ display:grid; grid-template-columns:1fr 201.3px; column-gap:24px; padding-top:26px; align-items:start; }
+.open.one{ grid-template-columns:1fr; }
+.sect{ font-family:'DM'; font-weight:600; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--sect); margin:0 0 10px; display:flex; align-items:center; gap:10px; }
+.sect::after{ content:''; flex:1; height:1px; background:var(--sect); opacity:.5; }
+h1{ font-family:'Fraunces'; font-weight:600; font-size:42px; line-height:.98; letter-spacing:-.015em; margin:0 0 12px; font-variation-settings:'opsz' 144,'SOFT' 50; }
+h1.long{ font-size:34px; }
+.sf{ font-family:'Newsreader'; font-style:italic; font-size:16px; line-height:22px; margin:0 0 16px; font-variation-settings:'opsz' 18; }
+.call{ border-top:2px solid var(--sect); padding-top:8px; margin-top:4px; }
+.call .lab{ font-family:'DM'; font-weight:600; font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--sect); display:block; margin-bottom:7px; }
+.call .big{ font-family:'Fraunces'; font-weight:500; font-size:14px; line-height:18px; margin:0 0 7px; font-variation-settings:'opsz' 36,'SOFT' 100; }
+.call p{ margin:0; font-size:10.5px; line-height:15px; }
+/* ── the body: two columns, Chromium balances each fragment ── */
+.body2{ column-count:2; column-gap:24px; }
+.body2 p, p.t{ margin:0 0 9px; text-align:justify; hyphens:auto; }
+.body2 p.lede::first-letter, p.lede::first-letter{ font-family:'Fraunces'; font-weight:600; font-size:46px; line-height:36px; float:left; padding:3px 6px 0 0; color:var(--sect); font-variation-settings:'opsz' 144,'SOFT' 100; }
+.body2 h3, h3{ font-family:'Fraunces'; font-weight:600; font-size:13px; line-height:16px; margin:12px 0 4px; break-after:avoid; font-variation-settings:'opsz' 36; }
+.body2 h3 small, h3 small{ font-family:'DM'; font-weight:600; font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--sect); margin-left:8px; }
+h2{ font-family:'DM'; font-weight:700; font-size:9.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--sect); margin:18px 0 8px; padding-top:8px; border-top:2px solid var(--sect); break-after:avoid; column-span:all; }
+.side{ background:var(--tint); padding:12px 14px 8px; margin:0 0 12px; break-inside:avoid; }
+.side .lab{ font-family:'DM'; font-weight:600; font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--sect); display:block; margin-bottom:8px; }
+.side .heads{ display:flex; justify-content:space-between; font-family:'DM'; font-weight:700; font-size:7.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--grey); padding-bottom:4px; }
+.side .r{ padding:5px 0 6px; border-top:1px solid rgba(138,51,36,.25); }
+.side .opt{ font-family:'Fraunces'; font-weight:600; font-size:11.5px; line-height:14px; font-variation-settings:'opsz' 36; }
+.side .sub{ font-size:9.5px; line-height:13px; color:var(--grey); margin-top:1px; }
+.side .v{ font-family:'DM'; font-weight:700; font-size:8.5px; line-height:12px; letter-spacing:.08em; text-transform:uppercase; margin-top:3px; color:var(--sect); }
+figure{ margin:0; }
+figure.band{ margin:0 0 14px; break-inside:avoid; } figure.band img{ display:block; width:100%; height:190px; object-fit:cover; }
+figure.plate{ margin:14px 0 6px; break-inside:avoid; column-span:all; } figure.plate img{ display:block; width:100%; height:300px; object-fit:cover; }
+figure.plate.tall img{ height:420px; }
+figcaption{ font-family:'DM'; font-size:8.5px; line-height:12px; color:var(--grey); margin-top:6px; }
+figcaption b{ color:var(--ink); font-weight:600; }
+figure.fig{ margin:8px 0 16px; break-inside:avoid; } figure.fig svg{ display:block; width:100%; height:auto; }
+figure.fig svg text{ font-family:'DM'; fill:#2B241A; paint-order:stroke; stroke:#F6EEDB; stroke-width:2.6px; stroke-linejoin:round; }
+figure.fig svg text.mono{ font-weight:600; letter-spacing:.06em; }
+figure.fig svg text.lab{ font-weight:500; }
+.forks{ border-top:1px solid var(--line); padding-top:8px; margin-top:4px; break-inside:avoid; }
+.forks .lab{ font-family:'DM'; font-weight:600; font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--sect); display:block; margin:6px 0 5px; }
+.forks .q{ font-family:'Fraunces'; font-style:italic; font-weight:500; font-size:11.5px; line-height:14px; margin:0 0 6px; font-variation-settings:'opsz' 36; }
+.forks .q b{ font-style:normal; font-family:'DM'; font-weight:600; font-size:9px; color:var(--ink); }
+.note{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:8px 0; margin-top:8px; font-size:10px; line-height:14px; display:grid; grid-template-columns:96px 1fr; column-gap:14px; break-inside:avoid; }
+.note .lab{ font-family:'DM'; font-weight:700; font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--red); }
+.note p{ margin:0; text-align:left; } .note .x{ font-style:italic; color:var(--grey); display:block; margin-top:4px; }
+/* ── service pages ── */
+.toc{ column-count:2; column-gap:40px; margin-top:6px; }
+.toc .s{ font-family:'DM'; font-weight:700; font-size:8.5px; letter-spacing:.22em; text-transform:uppercase; color:var(--sect); margin:14px 0 6px; break-after:avoid; }
+.toc a{ display:grid; grid-template-columns:1fr 28px; column-gap:10px; align-items:baseline; padding:4px 0 5px; border-top:1px solid var(--line); break-inside:avoid; }
+.toc a .t{ font-family:'Fraunces'; font-weight:500; font-size:11.5px; line-height:14px; font-variation-settings:'opsz' 36; }
+.toc a .n{ font-family:'DM'; font-weight:600; font-size:10px; text-align:right; }
+.toc a .n::after{ content:attr(data-page); }
+.list .it{ display:grid; grid-template-columns:96px 1fr; column-gap:14px; padding:7px 0 8px; border-top:1px solid var(--line); break-inside:avoid; }
+.list .it .k{ font-family:'DM'; font-weight:700; font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--sect); padding-top:2px; }
+.list .it p{ margin:0; text-align:left; }
+.cards{ column-count:2; column-gap:24px; }
+.card{ break-inside:avoid; margin:0 0 10px; }
+.card h3{ margin:0 0 3px; }
+.tier{ margin-top:10px; } .tier h2{ column-span:none; }
+.fail{ break-inside:avoid; padding:6px 0 7px; border-top:1px solid var(--line); }
+.fail b{ font-family:'Fraunces'; font-weight:600; font-size:11.5px; line-height:14px; display:block; font-variation-settings:'opsz' 36; }
+.fail p{ margin:2px 0 0; font-size:10px; line-height:13.5px; text-align:left; }
+.wallet{ background:var(--tint); padding:18px 22px 14px; margin-top:6px; break-inside:avoid; }
+.wallet .t{ font-family:'Fraunces'; font-weight:600; font-size:18px; margin:0 0 10px; font-variation-settings:'opsz' 72; }
+.wallet .r{ display:grid; grid-template-columns:1fr 1fr; column-gap:16px; padding:5px 0 6px; border-top:1px solid rgba(138,51,36,.25); }
+.wallet .r .k{ font-family:'Fraunces'; font-weight:500; font-size:11px; font-variation-settings:'opsz' 36; } .wallet .r .v{ font-family:'DM'; font-weight:600; font-size:9.5px; line-height:13px; color:var(--sect); }
+.wont .it{ padding:8px 0 9px; border-top:1px solid var(--line); break-inside:avoid; }
+.wont .it b{ font-family:'DM'; font-weight:700; font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--sect); display:block; margin-bottom:3px; }
+.wont .it p{ margin:0; text-align:left; }
+.tbl .r{ display:grid; grid-template-columns:220px 1fr 36px; column-gap:14px; padding:7px 0 8px; border-top:1px solid var(--line); break-inside:avoid; }
+.tbl .r .q{ font-family:'Fraunces'; font-weight:600; font-size:11px; line-height:14px; font-variation-settings:'opsz' 36; }
+.tbl .r .c{ font-size:10.5px; line-height:14px; } .tbl .r .n{ font-family:'DM'; font-weight:600; font-size:10px; text-align:right; } .tbl .r .n a::after{ content:attr(data-page); }
+.tbl .heads{ display:grid; grid-template-columns:220px 1fr 36px; column-gap:14px; font-family:'DM'; font-weight:700; font-size:7.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--grey); padding-bottom:4px; }
+.asks{ column-count:2; column-gap:24px; margin-top:4px; }
+.ask{ break-inside:avoid; margin:0 0 12px; border-top:2px solid var(--sect); padding-top:6px; }
+.ask .who{ font-family:'DM'; font-weight:700; font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--sect); margin:0 0 4px; }
+.ask p{ margin:0; font-family:'Fraunces'; font-style:italic; font-size:11px; line-height:14px; padding:3px 0; border-top:1px solid var(--line); font-variation-settings:'opsz' 36; }
+.trip{ break-inside:avoid; margin:10px 0 0; }
+.trip h3{ margin:0 0 2px; } .trip .as{ font-size:10px; line-height:13.5px; color:var(--grey); margin:0 0 6px; text-align:left; }
+.trip .r{ display:grid; grid-template-columns:70px 1fr; column-gap:12px; padding:4px 0 5px; border-top:1px solid var(--line); }
+.trip .r b{ font-family:'Fraunces'; font-weight:600; font-size:11px; font-variation-settings:'opsz' 36; } .trip .r span{ font-size:10.5px; line-height:14px; }
+.trip .why{ font-size:10px; line-height:13.5px; margin:6px 0 0; border-top:2px solid var(--ink); padding-top:5px; text-align:left; }
+.fb .r{ display:grid; grid-template-columns:170px 1fr; column-gap:14px; padding:6px 0 7px; border-top:1px solid var(--line); break-inside:avoid; }
+.fb .r b{ font-family:'Fraunces'; font-weight:600; font-size:11px; line-height:14px; font-variation-settings:'opsz' 36; } .fb .r p{ margin:0; font-size:10.5px; line-height:14px; text-align:left; }
+.fs{ page:annex; } .fs h1{ font-size:36px; margin-bottom:8px; } .fs .sf{ margin-bottom:8px; }
+.fs .method{ font-size:9.5px; line-height:13px; color:var(--grey); margin:0 0 12px; }
+.fs .cols{ column-count:2; column-gap:28px; }
+.fs h2{ column-span:none; margin:8px 0 4px; } .fs .pg{ break-inside:auto; }
+.fs .r{ display:grid; grid-template-columns:1fr 1fr; column-gap:10px; padding:4px 0 5px; border-top:1px solid var(--line); break-inside:avoid; }
+.fs .r .k{ font-family:'Fraunces'; font-weight:500; font-size:10px; line-height:12.5px; font-variation-settings:'opsz' 36; } .fs .r .v{ font-family:'DM'; font-weight:600; font-size:8.5px; line-height:12px; color:var(--sect); }
+.keep{ break-inside:avoid; }
+.opener{ position:relative; } .ledger{ position:relative; } .verdict{ position:relative; }
+
+.row2{ display:grid; grid-template-columns:314px 314px; column-gap:24px; align-items:start; margin-bottom:6px; }
+.row2 .col > *:last-child{ margin-bottom:0; }
+.row2 .col > p{ margin:0 0 9px; text-align:justify; } .row2 .col > p.cont{ text-indent:0; } .row2 .col > p.frag{ text-align-last:justify; margin-bottom:0; }
+p{ hyphens:manual; }
+figure.plate img[style]{ object-position:50% 50%; }
+.body2{ column-count:1; }
+</style><script src="paged.polyfill.js"></script><script>window.PagedConfig={auto:false};window.addEventListener("load",function(){document.fonts.ready.then(function(){return window.PagedPolyfill.preview();}).then(function(f){window.__pagedDone=f.total;}).catch(function(e){window.__pagedErr=(e&&e.stack)?e.stack:String(e);});});</script></head><body>
+
+<section class="chap fs" id="fs"><div class="pg first" id="fs-p"><span class="rh-src">The Field Sheet</span>
+<div class="sect">The annex</div><h1>The Field Sheet</h1><div class="sf">The volatile figures, dated. Everything that moves lives here, not in the Book.</div><p class="method">Method: the figures below are the ones that change — fares, booking windows, an exchange reference. Verified values are marked as of their month; anything we could not verify at press time is listed as “confirm in your travel week,” with the official source to check named. Never a blank cell. When the Sheet and the Book disagree, the Sheet is newer and wins. Reissued quarterly: the current one is always at romeforamericans.com/guide/sheet — enter the email you bought the Book with.</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;column-gap:28px"><div><h2>Getting In From Fiumicino</h2><div class="r"><div class="k">Leonardo Express (non-stop to</div><div class="v">≈ €14 one-way, ~32 min, every ~15 min —</div></div><div class="r"><div class="k">Termini)</div><div class="v">confirm at trenitalia.com</div></div><div class="r"><div class="k">FL1 regional</div><div class="v">≈ €8 — confirm at trenitalia.com</div></div><div class="r"><div class="k">(Trastevere/Ostiense/Tiburtina, not Termini) Fixed-fare official taxi to inside the</div><div class="v">€55 flat, up to 4 (raised 2026) — posted</div></div><div class="r"><div class="k">Aurelian Walls</div><div class="v">at the rank</div></div><h2>Passes &amp; Transit</h2><div class="r"><div class="k">Single ticket (BIT, 100</div><div class="v">confirm current fare — atac.roma.it</div></div><div class="r"><div class="k">min) Contactless daily fare cap</div><div class="v">auto-caps at the 24h pass price — confirm at atac.roma.it</div></div><div class="r"><div class="k">Roma Pass / Omnia Card</div><div class="v">confirm before buying — romapass.it / official Omnia</div></div><div class="r"><div class="k">price &amp; inclusions</div><div class="v">site</div></div><div class="r"><div class="k">Unvalidated-ticket fine</div><div class="v">€100+ on the spot — validate paper, or tap a card</div></div></div><div><h2>The Sights That Sell Out</h2><div class="r"><div class="k">Vatican Museums —</div><div class="v">sells out ~weeks in peak — tickets.museivaticani.va</div></div><div class="r"><div class="k">booking window &amp; fee Borghese Gallery —</div><div class="v">book on sale — galleriaborghese.it</div></div><div class="r"><div class="k">mandatory timed slot Colosseum Standard</div><div class="v">Full Experience ~weeks, guided- only — colosseo.it</div></div><div class="r"><div class="k">&amp; Full Experience Pantheon timed entry</div><div class="v">confirm current fee/slot — official Pantheon ticketing</div></div><div class="r"><div class="k">First-Sunday free-</div><div class="v">Domenica al Museo — confirm the month’s date</div></div><div class="r"><div class="k">entry dates</div><div class="v"></div></div><h2>Money</h2><div class="r"><div class="k">USD–EUR reference</div><div class="v">check in your travel week — a bank/FX source</div></div><div class="r"><div class="k">rate The rule that never</div><div class="v">at any reader, choose EUROS, never dollars</div></div><div class="r"><div class="k">moves</div><div class="v"></div></div></div></div></div></section>
+
+</body></html>

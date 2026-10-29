@@ -1,0 +1,72 @@
+24 frames · 50 faults · system 9 · unnamed 6 · subject 6 · mark 5 · soft 5 · caption 4 · clean 4 · verdict 4 · crop 3 · killed 1 · contradicts 1 · job 1 · chapter 1
+
+## KILL — the frame fails “True?” or “Clean?”, or contradicts its page (26)
+      book  killed      18 frames the ledger kills are still printed (pp. 7, 12, 18, 21, 24, 25, 31, 34, 37, 40, 46, 49, 52, 53, 60, 63, 65, 68) — take them out of the build; 14 are closing frames (pp. 7, 12, 18, 21, 25, 31, 34, 37, 40, 46, 49, 53, 60, 65): source a true frame for each (media skill) or set the closing page typographic, never leave it empty
+      p. 7  clean       img/p-howto.jpg: the corners carry legible text (“bottom-left: dense blocks and the 'fnac' wordmark on El Triangle's band (x≈0.17, y≈0.77) — a store…”) — fails “Clean?”
+     p. 12  clean       img/p-ground.jpg: the corners carry legible text (“top-left: the stall's arch sign 'SOLE… / ROSE… / Fruites i…' and a small board — legible…”) — fails “Clean?”
+     p. 18  subject     img/p-dayzero.jpg: its place cannot be named — a frame that cannot say where it is fails “True?”
+     p. 21  mark        img/p-timing.jpg: the blind look sees signs of generation: probable AI generation: generic unidentifiable cityscape, over-smooth golden rendering, invented domed…
+     p. 21  soft        img/p-timing.jpg: 1128 source px across 816px printed — 1.38×, under 1.5×
+     p. 21  subject     img/p-timing.jpg: its place cannot be named — a frame that cannot say where it is fails “True?”
+     p. 24  clean       img/h-setpieces.jpg: the corners carry legible text (“top-left: façade sculpture, people on a curved wall, the pseudo-Spanish wall sign 'Cnicala…”) — fails “Clean?”
+     p. 24  mark        img/h-setpieces.jpg: the blind look sees signs of generation: AI generated: garbled lettering on wall sign (x≈0.05,y≈0.45), pictogram signs with no real text, smooth… — also: lettering in the frame is invented or garbled — an AI-made picture fails “True?”
+     p. 24  subject     img/h-setpieces.jpg: its place cannot be named — a frame that cannot say where it is fails “True?”
+     p. 31  subject     img/h-d02.jpg: its place cannot be named — a frame that cannot say where it is fails “True?”
+     p. 34  verdict     img/h-d03.jpg: the verdict names “the four small charges of the money-trap web” but the frame shows “euro banknotes (5, 10, 20, 50) fanned on a bed of euro coins, shallow focus”
+     p. 37  verdict     img/h-d05.jpg: the verdict names “the three time-locked pieces of the week…” but the frame shows “Plaça d'Espanya at blue hour: the two Venetian towers, the fountain monument, buses and…”
+     p. 40  soft        img/A04.jpg: 808 source px across 816px printed — 0.99×, under 1.5×
+     p. 40  verdict     img/A04.jpg: the verdict names “the two ticketed Gaudí sites and one house” but the frame shows “the rose window and stained-glass clerestory above a gallery, tree-like columns with dark…”
+     p. 46  contradicts img/h-d08.jpg: the frame shows what the book warns against (“neon yellow rice”)
+     p. 46  verdict     img/h-d08.jpg: the verdict names “dinner on Spanish time, at 20:30” but the frame shows “a large pan of neon yellow rice with mussels, prawns and red pepper, a hand serving it…”
+     p. 49  mark        img/p-horizons.jpg: the blind look sees signs of generation: AI generated: notice board with nonsense pictograms and smeared text (x≈0.12,y≈0.65), illegible insignia on… — also: lettering in the frame is invented or garbled — an AI-made picture fails “True?”
+     p. 49  soft        img/p-horizons.jpg: 1128 source px across 816px printed — 1.38×, under 1.5×
+     p. 49  subject     img/p-horizons.jpg: its place cannot be named — a frame that cannot say where it is fails “True?”
+     p. 53  mark        img/p-risk.jpg: the blind look sees signs of generation: AI generated: every line of text on documents/receipts is blurred non-letters, passport cover bears no… — also: lettering in the frame is invented or garbled — an AI-made picture fails “True?”
+     p. 53  soft        img/p-risk.jpg: 1128 source px across 816px printed — 1.38×, under 1.5×
+     p. 63  mark        img/h-back.jpg: the blind look sees signs of generation: probable AI generation: over-idealised styled scene, chalk scribbles meaningless, rendering soft and uniform;…
+     p. 63  subject     img/h-back.jpg: its place cannot be named — a frame that cannot say where it is fails “True?”
+     p. 65  soft        img/A07.jpg: 807 source px across 816px printed — 0.99×, under 1.5×
+     p. 68  clean       img/h-beforeyoubook.jpg: the corners carry legible text (“top-left: the 'Los Angeles' postcard”) — fails “Clean?”
+
+## FIX — the frame stays, its caption, crop or placement changes (24)
+  template  caption     the caption style sets 6 captions of more than six words in capitals (pp. 4, 15, 28, 43, 55, 57) — one fix in the CSS: captions in sentence case
+      p. 4  caption     img/p-contract.jpg: the caption never names what to look at (“the crowd filling La Rambla”)
+                        → proposed caption: “La Rambla from the Columbus column: one long crowd under the plane trees, the stretch where a bag worn in front matters most.”
+      p. 4  unnamed     img/p-contract.jpg: the caption does not name the place (La Rambla seen from the Mirador de Colom, Barcelona — the foot of the Rambla toward Plaça de Catalunya, Tibidabo and Collserola…)
+     p. 11  system      type at 26px on p. 11 (“BCN”…) — the 20–50px band holds only the specimen's tokens (30,46)
+     p. 11  system      type at 44px on p. 11 (“ZONE 1”…) — the 20–50px band holds only the specimen's tokens (30,46)
+     p. 15  unnamed     img/p-fly.jpg: the caption does not name the place (Barcelona–El Prat airport, the apron before the terminal lettered BARCELONA)
+                        → proposed caption: “El Prat's wet apron and the terminal lettered BARCELONA: the gate where a T-casual stops working, so buy the airport ticket and its return here.”
+     p. 26  system      type at 28px on pp. 26, 29, 32, 35, 38, 41, 44 (“First trip, no special agenda: the Eixam”…) — the 20–50px band holds only the specimen's tokens (30,46)
+     p. 28  caption     img/A03.jpg: the caption never names what to look at (“the cut corners of the Eixample blocks”) — also: caption repeats text elsewhere on its own page (“geometric before it is anything else…”)
+                        → proposed caption: “The Eixample from above: blocks cut at the corners around courtyards, a grid you can walk end to end from a base inside it.”
+     p. 28  crop        img/A03.jpg: only 60% of the frame printed
+                        → her ruling: Print whole at the 652 measure (652×434), not cut to a 262 px band (60 % of the frame); the proposed caption under it. Closed when p28 has no crop, caption or unnamed line.
+     p. 28  unnamed     img/A03.jpg: the caption does not name the place (the Eixample, Barcelona — chamfered city blocks seen from a drone)
+     p. 29  system      colour rgb(248, 233, 227) painted 4× on pp. 29, 35, 38, 44 is not in the palette
+     p. 31  system      colour rgb(58, 20, 11) painted 5× on pp. 31, 34, 37, 40, 46 is not in the palette
+     p. 35  system      colour rgb(142, 44, 26) painted 1× on p. 35 is not in the palette
+     p. 41  system      colour rgb(201, 207, 204) painted 1× on p. 41 is not in the palette
+     p. 43  caption     img/A05.jpg: the caption never names what to look at (“the monastery wedged under the serrated peaks”)
+                        → proposed caption: “Montserrat: the monastery on its ledge under the rock spires, the day nothing within an hour of Barcelona can stand in for.”
+     p. 43  crop        img/A05.jpg: only 43% of the frame printed
+                        → her ruling: Print whole at the 652 measure (652×434) instead of a 186 px band showing 43 % of the frame: the peaks and the monastery both whole. If the page then overruns, Brunner's levers before the picture shrinks, and never below the 340 column. Closed when p43 has no crop, caption or unnamed line.
+     p. 43  unnamed     img/A05.jpg: the caption does not name the place (Montserrat — the monastery and basilica on their ledge under the serrated peaks, an hour from Barcelona)
+     p. 55  crop        img/h-plan.jpg: only 60% of the frame printed
+                        → her ruling: Move to p65, the closing of 'Barcelona, Then', in place of the killed A07: its text is this hilltop ('a free hilltop at dusk … half of Barcelona arrives with something to drink'). Set the closing window at x 0.06–0.795 so Sagrada Família prints whole; the proposed caption names the place. p55 then prints no picture (The Plan keeps its three rules). Closed when p65 prints img/h-plan.jpg with its subject inside the window and a caption naming the Bunkers del Carmel, and p55 has no picture line.
+     p. 55  job         img/h-plan.jpg: PLACE belongs to closing frames; a plate is EVIDENCE or SCALE, with a caption
+     p. 55  unnamed     img/h-plan.jpg: the caption does not name the place (Bunkers del Carmel (Turó de la Rovira), Barcelona — the viewpoint railing over the city to Sagrada Família, the port and the sea)
+                        → proposed caption: “The Bunkers del Carmel after sunset: Sagrada Família, the port and the sea below a free hilltop, and the city arriving to watch.”
+     p. 57  chapter     img/p-plan.jpg: “the Poblenou beachfront promenade, Barcelona — the Bogatell–Mar Bella stretch, Torre…” is not named anywhere in its chapter — another chapter's place: move it, or name it
+                        → her ruling: Name it, do not move it: the proposed caption names Poblenou and Torre Mapfre, which puts the place in The Plan's chapter; the frame stays as its closing, the floating day's beach. No season is claimed (the frame cannot show one). Closed when p57 has no chapter or unnamed line.
+     p. 57  unnamed     img/p-plan.jpg: the caption does not name the place (the Poblenou beachfront promenade, Barcelona — the Bogatell–Mar Bella stretch, Torre Mapfre down the shore)
+                        → proposed caption: “The Poblenou beachfront under its palms, Torre Mapfre down the shore: the floating day's beach, taken whichever afternoon is warm.”
+     p. 61  system      colour rgb(255, 255, 255) painted 1× on p. 61 is not in the palette
+     p. 66  system      type at 48px on p. 66 (“01”…) — the 20–50px band holds only the specimen's tokens (30,46)
+
+## MOOT — 50 fix faults on frames that die (killed in the ledger, or the loser of a twice): listed in pictures-calibration.md
+
+## SURVIVORS (6) — p. 4 img/p-contract.jpg · p. 15 img/p-fly.jpg · p. 28 img/A03.jpg · p. 43 img/A05.jpg · p. 55 img/h-plan.jpg · p. 57 img/p-plan.jpg
+
+## NOTE
+  (note) source      provenance unknown on 24 frames (pp. 4, 7, 12, 15, 18, 21, 24, 25, 28, 31, 34, 37, 40, 43, 46, 49, 52, 53, 55, 57, 60, 63, 65, 68) — a paid book prints only frames it can source (owner decides)

@@ -1,0 +1,359 @@
+# -*- coding: utf-8 -*-
+"""compose.py — the Atelier's maquettiste pass for this build.
+
+Reads the generated dossier3.html (build-html.py's output, kept as
+dossier3.raw.html) and briefs.json (the Art Director's per-chapter briefs),
+recomposes every briefed chapter on the 6-column grid with the house
+vocabulary (atelier/references/vocabulary.md), and writes dossier3.html for
+render-both.py to paginate as before.
+
+Usage:  python3 compose.py [build-dir]
+
+Engine facts this relies on (proven 2026-10-24, atelier/references/engine.md):
+  - a grid section is fragmented by Paged.js one fragment per page and each
+    fragment keeps its grid; placement is row-major WITHOUT `dense`, so a
+    margin item emitted immediately AFTER its paragraph sits beside it.
+  - a `.bleed` with negative margins and break-before:page reaches the trim.
+"""
+import json, os, re, sys, html as H
+from bs4 import BeautifulSoup, NavigableString
+
+BUILD = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
+os.chdir(BUILD)
+
+RAW = 'dossier3.raw.html'
+if not os.path.exists(RAW):
+    os.rename('dossier3.html', RAW)
+doc = open(RAW, encoding='utf-8').read()
+briefs = json.load(open('briefs.json', encoding='utf-8'))
+BOOK = briefs['book']
+soup = BeautifulSoup(doc, 'lxml')
+
+WRITEBACK = []
+MARKS = [('est', '●', 'Established — structural, true for years'),
+         ('off', '◇', 'Official — a published rule or fare'),
+         ('sur', '▲', 'Surveyed — our own dated observation'),
+         ('call', '◈', 'Our call — a judgment, not a finding'),
+         ('vol', '◆', 'Volatile — a live figure; see the Field Sheet')]
+
+def el(tag, cls=None, html=None, **attrs):
+    t = soup.new_tag(tag, **attrs)
+    if cls: t['class'] = cls.split()
+    if html is not None:
+        frag = BeautifulSoup(html, 'lxml')
+        body = frag.body or frag
+        for c in list(body.children):
+            t.append(c)
+    return t
+
+def text(t):
+    return re.sub(r'\s+', ' ', t.get_text(' ')).strip() if t else ''
+
+def inner(t):
+    return ''.join(str(c) for c in t.contents) if t else ''
+
+def stub_size(s):
+    n = len(s)
+    return 48 if n <= 3 else 38 if n <= 4 else 30 if n <= 6 else 24 if n <= 9 else 18
+
+def mk_marks(used):
+    box = el('div', 'mg app')
+    box.append(el('div', 'k', 'Marks on this page'))
+    m = el('div', 'marks')
+    for key, g, label in MARKS:
+        if used and key not in used: continue
+        m.append(el('div', None, f'<span class="g {key}">{g}</span><span>{label}</span>'))
+    box.append(m)
+    return box
+
+def mk_ref(k, html):
+    box = el('div', 'mg app')
+    box.append(el('div', 'k', k))
+    box.append(el('p', 'ref', html))
+    return box
+
+def mk_inset(src, label, cap):
+    cap = re.sub(r'<span class="pl">.*?</span>\s*(&nbsp;)?', '', cap).strip()
+    f = el('figure', 'mg inset')
+    f.append(el('img', None, src=src, width='1100', height='733', decoding='sync', loading='eager'))
+    f.append(el('figcaption', 'cap', f'<span class="pl">{label}</span>{cap}'))
+    return f
+
+def mk_pull(s):
+    return el('div', 'mg pull', s)
+
+def mk_caption(label, cap):
+    return el('p', 'mg cap', f'<span class="pl">{label}</span>{cap}')
+
+def mk_bleed(src):
+    d = el('div', 'c6 bleed')
+    d.append(el('img', None, src=src, width='1800', height='1200', decoding='sync', loading='eager'))
+    d.append(el('div', 'tear'))
+    return d
+
+def mk_halfband(src, cap):
+    f = el('figure', 'c6 halfband')
+    f.append(el('img', None, src=src, width='1800', height='1200', decoding='sync', loading='eager'))
+    f.append(el('figcaption', None, cap))
+    return f
+
+def used_marks(section):
+    return {c for m in section.select('.mk') for c in m.get('class', []) if c in dict((k, 1) for k, _, _ in MARKS)}
+
+def plate_label(sec_or_fig):
+    """The figcaption's PL. letter as stamped by build-html, e.g. 'PL. L'."""
+    pl = sec_or_fig.select_one('.pl')
+    return text(pl) if pl else 'PL.'
+
+# ──────────────────────────────────────────────────────────────────────────
+def compose_decision(sec, b):
+    sid = sec['id']
+    kicker = text(sec.select_one('.kicker'))
+    h1 = inner(sec.select_one('h1'))
+    lede = inner(sec.select_one('.standfirst'))
+    band = sec.select_one('figure.photo.band')
+    band_src = band.img['src'] if band else None
+    band_cap = inner(band.figcaption) if band else ''
+    figure = next((f for f in sec.find_all('figure', recursive=False) if not f.get('class') or 'photo' not in f.get('class')), None)
+    ledger = sec.select_one('table.ledger')
+    paras = [p for p in sec.find_all('p', recursive=False)]
+    verdict = sec.select_one('.verdict p')
+    fa = sec.select_one('.fa')
+    cols = fa.select('.col')
+    fors = [inner(p) for p in cols[0].select('p')]
+    againsts = [inner(p) for p in cols[1].select('p')]
+    note = sec.select_one('.note')
+    closer = next((f for f in sec.select('figure.photo') if 'band' not in f.get('class', [])), None)
+    closer_src = closer.img['src'] if closer else None
+    closer_cap = inner(closer.figcaption) if closer else ''
+    closer_pl = plate_label(closer) if closer else 'PL.'
+    num = re.search(r'Decision (\d+)', kicker).group(1)
+    cat = kicker.split('·')[-1].strip()
+    marks = used_marks(sec)
+
+    new = el('section', 'dec chap decision at', id=sid)
+    new.append(el('span', 'rh-src', f'Decision {num} · {cat}'))
+
+    # A · the opener pack
+    op = el('div', 'c6 opener6')
+    left = el('div', 'oleft')
+    left.append(el('div', 'kicker', f'Decision {num} · {cat}'))
+    left.append(el('h1', None, h1))
+    left.append(el('div', 'standfirst', lede))
+    op.append(left)
+    dn = el('div', 'dnum', f'{num}<small>{cat} · of {BOOK["ncalls"]} calls</small>')
+    op.append(dn)
+    new.append(op)
+
+    # the verdict ticket
+    exc = (againsts if b.get('exception', 'against') == 'against' else fors)
+    exc_html = exc[0] if exc else ''
+    tk = el('div', 'c6 ticket')
+    st = el('div', 'stub')
+    big = b['stub']['big']
+    st.append(el('div', 'big', big, style=f'font-size:{stub_size(big)}px'))
+    st.append(el('div', 'lab', b['stub']['lab']))
+    tk.append(st)
+    mn = el('div', 'main')
+    mn.append(el('p', 'vlab', 'The call'))
+    mn.append(el('p', 'verdict', inner(verdict)))
+    if exc_html:
+        mn.append(el('p', 'exc', f'<b>The exception that changes it.</b> {exc_html}'))
+    tk.append(mn)
+    new.append(tk)
+
+    # the ledger, as an instrument
+    cap = text(ledger.caption)
+    ths = [text(t) for t in ledger.select('thead th')]
+    lg = el('div', 'c6 ledgerx')
+    lg.append(el('div', 'lcap', f'<span>{cap}</span><span>{" · ".join(ths)}</span>'))
+    rows = el('div', 'rows')
+    for i, tr in enumerate(ledger.select('tbody tr')):
+        tds = tr.find_all('td')
+        opt = tds[0].select_one('.opt'); sub = tds[0].select_one('.sub')
+        r = el('div', 'row' + (' decides' if b.get('decides_row') == i else ''))
+        site = el('div', 'site', f'<b>{inner(opt) if opt else inner(tds[0])}</b><i>{inner(sub) if sub else ""}</i>')
+        r.append(site)
+        r.append(el('div', 'call', inner(tds[1])))
+        rows.append(r)
+    lg.append(rows)
+    new.append(lg)
+
+    # prose + apparatus, in brief order
+    hero = b.get('hero', {})
+    margin_items = {}      # after-paragraph index -> [elements]
+    def add(after, e): margin_items.setdefault(after, []).append(e)
+    for m in b.get('margin', []):
+        if m.get('marks'): add(m.get('after', 0), mk_marks(marks))
+        else: add(m.get('after', 0), mk_ref(m['k'], m['html']))
+    if b.get('inset') and closer_src and b['inset'].get('src', 'closer') == 'closer':
+        add(b['inset'].get('after', 1), mk_inset(closer_src, closer_pl, closer_cap))
+        closer = None
+    elif b.get('inset') and band_src and b['inset'].get('src') == 'band':
+        add(b['inset'].get('after', 1), mk_inset(band_src, 'Pl.', band_cap))
+        band_src = None
+    if b.get('pull'):
+        add(b['pull'].get('after', 2), mk_pull(b['pull']['text']))
+
+    # Page A = opener + ticket + ledger; ALL prose follows the hero on page C.
+    # Prose before the forced break fragmented onto stub pages in two renders
+    # (a paragraph or a margin wrapper that missed page A by a few lines sat alone
+    # on a sheet before the bleed); a budget estimator could not predict it.
+    break_after = -1
+    if break_after < 0:
+        if hero.get('type') == 'band' and band_src:
+            new.append(mk_bleed(band_src)); new.append(mk_caption('Pl. · ' + b.get('band_label', ''), band_cap)); band_src = None
+        elif hero.get('type') == 'figure' and figure is not None:
+            fg = figure.extract(); fg['class'] = ['c6', 'figx', 'pagetop']; new.append(fg); figure = None
+    for i, p in enumerate(paras):
+        p = p.extract(); p['class'] = (p.get('class') or []) + ['c4'] + (['pa'] if i <= break_after else [])
+        items = margin_items.pop(i, [])
+        if items:
+            w = el('div', 'mg mgw')
+            for e in items: w.append(e)
+            new.append(w)
+        new.append(p)
+        if i == break_after:
+            # page C opens here: the hero band or the hero figure, to the trim
+            if hero.get('type') == 'band' and band_src:
+                new.append(mk_bleed(band_src))
+                new.append(mk_caption('Pl. · ' + b.get('band_label', ''), band_cap))
+                band_src = None
+            elif hero.get('type') == 'figure' and figure is not None:
+                fg = figure.extract(); fg['class'] = ['c6', 'figx', 'pagetop']
+                new.append(fg); figure = None
+            elif band_src:
+                new.append(mk_halfband(band_src, band_cap)); band_src = None
+    for k in sorted(margin_items):
+        w = el('div', 'mg mgw')
+        for e in margin_items[k]: w.append(e)
+        new.append(w)
+    if figure is not None:
+        fg = figure.extract(); fg['class'] = ['c6', 'figx']; new.append(fg)
+
+    # the forks
+    fk = el('div', 'c6 forks')
+    fa_ = el('div', 'fork a', f'<h4>When the default holds</h4>' + ''.join(f'<p>{x}</p>' for x in fors))
+    fb_ = el('div', 'fork b', f'<h4>When it doesn\'t</h4>' + ''.join(f'<p>{x}</p>' for x in againsts))
+    fk.append(fa_); fk.append(fb_)
+    new.append(fk)
+
+    # the note as the volatile/apparatus row, with the stamp
+    vr = el('div', 'c6 volrow')
+    if b.get('stamp'): vr.append(el('div', 'stamp', b['stamp']))
+    vr.append(el('p', None, inner(note)))
+    new.append(vr)
+
+    if closer is not None and b.get('closer', 'keep') == 'keep':
+        c = closer.extract(); c['class'] = c.get('class', []) + ['c6']; new.append(c)
+    sec.replace_with(new)
+
+# ──────────────────────────────────────────────────────────────────────────
+def compose_essay(sec, b):
+    sid = sec['id']
+    kicker = sec.select_one('.kicker'); h1 = sec.select_one('h1'); lede = sec.select_one('.standfirst')
+    band = sec.select_one('figure.photo.band')
+    band_src = band.img['src'] if band else None
+    band_cap = inner(band.figcaption) if band else ''
+    closer = next((f for f in sec.select('figure.photo') if 'band' not in f.get('class', [])), None)
+    closer_src = closer.img['src'] if closer else None
+    closer_cap = inner(closer.figcaption) if closer else ''
+    closer_pl = plate_label(closer) if closer else 'PL.'
+    marks = used_marks(sec)
+    hero = b.get('hero', {})
+
+    new = el('section', 'dec chap at essay', id=sid)
+    rh = sec.select_one('.rh-src')
+    new.append(el('span', 'rh-src', inner(rh) if rh else text(h1)))
+
+    op = el('div', 'c6 opener6')
+    left = el('div', 'oleft')
+    if kicker: left.append(kicker.extract())
+    left.append(h1.extract())
+    if lede: left.append(lede.extract())
+    op.append(left)
+    if hero.get('type') == 'number':
+        op.append(el('div', 'dnum', f'{hero["value"]}<small>{hero["label"]}</small>'))
+    elif hero.get('type') == 'pull':
+        op.append(el('div', 'opull', hero['text']))
+    new.append(op)
+    if hero.get('type') == 'band' and band_src:
+        new.append(mk_halfband(band_src, band_cap)); band_src = None
+    if band is not None: band.decompose()
+
+    margin_items = {}
+    def add(after, e): margin_items.setdefault(after, []).append(e)
+    for m in b.get('margin', []):
+        if m.get('marks'): add(m.get('after', 0), mk_marks(marks))
+        else: add(m.get('after', 0), mk_ref(m['k'], m['html']))
+    if closer is not None and b.get('closer') == 'drop':
+        closer.decompose(); closer = None; closer_src = None
+    if b.get('inset'):
+        if b['inset'].get('src') == 'band' and band_src:
+            add(b['inset'].get('after', 0), mk_inset(band_src, 'Pl.', band_cap)); band_src = None
+        elif closer_src:
+            add(b['inset'].get('after', 0), mk_inset(closer_src, closer_pl, closer_cap)); closer.decompose(); closer = None
+    if b.get('pull'):
+        add(b['pull'].get('after', 1), mk_pull(b['pull']['text']))
+
+    # walk the remaining body in order; paragraphs count for placement
+    i = -1
+    for node in list(sec.children):
+        if isinstance(node, NavigableString):
+            continue
+        if node.name == 'span' and 'rh-src' in node.get('class', []): continue
+        node = node.extract()
+        cls = node.get('class') or []
+        if node.name == 'p':
+            i += 1; node['class'] = cls + ['c4']
+            items = margin_items.pop(i, [])
+            if items:
+                w = el('div', 'mg mgw')
+                for e in items: w.append(e)
+                new.append(w)
+            new.append(node)
+            continue
+        if node.name == 'figure' and 'photo' in cls:
+            node['class'] = cls + ['c6']; new.append(node); continue
+        if node.name == 'figure':
+            node['class'] = cls + ['c6', 'figx']; new.append(node); continue
+        if node.name in ('h2', 'h3'):
+            node['class'] = cls + (['c6'] if b.get('instrument') else ['c4']); new.append(node); continue
+        if node.name in ('ul', 'table', 'div'):
+            node['class'] = cls + (['c6'] if b.get('instrument', True) else ['c4']); new.append(node); continue
+        node['class'] = cls + ['c4']; new.append(node)
+    for k in sorted(margin_items):
+        w = el('div', 'mg mgw')
+        for e in margin_items[k]: w.append(e)
+        new.append(w)
+    sec.replace_with(new)
+
+# ──────────────────────────────────────────────────────────────────────────
+n = 0
+for sid, b in briefs['chapters'].items():
+    sec = soup.find('section', id=sid)
+    if sec is None:
+        print('!! no section', sid); continue
+    if b.get('skip'): continue
+    if b['kind'] == 'decision': compose_decision(sec, b)
+    else: compose_essay(sec, b)
+    n += 1
+
+out = str(soup)
+# The compositor passes in render-paged.py match '<figure class="..."><img src="'
+# with src as the FIRST attribute; lxml serialises attributes alphabetically,
+# which silently disabled fill / snug / feed on every composed plate.
+def _img_fix(m):
+    attrs = dict(re.findall(r'([a-z]+)="([^"]*)"', m.group(0)))
+    src = attrs.pop('src', '')
+    rest = ' '.join(f'{k}="{v}"' for k, v in attrs.items())
+    return f'<img src="{src}" {rest}/>'
+out = re.sub(r'<img [^>]*/?>', _img_fix, out)
+# a bare ◆ in a TOC number or a sheet cell has no glyph in the sans/mono faces
+out = re.sub(r"(?<!class=\"mk vol\">)(?<!class='mk vol'>)(?<!class=\"g vol\">)◆", '<span class="mk vol">◆</span>', out)
+# bs4/lxml wraps in <html><body>; the raw doc already had those — keep the raw head
+head = doc.split('<body')[0]
+body = out[out.index('<body'):]
+open('dossier3.html', 'w', encoding='utf-8').write(head + body)
+for w in WRITEBACK: print('  writeback:', w)
+print(f'composed {n} chapters -> dossier3.html ({len(head)+len(body):,} bytes)')

@@ -1,0 +1,1961 @@
+[
+ {
+  "page": 1,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 2,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "set in the generic \u201cmonospace\u201d \u2014 a face outside the book's family",
+    "box": {
+     "x": 655,
+     "y": 675,
+     "w": 79,
+     "h": 17
+    },
+    "to": "brunner"
+   }
+  ],
+  "notes": [],
+  "fill": 69,
+  "photo": false,
+  "short": 16.390625,
+  "splitTo": false,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 3,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 4,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "foot",
+    "msg": "the page stops 21 lines short (60% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 60,
+  "photo": false,
+  "short": 20.920036764705884,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 5,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 6,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 7,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "foot",
+    "msg": "the page stops 25 lines short (52% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 52,
+  "photo": false,
+  "short": 24.97886029411765,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 8,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 9,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 10,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 16 lines of text",
+    "box": {
+     "x": 486,
+     "y": 215,
+     "w": 248,
+     "h": 563
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 12 lines short and the text runs on overleaf",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [
+   {
+    "rule": "leadin",
+    "msg": "the bold first line ends mid-word",
+    "box": {
+     "x": 82,
+     "y": 215,
+     "w": 337,
+     "h": 12
+    },
+    "to": "brunner"
+   }
+  ],
+  "fill": 77,
+  "photo": false,
+  "short": 11.957720588235293,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 11,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "overset",
+    "msg": "a figure label cut short: \u201cTerm\u201d (the book says \u201ctermini\u201d)",
+    "box": {
+     "x": 679,
+     "y": 317,
+     "w": 20,
+     "h": 9
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "one figure writes minutes two ways (\u201c20 min\u201d and \u201c39\u2032\u201d) \u2014 choose one",
+    "box": {
+     "x": 82,
+     "y": 106,
+     "w": 652,
+     "h": 647
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 90,
+  "photo": false,
+  "short": 5.143267463235294,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 12,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 13,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 14,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 530,
+     "w": 579,
+     "h": 263
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 12 lines of text",
+    "box": {
+     "x": 486,
+     "y": 215,
+     "w": 248,
+     "h": 296
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 82,
+  "photo": false,
+  "short": 9.306066176470589,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 15,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 16,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 17,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 94,
+  "photo": false,
+  "short": 3.2518382352941178,
+  "splitTo": true,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 18,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 108,
+     "w": 579,
+     "h": 263
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 34 lines short (35% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 35,
+  "photo": false,
+  "short": 34.11305147058823,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 19,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 20,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 21,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "a numeral compound in prose (\u201c3-day\u201d) \u2014 write \u201ctwo-day\u201d (Chicago 9.3)",
+    "box": {
+     "x": 82,
+     "y": 812,
+     "w": 306,
+     "h": 32
+    },
+    "to": "writer"
+   }
+  ],
+  "notes": [
+   {
+    "rule": "leadin",
+    "msg": "the bold first line ends mid-word",
+    "box": {
+     "x": 82,
+     "y": 283,
+     "w": 334,
+     "h": 12
+    },
+    "to": "brunner"
+   }
+  ],
+  "fill": 86,
+  "photo": false,
+  "short": 7.251838235294118,
+  "splitTo": true,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 22,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 108,
+     "w": 579,
+     "h": 263
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "a 20-line picture with only 1 line beside it \u2014 a short caption under an empty column",
+    "box": {
+     "x": 309,
+     "y": 441,
+     "w": 425,
+     "h": 340
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 77,
+  "photo": false,
+  "short": 11.936580882352942,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 23,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 24,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 25,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "case",
+    "msg": "a unit printed in capitals by CSS (\u201c60 MIN\u201d) \u2014 units keep their case",
+    "box": {
+     "x": 470,
+     "y": 552,
+     "w": 264,
+     "h": 12
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 86,
+  "photo": false,
+  "short": 7.492647058823529,
+  "splitTo": true,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 26,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 108,
+     "w": 579,
+     "h": 219
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "a picture with an empty column beside it for 17 lines",
+    "box": {
+     "x": 462,
+     "y": 397,
+     "w": 272,
+     "h": 290
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 17 lines short (67% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 67,
+  "photo": false,
+  "short": 17.45863970588235,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 27,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 28,
+  "skipped": true,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "\u201cAncientrome\u201d \u2014 two words run together in display type (word space collapsed)",
+    "box": {
+     "x": 82,
+     "y": 52,
+     "w": 179,
+     "h": 17
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 29,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 80,
+  "photo": false,
+  "short": 10.433823529411764,
+  "splitTo": true,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 30,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 108,
+     "w": 579,
+     "h": 219
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "a picture with an empty column beside it for 17 lines",
+    "box": {
+     "x": 469,
+     "y": 384,
+     "w": 265,
+     "h": 290
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 18 lines short (65% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 65,
+  "photo": false,
+  "short": 18.223345588235293,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 31,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 32,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 33,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "runt",
+    "msg": "the last line is 11% of the measure",
+    "box": {
+     "x": 82,
+     "y": 711,
+     "w": 38,
+     "h": 12
+    },
+    "to": "brunner"
+   },
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 8 lines of text",
+    "box": {
+     "x": 486,
+     "y": 261,
+     "w": 248,
+     "h": 628
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 90,
+  "photo": false,
+  "short": 5.492647058823529,
+  "splitTo": true,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 34,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 35,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 36,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 93,
+  "photo": false,
+  "short": 3.8455882352941178,
+  "splitTo": true,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 37,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 108,
+     "w": 579,
+     "h": 246
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 70,
+  "photo": false,
+  "short": 15.881433823529411,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 38,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 39,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 40,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 10 lines of text",
+    "box": {
+     "x": 486,
+     "y": 303,
+     "w": 248,
+     "h": 612
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 94,
+  "photo": false,
+  "short": 3.0036764705882355,
+  "splitTo": true,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 41,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 42,
+  "skipped": true,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "a clock time in prose without a.m./p.m. (\u201cafter 8:30\u201d) \u2014 set \u201c8:30 p.m.\u201d",
+    "box": {
+     "x": 434,
+     "y": 873,
+     "w": 300,
+     "h": 90
+    },
+    "to": "writer"
+   }
+  ],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 43,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 86,
+  "photo": false,
+  "short": 7.4338235294117645,
+  "splitTo": true,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 44,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 108,
+     "w": 579,
+     "h": 237
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "a picture with an empty column beside it for 17 lines",
+    "box": {
+     "x": 517,
+     "y": 414,
+     "w": 217,
+     "h": 290
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 16 lines short (69% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [
+   {
+    "rule": "glyph",
+    "msg": "a 24-hour time (\u201c20:30\u201d) in a figure label off a time axis \u2014 gloss it or set \u201c8:30 p.m.\u201d",
+    "box": {
+     "x": 434,
+     "y": 247,
+     "w": 74,
+     "h": 10
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "fill": 69,
+  "photo": false,
+  "short": 16.454963235294116,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 45,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 46,
+  "skipped": true,
+  "faults": [
+   {
+    "rule": "case",
+    "msg": "a unit in capitals (\u201c12H\u201d) \u2014 units keep their case: \u201c12 h\u201d",
+    "box": {
+     "x": 112,
+     "y": 583,
+     "w": 292,
+     "h": 12
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "\u201cDaytrips\u201d \u2014 two words run together in display type (word space collapsed)",
+    "box": {
+     "x": 82,
+     "y": 52,
+     "w": 151,
+     "h": 17
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 47,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "runt",
+    "msg": "a display line ends on one word (\u201cdoor-to-door.\u201d)",
+    "box": {
+     "x": 82,
+     "y": 235,
+     "w": 33,
+     "h": 17
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "runt",
+    "msg": "the paragraph ends on one short word",
+    "box": {
+     "x": 82,
+     "y": 235,
+     "w": 33,
+     "h": 17
+    },
+    "to": "brunner"
+   }
+  ],
+  "notes": [],
+  "fill": 90,
+  "photo": false,
+  "short": 5.198529411764706,
+  "splitTo": true,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 48,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "single quotes used as the outer quotes (\u201c\u2018Rome\u2019s Pompeii\u2019\u201d) \u2014 US style: double outside, single inside",
+    "box": {
+     "x": 116,
+     "y": 177,
+     "w": 176,
+     "h": 7
+    },
+    "to": "brunner"
+   },
+   {
+    "rule": "glyph",
+    "msg": "single quotes used as the outer quotes (\u201c\u2018don\u2019t pair with anything\u201d) \u2014 US style: double outside, single inside",
+    "box": {
+     "x": 116,
+     "y": 253,
+     "w": 167,
+     "h": 7
+    },
+    "to": "brunner"
+   },
+   {
+    "rule": "overset",
+    "msg": "a bar drawn to \u22488 (h) carries the label \u201c\u2248 12 h door-to-door \u00b7 \u2018don\u2019t pair with\u201d \u2014 the drawing and its number disagree",
+    "box": {
+     "x": 456,
+     "y": 231,
+     "w": 69,
+     "h": 16
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 108,
+     "w": 579,
+     "h": 219
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "a picture with an empty column beside it for 17 lines",
+    "box": {
+     "x": 517,
+     "y": 397,
+     "w": 217,
+     "h": 290
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 17 lines short (67% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 67,
+  "photo": false,
+  "short": 17.45863970588235,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 49,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 50,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 51,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 9 lines of text",
+    "box": {
+     "x": 486,
+     "y": 161,
+     "w": 248,
+     "h": 470
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "a 17-line picture with only 1 line beside it \u2014 a short caption under an empty column",
+    "box": {
+     "x": 517,
+     "y": 666,
+     "w": 217,
+     "h": 290
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 97,
+  "photo": false,
+  "short": 1.6259191176470589,
+  "splitTo": false,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 52,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 53,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "foot",
+    "msg": "the page stops 23 lines short (56% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [
+   {
+    "rule": "leadin",
+    "msg": "the bold first line ends mid-word",
+    "box": {
+     "x": 82,
+     "y": 161,
+     "w": 310,
+     "h": 12
+    },
+    "to": "brunner"
+   }
+  ],
+  "fill": 56,
+  "photo": false,
+  "short": 23.155330882352942,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 54,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 55,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 56,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 12 lines of text",
+    "box": {
+     "x": 486,
+     "y": 161,
+     "w": 248,
+     "h": 298
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 31 lines short (42% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 42,
+  "photo": false,
+  "short": 30.684742647058822,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 57,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 58,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 59,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "overset",
+    "msg": "two figure labels collide (\u201cTermini\u201d / \u201c28\u2032 to core\u201d)",
+    "box": {
+     "x": 505,
+     "y": 710,
+     "w": 32,
+     "h": 10
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "overset",
+    "msg": "two figure labels collide (\u201cPrati\u201d / \u201c38\u2032 to core\u201d)",
+    "box": {
+     "x": 628,
+     "y": 720,
+     "w": 20,
+     "h": 10
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 581,
+     "w": 579,
+     "h": 175
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 10 lines of text",
+    "box": {
+     "x": 486,
+     "y": 161,
+     "w": 248,
+     "h": 786
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "a 17-line picture with only 1 line beside it \u2014 a short caption under an empty column",
+    "box": {
+     "x": 517,
+     "y": 266,
+     "w": 217,
+     "h": 290
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 96,
+  "photo": false,
+  "short": 2.045955882352941,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 60,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "overset",
+    "msg": "11 figure labels printed under the 9px floor (\u201cthe only real question\u201d \u2248 8px) \u2014 a label must be read without a magnifier",
+    "box": {
+     "x": 370,
+     "y": 429,
+     "w": 61,
+     "h": 6
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "align",
+    "msg": "a figure panel 480px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 166,
+     "y": 402,
+     "w": 480,
+     "h": 218
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 63,
+  "photo": false,
+  "short": 22.098958333333332,
+  "splitTo": false,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 61,
+  "skipped": true,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "a display line begins with a dash",
+    "box": {
+     "x": 82,
+     "y": 303,
+     "w": 587,
+     "h": 66
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 62,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 14 lines of text",
+    "box": {
+     "x": 486,
+     "y": 161,
+     "w": 248,
+     "h": 435
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 23 lines short (57% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 57,
+  "photo": false,
+  "short": 22.625919117647058,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 63,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 64,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 65,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "foot",
+    "msg": "the page stops 30 lines short (44% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 44,
+  "photo": false,
+  "short": 29.567095588235293,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 66,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 67,
+  "skipped": true,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "a display line begins with a dash",
+    "box": {
+     "x": 82,
+     "y": 245,
+     "w": 382,
+     "h": 66
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 68,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "overset",
+    "msg": "8 figure labels printed under the 9px floor (\u201cOPTION A \u00b7 FORUM FIRST \u2014\u201d \u2248 8px) \u2014 a label must be read without a magnifier",
+    "box": {
+     "x": 175,
+     "y": 658,
+     "w": 176,
+     "h": 6
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "align",
+    "msg": "a figure panel 464px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 174,
+     "y": 641,
+     "w": 464,
+     "h": 176
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 85,
+  "photo": false,
+  "short": 7.856617647058823,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 69,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 70,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 71,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "foot",
+    "msg": "the page stops 20 lines short (62% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 62,
+  "photo": false,
+  "short": 20.016544117647058,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 72,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 73,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 74,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "align",
+    "msg": "a figure panel 579px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 116,
+     "y": 562,
+     "w": 579,
+     "h": 237
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "cut",
+    "msg": "a stray fragment \u201cwrong\u00a0carbonara.\u201d \u2014 the end of a sentence that began elsewhere (BLOCKER)",
+    "box": {
+     "x": 82,
+     "y": 521,
+     "w": 340,
+     "h": 17
+    },
+    "to": "writer"
+   }
+  ],
+  "notes": [
+   {
+    "rule": "glyph",
+    "msg": "a 24-hour time (\u201c20:30\u201d) in a figure label off a time axis \u2014 gloss it or set \u201c8:30 p.m.\u201d",
+    "box": {
+     "x": 434,
+     "y": 701,
+     "w": 74,
+     "h": 10
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "fill": 83,
+  "photo": false,
+  "short": 8.975183823529411,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 75,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 76,
+  "skipped": true,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "a display line begins with a dash",
+    "box": {
+     "x": 82,
+     "y": 972,
+     "w": 341,
+     "h": 22
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 77,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "single quotes used as the outer quotes (\u201c\u2018to be safe\u2019\u201d) \u2014 US style: double outside, single inside",
+    "box": {
+     "x": 565,
+     "y": 353,
+     "w": 77,
+     "h": 6
+    },
+    "to": "brunner"
+   },
+   {
+    "rule": "overset",
+    "msg": "two labels claim one dot (\u201cpass bought \u2018to be safe\u2019\u201d / \u201c20% American tip\u201d) \u2014 which point is which?",
+    "box": {
+     "x": 578,
+     "y": 393,
+     "w": 5,
+     "h": 5
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "overset",
+    "msg": "two labels claim one dot (\u201cColosseum + Vatican same\u201d / \u201cdollars at the card read\u201d) \u2014 which point is which?",
+    "box": {
+     "x": 457,
+     "y": 404,
+     "w": 5,
+     "h": 5
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "overset",
+    "msg": "a figure label runs past its panel (\u201ccostly, and entirely avoidable\u201d)",
+    "box": {
+     "x": 495,
+     "y": 284,
+     "w": 198,
+     "h": 10
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "overset",
+    "msg": "12 figure labels printed under the 9px floor (\u201cColosseum/Vatican unbook\u201d \u2248 8px) \u2014 a label must be read without a magnifier",
+    "box": {
+     "x": 500,
+     "y": 302,
+     "w": 95,
+     "h": 6
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "stranded",
+    "msg": "a heading at the foot with fewer than two lines of its text under it",
+    "box": {
+     "x": 82,
+     "y": 853,
+     "w": 652,
+     "h": 34
+    },
+    "to": "brunner"
+   },
+   {
+    "rule": "align",
+    "msg": "a figure panel 536px wide inside a 652px measure \u2014 figures sit at the full measure",
+    "box": {
+     "x": 138,
+     "y": 270,
+     "w": 536,
+     "h": 276
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 6 lines of text",
+    "box": {
+     "x": 486,
+     "y": 161,
+     "w": 248,
+     "h": 786
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 96,
+  "photo": false,
+  "short": 2.036764705882353,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 78,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "a numeral compound in prose (\u201c2-day\u201d) \u2014 write \u201ctwo-day\u201d (Chicago 9.3)",
+    "box": {
+     "x": 428,
+     "y": 236,
+     "w": 306,
+     "h": 28
+    },
+    "to": "writer"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 20 lines short (69% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 69,
+  "photo": false,
+  "short": 19.5,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 79,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 80,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "case",
+    "msg": "9 words set in capitals (\u201cRound up / a\u2026\u201d) \u2014 capitals only for labels of six words or fewer",
+    "box": {
+     "x": 222,
+     "y": 323,
+     "w": 166,
+     "h": 24
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "case",
+    "msg": "10 words set in capitals (\u201cTechnically banned in Lazio,\u2026\u201d) \u2014 capitals only for labels of six words or fewer",
+    "box": {
+     "x": 222,
+     "y": 363,
+     "w": 166,
+     "h": 36
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "case",
+    "msg": "9 words set in capitals (\u201cFixed taxi if 2\u20134\u2026\u201d) \u2014 capitals only for labels of six words or fewer",
+    "box": {
+     "x": 222,
+     "y": 467,
+     "w": 166,
+     "h": 24
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "case",
+    "msg": "7 words set in capitals (\u201cTap a contactless card.\u2026\u201d) \u2014 capitals only for labels of six words or fewer",
+    "box": {
+     "x": 222,
+     "y": 510,
+     "w": 166,
+     "h": 24
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "case",
+    "msg": "10 words set in capitals (\u201cVatican, Borghese, underground (arena\u2026\u201d) \u2014 capitals only for labels of six words or fewer",
+    "box": {
+     "x": 568,
+     "y": 351,
+     "w": 166,
+     "h": 48
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "case",
+    "msg": "7 words set in capitals (\u201cOstia (\u00bd day), not\u2026\u201d) \u2014 capitals only for labels of six words or fewer",
+    "box": {
+     "x": 568,
+     "y": 455,
+     "w": 166,
+     "h": 24
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "case",
+    "msg": "7 words set in capitals (\u201cIn the core. Centro\u2026\u201d) \u2014 capitals only for labels of six words or fewer",
+    "box": {
+     "x": 568,
+     "y": 495,
+     "w": 166,
+     "h": 24
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "runt",
+    "msg": "the last line is 11% of the measure",
+    "box": {
+     "x": 82,
+     "y": 182,
+     "w": 49,
+     "h": 17
+    },
+    "to": "brunner"
+   }
+  ],
+  "notes": [],
+  "fill": 81,
+  "photo": false,
+  "short": 10.096507352941176,
+  "splitTo": false,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 81,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 82,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "a clock time in prose without a.m./p.m. (\u201cafter 8:30\u201d) \u2014 set \u201c8:30 p.m.\u201d",
+    "box": {
+     "x": 82,
+     "y": 340,
+     "w": 306,
+     "h": 75
+    },
+    "to": "writer"
+   }
+  ],
+  "notes": [
+   {
+    "rule": "hole",
+    "msg": "the column stops for 7 lines and starts again",
+    "box": {
+     "x": 428,
+     "y": 203,
+     "w": 182,
+     "h": 115
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "fill": 48,
+  "photo": false,
+  "short": 27.428308823529413,
+  "splitTo": false,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 83,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "foot",
+    "msg": "the page stops 27 lines short (49% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 49,
+  "photo": false,
+  "short": 26.567095588235293,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 84,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 85,
+  "skipped": true,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cSleep inside\u201d: 0.16 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 196,
+     "y": 136,
+     "w": 36,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cIf you\u201d: 0.16 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 170,
+     "y": 189,
+     "w": 22,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cfirst night,\u201d: 0.16 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 266,
+     "y": 242,
+     "w": 34,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cGive the\u201d: 0.16 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 190,
+     "y": 295,
+     "w": 19,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cBook the\u201d: 0.16 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 194,
+     "y": 348,
+     "w": 19,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cBook the\u201d: 0.16 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 194,
+     "y": 401,
+     "w": 19,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cChoose euros\u201d: 0.16 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 209,
+     "y": 470,
+     "w": 34,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cDon\u2019t collect\u201d: 0.16 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 194,
+     "y": 523,
+     "w": 40,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201ca single\u201d: 0.16 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 191,
+     "y": 576,
+     "w": 36,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 86,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "foot",
+    "msg": "the page stops 7 lines short and the text runs on overleaf",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 87,
+  "photo": false,
+  "short": 6.802389705882353,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 87,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "a 17-line picture with only 1 line beside it \u2014 a short caption under an empty column",
+    "box": {
+     "x": 517,
+     "y": 400,
+     "w": 217,
+     "h": 290
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 67,
+  "photo": false,
+  "short": 17.294117647058822,
+  "splitTo": false,
+  "air": false,
+  "opens": false,
+  "closer": false
+ }
+]

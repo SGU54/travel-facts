@@ -1,0 +1,107 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Model 6 — L'Édition</title><style>@page{ size:8.5in 11in; margin:92px 82px 72px 82px; }
+html,body{ -webkit-print-color-adjust:exact; print-color-adjust:exact; margin:0; }
+.rh-src{ string-set:rh content(text); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+@font-face{font-family:'Symbols';src:url('../../assets/fonts/NotoSansSymbols2-Regular.ttf');}i.mk{font-style:normal;font-family:'Symbols';font-size:.9em;}
+@font-face{font-family:'Fraunces';src:url('../fonts/Fraunces.ttf');font-weight:100 900;}
+@font-face{font-family:'Fraunces';src:url('../fonts/Fraunces-Italic.ttf');font-weight:100 900;font-style:italic;}
+@font-face{font-family:'Newsreader';src:url('../fonts/Newsreader.ttf');font-weight:200 800;}
+@font-face{font-family:'Newsreader';src:url('../fonts/Newsreader-Italic.ttf');font-weight:200 800;font-style:italic;}
+@font-face{font-family:'DM';src:url('../fonts/DMSans.ttf');font-weight:100 1000;}
+@font-face{font-family:'Plex';src:url('../fonts/DMSans.ttf');font-weight:100 1000;}
+@font-face{font-family:'Public';src:url('../fonts/DMSans.ttf');font-weight:100 1000;}
+:root{ --paper:#FAF7F1; --ink:#1E1A17; --grey:#6E6760; --sect:#0E6390; --tint:#E6EEF2; --gold:#E0A828; --red:#A23520; --line:#D8D2C8; }
+@page{ @top-left{ content:"Barcelona, Without the Traps."; font-family:'DM'; font-size:8px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--grey); }
+       @top-right{ content:string(rh, last); font-family:'DM'; font-size:8px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--sect); }
+       @bottom-left{ content:"Barcelona for Americans"; font-family:'Fraunces'; font-style:italic; font-size:9px; color:var(--grey); }
+       @bottom-right{ content:counter(page); font-family:'DM'; font-weight:600; font-size:9px; color:var(--ink); } }
+@page opener{ @top-left{content:none} @top-right{content:none} }
+html,body{ background:var(--paper); } .pagedjs_sheet{ background:var(--paper); }
+body{ font-family:'Newsreader'; font-size:11px; line-height:16px; color:var(--ink); font-variation-settings:'opsz' 12; }
+.pg{ break-before:page; } .pg:first-child{ break-before:auto; } .pg.op{ page:opener; }
+.hero{ margin:-92px -82px 0; width:816px; height:600px; overflow:hidden; position:relative; }
+.hero img{ width:100%; height:100%; object-fit:cover; display:block; }
+.hero .cap{ position:absolute; left:82px; bottom:14px; color:#fff; font-family:'DM'; font-size:8.5px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+.open{ display:grid; grid-template-columns:1fr 201.3px; column-gap:24px; padding-top:26px; align-items:start; }
+.sect{ font-family:'DM'; font-weight:600; font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--sect); margin:0 0 10px; display:flex; align-items:center; gap:10px; }
+.sect::after{ content:''; flex:1; height:1px; background:var(--sect); opacity:.5; }
+h1{ font-family:'Fraunces'; font-weight:600; font-size:50px; line-height:.98; letter-spacing:-.015em; margin:0 0 12px; font-variation-settings:'opsz' 144,'SOFT' 50; }
+.sf{ font-family:'Newsreader'; font-style:italic; font-size:16px; line-height:22px; margin:0; color:var(--ink); font-variation-settings:'opsz' 18; }
+.call{ border-top:2px solid var(--sect); padding-top:8px; margin-top:4px; }
+.call .lab{ font-family:'DM'; font-weight:600; font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--sect); display:block; margin-bottom:7px; }
+.call .big{ font-family:'Fraunces'; font-weight:500; font-size:15px; line-height:19px; margin:0 0 7px; font-variation-settings:'opsz' 36,'SOFT' 100; }
+.call p{ margin:0; font-size:10.5px; line-height:15px; }
+.cols{ display:grid; grid-template-columns:314px 314px; column-gap:24px; align-items:start; }
+.cols p{ margin:0 0 9px; text-align:justify; hyphens:auto; }
+.cols p.lede::first-letter{ font-family:'Fraunces'; font-weight:600; font-size:46px; line-height:36px; float:left; padding:3px 6px 0 0; color:var(--sect); font-variation-settings:'opsz' 144,'SOFT' 100; }
+.side{ background:var(--tint); padding:12px 14px 8px; margin:0 0 12px; }
+.side .lab{ font-family:'DM'; font-weight:600; font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--sect); display:block; margin-bottom:8px; }
+.side .r{ padding:5px 0 6px; border-top:1px solid rgba(14,99,144,.25); }
+.side .opt{ font-family:'Fraunces'; font-weight:600; font-size:12px; line-height:15px; font-variation-settings:'opsz' 36; }
+.side .sub{ font-size:9.5px; line-height:13px; color:var(--grey); margin-top:1px; }
+.side .v{ font-family:'DM'; font-weight:700; font-size:8.5px; letter-spacing:.1em; text-transform:uppercase; margin-top:3px; color:var(--ink); }
+.side .r.pick .v{ color:var(--sect); }
+figure.band{ margin:0 0 16px; } figure.band img{ display:block; width:100%; height:168px; object-fit:cover; }
+figcaption{ font-family:'DM'; font-size:8.5px; line-height:12px; color:var(--grey); margin-top:6px; }
+figcaption b{ color:var(--ink); font-weight:600; }
+figure.mapf{ margin:0 0 14px; } figure.mapf svg{ display:block; width:100%; height:auto; }
+.forks{ border-top:1px solid var(--line); padding-top:8px; margin-top:4px; }
+.forks .lab{ font-family:'DM'; font-weight:600; font-size:8.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--sect); display:block; margin-bottom:6px; }
+.forks .q{ font-family:'Fraunces'; font-style:italic; font-weight:500; font-size:12.5px; line-height:15px; margin:0 0 2px; font-variation-settings:'opsz' 36; }
+.forks p{ margin:0 0 8px; font-size:10.5px; line-height:14px; text-align:left; }
+.note{ border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:8px 0; margin-top:6px; font-size:10px; line-height:14px; display:grid; grid-template-columns:96px 1fr; column-gap:14px; }
+.note .lab{ font-family:'DM'; font-weight:700; font-size:8.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--red); }
+.note p{ margin:0; } .note .x{ font-style:italic; color:var(--grey); }
+</style></head><body><div class="pg op"><span class="rh-src">Decision 05 · Tickets</span>
+  <div class="hero"><img src="../../img/A04.jpg" style="object-position:50% 45%"><div class="cap">Sagrada Família — the nave. The interior is the argument, and the argument is light.</div></div>
+  <div class="open"><div><div class="sect">Decision 05 · Tickets</div><h1>The Gaudí Fork</h1><div class="sf">Barcelona sells you a dozen Gaudí doors and implies you should walk through all of them. You should not — and the reason is attention rather than money. Three interiors in two days and the fourth is wallpaper.</div></div>
+    <div class="call"><span class="lab">In short</span><div class="big">Two ticketed Gaudí sites and one house is the first-timer's sweet spot:</div><p>Sagrada Família in the morning, Park Güell on your slot, and exactly one of Casa Batlló or La Pedrera. That is a full, un-saturated dose. Everything else folds into the walks between them. The saturation trap costs attention and money at once — the fourth interior you paid for is the one you barely see.</p></div></div>
+</div>
+<div class="pg">
+  <figure class="band"><img src="../../img/p-d06.jpg" style="object-position:50% 60%"><figcaption><b>Park Güell, the monumental zone.</b> Two ticketed sites is the dose. The third interior is where attention stops arriving.</figcaption></figure>
+  <div class="cols"><div><p class="lede">The scarce resource on a Gaudí itinerary is not money and it is not time — it is attention. These are dense, ornamented, high-information interiors, and they compete with one another for the same faculty. The first rearranges what you thought a building could be. The second is thrilling. By the fourth, a visitor who dutifully paid for all four is walking through a masterpiece checking their phone — and the disappointment gets blamed on the building rather than on the schedule that flattened it.</p><p>So the fork is simply which few earn a ticket. Sagrada Família is not really a choice: the interior is the point, and no photograph prepares you for it. Park Güell earns its slot for the terrace and the view, with the practical note that riding up spares you a climb you will feel later in the day. Beyond those two, one house interior is the right dose (Casa Batlló for sheer invention, La Pedrera for the roof), and the second house is where saturation reliably begins.</p><p>One practical note that changes the arithmetic for a lot of visitors: the two sites that earn a ticket are not near each other, and neither is near the third. Sagrada Família sits east of the grid, Park Güell well above it, and the Passeig de Gràcia houses in between. That is a real amount of movement, and it is the reason this chapter and the sequencing chapter have to be read together — two ticketed sites on the same day means crossing the city twice on someone else’s clock, which is how a pleasant morning turns into a logistics exercise.</p><p>There is a second-order effect worth naming, because it is what makes the saturation trap expensive rather than merely tiring. Ticketed Gaudí sites are timed, which means each one costs you not just its admission but a fixed point in a day that would otherwise flex. Three ticketed interiors across a five-day trip means three mornings that cannot move, three commitments made weeks earlier against weather and mood you could not predict. Two is a schedule. Four is a timetable, and a timetable is the thing that makes people describe a holiday as exhausting.</p></div>
+    <div><div class="side"><span class="lab">The Gaudí sites, ranked by what earns a ticket · first trip</span><div class="r pick"><div class="opt">Sagrada Família — the interior</div><div class="sub">the nave; the one building unlike any you have seen</div><div class="v">non-negotiable; morning slot</div></div><div class="r pick"><div class="opt">Park Güell — the monumental zone</div><div class="sub">the mosaic terrace and the city view; timed and slotted</div><div class="v">worth it, booked, early</div></div><div class="r pick"><div class="opt">One house: Batlló <em>or</em> La Pedrera</div><div class="sub">one dazzling interior and a rooftop; one is plenty</div><div class="v">pick ONE — two is saturation</div></div><div class="r"><div class="opt">The rest (Vicens, Palau Güell…)</div><div class="sub">façades, enjoyable without the ticket queue</div><div class="v">free, from the street</div></div></div><p>Everything else Gaudí, and there is a great deal of it, is a street pleasure. Casa Vicens, Palau Güell, the façades scattered through the Eixample: each rewards a two-minute stop on a walk between anchors, with no ticket, no queue and no scheduling. Treating them as encounters rather than destinations is what keeps the two you did pay for feeling like events.</p><div class="forks"><span class="lab">If that is not you</span><div class="q">Modernisme is why you came?</div><p>Batlló and Pedrera are a legitimate pairing if interiors do not blur for you. Know that it is an enthusiast's call rather than the default.</p><div class="q">Crowds ruin things for you?</div><p>In the centenary year Park Güell's monumental zone can disappoint — the free part of the park and a hilltop viewpoint may serve you better.</p></div><div class="note"><span class="lab"><i class="mk">◆</i> Volatile 2026</span><p>2026 is the Gaudí centenary; demand, completion works and pricing all move this year. Book on sagradafamilia.org, the only official seller <span class="mk off">◇</span>; authorised resellers hold real allocations <span class="mk est">●</span> when it is full. <span class="x">Morning-slot logic is decision 04; the horizons follow.</span></p></div></div></div>
+</div><div class="pg op"><span class="rh-src">Decision 01 · Base</span>
+  <div class="hero"><img src="../../img/A01.jpg" style="object-position:50% 50%"><div class="cap">The Eixample grid from above — the base decision is geometric before it is anything else.</div></div>
+  <div class="open"><div><div class="sect">Decision 01 · Base</div><h1>Where to Base</h1><div class="sf">Where you sleep decides what kind of trip you have — because “central” in Barcelona means three incompatible things, and the mistake is picking the one whose character is wrong for your days.</div></div>
+    <div class="call"><span class="lab">In short</span><div class="big">First trip, no special agenda: the Eixample, and it isn't close.</div><p>Central, quiet at night, deepest hotel stock, and it puts Gaudí's front doors on your walking route. Choose El Born only if atmosphere is the point and you sleep through noise; choose the beach only if you will actually be at the beach rather than commuting from it. Most first-timers who override the default are solving for a preference they do not really have.</p></div></div>
+</div>
+<div class="pg">
+  <div class="cols" style="grid-template-columns:426.7px 201.3px"><figure class="mapf"><svg viewbox="0 0 600 560" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#F1EDE4" height="560" width="600"></rect>
+<polygon fill="#0E6390" opacity="0.09" points="-726.9,2106.9 1562.5,-1439.7 4083.0,187.4 1793.5,3734.0"></polygon>
+<line opacity="0.45" stroke="#0E6390" stroke-width="1.2" x1="-726.9" x2="1562.5" y1="2106.9" y2="-1439.7"></line>
+<text fill="#0E6390" font-family="DM, sans-serif" font-size="12.8" letter-spacing="2.4" opacity="0.6" text-anchor="middle" transform="rotate(-57.2 480.0 373.8)" x="480.0" y="373.8">MEDITERRANEAN</text>
+<text fill="#A23520" font-family="DM, sans-serif" font-size="12.8" letter-spacing="1.6" x="0" y="16">TRUE SCALE — THE DEFAULT IN GOLD, ANCHOR SIGHTS AS DIAMONDS</text>
+<rect fill="none" height="6.4" stroke="#6E6760" stroke-width="1" transform="rotate(45 263.0 174.9)" width="6.4" x="259.8" y="171.7"></rect>
+<text fill="#6E6760" font-family="DM, sans-serif" font-size="11.2" text-anchor="middle" x="263.0" y="165.9">Sagrada Família</text>
+<rect fill="none" height="6.4" stroke="#6E6760" stroke-width="1" transform="rotate(45 122.2 80.6)" width="6.4" x="119.0" y="77.4"></rect>
+<text fill="#6E6760" font-family="DM, sans-serif" font-size="11.2" text-anchor="middle" x="122.2" y="71.6">Park Güell</text>
+<rect fill="none" height="6.4" stroke="#6E6760" stroke-width="1" transform="rotate(45 126.1 479.4)" width="6.4" x="122.9" y="476.2"></rect>
+<text fill="#6E6760" font-family="DM, sans-serif" font-size="11.2" text-anchor="middle" x="126.1" y="470.4">Montjuïc</text>
+<circle cx="202.0" cy="279.6" fill="#E0A828" r="6.2" stroke="#1E1A17" stroke-width="1.6"></circle>
+<text fill="#1B2622" font-family="DM, sans-serif" font-size="15.8" font-weight="600" text-anchor="start" x="214.0" y="282.6">Eixample</text>
+<text fill="#A23520" font-family="DM, sans-serif" font-size="11.2" letter-spacing="0.4" text-anchor="start" x="214.0" y="292.6">DEFAULT</text>
+<circle cx="143.6" cy="180.1" fill="#0E6390" r="4.6" stroke="#1E1A17" stroke-width="1"></circle>
+<text fill="#1B2622" font-family="DM, sans-serif" font-size="15.8" font-weight="600" text-anchor="end" x="131.6" y="183.1">Gràcia</text>
+<text fill="#A23520" font-family="DM, sans-serif" font-size="11.2" letter-spacing="0.4" text-anchor="end" x="131.6" y="193.1">village</text>
+<circle cx="310.4" cy="336.7" fill="#0E6390" r="4.6" stroke="#1E1A17" stroke-width="1"></circle>
+<text fill="#1B2622" font-family="DM, sans-serif" font-size="15.8" font-weight="600" text-anchor="start" x="322.4" y="339.7">El Born</text>
+<text fill="#A23520" font-family="DM, sans-serif" font-size="11.2" letter-spacing="0.4" text-anchor="start" x="322.4" y="349.7">atmosphere</text>
+<circle cx="284.4" cy="350.5" fill="#0E6390" r="4.6" stroke="#1E1A17" stroke-width="1"></circle>
+<text fill="#1B2622" font-family="DM, sans-serif" font-size="15.8" font-weight="600" text-anchor="end" x="272.4" y="353.5">Gothic Q.</text>
+<text fill="#A23520" font-family="DM, sans-serif" font-size="11.2" letter-spacing="0.4" text-anchor="end" x="272.4" y="363.5">old city</text>
+<circle cx="228.0" cy="379.0" fill="#0E6390" r="4.6" stroke="#1E1A17" stroke-width="1"></circle>
+<text fill="#1B2622" font-family="DM, sans-serif" font-size="15.8" font-weight="600" text-anchor="end" x="216.0" y="382.0">El Raval</text>
+<text fill="#A23520" font-family="DM, sans-serif" font-size="11.2" letter-spacing="0.4" text-anchor="end" x="216.0" y="392.0">edgy/central</text>
+<circle cx="380.5" cy="392.9" fill="#0E6390" r="4.6" stroke="#1E1A17" stroke-width="1"></circle>
+<text fill="#1B2622" font-family="DM, sans-serif" font-size="15.8" font-weight="600" text-anchor="middle" x="380.5" y="410.9">Barceloneta</text>
+<text fill="#A23520" font-family="DM, sans-serif" font-size="11.2" letter-spacing="0.4" text-anchor="middle" x="380.5" y="420.9">beach</text>
+<circle cx="429.1" cy="214.7" fill="#0E6390" r="4.6" stroke="#1E1A17" stroke-width="1"></circle>
+<text fill="#1B2622" font-family="DM, sans-serif" font-size="15.8" font-weight="600" text-anchor="middle" x="429.1" y="200.7">Poblenou</text>
+<text fill="#A23520" font-family="DM, sans-serif" font-size="11.2" letter-spacing="0.4" text-anchor="middle" x="429.1" y="210.7">beach/calm</text>
+<circle cx="176.0" cy="439.6" fill="#0E6390" r="4.6" stroke="#1E1A17" stroke-width="1"></circle>
+<text fill="#1B2622" font-family="DM, sans-serif" font-size="15.8" font-weight="600" text-anchor="end" x="164.0" y="442.6">Poble-sec</text>
+<text fill="#A23520" font-family="DM, sans-serif" font-size="11.2" letter-spacing="0.4" text-anchor="end" x="164.0" y="452.6">budget</text>
+</svg><figcaption><b>The eight neighbourhoods.</b> The base decision — eight neighborhoods, the default in gold, anchor sights as diamonds</figcaption></figure><div class="side"><span class="lab">The base decision, by traveller · first-timer, 3–5 days</span><div class="r pick"><div class="opt">Eixample</div><div class="sub">the default: central, calm at night, deepest hotel stock, Gaudí on your walking route</div><div class="v">first trip</div></div><div class="r"><div class="opt">El Born</div><div class="sub">medieval lanes, bars, the Picasso; central but lively after dark</div><div class="v">atmosphere</div></div><div class="r"><div class="opt">Barceloneta / Poblenou</div><div class="sub">sand and boardwalk; Poblenou calmer and more local</div><div class="v">beach first</div></div><div class="r"><div class="opt">Poble-sec</div><div class="sub">real prices, excellent eating, below Montjuïc; a metro hop from the core</div><div class="v">budget</div></div></div></div>
+  <div class="cols"><div><p class="lede">The reasoning is geometric before it is anything else. Barcelona's headline sights are not evenly distributed: the Gaudí anchors sit in and above the Eixample grid, the medieval density lies south-east of it, and the beach is east again. A base inside the Eixample puts the largest cluster on foot and everything else one short hop away — which is why it quietly saves money all week. Not because the rooms are cheaper, but because you stop paying to move.</p><p>The competing options each trade that geometry for a different good, and all three trades are legitimate. El Born trades quiet for atmosphere: you are inside the medieval city rather than a walk from it, and you accept bar noise as the price. The beach bases trade central access for the sea being fifty metres from the door — a superb trade if you will use it, a poor one if your itinerary is Gaudí and museums. Poble-sec trades a few minutes of metro for local prices and one of the better eating streets in the city.</p></div><div><p>What none of them trade is safety or charm. There are no bad areas on this list, which is part of why the decision gets made carelessly. The failure mode is not picking somewhere unpleasant — it is picking a character that fights your itinerary and then paying for that mismatch twice a day for five days.</p><div class="forks"><span class="lab">If that is not you</span><div class="q">Then El Born</div><p>— if you came for the medieval city itself, want to walk out into it at night, and bar noise reads as life rather than nuisance.</p><div class="q">Then skip the beach base</div><p>— if your days are Gaudí, old city and Montjuïc, the beach is a place you visit, not sleep; basing there adds a daily commute to everything you came for.</p></div><div class="note"><span class="lab">Since 2019</span><p>The one thing that has changed since your friends' 2019 trip: the apartment answer is now a real decision rather than a default. It is the next chapter. <span class="x">The nightly tax scales with hotel class — see the Field Sheet; sequencing is decision 04.</span></p></div></div></div>
+</div></body></html>

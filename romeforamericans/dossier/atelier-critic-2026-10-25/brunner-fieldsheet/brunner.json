@@ -1,0 +1,121 @@
+[
+ {
+  "page": 1,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cThe Field\u201d: 0.13 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 159,
+     "y": 68,
+     "w": 90,
+     "h": 48
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cGetting In\u201d: 0.15 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 131,
+     "y": 232,
+     "w": 12,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "glyph",
+    "msg": "hours set as \u201c12h\u201d \u2014 house style is \u201c12 h\u201d (or \u201c12 hours\u201d in prose)",
+    "box": {
+     "x": 243,
+     "y": 477,
+     "w": 151,
+     "h": 24
+    },
+    "to": "writer"
+   },
+   {
+    "rule": "glyph",
+    "msg": "display tracking closes the word spaces (\u201cThe Sights\u201d: 0.15 em, under 0.2 em) \u2014 loosen the tracking or widen the space",
+    "box": {
+     "x": 448,
+     "y": 232,
+     "w": 40,
+     "h": 15
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "measure",
+    "msg": "151 characters a line \u2014 too wide for 9.5px text (fault over 88)",
+    "box": {
+     "x": 82,
+     "y": 146,
+     "w": 652,
+     "h": 52
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "case",
+    "msg": "title-case artifact in \u201cGetting In From Fiumicino\u201d",
+    "box": {
+     "x": 82,
+     "y": 216,
+     "w": 312,
+     "h": 34
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 4 lines of text",
+    "box": {
+     "x": 486,
+     "y": 147,
+     "w": 248,
+     "h": 49
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "dated",
+    "msg": "the companion carries no \u201cas of <Month YYYY>\u201d stamp \u2014 a dated sheet is the promise it exists to keep",
+    "box": null,
+    "to": "writer"
+   },
+   {
+    "rule": "table",
+    "msg": "a table row with a label and no value (\u201centry dates\u201d) \u2014 labels and values have come apart",
+    "box": {
+     "x": 422,
+     "y": 427,
+     "w": 312,
+     "h": 23
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "table",
+    "msg": "a table row with a label and no value (\u201cmoves\u201d) \u2014 labels and values have come apart",
+    "box": {
+     "x": 422,
+     "y": 564,
+     "w": 312,
+     "h": 23
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 56,
+  "photo": false,
+  "short": 31.11778846153846,
+  "splitTo": false,
+  "air": false,
+  "opens": true,
+  "closer": false
+ }
+]

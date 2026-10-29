@@ -1,0 +1,555 @@
+# -*- coding: utf-8 -*-
+"""compose-affiche.py — the whole of *Rome, Solved.* in the hand of Marta Serra (L'AFFICHE,
+Season II), from rome-book.json, with Elias Brunner's standing fixes on the text pages.
+
+Owner, 2026-10-25: "applique marta II et brunner sur rome". The reading of every chapter
+(ledgers, cards, tiers, the wallet card, the tables) is compose-edition.py's; only the hand
+changes. Her rules (atelier/references/directors/marta-serra-affiche.md), in La Tavola's palette:
+  · a decision opens on its Season II poster — the verdict DRAWN (models/m9-marta-II, Rome's
+    sign is the sampietrino) — then a text page (Archivo 800 title, one 340px ragged column,
+    the ledger as a STACK in the right margin with the picks in red, the forks under it),
+    the figure at the full measure, then the closing photograph printed DUOTONE in the
+    book's two inks with the verdict overprinted in gold, carrying the last paragraph and
+    the volatile note;
+  · an essay opens on a PAPER poster: its standfirst as the thesis, one phrase in red;
+    then its text page, then its photograph page;
+  · tools open on a poster that is the tool (the tiers, the nine calls); the wallet card is
+    printed at card size with a cut line;
+  · one family (Archivo, static instances), red and gold fields, paper, ink. No boxes.
+The words are the book's; the only lines Marta writes are the poster glosses (m9) and labels.
+
+Usage: python3 compose-affiche.py   (writes dossier3.html; then render-affiche.py)
+"""
+import json, re, os, sys, glob, html as H
+import pymupdf
+BUILD = os.path.dirname(os.path.abspath(__file__)); os.chdir(BUILD)
+sys.path.insert(0, BUILD)
+import marta2
+sys.path.insert(0, os.path.expanduser('~/.claude/skills/atelier/scripts'))
+from brunner_set import BRUNNER_CSS, brunner_set
+
+CH = json.load(open('rome-book.json', encoding='utf-8'))
+BY = {c['id']: c for c in CH}
+# the owner's review fixes carried over from the Édition build (photographs, d01's heads)
+for _c in CH:
+    if _c['id'] == 'd01':
+        for _b in _c.get('blocks', []):
+            if _b.get('t') == 'ledger' and _b.get('heads') == ['WALK TO CORE', 'CHARACTER', 'PRICE']: _b['heads'] = ['BASE · CHARACTER', 'WALK TO CORE']
+PHOTO_SWAP = {'img/p29-0.jpeg': 'img/d07-card-reader.jpeg', 'img/p58-0.jpeg': 'img/wallet-coins.jpeg', 'img/p20-0.jpeg': 'img/termini-trim.jpeg',
+              'img/p34-0.jpeg': 'img/d09-ostia.jpeg', 'img/p41-0.jpeg': 'img/stay-rooftops.jpeg'}
+for _c in CH:
+    for _b in _c.get('blocks', []):
+        if _b.get('t') == 'photo' and _b.get('src') in PHOTO_SWAP: _b['src'] = PHOTO_SWAP[_b['src']]
+FS_PDF = '/Users/sg54/travel-sites/_etsy/rome/files/rome-solved-FieldSheet.pdf'
+
+def esc(s): return H.escape(s, quote=False)
+WORDS = ['COSTS','YOU','THE','TRIP','OR','A','WHOLE','DAY','MONEY','GOOD','MEAL','MARKS','AS','TOURIST','COMFORT','BASE','YOU’LL','REGRET',
+         'WHAT','TO','ASK','BEFORE','PAY','TWO','TRIPS','THAT','FOLLOW','CALLS','WHEN','PLAN','DOES','NOT','SURVIVE','GETTING','IN','FROM',
+         'FIUMICINO','PASSES','&','TRANSIT','SIGHTS','SELL','OUT','GROUND','DECISIONS','CITY','BACK','MATTER','ANNEX','CONTENTS','CHAPTER','BOOK',',']
+def nice(t):
+    flat = t.replace(' ', ''); out = []; i = 0
+    while i < len(flat):
+        for w in sorted(WORDS, key=len, reverse=True):
+            if flat.startswith(w, i): out.append(w); i += len(w); break
+        else: out.append(flat[i]); i += 1
+    s = ' '.join(out).replace(' ,', ',').replace('YOU ’ LL', 'YOU’LL')
+    return re.sub(r'\s+', ' ', s).strip()
+def group_lines(blocks):
+    out = []
+    for b in blocks:
+        if b['t'] == 'line' and out and out[-1]['t'] == 'lines' and out[-1]['face'] == b['face'] and out[-1]['size'] == b['size'] and out[-1]['page'] == b['page']:
+            out[-1]['items'].append(b)
+        elif b['t'] == 'line':
+            out.append({'t': 'lines', 'face': b['face'], 'size': b['size'], 'page': b['page'], 'y': b['y'], 'items': [b]})
+        else: out.append(b)
+    return out
+def strip_mk(s): return re.sub(r'\s*<i class="mk">[^<]*</i>\s*', ' ', s).strip()
+
+# ── fonts: every static instance in the shared folder, one @font-face each ─────────────
+FACES = ''
+for f in sorted(glob.glob('models/fonts/archivo-static/Archivo-w*-wd*.ttf')):
+    m = re.search(r'-w(\d+)-wd(\d+)(-Italic)?\.ttf$', f)
+    FACES += (f"@font-face{{font-family:'Archivo';src:url('{f}');font-weight:{m.group(1)};font-stretch:{m.group(2)}%;"
+              f"font-style:{'italic' if m.group(3) else 'normal'};}}\n")
+FACES += "@font-face{font-family:'Symbols';src:url('assets/fonts/NotoSansSymbols2-Regular.ttf');}\n"
+
+CSS = FACES + r'''
+:root{ --paper:#EFE4CC; --ink:#2B241A; --red:#8A3324; --gold:#C9A94A; --grey:#6A5C42; --line:#2B241A; --hair:#D8C7A4; }
+@page{ size:8.5in 11in; margin:92px 82px 72px 82px;
+  @top-left{ content:none } @top-right{ content:none } @bottom-center{ content:none }
+  @bottom-left{ content:"Rome, Solved."; font-family:'Archivo'; font-size:8.5px; font-weight:500; letter-spacing:.06em; color:var(--grey); }
+  @bottom-right{ content:counter(page); font-family:'Archivo'; font-weight:700; font-size:10px; color:var(--ink); } }
+@page poster{ margin:0; @top-left{content:none} @top-right{content:none} @bottom-left{content:none} @bottom-center{content:none} @bottom-right{content:none} }
+@page annex{ margin:72px 82px 60px 82px; }
+html,body{ background:var(--paper); -webkit-print-color-adjust:exact; print-color-adjust:exact; margin:0; }
+.pagedjs_sheet{ background:var(--paper); }
+body{ font-family:'Archivo'; font-size:11px; line-height:17px; color:var(--ink); }
+.rh-src{ string-set:rh content(text); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+section{ break-before:page; }
+.pg{ break-before:page; } .pg.first{ break-before:auto; }
+i.mk{ font-style:normal; font-family:'Symbols'; font-size:.9em; color:var(--red); font-weight:400; font-stretch:100%; }
+a{ color:inherit; text-decoration:none; }
+/* posters */
+.poster{ page:poster; width:8.5in; height:11in; box-sizing:border-box; padding:64px 82px 60px; position:relative; overflow:hidden; display:flex; flex-direction:column; break-before:page; }
+.poster.paper{ background:var(--paper); color:var(--ink); height:1055px; }
+.poster .slug{ font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; display:flex; justify-content:space-between; }
+.poster .slug .lab{ color:var(--red); }
+.poster .foot{ margin-top:auto; display:grid; grid-template-columns:1fr 300px; column-gap:40px; align-items:end; }
+.poster .foot.rule{ border-top:3px solid var(--ink); padding-top:12px; }
+.poster .big{ font-size:30px; line-height:33px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.poster .foot p{ margin:0; font-size:12px; line-height:17px; font-weight:400; }
+.thesis{ font-weight:800; font-stretch:88%; font-size:60px; line-height:58px; letter-spacing:-.035em; margin-top:110px; }
+.thesis.long{ font-size:50px; line-height:49px; margin-top:90px; }
+.thesis em{ font-style:normal; color:var(--red); }
+/* photograph page */
+.photo{ page:poster; width:8.5in; height:1055px; box-sizing:border-box; position:relative; overflow:hidden; display:flex; flex-direction:column; break-before:page; }
+.photo img{ display:block; width:100%; height:740px; object-fit:cover; }
+.photo .tail{ padding:28px 82px 0; display:grid; grid-template-columns:340px 1fr; column-gap:48px; }
+.photo .tail.one{ grid-template-columns:340px; }
+.photo .cap{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-bottom:10px; }
+.photo p{ margin:0 0 9px; } .photo .tail.two p{ font-size:10.5px; line-height:15px; }
+.vol{ border-top:3px solid var(--red); padding-top:8px; }
+.vol .lab{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; margin-bottom:5px; }
+.vol p{ font-size:10px; line-height:14px; } .vol .x{ color:var(--grey); display:block; margin-top:4px; }
+/* text pages */
+h1{ font-weight:800; font-stretch:88%; font-size:58px; line-height:.92; letter-spacing:-.035em; margin:0 0 14px; }
+h1.long{ font-size:46px; }
+.sf{ font-weight:300; font-size:15.5px; line-height:21px; width:430px; margin:0 0 26px; }
+.prose p, p.t{ margin:0 0 11px; text-align:left; hyphens:auto; width:340px; }
+.prose p:first-child::first-line, p.t.lede::first-line{ font-weight:600; }
+.aside{ float:right; clear:right; width:264px; margin:0 0 20px 48px; }
+h2{ font-size:19px; line-height:21px; font-weight:800; font-stretch:92%; letter-spacing:-.02em; margin:14px 0 10px; padding-top:10px; border-top:3px solid var(--ink); break-after:avoid; clear:both; }
+h3{ font-size:14px; line-height:17px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; margin:12px 0 5px; break-after:avoid; }
+h3 small{ font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--red); margin-left:8px; font-stretch:100%; }
+.stack{ border-top:3px solid var(--line); break-inside:avoid; }
+.stack .it{ padding:10px 0 11px; border-bottom:1px solid var(--line); }
+.stack .opt{ font-size:17px; line-height:19px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.stack .it.pick .opt::before{ content:''; display:inline-block; width:11px; height:11px; background:var(--red); margin:0 8px 1px 0; }
+.stack .sub{ font-size:9.5px; line-height:13px; color:var(--grey); margin-top:3px; }
+.stack .v{ font-size:9px; line-height:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-top:5px; }
+.stack .it.pick .v{ color:var(--red); }
+.stack .lab{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; padding:6px 0 2px; }
+.stack.sm .opt{ font-size:14px; line-height:16px; } .stack.sm .it{ padding:7px 0 8px; }
+.forks{ margin-top:22px; border-top:3px solid var(--line); break-inside:avoid; }
+.forks .lab{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; padding:8px 0 0; color:var(--red); }
+.forks .it{ padding:8px 0 9px; border-bottom:1px solid var(--line); }
+.forks .q{ font-size:14px; line-height:16px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; margin-bottom:3px; }
+.forks p{ margin:0; font-size:10px; line-height:14px; }
+.forks2{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; clear:both; } .forks2 .forks{ margin-top:18px; }
+figure{ margin:0; }
+figure.band{ margin:22px 0 0; break-inside:avoid; clear:both; } figure.band img{ display:block; width:100%; height:262px; object-fit:cover; }
+figure.band figcaption, figure.fig figcaption{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:8px; }
+figure.band figcaption b, figure.fig figcaption b{ color:var(--ink); }
+figure.fig{ margin:14px 0 22px; break-inside:avoid; clear:both; } figure.fig svg{ display:block; width:100%; height:auto; }
+figure.fig svg text{ font-family:'Archivo'; fill:#2B241A; font-style:normal; }   /* no stroked halo (embeds as Type3) and no italic (no static italic at these weights): the renderer puts a paper chip under each label */
+figure.fig svg text.mono{ font-weight:600; letter-spacing:.06em; } figure.fig svg text.lab{ font-weight:500; }
+.cols2{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; clear:both; }
+.cols2 p, .cols2 h3{ width:auto; }
+.li{ margin:0 0 10px; break-inside:avoid; }
+.li .dl{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; display:block; margin-bottom:2px; }
+.li p{ margin:0; }
+.card2{ break-inside:avoid; margin:0 0 12px; border-top:1px solid var(--line); padding-top:4px; }
+.card2 h3{ margin-top:4px; } .card2 p{ margin:0; font-size:10.5px; line-height:15px; }
+/* contents */
+.tocs{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--red); margin:16px 0 4px; break-after:avoid; }
+.toc a{ display:grid; grid-template-columns:52px 1fr 40px; column-gap:16px; align-items:baseline; border-top:1px solid var(--line); padding:4px 0 5px; break-inside:avoid; }
+.toc a.dec{ border-top-color:var(--red); }
+.toc .num{ font-weight:800; font-stretch:118%; font-size:16px; line-height:16px; letter-spacing:-.03em; } .toc a.dec .num{ color:var(--red); }
+.toc .t{ font-size:11.5px; line-height:14px; font-weight:500; }
+.toc a::after{ content:attr(data-page); font-weight:800; font-size:13px; text-align:right; }
+.toc a.fs::after{ content:"sheet"; font-size:9px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--grey); }
+/* failure modes */
+.tiers{ margin-top:30px; }
+.tier{ border-top:3px solid var(--ink); padding:10px 0 12px; display:grid; grid-template-columns:130px 1fr; column-gap:28px; align-items:start; }
+.tier .n{ font-weight:800; font-stretch:118%; font-size:96px; line-height:.8; letter-spacing:-.05em; color:var(--red); }
+.tier .h{ font-size:26px; line-height:28px; font-weight:800; letter-spacing:-.025em; font-stretch:88%; margin-top:10px; }
+.fail{ break-inside:avoid; padding:6px 0 7px; border-bottom:1px solid var(--line); }
+.fail .head{ display:block; font-size:12.5px; line-height:15px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; margin-bottom:3px; }
+.fail p{ margin:0; font-size:10px; line-height:14px; }
+h2.th b{ color:var(--red); font-weight:800; }
+/* decide these first */
+.nine{ margin-top:28px; }
+.nine .it{ display:grid; grid-template-columns:62px 1fr 40px; column-gap:16px; border-top:3px solid var(--ink); padding:9px 0 10px; align-items:start; }
+.nine .n{ font-weight:800; font-stretch:118%; font-size:38px; line-height:.8; letter-spacing:-.04em; color:var(--red); }
+.nine .q{ font-size:10px; line-height:13px; color:var(--grey); }
+.nine .c{ font-size:14px; line-height:16px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; margin-top:2px; }
+.nine .pn{ font-size:13px; font-weight:800; text-align:right; } .nine .pn a::after{ content:attr(data-page); }
+.ask{ border-top:3px solid var(--red); padding-top:8px; margin-bottom:14px; break-inside:avoid; }
+.ask .who{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; margin:0 0 6px; }
+.ask p{ margin:0; font-size:11px; line-height:15px; padding:4px 0; border-bottom:1px solid var(--hair); }
+.trip{ break-inside:avoid; } .trip .tname{ font-size:17px; line-height:19px; font-weight:800; font-stretch:92%; letter-spacing:-.02em; margin:0 0 4px; }
+.trip .tassume{ font-size:9.5px; line-height:13px; color:var(--grey); margin:0 0 8px; }
+.trip .day{ display:grid; grid-template-columns:70px 1fr; column-gap:10px; border-top:1px solid var(--line); padding:5px 0; }
+.trip .day b{ font-weight:800; font-size:13px; line-height:15px; font-stretch:92%; } .trip .day span{ font-size:10px; line-height:14px; }
+.trip .twhy{ font-size:10px; line-height:14px; margin:8px 0 0; border-top:3px solid var(--ink); padding-top:6px; }
+.fb .it{ display:grid; grid-template-columns:200px 1fr; column-gap:24px; border-top:1px solid var(--line); padding:8px 0 9px; break-inside:avoid; }
+.fb .it .w{ font-size:13px; line-height:15px; font-weight:700; font-stretch:92%; letter-spacing:-.01em; } .fb .it .d{ font-size:10.5px; line-height:14px; }
+/* the wallet card */
+.wgrid{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; }
+.wl{ display:grid; grid-template-columns:130px 1fr; column-gap:10px; align-items:baseline; padding:6px 0; border-bottom:1px solid var(--line); }
+.wl .opt{ font-size:12px; line-height:15px; font-weight:700; font-stretch:92%; } .wl .v{ font-size:8.5px; line-height:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--red); }
+.cards{ display:flex; gap:28px; margin-top:30px; align-items:flex-start; break-inside:avoid; }
+.card{ width:324px; height:204px; box-sizing:border-box; outline:1.5px dashed var(--grey); outline-offset:8px; padding:16px 18px; display:flex; flex-direction:column; overflow:hidden; }
+.card.front{ background:var(--red); color:var(--paper); }
+.card.front .g{ font-weight:800; font-stretch:118%; font-size:66px; line-height:.82; letter-spacing:-.045em; margin-top:12px; }
+.card.front .s{ font-size:12px; line-height:15px; font-weight:700; margin-top:auto; }
+.card .tag{ font-size:8.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:flex; justify-content:space-between; }
+.card.back{ background:#fff; }
+.card.back .ln{ display:grid; grid-template-columns:84px 1fr; column-gap:8px; font-size:8.5px; line-height:11px; border-top:1px solid var(--hair); padding:2px 0; }
+.card.back .ln b{ font-weight:700; } .card.back .ln:first-of-type{ border-top:2px solid var(--ink); margin-top:5px; }
+.cut{ font-size:9px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:20px; }
+/* the field sheet (annex) */
+.fs{ page:annex; }
+.fs h1{ font-size:44px; margin-bottom:8px; } .fs .sf{ margin-bottom:8px; font-size:13px; line-height:18px; width:560px; }
+.fs .method{ font-size:9.5px; line-height:13px; color:var(--grey); margin:0 0 10px; }
+.fs h2{ font-size:14px; margin:8px 0 4px; }
+.fs .r{ display:grid; grid-template-columns:1fr 1fr; column-gap:10px; padding:4px 0 5px; border-top:1px solid var(--hair); break-inside:avoid; }
+.fs .r .k{ font-size:10px; line-height:12.5px; font-weight:500; } .fs .r .v{ font-size:8.5px; line-height:12px; font-weight:700; color:var(--red); }
+.opener{ position:relative; } .ledger{ position:relative; } .verdict{ position:relative; }
+'''
+
+# ═══ pieces ═══════════════════════════════════════════════════════════════════
+FIG_FIX = {3: [('Pantheon', 0, 10), ('TERMINI', -2, 0)], 1: [('Term', 0, 0)]}
+def figure_html(b, fid):
+    svg = open(b['svg_file'], encoding='utf-8').read()
+    for label, dx, dy in FIG_FIX.get(fid, []):
+        def mv(m): return f'<text x="{float(m.group(1))+dx:.1f}" y="{float(m.group(2))+dy:.1f}"' + m.group(3)
+        svg = re.sub(r'<text x="([\d.\-]+)" y="([\d.\-]+)"([^>]*>' + re.escape(label) + r'[^<]*</text>)', mv, svg, count=1)
+    svg = svg.replace('<svg ', f'<svg id="fig{fid}" ', 1)
+    cap = b['cap']; m = re.match(r'(FIG\. \d+)\s*·\s*(.*)', cap, re.S)
+    capx = f'<b>{m.group(1)}</b> · {esc(m.group(2))}' if m else esc(cap)
+    return f'<figure class="fig" data-fig="{fid}">{svg}<figcaption>{capx}</figcaption></figure>'
+
+def cap_text(b):
+    c = (b or {}).get('cap', '') or ''
+    return re.sub(r'^PL\. \d+\s*·\s*', '', c)
+
+def band(b, h=262, pos='50% 50%'):
+    if not b: return ''
+    cap = cap_text(b)
+    return f'<figure class="band"><img src="{b["src"]}" style="height:{h}px;object-position:{pos}">{f"<figcaption>{esc(cap)}</figcaption>" if cap else ""}</figure>'
+
+def photo_page(b, tail_html, vol_html='', duo=None, pos='50% 50%'):
+    cap = cap_text(b); two = bool(vol_html); twop = tail_html.count('<p') > 1
+    img = (f'<div class="dw"><img src="{b["src"]}" style="object-position:{pos}"><div class="tone"></div><div class="lift"></div>'
+           f'<div class="word" style="font-size:{marta2.WORD[duo][1]}px;font-stretch:{marta2.WORD[duo][2]}%">{esc(marta2.WORD[duo][0])}</div></div>') if duo else f'<img src="{b["src"]}" style="object-position:{pos}">'
+    return (f'<div class="photo{" duo" if duo else ""}">{img}<div class="tail{"" if two else " one"}{" two" if twop else ""}">'
+            f'<div>{f"<div class=cap>{esc(cap)}</div>" if cap else ""}{tail_html}</div>{vol_html}</div></div>')
+
+def paper_poster(cid, label, title, thesis, red, foot_big, foot_p):
+    t = esc(thesis)
+    if red and red in thesis: t = esc(thesis).replace(esc(red), f'<em>{esc(red)}</em>', 1)
+    return (f'<div class="poster paper" id="{cid}-p"><span class="rh-src">{esc(title)}</span>'
+            f'<div class="slug"><span class="lab">{esc(label)}</span><span>{esc(title)}</span></div>'
+            f'<div class="thesis{" long" if len(thesis) > 100 else ""}">{t}</div>'
+            f'<div class="foot rule"><div class="big">{esc(foot_big)}</div><p>{esc(foot_p)}</p></div></div>')
+
+def title_html(t): return f'<h1{" class=long" if len(t) > 38 else ""}>{esc(t)}</h1>'
+
+def balanced(items, cls='cols2'):
+    w = [len(re.sub(r'<[^>]+>', '', x)) + 120 for x in items]
+    k = min(range(1, len(items) + 1), key=lambda k: abs(sum(w[:k]) - sum(w[k:]))) if len(items) > 1 else 1
+    return f'<div class="{cls}"><div>{"".join(items[:k])}</div><div>{"".join(items[k:])}</div></div>'
+
+def stack_html(d, picks):
+    rows = ''
+    for i, r in enumerate(d['rows']):
+        opt = strip_mk(r['opt']); sub = ''
+        if ' — ' in opt: opt, sub = opt.split(' — ', 1)
+        rows += (f'<div class="it{" pick" if i in picks else ""}"><div class="opt">{esc(opt)}</div>'
+                 f'{f"<div class=sub>{esc(sub)}</div>" if sub else ""}<div class="v">{esc(" · ".join(r["vals"]))}</div></div>')
+    cap = d['caption'].title() if d['caption'].isupper() else d['caption']
+    return f'<div class="stack ledger{" sm" if len(d["rows"]) > 4 else ""}"><span class="lab">{esc(cap)}</span>{rows}</div>'
+
+def forks_html(b):
+    out = '<div class="forks">'; last = None
+    for it in b['items']:
+        if it['lab'] != last: out += f'<span class="lab">{esc(it["lab"])}</span>'; last = it['lab']
+        cond, _, cons = it['text'].partition(' → ')
+        out += f'<div class="it"><div class="q">{cond}</div>{f"<p>→ {cons}</p>" if cons else ""}</div>'
+    return out + '</div>'
+
+def forks2_html(b):
+    """The forks under the prose: one column per label (Follow this if / Overrule it if)."""
+    cols = {}
+    for it in b['items']:
+        cond, _, cons = it['text'].partition(' → ')
+        cols.setdefault(it['lab'], []).append(f'<div class="it"><div class="q">{cond}</div>{f"<p>→ {cons}</p>" if cons else ""}</div>')
+    return '<div class="forks2">' + ''.join(f'<div class="forks"><span class="lab">{esc(k)}</span>{"".join(v)}</div>' for k, v in cols.items()) + '</div>'
+
+def vol_html(note, xref):
+    if not note and not xref: return ''
+    lab = '<i class="mk">◆</i> Volatile' if (note and '◆' in note['text']) else 'Note'
+    return f'<div class="vol"><span class="lab">{lab}</span><p>{note["text"] if note else ""}{f"<span class=x>{esc(xref[chr(116)+chr(101)+chr(120)+chr(116)])}</span>" if xref else ""}</p></div>'
+
+def lines_html(b):
+    f, s = b['face'], b['size']; items = b['items']
+    if f == 'plex-md' and s == 8.2: return f'<h2>{esc(nice(items[0]["text"]).title())}</h2>'
+    if (f == 'plex' and s in (6.8, 7.1, 7.5)) or (f == 'fell' and s == 14.2): return ''.join(f'<h3>{it["text"]}</h3>' for it in items)
+    return f'<p>{" ".join(it["text"] for it in items)}</p>'
+
+# Marta's red phrase on each essay's paper poster — a phrase of the standfirst, verbatim
+RED = {'intro': 'the calls the free web scatters, joined', 'how-to-read-this-book': 'four marks',
+       'the-ground-a-city-you-can-wa': 'a radius, not a total width', 'why-the-obvious-tool-doesn-t': 'it can’t take you where you’re going',
+       'before-you-fly': 'everything else can wait for Rome', 'day-zero-the-arrival': 'the ones nobody writes down',
+       'the-rhythm-of-the-week': 'the one “free” day that costs the most', 'where-to-stay-assessed': 'walk to the core, character, price',
+       'walking-the-quarters': 'a city you cross by walking', 'the-set-pieces': 'done in the right order',
+       'the-plan-as-operations': 'keeps the days from colliding', 'day-trips-ranked-by-the-day-': 'on the same logic',
+       'eating-the-rule-that-outlive': 'un-marks you as a tourist', 'failure-modes': 'grouped by what it costs you',
+       'what-this-book-won-t-tell-yo': 'faking certainty would cheat you'}
+# the ledger rows the verdict picks (red square), read from each call
+PICKS = {'d01': {0, 1}, 'd02': {0}, 'd03': {1}, 'd04': {0}, 'd05': {0, 1}, 'd06': {1, 2, 3}, 'd07': {0, 1, 2, 3}, 'd08': {2, 3}, 'd09': {0, 3}}
+
+def sf_of(ch): return next((b['text'] for b in ch['blocks'] if b['t'] == 'standfirst'), '')
+def label_of(ch): return 'Chapter' if (ch.get('kicker') or 'Chapter') == 'Chapter' else ch['kicker']
+
+# ═══ chapters ═════════════════════════════════════════════════════════════════
+OUT = [f'<section class="chap" id="cover">{marta2.cover()}</section>']
+
+# contents
+toc = BY['what-s-inside']; order = [c['id'] for c in CH if c['id'] not in ('cover', 'what-s-inside', 'intro')] + ['fs']
+items = []; k = 0
+for b in toc['blocks']:
+    if b['t'] == 'line' and b['face'] == 'plex' and b['size'] == 6.0: items.append(f'<div class="tocs">{esc(nice(b["text"]).title())}</div>')
+    elif b['t'] == 'line' and b['face'] == 'fell' and b['size'] == 9.8:
+        cid = order[k] if k < len(order) else ''; k += 1
+        dec = cid.startswith('d0'); num = cid[1:] if dec else '·'
+        items.append(f'<a href="#{cid}" class="{"dec" if dec else ""}{" fs" if cid == "fs" else ""}"><span class="num">{num}</span><span class="t">{re.sub(r"^0\d\s*·\s*", "", b["text"])}</span></a>')
+OUT.append(f'''<section class="chap" id="contents"><div class="pg first" id="contents-p"><span class="rh-src">Contents</span>
+  <h1 style="margin-top:20px">Contents</h1><div class="sf">Nine decisions, the ground they stand on and the days they produce. Red numbers are the calls.</div>
+  {balanced(items, 'cols2 toc')}</div></section>''')
+
+def essay(cid, poster=True, bands_pos='50% 50%'):
+    ch = BY[cid]; blocks = group_lines(ch['blocks']); sf = sf_of(ch)
+    photos = [b for b in blocks if b['t'] == 'photo']; hero = photos[0] if photos else None
+    paras = [b for b in blocks if b['t'] == 'p']
+    body = []
+    for b in blocks:
+        if b['t'] == 'p' and b is not (paras[-1] if len(paras) > 1 else None): body.append(f'<p>{b["text"]}</p>')
+        elif b['t'] == 'figure': body.append(figure_html(b, b['fig']))
+        elif b['t'] == 'lines': body.append(lines_html(b))
+    with_page = hero is not None and len(paras) > 1
+    extra = ''.join(band(p) for p in photos[1:]) + ('' if with_page else band(hero))
+    html = f'<section class="chap" id="{cid}">'
+    if poster and sf:
+        html += paper_poster(cid, 'Chapter', ch['title'], sf, RED.get(cid), ch['title'], cap_text(hero) or '')
+    html += f'<div class="pg{"" if poster and sf else " first"}">{title_html(ch["title"])}<div class="prose">{"".join(body)}</div>{extra}</div>'
+    if with_page: html += photo_page(hero, f'<p>{paras[-1]["text"]}</p>')
+    return html + '</section>'
+
+def decision(ch):
+    blocks = group_lines(ch['blocks']); sid = ch['id']
+    photos = [b for b in blocks if b['t'] == 'photo']; hero = photos[0] if photos else None
+    led = next((b for b in blocks if b['t'] == 'ledger'), None); fk = next((b for b in blocks if b['t'] == 'forks'), None)
+    note = next((b for b in blocks if b['t'] == 'note'), None); xref = next((b for b in blocks if b['t'] == 'xref'), None)
+    paras = [b for b in blocks if b['t'] == 'p']; figs = [b for b in blocks if b['t'] == 'figure']
+    # desk 2026-10-25 (Brunner → Marta, p20/p25): ledger + forks in one float outgrew the page and pushed the
+    # whole text to the next sheet. Marta: the stack keeps the margin; the forks run under the prose, two columns.
+    aside = stack_html(led, PICKS.get(sid, set())) if led else ''
+    html = f'<section class="chap decision" id="{sid}">' + marta2.poster(sid, ch['kicker'])
+    tail_n = 2 if (not figs and len(paras) >= 5) else 1   # desk: Brunner's tail2 for the long decisions without a figure (d05, d07)
+    html += (f'<div class="pg">{title_html(ch["title"])}<div class="sf">{sf_of(ch)}</div><div class="aside" data-air="Marta: the margin ends with the ledger; the prose runs on">{aside}</div>'
+             f'<div class="prose">{"".join(f"<p>{p[chr(116)+chr(101)+chr(120)+chr(116)]}</p>" for p in paras[:-tail_n])}</div>'
+             + (forks2_html(fk) if fk else '') + ''.join(figure_html(f, f['fig']) for f in figs) + ''.join(band(p) for p in photos[1:]) + '</div>')
+    if hero: html += photo_page(hero, ''.join(f'<p>{p["text"]}</p>' for p in paras[-tail_n:]), vol_html(note, xref), duo=sid if sid in marta2.WORD else None)
+    return html + '</section>'
+
+OUT.append(essay('intro'))
+for cid in ['how-to-read-this-book', 'the-ground-a-city-you-can-wa', 'why-the-obvious-tool-doesn-t']: OUT.append(essay(cid))
+for ch in [c for c in CH if re.match(r'd0\d$', c['id'])]: OUT.append(decision(ch))
+
+# before you fly — the checklist, two columns that read down
+ch = BY['before-you-fly']; blocks = group_lines(ch['blocks'])
+hero = next(b for b in blocks if b['t'] == 'photo'); its = []; cur_k = None
+for b in blocks:
+    if b['t'] == 'lines' and b['face'] == 'plex' and b['size'] == 6.8: cur_k = b['items'][0]['text']
+    elif b['t'] == 'lines' and b['face'] == 'goudy' and b['size'] == 9.0 and cur_k is not None: its.append((cur_k, ' '.join(it['text'] for it in b['items']))); cur_k = None
+intro_p = ''.join(f'<p class="t{" lede" if i == 0 else ""}">{b["text"]}</p>' for i, b in enumerate(b for b in blocks if b['t'] == 'p'))
+cap = next((b['caption'] for b in blocks if b['t'] == 'ledger'), 'The pre-departure list · by deadline')
+OUT.append(f'<section class="chap" id="before-you-fly">' + paper_poster('before-you-fly', 'The checklist', ch['title'], sf_of(ch), RED['before-you-fly'], ch['title'], cap_text(hero))
+           + f'<div class="pg">{title_html(ch["title"])}{intro_p}<h2>{esc(cap.title() if cap.isupper() else cap)}</h2>'
+           + balanced([f'<div class="li"><span class="dl">{esc(k)}</span><p>{t}</p></div>' for k, t in its]) + band(hero) + '</div></section>')
+
+for cid in ['day-zero-the-arrival', 'the-rhythm-of-the-week']: OUT.append(essay(cid))
+
+# where to stay, assessed — the cards and the two figures
+ch = BY['where-to-stay-assessed']; blocks = group_lines(ch['blocks'])
+photos = [b for b in blocks if b['t'] == 'photo']; hero = photos[0]
+intro = [b for b in blocks if b['t'] == 'p' and b['page'] == 41 and b['y'] < 400]
+cards = []; head = None
+for b in blocks:
+    if b['t'] == 'lines' and ((b['face'] == 'fell' and b['size'] == 14.2) or (b['face'] == 'plex' and b['size'] == 7.5)): head = b['items'][0]['text']
+    elif b['t'] == 'p' and head: cards.append((head, b['text'])); head = None
+card_html = [f'<div class="card2"><h3>{esc(h.split(" · ")[0])}<small>{esc(h.split(" · ",1)[1]) if " · " in h else ""}</small></h3><p>{t}</p></div>' for h, t in cards]
+OUT.append('<section class="chap" id="where-to-stay-assessed">' + paper_poster('where-to-stay-assessed', 'Chapter', ch['title'], sf_of(ch), RED['where-to-stay-assessed'], ch['title'], cap_text(hero))
+           + f'<div class="pg">{title_html(ch["title"])}<div class="prose">{"".join(f"<p>{b[chr(116)+chr(101)+chr(120)+chr(116)]}</p>" for b in intro)}</div>'
+           + figure_html(next(b for b in blocks if b['t'] == 'figure' and b['fig'] == 10), 10) + balanced(card_html)
+           + figure_html(next(b for b in blocks if b['t'] == 'figure' and b['fig'] == 11), 11) + band(photos[1]) + band(hero) + '</div></section>')
+
+for cid in ['walking-the-quarters', 'the-set-pieces', 'the-plan-as-operations']: OUT.append(essay(cid))
+
+# day trips, ranked — the cards
+ch = BY['day-trips-ranked-by-the-day-']; blocks = group_lines(ch['blocks'])
+photos = [b for b in blocks if b['t'] == 'photo']; hero = photos[0]
+ps = [b for b in blocks if b['t'] == 'p']; cards = []; head = None; tail_p = None
+for b in blocks:
+    if b['t'] == 'lines' and b['face'] == 'plex' and b['size'] == 7.1: head = b['items'][0]['text']
+    elif b['t'] == 'p' and head: cards.append((head, b['text'])); head = None
+    elif b['t'] == 'p' and cards and b is not ps[0]: tail_p = b
+card_html = [f'<div class="card2"><h3>{esc(h.split(" · ")[0])}<small>{esc(h.split(" · ",1)[1]) if " · " in h else ""}</small></h3><p>{t}</p></div>' for h, t in cards]
+OUT.append('<section class="chap" id="day-trips-ranked-by-the-day-">' + paper_poster('day-trips-ranked-by-the-day-', 'Chapter', ch['title'], sf_of(ch), RED['day-trips-ranked-by-the-day-'], ch['title'], cap_text(hero))
+           + f'<div class="pg">{title_html(ch["title"])}<div class="aside"><figure class="band" style="margin-top:0"><img src="{photos[1]["src"]}" style="height:170px"></figure></div><p class="t lede">{ps[0]["text"]}</p>' + balanced(card_html) + '</div>'   # desk: Marta fills the margin beside the lede with the chapter's second photograph
+           + (photo_page(hero, f'<p>{tail_p["text"]}</p>') if tail_p else '') + '</section>')
+
+OUT.append(essay('eating-the-rule-that-outlive'))
+
+# failure modes — the poster is the tiers; the page is the list
+ch = BY['failure-modes']; blocks = group_lines(ch['blocks'])
+photos = [b for b in blocks if b['t'] == 'photo']; hero = photos[0]
+tiers = []; cur_t = None
+for b in blocks:
+    if b['t'] == 'lines' and b['face'] == 'plex-md': cur_t = [nice(b['items'][0]['text']).title(), []]; tiers.append(cur_t)
+    elif b['t'] == 'lines' and b['size'] == 9.3 and cur_t is not None:
+        for it in b['items']:
+            runs = it.get('runs', [])
+            if runs and runs[0][0] == 'fell' and len(runs[0][2].strip()) > 3:
+                cur_t[1].append([runs[0][2].strip(), ''.join(r[2] for r in runs[1:]).strip()])
+            elif cur_t[1]: cur_t[1][-1][1] += ' ' + it['text']
+            else: cur_t[1].append(['', it['text']])
+tiers_poster = ''.join(f'<div class="tier"><div class="n">{len(items)}</div><div class="h">{esc(name)}</div></div>' for name, items in tiers)
+lists = ''.join(f'<h2 class="th"><b>{len(items)}</b> &nbsp;{esc(name)}</h2>' + balanced([f'<div class="fail"><span class="head">{esc(h)}</span><p>{t}</p></div>' for h, t in items]) for name, items in tiers)
+intro = ''.join(f'<p class="t lede">{b["text"]}</p>' for b in blocks if b['t'] == 'p')
+OUT.append(f'''<section class="chap" id="failure-modes"><div class="poster paper" id="failure-modes-p"><span class="rh-src">Failure modes</span>
+  <div class="slug"><span class="lab">Organised by consequence</span><span>Failure modes</span></div>
+  <div class="tiers">{tiers_poster}</div>
+  <div class="foot rule" style="grid-template-columns:1fr"><div class="big" style="font-size:20px;line-height:23px">{esc(sf_of(ch))}</div></div></div>
+<div class="pg">{title_html(ch["title"])}{intro}{figure_html(next(b for b in blocks if b['t'] == 'figure'), 14)}{lists}{band(photos[1])}</div>''' + photo_page(hero, '<p>' + esc(sf_of(ch)) + '</p>') + '</section>')
+
+# the wallet card — the card is the page
+ch = BY['the-wallet-card']; blocks = group_lines(ch['blocks'])
+rows = []
+for b in ch['blocks']:
+    if b['t'] == 'line' and b['face'] == 'fell' and b['size'] == 9.0:
+        if rows and not rows[-1][0].rstrip().endswith('?'): rows[-1][0] += ' ' + b['text']
+        else: rows.append([b['text'], '', b['y']])
+for b in ch['blocks']:
+    if b['t'] == 'line' and b['face'] == 'plex' and b['size'] == 7.9 and rows:
+        r = min((r for r in rows if r[2] <= b['y'] + 3), key=lambda r: b['y'] - r[2], default=rows[0])
+        r[1] = (r[1] + ' ' + b['text']).strip()
+rows = [(q, a) for q, a, _ in rows]
+title = next((b['text'] for b in ch['blocks'] if b['t'] == 'line' and b['face'] == 'fell' and b['size'] == 14.2), 'Rome, on one card')
+hero = next(b for b in blocks if b['t'] == 'photo')
+back = [r for r in rows if not r[0].startswith('Reader asks')][:9]
+OUT.append(f'''<section class="chap" id="the-wallet-card"><div class="pg first" id="the-wallet-card-p"><span class="rh-src">The wallet card</span>{title_html(ch["title"])}<div class="sf">{sf_of(ch)}</div>
+  <h2>{esc(title)}</h2>{balanced([f'<div class="wl"><div class="opt">{esc(q)}</div><div class="v">{esc(a)}</div></div>' for q, a in rows], 'wgrid ledger')}
+  <div class="cards"><div class="card front"><div class="tag"><span>Rome</span><span>Solved.</span></div><div class="g">EUROS.</div><div class="s">{esc(rows[0][0])} {esc(rows[0][1])}</div></div>
+  <div class="card back"><div class="tag" style="color:var(--red)"><span>The street card</span><span>2026</span></div>{''.join(f'<div class="ln"><b>{esc(q.rstrip("?"))}</b><span>{esc(a)}</span></div>' for q, a in back)}</div></div>
+  <div class="cut">Cut along the dashed line, fold in two, keep it behind your card.</div></div></section>''')   # desk: Marta — the card is the page; no photograph
+
+# what this book won't tell you
+ch = BY['what-this-book-won-t-tell-yo']; blocks = group_lines(ch['blocks'])
+hero = next(b for b in blocks if b['t'] == 'photo'); its = []
+for b in blocks:
+    if b['t'] == 'lines' and b['face'] == 'goudy' and b['size'] == 9.5:
+        for it in b['items']:
+            m = re.match(r'((?:WE|THE)[^.]*\.)\s*(.*)', it['text'])
+            if m: its.append([m.group(1), m.group(2)])
+            elif its: its[-1][1] += ' ' + it['text']
+intro = ''.join(f'<p class="t lede">{b["text"]}</p>' for b in blocks if b['t'] == 'p')
+OUT.append('<section class="chap" id="what-this-book-won-t-tell-yo">' + paper_poster('what-this-book-won-t-tell-yo', 'Chapter', ch['title'], sf_of(ch), RED['what-this-book-won-t-tell-yo'], ch['title'], cap_text(hero))
+           + f'<div class="pg">{title_html(ch["title"])}{intro}' + balanced([f'<div class="card2"><h3>{esc(h[:1] + h[1:].lower())}</h3><p>{t}</p></div>' for h, t in its]) + band(hero) + '</div></section>')
+
+# after the last tab — the closing essay: the text, then St Peter's at dusk
+ch = BY['after-the-last-tab']; blocks = group_lines(ch['blocks'])
+photos = [b for b in blocks if b['t'] == 'photo']; plate = next((p for p in photos if p.get('cap', '').startswith('PL.')), photos[0])
+paras = [b for b in blocks if b['t'] == 'p']
+OUT.append(f'<section class="chap" id="after-the-last-tab"><div class="pg first">{title_html(ch["title"])}<div class="prose">'
+           + ''.join(f'<p>{p["text"]}</p>' for p in paras[:-1]) + '</div>' + band(photos[0]) + '</div>' + photo_page(plate, f'<p>{paras[-1]["text"]}</p>') + '</section>')
+
+# decide these first — the poster is the nine calls; then the questions, the two trips, the fallbacks
+ch = BY['decide-these-first']; blocks = ch['blocks']; L = [b for b in blocks if b['t'] == 'line']
+def rows_by_rules(lines, page, rules, cols):
+    buckets = []; bounds = [0] + rules + [9999]
+    for lo, hi in zip(bounds, bounds[1:]):
+        ls = [l for l in lines if l['page'] == page and lo <= l['y'] < hi]
+        if ls:
+            row = [' '.join(l['text'] for l in sorted([l for l in ls if x0 <= l['x'] < x1], key=lambda l: l['y'])) for x0, x1 in cols]
+            if any(row): buckets.append(row)
+    return buckets
+rules = ch['rules']
+r62 = [r for r in rows_by_rules([l for l in L if l['page'] == 62 and l['face'] in ('fell', 'goudy', 'plex') and l['size'] in (9.8, 9.0, 8.2)], 62, rules.get('62', rules.get(62, [])), [(60, 260), (260, 520), (520, 600)]) if r[0]]
+dec_ids = [c['id'] for c in CH if re.match(r'd0\d$', c['id'])]
+nine = ''.join(f'<div class="it"><div class="n">0{i+1}</div><div><div class="q">{q}</div><div class="c">{c}</div></div><div class="pn"><a href="#{dec_ids[i] if i < len(dec_ids) else ""}"></a></div></div>' for i, (q, c, n) in enumerate(r62[:9]))
+asks = []; who = None; intro63 = next((b['text'] for b in blocks if b['t'] == 'p' and b['page'] == 63), '')
+for l in L:
+    if l['page'] == 63 and l['face'] == 'goudy' and l['size'] == 9.4: who = [l['text'], []]; asks.append(who)
+    elif l['page'] == 63 and l['face'] == 'goudy' and l['size'] == 12.0 and who: who[1].append(l['text'])
+intro_trips = next((b['text'] for b in blocks if b['t'] == 'p' and b['page'] == 63 and 'nine calls' in b['text']), '')
+trips = []; cur_tr = None
+fb_y = next((l['y'] for l in L if l['page'] == 64 and l['face'] == 'plex-md' and l['size'] == 8.2), 9999)
+for l in L:
+    if l['face'] == 't3' and l['size'] == 10.0:
+        if cur_tr and cur_tr['title'].endswith(','): cur_tr['title'] += ' ' + l['text']
+        else: cur_tr = {'title': l['text'], 'as': '', 'rows': [], 'why': ''}; trips.append(cur_tr)
+    elif cur_tr and l['face'] == 'goudy' and l['size'] == 10.3: cur_tr['as'] += (' ' if cur_tr['as'] else '') + l['text']
+    elif cur_tr and l['face'] == 'goudy' and l['size'] == 10.8: cur_tr['why'] += (' ' if cur_tr['why'] else '') + l['text']
+    elif cur_tr and l['face'] == 'fell' and l['size'] == 9.8 and l['page'] in (63, 64) and l['x'] < 100 and not (l['page'] == 64 and l['y'] >= fb_y): cur_tr['rows'].append([l['text'], '', l['y'], l['page']])
+    elif cur_tr and l['face'] == 'goudy' and l['size'] == 9.0 and l['page'] in (63, 64) and l['x'] > 100 and not (l['page'] == 64 and l['y'] >= fb_y):
+        cur_tr.setdefault('what', []).append([l['y'], l['page'], l['text']])
+for tr in trips:
+    whats = tr.pop('what', [])
+    for i, r in enumerate(tr['rows']):
+        nxt = tr['rows'][i + 1] if i + 1 < len(tr['rows']) else None
+        for y, pg, t in whats:
+            if pg == r[3] and y >= r[2] - 14 and (nxt is None or pg != nxt[3] or y < nxt[2] - 14): r[1] += (' ' if r[1] else '') + t
+    tr['title'] = re.sub(r'\bfi rst\b', 'first', tr['title'])
+r64 = rows_by_rules([l for l in L if l['page'] == 64 and l['face'] in ('fell', 'goudy') and l['size'] in (9.8, 9.0) and l['y'] > 0], 64, list(rules.get('64', rules.get(64, []))), [(60, 165), (165, 600)])
+fb_start = next((i for i, r in enumerate(r64) if r[0].startswith('Your Colosseum')), None)
+fb = r64[fb_start:] if fb_start is not None else []
+hero = next(b for b in blocks if b['t'] == 'photo')
+OUT.append(f'''<section class="chap" id="decide-these-first"><div class="poster paper" id="decide-these-first-p"><span class="rh-src">Before you book</span>
+  <div class="slug"><span class="lab">Before you book</span><span>Decide these first</span></div>
+  <div class="nine">{nine}</div>
+  <div class="foot" style="margin-top:20px"><div class="big" style="font-size:19px;line-height:22px">{esc(sf_of(ch))}</div></div></div>
+<div class="pg">{title_html("Decide these first")}<h2>What to ask, before you pay</h2><p class="t">{intro63}</p>'''
+           + balanced([f'<div class="ask"><p class="who">{esc(w.title())}</p>' + ''.join(f'<p>{q}</p>' for q in qs) + '</div>' for w, qs in asks])
+           + f'<h2>Two trips that follow the calls</h2><p class="t">{intro_trips}</p>'
+           + balanced([f'<div class="trip"><p class="tname">{esc(tr["title"])}</p><p class="tassume">{tr["as"]}</p>' + ''.join(f'<div class="day"><b>{esc(w)}</b><span>{t}</span></div>' for w, t, *_ in tr['rows']) + f'<p class="twhy">{tr["why"]}</p></div>' for tr in trips])
+           + '<h2>When the plan does not survive the day</h2><div class="fb">' + ''.join(f'<div class="it"><div class="w">{w}</div><div class="d">{d}</div></div>' for w, d in fb if w) + '</div>'
+           + band(hero) + '</div></section>')
+
+# the Field Sheet — from its own PDF, in the same hand
+fsd = pymupdf.open(FS_PDF); groups = []; cur_g = None; fs_title = 'The Field Sheet'; fs_sf = ''; method = []; col_lines = []
+for p in fsd:
+    for b in p.get_text('dict')['blocks']:
+        for l in b.get('lines', []):
+            s = l['spans'][0]; t = ''.join(x['text'] for x in l['spans']).strip()
+            if t: col_lines.append((round(l['bbox'][0]), round(l['bbox'][1]), s['font'].split('+')[-1], round(s['size'], 1), t))
+col_lines.sort(key=lambda l: (0 if l[0] < 300 else 1, l[1]))
+for x, y, f, s, t in col_lines:
+    if s == 25.5: fs_title = t
+    elif s == 12.0: fs_sf = t
+    elif s == 8.6: method.append(t)
+    elif f.startswith('IBMPlexMono-Medi') and s == 7.9: cur_g = [nice(t).title(), []]; groups.append(cur_g)
+    elif 'FELL' in f.upper() and s == 8.2 and cur_g is not None:
+        if cur_g[1] and cur_g[1][-1][1] == '': cur_g[1][-1][0] += ' ' + t
+        else: cur_g[1].append([t, ''])
+    elif f.startswith('IBMPlexMono-Regu') and s == 7.1 and cur_g is not None and cur_g[1]: cur_g[1][-1][1] = (cur_g[1][-1][1] + ' ' + t).strip()
+col = lambda gs: ''.join(f'<h2>{esc(g)}</h2>' + ''.join(f'<div class="r"><div class="k">{esc(k)}</div><div class="v">{esc(v)}</div></div>' for k, v in rows) for g, rows in gs)
+OUT.append(f'''<section class="chap fs" id="fs"><div class="pg first" id="fs-p"><span class="rh-src">The Field Sheet</span>
+  <h1>{esc(fs_title)}</h1><div class="sf">{esc(fs_sf)}</div><p class="method">{esc(' '.join(method))}</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;column-gap:28px"><div>{col(groups[:2])}</div><div>{col(groups[2:])}</div></div></div></section>''')
+
+html = f'''<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Rome, Solved.</title>
+<style>{CSS}{marta2.CSS}{marta2.DUO_CSS}{BRUNNER_CSS}</style></head><body>
+{''.join(OUT)}
+</body></html>'''
+# compounds the shipped PDF broke at a line end ('first- timer', 'out- schedule'): rejoined (Brunner, glyph)
+html = re.sub(r'(?<=[a-z])- (?=[a-z])', '-', html)
+html = brunner_set(html)
+# every provenance mark in the Symbols face: a bare ● ◇ ▲ ◆ ○ falls back to a system font that embeds as Type3
+_parts = re.split(r'(<i class="mk">[^<]*</i>|<style>.*?</style>|<svg.*?</svg>)', html, flags=re.S)
+html = ''.join(x if (x.startswith('<i class="mk">') or x.startswith('<style>') or x.startswith('<svg')) else re.sub(r'(?<!["\w])([●◇▲◆◈○])', r'<i class="mk">\1</i>', x) for x in _parts)
+open('dossier3.html', 'w', encoding='utf-8').write(html)
+print('composed dossier3.html in the Affiche hand (Season II):', len(html), 'bytes;', html.count('class="poster'), 'posters,', html.count('class="photo'), 'photo pages,', html.count('<figure class="fig"'), 'figures')

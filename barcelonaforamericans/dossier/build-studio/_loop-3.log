@@ -1,0 +1,26 @@
+── iteration 1 ──
+composed 22 chapters -> dossier3.html (177,023 bytes)
+page map: 53 pages -> _pages.json
+paginated: 53 pages in DOM -> 53 pages in dossier.pdf
+page map: 1 pages -> _pages.json
+paginated: 1 pages in DOM -> 1 pages in fieldsheet.pdf
+   p19 d01: last page 28% → closing plate
+   p28 d06: stub before the hero (24%) → prose after the hero
+   p30 d06: last page 31% → closing plate
+   p32 d07: stub before the hero (18%) → prose after the hero
+   p34 d07: last page 29% → closing plate
+   p36 d08: stub before the hero (20%) → prose after the hero
+   p38 d08: last page 33% → closing plate
+   p48 wallet: last page 10% with plate → tight
+── iteration 2 ──
+ Traceback (most recent call last):
+  File "/Users/sg54/travel-sites/travel-facts/barcelonaforamericans/dossier/build/compose.py", line 377, in <module>
+    if b['kind'] == 'decision': compose_decision(sec, b)
+                                ~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/sg54/travel-sites/travel-facts/barcelonaforamericans/dossier/build/compose.py", line 160, in compose_decision
+    cols = fa.select('.col')
+           ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'select'
+
+failed: python3 compose.py .
+EXIT 1

@@ -1,0 +1,627 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""render4.py — dossier3.html -> dossier4.pdf, with the SHIPPED book's running head.
+
+Why this exists
+---------------
+render3.js hands Chromium a single static header template, so every interior page
+reads `LA TAVOLA · A DECISION MANUAL`. The shipped 47pp edition instead carries the
+CURRENT CHAPTER on the right, and suppresses the head entirely on a chapter's own
+opening page — the convention every other book in the fleet uses.
+
+Chromium cannot do that from one render. CSS `@page` margin boxes with
+`string-set` / `content: string()` are the standard way and they are still not
+implemented: tested here on Chromium 1243, a literal string and `counter(page)`
+both print, `content: string(chap)` prints nothing. That is the same limitation
+build3.py recorded against Chromium 1194.
+
+So: lay the book out ONCE, work out which chapter each page belongs to, then ask
+Chromium for the pages one at a time, each with its own header, and merge. The
+layout is computed from the same DOM every time, so pagination cannot drift
+between the passes.
+
+What the probe pass is also used for
+------------------------------------
+The other five books are set by Paged.js through render-paged.py, which gives them
+a compositor: it feeds a short chapter's tail a closing plate, and shrinks a figure
+that would otherwise take a sheet of its own. Rome had none of that, which is why
+opening every chapter on a fresh page dropped its median fill from 82% to 71% and
+left seventeen half-empty sheets. The same probe that locates the chapters is now
+measured for ink, and three passes run off it:
+
+  · the contents folios, written back from the measurement (Chromium has no
+    target-counter, so they cannot be resolved in CSS)
+  · a closing plate for every chapter that ends short, cut to the space
+  · a snug pass for a figure that takes a page alone
+
+Run:  python3 render4.py [--phone]
+"""
+import glob, io, json, os, re, subprocess, sys
+
+from playwright.sync_api import sync_playwright
+from pypdf import PdfReader, PdfWriter
+from pypdf.generic import ArrayObject, NameObject, NullObject
+
+BUILD = os.path.dirname(os.path.abspath(__file__))
+PHONE = "--phone" in sys.argv
+
+# The phone edition is not a smaller page with the same type: it is a NARROWER
+# COLUMN. Print sets ~6.6in of measure here; this sets ~3.9in, so shown at the
+# same screen width every glyph is about 1.7x larger without changing a font-size.
+PAGE_W, PAGE_H = ("4.5in", "8in") if PHONE else ("8.5in", "11in")
+MARGIN = ({"top": "0.42in", "bottom": "0.40in", "left": "0in", "right": "0in"}
+          if PHONE else
+          {"top": "1.02in", "bottom": "1.0in", "left": "0in", "right": "0in"})
+PAD = 26 if PHONE else 82
+# the body box, as a fraction of the sheet — everything outside it is furniture
+BODY_TOP = 0.42 / 8.0 if PHONE else 1.02 / 11.0
+BODY_BOT = (8.0 - 0.40) / 8.0 if PHONE else 10.0 / 11.0
+COL_IN = (8.0 - 0.82) if PHONE else 9.0          # inches of column per sheet
+
+# The Book and its Field Sheet are two documents. render-both.py writes the two
+# halves to _book.html / _sheet.html and points this renderer at each in turn;
+# with neither variable set it behaves exactly as before.
+_SRCNAME = os.environ.get("RENDER_SRC", "dossier3.html")
+SRC = "file://" + os.path.join(BUILD, _SRCNAME)
+OUT = os.path.join(BUILD, os.environ.get(
+    "RENDER_OUT", "dossier-phone.pdf" if PHONE else "dossier4.pdf"))
+
+# The head/footer text is drawn by Chromium into the margin box, and this
+# Chromium rasterises 8px Courier lighter than the one the shipped book was
+# made on: measured at 150dpi, the folio came out with half the ink (149
+# pixels under 200, against the baseline's 293). That is faint enough to read
+# as missing — the furniture gate calls the band empty — and faint in print.
+# Darkened to match the baseline's density here.
+PAPER, RULE = "#F6EEDB", "#5A4E35"
+
+
+def header(right: str) -> str:
+    """The head band. `right` empty = a bare paper strip, which is how a chapter
+    opener is set."""
+    inner = "" if not right else (
+        f'<div style="position:absolute;left:{PAD}px;right:{PAD}px;top:36px;'
+        f'font-family:\'Courier New\',monospace;font-size:8px;letter-spacing:1.4px;'
+        f'color:{RULE};text-transform:uppercase;display:flex;justify-content:space-between;">'
+        f'<span>Rome, Solved.</span><span>{right}</span></div>')
+    return (f'<div style="font-size:8px;width:100%;height:100%;margin:0;padding:0;position:relative;'
+            f'-webkit-print-color-adjust:exact;">'
+            f'<div style="position:absolute;top:-40px;left:-40px;right:-40px;bottom:18px;'
+            f'background:{PAPER};"></div>{inner}</div>')
+
+# The ornament was &#9670; (the black diamond) — the VOLATILE mark in this book's
+# own provenance key, printed on all 44 pages: 54 of the glyph in the PDF against
+# about ten real claims, which makes the mark unreadable. A glyph may not mean two
+# things in one book, so the footer takes a middle dot instead.
+FOOTER = (f'<div style="font-size:8px;width:100%;height:100%;margin:0;padding:0;position:relative;'
+          f'-webkit-print-color-adjust:exact;">'
+          f'<div style="position:absolute;top:18px;left:-40px;right:-40px;bottom:-40px;'
+          f'background:{PAPER};"></div>'
+          f'<div style="position:absolute;left:{PAD}px;right:{PAD}px;bottom:34px;'
+          f'font-family:\'Courier New\',monospace;font-size:8px;color:{RULE};'
+          f'display:flex;justify-content:space-between;align-items:center;">'
+          f'<span>Rome for Americans</span><span style="color:#C9A84C;">&#183;</span>'
+          f'<span class="pageNumber"></span></div></div>')
+
+PDF_OPTS = dict(width=PAGE_W, height=PAGE_H, print_background=True,
+                prefer_css_page_size=True, display_header_footer=True,
+                footer_template=FOOTER, margin=MARGIN)
+
+# prefer_css_page_size makes Chromium honour the CSS @page and ignore the
+# width/height above, so the phone trim has to be set in CSS or the edition
+# silently renders at Letter — which it did, at 46 pages instead of 73.
+PHONE_CSS = """
+@page{ size:4.5in 8in !important; margin:0.42in 0 0.40in 0 !important; }
+.flow{ padding:0 0.30in !important; }
+.page{ width:4.5in !important; padding:0 26px !important; }
+.cover, .coverpage{ width:4.5in !important; }
+h1{ font-size:24px !important; line-height:1.12 !important; }
+h1.big{ font-size:30px !important; }
+.standfirst, .lede{ font-size:13px !important; line-height:1.5 !important; }
+figure img, .plate img, figure.photo img, figure.head img, figure.closer img{
+  height:auto !important; width:100% !important; max-height:2.4in !important;
+  object-fit:cover !important; }
+figure svg, svg{ width:100% !important; height:auto !important; }
+figcaption{ font-size:8px !important; line-height:1.4 !important; }
+table{ font-size:10.5px !important; }
+.ledger td, .ledger th{ padding:5px 6px !important; font-size:10.5px !important; }
+.toc{ font-size:10.5px !important; }
+.fs-grid{ column-count:1 !important; }
+.wallet .row{ font-size:10.5px !important; }
+"""
+
+# ── the running-head text per chapter ────────────────────────────────────────
+# Decisions are labelled by their topic, exactly as the shipped edition labels
+# them; every other chapter runs its own title.
+DECISION_TOPICS = ["BASE", "TRANSIT", "ARRIVAL", "ANCIENT ROME", "VATICAN",
+                   "BOOKING", "MONEY", "EATING", "DAY TRIPS"]
+
+
+def chapters(html: str):
+    """(head text, first 40 chars of the title) for every chapter, in order."""
+    out, dn = [], 0
+    for m in re.finditer(
+            r'<(?:section|div)\s+class="((?:dec chap|dec)[^"]*)"[^>]*>(.*?)'
+            r'(?=<(?:section|div)\s+class="(?:dec chap|dec)\b|$)', html, re.S):
+        cls, body = m.group(1), m.group(2)
+        t = re.search(r'<h[123][^>]*>(.*?)</h[123]>', body, re.S)
+        if not t:
+            continue
+        title = " ".join(re.sub(r"<[^>]+>", "", t.group(1)).split())
+        if cls.split()[:1] == ["dec"] and "chap" not in cls:
+            dn += 1
+            topic = DECISION_TOPICS[dn - 1] if dn <= len(DECISION_TOPICS) else title.upper()
+            head = f"DECISION {dn:02d} &middot; {topic}"
+        else:
+            head = title.upper()
+        out.append((head, title[:40]))
+    return out
+
+
+def read_dests(pdf_bytes):
+    """chapter-id -> 0-based page, from the PDF's own /Dests name tree.
+
+    Searching each page's TEXT for the chapter title instead put "Before you fly"
+    on the page that mentions it rather than the page it begins on, and mis-placed
+    five of twenty-six chapters. An id cannot be ambiguous.
+    """
+    pr = PdfReader(io.BytesIO(pdf_bytes))
+    out = {}
+    for name, dst in (pr.named_destinations or {}).items():
+        try:
+            out[name.lstrip("/")] = pr.get_destination_page_number(dst)
+        except Exception:
+            pass
+    return out, len(pr.pages)
+
+
+def measure(pdf_bytes):
+    """Per sheet: ink extent as a fraction of the column, prose-line count, text.
+
+    Ink is measured INSIDE the body box. A naive max(yMax) is the folio on every
+    sheet, because Chromium draws the furniture into the page margins, and every
+    page then measures full. Prose lines are counted separately from words: an
+    SVG's own labels are words, so a figure-dominated page is not a page with few
+    words — it is a page with few LINES of nine words or more.
+    """
+    tmp = os.path.join(BUILD, "_probe.pdf")
+    open(tmp, "wb").write(pdf_bytes)
+    try:
+        xml = subprocess.run(["pdftotext", "-bbox-layout", tmp, "-"],
+                             capture_output=True, text=True).stdout
+    finally:
+        os.remove(tmp)
+    out = []
+    for pm in re.finditer(r'<page width="([\d.]+)" height="([\d.]+)">(.*?)</page>',
+                          xml, re.S):
+        ph = float(pm.group(2))
+        top, bot = ph * BODY_TOP, ph * BODY_BOT
+        prose, ys, words, rows = 0, [], [], []
+        for line in re.findall(r"<line[^>]*>(.*?)</line>", pm.group(3), re.S):
+            ws = [(float(a), float(b), w) for a, b, w in
+                  re.findall(r'<word[^>]*yMin="([\d.]+)"[^>]*yMax="([\d.]+)">(.*?)</word>', line)
+                  if top < float(b) <= bot]
+            if not ws:
+                continue
+            ys += [b for _, b, _ in ws]
+            words += [w for _, _, w in ws]
+            rows.append((min(a for a, _, _ in ws), max(b for _, b, _ in ws),
+                         " ".join(w for _, _, w in ws)))
+            if len(ws) >= 9:
+                prose += 1
+        # The FIRST block on the sheet — what would have to fit on the page
+        # before it. Segment on the first LARGE vertical gap rather than on a
+        # caption: a table (the booking list) has no caption to end at, and
+        # ending at a fixed line count measured the wrong thing entirely.
+        block, instrument = 0.0, False
+        if rows:
+            gaps = [rows[i + 1][0] - rows[i][1] for i in range(len(rows) - 1)]
+            typ = sorted(gaps)[len(gaps) // 2] if gaps else 0
+            end = len(rows) - 1
+            for i, g in enumerate(gaps):
+                if g > max(typ * 1.9, typ + 6) and i >= 1:
+                    end = i
+                    break
+            # a caption belongs to the art above it, never to what follows
+            if end + 1 < len(rows) and re.match(r"(FIG|PL)\.\s*\d", rows[end + 1][2]):
+                end += 1
+                while end + 1 < len(rows) and rows[end + 1][0] - rows[end][1] < 4:
+                    end += 1
+            block = (rows[end][1] - rows[0][0]) / 72.0
+            seg = rows[:end + 1]
+            has_cap = any(re.match(r"(FIG|PL)\.\s*\d", r[2]) for r in seg)
+            head = rows[0][2]
+            caps = sum(1 for c in head if c.isupper())
+            lets = sum(1 for c in head if c.isalpha())
+            instrument = has_cap or (lets > 6 and caps / lets > 0.75)
+        # where each line begins, in inches below the top of the column, keyed
+        # by its first word — this is how a caption or a table's first line is
+        # located on the sheet without parsing the layout.
+        cap_top = {}
+        for a, _b, tx in rows:
+            w0 = tx.split()[0].lower() if tx.split() else ""
+            if w0 and w0 not in cap_top:
+                cap_top[w0] = (a - top) / 72.0
+        out.append({"fill": ((max(ys) - top) / (bot - top)) if ys else 0.0,
+                    "prose": prose, "block": block, "instrument": instrument,
+                    "cap_top": cap_top, "text": " ".join(words)})
+    return out
+
+
+def main():
+    html = open(os.path.join(BUILD, _SRCNAME), encoding="utf-8").read()
+    chaps = chapters(html)
+    # chapters() walks these sections in this order, so the Nth id in the document
+    # is the Nth chapter. Reading the ids rather than assuming ch00..chNN means a
+    # section added later still gets a head, a plate and a bookmark.
+    sec_ids = re.findall(
+        r'<(?:section|div)\s+class="(?:dec chap|dec)[^"]*"[^>]*\bid="([^"]+)"', html)
+    print(f"{len(chaps)} chapters")
+
+    with sync_playwright() as p:
+        exes = glob.glob("/opt/pw-browsers/chromium-*/chrome-linux/chrome")
+        launch = {"args": ["--no-sandbox", "--disable-setuid-sandbox",
+                           "--font-render-hinting=none"]}
+        if exes:
+            launch["executable_path"] = sorted(exes)[0]
+        b = p.chromium.launch(**launch)
+        pg = b.new_page(viewport={"width": 432 if PHONE else 816,
+                                  "height": 768 if PHONE else 1056},
+                        device_scale_factor=2)
+        pg.goto(SRC, wait_until="networkidle", timeout=180_000)
+        pg.evaluate("async () => { if (document.fonts) await document.fonts.ready; }")
+        pg.wait_for_timeout(2800)
+        if PHONE:
+            pg.add_style_tag(content=PHONE_CSS)
+            pg.wait_for_timeout(700)
+
+        # pass 1 — lay the book out and read where each chapter starts
+        probe = pg.pdf(header_template=header(""), **PDF_OPTS)
+        dest, n = read_dests(probe)
+        print(f"{n} pages, {len(dest)} chapter anchors resolved from the name tree")
+
+        def spans(dmap):
+            cp = {i: dmap[sec_ids[i]] for i in range(min(len(chaps), len(sec_ids)))
+                  if sec_ids[i] in dmap}
+            # Chromium emits a destination only for an element something LINKS to,
+            # so a section the contents does not list (ch00, the title chapter) is
+            # absent. Fill those gaps from document order before planning anything.
+            for i in range(len(sec_ids)):
+                if i in cp:
+                    continue
+                nxt = next((cp[j] for j in range(i + 1, len(sec_ids)) if j in cp), None)
+                prv = next((cp[j] for j in range(i - 1, -1, -1) if j in cp), None)
+                if nxt is not None:
+                    cp[i] = max(0, (prv + 1) if prv is not None else 0)
+            return cp
+
+        chap_page = spans(dest)
+
+        # ── the contents folios ──────────────────────────────────────────────
+        # They were static text and every one of the twenty-six was wrong: the
+        # contents said Decision 01 sat on p5 when it sits on p9, and "How to read
+        # this book" carried a roman "i". Worse than a printed 0, which at least
+        # looks broken. Each row names its own target in data-ref, so a row added
+        # later cannot shift the whole column by one.
+        for attempt in range(4):
+            pg.evaluate(
+                """(map) => {
+                    document.querySelectorAll('.toc .row .pg').forEach(el => {
+                        const ref = el.getAttribute('data-ref');
+                        if (ref && map[ref] != null) {
+                            const a = el.querySelector('a');
+                            (a || el).textContent = String(map[ref]);
+                        }
+                    });
+                    document.querySelectorAll('.ckl a[href^="#"]').forEach(a => {
+                        const ref = a.getAttribute('href').slice(1);
+                        if (map[ref] != null) a.textContent = String(map[ref]);
+                    });
+                }""",
+                {k: v + 1 for k, v in dest.items()})
+            probe = pg.pdf(header_template=header(""), **PDF_OPTS)
+            d2, n2 = read_dests(probe)
+            if d2 == dest and n2 == n:
+                print(f"contents folios stable after {attempt + 1} pass(es)")
+                break
+            dest, n = d2, n2
+            chap_page = spans(dest)
+        else:
+            print("! contents folios did not settle; using the last measurement")
+
+        # ── closing plates ───────────────────────────────────────────────────
+        # A chapter that ends a third of the way down its last sheet is the cost
+        # of opening every chapter on a fresh one. The plate is cut to the space
+        # actually left, so it finishes the page instead of making a new one.
+        cpath = os.path.join(BUILD, "closers.json")
+        if not PHONE and os.path.exists(cpath):
+            offered = json.load(open(cpath, encoding="utf-8"))
+            st = measure(probe)
+            starts = sorted(chap_page.values())
+            plan = {}
+            for idx, start in chap_page.items():
+                later = [s for s in starts if s > start]
+                last = (min(later) - 1) if later else len(st) - 1
+                if not (0 <= last < len(st)) or last == start:
+                    continue
+                sid = sec_ids[idx] if idx < len(sec_ids) else None
+                if sid in offered and st[last]["fill"] < 0.72:
+                    free = (1.0 - st[last]["fill"]) * COL_IN - 0.55
+                    if free >= 1.2:
+                        plan[sid] = round(min(free, 5.2), 2)
+            if plan:
+                pg.evaluate(
+                    """(plan) => {
+                        for (const [sid, h] of Object.entries(plan)) {
+                            const sec = document.getElementById(sid);
+                            if (!sec || sec.querySelector('figure.closer')) continue;
+                            const f = document.createElement('figure');
+                            f.className = 'closer';
+                            const im = document.createElement('img');
+                            im.src = 'img/c-' + sid + '.jpg';
+                            im.style.height = h + 'in';
+                            f.appendChild(im);
+                            sec.appendChild(f);
+                        }
+                    }""", plan)
+                probe = pg.pdf(header_template=header(""), **PDF_OPTS)
+                dest, n = read_dests(probe)
+                chap_page = spans(dest)
+                print(f"tail-fed {len(plan)} closing plates: {dict(sorted(plan.items()))}")
+
+        # ── the snug pass ────────────────────────────────────────────────────
+        # A figure that takes a sheet of its own, where the sheet before it has
+        # most of the room it needs, is scaled to fit rather than left to make a
+        # page. The figure is found by its CAPTION, not its number: Rome's FIG
+        # numbers ran 1,3,2,3,4,5,8,9,11,6,7 with four of them used twice.
+        if not PHONE:
+            st = measure(probe)
+            capmap = []
+            for fm in re.finditer(
+                    r'<figure class="(?:map|photo)" id="(fg\d\d)">(.*?)</figure>',
+                    html, re.S):
+                cm = re.search(r'<span class="fign">[^<]*</span>\s*.{0,3}?\s*([^<]{16,70})',
+                               fm.group(2))
+                if cm:
+                    capmap.append((fm.group(1), " ".join(cm.group(1).split())[:34]))
+            snug = {}
+            for i in range(1, len(st)):
+                if st[i]["prose"] >= 4 or st[i]["fill"] > 0.72:
+                    continue
+                flat = st[i]["text"]
+                hit = next((fid for fid, cap in capmap
+                            if cap and re.search(
+                                r"\s*".join(re.escape(w) for w in cap.split()[:5]),
+                                flat, re.I)), None)
+                if not hit or hit in snug:
+                    continue
+                room = (1.0 - st[i - 1]["fill"]) * COL_IN - 0.45
+                if room >= 2.2:
+                    snug[hit] = round(min(room, 6.0), 2)
+            if snug:
+                pg.evaluate(
+                    """(s) => {
+                        for (const [id, h] of Object.entries(s)) {
+                            const f = document.getElementById(id);
+                            if (!f) continue;
+                            const art = f.querySelector('svg, img');
+                            if (!art) continue;
+                            art.style.maxHeight = h + 'in';
+                            art.style.width = 'auto';
+                            art.style.display = 'block';
+                            art.style.marginLeft = 'auto';
+                            art.style.marginRight = 'auto';
+                        }
+                    }""", snug)
+                probe = pg.pdf(header_template=header(""), **PDF_OPTS)
+                dest, n = read_dests(probe)
+                chap_page = spans(dest)
+                print(f"snugged {len(snug)} figure(s): {snug}")
+
+        BAND_FLOOR = 2.0   # in — the designed head-band height; never cut below
+        # ── the pull-back pass ───────────────────────────────────────────────
+        # CSS never moves content BACKWARDS. A figure or table that misses the
+        # page before it by a fraction of an inch simply stays where it fell,
+        # and the 85-90% rule has no way to express itself.
+        #
+        # Two levers, in this order: cut the chapter's head band (free space
+        # without touching the drawing), then, only if still short, scale the
+        # art — never below 85% of its size, which is where a map's labels stop
+        # being worth reading.
+        #
+        # A block's height comes from the DOM. Reading it off the PDF's text
+        # layer gave 1.35in for a figure that is 3.43in tall, because an SVG's
+        # labels are scattered in two dimensions and the gaps between "lines"
+        # measure nothing. Whether a block OPENS a sheet is then geometry: a
+        # figure's caption sits one figure-height below the top of the column.
+        if not PHONE:
+            blocks = pg.evaluate(r"""() => {
+                const res = [];
+                document.querySelectorAll('.flow figure, .flow .ledger').forEach(el => {
+                    if (el.tagName !== 'FIGURE' && el.closest('figure')) return;
+                    // A BAND IS FURNITURE, like the head band and the closing
+                    // plate: it is placed where it is on purpose and must never
+                    // be treated as a movable block. Left out of this list, the
+                    // mid-chapter band on ch05 was picked up as a figure and the
+                    // shrink step set width:auto on it inline — which beats the
+                    // stylesheet, so a full-column band rendered as a narrow
+                    // portrait stamp at its intrinsic ratio.
+                    if (el.classList.contains('head') || el.classList.contains('closer')
+                        || el.classList.contains('band')) return;
+                    const sec = el.closest('section');
+                    const cap = el.querySelector('figcaption');
+                    const lead = el.querySelector('.lcap, caption, th, td, p');
+                    const clean = t => t.trim().replace(/\s+/g, ' ').slice(0, 44);
+                    res.push({sec: sec ? sec.id : '',
+                              h: el.getBoundingClientRect().height / 96,
+                              cap: cap ? clean(cap.textContent) : '',
+                              lead: lead ? clean(lead.textContent) : '',
+                              fig: !!cap});
+                });
+                return res;
+            }""")
+            cur_band = pg.evaluate(r"""() => {
+                const out = {};
+                document.querySelectorAll('figure.head img').forEach(im => {
+                    const sec = im.closest('section');
+                    if (sec && sec.id) out[sec.id] = im.getBoundingClientRect().height / 96;
+                });
+                return out;
+            }""")
+            st = measure(probe)
+            page_chap = {}
+            for i, pn in sorted(chap_page.items(), key=lambda kv: kv[1]):
+                for q in range(pn, n):
+                    page_chap[q] = i
+
+            band, shrink, rejected = {}, {}, []
+            for blk in blocks:
+                key = blk["cap"] or blk["lead"]
+                if len(key) < 10:
+                    continue
+                pat = r"\s*".join(re.escape(w) for w in key.split()[:5])
+                q = next((i for i in range(len(st)) if re.search(pat, st[i]["text"], re.I)), None)
+                if q is None or q == 0 or q >= len(st):
+                    continue
+                anchor = st[q]["cap_top"].get(key.split()[0].lower())
+                if anchor is None:
+                    continue
+                # a FIGURE opens the sheet when its caption sits one figure-height
+                # down; a TABLE opens it when its first line is the first ink
+                opens = (abs(anchor - blk["h"]) < 0.45) if blk["fig"] else (anchor < 0.22)
+                if not opens or blk["h"] > 0.62 * COL_IN:
+                    continue
+                if page_chap.get(q) != page_chap.get(q - 1):
+                    continue
+                cid = blk["sec"]
+                have = cur_band.get(cid, 0.0)
+                free = (1.0 - st[q - 1]["fill"]) * COL_IN - 0.24
+                deficit = blk["h"] - free
+                if deficit <= 0 or not cid:
+                    continue
+                # THE BAND IS NO LONGER A LEVER. Cutting it to 1.2in left five
+                # chapters opening on a strip barely half the designed 2.0in —
+                # a head image too narrow to read as an image, which is a
+                # visible cost on every copy to save a page break the reader
+                # never sees. The art-scaling lever below still runs; where it
+                # cannot reach, the figure now simply falls to the next page,
+                # which is where the chapters' closing plates already are.
+                give = max(0.0, have - BAND_FLOOR)
+                room = give + blk["h"] * 0.15          # plus a 15% scale, at most
+                if deficit > room:
+                    rejected.append(f"{key.split('·')[0].strip()[:12]} p{q+1} needs "
+                                    f"{deficit:.2f}in, lever gives {room:.2f}in")
+                    continue
+                cut = min(give, deficit + 0.06)
+                if cut > 0.02:
+                    band[cid] = round(have - cut, 2)
+                left = deficit + 0.06 - cut
+                if left > 0 and blk["fig"]:
+                    shrink[key] = round(blk["h"] - left, 2)
+            css = "".join(f"#{k} figure.head img{{height:{v}in !important;}}"
+                          for k, v in band.items())
+            if shrink:
+                pg.evaluate(r"""(s) => {
+                    document.querySelectorAll('.flow figure').forEach(f => {
+                        if (f.classList.contains('band') || f.classList.contains('head')
+                            || f.classList.contains('closer')) return;
+                        const cap = f.querySelector('figcaption');
+                        if (!cap) return;
+                        const k = cap.textContent.trim().replace(/\s+/g, ' ').slice(0, 44);
+                        if (s[k] === undefined) return;
+                        const art = f.querySelector('svg, img');
+                        if (!art) return;
+                        const capH = cap.getBoundingClientRect().height / 96;
+                        art.style.maxHeight = (s[k] - capH - 0.08) + 'in';
+                        art.style.width = 'auto';
+                        art.style.display = 'block';
+                        art.style.marginLeft = 'auto';
+                        art.style.marginRight = 'auto';
+                    });
+                }""", shrink)
+            if css:
+                pg.add_style_tag(content=css)
+            if css or shrink:
+                pg.wait_for_timeout(400)
+                probe = pg.pdf(header_template=header(""), **PDF_OPTS)
+                dest, n = read_dests(probe)
+                chap_page = spans(dest)
+                if band:
+                    print(f"pulled back by cutting {len(band)} band(s): {band}")
+                if shrink:
+                    print(f"   and scaling {len(shrink)} figure(s) to fit: "
+                          f"{ {k.split('·')[0].strip()[:10]: v for k, v in shrink.items()} }")
+            if rejected:
+                print("   left where it fell: " + "; ".join(rejected[:6]))
+
+        opens = {pn: chaps[i][0] for i, pn in chap_page.items() if i}
+
+        # each page takes the head of the chapter it is inside, blank on an opener
+        first = min(opens) if opens else 0
+        heads, cur = [], ""
+        for i in range(n):
+            if i in opens:
+                heads.append("")          # opener: bare strip
+                cur = opens[i]
+            else:
+                heads.append(cur if i > first else "")
+
+        # pass 2 — one page at a time, each with its own head
+        writer = PdfWriter()
+        for i in range(n):
+            part = pg.pdf(header_template=header(heads[i]),
+                          page_ranges=f"{i+1}-{i+1}", **PDF_OPTS)
+            writer.add_page(PdfReader(io.BytesIO(part)).pages[0])
+            if (i + 1) % 10 == 0:
+                print(f"   ... {i+1}/{n}")
+
+        # ── the outline ──────────────────────────────────────────────────────
+        # The shipped book had no bookmarks at all. Built from the same anchors
+        # the folios came from, so an entry cannot point somewhere the contents
+        # page does not.
+        PARTS = [(1, "The ground"), (4, "The decisions"),
+                 (13, "The city"), (22, "Back matter")]
+        made, groups = 0, {}
+        for idx, (_head, title) in enumerate(chaps):
+            if idx == 0 or idx not in chap_page:
+                continue                       # the title page is not a bookmark
+            pnum = chap_page[idx]
+            for start, label in PARTS:
+                if idx == start and label not in groups:
+                    groups[label] = writer.add_outline_item(label, pnum, bold=True)
+            parent = next((groups[lbl] for s, lbl in reversed(PARTS)
+                           if idx >= s and lbl in groups), None)
+            writer.add_outline_item(title.rstrip(" .,"), pnum, parent=parent)
+            made += 1
+        if "fsheet" in dest:
+            writer.add_outline_item("The Field Sheet", dest["fsheet"], bold=True)
+            made += 1
+        print(f"outline: {made} bookmarks")
+
+        # ── make the contents links actually go somewhere ────────────────────
+        # Chromium writes /Dest /chNN on every contents link, but the name tree
+        # that resolves those names lives in the whole-document catalog. Pass 2
+        # assembles the book a page at a time, so the tree is lost and every link
+        # dangles. Rewrite each as an EXPLICIT page reference, which needs none.
+        fixed = 0
+        for page in writer.pages:
+            for a in (page.get("/Annots") or []):
+                o = a.get_object()
+                if o.get("/Subtype") != "/Link" or o.get("/Dest") is None:
+                    continue
+                key = str(o["/Dest"]).lstrip("/")
+                if key in dest and dest[key] < len(writer.pages):
+                    tgt = writer.pages[dest[key]].indirect_reference
+                    o[NameObject("/Dest")] = ArrayObject(
+                        [tgt, NameObject("/XYZ"), NullObject(), NullObject(), NullObject()])
+                    fixed += 1
+        print(f"internal links repaired: {fixed}")
+
+        with open(OUT, "wb") as f:
+            writer.write(f)
+        b.close()
+
+    print(f"wrote {OUT} ({os.path.getsize(OUT)//1024} KB, {n} pages)")
+
+
+if __name__ == "__main__":
+    main()

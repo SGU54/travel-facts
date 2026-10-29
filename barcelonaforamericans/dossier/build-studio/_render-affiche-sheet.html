@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en-US"><head><meta charset="utf-8"/><title>Barcelona, Without the Traps.</title>
+<style>
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w300-wd100.ttf');font-weight:300;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w400-wd100-Italic.ttf');font-weight:400;font-stretch:100%;font-style:italic;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w400-wd100.ttf');font-weight:400;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w500-wd100.ttf');font-weight:500;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w600-wd100.ttf');font-weight:600;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w700-wd100.ttf');font-weight:700;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w700-wd92-Italic.ttf');font-weight:700;font-stretch:92%;font-style:italic;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w700-wd92.ttf');font-weight:700;font-stretch:92%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd100.ttf');font-weight:800;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd118.ttf');font-weight:800;font-stretch:118%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd76.ttf');font-weight:800;font-stretch:76%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd80.ttf');font-weight:800;font-stretch:80%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd88.ttf');font-weight:800;font-stretch:88%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd92.ttf');font-weight:800;font-stretch:92%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd62.ttf');font-weight:800;font-stretch:62%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd66.ttf');font-weight:800;font-stretch:66%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd84.ttf');font-weight:800;font-stretch:84%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd96.ttf');font-weight:800;font-stretch:96%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd110.ttf');font-weight:800;font-stretch:110%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w900-wd88.ttf');font-weight:900;font-stretch:88%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w900-wd92.ttf');font-weight:900;font-stretch:92%;font-style:normal;}
+/* static instances cut from the variable font at the exact coordinates the book uses (2026-10-24): Chromium embeds a named TrueType instead of Type3 */
+@font-face{font-family:'Symbols';src:url('assets/fonts/NotoSansSymbols2-Regular.ttf');}
+@font-face{font-family:'Plex';src:url('models/fonts/archivo-static/Archivo-w400-wd100.ttf');font-weight:400;}
+@font-face{font-family:'Public';src:url('models/fonts/archivo-static/Archivo-w400-wd100.ttf');font-weight:400;}
+@font-face{font-family:'Anton';src:url('models/fonts/archivo-static/Archivo-w400-wd100.ttf');font-weight:400;}
+:root{ --paper:#F4F2EC; --ink:#17201C; --red:#A23520; --gold:#E0A828; --blue:#0E6390; --grey:#6B7773; --line:#17201C; --hair:#D9D6CE; --mono:'Archivo'; --sans:'Archivo'; --body:'Archivo'; --display:'Archivo'; }
+@page{ size:8.5in 11in; margin:92px 82px 72px 82px;
+  @top-left{ content:none } @top-right{ content:none } @bottom-center{ content:none }
+  @bottom-left{ content:"Barcelona, Without the Traps."; font-family:'Archivo'; font-size:8.5px; font-weight:500; letter-spacing:.06em; color:var(--grey); }
+  @bottom-right{ content:counter(page); font-family:'Archivo'; font-weight:700; font-size:10px; color:var(--ink); } }
+@page poster{ margin:0; @top-left{content:none} @top-right{content:none} @bottom-left{content:none} @bottom-center{content:none} @bottom-right{content:none} }
+@page annex{ margin:72px 82px 60px 82px; }
+html,body{ background:var(--paper); -webkit-print-color-adjust:exact; print-color-adjust:exact; margin:0; }
+.pagedjs_sheet{ background:var(--paper); }
+body{ font-family:'Archivo'; font-size:11px; line-height:17px; color:var(--ink); }
+.rh-src{ string-set:rh content(text); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+section{ break-before:page; } section.cont{ break-before:auto; }
+.pg{ break-before:page; } .pg.first{ break-before:auto; }
+i.mk{ font-style:normal; font-family:'Symbols'; font-size:.9em; color:var(--red); font-weight:400; font-stretch:100%; }   /* no synthetic bold: a synthesised glyph embeds as Type3 */
+.fsnote{ font-family:'Archivo'; font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--grey); }
+a{ color:inherit; text-decoration:none; }
+/* ── posters ── */
+.poster{ page:poster; width:8.5in; height:11in; box-sizing:border-box; padding:64px 82px 60px; position:relative; overflow:hidden; display:flex; flex-direction:column; break-before:page; }
+.poster.red{ background:var(--red); color:var(--paper); } .poster.gold{ background:var(--gold); color:var(--ink); } .poster.paper{ background:var(--paper); color:var(--ink); }
+.poster .slug{ font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; display:flex; justify-content:space-between; }
+.poster .slug .lab{ color:var(--red); } .poster.red .slug .lab{ color:var(--paper); }
+.poster .giant{ font-weight:800; font-stretch:118%; line-height:.8; letter-spacing:-.045em; margin:34px 0 0 -6px; }
+.poster .under{ font-size:14px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; margin-top:18px; }
+.poster .foot{ margin-top:auto; display:grid; grid-template-columns:1fr 300px; column-gap:40px; align-items:end; }
+.poster .foot.rule{ border-top:3px solid var(--ink); padding-top:12px; }
+.poster .big{ font-size:30px; line-height:33px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.poster .foot p{ margin:0; font-size:12px; line-height:17px; font-weight:400; }
+.poster.red .foot p{ color:#F8E9E3; }
+.thesis{ font-weight:800; font-stretch:88%; font-size:60px; line-height:58px; letter-spacing:-.035em; margin-top:110px; }
+.thesis.long{ font-size:50px; line-height:49px; margin-top:90px; }
+.thesis em{ font-style:normal; color:var(--red); }
+/* ── cover ── */
+.cover .title{ font-weight:800; font-stretch:88%; font-size:112px; line-height:.86; letter-spacing:-.045em; margin:60px 0 0 -4px; }
+.cover .title b{ color:var(--gold); font-weight:800; }
+.cover .sub{ font-size:17px; line-height:23px; font-weight:400; width:470px; margin-top:34px; }
+.cover .meta{ margin-top:auto; font-size:11px; line-height:17px; border-top:3px solid var(--paper); padding-top:12px; display:grid; grid-template-columns:1fr 1fr; column-gap:40px; }
+.cover .meta b{ font-weight:700; }
+.cover .stamp{ display:inline-block; border:2px solid var(--paper); padding:5px 10px; font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; margin-top:40px; }
+.cover .bar{ display:flex; justify-content:space-between; font-size:9px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; margin-top:20px; }
+/* ── photograph page ── */
+.photo{ page:poster; width:8.5in; height:11in; box-sizing:border-box; position:relative; overflow:hidden; display:flex; flex-direction:column; break-before:page; }
+.photo img{ display:block; width:100%; height:740px; object-fit:cover; }
+.photo .tail{ padding:28px 82px 0; display:grid; grid-template-columns:340px 1fr; column-gap:48px; }
+.photo .tail.one{ grid-template-columns:1fr; }
+.photo .cap{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-bottom:10px; }
+.photo p{ margin:0 0 9px; } .photo .tail.two p{ font-size:10.5px; line-height:15px; }
+.vol{ border-top:3px solid var(--red); padding-top:8px; }
+.vol .lab{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; margin-bottom:5px; }
+.vol p{ font-size:10px; line-height:14px; } .vol .x{ color:var(--grey); }
+/* ── text pages ── */
+h1{ font-weight:800; font-stretch:88%; font-size:58px; line-height:.92; letter-spacing:-.035em; margin:0 0 14px; }
+.sf{ font-weight:300; font-size:15.5px; line-height:21px; width:430px; margin:0 0 26px; }
+.grid{ display:grid; grid-template-columns:340px 264px; column-gap:48px; align-items:start; }
+.prose p, p.t{ margin:0 0 11px; text-align:left; hyphens:auto; width:340px; }
+.prose p:first-child::first-line, p.t.lede::first-line{ font-weight:600; }
+.aside{ float:right; clear:right; width:264px; margin:0 0 20px 48px; }
+.join{ border-top:3px solid var(--gold); margin-top:16px; padding-top:8px; break-inside:avoid; } .pg > .join{ width:400px; }   /* on a map page the join keeps the reading measure */
+.join .lab{ display:block; font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--red); margin-bottom:5px; } .join p{ font-size:11px; line-height:15px; margin:0; }
+.xr{ border-top:3px solid var(--red); break-inside:avoid; margin-bottom:18px; }
+.xr .lab{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; padding:12px 0 4px; color:var(--red); }
+.xr .it{ display:grid; grid-template-columns:34px 1fr; padding:9px 0 10px; border-bottom:1px solid var(--line); color:inherit; text-decoration:none; }
+.xr .n{ font-size:17px; line-height:19px; font-weight:800; color:var(--red); font-stretch:92%; }
+.xr .t{ font-size:13px; line-height:16px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; }
+h2{ font-size:19px; line-height:21px; font-weight:800; font-stretch:92%; letter-spacing:-.02em; margin:14px 0 10px; padding-top:10px; border-top:3px solid var(--ink); width:340px; break-after:avoid; }
+h3{ font-size:14px; line-height:17px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; margin:12px 0 5px; width:340px; break-after:avoid; }
+.stack{ border-top:3px solid var(--line); break-inside:avoid; }
+.stack .it{ padding:10px 0 11px; border-bottom:1px solid var(--line); }
+.stack .opt{ font-size:19px; line-height:21px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.stack .it.pick .opt::before{ content:''; display:inline-block; width:11px; height:11px; background:var(--red); margin:0 8px 1px 0; }
+.stack .sub{ font-size:9.5px; line-height:13px; color:var(--grey); margin-top:3px; }
+.stack .v{ font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-top:5px; }
+.stack .it.pick .v{ color:var(--red); }
+.stack .lab{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; padding:6px 0 2px; }
+.stack.sm .opt{ font-size:14px; line-height:16px; } .stack.sm .it{ padding:7px 0 8px; }
+.forks{ margin-top:22px; border-top:3px solid var(--line); break-inside:avoid; }
+.forks .it{ padding:10px 0 11px; border-bottom:1px solid var(--line); }
+.forks .q{ font-size:16px; line-height:18px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; margin-bottom:4px; }
+.forks p{ margin:0; font-size:10px; line-height:14px; }
+.sideq{ border-top:3px solid var(--red); padding-top:10px; margin-bottom:22px; break-inside:avoid; }
+.sideq .lab{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; margin-bottom:6px; }
+.sideq .big19{ font-size:19px; line-height:22px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.sideq p{ margin:6px 0 0; font-size:10px; line-height:14px; color:var(--grey); }
+.keyline{ font-size:9.5px; line-height:13px; color:var(--grey); margin-top:16px; border-top:1px solid var(--hair); padding-top:8px; }
+.note{ border-top:3px solid var(--red); padding-top:8px; margin-top:22px; width:340px; }
+.note .lab{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; margin-bottom:5px; }
+.note p{ margin:0; font-size:10px; line-height:14px; } .note .x{ color:var(--grey); }
+.mapwrap{ break-inside:avoid; } .mapwrap svg{ display:block; width:100%; height:auto; }
+.mapwrap .cap, figure.fig figcaption, figure.band figcaption{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:8px; }
+.ribbon{ display:grid; grid-template-columns:repeat(4,1fr); column-gap:24px; border-top:3px solid var(--line); margin-top:18px; }
+.ribbon.n5{ grid-template-columns:repeat(5,1fr); column-gap:16px; }
+.ribbon .it{ padding:10px 0 0; } .ribbon .it + .it{ border-left:1px solid var(--line); padding-left:14px; margin-left:-12px; }
+.ribbon .opt{ font-size:15px; line-height:17px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.ribbon.n5 .opt{ font-size:13px; line-height:15px; }
+.ribbon .sub{ font-size:9px; line-height:12px; color:var(--grey); margin-top:4px; }
+.ribbon .v{ font-size:8.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-top:5px; }
+.ribbon .it.pick .v{ color:var(--red); } .ribbon .it.pick .opt::before{ content:''; display:inline-block; width:10px; height:10px; background:var(--red); margin:0 7px 0 0; }
+figure{ margin:0; }
+figure.band{ margin:22px 0 0; break-inside:avoid; } figure.band img{ display:block; width:100%; height:262px; object-fit:cover; }
+figure.fig{ margin:14px 0 22px; break-inside:avoid; } figure.fig svg{ display:block; width:100%; height:auto; }
+figure.fig.half{ width:340px; }
+/* lists (the checklist, the questions) */
+.li{ width:340px; margin:0 0 10px; padding-left:0; }
+.cols2{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; clear:both; } .cols2 h2, .cols2 .li{ width:auto; } .cols2 h2{ margin-top:0; grid-column:1 / -1; }   /* desk 2026-10-25, Marta → Brunner p14: the heading spans both lists */
+.li .dl{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; display:block; margin-bottom:2px; }
+.li p{ margin:0; }
+/* failure modes */
+.fails{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; }
+.fail{ break-inside:avoid; padding:6px 0 7px; border-bottom:1px solid var(--line); }
+.fail .head{ display:block; font-size:13px; line-height:15px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; margin-bottom:3px; }
+.fail p{ margin:0; font-size:10px; line-height:14px; } .fail em{ font-style:normal; color:var(--red); font-weight:700; font-size:9px; letter-spacing:.08em; }
+h2.th{ width:auto; margin-top:14px; } h2.th b{ color:var(--red); font-weight:800; }
+.tiers{ margin-top:50px; }
+.tier{ border-top:3px solid var(--ink); padding:18px 0 26px; display:grid; grid-template-columns:200px 1fr; column-gap:30px; align-items:start; }
+.tier .n{ font-weight:800; font-stretch:118%; font-size:150px; line-height:.8; letter-spacing:-.05em; color:var(--red); }
+.tier .h{ font-size:30px; line-height:32px; font-weight:800; letter-spacing:-.025em; font-stretch:88%; margin-top:14px; }
+.tier .k{ font-size:9px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--grey); margin-top:8px; }
+/* before you book */
+.seven{ margin-top:36px; }
+.seven .it{ display:grid; grid-template-columns:70px 1fr 40px; column-gap:16px; border-top:3px solid var(--ink); padding:12px 0 14px; align-items:start; }
+.seven .n{ font-weight:800; font-stretch:118%; font-size:48px; line-height:.8; letter-spacing:-.04em; color:var(--red); }
+.seven .q{ font-size:11px; line-height:14px; font-weight:400; color:var(--grey); }
+.seven .c{ font-size:16px; line-height:18px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; margin-top:2px; }
+.seven .pn{ font-size:14px; font-weight:800; text-align:right; } .seven .pn a::after{ content:attr(data-page); }
+.asks{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; row-gap:6px; margin-top:4px; }
+.ask{ border-top:3px solid var(--red); padding-top:8px; margin-bottom:14px; break-inside:avoid; }
+.ask .who{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; margin:0 0 6px; }
+.ask ul{ margin:0; padding:0; list-style:none; } .ask li{ font-size:11px; line-height:15px; padding:4px 0; border-bottom:1px solid var(--hair); }
+.trips{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; }
+.trip{ break-inside:avoid; } .trip .tname{ font-size:19px; line-height:21px; font-weight:800; font-stretch:92%; letter-spacing:-.02em; margin:0 0 4px; }
+.trip .tassume{ font-size:9.5px; line-height:13px; color:var(--grey); margin:0 0 8px; }
+.trip .day{ display:grid; grid-template-columns:44px 1fr; column-gap:10px; border-top:1px solid var(--line); padding:6px 0; }
+.trip .day b{ font-weight:800; font-size:18px; line-height:18px; font-stretch:92%; letter-spacing:-.02em; } .trip .day span{ font-size:10px; line-height:14px; }
+.trip .twhy{ font-size:10px; line-height:14px; margin:8px 0 0; border-top:3px solid var(--ink); padding-top:6px; }
+.fb .it{ display:grid; grid-template-columns:220px 1fr; column-gap:24px; border-top:1px solid var(--line); padding:9px 0 10px; break-inside:avoid; }
+.fb .it .w{ font-size:13px; line-height:15px; font-weight:700; font-stretch:92%; letter-spacing:-.01em; } .fb .it .d{ font-size:10.5px; line-height:14px; }
+/* contents */
+.toc a{ display:grid; grid-template-columns:52px 1fr 40px; column-gap:16px; align-items:baseline; border-top:1px solid var(--line); padding:5px 0 6px; }
+.toc a.dec{ border-top-color:var(--red); }
+.toc .num{ font-weight:800; font-stretch:118%; font-size:18px; line-height:18px; letter-spacing:-.03em; } .toc a.dec .num{ color:var(--red); }
+.toc .t{ font-size:12px; line-height:15px; font-weight:500; } .toc .dots{ display:none; }
+.toc a::after{ content:attr(data-page); font-weight:800; font-size:14px; text-align:right; }
+.toc a.fs::after{ content:"sheet"; font-size:9px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--grey); }
+/* the plan */
+.days{ display:grid; grid-template-columns:repeat(5,1fr); column-gap:10px; margin-top:40px; height:660px; }
+.days .d{ padding:14px 12px 16px; display:flex; flex-direction:column; border-top:3px solid var(--ink); }
+.days .d.fix{ background:var(--red); color:var(--paper); border-top-color:var(--red); }
+.days .n{ font-weight:800; font-stretch:118%; font-size:150px; line-height:.8; letter-spacing:-.05em; margin-left:-4px; }
+.days .t{ margin-top:auto; font-size:15px; line-height:17px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; }
+.days .k{ font-size:9px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; margin-top:8px; }
+.days .d:not(.fix) .k{ color:var(--grey); }
+.dayrow{ display:grid; grid-template-columns:120px 1fr; column-gap:24px; border-top:3px solid var(--ink); padding:16px 0 26px; break-inside:avoid; }
+.dayrow.fix{ border-top-color:var(--red); }
+.dayrow .n{ font-weight:800; font-stretch:118%; font-size:104px; line-height:.82; letter-spacing:-.05em; }
+.dayrow.fix .n{ color:var(--red); }
+.dayrow .k{ font-size:9px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--grey); }
+.dayrow.fix .k{ color:var(--red); }
+.dayrow .h{ font-size:19px; line-height:22px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; margin:3px 0 5px; }
+.dayrow p{ margin:0; width:auto; max-width:340px; }   /* desk 2026-10-25, Marta: the day sheet keeps her reading measure, the 340px column */
+/* the wallet card */
+.rules2{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; border-top:3px solid var(--red); padding-top:12px; margin-bottom:26px; }
+.rules2 .big{ font-size:30px; line-height:32px; font-weight:800; letter-spacing:-.025em; font-stretch:88%; }
+.rules2 .big b{ color:var(--red); }
+.rules2 p{ margin:6px 0 0; font-size:10px; line-height:14px; color:var(--grey); width:auto; }
+.wgrid{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; row-gap:18px; }
+.wgrid .stack .it.wl{ display:grid; grid-template-columns:118px 1fr; column-gap:10px; align-items:baseline; padding:6px 0 6px; }
+.wgrid .stack .it.wl .opt{ font-size:12px; line-height:15px; } .wgrid .stack .it.wl .v{ margin-top:0; font-size:8.5px; line-height:12px; }
+.cards{ display:flex; gap:28px; margin-top:30px; align-items:flex-start; break-inside:avoid; }
+.card{ width:324px; height:204px; box-sizing:border-box; outline:1.5px dashed var(--grey); outline-offset:8px; padding:16px 18px; display:flex; flex-direction:column; }
+.card.front{ background:var(--red); color:var(--paper); }
+.card.front .g{ font-weight:800; font-stretch:118%; font-size:66px; line-height:.82; letter-spacing:-.045em; margin-top:12px; }
+.card.front .s{ font-size:12px; line-height:15px; font-weight:700; margin-top:auto; }
+.card .tag{ font-size:8.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:flex; justify-content:space-between; }
+.card.back{ background:#fff; }
+.card.back .ln{ display:grid; grid-template-columns:92px 1fr; column-gap:8px; font-size:9.5px; line-height:12.5px; border-top:1px solid var(--hair); padding:3px 0; }
+.card.back .ln b{ font-weight:700; } .card.back .ln:first-of-type{ border-top:2px solid var(--ink); margin-top:6px; }
+.cut{ font-size:9px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:20px; }
+/* the marks key */
+.marks .it{ display:grid; grid-template-columns:30px 1fr; column-gap:10px; padding:8px 0 9px; border-bottom:1px solid var(--line); }
+.marks .it i.mk{ font-size:20px; line-height:22px; }
+.marks .it b{ font-size:12px; font-weight:700; } .marks .it span{ font-size:10px; line-height:14px; display:block; }
+/* the field sheet (annex) */
+.fs{ page:annex; }
+.fs h1{ font-size:44px; margin-bottom:8px; } .fs .sf{ margin-bottom:10px; font-size:13px; line-height:18px; width:520px; }
+.fs .fsdate{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+.fstable{ width:100%; border-collapse:collapse; font-size:10.5px; margin:4px 0 10px; border-top:3px solid var(--ink); break-inside:avoid; }
+.fstable th{ text-align:left; font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--grey); padding:8px 0 6px; border-bottom:1px solid var(--line); }
+.fstable td{ padding:4px 10px 4px 0; border-bottom:1px solid var(--hair); vertical-align:top; }
+.fstable td.n{ text-align:right; white-space:nowrap; font-weight:700; }
+.fs p.note{ width:auto; border:0; font-size:10px; line-height:14px; color:var(--grey); margin:-8px 0 14px; padding:0; }
+.fs h2{ width:auto; margin-top:6px; font-size:16px; }
+.m2.sh{ width:816px; height:1056px; position:relative; overflow:hidden; break-after:page; box-sizing:border-box; }
+.m2.sh.red{ background:#A23520; color:#F4F2EC; }
+.m2.sh.gold{ background:#E0A828; color:#17201C; }
+.m2.sh.paper{ background:#F4F2EC; }
+.m2.sh.ink{ background:#17201C; color:#F4F2EC; }
+.m2.sh svg.bg{ position:absolute; inset:0; width:816px; height:1056px; }
+.m2 .slug{ position:absolute; top:52px; left:82px; right:82px; display:flex; justify-content:space-between; font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; z-index:3; }
+.m2 .g{ position:absolute; font-weight:800; line-height:.78; letter-spacing:-.05em; z-index:2; white-space:nowrap; }
+.m2 .mult{ mix-blend-mode:multiply; }
+.m2 .gloss{ position:absolute; font-size:13px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; line-height:18px; z-index:3; }
+.m2 .foot{ position:absolute; left:82px; right:82px; bottom:58px; display:grid; grid-template-columns:1fr 290px; column-gap:40px; align-items:end; z-index:3; }
+.m2 .foot .big{ font-size:28px; line-height:31px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.m2 .foot p{ margin:0; font-size:11.5px; line-height:16px; }
+.m2 .red .foot p{ color:#F8E9E3; }
+.m2 .lab{ font-family:'Archivo'; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+.m2 .duo{ position:absolute; inset:0 0 auto 0; height:760px; overflow:hidden; }
+.m2 .duo img{ width:100%; height:100%; object-fit:cover; filter:grayscale(1) contrast(1.15) brightness(1.3); display:block; }
+.m2 .duo .tone{ position:absolute; inset:0; mix-blend-mode:multiply; }
+.m2 .duo .lift{ position:absolute; inset:0; mix-blend-mode:screen; }
+.m2 .tail{ position:absolute; left:82px; right:82px; top:792px; display:grid; grid-template-columns:340px 1fr; column-gap:48px; font-size:11px; line-height:17px; }
+.m2 .tail .cap{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:#6B7773; margin-bottom:8px; }
+.poster.m2{ padding:0 !important; display:block !important; }
+.m2.sh{ break-after:auto; height:1055px; }
+.m2 .verdict{ z-index:4; }
+.poster.m2.cover2{ padding:0 !important; }
+/* the sheet is 1055px (Paged.js rounding); a shadow of its own colour paints the last pixel row without counting as overflow */
+.m2.sh.red{ box-shadow:0 3px 0 #A23520; } .m2.sh.gold{ box-shadow:0 3px 0 #E0A828; } .m2.sh.ink{ box-shadow:0 3px 0 #17201C; }   /* the verdict sits above every drawn element of the poster */
+.m2 svg.bg{ height:1054px !important; }
+
+.photo.duo .dw{ position:relative; height:740px; overflow:hidden; }
+.photo.duo .dw img{ height:740px; filter:grayscale(1) contrast(1.15) brightness(1.3); }
+.photo.duo .dw .tone{ position:absolute; inset:0; background:#A23520; mix-blend-mode:multiply; }
+.photo.duo .dw .lift{ position:absolute; inset:0; background:#3a140b; mix-blend-mode:screen; }
+.photo.duo .dw .word{ position:absolute; left:52px; bottom:-8px; font-weight:800; line-height:.78; letter-spacing:-.05em; color:#E0A828; white-space:nowrap; }
+
+p, li{ hyphenate-limit-chars: 7 3 3; orphans:2; widows:2; }
+
+/* Marta's picture edit (studio 2026-10-25) */
+.photo.typo .field{ height:740px; background:var(--red); color:var(--paper); position:relative; overflow:hidden; }
+.photo.typo .field .call{ position:absolute; left:76px; right:82px; bottom:56px; font-weight:800; font-stretch:88%; font-size:96px; line-height:.9; letter-spacing:-.03em; word-spacing:.12em; }
+.photo.typo .field .lab{ position:absolute; left:82px; top:72px; font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; }
+.photo.duo.typo .dw{ background:var(--ink); }
+figure.band.whole{ width:652px; clear:both; display:grid; grid-template-columns:340px 264px; column-gap:48px; align-items:end; }   /* whole, on the 340 column, flush left; the caption beside it in the margin, on its foot */
+figure.band.whole img{ width:340px !important; height:auto !important; object-fit:initial; }
+figure.band.whole figcaption{ margin:0; }
+.aside figure.mside{ margin:0 0 20px; break-inside:avoid; } .aside figure.mside img{ display:block; width:264px; height:auto; } .aside figure.mside figcaption{ font-size:9px; line-height:13px; font-weight:600; color:var(--grey); margin-top:8px; }
+
+/* studio — Marta's rulings on Brunner's proof (desk.md, 2026-10-25) */
+.photo .cap, figcaption, .mapwrap .cap, .cut{ text-transform:none !important; letter-spacing:.01em !important; }
+.lc{ text-transform:none !important; letter-spacing:.02em !important; }
+h1, .thesis, .cover .title, .poster .giant, .tier .n, .days .n, .dayrow .n, .card.front .g, .seven .n, .g, .photo.duo .dw .word{ word-spacing:.16em; }
+h2, h3, .poster .big, .stack .opt, .forks .q, .sideq .big19, .ribbon .opt, .fail .head, .tier .h, .seven .c, .trip .tname, .trip .day b, .fb .it .w, .toc .num, .days .t, .dayrow .h, .rules2 .big, .foot .big{ word-spacing:.09em; }
+.toc .fsrow{ display:grid; grid-template-columns:52px 1fr auto; column-gap:16px; }
+</style><script src="paged.polyfill.js"></script><script>window.PagedConfig={auto:false};window.addEventListener("load",function(){document.fonts.ready.then(function(){return window.PagedPolyfill.preview();}).then(function(f){window.__pagedDone=f.total;}).catch(function(e){window.__pagedErr=(e&&e.stack)?e.stack:String(e);});});</script></head><body>
+
+<section class="chap fs" id="fs"><div class="pg first"><span class="rh-src">The Field Sheet</span><h1>The Field Sheet</h1>
+<div class="sf">The volatile figures, dated. The current sheet is always at <b>barcelonaforamericans.com/guide/sheet</b>.</div><p class="t" style="width:560px;font-size:10.5px;line-height:15px"><span class="fsdate lc">Compiled October 2026 · verify before travel</span> — these are the figures with a short shelf life. Keeping them here, dated, is what lets the Book’s calls stay true for years — when a number moves, only the arithmetic changes, never the reasoning.</p><h2>Tourist tax (per person, per night)</h2><table class="fstable">
+<thead><tr><th>Accommodation</th><th>Tax / person / night</th></tr></thead>
+<tbody>
+<tr><td>5-star hotels</td><td class="n">≈ €12.00 <i class="mk">◆</i></td></tr>
+<tr><td>4-star hotels</td><td class="n">≈ €8.40 <i class="mk">◆</i></td></tr>
+<tr><td>3-star hotels and below</td><td class="n">≈ €7.00 <i class="mk">◆</i></td></tr>
+<tr><td>Licensed tourist apartments</td><td class="n">≈ €9.50 <i class="mk">◆</i></td></tr>
+</tbody>
+</table><p class="note">Catalan rate plus Barcelona’s surcharge, from 1 April 2026: two people, five nights at a 4-star ≈ €84. The surcharge moves — confirm it when you book.</p><h2>Transit</h2><table class="fstable">
+<thead><tr><th>Ticket</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>Airport metro ticket (L9 Sud, T1/T2) — unless you hold Hola/T-usual</td><td class="n">≈ €5.90 <i class="mk">◆</i></td></tr>
+<tr><td>T-casual (10 rides, Zone 1) — does NOT cover the airport metro</td><td class="n">≈ €13.00 <i class="mk">◆</i></td></tr>
+<tr><td>Hola Barcelona travel card (48 hours / 72 hours / 96 hours / 120h)</td><td class="n">check current <i class="mk">◆</i></td></tr>
+</tbody>
+</table><h2>Sights and eating</h2><table class="fstable">
+<thead><tr><th>Item</th><th>Figure</th></tr></thead>
+<tbody>
+<tr><td>Sagrada Família — basilica entry, on sagradafamilia.org only</td><td class="n">≈ €26.00 <i class="mk">◆</i></td></tr>
+<tr><td>Park Güell — monumental zone, timed, online</td><td class="n">≈ €18.00 <i class="mk">◆</i></td></tr>
+<tr><td>Menú del día — weekday lunch, typical band</td><td class="n">≈ €13–18 <i class="mk">◆</i></td></tr>
+<tr><td>Conversion markup if you accept USD at a terminal</td><td class="n">3–8% per transaction <i class="mk">▲</i></td></tr>
+</tbody>
+</table><h2>Border systems</h2><table class="fstable">
+<thead><tr><th>System</th><th>Status for 2026</th></tr></thead>
+<tbody>
+<tr><td>EES — biometric entry/exit</td><td class="n">live <i class="mk">◆</i></td></tr>
+<tr><td>ETIAS — pre-travel authorization</td><td class="n">not yet live <i class="mk">◆</i></td></tr>
+</tbody>
+</table><p class="note"><i class="mk">◆</i> VOLATILE — verify at the source before travel. <i class="mk">▲</i> SURVEYED — an observed range, not a fixed rate. The Book’s calls hold whatever the figures. If a website offers to sell you an ETIAS, that is the tell — it is not yet in force.</p></div></section>
+
+</body></html>

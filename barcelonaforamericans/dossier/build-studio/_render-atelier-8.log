@@ -1,0 +1,21 @@
+field sheet id='fs': book 171,001B · sheet 34,385B
+── BOOK ──
+snug pass 1: A05.jpg p34 — 2.10in free vs a 2.19in block (96%) → image 1.40 → 1.25in
+feather pass 2: tightening ['d02', 'd05']
+feather pass 2: loosening ['d06', 'd08', 'wallet']
+  fill: p-contract.jpg p3 closes the chapter with 6.30in spare — 2.25in -> 6.60in
+  fill: p-howto.jpg p5 closes the chapter with 2.78in spare — 2.25in -> 4.93in
+  fill: p-ground.jpg p9 closes the chapter with 3.05in spare — 2.25in -> 5.20in
+  fill: p-fly.jpg p11 closes the chapter with 3.19in spare — 2.25in -> 5.34in
+  fill: p-timing.jpg p14 closes the chapter with 5.68in spare — 2.25in -> 6.60in
+  fill: p-d03.jpg p25 closes the chapter with 2.08in spare — 2.25in -> 4.23in
+  fill: p-horizons.jpg p39 closes the chapter with 3.19in spare — 2.25in -> 5.34in
+  fill: p-risk.jpg p41 closes the chapter with 2.73in spare — 2.25in -> 4.88in
+feathered: ['d02', 'd05']
+snugged:   {'A05.jpg': 1.25}
+loosened:  ['d06', 'd08', 'wallet']
+filled:    {'p-contract.jpg': 6.6, 'p-howto.jpg': 4.93, 'p-ground.jpg': 5.2, 'p-fly.jpg': 5.34, 'p-timing.jpg': 6.6, 'p-d03.jpg': 4.23, 'p-horizons.jpg': 5.34, 'p-risk.jpg': 4.88}
+paginated: 52 pages in DOM -> 52 pages in dossier.pdf
+── FIELD SHEET ──
+paginated: 1 pages in DOM -> 1 pages in fieldsheet.pdf
+EXIT 0

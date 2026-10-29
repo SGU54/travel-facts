@@ -1,0 +1,194 @@
+[
+ {
+  "id": "M1",
+  "where": "Fig. 5 central-base bar label (p26)",
+  "old": "≈€27",
+  "new": "≈€31–41",
+  "value_for_bar": 41,
+  "source": "https://www.trenitalia.com/it/treni_regionali/lazio/leonardo_express.html (€14 a person; read 2026-10-26); https://www.comune.roma.it/web-resources/cms/documents/TariffarioTaxi_giugno2026.pdf (minimum ride €9, 5 km standard €13.10; read 2026-10-26); draw train €28 solid + onward hop €3–13 as a range ending at €41 (two people)"
+ },
+ {
+  "id": "M1",
+  "where": "Fig. 5 central-base row name (p26)",
+  "old": "Leonardo + taxi",
+  "new": "Leonardo + hop (metro or taxi)",
+  "value_for_bar": null,
+  "source": "—"
+ },
+ {
+  "id": "M1",
+  "where": "Fig. 5 near-Termini bar label (p26)",
+  "old": "≈€14",
+  "new": "≈€28",
+  "value_for_bar": 28,
+  "source": "https://www.trenitalia.com/it/treni_regionali/lazio/leonardo_express.html (€14 a person; read 2026-10-26) (two tickets; the figure’s unit is a party of two, as its caption says)"
+ },
+ {
+  "id": "M3",
+  "where": "Fig. 7 svg axis ticks (p37), five separate tick labels",
+  "old": "0w / 2w / 4w / 6w / 8w",
+  "new": "0 / 7 / 14 / 21 / 30 days",
+  "value_for_bar": null,
+  "source": "https://colosseo.it/orari-e-biglietti/ (via WebSearch excerpt 2026-10-26: sale \"aperte 30 giorni prima della data prevista per la visita\") (the longest official window read is 30 days)"
+ },
+ {
+  "id": "M3",
+  "where": "Fig. 7 svg text, Colosseum Underground (p37)",
+  "old": "guided-only, sells out",
+  "new": "on sale 30 days ahead, sells out fast",
+  "value_for_bar": 30,
+  "source": "https://colosseo.it/en/tickets/full-experience-underground-arena/ (30 days; Ruth 2026-10-25)"
+ },
+ {
+  "id": "M3",
+  "where": "Fig. 7 svg text, Vatican Museums (p37)",
+  "old": "timed, sells out weeks",
+  "new": "timed · sells out in peak · window: check current",
+  "value_for_bar": null,
+  "source": "https://www.museivaticani.va/content/museivaticani/en/organizza-visita/tariffe-e-biglietti.html (no booking window stated; read 2026-10-26); draw as an open-ended bar, no day value (no official window found)"
+ },
+ {
+  "id": "M3",
+  "where": "Fig. 7 svg text, Borghese Gallery (p37)",
+  "old": "MANDATORY slot, no walk-ins",
+  "new": "booking required for every ticket",
+  "value_for_bar": null,
+  "source": "https://galleriaborghese.cultura.gov.it/visita/info-biglietti/ (\"PRENOTAZIONE OBBLIGATORIA per tutte le tipologie di biglietto\"; Ruth 2026-10-25; window not read); open-ended bar, no day value"
+ },
+ {
+  "id": "M3",
+  "where": "Fig. 7 svg text, Colosseum Standard (p37)",
+  "old": "timed entry",
+  "new": "on sale 30 days ahead",
+  "value_for_bar": 30,
+  "source": "https://colosseo.it/orari-e-biglietti/ (via WebSearch excerpt 2026-10-26: sale \"aperte 30 giorni prima della data prevista per la visita\")"
+ },
+ {
+  "id": "N3",
+  "where": "Fig. 7 svg text, Pantheon (p37)",
+  "old": "now timed-entry",
+  "new": "no booking needed · buy at the door",
+  "value_for_bar": 0,
+  "source": "https://cultura.gov.it/luogo/pantheon (unreachable 2026-10-26; official wording via WebSearch excerpt: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\")"
+ },
+ {
+  "id": "M3",
+  "where": "Fig. 7 svg — add a row if room (p37)",
+  "old": "(none)",
+  "new": "Colosseum Arena · opens ≈ 7 days ahead",
+  "value_for_bar": 7,
+  "source": "https://colosseo.it/en/tickets/full-experience-arena/ (≈7 days; Ruth 2026-10-25)"
+ },
+ {
+  "id": "M3",
+  "where": "Fig. 7 caption (p37)",
+  "old": "punish a late booking with “sold out.”.",
+  "new": "punish a late booking with “sold out.”",
+  "value_for_bar": null,
+  "source": "typo: doubled period"
+ },
+ {
+  "id": "M3",
+  "where": "p35 poster tier line",
+  "old": "A day or two — Colosseum standard, Pantheon",
+  "new": "30 days out — Colosseum standard · Pantheon: no booking",
+  "value_for_bar": null,
+  "source": "https://colosseo.it/orari-e-biglietti/ (via WebSearch excerpt 2026-10-26: sale \"aperte 30 giorni prima della data prevista per la visita\"); https://cultura.gov.it/luogo/pantheon (unreachable 2026-10-26; official wording via WebSearch excerpt: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\")"
+ },
+ {
+  "id": "m10",
+  "where": "p35 poster big words",
+  "old": "SIX WEEKS OUT",
+  "new": "THE DAY SALES OPEN",
+  "value_for_bar": null,
+  "source": "https://colosseo.it/orari-e-biglietti/ (via WebSearch excerpt 2026-10-26: sale \"aperte 30 giorni prima della data prevista per la visita\"); https://colosseo.it/en/tickets/full-experience-underground-arena/ (30 days; Ruth 2026-10-25); poster and call now name one moment (the call says “the moment your dates are firm”)"
+ },
+ {
+  "id": "M3",
+  "where": "p35 poster tier head",
+  "old": "W E E K S A H E A D — B O O K O N S A L E",
+  "new": "B O O K T H E D A Y S A L E S O P E N",
+  "value_for_bar": null,
+  "source": "https://colosseo.it/orari-e-biglietti/ (via WebSearch excerpt 2026-10-26: sale \"aperte 30 giorni prima della data prevista per la visita\"); https://colosseo.it/en/tickets/full-experience-underground-arena/ (30 days; Ruth 2026-10-25)"
+ },
+ {
+  "id": "N3",
+  "where": "p35 poster foot (call text)",
+  "old": "The standard Colosseum and the Pantheon need only a day or two.",
+  "new": "The standard Colosseum goes on sale 30 days out: in peak season book it then, in winter a few days ahead; the Pantheon needs no booking.",
+  "value_for_bar": null,
+  "source": "https://colosseo.it/orari-e-biglietti/ (via WebSearch excerpt 2026-10-26: sale \"aperte 30 giorni prima della data prevista per la visita\"); https://cultura.gov.it/luogo/pantheon (unreachable 2026-10-26; official wording via WebSearch excerpt: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\") (same text as rome-edits M4/d06 call)"
+ },
+ {
+  "id": "M3",
+  "where": "p35 poster foot (call text)",
+  "old": "check the official page for its current release window (recently about a week out)",
+  "new": "its release window opens about 7 days ahead",
+  "value_for_bar": null,
+  "source": "https://colosseo.it/en/tickets/full-experience-arena/ (≈7 days; Ruth 2026-10-25) (optional: tighten if room)"
+ },
+ {
+  "id": "N3",
+  "where": "p65 caption",
+  "old": "Through the Pantheon's bronze doors to the oculus: the threshold the chapter describes. It now charges admission and needs a timed slot; book it with the day.",
+  "new": "Inside the Pantheon, under the coffered dome and its open oculus. It now charges admission; booking is optional, so buy at the door.",
+  "value_for_bar": null,
+  "source": "https://cultura.gov.it/luogo/pantheon (unreachable 2026-10-26; official wording via WebSearch excerpt: \"Prenotazione Facoltativa\"; tickets \"in loco presso le casse e i totem automatici\"); Marta to confirm the frame shows the interior and oculus (no doors in shot)"
+ },
+ {
+  "id": "M18",
+  "where": "Fig. 9 Pompeii bar, outbound segment label (p48)",
+  "old": "train + Circumvesuviana",
+  "new": "train + Circumvesuviana · ≈ 2½ h",
+  "value_for_bar": 2.5,
+  "source": "https://www.trenitalia.com/it/frecciarossa/collegamenti-frecciarossa/viaggia-tra-roma-e-napoli-con-le-frecce.html (\"poco più di 1.00h\"; read 2026-10-26); p47 as edited (rome-edits M18)"
+ },
+ {
+  "id": "M18",
+  "where": "Fig. 9 Pompeii bar, site segment label (p48)",
+  "old": "the ruins",
+  "new": "the ruins · 6–7 h",
+  "value_for_bar": 7,
+  "source": "p47 as edited (our read of a full Pompeii visit, lunch included)"
+ },
+ {
+  "id": "M18",
+  "where": "Fig. 9 Pompeii bar, return segment label (p48)",
+  "old": "return",
+  "new": "return · ≈ 2½ h",
+  "value_for_bar": 2.5,
+  "source": "https://www.trenitalia.com/it/frecciarossa/collegamenti-frecciarossa/viaggia-tra-roma-e-napoli-con-le-frecce.html (\"poco più di 1.00h\"; read 2026-10-26); p47 as edited (rome-edits M18)"
+ },
+ {
+  "id": "M18",
+  "where": "Fig. 9 Pompeii total label (p48)",
+  "old": "≈ 12 h door-to-door · ‘don’t pair with anything’",
+  "new": "≈ 12 h door-to-door · ‘don’t pair with anything’",
+  "value_for_bar": 12,
+  "source": "unchanged text; the bar must end at 12 h (now ≈ 8 h), = 2½ + 7 + 2½; matches p47 and https://www.romeforamericans.com/article/best-day-trips-from-rome-by-train (\"budget roughly 12 hours door to door\")"
+ },
+ {
+  "id": "X8",
+  "where": "p16 poster foot (Marta)",
+  "old": "Minutes on foot to the center, from the core. From Termini, twenty-eight.",
+  "new": "Minutes on foot to Piazza Venezia, the core’s center. From Termini, twenty-eight; to the Pantheon, thirty-five.",
+  "value_for_bar": null,
+  "source": "the book’s own measured walk-times (▲ 07/26), as in rome-edits X8"
+ },
+ {
+  "id": "X2",
+  "where": "p8 caption, second sentence (Marta)",
+  "old": "A source and a date, as every mark here carries.",
+  "new": "Every ◇ and ◆ claim is traced, with the date it was checked, on the Sources page at the back.",
+  "value_for_bar": null,
+  "source": "sources.json"
+ },
+ {
+  "id": "X7",
+  "where": "wallet card, front or back inside the cut line (Brunner)",
+  "old": "(none)",
+  "new": "Current figures: the Field Sheet, romeforamericans.com/guide/sheet",
+  "value_for_bar": null,
+  "source": "https://www.romeforamericans.com/guide/sheet (live, Ruth 2026-10-26)"
+ }
+]

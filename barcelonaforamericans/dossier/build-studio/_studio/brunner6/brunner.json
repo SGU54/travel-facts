@@ -1,0 +1,1045 @@
+[
+ {
+  "page": 1,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 2,
+  "skipped": true,
+  "faults": [
+   {
+    "rule": "glyph",
+    "msg": "a display line begins with a dash",
+    "box": {
+     "x": 82,
+     "y": 361,
+     "w": 586,
+     "h": 66
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 3,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "hole",
+    "msg": "the column stops for 14 lines and starts again",
+    "box": {
+     "x": 470,
+     "y": 305,
+     "w": 127,
+     "h": 236
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 19 lines of text",
+    "box": {
+     "x": 486,
+     "y": 250,
+     "w": 248,
+     "h": 555
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 80,
+  "photo": false,
+  "short": 10.331801470588236,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 4,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 5,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 6,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "runt",
+    "msg": "the last line is 12% of the measure",
+    "box": {
+     "x": 82,
+     "y": 182,
+     "w": 50,
+     "h": 17
+    },
+    "to": "brunner"
+   },
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 8 lines of text",
+    "box": {
+     "x": 486,
+     "y": 229,
+     "w": 248,
+     "h": 505
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 72,
+  "photo": false,
+  "short": 14.508272058823529,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 7,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 8,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 84,
+  "photo": false,
+  "short": 8.390625,
+  "splitTo": false,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 9,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 10,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 13 lines of text",
+    "box": {
+     "x": 486,
+     "y": 161,
+     "w": 248,
+     "h": 657
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 12 lines short and the text runs on overleaf",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 82,
+  "photo": false,
+  "short": 11.6171875,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 11,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 86,
+  "photo": false,
+  "short": 7.470588235294118,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 12,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 13,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 14,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "runt",
+    "msg": "the last line is 11% of the measure",
+    "box": {
+     "x": 428,
+     "y": 845,
+     "w": 33,
+     "h": 12
+    },
+    "to": "brunner"
+   }
+  ],
+  "notes": [
+   {
+    "rule": "hole",
+    "msg": "the column stops for 6 lines and starts again",
+    "box": {
+     "x": 428,
+     "y": 635,
+     "w": 294,
+     "h": 97
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "fill": 99,
+  "photo": false,
+  "short": 0.27297794117647056,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 15,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "empty",
+    "msg": "the page is 6% used",
+    "box": null,
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 49 lines short (6% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 6,
+  "photo": false,
+  "short": 49.35294117647059,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 16,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 17,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 18,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "hole",
+    "msg": "the column stops for 9 lines and starts again",
+    "box": {
+     "x": 470,
+     "y": 528,
+     "w": 216,
+     "h": 123
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 72,
+  "photo": false,
+  "short": 17.688616071428573,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 19,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 20,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 21,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 9 lines of text",
+    "box": {
+     "x": 486,
+     "y": 250,
+     "w": 248,
+     "h": 582
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 83,
+  "photo": false,
+  "short": 10.597098214285714,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 22,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 23,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 24,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 12 lines of text",
+    "box": {
+     "x": 486,
+     "y": 250,
+     "w": 248,
+     "h": 520
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 15 lines short and the text runs on overleaf",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 76,
+  "photo": false,
+  "short": 15.045758928571429,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 25,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 18 lines of text",
+    "box": {
+     "x": 486,
+     "y": 457,
+     "w": 248,
+     "h": 342
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 80,
+  "photo": false,
+  "short": 10.705882352941176,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 26,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 27,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 28,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 83,
+  "photo": false,
+  "short": 8.674632352941176,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 29,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 96,
+  "photo": false,
+  "short": 2.155330882352941,
+  "splitTo": false,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 30,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 31,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 75,
+  "photo": false,
+  "short": 12.861213235294118,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 32,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 33,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 34,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "runt",
+    "msg": "the paragraph ends on one short word",
+    "box": {
+     "x": 470,
+     "y": 901,
+     "w": 49,
+     "h": 11
+    },
+    "to": "brunner"
+   }
+  ],
+  "notes": [],
+  "fill": 92,
+  "photo": false,
+  "short": 4.096507352941177,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 35,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 36,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 37,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 83,
+  "photo": false,
+  "short": 8.802389705882353,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 38,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 39,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 40,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "runt",
+    "msg": "the paragraph ends on one short word",
+    "box": {
+     "x": 82,
+     "y": 831,
+     "w": 57,
+     "h": 12
+    },
+    "to": "brunner"
+   }
+  ],
+  "notes": [],
+  "fill": 87,
+  "photo": false,
+  "short": 6.743566176470588,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 41,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 42,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 43,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 80,
+  "photo": false,
+  "short": 10.745404411764707,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 44,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 9 lines of text",
+    "box": {
+     "x": 486,
+     "y": 271,
+     "w": 248,
+     "h": 427
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 95,
+  "photo": false,
+  "short": 2.5082720588235294,
+  "splitTo": false,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 45,
+  "skipped": true,
+  "faults": [],
+  "notes": [
+   {
+    "rule": "glyph",
+    "msg": "a 24-hour time (\u201c18:00\u201d) in a figure label off a time axis \u2014 gloss it or set \u201c8:30 p.m.\u201d",
+    "box": {
+     "x": 275,
+     "y": 397,
+     "w": 121,
+     "h": 10
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 46,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "runt",
+    "msg": "the paragraph ends on one short word",
+    "box": {
+     "x": 82,
+     "y": 703,
+     "w": 32,
+     "h": 12
+    },
+    "to": "brunner"
+   }
+  ],
+  "notes": [],
+  "fill": 90,
+  "photo": false,
+  "short": 5.016544117647059,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 47,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 48,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 49,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 90,
+  "photo": false,
+  "short": 5.455882352941177,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 50,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 51,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 52,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "hole",
+    "msg": "the column stops for 10 lines and starts again",
+    "box": {
+     "x": 470,
+     "y": 359,
+     "w": 127,
+     "h": 171
+    },
+    "to": "brunner \u2192 marta"
+   },
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 18 lines of text",
+    "box": {
+     "x": 486,
+     "y": 303,
+     "w": 248,
+     "h": 653
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 97,
+  "photo": false,
+  "short": 1.4871323529411764,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 53,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 12 lines of text",
+    "box": {
+     "x": 486,
+     "y": 457,
+     "w": 248,
+     "h": 229
+    },
+    "to": "marta"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 17 lines short (67% used) before a full sheet \u2014 the chapter thins out before its own closing photograph",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 67,
+  "photo": false,
+  "short": 17.352941176470587,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 54,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 55,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 56,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "foot",
+    "msg": "the page stops 12 lines short and the text runs on overleaf",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 78,
+  "photo": false,
+  "short": 11.508272058823529,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 57,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "side",
+    "msg": "the right column is empty beside 23 lines of text",
+    "box": {
+     "x": 486,
+     "y": 160,
+     "w": 248,
+     "h": 771
+    },
+    "to": "marta"
+   }
+  ],
+  "notes": [],
+  "fill": 94,
+  "photo": false,
+  "short": 2.9411764705882355,
+  "splitTo": true,
+  "air": false,
+  "opens": false,
+  "closer": false
+ },
+ {
+  "page": 58,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 59,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 60,
+  "skipped": false,
+  "faults": [],
+  "notes": [
+   {
+    "rule": "measure",
+    "msg": "87 characters a line (note outside 42\u201380)",
+    "box": {
+     "x": 82,
+     "y": 159,
+     "w": 430,
+     "h": 68
+    },
+    "to": "marta"
+   }
+  ],
+  "fill": 88,
+  "photo": false,
+  "short": 6.508272058823529,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 61,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 62,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 94,
+  "photo": false,
+  "short": 3.6886160714285716,
+  "splitTo": false,
+  "air": true,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 63,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 64,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "hole",
+    "msg": "the column stops for 9 lines and starts again",
+    "box": {
+     "x": 470,
+     "y": 284,
+     "w": 216,
+     "h": 153
+    },
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [],
+  "fill": 95,
+  "photo": false,
+  "short": 2.625919117647059,
+  "splitTo": false,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 65,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 66,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": true
+ },
+ {
+  "page": 67,
+  "skipped": true,
+  "faults": [],
+  "notes": [],
+  "fill": 100,
+  "photo": false
+ },
+ {
+  "page": 68,
+  "skipped": false,
+  "faults": [
+   {
+    "rule": "runt",
+    "msg": "the last line is 11% of the measure",
+    "box": {
+     "x": 82,
+     "y": 239,
+     "w": 47,
+     "h": 12
+    },
+    "to": "brunner"
+   },
+   {
+    "rule": "foot",
+    "msg": "the page stops 8 lines short and the text runs on overleaf",
+    "box": null,
+    "to": "brunner \u2192 marta"
+   }
+  ],
+  "notes": [
+   {
+    "rule": "measure",
+    "msg": "87 characters a line (note outside 42\u201380)",
+    "box": {
+     "x": 82,
+     "y": 203,
+     "w": 430,
+     "h": 51
+    },
+    "to": "marta"
+   }
+  ],
+  "fill": 84,
+  "photo": false,
+  "short": 8.272977941176471,
+  "splitTo": true,
+  "air": false,
+  "opens": true,
+  "closer": false
+ },
+ {
+  "page": 69,
+  "skipped": false,
+  "faults": [],
+  "notes": [],
+  "fill": 89,
+  "photo": false,
+  "short": 6,
+  "splitTo": false,
+  "air": false,
+  "opens": false,
+  "closer": false
+ }
+]

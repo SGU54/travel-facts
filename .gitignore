@@ -73,3 +73,10 @@ __pycache__/
 **/dossier/**/_book.html
 **/dossier/**/_sheet.html
 **/dossier/**/dossier*.html
+
+# the PDF owner password the lock step writes: a secret, never committed
+**/_pdf-owner-password.txt
+# a build's node_modules (or its symlink) is reinstalled, never carried
+**/node_modules
+# measuring renders: generated, 1 MB each
+**/dossier/**/_measure*.html

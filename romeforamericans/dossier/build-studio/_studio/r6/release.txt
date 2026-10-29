@@ -1,0 +1,74 @@
+RELEASE AUDIT · /Users/sg54/travel-sites/travel-facts/romeforamericans/dossier/build-studio
+paper stock #EFE4CC (read from the build's stylesheet)
+================================================================
+
+── furniture ── PASS
+   FURNITURE — 86 pages, every sheet checked
+     ----------------------------------------------
+     ✓ every sheet: painted to the trim, furnished, body inside the column
+     furniture gate: PASS
+   /Users/sg54/travel-sites/travel-facts/romeforamericans/dossier/build-studio/audit-furniture.py:72: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+     gray = im.convert("L"); gp = list(gray.getdata())
+
+── book ── PASS
+     ✓ no orphan stubs  none
+     ✓ rhythm           longest text-only run 2 pages (want <=6)
+     ✓ marks            3.4 prose marks/page (<=8) (seasoned)
+     ✓ cover            page 1 has 100.0% non-paper coverage (argues something)
+     ✓ geometry         furniture & body never touch
+     ----------------------------------------------
+     CLEAN — the book is well-organized and reads evenly. Ship.
+   
+   /Users/sg54/travel-sites/travel-facts/romeforamericans/dossier/build-studio/audit-book.py:43: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+     g = im.convert("L"); gp = list(g.getdata())
+   /Users/sg54/travel-sites/travel-facts/romeforamericans/dossier/build-studio/audit-book.py:44: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+     q = list(im.getdata())[::20]
+   /Users/sg54/travel-sites/travel-facts/romeforamericans/dossier/build-studio/audit-book.py:212: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+     _im = _Img.open(_f).convert("L"); _W,_Hh = _im.size; _px = list(_im.getdata())
+
+── layout ── PASS
+   LAYOUT AUDIT — 30 chapters, 9 decisions, 11 figures, 86 pages
+     anchored pages 82/86 · roles seen: ['figure', 'ledger', 'opener', 'plate', 'verdict']
+   
+   CLEAN — structure reads at a glance. Ships.
+
+── ai-smell ── PASS
+   AI-SMELL AUDIT — 9445 words of prose across 1 file(s)
+     em-dash 7.8/1k · rhythm CV 0.53 · semicolons 4.8/1k · tricolons 15
+   
+   CLEAN — reads human. Ships.
+
+── claims ── PASS
+   CLAIMS AUDIT — dossier3.html + dossier.pdf
+     ----------------------------------------------
+     ✓ mark key         ● ESTABLISHED ◇ OFFICIAL ▲ SURVEYED ◆ VOLATILE
+     ✓ declared counts
+     ✓ figure labels
+     ✓ ornaments
+     ✓ contents & outline
+     ----------------------------------------------
+     · counts stated in prose, for review: "Nine decisions", "one decision", "fifteen calls", "Nine calls", "nine calls"
+     · structural counts: sections classed decision=9 · ids dNN=9 · numbered DECISION labels=9
+   
+     CONSISTENT — what the book says about itself is true. Ships.
+
+── depth ── PASS
+   DEPTH AUDIT — 86pp from 96 articles (101,460w in → 20,089w out)
+     ----------------------------------------------------
+     ✓ pages / article  0.90  (>= 0.4)
+     ✓ words / article  209   (>= 120)
+     ✓ corpus used      19.8% (>= 11.0%)
+     ----------------------------------------------------
+     MINED — the book uses its corpus. (model expects ~48pp; got 86.)
+
+================================================================
+  PASS     furniture
+  PASS     book
+  PASS     layout
+  PASS     ai-smell
+  PASS     claims
+  PASS     depth
+
+Production checks passed. This says the artefact is well-formed —
+it does not say the reasoning is sound. The editorial release record
+(comparisons, assembled trip, reversals) is a separate, human sign-off.

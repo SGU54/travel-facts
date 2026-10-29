@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="en-US"><head><meta charset="utf-8"/><title>Rome, Solved.</title>
+<style>@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w300-wd100.ttf');font-weight:300;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w400-wd100-Italic.ttf');font-weight:400;font-stretch:100%;font-style:italic;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w400-wd100.ttf');font-weight:400;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w500-wd100.ttf');font-weight:500;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w600-wd100.ttf');font-weight:600;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w700-wd100.ttf');font-weight:700;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w700-wd92-Italic.ttf');font-weight:700;font-stretch:92%;font-style:italic;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w700-wd92.ttf');font-weight:700;font-stretch:92%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd100.ttf');font-weight:800;font-stretch:100%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd104.ttf');font-weight:800;font-stretch:104%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd110.ttf');font-weight:800;font-stretch:110%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd118.ttf');font-weight:800;font-stretch:118%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd62.ttf');font-weight:800;font-stretch:62%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd66.ttf');font-weight:800;font-stretch:66%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd76.ttf');font-weight:800;font-stretch:76%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd80.ttf');font-weight:800;font-stretch:80%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd84.ttf');font-weight:800;font-stretch:84%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd86.ttf');font-weight:800;font-stretch:86%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd88.ttf');font-weight:800;font-stretch:88%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd92.ttf');font-weight:800;font-stretch:92%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w800-wd96.ttf');font-weight:800;font-stretch:96%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w900-wd88.ttf');font-weight:900;font-stretch:88%;font-style:normal;}
+@font-face{font-family:'Archivo';src:url('models/fonts/archivo-static/Archivo-w900-wd92.ttf');font-weight:900;font-stretch:92%;font-style:normal;}
+@font-face{font-family:'Symbols';src:url('assets/fonts/NotoSansSymbols2-Regular.ttf');}
+
+:root{ --paper:#EFE4CC; --ink:#2B241A; --red:#8A3324; --gold:#C9A94A; --grey:#6A5C42; --line:#2B241A; --hair:#D8C7A4; }
+@page{ size:8.5in 11in; margin:92px 82px 72px 82px;
+  @top-left{ content:none } @top-right{ content:none } @bottom-center{ content:none }
+  @bottom-left{ content:"Rome, Solved."; font-family:'Archivo'; font-size:8.5px; font-weight:500; letter-spacing:.06em; color:var(--grey); }
+  @bottom-right{ content:counter(page); font-family:'Archivo'; font-weight:700; font-size:10px; color:var(--ink); } }
+@page poster{ margin:0; @top-left{content:none} @top-right{content:none} @bottom-left{content:none} @bottom-center{content:none} @bottom-right{content:none} }
+@page annex{ margin:72px 82px 60px 82px; }
+html,body{ background:var(--paper); -webkit-print-color-adjust:exact; print-color-adjust:exact; margin:0; }
+.pagedjs_sheet{ background:var(--paper); }
+body{ font-family:'Archivo'; font-size:11px; line-height:17px; color:var(--ink); }
+.rh-src{ string-set:rh content(text); display:block; height:0; overflow:hidden; font-size:0; line-height:0; margin:0; }
+section{ break-before:page; }
+.pg{ break-before:page; } .pg.first{ break-before:auto; }
+i.mk{ font-style:normal; font-family:'Symbols'; font-size:.9em; color:var(--red); font-weight:400; font-stretch:100%; }
+a{ color:inherit; text-decoration:none; }
+/* posters */
+.poster{ page:poster; width:8.5in; height:11in; box-sizing:border-box; padding:64px 82px 60px; position:relative; overflow:hidden; display:flex; flex-direction:column; break-before:page; }
+.poster.paper{ background:var(--paper); color:var(--ink); height:1055px; }
+.poster .slug{ font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; display:flex; justify-content:space-between; }
+.poster .slug .lab{ color:var(--red); }
+.poster .foot{ margin-top:auto; display:grid; grid-template-columns:1fr 300px; column-gap:40px; align-items:end; }
+.poster .foot.rule{ border-top:3px solid var(--ink); padding-top:12px; }
+.poster .big{ font-size:30px; line-height:33px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.poster .foot p{ margin:0; font-size:12px; line-height:17px; font-weight:400; }
+.thesis{ font-weight:800; font-stretch:88%; font-size:60px; line-height:58px; letter-spacing:-.035em; margin-top:110px; }
+.thesis.long{ font-size:50px; line-height:49px; margin-top:90px; }
+.thesis em{ font-style:normal; color:var(--red); }
+/* photograph page */
+.photo{ page:poster; width:8.5in; height:1055px; box-sizing:border-box; position:relative; overflow:hidden; display:flex; flex-direction:column; break-before:page; }
+.photo img{ display:block; width:100%; height:740px; object-fit:cover; }
+.join{ border-top:3px solid var(--gold); margin-top:16px; padding-top:8px; break-inside:avoid; } .join .lab{ display:block; font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--red); margin-bottom:5px; } .join p{ font-size:11px; line-height:15px; margin:0; }
+.photo .tail{ padding:28px 82px 0; display:grid; grid-template-columns:340px 1fr; column-gap:48px; }
+.photo .tail.one{ grid-template-columns:340px; }
+.photo .cap{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-bottom:10px; }
+.photo p{ margin:0 0 9px; } .photo .tail.two p{ font-size:10.5px; line-height:15px; }
+.vol{ border-top:3px solid var(--red); padding-top:8px; }
+.vol .lab{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; margin-bottom:5px; }
+.vol p{ font-size:10px; line-height:14px; } .vol .x{ color:var(--grey); display:block; margin-top:4px; }
+/* text pages */
+h1{ font-weight:800; font-stretch:88%; font-size:58px; line-height:.92; letter-spacing:-.035em; margin:0 0 14px; }
+h1.long{ font-size:46px; }
+.sf{ font-weight:300; font-size:15.5px; line-height:21px; width:430px; margin:0 0 26px; }
+.prose p, p.t{ margin:0 0 11px; text-align:left; hyphens:auto; width:340px; }
+.prose p:first-child::first-line, p.t.lede::first-line{ font-weight:600; }
+.aside{ float:right; clear:right; width:264px; margin:0 0 20px 48px; }
+h2{ font-size:19px; line-height:21px; font-weight:800; font-stretch:92%; letter-spacing:-.02em; margin:14px 0 10px; padding-top:10px; border-top:3px solid var(--ink); break-after:avoid; clear:both; }
+h3{ font-size:14px; line-height:17px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; margin:12px 0 5px; break-after:avoid; }
+h3 small{ font-size:9px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--red); margin-left:8px; font-stretch:100%; }
+.stack{ border-top:3px solid var(--line); break-inside:avoid; }
+.stack .it{ padding:10px 0 11px; border-bottom:1px solid var(--line); }
+.stack .opt{ font-size:17px; line-height:19px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.stack .it.pick .opt::before{ content:''; display:inline-block; width:11px; height:11px; background:var(--red); margin:0 8px 1px 0; }
+.stack .sub{ font-size:9.5px; line-height:13px; color:var(--grey); margin-top:3px; }
+.stack .v{ font-size:9px; line-height:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-top:5px; }
+.stack .it.pick .v{ color:var(--red); }
+.stack .lab{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; padding:6px 0 2px; }
+.stack.sm .opt{ font-size:14px; line-height:16px; } .stack.sm .it{ padding:7px 0 8px; }
+.forks{ margin-top:22px; border-top:3px solid var(--line); break-inside:avoid; }
+.forks .lab{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; padding:8px 0 0; color:var(--red); }
+.forks .it{ padding:8px 0 9px; border-bottom:1px solid var(--line); }
+.forks .q{ font-size:14px; line-height:16px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; margin-bottom:3px; }
+.forks p{ margin:0; font-size:10px; line-height:14px; }
+.forks2{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; clear:both; } .forks2 .forks{ margin-top:18px; }
+figure{ margin:0; }
+figure.band{ margin:22px 0 0; break-inside:avoid; clear:both; } figure.band img{ display:block; width:100%; height:262px; object-fit:cover; }
+figure.band figcaption, figure.fig figcaption{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:8px; }
+figure.band.bes{ display:grid; column-gap:24px; align-items:end; } figure.band.bes figcaption{ margin:0; }
+figure.side{ margin:0 0 18px; break-inside:avoid; } figure.side img{ display:block; object-fit:contain; }
+figure.side figcaption{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:8px; }
+.xr{ border-top:3px solid var(--line); break-inside:avoid; }
+.xr .lab{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:block; padding:6px 0 2px; color:var(--red); }
+.xr .it{ display:grid; grid-template-columns:34px 1fr; padding:9px 0 10px; border-bottom:1px solid var(--line); color:inherit; text-decoration:none; }
+.xr .n{ font-size:17px; line-height:19px; font-weight:800; color:var(--red); font-stretch:92%; }
+.xr .t{ font-size:13px; line-height:16px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; }
+figure.band figcaption b, figure.fig figcaption b{ color:var(--ink); }
+figure.fig{ margin:14px 0 22px; break-inside:avoid; clear:both; } figure.fig svg{ display:block; width:100%; height:auto; }
+figure.fig svg text{ font-family:'Archivo'; fill:#2B241A; font-style:normal; }   /* no stroked halo (embeds as Type3) and no italic (no static italic at these weights): the renderer puts a paper chip under each label */
+figure.fig svg text.mono{ font-weight:600; letter-spacing:.06em; } figure.fig svg text.lab{ font-weight:500; }
+.cols2{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; clear:both; }
+.cols2 p, .cols2 h3{ width:auto; }
+.li{ margin:0 0 10px; break-inside:avoid; }
+.li .dl{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; display:block; margin-bottom:2px; }
+.li p{ margin:0; }
+.card2{ break-inside:avoid; margin:0 0 12px; border-top:1px solid var(--line); padding-top:4px; }
+.card2 h3{ margin-top:4px; } .card2 p{ margin:0; font-size:10.5px; line-height:15px; }
+/* contents */
+.tocs{ font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--red); margin:16px 0 4px; break-after:avoid; }
+.toc a{ display:grid; grid-template-columns:52px 1fr 40px; column-gap:16px; align-items:baseline; border-top:1px solid var(--line); padding:4px 0 5px; break-inside:avoid; }
+.toc a.dec{ border-top-color:var(--red); }
+.toc .num{ font-weight:800; font-stretch:118%; font-size:16px; line-height:16px; letter-spacing:-.03em; } .toc a.dec .num{ color:var(--red); }
+.toc .t{ font-size:11.5px; line-height:14px; font-weight:500; }
+.toc a::after{ content:attr(data-page); font-weight:800; font-size:13px; text-align:right; }
+.toc a.fs::after{ content:"sheet"; font-size:9px; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--grey); }
+/* failure modes */
+.tiers{ margin-top:30px; }
+.tier{ border-top:3px solid var(--ink); padding:10px 0 12px; display:grid; grid-template-columns:130px 1fr; column-gap:28px; align-items:start; }
+.tier .n{ font-weight:800; font-stretch:118%; font-size:96px; line-height:.8; letter-spacing:-.05em; color:var(--red); }
+.tier .h{ font-size:26px; line-height:28px; font-weight:800; letter-spacing:-.025em; font-stretch:88%; margin-top:10px; }
+.fail{ break-inside:avoid; padding:6px 0 7px; border-bottom:1px solid var(--line); }
+.fail .head{ display:block; font-size:12.5px; line-height:15px; font-weight:700; letter-spacing:-.01em; font-stretch:92%; margin-bottom:3px; }
+.fail p{ margin:0; font-size:10px; line-height:14px; }
+h2.th b{ color:var(--red); font-weight:800; }
+/* decide these first */
+.nine{ margin-top:28px; }
+.nine .it{ display:grid; grid-template-columns:62px 1fr 40px; column-gap:16px; border-top:3px solid var(--ink); padding:9px 0 10px; align-items:start; }
+.nine .n{ font-weight:800; font-stretch:118%; font-size:38px; line-height:.8; letter-spacing:-.04em; color:var(--red); }
+.nine .q{ font-size:10px; line-height:13px; color:var(--grey); }
+.nine .c{ font-size:14px; line-height:16px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; margin-top:2px; }
+.nine .pn{ font-size:13px; font-weight:800; text-align:right; } .nine .pn a::after{ content:attr(data-page); }
+.ask{ border-top:3px solid var(--red); padding-top:8px; margin-bottom:14px; break-inside:avoid; }
+.ask .who{ color:var(--red); font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; margin:0 0 6px; }
+.ask p{ margin:0; font-size:11px; line-height:15px; padding:4px 0; border-bottom:1px solid var(--hair); }
+.trip{ break-inside:avoid; } .trip .tname{ font-size:17px; line-height:19px; font-weight:800; font-stretch:92%; letter-spacing:-.02em; margin:0 0 4px; }
+.trip .tassume{ font-size:9.5px; line-height:13px; color:var(--grey); margin:0 0 8px; }
+.trip .day{ display:grid; grid-template-columns:70px 1fr; column-gap:10px; border-top:1px solid var(--line); padding:5px 0; }
+.trip .day b{ font-weight:800; font-size:13px; line-height:15px; font-stretch:92%; } .trip .day span{ font-size:10px; line-height:14px; }
+.trip .twhy{ font-size:10px; line-height:14px; margin:8px 0 0; border-top:3px solid var(--ink); padding-top:6px; }
+.fb .it{ display:grid; grid-template-columns:200px 1fr; column-gap:24px; border-top:1px solid var(--line); padding:8px 0 9px; break-inside:avoid; }
+.fb .it .w{ font-size:13px; line-height:15px; font-weight:700; font-stretch:92%; letter-spacing:-.01em; } .fb .it .d{ font-size:10.5px; line-height:14px; }
+/* the wallet card */
+.wgrid{ display:grid; grid-template-columns:1fr 1fr; column-gap:40px; }
+.wl{ display:grid; grid-template-columns:130px 1fr; column-gap:10px; align-items:baseline; padding:6px 0; border-bottom:1px solid var(--line); }
+.wl .opt{ font-size:12px; line-height:15px; font-weight:700; font-stretch:92%; } .wl .v{ font-size:8.5px; line-height:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--red); }
+.cards{ display:flex; gap:28px; margin-top:30px; align-items:flex-start; break-inside:avoid; }
+.card{ width:324px; height:204px; box-sizing:border-box; outline:1.5px dashed var(--grey); outline-offset:8px; padding:16px 18px; display:flex; flex-direction:column; overflow:hidden; }
+.card.front{ background:var(--red); color:var(--paper); }
+.card.front .g{ font-weight:800; font-stretch:118%; font-size:66px; line-height:.82; letter-spacing:-.045em; margin-top:12px; }
+.card.front .s{ font-size:12px; line-height:15px; font-weight:700; margin-top:auto; }
+.card .tag{ font-size:8.5px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; display:flex; justify-content:space-between; }
+.card.back{ background:#fff; }
+.card.back .ln{ display:grid; grid-template-columns:76px 1fr; column-gap:6px; font-size:7.2px; line-height:8.6px; border-top:1px solid var(--hair); padding:1.5px 0; }
+.card.back .ln b{ font-weight:700; } .card.back .ln:first-of-type{ border-top:2px solid var(--ink); margin-top:5px; }
+.cut{ font-size:9px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--grey); margin-top:20px; }
+/* the field sheet (annex) */
+.fs{ page:annex; }
+.fs h1{ font-size:44px; margin-bottom:8px; } .fs .sf{ margin-bottom:8px; font-size:13px; line-height:18px; width:560px; }
+.fs .method{ font-size:8.5px; line-height:11.5px; color:var(--grey); margin:8px 0 0; }
+.fs h2{ font-size:13px; margin:6px 0 3px; }
+.srcs .cols{ column-count:2; column-gap:28px; } .srcs h2{ font-size:11.5px; margin:8px 0 3px; break-after:avoid; width:auto; border-top:0; padding-top:0; } .srcs .s{ font-size:8.2px; line-height:11px; padding:2px 0; border-top:1px solid var(--hair); break-inside:avoid; } .srcs .s .u{ color:var(--grey); word-break:break-all; } .srcs .sf{ margin-bottom:6px; }
+.fs .r{ display:grid; grid-template-columns:1fr 1fr; column-gap:10px; padding:3px 0 3px; border-top:1px solid var(--hair); break-inside:avoid; }
+.fs .r .k{ font-size:9.5px; line-height:11.5px; font-weight:500; } .fs .r .v{ font-size:8.2px; line-height:11px; font-weight:700; color:var(--red); }
+.opener{ position:relative; } .ledger{ position:relative; } .verdict{ position:relative; }
+.m2.sh{ width:816px; height:1056px; position:relative; overflow:hidden; break-after:page; box-sizing:border-box; }
+.m2.sh.red{ background:#8A3324; color:#EFE4CC; }
+.m2.sh.gold{ background:#C9A94A; color:#2B241A; }
+.m2.sh.paper{ background:#EFE4CC; }
+.m2.sh svg.bg{ position:absolute; inset:0; width:816px; height:1056px; }
+.m2 .slug{ position:absolute; top:52px; left:82px; right:82px; display:flex; justify-content:space-between; font-size:9px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; z-index:3; }
+.m2 .g{ position:absolute; font-weight:800; line-height:.78; letter-spacing:-.05em; z-index:2; white-space:nowrap; }
+.m2 .gloss{ position:absolute; font-size:12px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; line-height:17px; z-index:3; }
+.m2 .foot{ position:absolute; left:82px; right:82px; bottom:56px; display:grid; grid-template-columns:1fr 300px; column-gap:40px; align-items:end; z-index:3; }
+.m2 .foot .big{ font-size:27px; line-height:30px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; }
+.m2 .foot p{ margin:0; font-size:10.5px; line-height:15px; }
+.m2 .red .foot p{ color:#F3E3D6; }
+.m2 .duo{ position:absolute; inset:0 0 auto 0; height:760px; overflow:hidden; }
+.m2 .duo img{ width:100%; height:100%; object-fit:cover; filter:grayscale(1) contrast(1.15) brightness(1.3); display:block; }
+.m2 .duo .tone{ position:absolute; inset:0; mix-blend-mode:multiply; }
+.m2 .duo .lift{ position:absolute; inset:0; mix-blend-mode:screen; }
+.m2 .tail{ position:absolute; left:82px; right:82px; top:792px; display:grid; grid-template-columns:340px 1fr; column-gap:48px; font-size:11px; line-height:17px; }
+.m2 .tail .cap{ font-size:9px; line-height:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:#6A5C42; margin-bottom:8px; }
+.poster.m2{ padding:0 !important; display:block !important; }
+.m2.sh{ break-after:auto; height:1055px; }
+.m2 svg.bg{ height:1054px !important; }
+.m2 .verdict{ z-index:4; }
+.m2.sh.red{ box-shadow:0 3px 0 #8A3324; } .m2.sh.gold{ box-shadow:0 3px 0 #C9A94A; }
+
+.photo.duo .dw{ position:relative; height:740px; overflow:hidden; }
+.photo.duo .dw img{ height:740px; filter:grayscale(1) contrast(1.15) brightness(1.3); }
+.photo.duo .dw .tone{ position:absolute; inset:0; background:#8A3324; mix-blend-mode:multiply; }
+.photo.duo .dw .lift{ position:absolute; inset:0; background:#34160d; mix-blend-mode:screen; }
+.photo.duo .dw .word{ position:absolute; left:52px; bottom:-8px; font-weight:800; line-height:.78; letter-spacing:-.05em; color:#C9A94A; white-space:nowrap; word-spacing:.18em; }
+
+p, li{ hyphenate-limit-chars: 7 3 3; orphans:2; widows:2; }
+
+/* Marta's picture edit (studio 2026-10-26, Rome) */
+#d04 .photo.duo .dw .word{ top:44px; bottom:auto; left:auto; right:56px; }   /* the ½ in the clear sky right of the Vittoriano */
+#d09 .photo.duo .dw .word{ top:44px; bottom:auto; }
+#d06 .photo.duo .dw .word{ top:44px; bottom:auto; left:auto; right:56px; }   /* the 3 in the ceiling, top right (Marta) */   /* OSTIA in the open sky above the arcades */
+.photo.typo .field{ height:740px; background:var(--red); color:var(--paper); position:relative; overflow:hidden; }
+.photo.typo .field .call{ position:absolute; left:76px; right:82px; bottom:56px; font-weight:800; font-stretch:88%; font-size:96px; line-height:.9; letter-spacing:-.03em; word-spacing:.12em; }
+.photo.typo .field .lab{ position:absolute; left:82px; top:72px; font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; }
+.photo.duo.typo .dw{ background:var(--ink); }
+figure.band.whole{ width:652px; clear:both; display:grid; grid-template-columns:340px 264px; column-gap:48px; align-items:end; }   /* whole, on the 340 column, flush left; the caption beside it in the margin, on its foot */
+figure.band.whole img{ width:340px !important; height:auto !important; object-fit:initial; }
+figure.band.whole figcaption{ margin:0; }
+.aside figure.mside{ margin:0 0 20px; break-inside:avoid; } .aside figure.mside img{ display:block; width:264px; height:auto; } .aside figure.mside figcaption{ font-size:9px; line-height:13px; font-weight:600; color:var(--grey); margin-top:8px; }
+
+/* studio — Marta's rulings on Brunner's proof (desk.md, 2026-10-25) */
+.photo .cap, figcaption, .mapwrap .cap, .cut{ text-transform:none !important; letter-spacing:.01em !important; }
+.lc, .stack .it .v.lc, .stack .it.pick .v.lc{ text-transform:none !important; letter-spacing:.02em !important; }
+h1, .thesis, .cover .title, .poster .giant, .tier .n, .days .n, .dayrow .n, .card.front .g, .seven .n, .g, .photo.duo .dw .word{ word-spacing:.16em; }
+h2, h3, .poster .big, .stack .opt, .forks .q, .sideq .big19, .ribbon .opt, .fail .head, .tier .h, .seven .c, .trip .tname, .trip .day b, .fb .it .w, .toc .num, .days .t, .dayrow .h, .rules2 .big, .foot .big{ word-spacing:.09em; }
+.toc .fsrow{ display:grid; grid-template-columns:52px 1fr auto; column-gap:16px; }
+a.pref{ color:inherit; text-decoration:none; } a.pref::after{ content:attr(data-page); }
+
+.mq{ border-top:3px solid var(--red); padding-top:8px; margin-bottom:22px; break-inside:avoid; }
+.mq .lab{ display:block; font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--red); margin-bottom:6px; }
+.mq .big{ font-size:19px; line-height:22px; font-weight:700; letter-spacing:-.02em; font-stretch:92%; word-spacing:.09em; }
+.mk4 .it{ display:grid; grid-template-columns:22px 1fr; padding:7px 0 8px; border-bottom:1px solid var(--line); font-size:11px; line-height:15px; }
+.mk4 .it b{ display:block; font-size:12px; }
+</style><script src="paged.polyfill.js"></script><script>window.PagedConfig={auto:false};function __chips(){document.querySelectorAll("figure.fig svg text").forEach(function(t){try{if(t.hasAttribute("data-nochip"))return;var b=t.getBBox();if(!b.width)return;var r=document.createElementNS("http://www.w3.org/2000/svg","rect");r.setAttribute("x",b.x-1.5);r.setAttribute("y",b.y+b.height*0.12);r.setAttribute("width",b.width+3);r.setAttribute("height",b.height*0.78);r.setAttribute("fill","#EFE4CC");r.setAttribute("class","chip");t.parentNode.insertBefore(r,t);t.style.stroke="none";t.style.paintOrder="normal";t.style.strokeWidth="0";}catch(e){}});}window.addEventListener("load",function(){document.fonts.ready.then(function(){return window.PagedPolyfill.preview();}).then(function(f){__chips();window.__pagedDone=f.total;}).catch(function(e){window.__pagedErr=(e&&e.stack)?e.stack:String(e);});});</script></head><body>
+
+<section class="chap fs" id="fs"><div class="pg first" id="fs-p"><span class="rh-src">The Field Sheet</span>
+<h1>The Field Sheet</h1><div class="sf"><span class="fsdate">As of October 2026</span> · The figures that move, read on the official sources on 26 October 2026. Where the Book and this Sheet disagree, the Sheet is newer and wins.</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;column-gap:28px"><div><h2>Fiumicino to your bed</h2><div class="r"><div class="k">Leonardo Express to Termini</div><div class="v">≈ €14 a person (4 for €40) · 32 min · every 15 min, some hours 30 <i class="mk">◆</i></div></div><div class="r"><div class="k">FL1 regional train (Trastevere, Ostiense, Tiburtina; not Termini)</div><div class="v">≈ €8 a person (tariff of October 2024, still the one published) <i class="mk">◆</i></div></div><div class="r"><div class="k">Onward hop from Termini, two people</div><div class="v">≈ €3 by metro (2 × €1.50) · ≈ €9–13 by taxi <i class="mk">◆</i></div></div><div class="r"><div class="k">Train + hop, door to door, two people</div><div class="v">≈ €31–41 <i class="mk">◆</i></div></div><div class="r"><div class="k">Roma Capitale taxi, Fiumicino → the “Aurelian Walls” zone</div><div class="v">€55 fixed, the whole party up to 4, bags included; + €5 per passenger beyond 4 · the zone is the walled city plus the Vatican, Borgo and Prati up to Viale delle Milizie (set 2024, reissued May 2026) <i class="mk">◇</i></div></div><div class="r"><div class="k">Taxi beyond that zone (e.g. north of Viale delle Milizie)</div><div class="v">meter: at least €35, at most €80 <i class="mk">◇</i></div></div><div class="r"><div class="k">How to spot an official taxi</div><div class="v">white · TAXI on the roof · emblem and license number on the front doors · the €55 is Roma Capitale’s, so look for Rome’s emblem; Fiumicino town taxis charge their own town’s fares: check current (no official Fiumicino tariff found) <i class="mk">◇</i></div></div><h2>Transit and passes</h2><div class="r"><div class="k">Single ride (BIT, 100 min) · Tap &amp; Go cap</div><div class="v">€1.50 · €8.50 for 24 h from your first tap · each rider taps their own card or phone, the same one every time <i class="mk">◆</i></div></div><div class="r"><div class="k">Fine, unvalidated paper ticket</div><div class="v">≈ €105 · ≈ €55 if paid within 5 days <i class="mk">◆</i></div></div><div class="r"><div class="k">Roma Pass</div><div class="v">48 h ≈ €38 (1 free entry) · 72 h ≈ €62.90 (2) <i class="mk">◆</i></div></div><div class="r"><div class="k">Omnia Card (incl. Vatican Museums)</div><div class="v">72 h ≈ €149 · 24 h: check current (the official page gives no price) <i class="mk">◆</i></div></div><h2>The sights: booking and price</h2><div class="r"><div class="k">Colosseum 24 h ticket (with Forum + Palatine)</div><div class="v">on sale 30 days ahead · named; each visitor shows photo ID · price: check current (colosseo.it unreachable 26 Oct) <i class="mk">◇</i></div></div><div class="r"><div class="k">Full Experience · Arena · Underground</div><div class="v">Arena opens ≈ 7 days ahead · Underground 30 days ahead, sells out fast <i class="mk">◆</i></div></div><div class="r"><div class="k">Vatican Museums</div><div class="v">€20 + €5 to book online · booking window: check current (not stated on the official page) <i class="mk">◆</i></div></div><div class="r"><div class="k">Borghese Gallery</div><div class="v">booking compulsory for every ticket (+ €2) · price: check current (official site unreachable 26 Oct) <i class="mk">◆</i></div></div><div class="r"><div class="k">Pantheon</div><div class="v">≈ €7 since 1 July 2026 · booking optional; buy at the door or kiosk <i class="mk">◇</i></div></div><div class="r"><div class="k">Free first Sundays (state sites, incl. the Colosseum)</div><div class="v">1 Nov · 6 December 2026 · 3 January 2027 · walk-up, first come <i class="mk">◆</i></div></div></div><div><h2>What closes</h2><div class="r"><div class="k">Vatican Museums</div><div class="v">Mon–Sat 8 a.m.–8 p.m., last entry 6 · closed Sundays except the last (free, 9–2; 29 Nov, 27 Dec) · closed 1 Nov, 8, 25, 26 Dec, 1, 6 Jan <i class="mk">◇</i></div></div><div class="r"><div class="k">Ostia Antica · Borghese Gallery</div><div class="v">both closed Mondays (Ostia also 25 Dec, 1 Jan) <i class="mk">◇</i></div></div><div class="r"><div class="k">Colosseum, winter (25 October 2026–28 February 2027)</div><div class="v">closes 4:30 p.m., last entry 3:30 · closed 25 Dec, 1 Jan <i class="mk">◇</i></div></div><div class="r"><div class="k">Transport strikes</div><div class="v">listed ahead on the ministry calendar (mit.gov.it) · Rome buses and metro guaranteed until 8:30 a.m. and 5–8 p.m. <i class="mk">◇</i></div></div><h2>The fourth day</h2><div class="r"><div class="k">Porta San Paolo → Ostia Antica (Roma–Lido)</div><div class="v">≈ 26 min · every 20 min Mon–Sat · timetable from 27 July 2026 <i class="mk">◆</i></div></div><div class="r"><div class="k">Rome → Naples, high speed · then to Pompeii</div><div class="v">a little over 1 h, 100+ trains a day · Circumvesuviana and Pompeii hours: check current (no official page read) <i class="mk">◆</i></div></div><h2>Money and entry</h2><div class="r"><div class="k">Euro in dollars (ECB reference, 23 October 2026)</div><div class="v">€1 = $1.12 · €55 ≈ $62 · €14 ≈ $16 <i class="mk">◆</i></div></div><div class="r"><div class="k">At any card reader</div><div class="v">choose euros, never dollars <i class="mk">●</i></div></div><div class="r"><div class="k">US passport · border · ETIAS</div><div class="v">valid 3 months past your Schengen exit (6 recommended), 2 blank pages, up to 90 days in any 180 · fingerprints and photo at the border (EES: began 12 October 2025, fully in force since 10 April 2026) · ETIAS not yet required: check current, no start date announced <i class="mk">◇</i></div></div><div class="r"><div class="k">Emergency, anywhere in the EU</div><div class="v">112, free <i class="mk">◇</i></div></div></div></div>
+<p class="method"><i class="mk">◇</i> official: a regulated fare or published rule. <i class="mk">◆</i> volatile: a live price, window or timetable, true on the date read. <i class="mk">●</i> established. “Check current” means no official page confirmed it. Check the <i class="mk">◆</i> rows the week you fly; every source and its date is on the Book’s Sources page. Reissued quarterly at romeforamericans.com/guide/sheet.</p></div></section>
+
+</body></html>
