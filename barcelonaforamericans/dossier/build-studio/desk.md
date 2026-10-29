@@ -95,3 +95,10 @@ Republished 2026-10-26 (owner: "républie le pdf en entier"): Stripe storage and
 - Replaced, same subject: the Eixample from above → Logan Armstrong; Park Güell's gatehouses (poster vignette) → Martijn Vonk; Casa Batlló (poster vignette) → Juhi Sewchurran; Park Güell's bench (page not recoverable) → Diego Machiaveli; the beach promenade (original under GFDL 1.2 only, unusable in a paid PDF) → Lucrezia Carnelos, located Barcelona; its caption now names only what it shows ("A Barcelona beachfront under its palms…", Torre Mapfre removed).
 - Credits: a "Photographs" paragraph on the last page (p66); still 66 pages. Bookmarks restored (`add-outline.py`, 24); six release gates green (`_studio/release-2026-10-28.txt`).
 - Shipped: `../atelier-release-2026-10-28/` (locked, 8 MB); bucket `guides/Barcelona/barcelona-without-the-traps.pdf` replaced, read back identical; Etsy listing 4599529208 file replaced; site preview p37 re-cut (new key `barcelona-guide-preview-2026-10-28-2-gaudi-fork`, site commit 80b60f3). Field Sheet unchanged.
+
+## 2026-10-29 — the phone editions delivered (owner: "Oui, livre-les")
+- Built by `phone-affiche.py` (4.5×8in, same type sizes, posters recomposed, wide figures turned): 95 pages + Field Sheet 2 pages. Text checked word for word against the desktop edition.
+- Packed: `../atelier-phone-2026-10-29/` (shrunk 1600/82, locked, 3.5 MB).
+- Bucket `guides/<City>/barcelona-without-the-traps-phone.pdf` uploaded and read back identical; the site serves it at `/guide/download?file=phone` (success page, purchase and access emails). Site 73e7be2 (phoneEdition back on); the sales page says the book comes twice.
+- Etsy 4599529208: the phone book and the phone Field Sheet added (4 files); the description no longer says "on a phone, zoom in".
+- Not on the site: the phone Field Sheet (the site's sheet link serves the desktop sheet only).

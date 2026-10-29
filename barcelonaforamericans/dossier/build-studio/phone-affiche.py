@@ -251,7 +251,13 @@ def paginate(html, name, pdf):
 
 os.makedirs('_phone', exist_ok=True)
 for f in glob.glob('_phone/p*.png'): os.remove(f)
-n, over = paginate(book, '_render-phone.html', 'dossier-phone.pdf')
+# the cover states its page count: the phone edition says its own (re-render once if it moved)
+import re as _rc
+def _count(h, k): return _rc.sub(r'>\d+ pages · ', '>%d pages · ' % k, h, count=1)
+guess = 95
+n, over = paginate(_count(book, guess), '_render-phone.html', 'dossier-phone.pdf')
+if n != guess:
+    n, over = paginate(_count(book, n), '_render-phone.html', 'dossier-phone.pdf')
 print(f'phone book: {n} pages -> dossier-phone.pdf')
 # bookmarks: the desktop book's outline titles, at their phone pages
 try:

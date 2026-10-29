@@ -55,3 +55,10 @@
   - Etsy 4601367120 file replaced;
   - site preview p58 re-cut (romeforamericans `53d03ab`).
 - The Field Sheet is unchanged (same text) and was not re-uploaded.
+
+## 2026-10-29 — the phone editions delivered (owner: "Oui, livre-les")
+- Built by `phone-affiche.py` (4.5×8in, same type sizes, posters recomposed, wide figures turned): 118 pages + Field Sheet 2 pages. Text checked word for word against the desktop edition.
+- Packed: `../atelier-phone-2026-10-29/` (shrunk 1600/82, locked, 4.6 MB).
+- Bucket `guides/<City>/rome-solved-phone.pdf` uploaded and read back identical; the site serves it at `/guide/download?file=phone` (success page, purchase and access emails). Site 13fd5d6 (delivery code ported from Barcelona); the sales page says the book comes twice.
+- Etsy 4601367120: the phone book and the phone Field Sheet added (4 files); the description no longer says "on a phone, zoom in".
+- Not on the site: the phone Field Sheet (the site's sheet link serves the desktop sheet only).
