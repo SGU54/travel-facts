@@ -267,5 +267,20 @@
     "tipping-in-italy",
     "is-rome-safe",
     "italy-transport-strikes-sciopero-guaranteed-hours"
+  ],
+  "funnel": [
+    {
+      "date": "2026-10-29",
+      "window": "28d to 2026-10-28",
+      "gsc_clicks": 4,
+      "gsc_impressions": 1413,
+      "gsc_clicks_on_swamp_pages": 1,
+      "link_clicks_guide_rows": 674,
+      "link_clicks_guide_human_since_marker_2026-10-20": 0,
+      "stripe_checkouts_real_price": 0,
+      "sales": 0,
+      "vercel_visitors": "not read (dashboard login needed)",
+      "note": "Bottleneck is traffic, not copy: 4 search clicks in 28 d. One human click on 2026-10-29 15:36 UTC (row 13846) was the owner-side test, exclude it. Shipped 2026-10-29: GuideTracker (Vercel events guide_seen/guide_click by surface+copy), 8 pageHooks on the landing pages, header link /go/guide/nav. Read again 2026-11-26."
+    }
   ]
 }
